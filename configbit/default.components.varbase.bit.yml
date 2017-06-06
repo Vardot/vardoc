@@ -16,13 +16,7 @@ config_bit:
         - varbase_editor
         - varbase_media
         - varbase_page
-        - varbase_landing
         # Enable listed modules in order at this installation step.
         - libraries
-        # Enable default Vardoc base modules and features.
-        - vmi
-        - varbase_webform
-        - varbase_heroslider_media
-        - varbase_carousels
         # Enable default Vardoc features.
-        - vardoc_homepage 
+        - vardoc_homepage
