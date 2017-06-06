@@ -1,6 +1,6 @@
 {
   "name": "vardot/vardoc",
-  "description": "Varbase Sub Profile Basic",
+  "description": "Vardoc Knowledge Base",
   "type": "drupal-profile",
   "license": "PRIVATE",
   "minimum-stability": "dev",
