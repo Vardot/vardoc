@@ -28,7 +28,9 @@ function vardoc_form_install_configure_form_alter(&$form, FormStateInterface $fo
 function vardoc_install_tasks(&$install_state) {
   include_once \Drupal::root() . '/profiles/varbase/varbase.profile';
   $install_tasks = varbase_install_tasks($install_state);
-  
+
+  unset($install_tasks['varbase_multilingual_configuration_form']);
+  unset($install_tasks['varbase_configure_multilingual']);
   unset($install_tasks['varbase_extra_components']);
   unset($install_tasks['varbase_assemble_extra_components']);
   
@@ -45,6 +47,15 @@ function vardoc_install_tasks(&$install_state) {
   ];
        
   return $install_tasks;
+}
+
+/**
+ * Implements hook_install_tasks_alter().
+ */
+function vardoc_install_tasks_alter(&$tasks, $install_state) {
+  //Skip select language step to install it in English as default language
+  unset($tasks['install_select_language']);
+  unset($tasks['install_download_translation']);
 }
 
 /**
