@@ -1,0 +1,22 @@
+name: Vardoc
+type: profile
+description: 'Vardoc knowledge base.'
+core: 8.x
+version: 8.x-4.x-dev
+base profile:
+  name: varbase
+dependencies:
+  - action
+  - tracker
+  - aggregator
+themes:
+  # Contrib themes.
+  - adminimal_theme
+  - bootstrap
+
+  # Custom themes.
+  - vartheme
+  - vartheme_admin
+distribution:
+  name: Vardoc
+features: true

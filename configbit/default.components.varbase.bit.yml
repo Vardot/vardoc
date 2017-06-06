@@ -1,0 +1,28 @@
+# ==============================================================================
+# List of default Vardoc components, which they will be
+# installed when we install varbase.
+# ==============================================================================
+config_bit:
+  type: list
+  for: /profiles/vardoc/vardoc.info.yml
+  when:
+    install_default_components: true
+    list:
+      dependencies:
+        - varbase_core
+        - varbase_admin
+        - varbase_security
+        - varbase_seo
+        - varbase_editor
+        - varbase_media
+        - varbase_page
+        - varbase_landing
+        # Enable listed modules in order at this installation step.
+        - libraries
+        # Enable default Vardoc base modules and features.
+        - vmi
+        - varbase_webform
+        - varbase_heroslider_media
+        - varbase_carousels
+        # Enable default Vardoc features.
+        - vardoc_homepage 

@@ -1,0 +1,115 @@
+{
+  "name": "vardot/vardoc",
+  "description": "Varbase Sub Profile Basic",
+  "type": "drupal-profile",
+  "license": "PRIVATE",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+      "bin-dir": "bin/"
+  },
+ "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "kenwheeler/slick",
+        "version": "1.6.0",
+        "type": "drupal-library",
+        "source": {
+          "url": "https://github.com/kenwheeler/slick",
+          "type": "git",
+          "reference": "origin/master"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "dinbror/blazy",
+        "version": "1.8.2",
+        "type": "drupal-library",
+        "source": {
+          "url": "https://github.com/dinbror/blazy",
+          "type": "git",
+          "reference": "origin/master"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "ajaxorg/ace-builds",
+        "version": "1.2.6",
+        "type": "library",
+        "source": {
+          "url": "https://github.com/ajaxorg/ace-builds",
+          "type": "git",
+          "reference": "origin/master"
+        }
+      }
+    }
+  ],
+  "scripts": {
+      "post-install-cmd": [
+          "@composer drupal-scaffold"
+      ],
+      "post-update-cmd": [
+          "@composer drupal-scaffold"
+      ],
+      "post-drupal-scaffold-cmd": [
+        "Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure",
+        "Varbase\\composer\\ScriptHandler::postDrupalScaffoldSubProfileProcedure"
+      ],
+      "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+  },
+  "extra": {
+    "installer-paths": {
+      "docroot/core": ["drupal/core"],
+      "docroot/profiles/{$name}": ["type:drupal-profile"],
+      "docroot/modules/contrib/{$name}": ["type:drupal-module"],
+      "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
+      "docroot/libraries/{$name}": ["type:drupal-library"]
+    },
+    "branch-alias": {
+      "dev-8.x-4.x": "8.4.x-dev"
+    },
+    "drupal-libraries": {
+      "library-directory": "docroot/libraries",
+      "libraries": [
+        {
+          "name": "dropzone",
+          "package": "enyo/dropzone"
+        },
+        {
+          "name": "blazy",
+          "package": "dinbror/blazy"
+        },
+        {
+          "name": "slick",
+          "package": "kenwheeler/slick"
+        },
+        {
+          "name": "ace",
+          "package": "ajaxorg/ace-builds"
+        }
+      ]
+    }
+  },
+  "require": {
+    "cweagans/composer-patches": "^1.5.0",
+    "composer/installers": "^1.2.0",
+    "drupal-composer/drupal-scaffold": "^2.0.0",
+    "drupal/drupal-library-installer-plugin": "~0.3",
+    "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
+    "enyo/dropzone": "4.3.0",
+    "dinbror/blazy": "1.8.2",
+    "kenwheeler/slick": "1.6.0",
+    "vardot/varbase": "8.4.04",
+    "drupal/default_content": "^1.0-alpha5",
+    "drupal/better_normalizers": "^1.0-beta2"
+  }
+}
