@@ -1,6 +1,6 @@
 # ==============================================================================
 # List of default Vardoc components, which they will be
-# installed when we install varbase.
+# installed when we install vardoc.
 # ==============================================================================
 config_bit:
   type: list

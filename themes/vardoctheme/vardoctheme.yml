@@ -1,0 +1,45 @@
+core: 8.x
+type: theme
+base theme: vartheme
+
+name: 'Vardoc Theme (LESS)'
+description: 'Uses the Bootstrap framework LESS source files and must be compiled (not for beginners).'
+package: 'Varbase'
+
+regions:
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries:
+  - 'VARTHEME_SUBTHEME/global-styling'
+  - 'VARTHEME_SUBTHEME/global-scripts'
+  - 'VARTHEME_SUBTHEME/bootstrap-scripts'
+  
+# OPTIONALLY: You can choose to remove Vartheme base theme stylesheets and/or
+# Javascript files.
+# Uncomment these lines to exclude css and js files from vartheme.
+# libraries-override:
+#   vartheme/global-styling:
+#     css:
+#       theme:
+#         css/style.css: false
+#   vartheme/global-scripts:
+#     js:
+#       js/script.js: false
+#   # Uncomment the following lines only for right to left.
+#   # vartheme/global-styling-rtl:
+#   #   css:
+#   #     theme:
+#   #       css/style-rtl.css: false
+
+ckeditor_stylesheets:
+  - css/style.css
