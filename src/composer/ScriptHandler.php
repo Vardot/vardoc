@@ -47,7 +47,7 @@ class ScriptHandler {
       foreach ($htaccess_lines as $line) {
         $lines[] = $line;
         if (strpos($line, "RewriteEngine on") !== FALSE) {
-          $lines = array_merge($lines, file(getcwd() . '/src/assets/htaccess_extra'));
+          $lines = array_merge($lines, file($drupal_root . '/profiles/varbase/src/assets/htaccess_extra'));
         }
       }
       file_put_contents($htaccess_path, $lines);
