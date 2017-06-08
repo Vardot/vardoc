@@ -1,5 +1,5 @@
 # Schema for the theme setting configuration file of the THEMETITLE theme.
 
-VARTHEME_SUBTHEME.settings:
+vardoctheme.settings:
   type: theme_settings
-  label: 'VARTHEME_SUBTHEME settings'
+  label: 'Vardoctheme settings'

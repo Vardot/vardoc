@@ -20,9 +20,9 @@ regions:
   page_bottom: 'Page bottom'
 
 libraries:
-  - 'VARTHEME_SUBTHEME/global-styling'
-  - 'VARTHEME_SUBTHEME/global-scripts'
-  - 'VARTHEME_SUBTHEME/bootstrap-scripts'
+  - 'vardoctheme/global-styling'
+  - 'vardoctheme/global-scripts'
+  - 'vardoctheme/bootstrap-scripts'
   
 # OPTIONALLY: You can choose to remove Vartheme base theme stylesheets and/or
 # Javascript files.

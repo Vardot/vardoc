@@ -1,6 +1,6 @@
 /**
  * @file
- * Behaviors for the VARTHEME_SUBTHEME theme.
+ * Behaviors for the Vardoctheme theme.
  */
 
 (function ($, _, Drupal, drupalSettings) {
@@ -8,7 +8,7 @@
 
   Drupal.behaviors.VARDOCTHEME = {
     attach: function (context) {
-      // Vartheme subtheme JavaScript behaviors goes here.
+      // vardoctheme JavaScript behaviors goes here.
     }
   };
 
