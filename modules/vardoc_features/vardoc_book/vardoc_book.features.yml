@@ -1,7 +1,4 @@
 bundle: vardoc
 excluded:
-  - block.block.exposedformbook_searchpage_search
-  - search_api.index.book
-  - search_api.server.database_server
-  - views.view.book_search
+  - core.entity_view_mode.node.search_result
 required: true

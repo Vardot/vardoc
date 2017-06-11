@@ -7,8 +7,14 @@ dependencies:
   - block
   - block_class
   - ds
+  - features
+  - field
+  - language
+  - menu_ui
   - node
   - panelizer
+  - path
+  - rabbit_hole
   - search_api
   - search_api_db
   - text

@@ -1,4 +1,5 @@
 name: 'Vardoc Search'
+description: 'Provides Vardoc Search API configuration.'
 type: module
 core: 8.x
 version: 8.x-1.0
@@ -7,10 +8,14 @@ dependencies:
   - better_exposed_filters
   - block
   - block_class
+  - ds
   - node
+  - panelizer
   - search
   - search_api
   - search_api_db
+  - text
   - ultimate_cron
   - user
+  - vardoc_book
   - views

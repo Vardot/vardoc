@@ -7,12 +7,12 @@ dependencies:
     - block_class
     - views
   theme:
-    - vartheme
+    - vardoctheme
 third_party_settings:
   block_class:
     classes: search-block
 id: exposedformbook_searchpage_search
-theme: vartheme
+theme: vardoctheme
 region: header
 weight: -5
 provider: null
@@ -21,6 +21,6 @@ settings:
   id: 'views_exposed_filter_block:book_search-page_search'
   label: ''
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
 visibility: {  }
