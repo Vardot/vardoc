@@ -6,6 +6,7 @@ dependencies:
   - better_exposed_filters
   - block
   - block_class
+  - book
   - ds
   - features
   - field
