@@ -20,3 +20,5 @@ config_bit:
         - libraries
         # Enable default Vardoc features.
         - vardoc_homepage
+        - vardoc_book
+        - vardoc_search
