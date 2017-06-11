@@ -1,0 +1,16 @@
+name: 'Vardoc Search'
+type: module
+core: 8.x
+version: 8.x-1.0
+package: Vardoc
+dependencies:
+  - better_exposed_filters
+  - block
+  - block_class
+  - node
+  - search
+  - search_api
+  - search_api_db
+  - ultimate_cron
+  - user
+  - views
