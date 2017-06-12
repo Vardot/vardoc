@@ -5,7 +5,7 @@ dependencies:
     - vardoctheme
 id: vardoctheme_local_actions
 theme: vardoctheme
-region: header
+region: content_top
 weight: -3
 provider: null
 plugin: local_actions_block

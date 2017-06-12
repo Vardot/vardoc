@@ -5,7 +5,7 @@ dependencies:
     - vardoctheme
 id: vardoctheme_page_title
 theme: vardoctheme
-region: header
+region: content_top
 weight: -1
 provider: null
 plugin: page_title_block

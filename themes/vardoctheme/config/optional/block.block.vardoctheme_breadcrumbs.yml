@@ -7,7 +7,7 @@ dependencies:
     - vardoctheme
 id: vardoctheme_breadcrumbs
 theme: vardoctheme
-region: header
+region: content_top
 weight: -4
 provider: null
 plugin: system_breadcrumb_block
