@@ -15,6 +15,7 @@ themes:
   - bootstrap
 
   # Custom themes.
+  - vardoctheme
   - vartheme
   - vartheme_admin
 distribution:
