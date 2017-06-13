@@ -1018,8 +1018,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../../bootstrap/fonts/glyphicons-halflings-regular.eot');
-  src: url('../../bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../bootstrap/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../../bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('../bootstrap/fonts/glyphicons-halflings-regular.eot');
+  src: url('../bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../bootstrap/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -7720,9 +7720,3 @@ dd {
   -o-box-shadow: 0 0 0 transparent;
   box-shadow: 0 0 0 transparent;
 }
-/**
- * Variable Overrides.
- *
- * Modify this file to override the Bootstrap Framework variables. You can copy
- * these variables directly from ../bootstrap/less/variables.less to this file.
- */
