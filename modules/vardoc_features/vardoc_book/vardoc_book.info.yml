@@ -3,6 +3,7 @@ description: 'Provides Book page content type and related configuration. <em>Boo
 type: module
 core: 8.x
 dependencies:
+  - advanced_text_formatter
   - better_exposed_filters
   - block
   - block_class

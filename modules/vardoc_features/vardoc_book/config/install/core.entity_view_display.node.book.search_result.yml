@@ -6,9 +6,9 @@ dependencies:
     - field.field.node.book.body
     - node.type.book
   module:
+    - advanced_text_formatter
     - ds
     - panelizer
-    - text
     - user
 third_party_settings:
   ds:
@@ -57,11 +57,19 @@ mode: search_result
 content:
   body:
     label: hidden
-    type: text_summary_or_trimmed
+    type: advanced_text
     weight: 1
     region: main
     settings:
-      trim_length: 300
+      trim_length: '300'
+      ellipsis: '1'
+      word_boundary: '1'
+      use_summary: '1'
+      filter: php
+      format: plain_text
+      allowed_html: {  }
+      token_replace: 0
+      autop: 0
     third_party_settings: {  }
 hidden:
   langcode: true
