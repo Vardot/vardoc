@@ -1,7 +1,21 @@
 <?php
 /**
  * @file
- * Varbase sub-theme.
+ * Vardoc theme.
  *
  * Place your custom PHP code in this file.
  */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function vardoctheme_form_views_exposed_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  switch ($form['#id']) {
+    case 'views-exposed-form-book-search-page-search':
+      //Setting placeholder for search form
+      $form['keywords']['#attributes']['placeholder'] = t('Start your search');
+      break;
+  }
+}
