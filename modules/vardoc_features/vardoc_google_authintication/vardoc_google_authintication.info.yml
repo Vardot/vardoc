@@ -1,0 +1,12 @@
+name: 'vardoc google authintication'
+description: 'Provides Vardoc google login.'
+type: module
+core: 8.x
+dependencies:
+  - block
+  - block_class
+  - social_auth
+  - social_auth_google
+  - system
+version: 8.x-1.0
+package: Vardoc
