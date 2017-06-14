@@ -204,7 +204,7 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-      title: 'Need help finding something?'
+      title: Search
       header: {  }
       footer: {  }
       empty:
