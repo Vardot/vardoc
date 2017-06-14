@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'add content to books'
+  - 'create book content'
+  - 'delete own book content'
+  - 'edit own book content'
+  - 'edit own comments'
+  - 'post comments'
