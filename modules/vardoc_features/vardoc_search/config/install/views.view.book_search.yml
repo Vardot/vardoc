@@ -6,7 +6,6 @@ dependencies:
     - user.role.anonymous
     - user.role.authenticated
   module:
-    - better_exposed_filters
     - search_api
     - user
 id: book_search
@@ -39,7 +38,7 @@ display:
           bypass_access: false
           skip_access: false
       exposed_form:
-        type: bef
+        type: basic
         options:
           submit_button: Search
           reset_button: false
@@ -48,18 +47,6 @@ display:
           expose_sort_order: false
           sort_asc_label: Asc
           sort_desc_label: Desc
-          bef:
-            general:
-              allow_secondary: false
-              secondary_label: 'Advanced options'
-              autosubmit: false
-              autosubmit_hide: false
-            search_api_fulltext:
-              bef_format: default
-              more_options:
-                is_secondary: false
-                rewrite:
-                  filter_rewrite_values: ''
       pager:
         type: full
         options:
@@ -173,7 +160,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: 'Need help finding something?'
+            label: ''
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -217,7 +204,7 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-      title: Search
+      title: 'Need help finding something?'
       header: {  }
       footer: {  }
       empty:

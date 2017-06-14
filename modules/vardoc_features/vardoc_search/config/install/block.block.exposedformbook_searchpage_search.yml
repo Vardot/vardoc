@@ -21,6 +21,6 @@ settings:
   id: 'views_exposed_filter_block:book_search-page_search'
   label: ''
   provider: views
-  label_display: '0'
+  label_display: visible
   views_label: ''
 visibility: {  }
