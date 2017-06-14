@@ -8,6 +8,7 @@ dependencies:
   - block
   - block_class
   - book
+  - comment
   - ds
   - features
   - field
@@ -19,6 +20,7 @@ dependencies:
   - rabbit_hole
   - search_api
   - search_api_db
+  - taxonomy
   - text
   - user
   - views

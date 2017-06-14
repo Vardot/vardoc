@@ -1,0 +1,66 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.native_comment
+    - field.field.comment.native_comment.field_comment
+    - field.field.comment.native_comment.field_email
+    - field.field.comment.native_comment.field_username
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - field_username
+        - comment_changed_date
+        - field_comment
+    fields:
+      comment_changed_date:
+        plugin_id: comment_changed_date
+        weight: 1
+        label: hidden
+        formatter: ds_post_date_short
+id: comment.native_comment.default
+targetEntityType: comment
+bundle: native_comment
+mode: default
+content:
+  field_comment:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: main
+  field_username:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: main
+hidden:
+  field_email: true
+  langcode: true
+  links: true
