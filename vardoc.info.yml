@@ -9,6 +9,7 @@ dependencies:
   - action
   - tracker
   - aggregator
+  - fontawesome
 themes:
   # Contrib themes.
   - adminimal_theme
