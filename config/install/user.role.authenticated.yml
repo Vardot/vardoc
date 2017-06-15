@@ -7,9 +7,19 @@ weight: 1
 is_admin: false
 permissions:
   - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access sitemap'
+  - 'access user profiles'
   - 'add content to books'
   - 'create book content'
   - 'delete own book content'
   - 'edit own book content'
   - 'edit own comments'
   - 'post comments'
+  - 'search content'
+  - 'use text format basic_html'
+  - userprotect.account.edit
+  - userprotect.mail.edit
+  - userprotect.pass.edit
+  - 'view media'
