@@ -7736,7 +7736,7 @@ body {
 }
 header#navbar .menu .active a {
   background-color: inherit;
-  color: #338ec7;
+  color: #000;
 }
 @media (min-width: 768px) {
   header#navbar .menu li:last-child a {
@@ -7909,7 +7909,6 @@ header#navbar .menu .active a {
   font-size: 18px;
 }
 .region-content .comment-form button {
-  margin-bottom: 80px;
   background-color: #328ec7;
   border-color: #328ec7;
 }
@@ -7977,7 +7976,7 @@ header#navbar .menu .active a {
 }
 .footer {
   background-color: #f2f2f2;
-  margin-top: 0;
+  margin-top: 80px;
   border: 0;
   padding: 0;
 }
