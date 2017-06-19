@@ -7723,6 +7723,9 @@ dd {
 }
 body {
   font-family: "Open Sans";
+  font-size: 16px;
+  color: #696969;
+  line-height: 1.63;
 }
 @media (min-width: 768px) {
   header#navbar .menu {
@@ -7740,7 +7743,7 @@ header#navbar .menu .active a {
     padding-right: 0;
   }
 }
-.navbar {
+.path-frontpage .navbar {
   margin-top: 0;
   margin-bottom: 0;
   background-image: url("../images/laptop.png");
@@ -7749,18 +7752,31 @@ header#navbar .menu .active a {
   height: 100vh;
 }
 @media (max-width: 992px) {
-  .navbar {
+  .path-frontpage .navbar {
     height: 50vh;
   }
 }
 @media (max-width: 767px) {
-  .navbar {
+  .path-frontpage .navbar {
     height: 100vh;
   }
 }
-.navbar .navbar-nav li a {
+.path-frontpage .navbar .navbar-nav li a {
   color: #fff;
   font-weight: 600;
+  text-transform: uppercase;
+}
+.path-frontpage .navbar .navbar-nav li a:hover {
+  color: #000;
+}
+.navbar {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #328ec7;
+}
+.navbar .navbar-nav li a {
+  color: #fff;
+  font-weight: 400;
   text-transform: uppercase;
 }
 .navbar .navbar-nav li a:hover {
@@ -7785,7 +7801,7 @@ header#navbar .menu .active a {
 }
 .block-views-exposed-filter-blockbook-search-page-search .form-actions .form-submit {
   border-radius: 0;
-  margin-left: -4px;
+  margin-left: -10px;
   height: 59px;
   background-color: #d8d8d8;
   border: 1px solid #d8d8d8;
@@ -7799,6 +7815,8 @@ header#navbar .menu .active a {
 @media (max-width: 767px) {
   .block-views-exposed-filter-blockbook-search-page-search .form-actions {
     display: inline-block;
+    vertical-align: top;
+    margin-bottom: 0;
   }
 }
 .block-views-exposed-filter-blockbook-search-page-search .form-type-textfield {
@@ -7838,6 +7856,124 @@ header#navbar .menu .active a {
     font-size: 35px;
     padding-bottom: 0;
   }
+}
+.region-content .field--name-node-post-date {
+  font-size: 12px;
+  color: #979797;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.region-content .page-header {
+  font-size: 40px;
+  color: #328ec7;
+  text-transform: capitalize;
+}
+.region-content .node--view-mode-full nav {
+  margin-bottom: 40px;
+  margin-top: 40px;
+  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 40px;
+}
+.region-content .node--view-mode-full nav ul {
+  padding: 0;
+  background-color: #fafafa;
+  list-style: none;
+  margin: 0px;
+}
+.region-content .node--view-mode-full nav ul:before,
+.region-content .node--view-mode-full nav ul:after {
+  content: " ";
+  display: table;
+}
+.region-content .node--view-mode-full nav ul:after {
+  clear: both;
+}
+.region-content .node--view-mode-full nav ul:before,
+.region-content .node--view-mode-full nav ul:after {
+  content: " ";
+  display: table;
+}
+.region-content .node--view-mode-full nav ul:after {
+  clear: both;
+}
+.region-content .node--view-mode-full nav ul li {
+  padding: 10px 5px;
+  width: 50%;
+  text-align: left;
+  float: left;
+}
+.region-content .node--view-mode-full nav ul li:last-child {
+  text-align: right;
+}
+.region-content .node--view-mode-full nav ul li a b {
+  font-size: 18px;
+}
+.region-content .comment-form button {
+  margin-bottom: 80px;
+  background-color: #328ec7;
+  border-color: #328ec7;
+}
+.breadcrumb {
+  background-color: #f7f7f7;
+  margin-top: 40px;
+}
+.breadcrumb li a {
+  color: #696969;
+}
+.breadcrumb li.active {
+  font-weight: bold;
+}
+.comment--view-mode-default {
+  margin-bottom: 40px;
+}
+.comment--view-mode-default .field--name-field-username {
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.comment--view-mode-default .field--name-comment-changed-date {
+  font-size: 12px;
+  color: #979797;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.region-sidebar-second {
+  background-color: #ffffff;
+  border: 0;
+}
+.region-sidebar-second .block-book-navigation nav ul {
+  list-style: none;
+  padding: 0;
+}
+.region-sidebar-second .block-book-navigation nav ul li {
+  padding-left: 1.3em;
+}
+.region-sidebar-second .block-book-navigation nav ul li a {
+  font-size: 14px;
+  color: #696969;
+}
+.region-sidebar-second .block-book-navigation nav ul li:before {
+  content: "\f105";
+  font-family: FontAwesome;
+  font-size: 16px;
+  display: inline-block;
+  margin-left: -1em;
+  width: 1.3em;
+}
+.region-sidebar-second .block-book-navigation nav ul li.active:before {
+  content: "\f107";
+}
+.region-sidebar-second .block-book-navigation nav ul li.menu-level-0 a {
+  font-size: 16px;
+  font-weight: bold;
+}
+.region-sidebar-second .block-book-navigation nav ul li.menu-level-1 a {
+  font-size: 14px;
+  font-weight: 600;
+}
+.view-book-search .views-row {
+  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 40px;
 }
 .footer {
   background-color: #f2f2f2;

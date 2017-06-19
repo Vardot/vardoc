@@ -1,1 +1,125 @@
-// Insert your content styling here.
+.region-content {
+  .field--name-node-post-date {
+    font-size: 12px;
+    color: #979797;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .page-header {
+    font-size: 40px;
+    color: #328ec7;
+    text-transform: capitalize;
+  }
+  .node--view-mode-full {
+    nav {
+      margin-bottom: 40px;
+      margin-top: 40px;
+      border-bottom: 1px solid #d8d8d8;
+      padding-bottom: 40px;
+      ul {
+        .clearfix ();
+        padding: 0;
+        background-color: #fafafa;
+        list-style: none;
+        margin: 0px;
+        li {
+          padding: 10px 5px;
+          width: 50%;
+          text-align: left;
+          float: left;
+          &:last-child {
+            text-align: right;
+          }
+          a {
+            b {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .comment-form {
+    button {
+      margin-bottom: 80px;
+      background-color: #328ec7;
+      border-color: #328ec7;
+    }
+  }
+}
+.breadcrumb {
+  background-color: #f7f7f7;
+  margin-top: 40px;
+  li {
+    a {
+      color: #696969;
+    }
+    &.active {
+      font-weight: bold;
+    }
+  }
+}
+
+.comment--view-mode-default {
+  margin-bottom: 40px;
+
+  .field--name-field-username {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .field--name-comment-changed-date {
+    font-size: 12px;
+    color: #979797;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+}
+
+.region-sidebar-second {
+  background-color: #ffffff;
+  border: 0;
+  .block-book-navigation {
+    nav {
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          padding-left: 1.3em;
+          a {
+            font-size: 14px;
+            color: #696969;
+          }
+          &:before {
+            content: "\f105";
+            font-family: FontAwesome;
+            font-size: 16px;
+            display: inline-block;
+            margin-left: -1em;
+            width: 1.3em;
+          }
+        }
+        li.active {
+          &:before {
+            content: "\f107";
+          }
+        }
+        li.menu-level-0 a {
+          font-size: 16px;
+          font-weight: bold;
+        }
+        li.menu-level-1 a {
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+.view-book-search  {
+  .views-row {
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 40px;
+  }
+}

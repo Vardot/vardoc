@@ -2,6 +2,9 @@
 
 body {
   font-family: "Open Sans";
+  font-size: 16px;
+  color: #696969;
+  line-height: 1.63;
 }
 
 header#navbar {
@@ -27,24 +30,45 @@ header#navbar {
   }
 }
 
+.path-frontpage {
+  .navbar {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-image: url("../images/laptop.png");
+    background-position: 50% 0;
+    background-size: cover;
+    height: 100vh;
+    @media (max-width: 992px) {
+      height: 50vh;
+    }
+    @media (max-width: 767px) {
+      height: 100vh;
+    }
+    .navbar-nav {
+      li {
+        a {
+          color: #fff;
+          font-weight: 600;
+          text-transform: uppercase;
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}
+
+
 .navbar {
   margin-top: 0;
   margin-bottom: 0;
-  background-image: url("../images/laptop.png");
-  background-position: 50% 0;
-  background-size: cover;
-  height: 100vh;
-  @media (max-width: 992px) {
-    height: 50vh;
-  }
-  @media (max-width: 767px) {
-    height: 100vh;
-  }
+  background-color: #328ec7;
   .navbar-nav {
     li {
       a {
         color: #fff;
-        font-weight: 600;
+        font-weight: 400;
         text-transform: uppercase;
         &:hover {
           color: #000;
@@ -70,7 +94,7 @@ header#navbar {
   .form-actions {
     .form-submit {
       border-radius: 0;
-      margin-left: -4px;
+      margin-left: -10px;
       height: 59px;
       background-color: #d8d8d8;
       border: 1px solid #d8d8d8;
@@ -85,6 +109,8 @@ header#navbar {
     }
     @media (max-width: 767px) {
       display: inline-block;
+      vertical-align: top;
+      margin-bottom: 0;
     }
   }
   .form-type-textfield {
