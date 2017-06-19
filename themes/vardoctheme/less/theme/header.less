@@ -1,1 +1,120 @@
-// Insert your header styling here.
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic);
+
+body {
+  font-family: "Open Sans";
+}
+
+header#navbar {
+  .menu {
+    @media (min-width: 768px) {
+      clear: both;
+      float: right;
+      margin-top: -50px;
+    }
+    .active {
+      a {
+        background-color: inherit;
+        color:#338ec7;
+      }
+    }
+    @media (min-width: 768px) {
+      li {
+        &:last-child a {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.navbar {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-image: url("../images/laptop.png");
+  background-position: 50% 0;
+  background-size: cover;
+  height: 100vh;
+  @media (max-width: 992px) {
+    height: 50vh;
+  }
+  @media (max-width: 767px) {
+    height: 100vh;
+  }
+  .navbar-nav {
+    li {
+      a {
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+.page-header {
+  border-bottom: 0;
+}
+
+.block-views-exposed-filter-blockbook-search-page-search {
+  text-align: center;
+  margin-top: 276px;
+  @media (max-width: 992px) {
+    margin-top: 0px;
+  }
+  @media (max-width: 767px) {
+    margin-top: 100px;
+  }
+  .form-actions {
+    .form-submit {
+      border-radius: 0;
+      margin-left: -4px;
+      height: 59px;
+      background-color: #d8d8d8;
+      border: 1px solid #d8d8d8;
+      border-radius: 0 2px 2px 0;
+      color: #696969;
+      font-size: 0;
+      span {
+        &::before {
+          font-size: 30px;
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      display: inline-block;
+    }
+  }
+  .form-type-textfield {
+    float: none !important;
+     .form-control {
+       border-radius: 0;
+       height: 59px;
+       width: 690px;
+       max-width: 100%;
+       @media (max-width: 992px) {
+         width: 490px;
+       }
+       @media (max-width: 767px) {
+         width: 245px;
+       }
+     }
+     @media (max-width: 767px) {
+       display: inline-block;
+     }
+  }
+  .block-title {
+    width: 100%;
+    display: block;
+    color: #fff;
+    font-size: 48px;
+    font-weight: normal;
+    padding-bottom: 60px;
+    @media (max-width: 992px) {
+      font-size: 35px;
+      padding-bottom: 0;
+    }
+  }
+}

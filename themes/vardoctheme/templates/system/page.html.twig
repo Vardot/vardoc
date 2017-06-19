@@ -65,11 +65,12 @@
       set navbar_classes = [
         'navbar',
         theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
-        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : header_container,
-        header_container,
+        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : 'header',
+        'header',
       ]
     %}
     <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
+      <div class="header-wrapper container">
       {% if not navbar_attributes.hasClass(header_container) %}
         <div class="{{ container }}">
       {% endif %}
@@ -104,7 +105,7 @@
           </div>
         {% endblock %}
       {% endif %}
-
+      </div>
     </header>
   {% endblock %}
 {% endif %}
