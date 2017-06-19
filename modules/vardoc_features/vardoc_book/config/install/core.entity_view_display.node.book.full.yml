@@ -10,6 +10,8 @@ dependencies:
     - node.type.book
   module:
     - comment
+    - ds
+    - field_group
     - panelizer
     - text
     - user
@@ -19,6 +21,61 @@ third_party_settings:
     custom: false
     allow: false
     default: default
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - node_post_date
+        - body
+        - book_navigation
+        - field_comment
+        - group_comments_wrapper
+    fields:
+      book_navigation:
+        plugin_id: book_navigation
+        weight: 2
+        label: hidden
+        formatter: default
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 0
+        label: hidden
+        formatter: ds_post_date_short
+  field_group:
+    group_comments_wrapper:
+      children:
+        - field_comment
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Comments
 id: node.book.full
 targetEntityType: node
 bundle: book
@@ -28,26 +85,19 @@ content:
     label: hidden
     type: text_default
     weight: 1
-    region: content
+    region: main
     settings: {  }
     third_party_settings: {  }
-  field_category:
-    weight: 0
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_comment:
     type: comment_default
-    weight: 2
-    region: content
+    weight: 3
+    region: main
     label: hidden
     settings:
       pager_id: 0
       view_mode: default
     third_party_settings: {  }
 hidden:
+  field_category: true
   langcode: true
   links: true

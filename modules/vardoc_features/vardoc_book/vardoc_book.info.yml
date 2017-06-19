@@ -9,9 +9,11 @@ dependencies:
   - block_class
   - book
   - comment
+  - ctools
   - ds
   - features
   - field
+  - field_group
   - language
   - menu_ui
   - node
