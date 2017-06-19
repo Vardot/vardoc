@@ -5,6 +5,7 @@ dependencies:
     - views.view.book_search
   module:
     - block_class
+    - system
     - views
   theme:
     - vardoctheme
@@ -23,4 +24,9 @@ settings:
   provider: views
   label_display: visible
   views_label: 'Need help finding something?'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
