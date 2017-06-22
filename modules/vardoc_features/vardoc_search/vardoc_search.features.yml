@@ -1,4 +1,5 @@
 bundle: vardoc
 excluded:
   - core.entity_view_display.node.book.search_result
+  - ultimate_cron.job.search_cron
 required: true
