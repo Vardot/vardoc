@@ -6,6 +6,7 @@ dependencies:
   - block_content
   - page_manager
   - panels
+  - vardoc_book
   - views
 version: 8.x-1.x-dev
-package: 'Vardoc'
+package: Vardoc

@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.homepage
+    - views.view.book
+  module:
+    - panels
+    - views
+id: homepage-panels_variant-0
+label: Homepage
+variant: panels_variant
+variant_settings:
+  blocks:
+    55f8a569-0bee-4aaa-8c96-cfc154f9fb4f:
+      id: 'views_block:book-block_books_level_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: main
+      uuid: 55f8a569-0bee-4aaa-8c96-cfc154f9fb4f
+      weight: 1
+  id: panels_variant
+  uuid: d61dddde-a5ea-42e0-841f-f5468212c9c8
+  label: null
+  weight: 0
+  layout: bs_1col
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: homepage-panels_variant-0
+  builder: ipe
+page: homepage
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }
