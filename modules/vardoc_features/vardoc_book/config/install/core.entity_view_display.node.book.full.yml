@@ -67,14 +67,15 @@ third_party_settings:
       weight: 3
       format_type: html_element
       format_settings:
-        id: ''
-        classes: ''
+        label: Comments
         element: div
         show_label: true
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: comments-wrapper
       label: Comments
 id: node.book.full
 targetEntityType: node

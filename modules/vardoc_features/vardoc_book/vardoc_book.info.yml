@@ -26,5 +26,6 @@ dependencies:
   - text
   - user
   - views
+  - views_bootstrap
 version: 8.x-1.0
 package: Vardoc
