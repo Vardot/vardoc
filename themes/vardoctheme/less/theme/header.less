@@ -3,7 +3,7 @@
 body {
   font-family: "Open Sans";
   font-size: 16px;
-  color: #696969;
+  color: @DimGray;
   line-height: 1.63;
 }
 
@@ -17,7 +17,7 @@ header#navbar {
     .active {
       a {
         background-color: inherit;
-        color:#000;
+        color:@Black;
       }
     }
     @media (min-width: 768px) {
@@ -47,11 +47,11 @@ header#navbar {
     .navbar-nav {
       li {
         a {
-          color: #fff;
+          color: @White;
           font-weight: 600;
           text-transform: uppercase;
           &:hover {
-            color: #000;
+            color: @Black;
           }
         }
       }
@@ -63,15 +63,15 @@ header#navbar {
 .navbar {
   margin-top: 0;
   margin-bottom: 0;
-  background-color: #328ec7;
+  background-color: @Curious-Blue;
   .navbar-nav {
     li {
       a {
-        color: #fff;
+        color: @White;
         font-weight: 400;
         text-transform: uppercase;
         &:hover {
-          color: #000;
+          color: @Black;
         }
       }
     }
@@ -82,65 +82,68 @@ header#navbar {
   border-bottom: 0;
 }
 
-.block-views-exposed-filter-blockbook-search-page-search {
-  text-align: center;
-  margin-top: 276px;
-  @media (max-width: 992px) {
-    margin-top: 0px;
-  }
-  @media (max-width: 767px) {
-    margin-top: 100px;
-  }
-  .form-actions {
-    .form-submit {
-      border-radius: 0;
-      margin-left: -10px;
-      height: 59px;
-      background-color: #d8d8d8;
-      border: 1px solid #d8d8d8;
-      border-radius: 0 2px 2px 0;
-      color: #696969;
-      font-size: 0;
-      span {
-        &::before {
-          font-size: 30px;
-        }
-      }
+.path-frontpage {
+  .block-views-exposed-filter-blockbook-search-page-search {
+    text-align: center;
+    margin-top: 276px;
+    @media (max-width: 992px) {
+      margin-top: 0px;
     }
     @media (max-width: 767px) {
-      display: inline-block;
-      vertical-align: top;
-      margin-bottom: 0;
+      margin-top: 100px;
     }
-  }
-  .form-type-textfield {
-    float: none !important;
-     .form-control {
-       border-radius: 0;
-       height: 59px;
-       width: 690px;
-       max-width: 100%;
-       @media (max-width: 992px) {
-         width: 490px;
+    .form-actions {
+      .form-submit {
+        border-radius: 0;
+        margin-left: -10px;
+        height: 59px;
+        background-color: @Gainsboro;
+        border: 1px solid @Gainsboro;
+        border-radius: 0 2px 2px 0;
+        color: @DimGray;
+        font-size: 0;
+        span {
+          &::before {
+            font-size: 30px;
+          }
+        }
+      }
+      @media (max-width: 767px) {
+        display: inline-block;
+        vertical-align: text-top;
+        margin-bottom: 0;
+      }
+    }
+    .form-type-textfield {
+      float: none !important;
+       .form-control {
+         border-radius: 0;
+         height: 59px;
+         width: 690px;
+         max-width: 100%;
+         @media (max-width: 992px) {
+           width: 490px;
+         }
+         @media (max-width: 767px) {
+           width: 245px;
+         }
        }
        @media (max-width: 767px) {
-         width: 245px;
+         display: inline-block;
        }
-     }
-     @media (max-width: 767px) {
-       display: inline-block;
-     }
-  }
-  .block-title {
-    width: 100%;
-    display: block;
-    color: #fff;
-    font-size: 48px;
-    font-weight: normal;
-    padding-bottom: 60px;
-    @media (max-width: 992px) {
-      font-size: 35px;
-      padding-bottom: 0;
+    }
+    .block-title {
+      width: 100%;
+      display: block;
+      color: @White;
+      font-size: 48px;
+      font-weight: normal;
+      padding-bottom: 60px;
+      margin-bottom: 0px;
+      @media (max-width: 992px) {
+        font-size: 35px;
+        padding-bottom: 15px;;
+      }
     }
   }
 }

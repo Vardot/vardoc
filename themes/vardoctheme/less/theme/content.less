@@ -1,25 +1,20 @@
 .region-content {
   .field--name-node-post-date {
     font-size: 12px;
-    color: #979797;
+    color: @Shady-Gray;
     margin-top: 20px;
     margin-bottom: 40px;
-  }
-  .page-header {
-    font-size: 40px;
-    color: #328ec7;
-    text-transform: capitalize;
   }
   .node--view-mode-full {
     nav {
       margin-bottom: 40px;
       margin-top: 40px;
-      border-bottom: 1px solid #d8d8d8;
+      border-bottom: 1px solid @Gainsboro;
       padding-bottom: 40px;
       ul {
         .clearfix ();
         padding: 0;
-        background-color: #fafafa;
+        background-color: @White-light;
         list-style: none;
         margin: 0px;
         li {
@@ -29,6 +24,9 @@
           float: left;
           &:last-child {
             text-align: right;
+          }
+          &:first-child {
+            text-align: left;
           }
           a {
             b {
@@ -41,17 +39,22 @@
   }
   .comment-form {
     button {
-      background-color: #328ec7;
-      border-color: #328ec7;
+      background-color: @Curious-Blue;
+      border-color: @Curious-Blue;
     }
   }
 }
+.page-header {
+  font-size: 40px;
+  color: @Curious-Blue;
+  text-transform: capitalize;
+}
 .breadcrumb {
-  background-color: #f7f7f7;
+  background-color: @White-Smoke;
   margin-top: 40px;
   li {
     a {
-      color: #696969;
+      color: @DimGray;
     }
     &.active {
       font-weight: bold;
@@ -70,14 +73,14 @@
 
   .field--name-comment-changed-date {
     font-size: 12px;
-    color: #979797;
+    color: @Shady-Gray;
     margin-top: 5px;
     margin-bottom: 10px;
   }
 }
 
 .region-sidebar-second {
-  background-color: #ffffff;
+  background-color: @White;
   border: 0;
   .block-book-navigation {
     nav {
@@ -88,7 +91,7 @@
           padding-left: 1.3em;
           a {
             font-size: 14px;
-            color: #696969;
+            color: @DimGray;
           }
           &:before {
             content: "\f105";
@@ -118,7 +121,71 @@
 }
 .view-book-search  {
   .views-row {
-    border-bottom: 1px solid #d8d8d8;
+    border-bottom: 1px solid @Gainsboro;
     padding-bottom: 40px;
+  }
+}
+.path-inner {
+  .block-views-exposed-filter-blockbook-search-page-search {
+    margin-bottom: 48px;
+    .form-actions {
+      .form-submit {
+        background-color: @Gainsboro;
+        border: 1px solid @Gainsboro;
+        border-radius: 0 2px 2px 0;
+        color: @DimGray;
+        font-size: 0;
+        height: 34px;
+        margin-left: -4px;
+        span {
+          &::before {
+            font-size: 15px;
+          }
+        }
+      }
+      @media (max-width: 767px) {
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 0;
+      }
+    }
+    .form-type-textfield {
+      float: none !important;
+      width: 84%;
+       .form-control {
+         border-radius: 0;
+         max-width: 100%;
+       }
+       @media (max-width: 1024px) {
+         display: inline-block;
+         width: 73%;
+       }
+       @media (max-width: 992px) {
+         display: inline-block;
+         width: 73%;
+       }
+    }
+  }
+}
+
+.view-book {
+  margin-top: 80px;
+  .views-field-title {
+    border: 1px solid @Curious-Blue;
+    border-radius: 3px;
+    text-align: center;
+    padding: 31px 50px;
+    margin-bottom: 30px;
+    span {
+      a {
+        color: @Curious-Blue;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }

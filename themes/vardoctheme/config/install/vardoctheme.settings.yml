@@ -15,3 +15,31 @@
 cdn_provider: ''
 modal_enabled: 0
 forms_smart_descriptions: 0
+schemas:
+  bootstrap: 8000
+  vartheme: 8000
+  vardoctheme: 8000
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  path: ''
+  url: ''
+  use_default: true
+region_wells:
+  navigation: ''
+  navigation_collapsible: ''
+  header: ''
+  content_top: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: ''
+  footer: ''
+table_responsive: '-1'
+table: ''
+header_container: 0
+

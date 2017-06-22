@@ -70,7 +70,7 @@
       ]
     %}
     <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
-      <div class="header-wrapper container">
+      <div class="header-wrapper">
       {% if not navbar_attributes.hasClass(header_container) %}
         <div class="{{ container }}">
       {% endif %}
@@ -193,8 +193,10 @@
 
 {% if page.footer %}
   {% block footer %}
-    <footer class="footer {{ container }}" role="contentinfo">
-      {{ page.footer }}
-    </footer>
+    <div class="footer-wrapper">
+      <footer class="footer {{ container }}" role="contentinfo">
+        {{ page.footer }}
+      </footer>
+    </div>
   {% endblock %}
 {% endif %}
