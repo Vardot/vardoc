@@ -9,7 +9,7 @@ body {
 
 header#navbar {
   .menu {
-    @media (min-width: 768px) {
+    @media (min-width: @screen-sm-min) {
       clear: both;
       float: right;
       margin-top: -50px;
@@ -20,7 +20,7 @@ header#navbar {
         color:@Black;
       }
     }
-    @media (min-width: 768px) {
+    @media (min-width: @screen-sm-min) {
       li {
         &:last-child a {
           padding-right: 0;
@@ -38,10 +38,10 @@ header#navbar {
     background-position: 50% 0;
     background-size: cover;
     height: 100vh;
-    @media (max-width: 992px) {
+    @media (max-width: @screen-md-max) {
       height: 50vh;
     }
-    @media (max-width: 767px) {
+    @media (max-width: @screen-sm-max) {
       height: 100vh;
     }
     .navbar-nav {
@@ -86,10 +86,10 @@ header#navbar {
   .block-views-exposed-filter-blockbook-search-page-search {
     text-align: center;
     margin-top: 276px;
-    @media (max-width: 992px) {
+    @media (max-width: @screen-md-max) {
       margin-top: 0px;
     }
-    @media (max-width: 767px) {
+    @media (max-width: @screen-sm-max) {
       margin-top: 100px;
     }
     .form-actions {
@@ -108,7 +108,7 @@ header#navbar {
           }
         }
       }
-      @media (max-width: 767px) {
+      @media (max-width: @screen-sm-max) {
         display: inline-block;
         vertical-align: text-top;
         margin-bottom: 0;
@@ -121,14 +121,14 @@ header#navbar {
          height: 59px;
          width: 690px;
          max-width: 100%;
-         @media (max-width: 992px) {
+         @media (max-width: @screen-md-max) {
            width: 490px;
          }
-         @media (max-width: 767px) {
+         @media (max-width: @screen-sm-max) {
            width: 245px;
          }
        }
-       @media (max-width: 767px) {
+       @media (max-width: @screen-sm-max) {
          display: inline-block;
        }
     }
@@ -140,7 +140,7 @@ header#navbar {
       font-weight: normal;
       padding-bottom: 60px;
       margin-bottom: 0px;
-      @media (max-width: 992px) {
+      @media (max-width: @screen-md-max) {
         font-size: 35px;
         padding-bottom: 15px;;
       }

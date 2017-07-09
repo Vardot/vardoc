@@ -7,6 +7,10 @@
     ul.nav {
       float: right;
       padding: 17px 0 17px 0;
+      @media (max-width: @screen-xs-max) {
+        float: none;
+        text-align: center;
+      }
       li {
         display: inline-block;
         list-style: none;
@@ -23,7 +27,12 @@
     }
     #block-copyright {
       float: left;
-      padding: 17px 0 17px 0;
+      padding: 20px 0 20px 0;
+      font-size: 12px;
+      @media (max-width: @screen-xs-max) {
+        float: none;
+        text-align: center;
+      }
     }
   }
 }

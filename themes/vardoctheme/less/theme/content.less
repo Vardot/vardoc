@@ -52,6 +52,13 @@
 .breadcrumb {
   background-color: @White-Smoke;
   margin-top: 40px;
+  width: 75%;
+  float: left;
+  font-size: 14px;
+  @media (max-width: @screen-xs-max) {
+    width: 100%;
+    float: none;
+  }
   li {
     a {
       color: @DimGray;
@@ -82,6 +89,7 @@
 .region-sidebar-second {
   background-color: @White;
   border: 0;
+  margin-top: 40px;
   .block-book-navigation {
     nav {
       ul {
@@ -99,7 +107,12 @@
             font-size: 16px;
             display: inline-block;
             margin-left: -1em;
-            width: 1.3em;
+            width: 10px;
+          }
+          &.active {
+            > a {
+              color: @Curious-Blue;
+            }
           }
         }
         li.active {
@@ -119,6 +132,11 @@
     }
   }
 }
+.path-search {
+  .region-sidebar-second  {
+    margin-top: 16px;
+  }
+}
 .view-book-search  {
   .views-row {
     border-bottom: 1px solid @Gainsboro;
@@ -127,7 +145,13 @@
 }
 .path-inner {
   .block-views-exposed-filter-blockbook-search-page-search {
-    margin-bottom: 48px;
+    margin: 42px 0 0 0;
+    width: 23%;
+    float: right;
+    @media (max-width: @screen-xs-max) {
+      width: 100%;
+      float: none;
+    }
     .form-actions {
       .form-submit {
         background-color: @Gainsboro;
@@ -143,7 +167,7 @@
           }
         }
       }
-      @media (max-width: 767px) {
+      @media (max-width: @screen-sm-max) {
         display: inline-block;
         vertical-align: top;
         margin-bottom: 0;
@@ -156,11 +180,11 @@
          border-radius: 0;
          max-width: 100%;
        }
-       @media (max-width: 1024px) {
+       @media (max-width: @screen-md-min) {
          display: inline-block;
          width: 73%;
        }
-       @media (max-width: 992px) {
+       @media (max-width: @screen-md-max) {
          display: inline-block;
          width: 73%;
        }
@@ -168,24 +192,126 @@
   }
 }
 
-.view-book {
+.view-display-id-block_books_level_1 {
   margin-top: 80px;
   .views-field-title {
-    border: 1px solid @Curious-Blue;
-    border-radius: 3px;
-    text-align: center;
-    padding: 31px 50px;
-    margin-bottom: 30px;
     span {
       a {
         color: @Curious-Blue;
         text-decoration: none;
         font-size: 18px;
         font-weight: 600;
+        border: 1px solid @Curious-Blue;
+        border-radius: 3px;
+        text-align: center;
+        padding: 31px 50px;
+        margin-bottom: 30px;
+        display: block;
         &:hover {
-          text-decoration: underline;
+          text-decoration: none;
+          background-color: @Curious-Blue;
+          color: @White;
         }
       }
     }
   }
 }
+
+.comments-wrapper {
+  section {
+    h2 {
+      color: @DimGray;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}
+
+.bs-region--left {
+  padding-right: 15px;
+}
+
+.bs-region--right {
+  padding-left: 15px;
+}
+
+.bs-region--right,
+.bs-region--left {
+  width: 50%;
+  float: left;
+  margin-top: 80px;
+  @media (max-width: @screen-xs-max) {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+  .view-content {
+    .views-row  {
+      .views-field-title {
+        padding: 21px 0;
+        border-bottom: 1px solid @Gainsboro;
+        span {
+          a {
+            font-size: 16px;
+            color: @DimGray;
+            display: block;
+            &::after {
+              content: "\f105";
+              font-family: FontAwesome;
+              font-size: 16px;
+              display: inline-block;
+              float: right;
+            }
+          }
+        }
+      }
+      &:last-child {
+        .views-field-title {
+          border: 0px;
+        }
+      }
+    }
+  }
+}
+
+.block-views-exposed-filter-blockbook-search-page-search + * {
+  clear: both;
+}
+
+.comment-form label {
+  font-weight: 400;
+}
+
+.block-views-blockbook-block-related-articles {
+  margin-top: 50px;
+  .block-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: @DimGray;
+  }
+  ul {
+    list-style: none;
+    padding-left: 14px;
+    li {
+      border-bottom: 1px solid @Gainsboro;
+      padding: 10px 0;
+      a {
+        color: @Curious-Blue;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+/***** Google social auth *********************/
+.block-social-auth {
+  margin-top: 40px;
+
+  .social-auth.auth-icon {
+    width: auto;
+  }
+}
+/***** End of Google social auth *************/
