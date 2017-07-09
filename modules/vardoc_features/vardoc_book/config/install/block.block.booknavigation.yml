@@ -4,7 +4,7 @@ dependencies:
   module:
     - block_class
     - book
-    - ctools
+    - system
   theme:
     - vardoctheme
 third_party_settings:
@@ -13,7 +13,7 @@ third_party_settings:
 id: booknavigation
 theme: vardoctheme
 region: sidebar_second
-weight: -6
+weight: -7
 provider: null
 plugin: book_navigation
 settings:
@@ -23,10 +23,8 @@ settings:
   label_display: '0'
   block_mode: 'all pages'
 visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    bundles:
-      book: book
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

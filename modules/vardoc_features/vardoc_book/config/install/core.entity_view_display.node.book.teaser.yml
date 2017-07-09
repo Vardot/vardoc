@@ -2,12 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.native_comment.default
     - core.entity_view_mode.node.teaser
     - field.field.node.book.body
+    - field.field.node.book.field_category
+    - field.field.node.book.field_comment
     - node.type.book
   module:
+    - comment
+    - panelizer
+    - taxonomy
     - text
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.book.teaser
 targetEntityType: node
 bundle: book
@@ -21,8 +33,34 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
+  field_category:
+    type: entity_reference_rss_category
+    weight: 0
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_comment:
+    type: comment_default
+    weight: 0
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+  langcode:
+    type: language
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
   links:
     weight: 101
     region: content
-hidden:
-  langcode: true
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

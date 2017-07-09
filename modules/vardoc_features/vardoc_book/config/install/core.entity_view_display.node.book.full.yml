@@ -21,6 +21,32 @@ third_party_settings:
     custom: false
     allow: false
     default: default
+    displays:
+      default:
+        blocks:
+          2b65792b-e375-460e-95f9-f98e97855ccc:
+            id: 'entity_view:node'
+            label: 'Entity view (Content)'
+            provider: ctools
+            label_display: '0'
+            view_mode: default
+            region: ds_content
+            weight: 0
+            uuid: 2b65792b-e375-460e-95f9-f98e97855ccc
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+        id: panels_variant
+        label: Default
+        uuid: d6a14a8d-3675-4918-9cdf-d0a9228f76b8
+        weight: 0
+        layout: ds_1col
+        layout_settings: {  }
+        page_title: ''
+        storage_type: panelizer_default
+        storage_id: 'node:book:full:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
   ds:
     layout:
       id: bs_1col
@@ -43,6 +69,7 @@ third_party_settings:
             attributes: ''
     regions:
       main:
+        - node_title
         - node_post_date
         - body
         - book_navigation
@@ -51,12 +78,21 @@ third_party_settings:
     fields:
       book_navigation:
         plugin_id: book_navigation
-        weight: 2
+        weight: 3
         label: hidden
         formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: page-header
+          link: false
       node_post_date:
         plugin_id: node_post_date
-        weight: 0
+        weight: 1
         label: hidden
         formatter: ds_post_date_short
   field_group:
@@ -64,7 +100,7 @@ third_party_settings:
       children:
         - field_comment
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: html_element
       format_settings:
         label: Comments
@@ -85,7 +121,7 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 2
     region: main
     settings: {  }
     third_party_settings: {  }

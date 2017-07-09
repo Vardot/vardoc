@@ -20,7 +20,7 @@ settings:
   id: social_auth_login
   label: 'Google Login'
   provider: social_auth
-  label_display: visible
+  label_display: '0'
 visibility:
   request_path:
     id: request_path

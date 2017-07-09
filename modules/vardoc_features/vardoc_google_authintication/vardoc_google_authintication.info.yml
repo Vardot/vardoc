@@ -1,5 +1,5 @@
-name: 'vardoc google authintication'
-description: 'Provides Vardoc google login.'
+name: 'Vardoc google authintication'
+description: 'Provides Google authentication (login) service for Vardoc.'
 type: module
 core: 8.x
 dependencies:

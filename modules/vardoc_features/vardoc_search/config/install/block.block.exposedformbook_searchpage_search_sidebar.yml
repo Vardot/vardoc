@@ -14,8 +14,8 @@ third_party_settings:
     classes: ''
 id: exposedformbook_searchpage_search_sidebar
 theme: vardoctheme
-region: sidebar_second
-weight: -7
+region: content_top
+weight: -6
 provider: null
 plugin: 'views_exposed_filter_block:book_search-page_search'
 settings:

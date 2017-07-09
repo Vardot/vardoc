@@ -15,7 +15,7 @@ function vardoc_book_node_view(array &$build, EntityInterface $node, EntityViewD
   if ($view_mode == 'full') {
     if (!empty($node->book['bid']) && empty($node->in_preview)) {
       //Override book_navigation weight to resolve this issue https://www.drupal.org/node/2786343
-      $build['book_navigation']['#weight'] = 1;
+      $build['book_navigation']['#weight'] = 4;
     }
   }
 }

@@ -11,6 +11,7 @@ dependencies:
   - comment
   - ctools
   - ds
+  - entityqueue
   - features
   - field
   - field_group
@@ -19,9 +20,11 @@ dependencies:
   - node
   - panelizer
   - path
+  - pathauto
   - rabbit_hole
   - search_api
   - search_api_db
+  - system
   - taxonomy
   - text
   - user
