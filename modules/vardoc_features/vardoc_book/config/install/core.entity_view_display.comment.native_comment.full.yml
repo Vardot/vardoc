@@ -63,5 +63,4 @@ content:
     type: string
     region: main
 hidden:
-  langcode: true
   links: true

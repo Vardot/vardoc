@@ -54,9 +54,7 @@ assignments:
     weight: -17
   optional:
     types:
-      config:
-        language_content_settings: language_content_settings
-        configurable_language: configurable_language
+      config: {  }
     enabled: true
     weight: -14
   packages:

@@ -75,6 +75,8 @@ permissions:
   - 'edit own comments'
   - 'edit own landing_page content'
   - 'edit own page content'
+  - 'manipulate all entityqueues'
+  - 'manipulate entityqueues'
   - 'post comments'
   - 'rabbit hole bypass node'
   - 'rabbit hole bypass taxonomy_term'

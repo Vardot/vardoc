@@ -37,5 +37,4 @@ content:
     third_party_settings: {  }
 hidden:
   author: true
-  langcode: true
   subject: true

@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Enables modules and site configuration for a Varbase sub profile basic
+ * Enables modules and site configuration for Vardoc profile
  * site installation.
  */
 
@@ -10,7 +10,7 @@ use Drupal\language\Entity\ConfigurableLanguage;
 use Drupal\varbase\Form\AssemblerForm;
 use Drupal\varbase\Form\ConfigureMultilingualForm;
 use Drupal\varbase\Config\ConfigBit;
-use Drupal\vardoc\Form\SubProfileAssemblerForm;
+use Drupal\vardoc\Form\VardocAssemblerForm;
 
 /**
  * Implements hook_form_FORM_ID_alter() for install_configure_form().
@@ -28,9 +28,8 @@ function vardoc_form_install_configure_form_alter(&$form, FormStateInterface $fo
 function vardoc_install_tasks(&$install_state) {
   include_once \Drupal::root() . '/profiles/varbase/varbase.profile';
   $install_tasks = varbase_install_tasks($install_state);
-
+  $needs_configure_multilingual = FALSE;
   unset($install_tasks['varbase_multilingual_configuration_form']);
-  unset($install_tasks['varbase_configure_multilingual']);
   unset($install_tasks['varbase_extra_components']);
   unset($install_tasks['varbase_assemble_extra_components']);
   
@@ -38,7 +37,7 @@ function vardoc_install_tasks(&$install_state) {
     'display_name' => t('Extra components'),
     'display' => TRUE,
     'type' => 'form',
-    'function' => SubProfileAssemblerForm::class,
+    'function' => VardocAssemblerForm::class,
   ];
   $install_tasks['vardoc_assemble_extra_components'] = [
     'display_name' => t('Assemble extra components'),
@@ -77,7 +76,7 @@ function vardoc_assemble_extra_components(array &$install_state) {
   $default_components = ConfigBit::getList($configbit_root . '/default.components.varbase.bit.yml', 'install_default_components', TRUE, 'dependencies');
 
   // Selected extra components to be installed.
-  $selected_extra_components = $install_state['varbase']['extra_components'];
+  $selected_extra_components = $install_state['vardoc']['extra_components'];
 
   $batch = array();
 

@@ -92,5 +92,4 @@ content:
     region: main
 hidden:
   field_category: true
-  langcode: true
   links: true

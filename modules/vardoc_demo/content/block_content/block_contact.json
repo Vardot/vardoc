@@ -1,0 +1,115 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/2?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/block_image"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/block_image\/revision_user": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/block_image\/field_image": [
+            {
+                "href": "http:\/\/default\/media\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 2
+        }
+    ],
+    "uuid": [
+        {
+            "value": "80048eaf-62c1-4bce-ac81-20f8b4ecbd8f"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 3
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "block_image"
+        }
+    ],
+    "info": [
+        {
+            "value": "Can\u2019t find what you\u2019re looking for?",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1499777616,
+            "lang": "en"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": 1499777616
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/block_image\/revision_user": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "68c837a6-a1ea-405b-84ea-544569cc0b9a"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/block_image\/field_image": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/media\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "37d193c4-4b7b-42e3-be15-9008cc2a0502"
+                    }
+                ],
+                "lang": "en"
+            }
+        ]
+    },
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>Voluptatem accusantium doloremque laudan rem aperiam<\/p>\r\n\r\n<a href=\"\/contact\" class=\"contact-us-btn\"> contact support <\/a>",
+            "format": "code_html",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}

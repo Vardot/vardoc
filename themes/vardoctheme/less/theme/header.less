@@ -5,6 +5,7 @@ body {
   font-size: 16px;
   color: @DimGray;
   line-height: 1.63;
+  overflow-x: hidden;
 }
 
 header#navbar {
@@ -50,6 +51,8 @@ header#navbar {
           color: @White;
           font-weight: 600;
           text-transform: uppercase;
+          font-size: 14px;
+          padding-top: 20px;
           &:hover {
             color: @Black;
           }
@@ -85,7 +88,7 @@ header#navbar {
 .path-frontpage {
   .block-views-exposed-filter-blockbook-search-page-search {
     text-align: center;
-    margin-top: 276px;
+    margin-top: 212px;
     @media (max-width: @screen-md-max) {
       margin-top: 0px;
     }
@@ -140,6 +143,7 @@ header#navbar {
       font-weight: normal;
       padding-bottom: 60px;
       margin-bottom: 0px;
+      text-transform: initial;
       @media (max-width: @screen-md-max) {
         font-size: 35px;
         padding-bottom: 15px;;

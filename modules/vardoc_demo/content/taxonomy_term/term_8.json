@@ -1,0 +1,61 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/taxonomy\/term\/8?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/category"
+        }
+    },
+    "tid": [
+        {
+            "value": 8
+        }
+    ],
+    "uuid": [
+        {
+            "value": "2de670b1-155f-4fcc-9c9d-d444a440394e"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "und",
+            "lang": "und"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "category"
+        }
+    ],
+    "name": [
+        {
+            "value": "brihowrojes",
+            "lang": "und"
+        }
+    ],
+    "description": [
+        {
+            "value": "description of brihowrojes",
+            "format": null,
+            "lang": "und"
+        }
+    ],
+    "weight": [
+        {
+            "value": 3
+        }
+    ],
+    "changed": [
+        {
+            "value": 1499777307,
+            "lang": "und"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "und"
+        }
+    ]
+}

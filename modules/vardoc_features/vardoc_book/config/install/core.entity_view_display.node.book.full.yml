@@ -136,5 +136,4 @@ content:
     third_party_settings: {  }
 hidden:
   field_category: true
-  langcode: true
   links: true

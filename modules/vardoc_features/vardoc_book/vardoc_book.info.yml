@@ -15,7 +15,6 @@ dependencies:
   - features
   - field
   - field_group
-  - language
   - menu_ui
   - node
   - panelizer

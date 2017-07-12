@@ -9,12 +9,14 @@ dependencies:
   - ds
   - entity_browser
   - field
-  - language
+  - field_group
+  - menu_item_visibility
   - page_manager
   - panels
   - text
   - varbase_core
   - varbase_media
+  - varbase_webform
   - vardoc_book
   - views
 version: 8.x-1.x-dev

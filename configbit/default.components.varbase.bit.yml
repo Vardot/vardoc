@@ -23,4 +23,3 @@ config_bit:
         - vardoc_book
         - vardoc_search
         - vardoc_google_authintication
-        - vardoc_page

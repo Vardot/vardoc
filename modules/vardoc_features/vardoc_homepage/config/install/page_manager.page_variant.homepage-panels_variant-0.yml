@@ -5,7 +5,7 @@ dependencies:
     - page_manager.page.homepage
     - views.view.book
   content:
-    - 'block_content:block_image:908af500-da0d-4f7c-851d-29668fb24a43'
+    - 'block_content:block_image:80048eaf-62c1-4bce-ac81-20f8b4ecbd8f'
   module:
     - block_content
     - panels
@@ -48,8 +48,8 @@ variant_settings:
       weight: 1
       context_mapping: {  }
       uuid: 000c178a-0024-4e65-b2f0-7871aeadeb7e
-    c2d1a411-5607-43cb-ba72-c2a2b2191449:
-      id: 'block_content:908af500-da0d-4f7c-851d-29668fb24a43'
+    aeffdb46-18f0-4994-9e97-a13cfe07f1c5:
+      id: 'block_content:80048eaf-62c1-4bce-ac81-20f8b4ecbd8f'
       label: 'Can’t find what you’re looking for?'
       provider: block_content
       label_display: '0'
@@ -58,7 +58,7 @@ variant_settings:
       view_mode: full
       context_mapping: {  }
       region: bottom
-      uuid: c2d1a411-5607-43cb-ba72-c2a2b2191449
+      uuid: aeffdb46-18f0-4994-9e97-a13cfe07f1c5
       weight: 1
   id: panels_variant
   uuid: d61dddde-a5ea-42e0-841f-f5468212c9c8

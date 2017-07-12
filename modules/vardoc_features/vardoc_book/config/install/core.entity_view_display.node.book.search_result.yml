@@ -76,5 +76,4 @@ content:
 hidden:
   field_category: true
   field_comment: true
-  langcode: true
   links: true

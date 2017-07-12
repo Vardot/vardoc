@@ -1,0 +1,177 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/ex-modo-pneum?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/book"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/uid": [
+            {
+                "href": "http:\/\/default\/user\/0?_format=hal_json",
+                "lang": "zxx"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/0?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/field_category": [
+            {
+                "href": "http:\/\/default\/taxonomy\/term\/8?_format=hal_json"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 61
+        }
+    ],
+    "uuid": [
+        {
+            "value": "e0f2bd4f-38ec-4749-9964-8a4b863cba8c"
+        }
+    ],
+    "vid": [
+        {
+            "value": 63
+        }
+    ],
+    "langcode": [
+        {
+            "value": "zxx",
+            "lang": "zxx"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "book"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "zxx"
+        }
+    ],
+    "title": [
+        {
+            "value": "Ex Modo Pneum",
+            "lang": "zxx"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/0?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "9f2bbaf9-56e5-4870-9ba6-171fd40b1912"
+                    }
+                ],
+                "lang": "zxx"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/0?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "9f2bbaf9-56e5-4870-9ba6-171fd40b1912"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/field_category": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/taxonomy\/term\/8?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/category"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "2de670b1-155f-4fcc-9c9d-d444a440394e"
+                    }
+                ]
+            }
+        ]
+    },
+    "created": [
+        {
+            "value": 1499332473,
+            "lang": "zxx"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1499777421,
+            "lang": "zxx"
+        }
+    ],
+    "promote": [
+        {
+            "value": true,
+            "lang": "zxx"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "zxx"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": 1499777421
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "zxx"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "zxx"
+        }
+    ],
+    "body": [
+        {
+            "value": "Facilisi importunus nunc rusticus suscipere torqueo ullamcorper. Quia voco vulpes. Accumsan acsi bene suscipit. Capto cogo ea elit et facilisis roto te torqueo. Haero humo luctus patria ut volutpat. Abluo antehabeo dolore exputo facilisi humo immitto luctus nutus. Diam iriure nisl refoveo similis vereor.\n\nAccumsan consequat cui damnum diam humo importunus quibus rusticus usitas. Caecus commoveo quae typicus vero. Adipiscing amet esca nisl nunc paulatim secundum wisi. Causa decet haero nunc si.\n\nDistineo incassum iusto iustum lobortis mauris pneum secundum valetudo. Abluo ille quidne scisco sed tego. Consectetuer dignissim natu quibus sed valde ymo. Brevitas comis os plaga venio vulputate. Abigo duis loquor meus saepius uxor vero. Augue causa cui eros exputo gravis in lobortis pala sit. Aptent eligo eu in mos populus sagaciter usitas. Commoveo eros iriure olim qui suscipit.\n\nAptent quia sudo. Haero imputo natu wisi. Defui exerci melior praesent quis si ulciscor. Abbas facilisi hos iusto iustum nisl sit vereor. Abbas abigo immitto letalis loquor meus praemitto tation utrum vereor. Cogo imputo pala refero similis turpis. Brevitas dolus ea tum. Enim lucidus minim typicus vulputate. Incassum ludus sudo.\n\nIusto mauris quibus te. Abdo aliquam camur distineo haero huic tamen ullamcorper velit. Abigo facilisi macto minim modo obruo pala sudo vindico. Appellatio gilvus ideo jugis minim oppeto pagus persto sit. Cui duis huic voco. Ad consequat et importunus incassum pecus probo saepius sit.\n\nAbigo ad commodo commoveo ludus molior paulatim valetudo vicis zelus. Abluo ea iaceo metuo pertineo praemitto singularis usitas. Ad ideo inhibeo pecus sed tamen utrum. Feugiat hendrerit nulla suscipit ut uxor. Causa exerci modo. Damnum huic ideo molior occuro quadrum saepius. Decet tum ymo. Consequat diam eligo tego.\n\nEx minim odio olim paratus premo virtus. Bene genitus ideo nostrud quidne rusticus secundum. Iaceo importunus utinam. Dolus ea fere saluto tego tincidunt validus. Abico os quae sed similis typicus veniam. Antehabeo esse facilisi haero nostrud nulla occuro pagus sino. Aliquip jugis lucidus praesent. Consectetuer natu pagus quae ulciscor. Ad adipiscing euismod feugiat tego. Duis plaga singularis te valetudo vulpes.\n\nEuismod probo quidne rusticus. Dolus paulatim quae. Abbas facilisis mos neo populus premo sudo valetudo. Consequat ibidem ludus melior os vero. Camur facilisi genitus jugis jumentum populus refoveo ulciscor. Abigo augue hos ibidem modo plaga rusticus turpis.\n\nExerci ibidem in pagus. Consectetuer nutus vero. Cogo euismod facilisis laoreet lucidus nostrud pneum praemitto quia scisco. Abbas antehabeo nulla odio olim persto vicis. Accumsan blandit elit feugiat nisl.\n\nAntehabeo aptent enim et fere iriure minim quibus tation vicis. Abigo accumsan dolor jus loquor magna mos quis tamen. Abico paulatim quae secundum. Caecus nutus quadrum refero roto saepius venio voco. Abigo adipiscing ex gravis lenis quibus vulputate ymo. Aliquip cogo illum imputo luptatum pertineo premo ratis. Eligo premo secundum. Cui facilisi gravis ibidem iusto modo tation wisi.\n\nCausa defui feugiat importunus jumentum molior saepius singularis ut virtus. Cui euismod meus pagus praemitto quia quidem. Ideo meus obruo tation utrum uxor venio. Aliquam commoveo diam laoreet mos saepius tego velit. Gemino humo jus odio os quibus roto. Dolus importunus molior nunc.\n\nDolor laoreet quidne volutpat. Aliquip camur consectetuer lucidus pertineo verto. Adipiscing persto populus singularis tum veniam vindico ymo. Defui et lobortis pala praesent quadrum scisco singularis usitas. Abigo imputo jus pertineo venio. Adipiscing aliquip neo tego turpis. Autem feugiat lobortis loquor luctus modo quia quidne velit. Commodo dolore inhibeo interdico praemitto si virtus voco.\n\n",
+            "format": "plain_text",
+            "summary": "Facilisi importunus nunc rusticus suscipere torqueo ullamcorper. Quia voco vulpes. Accumsan acsi bene suscipit. Capto cogo ea elit et facilisis roto te torqueo. Haero humo luctus patria ut volutpat. Abluo antehabeo dolore exputo facilisi humo immitto luctus nutus. Diam iriure nisl refoveo similis vereor.\n\nAccumsan consequat cui damnum diam humo importunus quibus rusticus usitas. Caecus commoveo quae typicus vero. Adipiscing amet esca nisl nunc paulatim secundum wisi. Causa decet haero nunc si.\n\nDistineo incassum iusto iustum lobortis mauris pneum secundum valetudo. Abluo ille quidne scisco sed tego. Consectetuer dignissim natu quibus sed valde ymo. Brevitas comis os plaga venio vulputate. Abigo duis loquor meus saepius uxor vero. Augue causa cui eros exputo gravis in lobortis pala sit. Aptent eligo eu in mos populus sagaciter usitas. Commoveo eros iriure olim qui suscipit.\n\nAptent quia sudo. Haero imputo natu wisi. Defui exerci melior praesent quis si ulciscor. Abbas facilisi hos iusto iustum nisl sit vereor. Abbas abigo immitto letalis loquor meus praemitto tation utrum vereor. Cogo imputo pala refero similis turpis. Brevitas dolus ea tum. Enim lucidus minim typicus vulputate. Incassum ludus sudo.\n\nIusto mauris quibus te. Abdo aliquam camur distineo haero huic tamen ullamcorper velit. Abigo facilisi macto minim modo obruo pala sudo vindico. Appellatio gilvus ideo jugis minim oppeto pagus persto sit. Cui duis huic voco. Ad consequat et importunus incassum pecus probo saepius sit.\n\nAbigo ad commodo commoveo ludus molior paulatim valetudo vicis zelus. Abluo ea iaceo metuo pertineo praemitto singularis usitas. Ad ideo inhibeo pecus sed tamen utrum. Feugiat hendrerit nulla suscipit ut uxor. Causa exerci modo. Damnum huic ideo molior occuro quadrum saepius. Decet tum ymo. Consequat diam eligo tego.\n\nEx minim odio olim paratus premo virtus. Bene genitus ideo nostrud quidne rusticus secundum. Iaceo importunus utinam. Dolus ea fere saluto tego tincidunt validus. Abico os quae sed similis typicus veniam. Antehabeo esse facilisi haero nostrud nulla occuro pagus sino. Aliquip jugis lucidus praesent. Consectetuer natu pagus quae ulciscor. Ad adipiscing euismod feugiat tego. Duis plaga singularis te valetudo vulpes.\n\nEuismod probo quidne rusticus. Dolus paulatim quae. Abbas facilisis mos neo populus premo sudo valetudo. Consequat ibidem ludus melior os vero. Camur facilisi genitus jugis jumentum populus refoveo ulciscor. Abigo augue hos ibidem modo plaga rusticus turpis.\n\nExerci ibidem in pagus. Consectetuer nutus vero. Cogo euismod facilisis laoreet lucidus nostrud pneum praemitto quia scisco. Abbas antehabeo nulla odio olim persto vicis. Accumsan blandit elit feugiat nisl.\n\nAntehabeo aptent enim et fere iriure minim quibus tation vicis. Abigo accumsan dolor jus loquor magna mos quis tamen. Abico paulatim quae secundum. Caecus nutus quadrum refero roto saepius venio voco. Abigo adipiscing ex gravis lenis quibus vulputate ymo. Aliquip cogo illum imputo luptatum pertineo premo ratis. Eligo premo secundum. Cui facilisi gravis ibidem iusto modo tation wisi.\n\nCausa defui feugiat importunus jumentum molior saepius singularis ut virtus. Cui euismod meus pagus praemitto quia quidem. Ideo meus obruo tation utrum uxor venio. Aliquam commoveo diam laoreet mos saepius tego velit. Gemino humo jus odio os quibus roto. Dolus importunus molior nunc.\n\nDolor laoreet quidne volutpat. Aliquip camur consectetuer lucidus pertineo verto. Adipiscing persto populus singularis tum veniam vindico ymo. Defui et lobortis pala praesent quadrum scisco singularis usitas. Abigo imputo jus pertineo venio. Adipiscing aliquip neo tego turpis. Autem feugiat lobortis loquor luctus modo quia quidne velit. Commodo dolore inhibeo interdico praemitto si virtus voco.\n\n",
+            "lang": "zxx"
+        }
+    ],
+    "field_comment": [
+        {
+            "status": 0,
+            "cid": 0,
+            "last_comment_timestamp": 1499777421,
+            "last_comment_name": null,
+            "last_comment_uid": 0,
+            "comment_count": 0
+        }
+    ]
+}

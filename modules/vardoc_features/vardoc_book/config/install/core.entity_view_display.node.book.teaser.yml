@@ -49,15 +49,6 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-  langcode:
-    type: language
-    weight: 0
-    region: content
-    label: above
-    settings:
-      link_to_entity: false
-      native_language: false
-    third_party_settings: {  }
   links:
     weight: 101
     region: content
