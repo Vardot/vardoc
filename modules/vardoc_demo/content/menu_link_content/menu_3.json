@@ -41,7 +41,7 @@
     ],
     "link": [
         {
-            "uri": "internal:\/contact",
+            "uri": "internal:\/form\/contact",
             "title": "",
             "options": []
         }
@@ -73,7 +73,7 @@
     ],
     "changed": [
         {
-            "value": 1499773364,
+            "value": 1499954376,
             "lang": "en"
         }
     ],
