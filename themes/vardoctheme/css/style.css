@@ -7923,6 +7923,7 @@ header#navbar .menu .active a {
 .breadcrumb {
   background-color: #f7f7f7;
   margin-top: 40px;
+  margin-bottom: 0;
   width: 75%;
   float: left;
   font-size: 14px;
@@ -7937,7 +7938,7 @@ header#navbar .menu .active a {
   color: #696969;
 }
 .breadcrumb li.active {
-  font-weight: bold;
+  font-weight: 600;
 }
 .comment--view-mode-default {
   margin-bottom: 40px;
@@ -8073,6 +8074,10 @@ header#navbar .menu .active a {
   font-size: 20px;
   font-weight: 600;
 }
+.comments-wrapper h3 {
+  margin-bottom: 40px;
+  font-weight: 600;
+}
 .bs-region--left {
   padding-right: 15px;
 }
@@ -8172,11 +8177,11 @@ header#navbar .menu .active a {
   position: relative;
 }
 .bs-region--bottom .block-content--view-mode-full .content-wrapper {
-  position: absolute;
-  top: 20%;
-  width: 100%;
   text-align: center;
   color: #fff;
+  background-image: url("../images/connection.png");
+  padding: 113px 0;
+  background-repeat: no-repeat;
 }
 .bs-region--bottom .block-content--view-mode-full .content-wrapper .field--name-block-description h2 {
   font-size: 48px;
@@ -8224,11 +8229,14 @@ header#navbar .menu .active a {
 .footer-wrapper .footer ul.nav li a {
   margin: 0 25px 0 0;
   padding: 0;
-  font-size: 0;
+  color: #696969;
 }
 .footer-wrapper .footer ul.nav li a::before {
   font-size: 22px;
   color: #696969;
+}
+.footer-wrapper .footer ul.nav li a.fa {
+  font-size: 0;
 }
 .footer-wrapper .footer #block-copyright {
   float: left;

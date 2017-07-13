@@ -52,6 +52,7 @@
 .breadcrumb {
   background-color: @White-Smoke;
   margin-top: 40px;
+  margin-bottom: 0;
   width: 75%;
   float: left;
   font-size: 14px;
@@ -64,7 +65,7 @@
       color: @DimGray;
     }
     &.active {
-      font-weight: bold;
+      font-weight: 600;
     }
   }
 }
@@ -225,6 +226,10 @@
       font-weight: 600;
     }
   }
+  h3 {
+    margin-bottom: 40px;
+    font-weight: 600;
+  }
 }
 
 .bs-region--left {
@@ -339,11 +344,11 @@
       position: relative;
     }
     .content-wrapper {
-      position: absolute;
-      top: 20%;
-      width: 100%;
       text-align: center;
       color: @White;
+      background-image: url("../images/connection.png");
+      padding: 113px 0;
+      background-repeat: no-repeat;
       .field--name-block-description {
         h2 {
           font-size: 48px;
