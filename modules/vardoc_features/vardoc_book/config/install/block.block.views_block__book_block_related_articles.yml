@@ -24,7 +24,7 @@ settings:
   provider: views
   label_display: visible
   views_label: ''
-  items_per_page: '5'
+  items_per_page: '3'
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'

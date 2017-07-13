@@ -6,6 +6,8 @@ dependencies:
   - block
   - block_class
   - block_content
+  - better_normalizers
+  - default_content
   - ds
   - entity_browser
   - field
