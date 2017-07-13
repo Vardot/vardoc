@@ -3,10 +3,10 @@ description: 'Homepage feature for Vardoc.'
 type: module
 core: 8.x
 dependencies:
+  - better_normalizers
   - block
   - block_class
   - block_content
-  - better_normalizers
   - default_content
   - ds
   - entity_browser
