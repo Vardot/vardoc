@@ -193,19 +193,7 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: numeric
-      sorts:
-        weight:
-          id: weight
-          table: book
-          field: weight
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: Weight
-          plugin_id: standard
+      sorts: {  }
       header: {  }
       footer: {  }
       empty:
@@ -252,6 +240,7 @@ display:
       defaults:
         style: false
         row: false
+        sorts: false
       row:
         type: fields
         options:
@@ -259,6 +248,19 @@ display:
           separator: ''
           hide_empty: false
           default_field_elements: true
+      sorts:
+        weight:
+          id: weight
+          table: book
+          field: weight
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
     cache_metadata:
       max-age: -1
       contexts:
@@ -413,6 +415,7 @@ display:
         style: false
         row: false
         css_class: false
+        sorts: false
       block_category: Book
       display_description: ''
       filters:
@@ -460,6 +463,22 @@ display:
           hide_empty: false
           default_field_elements: true
       css_class: ''
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          entity_type: node
+          entity_field: created
+          plugin_id: date
     cache_metadata:
       max-age: -1
       contexts:
@@ -489,6 +508,7 @@ display:
         pager: false
         style: false
         row: false
+        sorts: false
       block_description: 'Related Articles'
       filters:
         status:
@@ -683,6 +703,22 @@ display:
           separator: ''
           hide_empty: false
           default_field_elements: true
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          entity_type: node
+          entity_field: created
+          plugin_id: date
     cache_metadata:
       max-age: -1
       contexts:
