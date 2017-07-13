@@ -8018,6 +8018,7 @@ header#navbar .menu .active a {
   font-size: 0;
   height: 34px;
   margin-left: -4px;
+  margin-right: 0;
 }
 .path-inner .block-views-exposed-filter-blockbook-search-page-search .form-actions .form-submit span::before {
   font-size: 15px;
