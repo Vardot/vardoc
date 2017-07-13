@@ -8154,13 +8154,13 @@ header#navbar .menu .active a {
   width: auto;
 }
 /***** End of Google social auth *************/
-.page-node-type-webform .contact-us .form-actions {
+.webform-submission-form .form-actions {
   margin-top: 20px;
 }
-.page-node-type-webform .contact-us .form-item-phone label {
+.webform-submission-form .form-item-phone label {
   margin-bottom: 5px;
 }
-.page-node-type-webform .contact-us .form-item-phone input {
+.webform-submission-form .form-item-phone input {
   display: block;
   width: 100%;
 }
