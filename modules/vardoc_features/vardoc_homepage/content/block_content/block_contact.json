@@ -10,12 +10,6 @@
             {
                 "href": "http:\/\/default\/user\/1?_format=hal_json"
             }
-        ],
-        "http:\/\/drupal.org\/rest\/relation\/block_content\/block_image\/field_image": [
-            {
-                "href": "http:\/\/default\/media\/1?_format=hal_json",
-                "lang": "en"
-            }
         ]
     },
     "id": [
@@ -52,13 +46,13 @@
     ],
     "changed": [
         {
-            "value": 1499777616,
+            "value": 1499949043,
             "lang": "en"
         }
     ],
     "revision_created": [
         {
-            "value": 1499777616
+            "value": 1499949043
         }
     ],
     "_embedded": {
@@ -78,26 +72,14 @@
                     }
                 ]
             }
-        ],
-        "http:\/\/drupal.org\/rest\/relation\/block_content\/block_image\/field_image": [
-            {
-                "_links": {
-                    "self": {
-                        "href": "http:\/\/default\/media\/1?_format=hal_json"
-                    },
-                    "type": {
-                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
-                    }
-                },
-                "uuid": [
-                    {
-                        "value": "37d193c4-4b7b-42e3-be15-9008cc2a0502"
-                    }
-                ],
-                "lang": "en"
-            }
         ]
     },
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
     "default_langcode": [
         {
             "value": true,
@@ -106,7 +88,7 @@
     ],
     "body": [
         {
-            "value": "<p>Voluptatem accusantium doloremque laudan rem aperiam<\/p>\r\n\r\n<a href=\"\/contact\" class=\"contact-us-btn\"> contact support <\/a>",
+            "value": "<p>Voluptatem accusantium doloremque laudan rem aperiam<\/p>\r\n\r\n<a href=\"\/form\/contact\" class=\"contact-us-btn\"> contact support <\/a>",
             "format": "code_html",
             "summary": "",
             "lang": "en"

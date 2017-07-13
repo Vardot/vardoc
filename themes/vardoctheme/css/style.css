@@ -8177,11 +8177,11 @@ header#navbar .menu .active a {
   position: relative;
 }
 .bs-region--bottom .block-content--view-mode-full .content-wrapper {
-  position: absolute;
-  top: 20%;
-  width: 100%;
   text-align: center;
   color: #fff;
+  background-image: url("../images/connection.png");
+  padding: 113px 0;
+  background-repeat: no-repeat;
 }
 .bs-region--bottom .block-content--view-mode-full .content-wrapper .field--name-block-description h2 {
   font-size: 48px;
