@@ -8181,6 +8181,7 @@ header#navbar .menu .active a {
   text-align: center;
   color: #fff;
   background-image: url("../images/connection.png");
+  background-size: cover;
   padding: 113px 0;
   background-repeat: no-repeat;
 }
