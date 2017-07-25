@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.full
     - field.field.node.page.body
     - field.field.node.page.field_meta_tags
     - node.type.page
@@ -52,15 +51,21 @@ third_party_settings:
           wrapper: h1
           class: page-header
           link: false
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
       'dynamic_block_field:node-tabs':
         plugin_id: 'dynamic_block_field:node-tabs'
         weight: 1
         label: hidden
         formatter: default
-id: node.page.full
+id: node.page.default
 targetEntityType: node
 bundle: page
-mode: full
+mode: default
 content:
   body:
     type: text_default

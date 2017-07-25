@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.full
+    - core.entity_view_mode.node.teaser
     - field.field.node.page.body
     - field.field.node.page.field_meta_tags
     - node.type.page
   module:
     - ds
     - panelizer
-    - text
+    - smart_trim
     - user
 third_party_settings:
   panelizer:
@@ -40,33 +40,47 @@ third_party_settings:
     regions:
       main:
         - node_title
-        - 'dynamic_block_field:node-tabs'
         - body
+        - node_link
     fields:
+      node_link:
+        plugin_id: node_link
+        weight: 8
+        label: hidden
+        formatter: default
+        settings:
+          'link text': 'Read more'
+          'link class': ''
+          wrapper: ''
+          class: ''
       node_title:
         plugin_id: node_title
         weight: 0
         label: hidden
         formatter: default
         settings:
-          wrapper: h1
-          class: page-header
-          link: false
-      'dynamic_block_field:node-tabs':
-        plugin_id: 'dynamic_block_field:node-tabs'
-        weight: 1
-        label: hidden
-        formatter: default
-id: node.page.full
+          link: true
+          wrapper: h3
+          class: ''
+id: node.page.teaser
 targetEntityType: node
 bundle: page
-mode: full
+mode: teaser
 content:
   body:
-    type: text_default
-    weight: 2
+    type: smart_trim
+    weight: 1
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: '600'
+      trim_type: chars
+      trim_suffix: ''
+      more_link: '0'
+      more_text: More
+      summary_handler: trim
+      trim_options:
+        text: text
+      more_class: more-link
     third_party_settings: {  }
     region: main
 hidden:

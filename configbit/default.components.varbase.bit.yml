@@ -15,7 +15,6 @@ config_bit:
         - varbase_seo
         - varbase_editor
         - varbase_media
-        - varbase_page
         # Enable listed modules in order at this installation step.
         - libraries
         # Enable default Vardoc features.

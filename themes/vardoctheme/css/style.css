@@ -7752,7 +7752,7 @@ header#navbar .menu .active a {
   margin-top: 0;
   margin-bottom: 0;
   background-image: url("../images/laptop.png");
-  background-position: 50% 30%;
+  background-position: 50% 50%;
   background-size: cover;
   height: 60vh;
 }
@@ -7930,7 +7930,7 @@ header#navbar .menu .active a {
 .breadcrumb {
   background-color: #f7f7f7;
   margin-top: 40px;
-  margin-bottom: 0;
+  margin-bottom: 15px;
   width: 75%;
   float: left;
   font-size: 14px;
