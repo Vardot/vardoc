@@ -8,6 +8,11 @@ body {
   overflow-x: hidden;
 }
 
+.navbar-default {
+  border-color: transparent;
+  border-radius: 0
+}
+
 header#navbar {
   .menu {
     @media (min-width: @screen-sm-min) {
@@ -36,9 +41,9 @@ header#navbar {
     margin-top: 0;
     margin-bottom: 0;
     background-image: url("../images/laptop.png");
-    background-position: 50% 0;
+    background-position: 50% 30%;
     background-size: cover;
-    height: 100vh;
+    height: 60vh;
     @media (max-width: @screen-md-max) {
       height: 50vh;
     }
@@ -88,7 +93,7 @@ header#navbar {
 .path-frontpage {
   .block-views-exposed-filter-blockbook-search-page-search {
     text-align: center;
-    margin-top: 212px;
+    margin-top: 0px;
     @media (max-width: @screen-md-max) {
       margin-top: 0px;
     }
@@ -98,7 +103,7 @@ header#navbar {
     .form-actions {
       .form-submit {
         border-radius: 0;
-        margin-left: -10px;
+        margin-left: -11px;
         height: 59px;
         background-color: @Gainsboro;
         border: 1px solid @Gainsboro;

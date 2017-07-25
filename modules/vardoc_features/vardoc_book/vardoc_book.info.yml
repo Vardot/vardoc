@@ -16,6 +16,7 @@ dependencies:
   - field
   - field_group
   - menu_ui
+  - metatag
   - node
   - panelizer
   - path
@@ -27,6 +28,7 @@ dependencies:
   - taxonomy
   - text
   - user
+  - varbase_seo
   - views
   - views_bootstrap
 version: 8.x-1.0

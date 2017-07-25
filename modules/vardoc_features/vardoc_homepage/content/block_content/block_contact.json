@@ -24,7 +24,7 @@
     ],
     "revision_id": [
         {
-            "value": 3
+            "value": 5
         }
     ],
     "langcode": [
@@ -46,13 +46,13 @@
     ],
     "changed": [
         {
-            "value": 1499949043,
+            "value": 1500391046,
             "lang": "en"
         }
     ],
     "revision_created": [
         {
-            "value": 1499949043
+            "value": 1500391046
         }
     ],
     "_embedded": {
@@ -68,7 +68,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "68c837a6-a1ea-405b-84ea-544569cc0b9a"
+                        "value": "7377adba-036f-497f-b530-5143f41460a3"
                     }
                 ]
             }
@@ -88,7 +88,7 @@
     ],
     "body": [
         {
-            "value": "<p>Voluptatem accusantium doloremque laudan rem aperiam<\/p>\r\n\r\n<a href=\"\/form\/contact\" class=\"contact-us-btn\"> contact support <\/a>",
+            "value": "<p>You can always request information from the support department. Click below and fill in the form explaining what you want.<\/p>\r\n\r\n<a href=\"\/form\/contact\" class=\"contact-us-btn\">Contact support<\/a>",
             "format": "code_html",
             "summary": "",
             "lang": "en"

@@ -7728,6 +7728,10 @@ body {
   line-height: 1.63;
   overflow-x: hidden;
 }
+.navbar-default {
+  border-color: transparent;
+  border-radius: 0;
+}
 @media (min-width: 768px) {
   header#navbar .menu {
     clear: both;
@@ -7748,9 +7752,9 @@ header#navbar .menu .active a {
   margin-top: 0;
   margin-bottom: 0;
   background-image: url("../images/laptop.png");
-  background-position: 50% 0;
+  background-position: 50% 30%;
   background-size: cover;
-  height: 100vh;
+  height: 60vh;
 }
 @media (max-width: 1199px) {
   .path-frontpage .navbar {
@@ -7790,7 +7794,7 @@ header#navbar .menu .active a {
 }
 .path-frontpage .block-views-exposed-filter-blockbook-search-page-search {
   text-align: center;
-  margin-top: 212px;
+  margin-top: 0px;
 }
 @media (max-width: 1199px) {
   .path-frontpage .block-views-exposed-filter-blockbook-search-page-search {
@@ -7804,7 +7808,7 @@ header#navbar .menu .active a {
 }
 .path-frontpage .block-views-exposed-filter-blockbook-search-page-search .form-actions .form-submit {
   border-radius: 0;
-  margin-left: -10px;
+  margin-left: -11px;
   height: 59px;
   background-color: #d8d8d8;
   border: 1px solid #d8d8d8;
@@ -7862,7 +7866,7 @@ header#navbar .menu .active a {
     padding-bottom: 15px;
   }
 }
-.region-content .field--name-node-post-date {
+.region-content .field--name-node-changed-date {
   font-size: 12px;
   color: #979797;
   margin-top: 20px;
@@ -7917,8 +7921,11 @@ header#navbar .menu .active a {
 }
 .page-header {
   font-size: 40px;
-  color: #328ec7;
+  color: #696969;
+  font-weight: bold;
   text-transform: capitalize;
+  margin: 0;
+  padding: 40px 0 20px;
 }
 .breadcrumb {
   background-color: #f7f7f7;

@@ -1,8 +1,14 @@
 langcode: en
 status: true
 dependencies:
+  module:
+    - block_class
+    - system
   theme:
     - vardoctheme
+third_party_settings:
+  block_class:
+    classes: ''
 id: vardoctheme_local_tasks
 theme: vardoctheme
 region: content_top
@@ -16,4 +22,9 @@ settings:
   label_display: '0'
   primary: true
   secondary: true
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/node/*'
+    negate: true
+    context_mapping: {  }

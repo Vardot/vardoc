@@ -45,7 +45,7 @@ datasource_settings:
       selected:
         - en
 processor_settings:
-  aggregated_field: {  }
+  rendered_item: {  }
   highlight:
     highlight: always
     highlight_partial: false
@@ -56,7 +56,8 @@ processor_settings:
     suffix: '</strong>'
     weights:
       postprocess_query: 0
-  rendered_item: {  }
+  add_url: {  }
+  aggregated_field: {  }
   ignorecase:
     fields:
       - title
@@ -65,7 +66,7 @@ processor_settings:
     weights:
       preprocess_index: -20
       preprocess_query: -20
-  add_url: {  }
+    all_fields: false
 tracker_settings:
   default: {  }
 options:

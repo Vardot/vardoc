@@ -21,5 +21,6 @@ config_bit:
         # Enable default Vardoc features.
         - vardoc_homepage
         - vardoc_book
+        - vardoc_page
         - vardoc_search
         - vardoc_google_authintication

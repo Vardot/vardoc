@@ -5,7 +5,12 @@
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
-        }
+        },
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/basic\/revision_user": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ]
     },
     "id": [
         {
@@ -19,7 +24,7 @@
     ],
     "revision_id": [
         {
-            "value": 1
+            "value": 6
         }
     ],
     "langcode": [
@@ -41,14 +46,33 @@
     ],
     "changed": [
         {
-            "value": 1499771384
+            "value": 1500509718
         }
     ],
     "revision_created": [
         {
-            "value": 1499771384
+            "value": 1500509718
         }
     ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/basic\/revision_user": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7377adba-036f-497f-b530-5143f41460a3"
+                    }
+                ]
+            }
+        ]
+    },
     "revision_translation_affected": [
         {
             "value": true,
@@ -63,7 +87,7 @@
     ],
     "body": [
         {
-            "value": "&copy; Copyright 2011-2017 Vardot. All Rights Reserved.",
+            "value": "Powered by <a href=\"https:\/\/www.vardot.com\/vardoc\">Vardoc<\/a>. Enjoy the free software, or <a href=\"https:\/\/www.vardot.com\/contact-us\">get a quote<\/a> for enterprise support.",
             "format": "code_html",
             "summary": "",
             "lang": "en"
