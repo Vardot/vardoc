@@ -8,7 +8,6 @@ easy-to-find format. Vardoc helps you build a connected organization, product,
 
 Think of it as a wiki site of your product, user manuals, or organizational
  processes. With easy structure, collaborative tools, and friendly design.
-
 [![](https://www.drupal.org/files/project-images/vardoc-mockup.png)](https://www.drupal.org/project/vardoc)
 
 Built on top of Varbase, the open source Drupal 8 distribution, Vardoc provides
