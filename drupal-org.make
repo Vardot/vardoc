@@ -8,14 +8,18 @@ defaults[projects][subdir] = "contrib"
 ;; Contrib modules
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[search_api][type] = module
-projects[search_api][version] = 1.1
-
-projects[social_api][type] = module
-projects[social_api][version] = 1.0-beta2
-
-projects[social_auth][type] = module
-projects[social_auth][version] = 1.0-beta4
-
 projects[social_auth_google][type] = module
 projects[social_auth_google][version] = 1.0-beta2
+
+projects[fontawesome][type] = module
+projects[fontawesome][version] = 1.2
+
+projects[default_content][type] = module
+projects[default_content][version] = 1.0-alpha6
+
+projects[better_normalizers][type] = module
+projects[better_normalizers][version] = 1.0-beta2
+
+projects[menu_item_visibility][type] = module
+projects[menu_item_visibility][version] = 1.x-dev
+
