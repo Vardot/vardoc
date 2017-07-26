@@ -4,7 +4,7 @@ includes[] = drupal-org-core.make
 
 projects[varbase][type] = profile
 projects[varbase][download][type] = git
-projects[varbase][download][branch] = 8.x-4.x
+projects[varbase][download][branch] = 8.x-4.05
 
 projects[vardoc][type] = profile
 projects[vardoc][download][type] = git
