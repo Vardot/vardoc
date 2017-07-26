@@ -1,6 +1,9 @@
 api = 2
 core = 8.x
 
+projects[varbase][type] = profile
+projects[varbase][version] = 4.05
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules
 ;;;;;;;;;;;;;;;;;;;;;
