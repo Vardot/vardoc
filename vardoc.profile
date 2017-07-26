@@ -69,10 +69,10 @@ function vardoc_install_tasks_alter(&$tasks, $install_state) {
 function vardoc_assemble_extra_components(array &$install_state) {
   include_once \Drupal::root() . '/profiles/varbase/varbase.profile';
     
-  // Configbit root folder for varbase profile.
+  // Configbit root folder for vardoc profile.
   $configbit_root = \Drupal::root() . '/profiles/vardoc/configbit';
   
-  // Default Varbase components, which must be installed.
+  // Default vardoc components, which must be installed.
   $default_components = ConfigBit::getList($configbit_root . '/default.components.varbase.bit.yml', 'install_default_components', TRUE, 'dependencies');
 
   // Selected extra components to be installed.
