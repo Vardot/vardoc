@@ -10,10 +10,3 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/1356276-303.patc
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2720101-30.patch
 ;; Issue #2853988: Add option to rewrite robots.txt on staging environments
 projects[drupal][patch][] = https://www.drupal.org/files/issues/drupal_8-allow_stg_robots-2853988-2.patch
-
-projects[vardoc][type] = profile
-projects[vardoc][download][type] = git
-projects[vardoc][download][branch] = 8.x-1.x
-
-projects[varbase][type] = profile
-projects[varbase][version] = 4.05
