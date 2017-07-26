@@ -18,7 +18,7 @@ projects[default_content][version] = 1.0-alpha6
 projects[default_content][subdir] = "contrib"
 
 projects[better_normalizers][type] = module
-projects[better_normalizers][version] = 1.0-beta2
+projects[better_normalizers][version] = 1.0-beta3
 projects[better_normalizers][subdir] = "contrib"
 
 projects[menu_item_visibility][type] = module
