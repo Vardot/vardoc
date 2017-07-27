@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Varbase\composer\ScriptHandler.
+ * Contains \Vardoc\composer\ScriptHandler.
  */
 
-namespace Varbase\composer;
+namespace Vardoc\composer;
 
 use Symfony\Component\Filesystem\Filesystem;
 use Composer\EventDispatcher\Event;

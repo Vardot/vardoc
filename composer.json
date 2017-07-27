@@ -23,7 +23,13 @@
     }
   ],
   "config": {
-    "bin-dir": "bin/"
+    "bin-dir": "bin/",
+    "secure-http": false
+  },
+  "autoload": {
+    "psr-4": {
+      "Vardoc\\composer\\": "src/composer"
+    }
   },
   "repositories": [
     {
