@@ -1,5 +1,8 @@
 # Vardoc: Knowledge Base System and Documentation Site
 
+
+[![](https://www.drupal.org/files/styles/grid-3/public/project-images/Vardoc%20-%20No%20Padding.png)](https://www.drupal.org/project/vardoc)
+
 Vardoc is a knowledge base system, a wiki system, and a documentation management
 system designed to host massive amount of content in a structured and 
 easy-to-find format. Vardoc helps you build a connected organization, product,
@@ -8,7 +11,6 @@ easy-to-find format. Vardoc helps you build a connected organization, product,
 
 Think of it as a wiki site of your product, user manuals, or organizational
  processes. With easy structure, collaborative tools, and friendly design.
-[![](https://www.drupal.org/files/project-images/vardoc-mockup.png)](https://www.drupal.org/project/vardoc)
 
 Built on top of Varbase, the open source Drupal 8 distribution, Vardoc provides
  powerful functional features such as editorial features, search function,
