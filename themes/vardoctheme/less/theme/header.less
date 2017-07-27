@@ -43,12 +43,12 @@ header#navbar {
     background-image: url("../images/laptop.png");
     background-position: 50% 50%;
     background-size: cover;
-    height: 60vh;
+    min-height: 60vh;
     @media (max-width: @screen-md-max) {
-      height: 50vh;
+      min-height: 50vh;
     }
     @media (max-width: @screen-sm-max) {
-      height: 100vh;
+      min-height: 45vh;
     }
     .navbar-nav {
       li {
@@ -59,7 +59,7 @@ header#navbar {
           font-size: 14px;
           padding-top: 20px;
           &:hover {
-            color: @Black;
+            color: @Blue-light;
           }
         }
       }
@@ -79,7 +79,7 @@ header#navbar {
         font-weight: 400;
         text-transform: uppercase;
         &:hover {
-          color: @Black;
+          color: @Blue-light;
         }
       }
     }
@@ -93,12 +93,12 @@ header#navbar {
 .path-frontpage {
   .block-views-exposed-filter-blockbook-search-page-search {
     text-align: center;
-    margin-top: 0px;
+    margin-top: 50px;
     @media (max-width: @screen-md-max) {
       margin-top: 0px;
     }
     @media (max-width: @screen-sm-max) {
-      margin-top: 100px;
+      margin-top: 50px;
     }
     .form-actions {
       .form-submit {

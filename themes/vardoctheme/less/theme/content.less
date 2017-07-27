@@ -103,7 +103,7 @@
           padding-left: 1.3em;
           a {
             font-size: 14px;
-            color: @DimGray;
+            color: @Curious-Blue;
           }
           &:before {
             content: "\f105";
@@ -115,7 +115,7 @@
           }
           &.active {
             > a {
-              color: @Curious-Blue;
+              color: @DimGray;
             }
           }
         }
@@ -348,15 +348,24 @@
       position: relative;
     }
     .content-wrapper {
+      position: absolute;
+      top: 20%;
+      width: 100%;
       text-align: center;
       color: @White;
-      background-image: url("../images/connection.png");
-      background-size: cover;
-      padding: 113px 0;
-      background-repeat: no-repeat;
+      @media (max-width: @screen-sm-max) {
+        top: 0;
+      }
+      @media (max-width: @screen-xs-max) {
+        position: static;
+        color: @DimGray;
+      }
       .field--name-block-description {
         h2 {
           font-size: 48px;
+          @media (max-width: @screen-xs-max) {
+            font-size: 35px;
+          }
         }
       }
       .field--name-body {
@@ -375,7 +384,25 @@
         &:hover {
           background: rgba(0, 0, 0, 0.5);
         }
+        @media (max-width: @screen-sm-max) {
+          margin-top: 5px;
+        }
+        @media (max-width: @screen-xs-max) {
+          color: @White;
+          border-color: @DimGray;
+          margin: 20px 0;
+          background: @DimGray;
+        }
       }
     }
+  }
+}
+
+.field--name-body {
+  img {
+    max-width: 100%;
+    border-radius: 3px;
+    border: 1px solid @Gainsboro;
+    padding: 3px;
   }
 }

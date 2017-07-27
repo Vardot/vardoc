@@ -1,2 +1,4 @@
 bundle: vardoc
+excluded:
+  - entityqueue.entity_queue.featured_articles
 required: true

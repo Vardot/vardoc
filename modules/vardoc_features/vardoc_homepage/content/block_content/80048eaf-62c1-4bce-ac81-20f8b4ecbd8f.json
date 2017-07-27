@@ -10,6 +10,12 @@
             {
                 "href": "http:\/\/default\/user\/1?_format=hal_json"
             }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/block_image\/field_image": [
+            {
+                "href": "http:\/\/default\/media\/2?_format=hal_json",
+                "lang": "en"
+            }
         ]
     },
     "id": [
@@ -24,7 +30,7 @@
     ],
     "revision_id": [
         {
-            "value": 5
+            "value": 8
         }
     ],
     "langcode": [
@@ -46,13 +52,13 @@
     ],
     "changed": [
         {
-            "value": 1500391046,
+            "value": 1501145213,
             "lang": "en"
         }
     ],
     "revision_created": [
         {
-            "value": 1500391046
+            "value": 1501145213
         }
     ],
     "_embedded": {
@@ -72,14 +78,26 @@
                     }
                 ]
             }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/block_image\/field_image": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/media\/2?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "6fab3cee-d241-46a9-beb2-a1aa5a78ceb7"
+                    }
+                ],
+                "lang": "en"
+            }
         ]
     },
-    "revision_translation_affected": [
-        {
-            "value": true,
-            "lang": "en"
-        }
-    ],
     "default_langcode": [
         {
             "value": true,

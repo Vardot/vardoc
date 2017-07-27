@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/admin\/structure\/menu\/item\/8\/edit?_format=hal_json"
+            "href": "http:\/\/default\/admin\/structure\/menu\/item\/7\/edit?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/menu_link_content\/menu_link_content"
@@ -9,12 +9,12 @@
     },
     "id": [
         {
-            "value": 8
+            "value": 7
         }
     ],
     "uuid": [
         {
-            "value": "6af86648-8095-4d2b-ac70-9bcaef359dc2"
+            "value": "a049429e-bfe4-4a7b-8f31-ed4fe6bae3dd"
         }
     ],
     "langcode": [
@@ -30,7 +30,7 @@
     ],
     "title": [
         {
-            "value": "Google+",
+            "value": "Drupal",
             "lang": "en"
         }
     ],
@@ -41,7 +41,7 @@
     ],
     "link": [
         {
-            "uri": "https:\/\/plus.google.com\/+Vardot",
+            "uri": "https:\/\/www.drupal.org\/vardot",
             "title": "",
             "options": []
         }
@@ -58,7 +58,7 @@
     ],
     "weight": [
         {
-            "value": 6
+            "value": -46
         }
     ],
     "expanded": [
@@ -73,7 +73,7 @@
     ],
     "changed": [
         {
-            "value": 1499932102,
+            "value": 1501148176,
             "lang": "en"
         }
     ],

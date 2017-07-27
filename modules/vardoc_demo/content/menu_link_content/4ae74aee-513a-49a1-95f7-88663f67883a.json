@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/admin\/structure\/menu\/item\/1\/edit?_format=hal_json"
+            "href": "http:\/\/default\/admin\/structure\/menu\/item\/4\/edit?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/menu_link_content\/menu_link_content"
@@ -9,12 +9,12 @@
     },
     "id": [
         {
-            "value": 1
+            "value": 4
         }
     ],
     "uuid": [
         {
-            "value": "a9eda2c8-e770-4d0d-b83d-c1b6b826f39a"
+            "value": "4ae74aee-513a-49a1-95f7-88663f67883a"
         }
     ],
     "langcode": [
@@ -30,7 +30,7 @@
     ],
     "title": [
         {
-            "value": "Facebook",
+            "value": "Twitter",
             "lang": "en"
         }
     ],
@@ -41,7 +41,7 @@
     ],
     "link": [
         {
-            "uri": "https:\/\/www.facebook.com\/vardotters\/",
+            "uri": "https:\/\/twitter.com\/vardot",
             "title": "",
             "options": []
         }
@@ -58,7 +58,7 @@
     ],
     "weight": [
         {
-            "value": -50
+            "value": -49
         }
     ],
     "expanded": [
@@ -73,7 +73,7 @@
     ],
     "changed": [
         {
-            "value": 1499780449,
+            "value": 1501148157,
             "lang": "en"
         }
     ],
