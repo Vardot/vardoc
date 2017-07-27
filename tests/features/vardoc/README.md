@@ -36,9 +36,9 @@ test_super_admin: { email: 'super.admin.test@vardot.com', password: 'dD.123123dd
 
 ## List of Features in the step 2 apply tests:
 --------------------------------------------------------------------------------
-* [01 - Feature: Website Base Requirements - User Registration - Only admins login](https://github.com/Vardot/vardoc/blob/8.x-4.x/tests/features/vardoc/step2-apply-tests/01-website-base-requirements_user-registration_only-admins-login_v4-0.feature)
+* [01 - Feature: Website Base Requirements - User Registration - Only admins login](https://github.com/Vardot/vardoc/blob/8.x-1.x/tests/features/vardoc/step2-apply-tests/01-website-base-requirements_user-registration_only-admins-login.feature)
 
-## List of features in the step 2 cleanup tests:
+## List of features in the step 3 cleanup tests:
 --------------------------------------------------------------------------------
 * [Feature: Delete default testing users.](https://github.com/Vardot/vardoc/blob/8.x-4.x/tests/features/vardoc/step3-cleanup-tests/1-delete-default-testing-users.feature)
 ```
