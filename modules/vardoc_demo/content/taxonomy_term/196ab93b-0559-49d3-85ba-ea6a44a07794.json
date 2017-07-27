@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/taxonomy\/term\/8?_format=hal_json"
+            "href": "http:\/\/default\/taxonomy\/term\/1?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/category"
@@ -9,18 +9,18 @@
     },
     "tid": [
         {
-            "value": 8
+            "value": 1
         }
     ],
     "uuid": [
         {
-            "value": "2de670b1-155f-4fcc-9c9d-d444a440394e"
+            "value": "196ab93b-0559-49d3-85ba-ea6a44a07794"
         }
     ],
     "langcode": [
         {
-            "value": "und",
-            "lang": "und"
+            "value": "en",
+            "lang": "en"
         }
     ],
     "vid": [
@@ -30,32 +30,25 @@
     ],
     "name": [
         {
-            "value": "brihowrojes",
-            "lang": "und"
-        }
-    ],
-    "description": [
-        {
-            "value": "description of brihowrojes",
-            "format": null,
-            "lang": "und"
+            "value": "How to",
+            "lang": "en"
         }
     ],
     "weight": [
         {
-            "value": 3
+            "value": 0
         }
     ],
     "changed": [
         {
-            "value": 1499777307,
-            "lang": "und"
+            "value": 1500711180,
+            "lang": "en"
         }
     ],
     "default_langcode": [
         {
             "value": true,
-            "lang": "und"
+            "lang": "en"
         }
     ]
 }

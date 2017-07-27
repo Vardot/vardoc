@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/admin\/structure\/menu\/item\/5\/edit?_format=hal_json"
+            "href": "http:\/\/default\/admin\/structure\/menu\/item\/9\/edit?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/menu_link_content\/menu_link_content"
@@ -9,12 +9,12 @@
     },
     "id": [
         {
-            "value": 5
+            "value": 9
         }
     ],
     "uuid": [
         {
-            "value": "8fd123d3-23e4-4af2-8611-066b3d61dcd5"
+            "value": "0bab3f37-55d4-4a09-a734-c3ef3ac8da1a"
         }
     ],
     "langcode": [
@@ -30,7 +30,7 @@
     ],
     "title": [
         {
-            "value": "logout",
+            "value": "Logout",
             "lang": "en"
         }
     ],
@@ -58,7 +58,7 @@
     ],
     "weight": [
         {
-            "value": -46
+            "value": 0
         }
     ],
     "expanded": [
@@ -73,7 +73,7 @@
     ],
     "changed": [
         {
-            "value": 1499773184,
+            "value": 1501073411,
             "lang": "en"
         }
     ],

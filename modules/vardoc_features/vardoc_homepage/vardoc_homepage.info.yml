@@ -10,9 +10,11 @@ dependencies:
   - default_content
   - ds
   - entity_browser
+  - entityqueue
   - field
   - field_group
   - menu_item_visibility
+  - node
   - page_manager
   - panels
   - text

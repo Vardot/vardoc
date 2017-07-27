@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/taxonomy\/term\/6?_format=hal_json"
+            "href": "http:\/\/default\/taxonomy\/term\/3?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/category"
@@ -9,18 +9,18 @@
     },
     "tid": [
         {
-            "value": 6
+            "value": 3
         }
     ],
     "uuid": [
         {
-            "value": "3b053f53-3b4b-4576-b3dc-186f43b7dcaa"
+            "value": "ff006e7c-a1db-4abe-ba61-280c7d0dea61"
         }
     ],
     "langcode": [
         {
-            "value": "und",
-            "lang": "und"
+            "value": "en",
+            "lang": "en"
         }
     ],
     "vid": [
@@ -30,32 +30,25 @@
     ],
     "name": [
         {
-            "value": "jerilothuwuv",
-            "lang": "und"
-        }
-    ],
-    "description": [
-        {
-            "value": "description of jerilothuwuv",
-            "format": null,
-            "lang": "und"
+            "value": "Resources",
+            "lang": "en"
         }
     ],
     "weight": [
         {
-            "value": 2
+            "value": 0
         }
     ],
     "changed": [
         {
-            "value": 1499777288,
-            "lang": "und"
+            "value": 1500711209,
+            "lang": "en"
         }
     ],
     "default_langcode": [
         {
             "value": true,
-            "lang": "und"
+            "lang": "en"
         }
     ]
 }

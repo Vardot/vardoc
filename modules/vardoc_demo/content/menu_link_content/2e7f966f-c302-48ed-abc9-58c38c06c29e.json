@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/admin\/structure\/menu\/item\/2\/edit?_format=hal_json"
+            "href": "http:\/\/default\/admin\/structure\/menu\/item\/1\/edit?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/menu_link_content\/menu_link_content"
@@ -9,12 +9,12 @@
     },
     "id": [
         {
-            "value": 2
+            "value": 1
         }
     ],
     "uuid": [
         {
-            "value": "50fed14f-66e3-4b77-ae30-f42c528e2a4a"
+            "value": "2e7f966f-c302-48ed-abc9-58c38c06c29e"
         }
     ],
     "langcode": [
@@ -30,7 +30,7 @@
     ],
     "title": [
         {
-            "value": "ADD ARTICLE",
+            "value": "Varbase Documentation",
             "lang": "en"
         }
     ],
@@ -41,7 +41,7 @@
     ],
     "link": [
         {
-            "uri": "internal:\/node\/add\/book",
+            "uri": "https:\/\/docs.varbase.vardot.com\/",
             "title": "",
             "options": []
         }
@@ -53,7 +53,7 @@
     ],
     "rediscover": [
         {
-            "value": true
+            "value": false
         }
     ],
     "weight": [
@@ -73,7 +73,7 @@
     ],
     "changed": [
         {
-            "value": 1499773184,
+            "value": 1501059153,
             "lang": "en"
         }
     ],

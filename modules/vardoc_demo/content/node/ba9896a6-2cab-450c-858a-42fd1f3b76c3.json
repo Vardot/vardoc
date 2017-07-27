@@ -35,7 +35,7 @@
     ],
     "vid": [
         {
-            "value": 1
+            "value": 10
         }
     ],
     "langcode": [
@@ -123,7 +123,7 @@
     ],
     "changed": [
         {
-            "value": 1500891485,
+            "value": 1501072979,
             "lang": "en"
         }
     ],
@@ -141,7 +141,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": 1500891485
+            "value": 1501072979
         }
     ],
     "revision_translation_affected": [
@@ -158,7 +158,7 @@
     ],
     "body": [
         {
-            "value": "<h3>Introduction<\/h3>\r\n\r\n<p><a href=\"https:\/\/www.vardot.com\/vardoc\">Vardoc<\/a> is a knowledge base system, wiki system, and documentation management system designed to host massive amount of content in a structured and easy-to-find format.&nbsp;<br \/>\r\n<a href=\"https:\/\/www.vardot.com\/vardoc\">Vardoc<\/a> helps you build a connected organization, product, or knowledge area to allow everyone involved to find the answers they seek, and contribute their expertise in the knowledge base.<\/p>\r\n\r\n<blockquote>\r\n<p>Think of it as a wiki site of your product, user manuals, or organizational processes. With easy&nbsp;structure, collaborative tools,&nbsp;and friendly design.<\/p>\r\n<\/blockquote>\r\n\r\n<p>Built on top of <a href=\"https:\/\/www.vardot.com\/varbase\">Varbase<\/a>, the open source <a href=\"https:\/\/www.drupal.org\/8\">Drupal 8<\/a> distribution, <a href=\"https:\/\/www.vardot.com\/vardoc\">Vardoc<\/a> provides powerful functional features such as editorial features, search function, taxonomy, user management, and customizable themes. It also delivers top-notch non-functional requirements such as enterprise security, fast performance, search engine optimization (SEO), accessibility compliance, and many more features.<\/p>\r\n\r\n<p>Our goal is to bring ease to you when writing and creating a documentation for your product, website, departmental processes, online manuals, or your enterprise as whole.<\/p>\r\n\r\n<p>&nbsp;<\/p>\r\n\r\n<h3>Who can benefit from Vardoc?<\/h3>\r\n\r\n<ul>\r\n\t<li>Product documentation sites.<\/li>\r\n\t<li>Agencies who want to document software.<\/li>\r\n\t<li>Documentation for Open Source products\/projects.<\/li>\r\n\t<li>Organizations who want to document their processes.<\/li>\r\n\t<li>Online user manuals.<\/li>\r\n<\/ul>\r\n\r\n<p>&nbsp;<\/p>\r\n\r\n<h3>Credits<\/h3>\r\n\r\n<p><a href=\"https:\/\/www.vardot.com\/vardoc\">Vardoc<\/a> a product of <a href=\"https:\/\/www.vardot.com\/\">Vardot<\/a>, the enterprise Drupal solutions provider.<\/p>\r\n",
+            "value": "<h3>Introduction<\/h3>\r\n\r\n<p><a href=\"https:\/\/www.vardot.com\/vardoc\">Vardoc<\/a> is a knowledge base system, a wiki system, and a documentation management system designed to host massive amount of content in a structured and easy-to-find format.<br \/>\r\n<a href=\"https:\/\/www.vardot.com\/vardoc\">Vardoc<\/a> helps you build a connected organization, product, or knowledge area to allow everyone involved to find the answers they seek, and contribute their expertise in the knowledge base.<\/p>\r\n\r\n<blockquote>\r\n<p>Think of it as a wiki site of your product, user manuals, or organizational processes. With easy&nbsp;structure, collaborative tools,&nbsp;and friendly design.<\/p>\r\n<\/blockquote>\r\n\r\n<p>Built on top of <a href=\"https:\/\/www.vardot.com\/varbase\">Varbase<\/a>, the open source <a href=\"https:\/\/www.drupal.org\/8\">Drupal 8<\/a> distribution, <a href=\"https:\/\/www.vardot.com\/vardoc\">Vardoc<\/a> provides powerful functional features such as editorial features, search function, taxonomy, user management, and customizable themes. It also delivers top-notch non-functional requirements such as enterprise security, fast performance, search engine optimization (SEO), accessibility compliance, and many more features.<\/p>\r\n\r\n<p>Our goal is to bring ease to you when writing and creating a documentation for your product, website, departmental processes, online manuals, or your enterprise as whole.<\/p>\r\n\r\n<p>&nbsp;<\/p>\r\n\r\n<h3>Who can benefit from Vardoc?<\/h3>\r\n\r\n<ul>\r\n\t<li>Product documentation sites.<\/li>\r\n\t<li>Agencies who want to document software.<\/li>\r\n\t<li>Documentation for Open Source products\/projects.<\/li>\r\n\t<li>Organizations who want to document their processes.<\/li>\r\n\t<li>Online user manuals.<\/li>\r\n<\/ul>\r\n\r\n<p>&nbsp;<\/p>\r\n\r\n<h3>Credits<\/h3>\r\n\r\n<p><a href=\"https:\/\/www.vardot.com\/vardoc\">Vardoc<\/a> a product of <a href=\"https:\/\/www.vardot.com\/\">Vardot<\/a>, the enterprise Drupal solutions provider.<\/p>\r\n",
             "format": "full_html",
             "summary": "",
             "lang": "en"
@@ -172,6 +172,12 @@
             "last_comment_name": null,
             "last_comment_uid": 1,
             "comment_count": 0
+        }
+    ],
+    "field_meta_tags": [
+        {
+            "value": "a:0:{}",
+            "lang": "en"
         }
     ]
 }

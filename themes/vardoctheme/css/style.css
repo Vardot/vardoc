@@ -7754,16 +7754,16 @@ header#navbar .menu .active a {
   background-image: url("../images/laptop.png");
   background-position: 50% 50%;
   background-size: cover;
-  height: 60vh;
+  min-height: 60vh;
 }
 @media (max-width: 1199px) {
   .path-frontpage .navbar {
-    height: 50vh;
+    min-height: 50vh;
   }
 }
 @media (max-width: 991px) {
   .path-frontpage .navbar {
-    height: 100vh;
+    min-height: 45vh;
   }
 }
 .path-frontpage .navbar .navbar-nav li a {
@@ -7774,7 +7774,7 @@ header#navbar .menu .active a {
   padding-top: 20px;
 }
 .path-frontpage .navbar .navbar-nav li a:hover {
-  color: #000;
+  color: #99B3DD;
 }
 .navbar {
   margin-top: 0;
@@ -7787,14 +7787,14 @@ header#navbar .menu .active a {
   text-transform: uppercase;
 }
 .navbar .navbar-nav li a:hover {
-  color: #000;
+  color: #99B3DD;
 }
 .page-header {
   border-bottom: 0;
 }
 .path-frontpage .block-views-exposed-filter-blockbook-search-page-search {
   text-align: center;
-  margin-top: 0px;
+  margin-top: 50px;
 }
 @media (max-width: 1199px) {
   .path-frontpage .block-views-exposed-filter-blockbook-search-page-search {
@@ -7803,7 +7803,7 @@ header#navbar .menu .active a {
 }
 @media (max-width: 991px) {
   .path-frontpage .block-views-exposed-filter-blockbook-search-page-search {
-    margin-top: 100px;
+    margin-top: 50px;
   }
 }
 .path-frontpage .block-views-exposed-filter-blockbook-search-page-search .form-actions .form-submit {
@@ -7975,7 +7975,7 @@ header#navbar .menu .active a {
 }
 .region-sidebar-second .block-book-navigation nav ul li a {
   font-size: 14px;
-  color: #696969;
+  color: #328ec7;
 }
 .region-sidebar-second .block-book-navigation nav ul li:before {
   content: "\f105";
@@ -7986,7 +7986,7 @@ header#navbar .menu .active a {
   width: 10px;
 }
 .region-sidebar-second .block-book-navigation nav ul li.active > a {
-  color: #328ec7;
+  color: #696969;
 }
 .region-sidebar-second .block-book-navigation nav ul li.active:before {
   content: "\f107";
@@ -8185,15 +8185,30 @@ header#navbar .menu .active a {
   position: relative;
 }
 .bs-region--bottom .block-content--view-mode-full .content-wrapper {
+  position: absolute;
+  top: 20%;
+  width: 100%;
   text-align: center;
   color: #fff;
-  background-image: url("../images/connection.png");
-  background-size: cover;
-  padding: 113px 0;
-  background-repeat: no-repeat;
+}
+@media (max-width: 991px) {
+  .bs-region--bottom .block-content--view-mode-full .content-wrapper {
+    top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .bs-region--bottom .block-content--view-mode-full .content-wrapper {
+    position: static;
+    color: #696969;
+  }
 }
 .bs-region--bottom .block-content--view-mode-full .content-wrapper .field--name-block-description h2 {
   font-size: 48px;
+}
+@media (max-width: 767px) {
+  .bs-region--bottom .block-content--view-mode-full .content-wrapper .field--name-block-description h2 {
+    font-size: 35px;
+  }
 }
 .bs-region--bottom .block-content--view-mode-full .content-wrapper .field--name-body {
   font-size: 16px;
@@ -8211,6 +8226,25 @@ header#navbar .menu .active a {
 }
 .bs-region--bottom .block-content--view-mode-full .content-wrapper .contact-us-btn:hover {
   background: rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 991px) {
+  .bs-region--bottom .block-content--view-mode-full .content-wrapper .contact-us-btn {
+    margin-top: 5px;
+  }
+}
+@media (max-width: 767px) {
+  .bs-region--bottom .block-content--view-mode-full .content-wrapper .contact-us-btn {
+    color: #fff;
+    border-color: #696969;
+    margin: 20px 0;
+    background: #696969;
+  }
+}
+.field--name-body img {
+  max-width: 100%;
+  border-radius: 3px;
+  border: 1px solid #d8d8d8;
+  padding: 3px;
 }
 .footer-wrapper {
   background-color: #f2f2f2;

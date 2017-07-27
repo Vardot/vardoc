@@ -3,6 +3,7 @@ description: 'Provides Book page content type and related configuration. <em>Boo
 type: module
 core: 8.x
 dependencies:
+  - ace_editor
   - advanced_text_formatter
   - better_exposed_filters
   - block
@@ -11,16 +12,21 @@ dependencies:
   - comment
   - ctools
   - ds
+  - editor
+  - entity_embed
   - entityqueue
   - features
   - field
   - field_group
+  - filter
+  - image_resize_filter
   - menu_ui
   - metatag
   - node
   - panelizer
   - path
   - pathauto
+  - pathologic
   - rabbit_hole
   - search_api
   - search_api_db
@@ -28,7 +34,9 @@ dependencies:
   - taxonomy
   - text
   - user
+  - varbase_editor
   - varbase_seo
+  - video_embed_wysiwyg
   - views
   - views_bootstrap
 version: 8.x-1.0

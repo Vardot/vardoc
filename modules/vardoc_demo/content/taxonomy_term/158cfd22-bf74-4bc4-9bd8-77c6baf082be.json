@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/taxonomy\/term\/10?_format=hal_json"
+            "href": "http:\/\/default\/taxonomy\/term\/2?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/category"
@@ -9,18 +9,18 @@
     },
     "tid": [
         {
-            "value": 10
+            "value": 2
         }
     ],
     "uuid": [
         {
-            "value": "69ccf369-25cd-464a-99b7-e102f9b7a79d"
+            "value": "158cfd22-bf74-4bc4-9bd8-77c6baf082be"
         }
     ],
     "langcode": [
         {
-            "value": "und",
-            "lang": "und"
+            "value": "en",
+            "lang": "en"
         }
     ],
     "vid": [
@@ -30,32 +30,25 @@
     ],
     "name": [
         {
-            "value": "mispitesto",
-            "lang": "und"
-        }
-    ],
-    "description": [
-        {
-            "value": "description of mispitesto",
-            "format": null,
-            "lang": "und"
+            "value": "Tutorials",
+            "lang": "en"
         }
     ],
     "weight": [
         {
-            "value": 4
+            "value": 0
         }
     ],
     "changed": [
         {
-            "value": 1499777307,
-            "lang": "und"
+            "value": 1500711188,
+            "lang": "en"
         }
     ],
     "default_langcode": [
         {
             "value": true,
-            "lang": "und"
+            "lang": "en"
         }
     ]
 }

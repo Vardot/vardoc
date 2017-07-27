@@ -32,9 +32,9 @@ third_party_settings:
             attributes: ''
     regions:
       main:
+        - group_image_wrapper
         - group_content_wrapper
         - field_image
-        - group_image_wrapper
         - block_description
         - body
     fields:
@@ -48,7 +48,7 @@ third_party_settings:
       children:
         - field_image
       parent_name: ''
-      weight: 1
+      weight: 0
       format_type: html_element
       format_settings:
         id: ''
@@ -65,7 +65,7 @@ third_party_settings:
         - block_description
         - body
       parent_name: ''
-      weight: 0
+      weight: 1
       format_type: html_element
       format_settings:
         label: 'content wrapper'
@@ -76,7 +76,7 @@ third_party_settings:
         effect: none
         speed: fast
         id: ''
-        classes: 'content-wrapper bg-edge2edge'
+        classes: content-wrapper
       label: 'content wrapper'
 id: block_content.block_image.default
 targetEntityType: block_content

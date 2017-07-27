@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/admin\/structure\/menu\/item\/4\/edit?_format=hal_json"
+            "href": "http:\/\/default\/admin\/structure\/menu\/item\/3\/edit?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/menu_link_content\/menu_link_content"
@@ -9,12 +9,12 @@
     },
     "id": [
         {
-            "value": 4
+            "value": 3
         }
     ],
     "uuid": [
         {
-            "value": "400eb0b9-6e14-4618-8670-34806eb1edd9"
+            "value": "f80ca176-7034-48a9-aa98-dbac95433075"
         }
     ],
     "langcode": [
@@ -30,18 +30,18 @@
     ],
     "title": [
         {
-            "value": "Login",
+            "value": "Facebook",
             "lang": "en"
         }
     ],
     "menu_name": [
         {
-            "value": "main"
+            "value": "footer"
         }
     ],
     "link": [
         {
-            "uri": "internal:\/user\/login",
+            "uri": "https:\/\/www.facebook.com\/vardotters\/",
             "title": "",
             "options": []
         }
@@ -53,12 +53,12 @@
     ],
     "rediscover": [
         {
-            "value": true
+            "value": false
         }
     ],
     "weight": [
         {
-            "value": -47
+            "value": -50
         }
     ],
     "expanded": [
@@ -73,7 +73,7 @@
     ],
     "changed": [
         {
-            "value": 1499773184,
+            "value": 1501148145,
             "lang": "en"
         }
     ],
