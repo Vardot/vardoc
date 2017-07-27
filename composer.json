@@ -20,21 +20,6 @@
     {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
-    }
-  ],
-  "config": {
-    "bin-dir": "bin/",
-    "secure-http": false
-  },
-  "autoload": {
-    "psr-4": {
-      "Vardoc\\composer\\": "src/composer"
-    }
-  },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://packages.drupal.org/8"
     },
     {
       "type": "package",
@@ -114,6 +99,15 @@
     "squizlabs/php_codesniffer": "2.*",
     "behatch/contexts": "*",
     "emuse/behat-html-formatter": "@stable"
+  },
+  "config": {
+    "bin-dir": "bin/",
+    "secure-http": false
+  },
+  "autoload": {
+    "psr-4": {
+      "Vardoc\\composer\\": "src/composer"
+    }
   },
   "scripts": {
       "post-install-cmd": [
