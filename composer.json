@@ -84,8 +84,8 @@
           "@composer drupal-scaffold"
       ],
       "post-drupal-scaffold-cmd": [
-        "Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure",
-        "Varbase\\composer\\ScriptHandler::postDrupalScaffoldSubProfileProcedure"
+        "Vardoc\\composer\\ScriptHandler::postDrupalScaffoldProcedure",
+        "Vardoc\\composer\\ScriptHandler::postDrupalScaffoldSubProfileProcedure"
       ],
       "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
   },
