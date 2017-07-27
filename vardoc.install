@@ -17,5 +17,6 @@ use Drupal\shortcut\Entity\Shortcut;
  */
 function varbase_subprofile_basic_install() {
   include_once \Drupal::root() . '/profiles/varbase/varbase.install';
+
   varbase_install();
 }

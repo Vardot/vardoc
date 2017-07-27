@@ -19,6 +19,7 @@ use Drupal\vardoc\Form\VardocAssemblerForm;
  */
 function vardoc_form_install_configure_form_alter(&$form, FormStateInterface $form_state) {
   include_once \Drupal::root() . '/profiles/varbase/varbase.profile';
+
   varbase_form_install_configure_form_alter($form, $form_state);
 }
 
@@ -27,6 +28,7 @@ function vardoc_form_install_configure_form_alter(&$form, FormStateInterface $fo
  */
 function vardoc_install_tasks(&$install_state) {
   include_once \Drupal::root() . '/profiles/varbase/varbase.profile';
+
   $install_tasks = varbase_install_tasks($install_state);
   $needs_configure_multilingual = FALSE;
   unset($install_tasks['varbase_multilingual_configuration_form']);
@@ -52,6 +54,8 @@ function vardoc_install_tasks(&$install_state) {
  * Implements hook_install_tasks_alter().
  */
 function vardoc_install_tasks_alter(&$tasks, $install_state) {
+  include_once \Drupal::root() . '/profiles/varbase/varbase.profile';
+
   //Skip select language step to install it in English as default language
   unset($tasks['install_select_language']);
   unset($tasks['install_download_translation']);
@@ -68,10 +72,10 @@ function vardoc_install_tasks_alter(&$tasks, $install_state) {
  */
 function vardoc_assemble_extra_components(array &$install_state) {
   include_once \Drupal::root() . '/profiles/varbase/varbase.profile';
-    
+
   // Configbit root folder for vardoc profile.
   $configbit_root = \Drupal::root() . '/profiles/vardoc/configbit';
-  
+
   // Default vardoc components, which must be installed.
   $default_components = ConfigBit::getList($configbit_root . '/default.components.varbase.bit.yml', 'install_default_components', TRUE, 'dependencies');
 
