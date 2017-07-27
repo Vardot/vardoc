@@ -13,7 +13,7 @@ php:
   - 7.0
   - 7.1
 env:
-  - VERSION=8.x-4.x
+  - VERSION=8.x-1.x-test
   
 sudo: enabled
 dist: trusty
