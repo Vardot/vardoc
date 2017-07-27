@@ -95,7 +95,7 @@ before_script:
   - drush -y en varbase_development -vvv
   
   # Development Environment Modules and Features, make sure to disable this feature in production.
-  - drush -y en vardoc_demo -vvv
+
 
 script:
   - cd ./profiles/vardoc
