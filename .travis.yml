@@ -95,9 +95,7 @@ before_script:
   - drush -y en varbase_development -vvv
   
   # Development Environment Modules and Features, make sure to disable this feature in production.
-  - drush -y en varbase_heroslider_media -vvv
-  - drush -y en varbase_carousels -vvv
-  - drush -y en varbase_search -vvv
+  - drush -y en vardoc_demo -vvv
 
 script:
   - cd ./profiles/vardoc
