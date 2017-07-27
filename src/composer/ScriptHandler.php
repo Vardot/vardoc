@@ -8,6 +8,8 @@
 namespace Varbase\composer;
 
 use Symfony\Component\Filesystem\Filesystem;
+use Composer\EventDispatcher\Event;
+use Symfony\Component\Yaml\Yaml;
 
 class ScriptHandler {
 
@@ -27,7 +29,7 @@ class ScriptHandler {
    * @param \Composer\EventDispatcher\Event $event
    *   The script event.
    */
-  public static function postDrupalScaffoldProcedure(\Composer\EventDispatcher\Event $event) {
+  public static function postDrupalScaffoldProcedure(Event $event) {
 
     $fs = new Filesystem();
     $drupal_root = static::getDrupalRoot(getcwd());
@@ -84,7 +86,7 @@ class ScriptHandler {
    * @param \Composer\EventDispatcher\Event $event
    *   The script event.
    */
-  public static function postDrupalScaffoldSubProfileProcedure(\Composer\EventDispatcher\Event $event) {
+  public static function postDrupalScaffoldSubProfileProcedure(Event $event) {
 
     $fs = new Filesystem();
     $root = static::getDrupalRoot(getcwd());
