@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Varbase" default="env">
+<project name="Vardoc" default="env">
 
   <property name="drush" value="${project.basedir}/bin/drush" />
   <property name="composer" value="/usr/local/bin/composer" />
@@ -9,10 +9,10 @@
   <property name="db.host" value="localhost" />
   <property name="db.user" value="root" />
   <property name="db.password" value="" />
-  <property name="db.database" value="varbase" />
+  <property name="db.database" value="vardoc" />
   <property name="db.url" value="${db.type}://${db.user}:${db.password}@${db.host}/${db.database}" />
   <property name="docroot" value="docroot" />
-  <property name="profile" value="${docroot}/profiles/varbase" />
+  <property name="profile" value="${docroot}/profiles/vardoc" />
   <property name="site" value="${docroot}/sites/default" />
   <property name="version" value="HEAD" />
 
@@ -36,7 +36,7 @@
     <echo message="Found rsync: ${rsync}" />
   </target>
 
-  <!-- Syncs the Varbase profile into the Drupal code base. -->
+  <!-- Syncs the Vardoc profile into the Drupal code base. -->
   <target name="push" depends="env">
     <!-- Create the destination if it doesn't exist. -->
     <mkdir dir="${profile}" />
@@ -60,7 +60,7 @@
     <filesync destinationDir="." rsyncPath="${rsync}" sourceDir="${profile}/" verbose="false" exclude="libraries,modules/contrib,behat.local.yml" />
   </target>
 
-  <!-- Builds Varbase with Composer. -->
+  <!-- Builds Vardoc with Composer. -->
   <target name="build" depends="env">
     <if>
       <equals arg1="${version}" arg2="HEAD" />
@@ -110,16 +110,16 @@
     </if>
   </target>
 
-  <!-- Installs Varbase and sets it up for development. -->
+  <!-- Installs Vardoc and sets it up for development. -->
   <target name="install" depends="env">
     <!-- Use passthru() when executing drush site-install so that we'll know if errors occur. -->
-    <exec command="${drush} site-install varbase --yes --site-name=Varbase4 --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url=${db.url} varbase_multilingual_configuration.enable_multilingual=true -vvv" dir="${docroot}" passthru="true" />
+    <exec command="${drush} site-install vardoc --yes --site-name=Vardoc1 --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url=${db.url}" dir="${docroot}" passthru="true" />
     <exec command="${drush} config-set system.performance css.preprocess 0 --yes --format=boolean" dir="${docroot}" />
     <exec command="${drush} config-set system.performance js.preprocess 0 --yes --format=boolean" dir="${docroot}" />
     <exec command="${drush} config-set system.logging error_level all --yes" dir="${docroot}" />
   </target>
 
-  <!-- Builds the Varbase code base from HEAD, overwriting docroot, and
+  <!-- Builds the Vardoc code base from HEAD, overwriting docroot, and
   executes all database updates. -->
   <target name="update" depends="env">
     <phingcall target="build" />
@@ -128,7 +128,7 @@
     <!-- TODO: Execute manual update steps as needed. -->
   </target>
 
-  <!-- Prepares Varbase for the drupal.org packaging system. -->
+  <!-- Prepares Vardoc for the drupal.org packaging system. -->
   <target name="package">
     <!-- Create a symlink to the installed libraries so that the packaging script can scan 'em. -->
     <symlink target="${profile}/libraries" link="libraries" />
@@ -136,7 +136,7 @@
     <delete file="libraries" />
   </target>
 
-  <!-- Builds a Varbase code base from legacy Drush make files. -->
+  <!-- Builds a Vardoc code base from legacy Drush make files. -->
   <target name="build-legacy" depends="env">
     <if>
       <available file="${docroot}" property="docroot.exists" />
