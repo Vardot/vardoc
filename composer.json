@@ -110,17 +110,19 @@
     }
   },
   "scripts": {
-      "post-install-cmd": [
-          "@composer drupal-scaffold"
-      ],
-      "post-update-cmd": [
-          "@composer drupal-scaffold"
-      ],
-      "post-drupal-scaffold-cmd": [
-        "Vardoc\\composer\\ScriptHandler::postDrupalScaffoldProcedure",
-        "Vardoc\\composer\\ScriptHandler::postDrupalScaffoldSubProfileProcedure"
-      ],
-      "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+    "pre-install-cmd": ["Vardoc\\composer\\ScriptHandler::checkComposerVersion"],
+    "pre-update-cmd": ["Vardoc\\composer\\ScriptHandler::checkComposerVersion"],
+    "post-install-cmd": [
+      "Vardoc\\composer\\ScriptHandler::createRequiredFiles",
+      "@composer drupal-scaffold",
+      "./bin/phing push"
+    ],
+    "post-update-cmd": [
+      "Vardoc\\composer\\ScriptHandler::createRequiredFiles",
+      "./bin/phing push"
+    ],
+    "post-drupal-scaffold-cmd": ["Vardoc\\composer\\ScriptHandler::postDrupalScaffoldProcedure"]
   },
   "extra": {
     "installer-paths": {
