@@ -122,7 +122,10 @@
       "Vardoc\\composer\\ScriptHandler::createRequiredFiles",
       "./bin/phing push"
     ],
-    "post-drupal-scaffold-cmd": ["Vardoc\\composer\\ScriptHandler::postDrupalScaffoldProcedure"]
+    "post-drupal-scaffold-cmd": [
+      "Vardoc\\composer\\ScriptHandler::postDrupalScaffoldProcedure",
+      "Vardoc\\composer\\ScriptHandler::postDrupalScaffoldSubProfileProcedure"
+    ]
   },
   "extra": {
     "installer-paths": {
