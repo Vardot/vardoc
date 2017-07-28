@@ -16,9 +16,9 @@ If you want to run the test in steps, if you are not interested in the
 initialization and cleaning up after the test.
 
 ```
-  $ bin/behat features/vardoc/step1-init-tests
-  $ bin/behat features/vardoc/step2-apply-tests
-  $ bin/behat features/vardoc/step3-cleanup-tests
+  $ ../../../bin/behat features/vardoc/step1-init-tests
+  $ ../../../bin/behat features/vardoc/step2-apply-tests
+  $ ../../../bin/behat features/vardoc/step3-cleanup-tests
 ```
 For more custom commands: [Varbase Automated Functional Testing](https://github.com/Vardot/vardoc/blob/8.x-1.x/tests/README.md)
 
