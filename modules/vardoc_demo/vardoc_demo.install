@@ -1,0 +1,45 @@
+<?php
+/*
+ * Implements hook_install
+ */
+function vardoc_demo_install() {
+  // Insert the record to table.
+  \Drupal::database()->insert('entity_subqueue__items')
+    ->fields([
+      'bundle',
+      'deleted',
+      'entity_id',
+      'revision_id',
+      'langcode',
+      'delta',
+      'items_target_id'
+    ])
+    ->values(array(
+      'featured_articles',
+      0,
+      'featured_articles',
+      'featured_articles',
+      'en',
+      0,
+      1
+    ))
+    ->values(array(
+      'featured_articles',
+      0,
+      'featured_articles',
+      'featured_articles',
+      'en',
+      1,
+      5
+    ))
+    ->values(array(
+      'featured_articles',
+      0,
+      'featured_articles',
+      'featured_articles',
+      'en',
+      2,
+      3
+    ))
+    ->execute();
+}
