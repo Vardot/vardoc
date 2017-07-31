@@ -29,7 +29,7 @@ projects[menu_item_visibility][type] = module
 projects[menu_item_visibility][version] = 1.x-dev
 
 projects[varbase][type] = profile
-projects[varbase][subdir] = ../../profiles
+projects[varbase][subdir] = ""
 projects[varbase][version] = "4.05"
 
 ;;;;;;;;;;;;;;;;;;;;;
