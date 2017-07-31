@@ -1,0 +1,5 @@
+services:
+  vardoc_demo.event_subscriber:
+    class: Drupal\vardoc_demo\EventSubscriber\VardocDemoEventSubscriber
+    tags:
+      - { name: event_subscriber }
