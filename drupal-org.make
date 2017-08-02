@@ -31,7 +31,7 @@ projects[menu_item_visibility][version] = 1.x-dev
 projects[varbase][type] = profile
 projects[varbase][subdir] = ""
 projects[varbase][version] = "4.05"
-projects[varbase][patch][] = https://www.drupal.org/files/issues/varbase-remove_hardcoded_paths-1054616-2.patch
+projects[varbase][patch][] = https://www.drupal.org/files/issues/varbase-remove_hardcoded_paths-2899042-3.patch
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
