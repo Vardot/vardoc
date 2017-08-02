@@ -18,7 +18,7 @@ use Drupal\vardoc\Form\VardocAssemblerForm;
  * Allows the profile to alter the site configuration form.
  */
 function vardoc_form_install_configure_form_alter(&$form, FormStateInterface $form_state) {
-  include_once \Drupal::root() . '/profiles/varbase/varbase.profile';
+  include_once drupal_get_path('profile', 'varbase') . '/varbase.profile';
 
   varbase_form_install_configure_form_alter($form, $form_state);
 }
@@ -27,7 +27,7 @@ function vardoc_form_install_configure_form_alter(&$form, FormStateInterface $fo
  * Implements hook_install_tasks().
  */
 function vardoc_install_tasks(&$install_state) {
-  include_once \Drupal::root() . '/profiles/varbase/varbase.profile';
+  include_once drupal_get_path('profile', 'varbase')  . '/varbase.profile';
 
   $install_tasks = varbase_install_tasks($install_state);
   $needs_configure_multilingual = FALSE;
@@ -54,7 +54,7 @@ function vardoc_install_tasks(&$install_state) {
  * Implements hook_install_tasks_alter().
  */
 function vardoc_install_tasks_alter(&$tasks, $install_state) {
-  include_once \Drupal::root() . '/profiles/varbase/varbase.profile';
+  include_once drupal_get_path('profile', 'varbase') . '/varbase.profile';
 
   //Skip select language step to install it in English as default language
   unset($tasks['install_select_language']);
@@ -71,7 +71,7 @@ function vardoc_install_tasks_alter(&$tasks, $install_state) {
  *   The batch job definition.
  */
 function vardoc_assemble_extra_components(array &$install_state) {
-  include_once \Drupal::root() . '/profiles/varbase/varbase.profile';
+  include_once drupal_get_path('profile', 'varbase') . '/varbase.profile';
 
   // Configbit root folder for vardoc profile.
   $configbit_root = \Drupal::root() . '/profiles/vardoc/configbit';
