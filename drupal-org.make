@@ -31,7 +31,8 @@ projects[menu_item_visibility][version] = 1.x-dev
 projects[varbase][type] = profile
 projects[varbase][subdir] = ""
 projects[varbase][version] = "4.05"
-projects[varbase][patch][] = https://www.drupal.org/files/issues/varbase-remove_hardcoded_paths-2899042-3.patch
+;; Issue #2899042 by josebc, RajabNatshah: Allow distribution to be installed in other than profiles/varbase
+projects[varbase][patch][] = https://www.drupal.org/files/issues/varbase-8-4-05--2899042-10.patch
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
