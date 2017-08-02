@@ -73,7 +73,7 @@ class VardocAssemblerForm extends AssemblerForm {
     ];
     
     // Configbit root folder for varbase sub profile basic.
-    $configbit_root = \Drupal::root() . '/profiles/vardoc/configbit';
+    $configbit_root = 'configbit';
 
     foreach ($this->getExtraComponentsInfo($configbit_root) as $key => $info) {
       $form['extra_components']['#options'][$key] = $info['name'];

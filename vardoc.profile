@@ -74,10 +74,10 @@ function vardoc_assemble_extra_components(array &$install_state) {
   include_once drupal_get_path('profile', 'varbase') . '/varbase.profile';
 
   // Configbit root folder for vardoc profile.
-  $configbit_root = \Drupal::root() . '/profiles/vardoc/configbit';
+  $configbit_root = 'configbit';
 
   // Default vardoc components, which must be installed.
-  $default_components = ConfigBit::getList($configbit_root . '/default.components.varbase.bit.yml', 'install_default_components', TRUE, 'dependencies');
+  $default_components = ConfigBit::getList($configbit_root . '/default.components.varbase.bit.yml', 'install_default_components', TRUE, 'dependencies', 'profile', 'vardoc');
 
   // Selected extra components to be installed.
   $selected_extra_components = $install_state['vardoc']['extra_components'];
