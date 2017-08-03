@@ -3,6 +3,8 @@
                   automated functional testing.
 * Issue #2899488: Applied the patch, which allow distribution to be installed
                   in other than profiles/varbase
+* Issue #2899498: Vardoc 8.1.0-beta2 : Updated [CHANGELOG.md, UPDATE.md] files
+                  and filtered the code for Drupal 8 Coding Standard
 
 ## 8.1.0-beta1
 * Initial commit
