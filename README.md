@@ -47,6 +47,13 @@ Our goal is to bring ease to you when writing and creating a documentation
 
 ## Or install it via Composer:
 
+# Install with Composer
+
+To install the most recent stable release of Vardoc 8.1.x run this command:
+```
+composer create-project Vardot/varbase-project:^8.1.0-beta2 PROJECT_DIR_NAME --no-dev --no-interaction
+```
+
 To install the dev version of Vardoc 8.1.x run this command:
 ```
 composer create-project vardot/vardoc-project:8.1.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
