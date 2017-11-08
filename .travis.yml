@@ -7,16 +7,16 @@ cache:
     - "$HOME/.drush/cache"
     - "$HOME/.npm"
     - "$HOME/.selenium/cache"
-    
+
 php:
   - 5.6
   - 7.0
 env:
   - VERSION=8.x-1.x
-  
-dist: precise
 
-addons:  
+dist: trusty
+
+addons:
   firefox: 46.0.1
   apt:
     packages:
@@ -28,9 +28,9 @@ addons:
       - xfonts-75dpi
       - xfonts-scalable
       - xserver-xorg-core
-  
+
 mysql:
-  database: drupal
+  database: test_vardoc1c
   username: root
   encoding: utf8
 
@@ -40,61 +40,52 @@ before_install:
   - composer self-update
   - composer --version
 
+  # Composer Configurations.
   - export PATH="$HOME/.composer/vendor/bin:$TRAVIS_BUILD_DIR/bin:$PATH"
-
   - export COMPOSER_EXIT_ON_PATCH_FAILURE=1
 
+  # MySQL Configurations.
   - mysql -e 'SET GLOBAL wait_timeout = 5400;'
   - mysql -e "SHOW VARIABLES LIKE 'wait_timeout'"
 
   # PHP Configurations.
-  - echo 'max_execution_time = 1200' >> drupal.php.ini;
-  - echo 'max_input_time = 180' >> drupal.php.ini;
-  - echo 'max_input_vars = 10000' >> drupal.php.ini;
-  - echo 'memory_limit = 2048M' >> drupal.php.ini;
-  - echo 'error_reporting = E_ALL' >> drupal.php.ini;
-  - echo 'post_max_size = 64M' >> drupal.php.ini;
-  - echo 'upload_max_filesize = 32M' >> drupal.php.ini;
-  - echo 'max_file_uploads = 40' >> drupal.php.ini;
-  - echo 'sendmail_path = /bin/true' >> drupal.php.ini;
-  - phpenv config-add drupal.php.ini
+  - echo 'max_execution_time = 1200' >> varbase.php.ini;
+  - echo 'max_input_time = 180' >> varbase.php.ini;
+  - echo 'max_input_vars = 10000' >> varbase.php.ini;
+  - echo 'memory_limit = 2048M' >> varbase.php.ini;
+  - echo 'error_reporting = E_ALL' >> varbase.php.ini;
+  - echo 'post_max_size = 64M' >> varbase.php.ini;
+  - echo 'upload_max_filesize = 32M' >> varbase.php.ini;
+  - echo 'max_file_uploads = 40' >> varbase.php.ini;
+  - echo 'sendmail_path = /bin/true' >> varbase.php.ini;
+  - phpenv config-add varbase.php.ini
   - phpenv rehash
-   
-  # Configure the display.
+
+  # Configure and run the virtual display.
   - export DISPLAY=:0
   - sh -e /etc/init.d/xvfb start
   - Xvfb :0 -ac -screen 0 1366x768x24 &
-  - sleep 3 # give xvfb some time to start
-  
-  # Print firefox version.
-  - firefox --version
-  
+  - sleep 3
+
   # Run selenium standalone server.
   - SELENIUM="$HOME/.selenium/cache/selenium-server-standalone-2.53.1.jar";
   - if [[ ! -f $SELENIUM ]]; then wget -O $SELENIUM http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar; fi
   - java -jar $SELENIUM -port 4445 > /dev/null 2>&1 &
   - echo "[  OK  ] Starting Selenium on the 4445 port ..."
-  
-  - composer global require phing/phing
-  
 install:
-  - phing build -Dversion=$VERSION -Dbranch=$TRAVIS_COMMIT
+  - git checkout $TRAVIS_COMMIT
+  ## Build with the composer.
+  - composer install --no-interaction -vvv
 
-  - phing install -Ddb.database=drupal
-  - if [ $VERSION != "HEAD" ]; then phing update; fi
-
-before_script:
+  ## Install with drush.
   - cd docroot
-   
+  - drush site-install vardoc --yes --site-name='Test Vardoc1c' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:@localhost/test_vardoc1c"  varbase_development_tools.varbase_development=true
+  - drush config-set system.performance css.preprocess 0 --yes
+  - drush config-set system.performance js.preprocess 0 --yes
+  - drush config-set system.logging error_level all --yes
+before_script:
   - drush runserver --default-server=builtin 8080 &>/dev/null &
   - sleep 5
-    
-  # Install Vardoc Development feature.
-  - drush -y en varbase_development -vvv
-  
-  # Development Environment Modules and Features, make sure to disable this feature in production.
-
-
 script:
   - cd ./profiles/vardoc
   - behat --strict tests/features/vardoc/step1-init-tests/

@@ -70,7 +70,10 @@
       "Varbase\\composer\\ScriptHandler::createRequiredFiles",
       "Varbase\\composer\\ScriptHandler::removeGitDirectories"
     ],
-    "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"]
+    "post-drupal-scaffold-cmd": [
+      "Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure",
+      "Varbase\\composer\\ScriptHandler::postDrupalScaffoldSubProfileProcedure"
+    ]
   },
   "conflict": {
     "drupal/drupal": "*"
