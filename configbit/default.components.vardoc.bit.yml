@@ -4,19 +4,20 @@
 # ==============================================================================
 config_bit:
   type: list
-  for: /profiles/vardoc/vardoc.info.yml
+  for: vardoc.info.yml
   when:
     install_default_components: true
     list:
       dependencies:
+        # Enable listed modules in order at this installation step.
+        - libraries
+        # Enable listed Varbase modules in order at this installation step.
         - varbase_core
         - varbase_admin
         - varbase_security
         - varbase_seo
         - varbase_editor
         - varbase_media
-        # Enable listed modules in order at this installation step.
-        - libraries
         # Enable default Vardoc features.
         - vardoc_homepage
         - vardoc_book

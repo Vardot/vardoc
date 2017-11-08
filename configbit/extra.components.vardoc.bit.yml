@@ -8,7 +8,5 @@ config_bit:
   when:
     show_extra_components: true
     list:
-      dependencies:
-        - varbase_development
-        - vardoc_demo
+      dependencies: { }
       selected: { }

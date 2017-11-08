@@ -3,8 +3,6 @@
   "description": "Vardoc: Knowledge Base System and Documentation Site",
   "type": "drupal-profile",
   "license": "GPL-2.0+",
-  "minimum-stability": "dev",
-  "prefer-stable": true,
   "authors": [
     {
       "name": "Vardot",
@@ -20,151 +18,76 @@
     {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "kenwheeler/slick",
-        "version": "1.6.0",
-        "type": "drupal-library",
-        "source": {
-          "url": "https://github.com/kenwheeler/slick",
-          "type": "git",
-          "reference": "origin/master"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "dinbror/blazy",
-        "version": "1.8.2",
-        "type": "drupal-library",
-        "source": {
-          "url": "https://github.com/dinbror/blazy",
-          "type": "git",
-          "reference": "origin/master"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "ajaxorg/ace-builds",
-        "version": "1.2.6",
-        "type": "library",
-        "source": {
-          "url": "https://github.com/ajaxorg/ace-builds",
-          "type": "git",
-          "reference": "origin/master"
-        }
-      }
     }
   ],
   "require": {
-    "php": ">=5.6",
-    "composer/installers": "^1.2.0",
-    "cweagans/composer-patches": "^1.6.0",
-    "drupal-composer/drupal-scaffold": "^2.2.0",
-    "drupal/drupal-library-installer-plugin": "~0.3",
-    "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
-    "enyo/dropzone": "4.3.0",
-    "dinbror/blazy": "1.8.2",
-    "kenwheeler/slick": "1.6.0",
-    "vardot/varbase": "8.4.05",
+    "composer/installers": "1.4.0",
+    "cweagans/composer-patches": "1.6.2",
+    "drupal-composer/drupal-scaffold": "2.3.0",
+    "drupal/drupal-library-installer-plugin": "0.3",
+    "webflo/drupal-finder": "1.0",
+    "webmozart/path-util": "2.3",
+    "vardot/varbase": "8.4.11",
+    "drupal/views_bootstrap": "3.x-dev#ec4e7872315db6a7287014b029c3167962647588",
+    "drupal/extlink": "1.x-dev#8a773a6c5519ccb167e18cc39d68551b30b0e4b3",
+    "drupal/image_resize_filter": "1.x-dev#c3f4b23b02005859092aaff746b9f21b794adc58",
+    "drupal/entity_clone": "1.x-dev#9265e359bd31bda693dac9ad84ad52fe63531488",
+    "drupal/pathologic": "1.x-dev#e0473546e51cbeaa3acb34e3208a0c503ca85613",
+    "drupal/admin_toolbar": "1.x-dev#5a07bd6290449ebb9aa16e47614b7f51a921223b",
+    "drupal/tour_ui": "1.x-dev#5cf793c071aeddea0ecd20d80b541606bfe2aff1",
+    "drupal/tour_builder": "1.x-dev#d70e898949b7ec4095efb391a0dbec56d0117558",
+    "drupal/l10n_client": "1.x-dev#9bf8d597732870bdca301512c71b6e5d74d48db2",
+    "drupal/node_edit_protection": "1.x-dev#902339c08222f838030c07aaea23bdc51ababebd",
+    "drupal/security_review": "1.x-dev#35ebae445bb260e961e47c4c58efe7c50c228999",
+    "drupal/menu_position": "1.x-dev#1e3a6778acc74a35174d297052ec44995d5e5137",
+    "drupal/mail_edit": "1.x-dev#bcd0041830d8581b36e6211f0c8eabd8caf9652b",
+    "drupal/libraries": "3.x-dev#061ead081c92a6209b09eaf23b4e3103f360946e",
+    "drupal/google_analytics_reports": "3.x-dev#2b6bb8efbc7f61ce3c1225638075aa6037b8db44",
+    "drupal/login_destination": "1.x-dev#98892eb84eba6fe69d4fc48dc5b1fdaccb21c8a7",
+    "drupal/field_group": "3.x-dev#83c00b5e61056940745e9c37ba4bbac9a1124d75",
     "drupal/social_api": "1.0-beta2",
     "drupal/social_auth": "1.0-beta4",
     "drupal/social_auth_google": "1.0-beta2",
     "drupal/fontawesome": "1.2",
-    "drupal/default_content": "1.0-alpha6",
     "drupal/better_normalizers": "1.0-beta3",
     "drupal/menu_item_visibility": "1.x-dev"
   },
-  "require-dev": {
-    "drush/drush": "^8.0.0",
-    "drupal/drupal-extension": "^3.2",
-    "drupal-composer/drupal-scaffold": "^2.0.0",
-    "jakoch/phantomjs-installer": "1.9.8",
-    "behat/behat": "^3.0",
-    "drupal/coder": "8.*",
-    "phing/phing": "^2.14",
-    "behat/mink": "~1.7",
-    "behat/mink-goutte-driver": "~1.2",
-    "behat/mink-zombie-driver": "@stable",
-    "behat/mink-selenium2-driver":  "~1.3",
-    "mikey179/vfsStream": "~1.2",
-    "phpunit/phpunit": "~4.8",
-    "guzzlehttp/guzzle": "6.2.*@stable",
-    "symfony/css-selector": "~2.8",
-    "squizlabs/php_codesniffer": "2.*",
-    "behatch/contexts": "*",
-    "emuse/behat-html-formatter": "@stable"
-  },
   "config": {
     "bin-dir": "bin/",
-    "secure-http": false
-  },
-  "autoload": {
-    "psr-4": {
-      "Vardoc\\composer\\": "src/composer"
-    }
+    "secure-http": false,
+    "optimize-autoloader": true
   },
   "scripts": {
     "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-    "pre-install-cmd": ["Vardoc\\composer\\ScriptHandler::checkComposerVersion"],
-    "pre-update-cmd": ["Vardoc\\composer\\ScriptHandler::checkComposerVersion"],
     "post-install-cmd": [
-      "Vardoc\\composer\\ScriptHandler::createRequiredFiles",
-      "@composer drupal-scaffold",
-      "./bin/phing push"
+      "Varbase\\composer\\ScriptHandler::createRequiredFiles",
+      "Varbase\\composer\\ScriptHandler::removeGitDirectories",
+      "@composer drupal-scaffold"
     ],
     "post-update-cmd": [
-      "Vardoc\\composer\\ScriptHandler::createRequiredFiles",
-      "./bin/phing push"
+      "Varbase\\composer\\ScriptHandler::createRequiredFiles",
+      "Varbase\\composer\\ScriptHandler::removeGitDirectories"
     ],
-    "post-drupal-scaffold-cmd": [
-      "Vardoc\\composer\\ScriptHandler::postDrupalScaffoldProcedure",
-      "Vardoc\\composer\\ScriptHandler::postDrupalScaffoldSubProfileProcedure"
-    ]
+    "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"]
+  },
+  "conflict": {
+    "drupal/drupal": "*"
   },
   "extra": {
+    "branch-alias": {
+      "dev-8.x-4.x": "8.4.x-dev"
+    },
     "installer-paths": {
       "docroot/core": ["drupal/core"],
       "docroot/profiles/{$name}": ["type:drupal-profile"],
       "docroot/modules/contrib/{$name}": ["type:drupal-module"],
       "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
-      "docroot/libraries/{$name}": ["type:drupal-library"]
-    },
-    "branch-alias": {
-      "dev-8.x-1.x": "8.1.x-dev"
-    },
-    "drupal-libraries": {
-      "library-directory": "docroot/libraries",
-      "libraries": [
-        {
-          "name": "dropzone",
-          "package": "enyo/dropzone"
-        },
-        {
-          "name": "blazy",
-          "package": "dinbror/blazy"
-        },
-        {
-          "name": "slick",
-          "package": "kenwheeler/slick"
-        },
-        {
-          "name": "ace",
-          "package": "ajaxorg/ace-builds"
-        }
-      ]
+      "docroot/libraries/{$name}": ["type:drupal-library"],
+      "drush/contrib/{$name}": ["type:drupal-drush"]
     },
     "enable-patching": true,
+    "composer-exit-on-patch-failure": true,
     "patches": {
-      "vardot/varbase": {
-        "Issue #2899042 by josebc, RajabNatshah: Allow distribution to be installed in other than profiles/varbase":
-        "https://www.drupal.org/files/issues/varbase-8-4-05--2899042-10.patch"
-      },
       "drush/drush": {
         "Add profile dependencies for drush.":
         "https://patch-diff.githubusercontent.com/raw/drush-ops/drush/pull/2697.patch"

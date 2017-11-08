@@ -1,0 +1,16 @@
+# ==============================================================================
+# List of Vardoc demo components, which they will be listed under the
+# Extra components installation step, in the Demo content section.
+# ==============================================================================
+config_bit:
+  type: list
+  for: vardoc.info.yml
+  when:
+    show_demo: true
+    list:
+      dependencies:
+        vardoc_demo:
+          title: "Install Demo Content"
+          description: "If you're evaluating Vardoc, installing demo content will help you get an idea of how Vardoc works, and what features are included."
+          selected: false
+          config_form: false

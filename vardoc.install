@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Install, update and uninstall functions for the Varbase installation profile.
+ * Install, update and uninstall functions for the Vardoc installation profile.
  */
 
 use Drupal\user\Entity\User;
@@ -15,8 +15,7 @@ use Drupal\shortcut\Entity\Shortcut;
  *
  * @see system_install()
  */
-function varbase_subprofile_basic_install() {
+function vardoc_install() {
   include_once drupal_get_path('profile', 'varbase') . '/varbase.install';
-
   varbase_install();
 }

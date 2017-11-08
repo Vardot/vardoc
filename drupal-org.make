@@ -19,9 +19,6 @@ projects[social_auth_google][version] = 1.0-beta2
 projects[fontawesome][type] = module
 projects[fontawesome][version] = 1.2
 
-projects[default_content][type] = module
-projects[default_content][version] = 1.0-alpha6
-
 projects[better_normalizers][type] = module
 projects[better_normalizers][version] = 1.0-beta3
 
@@ -30,9 +27,7 @@ projects[menu_item_visibility][version] = 1.x-dev
 
 projects[varbase][type] = profile
 projects[varbase][subdir] = ""
-projects[varbase][version] = "4.05"
-;; Issue #2899042 by josebc, RajabNatshah: Allow distribution to be installed in other than profiles/varbase
-projects[varbase][patch][] = https://www.drupal.org/files/issues/varbase-8-4-05--2899042-10.patch
+projects[varbase][version] = "4.11"
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
