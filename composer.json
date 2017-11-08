@@ -3,6 +3,8 @@
   "description": "Vardoc: Knowledge Base System and Documentation Site",
   "type": "drupal-profile",
   "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "authors": [
     {
       "name": "Vardot",
