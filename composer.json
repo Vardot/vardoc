@@ -59,6 +59,11 @@
     "secure-http": false,
     "optimize-autoloader": true
   },
+  "autoload": {
+    "psr-4": {
+      "Vardoc\\composer\\": "src/composer"
+    }
+  },
   "scripts": {
     "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
     "post-install-cmd": [
