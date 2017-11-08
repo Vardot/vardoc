@@ -72,7 +72,7 @@
     ],
     "post-drupal-scaffold-cmd": [
       "Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure",
-      "Varbase\\composer\\ScriptHandler::postDrupalScaffoldSubProfileProcedure"
+      "Vardoc\\composer\\ScriptHandler::postDrupalScaffoldSubProfileProcedure"
     ]
   },
   "conflict": {
