@@ -8,7 +8,7 @@ defaults[projects][subdir] = contrib
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[social_api][type] = module
-projects[social_api][version] = 1.0-beta2
+projects[social_api][version] = 1.1
 
 projects[social_auth][type] = module
 projects[social_auth][version] = 1.0-beta4
