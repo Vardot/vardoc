@@ -48,7 +48,7 @@
     "drupal/login_destination": "1.x-dev#98892eb84eba6fe69d4fc48dc5b1fdaccb21c8a7",
     "drupal/field_group": "3.x-dev#83c00b5e61056940745e9c37ba4bbac9a1124d75",
     "drupal/social_api": "1.1",
-    "drupal/social_auth": "1.0-beta4",
+    "drupal/social_auth": "1.0",
     "drupal/social_auth_google": "1.0-beta2",
     "drupal/fontawesome": "1.2",
     "drupal/better_normalizers": "1.0-beta3",
