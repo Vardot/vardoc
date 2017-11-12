@@ -14,7 +14,7 @@ projects[social_auth][type] = module
 projects[social_auth][version] = 1.0
 
 projects[social_auth_google][type] = module
-projects[social_auth_google][version] = 1.0-beta2
+projects[social_auth_google][version] = 1.0
 
 projects[fontawesome][type] = module
 projects[fontawesome][version] = 1.2
