@@ -6,6 +6,7 @@ dependencies:
   module:
     - system
   theme:
+    - vartheme
     - vardoctheme
 id: vardoctheme_footer
 theme: vardoctheme

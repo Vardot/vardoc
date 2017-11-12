@@ -855,11 +855,23 @@
 //** Horizontal line color.
 @hr-border:                   @gray-lighter;
 
+// Media query variables.
+@mobile:          ~"screen and (max-width: @{screen-xs-max})";
+@tablet:          ~"screen and (min-width: @{screen-sm-min})";
+@normal:          ~"screen and (min-width: @{screen-md-min})";
+@wide:            ~"screen and (min-width: @{screen-lg-min})";
+@grid-breakpoint: ~"screen and (min-width: @{grid-float-breakpoint})";
+
 // Set the proper directory for the Bootstrap Glyphicon font.
-@icon-font-path: '../bootstrap/fonts/';
+@icon-font-path: '../../bootstrap/fonts/';
+
+// Footer wrapper background color.
+@footer-wrapper-bg:             #f2f2f2;
+
+// Change custom Varbase Bootstrap Paragraphs colors theme for Vartheme from:
+// less/theme/vbp-colors.theme.less
 
 // Site Colors
-
 @DimGray:                     #696969;
 @Black:                       #000;
 @White:                       #fff;
@@ -867,6 +879,5 @@
 @Gainsboro:                   #d8d8d8;
 @Shady-Gray:                  #979797;
 @White-Smoke:                 #f7f7f7;
-@White-Somke-light:           #f2f2f2;
 @White-light:                 #fafafa;
 @Blue-light:                  #99B3DD;

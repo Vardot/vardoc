@@ -1,0 +1,61 @@
+// vardoctheme footer styling.
+// -----------------------------------------------------------------------------
+@import "../../bootstrap/less/variables.less";  // Bootstrap variables.
+@import "../../bootstrap/less/mixins.less";     // Bootstrap mixins.
+@import "../variables.less";                    // vardoctheme variables.
+@import "../mixins.less";                       // vardoctheme mixins.
+// -----------------------------------------------------------------------------
+
+// Insert your vardoctheme footer custom LESS styling.
+
+.footer-wrapper {
+  background-color: @footer-wrapper-bg;
+  margin-top: 80px;
+  .footer {
+    border: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    ul.nav {
+      float: right;
+      padding: 17px 0 17px 0;
+      @media (max-width: @screen-xs-max) {
+        float: none;
+        text-align: center;
+      }
+      li {
+        display: inline-block;
+        list-style: none;
+        a {
+          margin: 0 25px 0 0;
+          padding: 0;
+          color: @DimGray;
+          &::before {
+            font-size: 22px;
+            color: @DimGray;
+          }
+          &.fa {
+            font-size: 0;
+          }
+        }
+      }
+    }
+    #block-copyright {
+      float: left;
+      padding: 20px 0 20px 0;
+      font-size: 12px;
+      @media (max-width: @screen-xs-max) {
+        float: none;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.path-frontpage {
+  .footer-wrapper {
+    margin-top: 0;
+  }
+  .footer {
+    margin-top: 0;
+  }
+}

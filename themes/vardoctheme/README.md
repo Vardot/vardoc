@@ -1,9 +1,9 @@
-<!-- @file Instructions for subtheming using the LESS Starterkit. -->
+<!-- @file Instructions for subtheming using the LESS Vartheme Subtheme. -->
 <!-- @defgroup subtheme_less -->
 <!-- @ingroup subtheme -->
-# LESS VARTHEME_SUBTHEME
+# LESS vardoctheme
 
-Below are instructions on how to create a Bootstrap sub-theme using a LESS
+Below are instructions on how to create a Vartheme Sub theme using a LESS
 preprocessor.
 
 - [Prerequisites](#prerequisites)
@@ -21,40 +21,78 @@ preprocessor.
   extension, not files ending in `.css`.
 
 ## Additional Setup {#setup}
-Download and extract the **latest** 3.x.x version of
+Bootstrap library: Download and extract the **latest** 3.x.x version of
 [Bootstrap Framework Source Files] into your new sub-theme. After it has been
-extracted, the folder should read `./VARTHEME_SUBTHEME/bootstrap`.
+extracted, the folder should read `./vardoctheme/bootstrap`.
 
-If for whatever reason you have an additional `bootstrap` folder wrapping the
-first `bootstrap` folder (e.g. `./VARTHEME_SUBTHEME/bootstrap/bootstrap`), 
-remove the wrapping `bootstrap` folder. You will only ever need to touch these
-files if or when you upgrade your version of the [Bootstrap Framework].
+Bootstrap RTL library: Download and extract the **latest** 3.x.x version of
+[Bootstrap Framework Source Files for Right to left] into your new sub-theme.
+After it has been extracted, the folder should read
+`./vardoctheme/bootstrap-rtl`.
 
 {.alert.alert-warning} **WARNING:** Do not modify the files inside of
-`./VARTHEME_SUBTHEME/bootstrap` directly. Doing so may cause issues when 
+`./vardoctheme/bootstrap` directly. Doing so may cause issues when 
 upgrading the [Bootstrap Framework] in the future.
 
-## Override Styles {#styles}
-The `./VARTHEME_SUBTHEME/less/theme/theme-variables.less` file is generally 
+## Override variables.
+The `./vardoctheme/less/variables.less` file is generally 
 where you will the majority of your time overriding the variables provided by
 the [Bootstrap Framework].
 
-The `./VARTHEME_SUBTHEME/less/base/bootstrap.less` file is nearly an exact copy
-from the [Bootstrap Framework Source Files]. The only difference is that it 
+## Mixins.
+The `./vardoctheme/less/mixins.less` Vartheme custom mixins.
+
+The `./vardoctheme/less/base/bootstrap.base.less` file is nearly an exact
+copy from the [Bootstrap Framework Source Files]. The only difference is that it 
 injects the `variable-overrides.less` file directly after it has imported the
 [Bootstrap Framework]'s `variables.less` file. This allows you to easily 
 override variables without having to constantly keep up with newer or missing
 variables during an upgrade.
 
-The `./VARTHEME_SUBTHEME/less/base/overrides.less` file contains various Drupal
+The `./vardoctheme/less/base/vartheme.base.less` file contains various
+Varbase and Vartheme overrides to properly integrate with the 
+[Bootstrap Framework]. It may contain a few enhancements, feel free to edit
+this file as you see fit.
+
+The `./vardoctheme/less/base/vardoctheme.base.less` file contains
+ various Varbase and Vartheme
 overrides to properly integrate with the [Bootstrap Framework]. It may contain
 a few enhancements, feel free to edit this file as you see fit.
 
-The `./VARTHEME_SUBTHEME/less/style.less` file is the glue that combines the
-`bootstrap.less` and `overrides.less` files together. Generally, you will not
-need to modify this file unless you need to add or remove files to be imported.
-This is the file that you should compile to `./VARTHEME_SUBTHEME/css/styles.css`
-(note the same file name, using a different extension of course).
+Following the SMACSS-style categorization of its CSS/LESS rules:
+
+## Base — CSS/LESS reset/normalize plus HTML element styling.
+* The `./vardoctheme/less/base/bootstrap.base.less` file contains
+  Bootstrap base.
+* The `./vardoctheme/less/base/vartheme.base.less` file contains
+  Vartheme base, which Bootstrap overrides
+* The `./vardoctheme/less/base/vardoctheme.base.less` file contains
+  vardoctheme base overrides over Vartheme and Bootstrap.
+
+##Layout — macro arrangement of a web page, including any grid systems.
+* The `./vardoctheme/less/layout/edge2edge.layout.less` file contains
+  Vartheme Edge to Edge layout for content.
+
+## Component — discrete, reusable UI elements.
+* The `./vardoctheme/less/component/bs-callouts.component.less` file
+  contains Bootstrap callouts component.
+* The `./vardoctheme/less/component/outside-in.component.less` file
+  contains Outside-in component.
+* The `./vardoctheme/less/component/navbar.admin.component.less` file
+  contains Vartheme navbar for administration.
+* The `./vardoctheme/less/component/navbar.component.less` file contains
+  Vartheme navbar.
+
+## State — styles that deal with client-side changes to components.
+
+## Theme — purely visual styling (“look-and-feel”) for a component.
+* The `./vardoctheme/less/theme/header.theme.less` file contains
+  vardoctheme header styling.
+* The `./vardoctheme/less/theme/footer.theme.less` file contains
+  vardoctheme footer styling.
+* The `./vardoctheme/less/theme/content.theme.less` file contains
+  vardoctheme content styling.
+
 
 ## Override Theme Settings {#settings}
 Please refer to the @link subtheme_settings Sub-theme Settings @endlink topic.
@@ -65,3 +103,4 @@ Please refer to the @link registry Theme Registry @endlink topic.
 [Bootstrap Framework]: http://getbootstrap.com
 [Bootstrap Framework Source Files]: https://github.com/twbs/bootstrap/releases
 [LESS]: http://lesscss.org
+ Generated by -- composer create-new-vartheme vardoctheme ltr sites/default/themes/custom -- on 2017/11/12 - 15:09:16

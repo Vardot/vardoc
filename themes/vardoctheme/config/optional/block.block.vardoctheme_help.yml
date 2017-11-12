@@ -4,6 +4,7 @@ dependencies:
   module:
     - help
   theme:
+    - vartheme
     - vardoctheme
 id: vardoctheme_help
 theme: vardoctheme

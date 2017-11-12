@@ -1,9 +1,10 @@
 <?php
+
 /**
  * @file
  * Vardoc theme.
  *
- * Place your custom PHP code in this file.
+ * Have custom alteration over the theme layer.
  */
 
 use Drupal\Core\Form\FormStateInterface;
@@ -18,4 +19,12 @@ function vardoctheme_form_views_exposed_form_alter(array &$form, FormStateInterf
       $form['keywords']['#attributes']['placeholder'] = t('Start your search');
       break;
   }
+}
+
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function vardoctheme_preprocess_page(&$variables) {
+  $variables['logo_print'] = drupal_get_path('theme','vardoctheme') . '/logo-print.png';
 }

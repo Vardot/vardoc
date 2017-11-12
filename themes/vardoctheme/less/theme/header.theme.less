@@ -1,0 +1,169 @@
+// vardoctheme header styling.
+// -----------------------------------------------------------------------------
+@import "../../bootstrap/less/variables.less";  // Bootstrap variables.
+@import "../../bootstrap/less/mixins.less";     // Bootstrap mixins.
+@import "../variables.less";                    // vardoctheme variables.
+@import "../mixins.less";                       // vardoctheme mixins.
+// -----------------------------------------------------------------------------
+
+// Insert your Vardoc theme header custom LESS styling.
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic);
+
+body {
+  font-family: "Open Sans";
+  font-size: 16px;
+  color: @DimGray;
+  line-height: 1.63;
+  overflow-x: hidden;
+  margin-top: 0;
+}
+
+.navbar-default {
+  border-color: transparent;
+  border-radius: 0
+}
+
+header#navbar {
+  .menu {
+    @media (min-width: @screen-sm-min) {
+      clear: both;
+      float: right;
+      margin-top: -50px;
+    }
+    .active {
+      a {
+        background-color: inherit;
+        color:@Black;
+      }
+    }
+    @media (min-width: @screen-sm-min) {
+      li {
+        &:last-child a {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.path-frontpage {
+  .navbar {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-image: url("../../images/laptop.png");
+    background-position: 50% 50%;
+    background-size: cover;
+    min-height: 60vh;
+    @media (max-width: @screen-md-max) {
+      min-height: 50vh;
+    }
+    @media (max-width: @screen-sm-max) {
+      min-height: 45vh;
+    }
+    .navbar-nav {
+      li {
+        a {
+          color: @White;
+          font-weight: 600;
+          text-transform: uppercase;
+          font-size: 14px;
+          padding-top: 20px;
+          &:hover {
+            color: @Blue-light;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.navbar {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: @Curious-Blue;
+  .navbar-nav {
+    li {
+      a {
+        color: @White;
+        font-weight: 400;
+        text-transform: uppercase;
+        &:hover {
+          color: @Blue-light;
+        }
+      }
+    }
+  }
+}
+
+.page-header {
+  border-bottom: 0;
+}
+
+.path-frontpage {
+  .block-views-exposed-filter-blockbook-search-page-search {
+    text-align: center;
+    margin-top: 50px;
+    @media (max-width: @screen-md-max) {
+      margin-top: 0px;
+    }
+    @media (max-width: @screen-sm-max) {
+      margin-top: 50px;
+    }
+    .form-actions {
+      .form-submit {
+        border-radius: 0;
+        margin-left: -11px;
+        height: 59px;
+        background-color: @Gainsboro;
+        border: 1px solid @Gainsboro;
+        border-radius: 0 2px 2px 0;
+        color: @DimGray;
+        font-size: 0;
+        span {
+          &::before {
+            font-size: 30px;
+          }
+        }
+      }
+      @media (max-width: @screen-sm-max) {
+        display: inline-block;
+        vertical-align: text-top;
+        margin-bottom: 0;
+      }
+    }
+    .form-type-textfield {
+      float: none !important;
+      .form-control {
+        border-radius: 0;
+        height: 59px;
+        width: 690px;
+        max-width: 100%;
+        @media (max-width: @screen-md-max) {
+          width: 490px;
+        }
+        @media (max-width: @screen-sm-max) {
+          width: 245px;
+        }
+      }
+      @media (max-width: @screen-sm-max) {
+        display: inline-block;
+      }
+    }
+    .block-title {
+      width: 100%;
+      display: block;
+      color: @White;
+      font-size: 48px;
+      font-weight: normal;
+      padding-bottom: 60px;
+      margin-bottom: 0px;
+      text-transform: initial;
+      @media (max-width: @screen-md-max) {
+        font-size: 35px;
+        padding-bottom: 15px;;
+      }
+    }
+  }
+}

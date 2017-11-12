@@ -5,6 +5,7 @@ dependencies:
     - block_class
     - system
   theme:
+    - vartheme
     - vardoctheme
 third_party_settings:
   block_class:

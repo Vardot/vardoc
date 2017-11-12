@@ -21,26 +21,75 @@ regions:
   page_bottom: 'Page bottom'
 
 libraries:
-  - 'vardoctheme/global-styling'
-  - 'vardoctheme/global-scripts'
-  - 'vardoctheme/bootstrap-scripts'
+# Bootstrap styles and scripts libraries.
+  - vardoctheme/bootstrap-styles
+  - vardoctheme/bootstrap-scripts
   
+# Vardoc theme custom Vartheme styles and scripts libraries.
+  - vardoctheme/vartheme-styles
+
+# Vardoc theme global styles and scripts libraries.
+  - vardoctheme/global-styles
+  - vardoctheme/global-scripts
+  
+# Vardoc theme Varbase Bootstrap Paragraphs colors theme.
+  - vardoctheme/vbp-colors
+
 # OPTIONALLY: You can choose to remove Vartheme base theme stylesheets and/or
 # Javascript files.
-# Uncomment these lines to exclude css and js files from vartheme.
-# libraries-override:
-#   vartheme/global-styling:
-#     css:
-#       theme:
-#         css/style.css: false
-#   vartheme/global-scripts:
-#     js:
-#       js/script.js: false
-#   # Uncomment the following lines only for right to left.
-#   # vartheme/global-styling-rtl:
-#   #   css:
-#   #     theme:
-#   #       css/style-rtl.css: false
+libraries-override:
+# Comment lines to keep using libraries from vartheme.
+  bootstrap_library/bootstrap-cdn: false
+  bootstrap_library/bootstrap: false
+  bootstrap_library/bootstrap-dev: false
+  vartheme/bootstrap-styles: false
+  vartheme/bootstrap-scripts: false
+  vartheme/global-styles: false
+  vartheme/global-scripts: true
+  
+# Comment lines to use (RTL) libraries from vartheme.
+  vartheme/bootstrap-styles-rtl: false
+  vartheme/global-styles-rtl: false
+  vardoctheme/bootstrap-styles-rtl: false
+  vardoctheme/vartheme-styles-rtl: false
+  vardoctheme/global-styles-rtl: false
+
+# Vardoc theme Varbase Bootstrap Paragraphs colors theme.
+  varbase_bootstrap_paragraphs/vbp-colors: vardoctheme/vbp-colors
+  vartheme/vbp-colors: vardoctheme/vbp-colors
+  
+# Uncomment lines to replace, exclude css and js files from vartheme.
+# You will need to copy less/css files from Vartheme to use theme for the
+# overriden library.
+# ------------------------------------------------------------------------------
+  vartheme/bs-callouts: vardoctheme/bs-callouts
+  vartheme/outside-in: vardoctheme/outside-in
+  vartheme/edge2edge: vardoctheme/edge2edge
+  vartheme/navbar-admin: vardoctheme/navbar-admin
+# ------------------------------------------------------------------------------
+#  vartheme/ajax: vardoctheme/ajax
+#  vartheme/alert: vardoctheme/alert
+#  vartheme/field: vardoctheme/field
+#  vartheme/file: vardoctheme/file
+#  vartheme/filter: vardoctheme/filter
+#  vartheme/form: vardoctheme/form
+#  vartheme/icon: vardoctheme/icon
+#  vartheme/navbar: vardoctheme/navbar
+#  vartheme/node: vardoctheme/node
+#  vartheme/panel: vardoctheme/panel
+#  vartheme/progress-bar: vardoctheme/progress-bar
+#  vartheme/table-drag: vardoctheme/table-drag
+#  vartheme/tabs: vardoctheme/tabs
+#  vartheme/toolbar: vardoctheme/toolbar
+#  vartheme/autocomplete: vardoctheme/autocomplete
 
 ckeditor_stylesheets:
-  - css/style.css
+  - css/base/bootstrap.base.css
+  - css/base/vartheme.base.css
+  - css/base/vardoctheme.base.css
+  - css/theme/content.theme.css
+  - css/component/alert.component.css
+  - css/component/icon.component.css
+  - css/component/node.component.css
+  - css/component/bs-callouts.component.css
+  - css/layout/edge2edge.layout.css
