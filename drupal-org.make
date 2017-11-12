@@ -27,7 +27,7 @@ projects[menu_item_visibility][version] = 1.x-dev
 
 projects[varbase][type] = profile
 projects[varbase][subdir] = ""
-projects[varbase][version] = "4.11"
+projects[varbase][version] = "4.12"
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
