@@ -23,14 +23,18 @@ projects[better_normalizers][type] = module
 projects[better_normalizers][version] = 1.0-beta3
 
 projects[menu_item_visibility][type] = module
-projects[menu_item_visibility][version] = 1.x-dev
+projects[menu_item_visibility][download][url] = https://git.drupal.org/project/menu_item_visibility.git
+projects[menu_item_visibility][download][revision] = 7806c36b68bdc1ac3582e3a034b94126cd3d1d32
+projects[menu_item_visibility][download][branch] = 1.x-dev
 
 projects[varbase][type] = profile
 projects[varbase][subdir] = ""
 projects[varbase][version] = "4.12"
 
 projects[simple_sitemap][type] = module
-projects[simple_sitemap][version] = 2.10
+projects[simple_sitemap][download][url] = https://git.drupal.org/project/simple_sitemap.git
+projects[simple_sitemap][download][revision] = 4febc8925dc815a41c360e94c651e6cbb88e5aa4
+projects[simple_sitemap][download][branch] = 2.x-dev
 ;; Issue #2913507: Undefined index: include_images
 projects[simple_sitemap][patch][] =  https://www.drupal.org/files/issues/2913507-7.patch
 
