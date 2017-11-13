@@ -2,7 +2,7 @@ name: 'Vardoc Search'
 description: 'Provides Vardoc Search API configuration.'
 type: module
 core: 8.x
-version: 8.x-1.x-dev
+version: 8.x-1.0-beta3
 package: Vardoc
 dependencies:
   - better_exposed_filters

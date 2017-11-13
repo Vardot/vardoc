@@ -1,10 +1,57 @@
+## 8.1.0-beta3
+
+### Highlighted important changes since Vardoc 8.1.0-beta2:
+* Issue [#2921893](https://www.drupal.org/node/2921893):
+        Updated [Varbase profile]
+        from 8.4.05 to 8.4.12
+* Issue [#2922849](https://www.drupal.org/node/2922849):
+        Updated [VardocTheme] theme to use
+        Vartheme 8.4.12 and VARTHEME_SUBTHEME
+
+### Added since Vardoc 8.1.0-beta2:
+* Issue [#2922978](https://www.drupal.org/node/2922978):
+        Added the 2913507-11.patch for [Simple XML sitemap] module,
+        to fix the issue of Undefined index: include_images
+* Issue [#2913802](https://www.drupal.org/node/2913802):
+        Added the 2828681-13.patch for [Drupal core] the
+        [Book] module to fix the issue of Book Navigation
+        Block does not sort Books by weight
+
+### Changed since Vardoc 8.1.0-beta2:
+* No changes of features, only updates.
+* Issue [#2923032](https://www.drupal.org/node/2923032):
+        Vardoc 8.1.0-beta3 : Updated [CHANGELOG.md, UPDATE.md]
+        files and filtered the code for Drupal 8 Coding Standard
+
+### Updates since Vardoc 8.1.0-beta2:
+* Issue [#2921893](https://www.drupal.org/node/2921893):
+         Updated [Varbase profile] from 8.4.05 to 8.4.12
+* Issue [#2922849](https://www.drupal.org/node/2922849):
+         Updated [VardocTheme] theme to use
+         Vartheme 8.4.12 and VARTHEME_SUBTHEME
+* Issue [#2922835](https://www.drupal.org/node/2922835):
+         Updated [Social API] module from 8.1.0-beta2 to 8.1.1
+* Issue [#2922836](https://www.drupal.org/node/2922836):
+         Updated [Social Auth] module from 8.1.0-beta4 to 8.1.0
+* Issue [#2922840](https://www.drupal.org/node/2922840):
+         Updated [Social Auth Google] module from 8.1.0-beta2 to 8.1.0
+
+### Fixes since Vardoc 8.1.0-beta2:
+* Only added 2 patches for [Drupal core] and [Simple XML sitemap].
+
+
+
+
 ## 8.1.0-beta2
-* Issue #2897770: Added Travis-ci Integration to have
-                  automated functional testing.
-* Issue #2899488: Applied the patch, which allow distribution to be installed
-                  in other than profiles/varbase
-* Issue #2899498: Vardoc 8.1.0-beta2 : Updated [CHANGELOG.md, UPDATE.md] files
-                  and filtered the code for Drupal 8 Coding Standard
+* Issue [#2897770](https://www.drupal.org/node/2897770):
+                   Added Travis-ci Integration to have
+                   automated functional testing.
+* Issue [#2899488](https://www.drupal.org/node/2899488):
+                   Applied the patch, which allow distribution
+                   to be installed in other than profiles/varbase
+* Issue [#2899498](https://www.drupal.org/node/2899498):
+                   Vardoc 8.1.0-beta2 : Updated [CHANGELOG.md, UPDATE.md]
+                   files and filtered the code for Drupal 8 Coding Standard
 
 ## 8.1.0-beta1
 * Initial commit
@@ -72,19 +119,35 @@
 * Changed book content type title and add category simplexml config
 * Removed search API from composer and update better normlizers
 * Added the right list of make files
-* Issue #2897904: Theme enhancements, import media content and add h1 format
-* Issue #2898451: Vardoc Search is requiring Core "Search" module - while
-                  it should only use Search API
-* Issue #2897602: Have a working drupal.org project build as we had it for
-                  the composer
-* Issue #2898577: Amend the demo content
-* Issue #2898543: Handle book module values in demo content
-* Issue #2898443: Fix basic page Real-time SEO settings (YOAST)
-* Issue #2898442: Add demo featured articles to featured articles entityqueue
-* Issue #2897748: When installing via Simpletest, fatal error appeared.
-* Issue #2897620: Have a TEMP solution for libraries as Drupal core will not
-                  discover, libraries from the base parent profile at the
+* Issue [#2897904](https://www.drupal.org/node/2897904):
+                  Theme enhancements, import media content
+                  and add h1 format
+* Issue [#2898451](https://www.drupal.org/node/2898451):
+                  Vardoc Search is requiring Core "Search"
+                  module - while it should only use Search API
+* Issue [#2897602](https://www.drupal.org/node/2897602):
+                  Have a working drupal.org project build as
+                  we had it for the composer
+* Issue [#2898577](https://www.drupal.org/node/2898577):
+                  Amend the demo content
+* Issue [#2898543](https://www.drupal.org/node/2898543):
+                  Handle book module values in demo content
+* Issue [#2898443](https://www.drupal.org/node/2898443):
+                  Fix basic page Real-time SEO settings (YOAST)
+* Issue [#2898442](https://www.drupal.org/node/2898442):
+                  Add demo featured articles to featured
+                  articles entityqueue
+* Issue [#2897748](https://www.drupal.org/node/2897748):
+                  When installing via Simpletest, fatal
+                  error appeared.
+* Issue [#2897620](https://www.drupal.org/node/2897620):
+                  Have a TEMP solution for libraries as
+                  Drupal core will not discover, libraries
+                  from the base parent profile at the
                   installation step
-* Issue #2897617: Updated [Better Normalizers] module
+* Issue [#2897617](https://www.drupal.org/node/2897617):
+                  Updated [Better Normalizers] module
                   form 8.1.0-beta2 to 8.1.0-beta3
-* Issue #2897612: Updated the README.md file to have more info about Vardoc.
+* Issue [#2897612](https://www.drupal.org/node/2897612):
+                  Updated the README.md file to have more
+                  info about Vardoc.
