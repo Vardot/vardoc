@@ -32,11 +32,9 @@ projects[varbase][subdir] = ""
 projects[varbase][version] = "4.12"
 
 projects[simple_sitemap][type] = module
-projects[simple_sitemap][download][url] = https://git.drupal.org/project/simple_sitemap.git
-projects[simple_sitemap][download][revision] = 4febc8925dc815a41c360e94c651e6cbb88e5aa4
-projects[simple_sitemap][download][branch] = 2.x-dev
+projects[simple_sitemap][version] = 2.10
 ;; Issue #2913507: Undefined index: include_images
-projects[simple_sitemap][patch][] =  https://www.drupal.org/files/issues/2913507-7.patch
+projects[simple_sitemap][patch][] =  https://www.drupal.org/files/issues/simple_sitemap-210--2913507-11.patch
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries

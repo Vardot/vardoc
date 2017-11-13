@@ -52,8 +52,7 @@
     "drupal/social_auth_google": "1.0",
     "drupal/fontawesome": "1.2",
     "drupal/better_normalizers": "1.0-beta3",
-    "drupal/menu_item_visibility": "1.x-dev#7806c36b68bdc1ac3582e3a034b94126cd3d1d32",
-    "drupal/simple_sitemap": "2.x-dev#4febc8925dc815a41c360e94c651e6cbb88e5aa4"
+    "drupal/menu_item_visibility": "1.x-dev#7806c36b68bdc1ac3582e3a034b94126cd3d1d32"
   },
   "require-dev": {
     "drush/drush": "8.1.15",
@@ -120,7 +119,7 @@
       },
       "drupal/simple_sitemap": {
         "Issue #2913507: Undefined index: include_images":
-        "https://www.drupal.org/files/issues/2913507-7.patch"
+        "https://www.drupal.org/files/issues/simple_sitemap-210--2913507-11.patch"
       }
     }
   }
