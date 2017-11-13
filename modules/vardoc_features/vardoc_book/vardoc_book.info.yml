@@ -39,5 +39,5 @@ dependencies:
   - video_embed_wysiwyg
   - views
   - views_bootstrap
-version: 8.x-1.0-beta3
+version: 8.x-1.x-dev
 package: Vardoc
