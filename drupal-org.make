@@ -29,6 +29,11 @@ projects[varbase][type] = profile
 projects[varbase][subdir] = ""
 projects[varbase][version] = "4.12"
 
+projects[simple_sitemap][type] = module
+projects[simple_sitemap][version] = 2.10
+;; Issue #2913507: Undefined index: include_images
+projects[simple_sitemap][patch][] =  https://www.drupal.org/files/issues/2913507-7.patch
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
 ;;;;;;;;;;;;;;;;;;;;;
