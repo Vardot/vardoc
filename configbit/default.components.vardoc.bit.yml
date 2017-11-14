@@ -1,6 +1,6 @@
 # ==============================================================================
 # List of default Vardoc components, which they will be
-# installed when we install vardoc.
+# installed when we install Vardoc.
 # ==============================================================================
 config_bit:
   type: list
@@ -14,6 +14,7 @@ config_bit:
         # Enable listed Varbase modules in order at this installation step.
         - varbase_core
         - varbase_admin
+        - varbase_total_control
         - varbase_security
         - varbase_seo
         - varbase_editor
