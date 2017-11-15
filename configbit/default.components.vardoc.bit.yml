@@ -19,6 +19,7 @@ config_bit:
         - varbase_seo
         - varbase_editor
         - varbase_media
+        - varbase_tour
         # Enable default Vardoc features.
         - vardoc_homepage
         - vardoc_book
