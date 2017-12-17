@@ -3,6 +3,7 @@ Feature: Create default testing users.
 # test_authenticated: { email: 'authenticated.test@vardot.com', password: 'dD.123123ddd' }
 # test_editor: { email: 'editor.test@vardot.com', password: 'dD.123123ddd' }
 # test_content_admin: { email: 'content.admin.test@vardot.com', password: 'dD.123123ddd' }
+# test_seo_admin: { email: 'seo.admin.test@vardot.com', password: 'dD.123123ddd' }
 # test_site_admin: { email: 'site.admin.test@vardot.com', password: 'dD.123123ddd' }
 # test_super_admin: { email: 'super.admin.test@vardot.com', password: 'dD.123123ddd' }
 
@@ -46,6 +47,19 @@ Feature: Create default testing users.
       And I press "Create new account"
       And I wait
      Then I should not see "The name test_content_admin is already taken."
+
+  @init @tools @local @development @staging
+  Scenario: Create the test_seo_admin user.
+     When I go to "/admin/people/create"
+      And I wait
+      And I fill in "seo.admin.test@vardot.com" for "Email address"
+      And I fill in "test_seo_admin" for "Username"
+      And I fill in "dD.123123ddd" for "Password"
+      And I fill in "dD.123123ddd" for "Confirm password"
+      And I check the box "SEO Admin"
+      And I press "Create new account"
+      And I wait
+     Then I should not see "The name test_seo_admin is already taken."
 
   @init @tools @local @development @staging
   Scenario: Create the test_site_admin user.
