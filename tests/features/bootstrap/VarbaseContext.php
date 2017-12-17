@@ -628,7 +628,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     /**
     * #varbase: To double click on an image with the provided title.
     *
-    * Example 1: I click on the image with the "Flag Earth image title" title text
+    * Example 1: I double on the image with the "Flag Earth image title" title text
     *
     * @Given /^I double click on the image with the "([^"]*)" title text$/
     */
@@ -652,36 +652,36 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * @Given /^I click on the image with the "([^"]*)" title text$/
    */
   public function iClickOnTheImageWithTheTitleText($titleText) {
-    // Find an image with the title.
-    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '{$titleText}')]");
+     // Find an image with the title.
+     $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '{$titleText}')]");
 
-    if (empty($element)) {
-      throw new Exception('The page dose not have an image with the [ ' . $titleText . ' ] title text.');
-    }
+     if (empty($element)) {
+       throw new Exception('The page dose not have an image with the [ ' . $titleText . ' ] title text.');
+     }
 
     // Click on the image.
     $element->click();
   }
 
 
-    /**
-    * #varbase: To double click on an image with the provided  alt Text.
-    *
-    * Example 1: I click on the image with the "Flag Earth image title" alt text
-    *
-    * @Given /^I double click on the image with the "([^"]*)" alt text$/
-    */
-   public function iDoubleClickOnTheImageWithTheAltText($altText) {
-     // Find an image with the title.
-     $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@alt, '{$altText}')]");
+  /**
+   * #varbase: To double click on an image with the provided  alt Text.
+   *
+   * Example 1: I double click on the image with the "Flag Earth image title" alt text
+   *
+   * @Given /^I double click on the image with the "([^"]*)" alt text$/
+   */
+  public function iDoubleClickOnTheImageWithTheAltText($altText) {
+    // Find an image with the title.
+    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@alt, '{$altText}')]");
 
-     if (empty($element)) {
-       throw new Exception('The page dose not have an image with the [ ' . $altText . ' ] alt text.');
-     }
+    if (empty($element)) {
+      throw new Exception('The page dose not have an image with the [ ' . $altText . ' ] alt text.');
+    }
 
-     // Double click on the image.
-     $element->doubleClick();
-   }
+    // Double click on the image.
+    $element->doubleClick();
+  }
 
    /**
    * #varbase: To click on an image with the provided alt.
@@ -1321,10 +1321,10 @@ JS;
   }
 
    /**
-   * #varbase: To click on the lable with the for attribute value linked to
+   * #varbase: To click on the label with the for attribute value linked to
    *           to the an ID of a radio button with a value to select the radio option
    *           we need to use this when we do have a list of radio buttons
-   *           but we do have the label with extra html tags like images or the
+   *           but we do have the label with extra HTML tags like images or the
    *           actual radio button is hidden.
    *
    * Example 1: I click on the radio label for "right_sidebar_layout" value
@@ -1344,11 +1344,9 @@ JS;
    /**
    * #varbase: To expand a field group by its id attribute.
    *
-   * Example 1: I Expand the field "Field Group ID"
-   * @When I Expand the field :arg1
+   * Example #1: I expand the field "Field Group ID"
    * 
-   * @param $text
-   * @throws \InvalidArgumentException
+   * @When I expand the field :arg1
    */
   public function iExpandThefield($fieldID) {
     $js = <<<JS
@@ -1360,12 +1358,11 @@ JS;
 
   /**
    * #varbase: To expand a select list by it's class attribute.
-   * 
-   * @When I Expand the :nth select list :arg1
    *
-   * @param $text
-   * @throws \InvalidArgumentException
-  */
+   * Example #1: I expand the "1" select list "dropbutton-multiple"
+   * 
+   * @When I expand the :nth select list :arg1
+   */
   public function iExpandTheSelectList($index, $listClassName) {
     $js = <<<JS
     var group = document.getElementsByClassName("{$listClassName}")[{$index}];
@@ -1376,6 +1373,8 @@ JS;
 
   /**
    * #varbase: To scroll down in the current status of the page.
+   *
+   * Example #1: When I scrolldown
    * 
    * @When I scrolldown
    */
@@ -1384,7 +1383,9 @@ JS;
   }
 
   /**
-   * #varbase: To scroll up in the current status of the page.
+   * #varbase: To scroll up in the current status of the page, about 350 up
+   *
+   * Example #1: When I scrollup
    * 
    * @When I scrollup
    */
@@ -1472,9 +1473,9 @@ JS;
   /**
    * Maximize the window before scenario.
    *
-   * @BeforeScenario @javascript
+   * @BeforeStep @javascript
    */
-  public function maximizeWindow() {
+  public function beforeStepMaximizeWindow() {
     $this->getSession()->getDriver()->maximizeWindow();
   }
 
