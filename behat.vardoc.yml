@@ -6,6 +6,7 @@ default:
       paths:
         - %paths.base%/tests/features
       contexts:
+        - FeatureContext
         - VarbaseContext:
             parameters:
               varbase_users:

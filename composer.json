@@ -89,8 +89,6 @@
     ],
     "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"]
   },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
   "conflict": {
     "drupal/drupal": "*"
   },
