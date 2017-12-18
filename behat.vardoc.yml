@@ -36,8 +36,8 @@ default:
              #  But by loading them from files.
              files_path: "%paths.base%/tests/selectors/"
              files:
-               - "varbase/front-end-selectors.yml"
-               - "varbase/back-end-selectors.yml"
+               - "vardoc/front-end-selectors.yml"
+               - "vardoc/back-end-selectors.yml"
         - Drupal\DrupalExtension\Context\DrupalContext
         - Drupal\DrupalExtension\Context\DrushContext
         - Drupal\DrupalExtension\Context\MessageContext

@@ -9,7 +9,7 @@
   <property name="db.host" value="localhost" />
   <property name="db.user" value="root" />
   <property name="db.password" value="" />
-  <property name="db.database" value="vardoc" />
+  <property name="db.database" value="test_vardoc1c" />
   <property name="db.url" value="${db.type}://${db.user}:${db.password}@${db.host}/${db.database}" />
   <property name="docroot" value="docroot" />
   <property name="profile" value="${docroot}/profiles/vardoc" />
@@ -60,29 +60,6 @@
     <filesync destinationDir="." rsyncPath="${rsync}" sourceDir="${profile}/" verbose="false" exclude="libraries,modules/contrib,behat.local.yml" />
   </target>
 
-  <!-- Builds Vardoc with Composer. -->
-  <target name="build" depends="env">
-    <if>
-      <equals arg1="${version}" arg2="HEAD" />
-      <then>
-        <exec command="${composer} install" passthru="true" />
-      </then>
-      <else>
-        <if>
-          <not>
-            <isset property="branch" />
-          </not>
-          <then>
-            <exec command="git rev-parse --abbrev-ref HEAD" outputProperty="branch" />
-          </then>
-        </if>
-        <exec command="git checkout ${version}" />
-        <exec command="${composer} install" passthru="true" />
-        <exec command="git checkout ${branch}" />
-      </else>
-    </if>
-  </target>
-
   <!-- Prepares the docroot for installation via the UI. -->
   <target name="preinstall" depends="uninstall">
     <if>
@@ -110,8 +87,8 @@
     </if>
   </target>
 
-  <!-- Installs Vardoc and sets it up for development. -->
-  <target name="install" depends="env">
+  <!-- Install with drush site install -->
+  <target name="install-with-drush-site-install" depends="env">
     <!-- Use passthru() when executing drush site-install so that we'll know if errors occur. -->
     <exec command="${drush} site-install vardoc --yes --site-name=Vardoc1 --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url=${db.url}" dir="${docroot}" passthru="true" />
     <exec command="${drush} config-set system.performance css.preprocess 0 --yes --format=boolean" dir="${docroot}" />
