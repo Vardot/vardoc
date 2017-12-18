@@ -30,6 +30,7 @@ projects[menu_item_visibility][download][branch] = 1.x-dev
 projects[varbase][type] = profile
 projects[varbase][subdir] = ""
 projects[varbase][version] = "4.13"
+projects[varbase][patch][] = https://www.drupal.org/files/issues/2931502-7.patch
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries

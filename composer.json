@@ -116,6 +116,10 @@
       "drush/drush": {
         "Add profile dependencies for drush.":
         "https://patch-diff.githubusercontent.com/raw/drush-ops/drush/pull/2697.patch"
+      },
+      "drupal/varbase": {
+        "Issue #2931502: Fixed the issue of [Login Destination] Route Error with get route needed the link to be Routed":
+        "https://www.drupal.org/files/issues/2931502-7.patch"
       }
     }
   }
