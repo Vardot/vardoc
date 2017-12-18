@@ -32,6 +32,13 @@ projects[varbase][subdir] = ""
 projects[varbase][version] = "4.13"
 projects[varbase][patch][] = https://www.drupal.org/files/issues/2931502-7.patch
 
+projects[login_destination][type] = module
+projects[login_destination][download][url] = https://git.drupal.org/project/login_destination.git
+projects[login_destination][download][revision] = 944d78fbf01853244d8e01f63b41dc37d5f99e50
+projects[login_destination][download][branch] = 8.x-1.x
+;; Issue #2931356: Fixes Route Error.
+projects[login_destination][patch][] = https://www.drupal.org/files/issues/2931356-5.patch
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
 ;;;;;;;;;;;;;;;;;;;;;

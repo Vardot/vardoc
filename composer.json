@@ -120,6 +120,10 @@
       "drupal/varbase": {
         "Issue #2931502: Fixed the issue of [Login Destination] Route Error with get route needed the link to be Routed":
         "https://www.drupal.org/files/issues/2931502-7.patch"
+      },
+      "drupal/login_destination": {
+        "Issue #2931356: Fixes Route Error.":
+        "https://www.drupal.org/files/issues/2931356-5.patch"
       }
     }
   }
