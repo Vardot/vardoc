@@ -26,5 +26,5 @@ function vardoctheme_form_views_exposed_form_alter(array &$form, FormStateInterf
  * Implements hook_preprocess_page().
  */
 function vardoctheme_preprocess_page(&$variables) {
-  $variables['logo_print'] = drupal_get_path('theme','vardoctheme') . '/logo-print.png';
+  $variables['logo_print'] = \Drupal::request()->getBaseUrl() . '/' . drupal_get_path('theme', 'vardoctheme') . '/logo-print.png';
 }
