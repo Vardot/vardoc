@@ -39,6 +39,11 @@ projects[login_destination][download][branch] = 8.x-1.x
 ;; Issue #2931356: Fixes Route Error.
 projects[login_destination][patch][] = https://www.drupal.org/files/issues/2931356-5.patch
 
+projects[search_api][type] = module
+projects[search_api][version] = 1.5
+;; Issue #2931562: Fixed the Notice: Undefined index: total When we enable the module in the installation step.
+projects[search_api][patch][] = https://www.drupal.org/files/issues/2931562-3.patch
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
 ;;;;;;;;;;;;;;;;;;;;;

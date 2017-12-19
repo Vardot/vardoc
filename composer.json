@@ -124,6 +124,10 @@
       "drupal/login_destination": {
         "Issue #2931356: Fixes Route Error.":
         "https://www.drupal.org/files/issues/2931356-5.patch"
+      },
+      "drupal/search_api": {
+        "Issue #2931562: Fixed the Notice: Undefined index: total When we enable the module in the installation step.":
+        "https://www.drupal.org/files/issues/2931562-3.patch"
       }
     }
   }
