@@ -14,7 +14,8 @@ Feature: Create default testing users.
   Scenario: Create the test_authenticated user.
      When I go to "/admin/people/create"
       And I wait
-      And I fill in "authenticated.test@vardot.com" for "Email address"
+     Then I should see "Add user"
+     When I fill in "authenticated.test@vardot.com" for "Email address"
       And I fill in "test_authenticated" for "Username"
       And I fill in "dD.123123ddd" for "Password"
       And I fill in "dD.123123ddd" for "Confirm password"
@@ -26,7 +27,8 @@ Feature: Create default testing users.
   Scenario: Create the test_editor user.
      When I go to "/admin/people/create"
       And I wait
-      And I fill in "editor.test@vardot.com" for "Email address"
+     Then I should see "Add user"
+     When I fill in "editor.test@vardot.com" for "Email address"
       And I fill in "test_editor" for "Username"
       And I fill in "dD.123123ddd" for "Password"
       And I fill in "dD.123123ddd" for "Confirm password"
@@ -39,7 +41,8 @@ Feature: Create default testing users.
   Scenario: Create the test_content_admin user.
      When I go to "/admin/people/create"
       And I wait
-      And I fill in "content.admin.test@vardot.com" for "Email address"
+     Then I should see "Add user"
+     When I fill in "content.admin.test@vardot.com" for "Email address"
       And I fill in "test_content_admin" for "Username"
       And I fill in "dD.123123ddd" for "Password"
       And I fill in "dD.123123ddd" for "Confirm password"
@@ -52,7 +55,8 @@ Feature: Create default testing users.
   Scenario: Create the test_seo_admin user.
      When I go to "/admin/people/create"
       And I wait
-      And I fill in "seo.admin.test@vardot.com" for "Email address"
+     Then I should see "Add user"
+     When I fill in "seo.admin.test@vardot.com" for "Email address"
       And I fill in "test_seo_admin" for "Username"
       And I fill in "dD.123123ddd" for "Password"
       And I fill in "dD.123123ddd" for "Confirm password"
@@ -65,7 +69,8 @@ Feature: Create default testing users.
   Scenario: Create the test_site_admin user.
      When I go to "/admin/people/create"
       And I wait
-      And I fill in "site.admin.test@vardot.com" for "Email address"
+     Then I should see "Add user"
+     When I fill in "site.admin.test@vardot.com" for "Email address"
       And I fill in "test_site_admin" for "Username"
       And I fill in "dD.123123ddd" for "Password"
       And I fill in "dD.123123ddd" for "Confirm password"
@@ -78,7 +83,8 @@ Feature: Create default testing users.
   Scenario: Create the test_super_admin user.
      When I go to "/admin/people/create"
       And I wait
-      And I fill in "super.admin.test@vardot.com" for "Email address"
+     Then I should see "Add user"
+     When I fill in "super.admin.test@vardot.com" for "Email address"
       And I fill in "test_super_admin" for "Username"
       And I fill in "dD.123123ddd" for "Password"
       And I fill in "dD.123123ddd" for "Confirm password"
