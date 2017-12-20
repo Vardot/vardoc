@@ -44,6 +44,17 @@ projects[search_api][version] = 1.5
 ;; Issue #2931562: Fixed the Notice: Undefined index: total When we enable the module in the installation step.
 projects[search_api][patch][] = https://www.drupal.org/files/issues/2931562-3.patch
 
+projects[google_analytics_reports][type] = module
+projects[google_analytics_reports][download][url] = https://git.drupal.org/project/google_analytics_reports.git
+projects[google_analytics_reports][download][revision] = 2b6bb8efbc7f61ce3c1225638075aa6037b8db44
+projects[google_analytics_reports][download][branch] = 8.x-3.x
+;; Issue #2850463: Error when saving either google_analytics_reports view
+projects[google_analytics_reports][patch][] = https://www.drupal.org/files/issues/error_when_saving-2850463-2.patch
+;; Issue #2860399: Warning: htmlspecialchars() expects parameter 1 to be string
+projects[google_analytics_reports][patch][] = https://www.drupal.org/files/issues/Fix_message-2860399-5.patch
+;; Issue #2932010: Fixed an issue to Not to check Updates or import Fields while the Drupal site MAINTENANCE_MODE is in Install or Update.
+projects[google_analytics_reports][patch][] = https://www.drupal.org/files/issues/2932010-4.patch
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
 ;;;;;;;;;;;;;;;;;;;;;

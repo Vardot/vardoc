@@ -128,6 +128,10 @@
       "drupal/search_api": {
         "Issue #2931562: Fixed the Notice: Undefined index: total When we enable the module in the installation step.":
         "https://www.drupal.org/files/issues/2931562-3.patch"
+      },
+      "drupal/google_analytics_reports": {
+        "Issue #2932010: Fixed an issue to Not to check Updates or import Fields while the Drupal site MAINTENANCE_MODE is in Install or Update.":
+        "https://www.drupal.org/files/issues/2932010-4.patch"
       }
     }
   }
