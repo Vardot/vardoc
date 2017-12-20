@@ -2,7 +2,7 @@ name: Vardoc
 type: profile
 description: 'Vardoc: Knowledge Base System and Documentation Site'
 core: 8.x
-version: 8.x-1.0-rc1
+version: 8.x-1.x-dev
 base profile:
   name: varbase
 dependencies:

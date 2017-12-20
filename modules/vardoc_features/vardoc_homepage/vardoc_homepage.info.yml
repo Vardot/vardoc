@@ -23,5 +23,5 @@ dependencies:
   - varbase_webform
   - vardoc_book
   - views
-version: 8.x-1.0-rc1
+version: 8.x-1.x-dev
 package: Vardoc
