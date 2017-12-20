@@ -1,3 +1,52 @@
+## 8.1.0-rc1
+
+### Highlighted important changes since Vardoc 8.1.0-beta3:
+* Issue [#2931298](https://www.drupal.org/node/2931298):
+        Updated [Varbase profile] from 8.4.12 to 8.4.13
+* Issue [#2923265](https://www.drupal.org/node/2923265):
+        Added [Varbase Total Control] to the list of default Vardoc components,
+        which they will be installed when we install Vardoc.
+* Issue [#2923700](https://www.drupal.org/node/2923700):
+        Added [Varbase Tour] to the list of default Vardoc components, which
+        they will be installed when we install Vardoc.
+
+### Added since Vardoc 8.1.0-beta3:
+* Issue [#2923265](https://www.drupal.org/node/2923265):
+        Added [Varbase Total Control] to the list of default Vardoc components,
+        which they will be installed when we install Vardoc.
+* Issue [#2923700](https://www.drupal.org/node/2923700):
+        Added [Varbase Tour] to the list of default Vardoc components, which
+        they will be installed when we install Vardoc.
+* Issue [#2931551](https://www.drupal.org/node/2931551):
+        Added the 2931502-7.patch to fix the issue of [Login Destination]
+        Route Error with get route needed the link to be Routed.
+* Issue [#2931674](https://www.drupal.org/node/2931674):
+        Added the 2931562-3.patch for [Search API] module to fixe the issue
+        of Notice: Undefined index: total When we enable the module in the
+        installation step.
+* Issue [#2932020](https://www.drupal.org/node/2932020):
+        Added the 2932010-4.patch for [google analytics reports] module to
+        fix the issue of RuntimeException: Recursive router rebuild detected.
+
+### Changed since Vardoc 8.1.0-beta3:
+* Only updates.
+* Issue [#2931693](https://www.drupal.org/node/2931693):
+        Vardoc 8.1.0-rc1 : Updated [CHANGELOG.md, UPDATE.md] files and
+        filtered the code for Drupal 8 Coding Standard.
+
+### Updates since Vardoc 8.1.0-beta3:
+* Issue [#2931298](https://www.drupal.org/node/2931298):
+        Updated [Varbase profile] from 8.4.12 to 8.4.13
+* Issue [#2931298](https://www.drupal.org/node/2931298):
+        Updated Travis-ci config after updating [Varbase profile]
+        from 8.4.12 to 8.4.13
+
+### Fixes since Vardoc 8.1.0-beta3:
+* Issue [#2931688](https://www.drupal.org/node/2931688):
+        Fixed the print logo for [Vardoc theme] which had a wrong URL,
+        as it was fixed in vartheme.
+
+
 ## 8.1.0-beta3
 
 ### Highlighted important changes since Vardoc 8.1.0-beta2:
