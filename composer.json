@@ -27,7 +27,9 @@
     "cweagans/composer-patches": "1.6.4",
     "drupal-composer/drupal-scaffold": "2.4.0",
     "drupal/drupal-library-installer-plugin": "0.3",
-    "vardot/varbase": "8.4.13",
+    "webflo/drupal-finder": "1.0",
+    "webmozart/path-util": "2.3",
+    "vardot/varbase": "8.4.14",
     "drupal/views_bootstrap": "3.x-dev#ec4e7872315db6a7287014b029c3167962647588",
     "drupal/extlink": "1.x-dev#8a773a6c5519ccb167e18cc39d68551b30b0e4b3",
     "drupal/image_resize_filter": "1.x-dev#c3f4b23b02005859092aaff746b9f21b794adc58",
@@ -42,7 +44,8 @@
     "drupal/mail_edit": "1.x-dev#bcd0041830d8581b36e6211f0c8eabd8caf9652b",
     "drupal/libraries": "3.x-dev#061ead081c92a6209b09eaf23b4e3103f360946e",
     "drupal/google_analytics_reports": "3.x-dev#2b6bb8efbc7f61ce3c1225638075aa6037b8db44",
-    "drupal/login_destination": "1.x-dev#944d78fbf01853244d8e01f63b41dc37d5f99e50",
+    "drupal/login_destination": "1.x-dev#54be8b89fdc073ca40af6b9b2eeb050e0aeb7908",
+    "drupal/betterlogin": "1.x-dev#f7cf1c5c9ec5e80c6ac0ef04ed605e25495232cd",
     "drupal/social_api": "1.1",
     "drupal/social_auth": "1.0",
     "drupal/social_auth_google": "1.0",
@@ -116,22 +119,6 @@
       "drush/drush": {
         "Add profile dependencies for drush.":
         "https://patch-diff.githubusercontent.com/raw/drush-ops/drush/pull/2697.patch"
-      },
-      "drupal/varbase": {
-        "Issue #2931502: Fixed the issue of [Login Destination] Route Error with get route needed the link to be Routed":
-        "https://www.drupal.org/files/issues/2931502-7.patch"
-      },
-      "drupal/login_destination": {
-        "Issue #2931356: Fixes Route Error.":
-        "https://www.drupal.org/files/issues/2931356-5.patch"
-      },
-      "drupal/search_api": {
-        "Issue #2931562: Fixed the Notice: Undefined index: total When we enable the module in the installation step.":
-        "https://www.drupal.org/files/issues/2931562-3.patch"
-      },
-      "drupal/google_analytics_reports": {
-        "Issue #2932010: Fixed an issue to Not to check Updates or import Fields while the Drupal site MAINTENANCE_MODE is in Install or Update.":
-        "https://www.drupal.org/files/issues/2932010-4.patch"
       }
     }
   }

@@ -29,31 +29,7 @@ projects[menu_item_visibility][download][branch] = 1.x-dev
 
 projects[varbase][type] = profile
 projects[varbase][subdir] = ""
-projects[varbase][version] = "4.13"
-projects[varbase][patch][] = https://www.drupal.org/files/issues/2931502-7.patch
-
-projects[login_destination][type] = module
-projects[login_destination][download][url] = https://git.drupal.org/project/login_destination.git
-projects[login_destination][download][revision] = 944d78fbf01853244d8e01f63b41dc37d5f99e50
-projects[login_destination][download][branch] = 8.x-1.x
-;; Issue #2931356: Fixes Route Error.
-projects[login_destination][patch][] = https://www.drupal.org/files/issues/2931356-5.patch
-
-projects[search_api][type] = module
-projects[search_api][version] = 1.5
-;; Issue #2931562: Fixed the Notice: Undefined index: total When we enable the module in the installation step.
-projects[search_api][patch][] = https://www.drupal.org/files/issues/2931562-3.patch
-
-projects[google_analytics_reports][type] = module
-projects[google_analytics_reports][download][url] = https://git.drupal.org/project/google_analytics_reports.git
-projects[google_analytics_reports][download][revision] = 2b6bb8efbc7f61ce3c1225638075aa6037b8db44
-projects[google_analytics_reports][download][branch] = 8.x-3.x
-;; Issue #2850463: Error when saving either google_analytics_reports view
-projects[google_analytics_reports][patch][] = https://www.drupal.org/files/issues/error_when_saving-2850463-2.patch
-;; Issue #2860399: Warning: htmlspecialchars() expects parameter 1 to be string
-projects[google_analytics_reports][patch][] = https://www.drupal.org/files/issues/Fix_message-2860399-5.patch
-;; Issue #2932010: Fixed an issue to Not to check Updates or import Fields while the Drupal site MAINTENANCE_MODE is in Install or Update.
-projects[google_analytics_reports][patch][] = https://www.drupal.org/files/issues/2932010-4.patch
+projects[varbase][version] = "4.14"
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
