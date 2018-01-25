@@ -30,6 +30,13 @@ projects[menu_item_visibility][download][branch] = 1.x-dev
 projects[votingapi][type] = module
 projects[votingapi][version] = 3.0-alpha2
 
+projects[votingapi_widgets][type] = module
+projects[votingapi_widgets][download][url] = https://git.drupal.org/project/votingapi_widgets.git
+projects[votingapi_widgets][download][revision] = 97133ddc9798a912eababe63e1a86deff3e5d9c9
+projects[votingapi_widgets][download][branch] = 1.x-dev
+;; Issue #2905948: Strict Warning for $stringTranslation.
+projects[votingapi_widgets][patch][] = https://www.drupal.org/files/issues/strict-warning-stringtranslation-2905948-2.patch
+
 projects[varbase][type] = profile
 projects[varbase][subdir] = ""
 projects[varbase][version] = "4.14"
