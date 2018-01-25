@@ -99,4 +99,5 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: main
-hidden: {  }
+hidden:
+  langcode: true

@@ -13,7 +13,6 @@ dependencies:
   - entityqueue
   - field
   - field_group
-  - menu_item_visibility
   - node
   - page_manager
   - panels
@@ -23,5 +22,5 @@ dependencies:
   - varbase_webform
   - vardoc_book
   - views
-version: 8.x-1.x-dev
+version: 8.x-1.0-rc1
 package: Vardoc

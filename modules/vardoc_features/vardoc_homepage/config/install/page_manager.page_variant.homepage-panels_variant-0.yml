@@ -4,7 +4,11 @@ dependencies:
   config:
     - page_manager.page.homepage
     - views.view.book
+    - views.view.top_rated_articles
+  content:
+    - 'block_content:block_image:80048eaf-62c1-4bce-ac81-20f8b4ecbd8f'
   module:
+    - block_content
     - panels
     - views
 id: homepage-panels_variant-0
@@ -34,17 +38,6 @@ variant_settings:
       weight: 1
       context_mapping: {  }
       uuid: 91d36815-5eb7-4f51-913d-db0527eb8dbb
-    000c178a-0024-4e65-b2f0-7871aeadeb7e:
-      id: 'views_block:book-block_featured_articles'
-      label: ''
-      provider: views
-      label_display: visible
-      views_label: ''
-      items_per_page: none
-      region: left
-      weight: 1
-      context_mapping: {  }
-      uuid: 000c178a-0024-4e65-b2f0-7871aeadeb7e
     aeffdb46-18f0-4994-9e97-a13cfe07f1c5:
       id: 'block_content:80048eaf-62c1-4bce-ac81-20f8b4ecbd8f'
       label: 'Can’t find what you’re looking for?'
@@ -53,10 +46,21 @@ variant_settings:
       status: true
       info: ''
       view_mode: full
-      context_mapping: {  }
       region: bottom
-      uuid: aeffdb46-18f0-4994-9e97-a13cfe07f1c5
       weight: 1
+      context_mapping: {  }
+      uuid: aeffdb46-18f0-4994-9e97-a13cfe07f1c5
+    b3705555-ce89-4399-b5a2-4f13e8dd05d2:
+      id: 'views_block:top_rated_articles-homepage_top_rated_articles'
+      label: 'Top Rated Articles'
+      provider: views
+      label_display: visible
+      views_label: 'Top Rated Articles'
+      items_per_page: none
+      region: left
+      weight: 0
+      uuid: b3705555-ce89-4399-b5a2-4f13e8dd05d2
+      context_mapping: {  }
   id: panels_variant
   uuid: d61dddde-a5ea-42e0-841f-f5468212c9c8
   label: null
