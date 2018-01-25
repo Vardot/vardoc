@@ -222,6 +222,10 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      use_more: false
+      use_more_always: true
+      use_more_text: more
+      css_class: user-blocks
     cache_metadata:
       max-age: -1
       contexts:
@@ -237,7 +241,8 @@ display:
     display_title: 'Search Page'
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       path: search
       exposed_block: true
       display_description: ''

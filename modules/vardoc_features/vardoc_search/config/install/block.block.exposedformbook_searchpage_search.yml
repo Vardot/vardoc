@@ -15,7 +15,7 @@ third_party_settings:
 id: exposedformbook_searchpage_search
 theme: vardoctheme
 region: header
-weight: -5
+weight: -8
 provider: null
 plugin: 'views_exposed_filter_block:book_search-page_search'
 settings:
