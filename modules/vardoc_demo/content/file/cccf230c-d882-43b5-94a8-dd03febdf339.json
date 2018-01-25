@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/sites\/default\/files\/2017-07\/vardoc_documentation_venn_diagram.png"
+            "href": "http:\/\/default\/sites\/default\/files\/2017-07\/vardoc_documentation_venn_diagram_0.png"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
@@ -40,7 +40,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "7377adba-036f-497f-b530-5143f41460a3"
+                        "value": "3394832f-448b-4a78-a44a-d1d31ad7ab10"
                     }
                 ]
             }
@@ -53,7 +53,7 @@
     ],
     "uri": [
         {
-            "value": "public:\/\/2017-07\/vardoc_documentation_venn_diagram.png"
+            "value": "public:\/\/2017-07\/vardoc_documentation_venn_diagram_0.png"
         }
     ],
     "filemime": [
@@ -73,12 +73,14 @@
     ],
     "created": [
         {
-            "value": 1500892344
+            "value": "2017-07-24T10:32:24+00:00",
+            "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
-            "value": 1500892359
+            "value": "2017-07-24T10:32:39+00:00",
+            "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "data": [

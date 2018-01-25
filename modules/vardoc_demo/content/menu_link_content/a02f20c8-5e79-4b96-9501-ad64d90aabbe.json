@@ -1,20 +1,20 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/taxonomy\/term\/2?_format=hal_json"
+            "href": "http:\/\/default\/admin\/structure\/menu\/item\/8\/edit?_format=hal_json"
         },
         "type": {
-            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/category"
+            "href": "http:\/\/drupal.org\/rest\/type\/menu_link_content\/menu_link_content"
         }
     },
-    "tid": [
+    "id": [
         {
-            "value": 2
+            "value": 8
         }
     ],
     "uuid": [
         {
-            "value": "158cfd22-bf74-4bc4-9bd8-77c6baf082be"
+            "value": "a02f20c8-5e79-4b96-9501-ad64d90aabbe"
         }
     ],
     "langcode": [
@@ -23,25 +23,57 @@
             "lang": "en"
         }
     ],
-    "vid": [
+    "bundle": [
         {
-            "target_id": "category"
+            "value": "menu_link_content"
         }
     ],
-    "name": [
+    "title": [
         {
-            "value": "Tutorials",
+            "value": "Home",
             "lang": "en"
+        }
+    ],
+    "menu_name": [
+        {
+            "value": "main"
+        }
+    ],
+    "link": [
+        {
+            "uri": "internal:\/",
+            "title": "",
+            "options": []
+        }
+    ],
+    "external": [
+        {
+            "value": false
+        }
+    ],
+    "rediscover": [
+        {
+            "value": true
         }
     ],
     "weight": [
         {
-            "value": 0
+            "value": -50
+        }
+    ],
+    "expanded": [
+        {
+            "value": false
+        }
+    ],
+    "enabled": [
+        {
+            "value": true
         }
     ],
     "changed": [
         {
-            "value": "2017-07-22T08:13:08+00:00",
+            "value": "2018-01-17T13:34:48+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -56,17 +88,17 @@
         {
             "value": {
                 "schema_web_site_type": "WebSite",
-                "title": "Tutorials | Vardoc",
+                "title": "| Vardoc",
                 "canonical_url": "http:\/\/default\/%3Cnone%3E",
                 "twitter_cards_type": "summary",
-                "schema_web_site_name": "Vardoc",
-                "shortlink": "http:\/\/default\/%3Cnone%3E",
                 "og_site_name": "Vardoc",
+                "shortlink": "http:\/\/default\/%3Cnone%3E",
+                "schema_web_site_name": "Vardoc",
+                "schema_web_site_url": "http:\/\/default\/",
                 "og_type": "website",
                 "twitter_cards_title": "| Vardoc",
-                "schema_web_site_url": "http:\/\/default\/",
-                "og_url": "http:\/\/default\/%3Cnone%3E",
                 "google_plus_image": "http:\/\/default\/profiles\/vardoc\/themes\/vardoctheme\/share-logo.png",
+                "og_url": "http:\/\/default\/%3Cnone%3E",
                 "og_title": "| Vardoc",
                 "generator": "Varbase",
                 "referrer": "origin",
