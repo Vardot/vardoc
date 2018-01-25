@@ -15,7 +15,7 @@ third_party_settings:
 id: views_block__book_block_related_articles
 theme: vardoctheme
 region: sidebar_second
-weight: 0
+weight: -6
 provider: null
 plugin: 'views_block:book-block_related_articles'
 settings:

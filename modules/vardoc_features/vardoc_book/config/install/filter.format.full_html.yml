@@ -3,6 +3,7 @@ status: true
 dependencies:
   module:
     - ace_editor
+    - ckeditor_media_embed
     - editor
     - entity_embed
     - image_resize_filter
@@ -28,21 +29,21 @@ filters:
     id: filter_htmlcorrector
     provider: filter
     status: true
-    weight: -43
+    weight: -42
     settings: {  }
   editor_file_reference:
     id: editor_file_reference
     provider: editor
     status: true
-    weight: -42
+    weight: -41
     settings: {  }
   filter_html:
     id: filter_html
     provider: filter
-    status: true
+    status: false
     weight: -50
     settings:
-      allowed_html: '<em * id class> <strong * id class> <cite * id class> <blockquote * id class cite> <code * id class> <ul * id class type> <ol * id class start type> <li * id class> <dl * id class> <dt * id class> <dd * id class> <h1 * id class="text-align-left text-align-center text-align-right text-align-justify"> <h2 * id class="text-align-left text-align-center text-align-right text-align-justify"> <h3 * id class="text-align-left text-align-center text-align-right text-align-justify"> <h4 * id class="text-align-left text-align-center text-align-right text-align-justify"> <h5 * id class="text-align-left text-align-center text-align-right text-align-justify"> <h6 * id class="text-align-left text-align-center text-align-right text-align-justify"> <img src height width alt data-*> <hr * id class> <table * id class> <caption * id class> <tbody * id class> <thead * id class> <tfoot * id class> <th * id class> <td * id class> <tr * id class> <a id class href hreflang !href accesskey id rel target title name> <p class="text-align-left text-align-center text-align-right text-align-justify red-background red-underline-border red-quote-underline-border red-rectangle-border red-exclamation-mark side-block left-side-block right-side-block"> <pre * id class> <u> <s> <sub * id class> <sup * id class> <div * id class> <drupal-entity * data-*> <figure *> <picture *> <article *> <figcaption *>'
+      allowed_html: '<em * id class> <strong * id class> <cite * id class> <blockquote * id class cite> <code * id class> <ul * id class type> <ol * id class start type> <li * id class> <dl * id class> <dt * id class> <dd * id class> <h2 * id class="text-align-left text-align-center text-align-right text-align-justify"> <h3 * id class="text-align-left text-align-center text-align-right text-align-justify"> <h4 * id class="text-align-left text-align-center text-align-right text-align-justify"> <h5 * id class="text-align-left text-align-center text-align-right text-align-justify"> <h6 * id class="text-align-left text-align-center text-align-right text-align-justify"> <img src height width alt data-*> <hr * id class> <table * id class> <caption * id class> <tbody * id class> <thead * id class> <tfoot * id class> <th * id class> <td * id class> <tr * id class> <a id class href hreflang !href accesskey id rel target title name> <p class="text-align-left text-align-center text-align-right text-align-justify red-background red-underline-border red-quote-underline-border red-rectangle-border red-exclamation-mark side-block left-side-block right-side-block"> <pre * id class> <u> <s> <sub * id class> <sup * id class> <div * id class> <drupal-entity * data-*> <figure *> <picture *> <article *> <figcaption *>'
       filter_html_help: true
       filter_html_nofollow: false
   video_embed_wysiwyg:
@@ -55,7 +56,7 @@ filters:
     id: filter_url
     provider: filter
     status: true
-    weight: -44
+    weight: -43
     settings:
       filter_url_length: 72
   entity_embed:
@@ -68,19 +69,19 @@ filters:
     id: filter_html_image_secure
     provider: filter
     status: false
-    weight: -39
+    weight: -37
     settings: {  }
   filter_autop:
     id: filter_autop
     provider: filter
     status: false
-    weight: -40
+    weight: -38
     settings: {  }
   filter_html_escape:
     id: filter_html_escape
     provider: filter
     status: false
-    weight: -41
+    weight: -39
     settings: {  }
   filter_pathologic:
     id: filter_pathologic
@@ -96,13 +97,13 @@ filters:
     id: filter_image_resize
     provider: image_resize_filter
     status: true
-    weight: 0
+    weight: -40
     settings: {  }
   ace_filter:
     id: ace_filter
     provider: ace_editor
     status: false
-    weight: 0
+    weight: -36
     settings:
       theme: cobalt
       syntax: html
@@ -110,6 +111,17 @@ filters:
       width: 700px
       font_size: 10pt
       line_numbers: '1'
-      show_invisibles: '0'
       print_margins: '1'
-      auto_complete: true
+      show_invisibles: '0'
+  filter_ckeditor_media_embed:
+    id: filter_ckeditor_media_embed
+    provider: ckeditor_media_embed
+    status: true
+    weight: -44
+    settings: {  }
+  filter_image_link_to_source:
+    id: filter_image_link_to_source
+    provider: image_resize_filter
+    status: false
+    weight: -35
+    settings: {  }

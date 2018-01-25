@@ -493,7 +493,8 @@ display:
     display_title: 'Block Related Articles'
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       block_category: Book
       display_description: ''
       title: 'Related Articles'
@@ -509,6 +510,8 @@ display:
         style: false
         row: false
         sorts: false
+        css_class: false
+        empty: false
       block_description: 'Related Articles'
       filters:
         status:
@@ -719,6 +722,9 @@ display:
           entity_type: node
           entity_field: created
           plugin_id: date
+      css_class: ''
+      empty: {  }
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:

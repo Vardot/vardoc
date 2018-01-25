@@ -62,4 +62,5 @@ content:
     region: main
 hidden:
   field_email: true
+  langcode: true
   links: true

@@ -1,4 +1,8 @@
 bundle: vardoc
 excluded:
-  - core.entity_view_mode.node.search_result
+  - block.block.useraccountmenu
+  - block.block.views_block__profile_block_user
+  - image.style.avatar
+  - views.view.profile
+  - views.view.profile_content
 required: true

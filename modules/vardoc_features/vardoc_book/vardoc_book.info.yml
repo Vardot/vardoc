@@ -9,6 +9,7 @@ dependencies:
   - block
   - block_class
   - book
+  - ckeditor_media_embed
   - comment
   - ctools
   - ds
@@ -18,8 +19,14 @@ dependencies:
   - features
   - field
   - field_group
+  - file
   - filter
+  - flag
+  - focal_point
+  - history
+  - image
   - image_resize_filter
+  - menu_block
   - menu_ui
   - metatag
   - node
@@ -30,6 +37,9 @@ dependencies:
   - rabbit_hole
   - search_api
   - search_api_db
+  - sharethis
+  - smart_trim
+  - statistics
   - system
   - taxonomy
   - text
@@ -39,5 +49,7 @@ dependencies:
   - video_embed_wysiwyg
   - views
   - views_bootstrap
-version: 8.x-1.x-dev
+  - votingapi
+  - votingapi_widgets
+version: 8.x-1.0-rc1
 package: Vardoc

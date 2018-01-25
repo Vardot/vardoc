@@ -6,11 +6,14 @@ dependencies:
     - field.field.node.book.body
     - field.field.node.book.field_category
     - field.field.node.book.field_comment
+    - field.field.node.book.field_documents
+    - field.field.node.book.field_meta_tags
+    - field.field.node.book.field_rating
     - node.type.book
   module:
-    - advanced_text_formatter
     - ds
     - panelizer
+    - smart_trim
     - user
 third_party_settings:
   ds:
@@ -37,6 +40,7 @@ third_party_settings:
       main:
         - node_title
         - body
+        - node_link
     fields:
       node_title:
         plugin_id: node_title
@@ -46,7 +50,18 @@ third_party_settings:
         settings:
           link: true
           wrapper: h3
-          class: ''
+          class: field-content
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+      node_link:
+        plugin_id: node_link
+        weight: 2
+        label: hidden
+        formatter: default
   panelizer:
     enable: false
     custom: false
@@ -59,21 +74,34 @@ mode: search_result
 content:
   body:
     label: hidden
-    type: advanced_text
+    type: smart_trim
     weight: 1
     region: main
     settings:
       trim_length: '300'
-      ellipsis: '1'
-      word_boundary: '1'
-      use_summary: '1'
-      filter: php
-      format: plain_text
-      allowed_html: {  }
-      token_replace: 0
-      autop: 0
-    third_party_settings: {  }
+      trim_type: chars
+      trim_suffix: ...
+      more_link: '0'
+      more_text: 'Read more'
+      summary_handler: trim
+      trim_options:
+        text: text
+      more_class: more-link
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 hidden:
   field_category: true
   field_comment: true
+  field_documents: true
+  field_meta_tags: true
+  field_rating: true
+  flag_favorite: true
+  langcode: true
   links: true
+  sharethis: true
