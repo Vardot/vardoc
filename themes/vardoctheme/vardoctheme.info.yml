@@ -9,6 +9,7 @@ package: 'Varbase'
 regions:
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'
+  header_right: 'Header Right'
   header: 'Top Bar'
   content_top: 'Top Content'
   highlighted: 'Highlighted'

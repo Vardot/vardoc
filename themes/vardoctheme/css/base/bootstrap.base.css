@@ -1087,7 +1087,7 @@ a {
 a:hover,
 a:focus {
   color: #23527c;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:focus {
   outline: 5px auto -webkit-focus-ring-color;
@@ -3413,7 +3413,7 @@ fieldset[disabled] .btn-link {
 .btn-link:hover,
 .btn-link:focus {
   color: #23527c;
-  text-decoration: underline;
+  text-decoration: none;
   background-color: transparent;
 }
 .btn-link[disabled]:hover,

@@ -65,7 +65,7 @@
       set navbar_classes = [
         'navbar',
         theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
-        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : 'header',
+        theme.settings.navbar_position and root_path ? 'navbar-' ~ theme.settings.navbar_position|clean_class : 'header',
         'header',
       ]
     %}
@@ -87,17 +87,25 @@
         {% endif %}
       </div>
 
+      {# Header right #}
+      {% if page.header_right %}
+        <div id="header-right" class="user-account-wrapper">
+          {{ page.header_right }}
+        </div>
+      {% endif %}
+
       {# Navigation (collapsible) #}
       {% if page.navigation_collapsible %}
         <div id="navbar-collapse" class="navbar-collapse collapse">
           {{ page.navigation_collapsible }}
         </div>
       {% endif %}
+
       {% if not navbar_attributes.hasClass(header_container) %}
         </div>
       {% endif %}
 
-      {# Header #}
+      {# Top content Header #}
       {% if page.header %}
         {% block header %}
           <div class="page-header" role="heading">

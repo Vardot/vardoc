@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies:
+  module:
+    - block_class
   theme:
     - vartheme
     - vardoctheme
@@ -18,9 +20,4 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility:
-  request_path:
-    id: request_path
-    pages: '/node/*'
-    negate: true
-    context_mapping: {  }
+visibility: {  }

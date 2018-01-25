@@ -27,4 +27,16 @@ function vardoctheme_form_views_exposed_form_alter(array &$form, FormStateInterf
  */
 function vardoctheme_preprocess_page(&$variables) {
   $variables['logo_print'] = \Drupal::request()->getBaseUrl() . '/' . drupal_get_path('theme', 'vardoctheme') . '/logo-print.png';
+
+  // Add a variable for the root path. This can be used to create a class and
+  // theme the page depending on the current path (e.g. node, admin, user) as
+  // well as more specific data like path-frontpage.
+  $is_front_page = \Drupal::service('path.matcher')->isFrontPage();
+
+  if ($is_front_page) {
+    $variables['root_path'] = FALSE;
+  }
+  else {
+    $variables['root_path'] = true;
+  }
 }

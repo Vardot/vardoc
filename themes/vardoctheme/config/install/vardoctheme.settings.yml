@@ -43,4 +43,4 @@ table_responsive: '-1'
 table: ''
 header_container: 0
 breadcrumb_home: 1
-
+navbar_position: fixed-top
