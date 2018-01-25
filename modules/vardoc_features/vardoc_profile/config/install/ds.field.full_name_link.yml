@@ -1,0 +1,11 @@
+id: full_name_link
+label: 'Full name link'
+ui_limit: ''
+properties:
+  content:
+    value: '<a href="[current-user:edit-url]">[user:field_first_name:value] [user:field_last_name:value]</a>'
+    format: code_html
+type: token
+type_label: 'Token field'
+entities:
+  user: user
