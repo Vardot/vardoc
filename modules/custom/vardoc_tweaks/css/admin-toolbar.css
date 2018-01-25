@@ -1,0 +1,35 @@
+/*---------------------- menu horizontal hover---------*/
+
+.toolbar-tray-horizontal ul li.menu-item {border-left: 1px solid #dddddd; border-right: 1px solid #dddddd;}
+.toolbar .toolbar-tray-horizontal .menu-item:last-child {border-right: 1px solid #dddddd; border-left: 1px solid #dddddd;}
+
+.toolbar-tray-horizontal li.menu-item--expanded:hover ul ul,
+.toolbar-tray-horizontal li.menu-item--expanded:hover ul ul ul,
+.toolbar-tray-horizontal li.menu-item--expanded:hover ul ul ul ul,
+.toolbar-tray-horizontal li.menu-item--expanded:hover ul ul ul ul ul
+{left: initial; right: -999em; /* RTL */}
+
+/* Lists nested under hovered list items */
+
+.toolbar-tray-horizontal  li.menu-item--expanded:hover ul,
+.toolbar-tray-horizontal  li li.menu-item--expanded:hover ul,
+.toolbar-tray-horizontal  li li li.menu-item--expanded:hover ul,
+.toolbar-tray-horizontal  li li li li.menu-item--expanded:hover ul,
+.toolbar-tray-horizontal li li li li li.menu-item--expanded:hover ul 
+{left: initial; right: auto; /* RTL */}
+
+.toolbar-tray-horizontal .menu ul li a,.toolbar-tray-horizontal .menu ul .toolbar-icon {padding: 12px 12px 12px 15px;}
+
+.toolbar-tray-horizontal ul li.menu-item--expanded .menu-item:hover ul {margin: -40px 197px 0 0;}
+
+.toolbar-tray-horizontal .toolbar .level-2 > ul {left: initial; right: 200px;}
+
+/* Added after RTLization: */
+
+.toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded{
+	background-image:url('/core/misc/icons/0074bd/chevron-left.svg'); background-position: 0 center;
+}
+
+.toolbar-tray-horizontal ul.toolbar-menu ul li.menu-item {width: 100%;}
+
+[dir="rtl"] .toolbar .toolbar-tray-horizontal .menu-item + .menu-item {border-left: 1px solid #ddd;}

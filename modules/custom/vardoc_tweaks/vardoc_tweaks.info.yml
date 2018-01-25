@@ -1,0 +1,9 @@
+name: Vardoc Tweaks
+description: Contains some custom tweaks Vardoc needed.
+type: module
+package: Vardoc
+dependencies:
+  - block
+  - views
+core: 8.x
+version: 8.x-1.x-dev
