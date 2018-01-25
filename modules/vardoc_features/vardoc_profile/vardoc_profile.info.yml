@@ -22,6 +22,6 @@ dependencies:
   - vardoc_book
   - vardoc_tweaks
   - views
-version: 8.x-1.0-rc1
+version: 8.x-1.x-dev
 package: Vardoc
 description: 'Provides User profile features like favorite content and latest content.'

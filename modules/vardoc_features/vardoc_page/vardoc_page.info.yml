@@ -21,3 +21,4 @@ dependencies:
   - user
   - varbase_seo
   - vardoc_book
+  - yoast_seo
