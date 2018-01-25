@@ -54,7 +54,8 @@
     "drupal/menu_item_visibility": "1.x-dev#7806c36b68bdc1ac3582e3a034b94126cd3d1d32",
     "drupal/votingapi": "3.0-alpha2",
     "drupal/votingapi_widgets": "1.x-dev#97133ddc9798a912eababe63e1a86deff3e5d9c9",
-    "drupal/flag": "4.0-alpha2"
+    "drupal/flag": "4.0-alpha2",
+    "drupal/sharethis": "2.0-beta3"
   },
   "require-dev": {
     "drush/drush": "8.1.15",

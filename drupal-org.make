@@ -40,6 +40,9 @@ projects[votingapi_widgets][patch][] = https://www.drupal.org/files/issues/stric
 projects[flag][type] = module
 projects[flag][version] = 4.0-alpha2
 
+projects[sharethis][type] = module
+projects[sharethis][version] = 2.0-beta3
+
 projects[varbase][type] = profile
 projects[varbase][subdir] = ""
 projects[varbase][version] = "4.14"
