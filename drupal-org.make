@@ -37,6 +37,9 @@ projects[votingapi_widgets][download][branch] = 1.x-dev
 ;; Issue #2905948: Strict Warning for $stringTranslation.
 projects[votingapi_widgets][patch][] = https://www.drupal.org/files/issues/strict-warning-stringtranslation-2905948-2.patch
 
+projects[flag][type] = module
+projects[flag][version] = 4.0-alpha2
+
 projects[varbase][type] = profile
 projects[varbase][subdir] = ""
 projects[varbase][version] = "4.14"
