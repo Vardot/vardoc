@@ -27,6 +27,9 @@ projects[menu_item_visibility][download][url] = https://git.drupal.org/project/m
 projects[menu_item_visibility][download][revision] = 7806c36b68bdc1ac3582e3a034b94126cd3d1d32
 projects[menu_item_visibility][download][branch] = 1.x-dev
 
+projects[votingapi][type] = module
+projects[votingapi][version] = 3.0-alpha2
+
 projects[varbase][type] = profile
 projects[varbase][subdir] = ""
 projects[varbase][version] = "4.14"
