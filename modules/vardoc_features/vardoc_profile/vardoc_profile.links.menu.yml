@@ -1,12 +1,12 @@
-vardoc_tweaks.notifications:
+vardoc_profile.notifications:
   parent: account
   route_name: view.profile_content.page_latest
   route_parameters:
     user: 'user'
   menu_name: account
-  class: Drupal\vardoc_tweaks\Plugin\Menu\NotificationsMenuLink
+  class: Drupal\vardoc_profile\Plugin\Menu\NotificationsMenuLink
   weight: 2
-vardoc_tweaks.page_favorite:
+vardoc_profile.page_favorite:
   title: 'Favorite content'
   parent: account
   route_name: view.profile_content.page_favorite

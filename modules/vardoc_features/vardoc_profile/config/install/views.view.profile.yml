@@ -234,7 +234,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: '<img src="/profiles/vardoc/modules/custom/vardoc_tweaks/images/avatar.png" border="0" />'
+          empty: '<img src="/profiles/vardoc/modules/vardoc_features/vardoc_profile/images/avatar.png" border="0" />'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true

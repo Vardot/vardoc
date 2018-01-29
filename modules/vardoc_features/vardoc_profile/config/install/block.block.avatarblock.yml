@@ -3,7 +3,7 @@ status: true
 dependencies:
   module:
     - block_class
-    - vardoc_tweaks
+    - vardoc_profile
   theme:
     - vardoctheme
 third_party_settings:
@@ -18,6 +18,6 @@ plugin: avatar_block
 settings:
   id: avatar_block
   label: 'Avatar Block'
-  provider: vardoc_tweaks
+  provider: vardoc_profile
   label_display: '0'
 visibility: {  }

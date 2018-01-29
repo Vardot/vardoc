@@ -9,7 +9,7 @@ use Drupal\Core\StringTranslation\TranslatableMarkup;
 /**
  * Implements hook_theme()
  */
-function vardoc_tweaks_theme($existing, $type, $theme, $path) {
+function vardoc_profile_theme($existing, $type, $theme, $path) {
   return [
     'vardoc_user_avatar_block' => [
       'variables' => ['content' => NULL]
@@ -20,7 +20,7 @@ function vardoc_tweaks_theme($existing, $type, $theme, $path) {
 /**
  * Implements hook_menu_alter().
  */
-function vardoc_tweaks_link_alter(&$variables) {
+function vardoc_profile_link_alter(&$variables) {
 
   /**
    * The URL of the link.
@@ -41,7 +41,7 @@ function vardoc_tweaks_link_alter(&$variables) {
  * Implements hook_preprocess_block
  * @param type $variables
  */
-function vardoctheme_preprocess_block(&$variables) {
+function vardoc_profile_preprocess_block(&$variables) {
   //Add notifications count to the user profile block
   if (isset($variables['elements']['#id']) && $variables['elements']['#id'] == 'views_block__profile_block_user') {
     $view = \Drupal\views\Views::getView('profile_content');
@@ -56,7 +56,7 @@ function vardoctheme_preprocess_block(&$variables) {
  * Implements hook_local_tasks_alter()
  * @param type $local_tasks
  */
-function vardoc_tweaks_local_tasks_alter(&$local_tasks) {
+function vardoc_profile_local_tasks_alter(&$local_tasks) {
   $local_tasks['entity.user.canonical']['title'] = new TranslatableMarkup('My account');
   $local_tasks['entity.user.edit_form']['title'] = new TranslatableMarkup('Edit my profile');
 }

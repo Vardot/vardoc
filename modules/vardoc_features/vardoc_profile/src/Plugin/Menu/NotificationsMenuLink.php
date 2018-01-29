@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\vardoc_tweaks\Plugin\Menu;
+namespace Drupal\vardoc_profile\Plugin\Menu;
 
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\Core\Menu\MenuLinkDefault;
@@ -82,6 +82,7 @@ class NotificationsMenuLink extends MenuLinkDefault {
    * {@inheritdoc}
    */
   public function getCacheMaxAge() {
+    //Execlude the notifications menu item from cache.
     return 0;
   }
 

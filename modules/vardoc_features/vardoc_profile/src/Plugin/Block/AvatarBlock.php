@@ -4,7 +4,7 @@
  * Avatar blcok content
  *
  */
-namespace Drupal\vardoc_tweaks\Plugin\Block;
+namespace Drupal\vardoc_profile\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Session\AccountInterface;
@@ -22,7 +22,7 @@ class AvatarBlock extends BlockBase {
   public function build() {
     return [
       '#theme' => 'vardoc_user_avatar_block',
-      '#content' => '/' . drupal_get_path('module', 'vardoc_tweaks') . '/images/avatar.png'
+      '#content' => \Drupal::request()->getBaseUrl() . '/' . drupal_get_path('module', 'vardoc_profile') . '/images/avatar.png'
     ];
   }
 
