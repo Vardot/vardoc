@@ -10,7 +10,7 @@ id: node.book.field_rating
 field_name: field_rating
 entity_type: node
 bundle: book
-label: 'Content Rating'
+label: 'Content rating'
 description: ''
 required: false
 translatable: false

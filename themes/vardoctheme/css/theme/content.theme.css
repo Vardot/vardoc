@@ -268,7 +268,10 @@ body.user-logged-in.navbar-is-fixed-top .navbar-fixed-top {
 .region-sidebar-second .block-book-navigation nav ul li a {
   font-size: 14px;
 }
-.region-sidebar-second .block-book-navigation nav ul li:before {
+.region-sidebar-second .block-book-navigation nav ul li a:before {
+  font-weight: normal;
+  margin-right: 4px;
+  color: #696969;
   content: "\f105";
   font-family: FontAwesome;
   font-size: 16px;
@@ -276,11 +279,20 @@ body.user-logged-in.navbar-is-fixed-top .navbar-fixed-top {
   margin-left: -1em;
   width: 10px;
 }
+.region-sidebar-second .block-book-navigation nav ul li a:hover:before {
+  color: #23527c;
+}
 .region-sidebar-second .block-book-navigation nav ul li.active > a {
   color: #696969;
 }
-.region-sidebar-second .block-book-navigation nav ul li.active:before {
+.region-sidebar-second .block-book-navigation nav ul li.active > a:before {
   content: "\f107";
+}
+.region-sidebar-second .block-book-navigation nav ul li.active > a:hover:before {
+  color: #696969;
+}
+.region-sidebar-second .block-book-navigation nav ul.active > a {
+  color: #696969;
 }
 .region-sidebar-second .block-book-navigation nav ul li.menu-level-0 a {
   font-size: 16px;
@@ -674,6 +686,55 @@ body.user-logged-in.navbar-is-fixed-top .navbar-fixed-top {
 }
 .node--view-mode-full .field--name-field-documents .field__items .field--item .file.file--image .file-link a::before {
   background-image: url("../../images/image.png");
+}
+.node--view-mode-full .field--name-field-external-links:before,
+.node--view-mode-full .field--name-field-external-links:after {
+  content: " ";
+  display: table;
+}
+.node--view-mode-full .field--name-field-external-links:after {
+  clear: both;
+}
+.node--view-mode-full .field--name-field-external-links .field--label {
+  float: none;
+  width: 100%;
+  margin: 40px 0 5px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+.node--view-mode-full .field--name-field-external-links .field__items {
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  clear: both;
+  display: inline-block;
+  padding: 5px 0px;
+  width: 100%;
+}
+.node--view-mode-full .field--name-field-external-links .field__items .field--item {
+  float: left;
+  width: 50%;
+  padding: 5px 0;
+}
+.node--view-mode-full .field--name-field-external-links .field__items .field--item:nth-child(odd) {
+  padding-right: 10px;
+}
+.node--view-mode-full .field--name-field-external-links .field__items .field--item a {
+  color: #696969;
+  font-size: 14px;
+  font-weight: bold;
+}
+.node--view-mode-full .field--name-field-external-links .field__items .field--item a::before {
+  content: "";
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  background-image: url("../../images/gdrive-icon.png");
+}
+.node--view-mode-full .field--name-field-external-links .field__items .field--item a:hover {
+  color: #337ab7;
 }
 .user-blocks {
   padding-top: 20px;

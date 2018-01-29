@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.book.field_category
     - field.field.node.book.field_comment
     - field.field.node.book.field_documents
+    - field.field.node.book.field_external_links
     - field.field.node.book.field_meta_tags
     - field.field.node.book.field_rating
     - node.type.book
@@ -16,6 +17,7 @@ dependencies:
     - ds
     - field_group
     - file
+    - link
     - panelizer
     - text
     - user
@@ -76,14 +78,15 @@ third_party_settings:
       main:
         - group_content_header
         - node_changed_date
-        - 'dynamic_block_field:node-views'
         - book_navigation
-        - body
+        - 'dynamic_block_field:node-views'
         - group_wrapper
         - flag_favorite
+        - body
+        - field_external_links
         - 'dynamic_token_field:node-print'
-        - field_documents
         - sharethis
+        - field_documents
         - field_rating
         - group_comments_wrapper
         - field_comment
@@ -146,7 +149,7 @@ third_party_settings:
       children:
         - field_comment
       parent_name: ''
-      weight: 5
+      weight: 6
       format_type: html_element
       format_settings:
         label: Comments
@@ -222,14 +225,34 @@ content:
     third_party_settings: {  }
   field_documents:
     type: file_default
-    weight: 3
+    weight: 4
     region: main
     label: above
     settings: {  }
     third_party_settings: {  }
+  field_external_links:
+    type: link
+    weight: 3
+    region: main
+    label: above
+    settings:
+      trim_length: null
+      target: _blank
+      url_only: false
+      url_plain: false
+      rel: '0'
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
   field_rating:
     type: voting_api_formatter
-    weight: 4
+    weight: 5
     region: main
     label: above
     settings:

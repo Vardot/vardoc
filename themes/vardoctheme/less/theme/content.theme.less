@@ -251,24 +251,40 @@ body.user-logged-in {
           padding-left: 1.3em;
           a {
             font-size: 14px;
-          }
-          &:before {
-            content: "\f105";
-            font-family: FontAwesome;
-            font-size: 16px;
-            display: inline-block;
-            margin-left: -1em;
-            width: 10px;
-          }
-          &.active {
-            > a {
+            &:before {
+              font-weight:normal;
+              margin-right: 4px;
               color: @DimGray;
+              content: "\f105";
+              font-family: FontAwesome;
+              font-size: 16px;
+              display: inline-block;
+              margin-left: -1em;
+              width: 10px;
+            }
+            &:hover {
+              &:before {
+                color:@blue-dark;
+              }
             }
           }
         }
         li.active {
-          &:before {
-            content: "\f107";
+          > a {
+            color: @DimGray;
+            &:before {
+              content: "\f107";
+            }
+            &:hover {
+              &:before {
+                color: @DimGray;
+              }
+            }
+          }
+        }
+        &.active {
+          > a {
+            color: @DimGray;
           }
         }
         li.menu-level-0 a {
@@ -631,7 +647,7 @@ body.user-logged-in {
               font-size: 14px;
               font-weight: bold;
               &:hover {
-                color: @blue-base;  
+                color: @blue-base;
               }
             }
           }
@@ -679,6 +695,50 @@ body.user-logged-in {
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+  .field--name-field-external-links {
+    .clearfix();
+    .field--label {
+      float: none;
+      width: 100%;
+      margin: 40px 0 5px 0;
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .field__items {
+      border-top: 1px solid @gray-lighter;
+      border-bottom: 1px solid @gray-lighter;
+      clear: both;
+      display: inline-block;
+      padding: 5px 0px;
+      width: 100%;
+      .field--item {
+        float: left;
+        width: 50%;
+        padding: 5px 0;
+        &:nth-child(odd) {
+          padding-right: 10px;
+        }
+        a {
+          &::before {
+            content: "";
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+            background-image: url("../../images/gdrive-icon.png");
+          }
+          color: @DimGray;
+          font-size: 14px;
+          font-weight: bold;
+          &:hover {
+            color: @blue-base;
           }
         }
       }
