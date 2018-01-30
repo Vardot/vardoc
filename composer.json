@@ -56,7 +56,8 @@
     "drupal/votingapi_widgets": "1.x-dev#97133ddc9798a912eababe63e1a86deff3e5d9c9",
     "drupal/flag": "4.0-alpha2",
     "drupal/sharethis": "2.0-beta3",
-    "drupal/faq": "1.x-dev#2bdc0f0fd3fa1941bf7d3579a498e6f40ca9c69a"
+    "drupal/faq": "1.x-dev#2bdc0f0fd3fa1941bf7d3579a498e6f40ca9c69a",
+    "drupal/varbase_faqs": "4.x-dev#0c36241d88d76fdb35fde343eb4d88e4d497b497"
   },
   "require-dev": {
     "drush/drush": "8.1.15",

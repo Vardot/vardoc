@@ -54,6 +54,11 @@ projects[faq][download][branch] = 1.x-dev
 ;; Issue #2932028: Unable to place FAQ Categories block.
 projects[faq][patch][] = https://www.drupal.org/files/issues/unable-to-add-faq-block-2932028-8.patch
 
+projects[varbase_faqs][type] = module
+projects[varbase_faqs][download][url] = git://git.drupal.org/project/varbase_faqs.git
+projects[varbase_faqs][download][revision] = 0c36241d88d76fdb35fde343eb4d88e4d497b497
+projects[varbase_faqs][download][branch] = 4.x-dev
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
 ;;;;;;;;;;;;;;;;;;;;;
