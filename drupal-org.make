@@ -56,7 +56,6 @@ projects[faq][patch][] = https://www.drupal.org/files/issues/unable-to-add-faq-b
 
 projects[varbase_faqs][type] = module
 projects[varbase_faqs][download][url] = git://git.drupal.org/project/varbase_faqs.git
-projects[varbase_faqs][download][revision] = 0c36241d88d76fdb35fde343eb4d88e4d497b497
 projects[varbase_faqs][download][branch] = 4.x-dev
 
 ;;;;;;;;;;;;;;;;;;;;;
