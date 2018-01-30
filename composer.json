@@ -55,7 +55,9 @@
     "drupal/votingapi": "3.0-alpha2",
     "drupal/votingapi_widgets": "1.x-dev#97133ddc9798a912eababe63e1a86deff3e5d9c9",
     "drupal/flag": "4.0-alpha2",
-    "drupal/sharethis": "2.0-beta3"
+    "drupal/sharethis": "2.0-beta3",
+    "drupal/faq": "1.x-dev#2bdc0f0fd3fa1941bf7d3579a498e6f40ca9c69a",
+    "drupal/varbase_faqs": "4.x-dev"
   },
   "require-dev": {
     "drush/drush": "8.1.15",
@@ -127,6 +129,10 @@
       "drupal/votingapi_widgets": {
         "Issue #2905948: Strict Warning for $stringTranslation":
         "https://www.drupal.org/files/issues/strict-warning-stringtranslation-2905948-2.patch"
+      },
+      "drupal/faq": {
+        "Issue #2932028: Unable to place FAQ Categories block.":
+        "https://www.drupal.org/files/issues/unable-to-add-faq-block-2932028-8.patch"
       }
     }
   }
