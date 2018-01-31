@@ -8,10 +8,5 @@ config_bit:
   when:
     show_extra_components: true
     list:
-      dependencies:
-        varbase_faqs:
-          title: "Varbase FAQS"
-          description: "Provides FAQ content type and related configuration. A frequently asked question and its answer."
-          selected: true
-          config_form: false
+      dependencies: { }
       selected: { }
