@@ -115,7 +115,7 @@ install:
 
   ## Install with drush.
   - cd docroot
-  - drush site-install vardoc --yes --site-name='Test Vardoc1c' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:@localhost/test_vardoc1c" vardoc_extra_components.vardoc_demo=true varbase_development_tools.varbase_development=true
+  - drush site-install vardoc --yes --site-name='Test Vardoc1c' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:@localhost/test_vardoc1c" varbase_development_tools.varbase_development=true
   - drush config-set system.performance css.preprocess 0 --yes
   - drush config-set system.performance js.preprocess 0 --yes
   - drush config-set system.logging error_level all --yes
