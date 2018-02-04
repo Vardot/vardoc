@@ -58,6 +58,7 @@ So that I can use them after the install or update.
       And I wait
      Then I should see "Appearance"
       And I should see "Vartheme"
+      And I should see "Vardoc Theme"
       And I should see "Adminimal"
       And I should see "Bootstrap"
       And I should see "Vartheme Admin"
