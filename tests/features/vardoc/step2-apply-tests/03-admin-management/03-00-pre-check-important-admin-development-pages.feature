@@ -25,7 +25,6 @@ So that I can use them after the install or update.
       And I should see "Menu position rules"
       And I should see "Menus"
       And I should see "Pages"
-      And I should see "Paragraph types"
       And I should see "Taxonomy"
       And I should see "Views"
       And I should see "Webforms"
@@ -52,7 +51,6 @@ So that I can use them after the install or update.
       And I wait
      Then I should see "Views"
       And I should see "Browser"
-      And I should see "Media Hero Slider"
 
   @local @development @staging @production
   Scenario: Check the Appearance page.
