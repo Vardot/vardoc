@@ -12,7 +12,7 @@ use Drupal\user\Entity\User;
 function vardoc_profile_install() {
   //Load the user 1 to fill in first name, last name, and profile image
   $user = User::load(1);
-  $user->set('field_first_name', 'Vardot')
+  $user->set('field_first_name', 'Vardoc')
     ->set('field_last_name', 'Webmaster');
   
   //Create avatar file entity

@@ -22,7 +22,7 @@ class AvatarBlock extends BlockBase {
   public function build() {
     return [
       '#theme' => 'vardoc_user_avatar_block',
-      '#content' => \Drupal::request()->getBaseUrl() . '/' . drupal_get_path('module', 'vardoc_profile') . '/images/avatar.png'
+      '#content' => \Drupal::request()->getBaseUrl() . '/' . drupal_get_path('module', 'vardoc_profile') . '/images/avatar-small.png'
     ];
   }
 
