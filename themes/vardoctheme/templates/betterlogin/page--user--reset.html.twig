@@ -22,10 +22,10 @@
       </div>
       <div id="middle-part">
         {% if logged_in %}
-          {{ page.header|without('vardoctheme_local_tasks', 'vardoctheme_breadcrumbs', 'vardoctheme_local_actions') }}
+          {{ page.content_top|without('vardoctheme_local_tasks', 'vardoctheme_breadcrumbs', 'vardoctheme_local_actions') }}
         {% else %}
           <h2 class="title">{{ title }}</h2>
-          {{ page.header|without('vardoctheme_local_tasks', 'vardoctheme_breadcrumbs', 'vardoctheme_local_actions', 'vardoctheme_page_title') }}
+          {{ page.content_top|without('vardoctheme_local_tasks', 'vardoctheme_breadcrumbs', 'vardoctheme_local_actions', 'vardoctheme_page_title') }}
         {% endif %}
         {{ page.content }}
       </div>
