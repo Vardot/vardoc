@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.native_comment
+    - field.field.comment.native_comment.field_comment
+    - field.field.comment.native_comment.field_email
+    - field.field.comment.native_comment.field_username
+id: comment.native_comment.default
+targetEntityType: comment
+bundle: native_comment
+mode: default
+content:
+  field_comment:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_email:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_username:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  author: true
+  subject: true

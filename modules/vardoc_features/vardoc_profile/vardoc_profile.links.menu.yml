@@ -1,0 +1,16 @@
+vardoc_profile.notifications:
+  parent: account
+  route_name: view.profile_content.page_latest
+  route_parameters:
+    user: 'user'
+  menu_name: account
+  class: Drupal\vardoc_profile\Plugin\Menu\NotificationsMenuLink
+  weight: 2
+vardoc_profile.page_favorite:
+  title: 'Favorite content'
+  parent: account
+  route_name: view.profile_content.page_favorite
+  route_parameters:
+    user: 'user'
+  menu_name: account
+  weight: 4

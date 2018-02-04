@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rating
+    - node.type.book
+  module:
+    - votingapi_widgets
+id: node.book.field_rating
+field_name: field_rating
+entity_type: node
+bundle: book
+label: 'Content rating'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    status: '1'
+    value: 0
+default_value_callback: ''
+settings:
+  anonymous_window: '-1'
+  user_window: '-1'
+  result_function: vote_average
+  widget_format: fivestar
+field_type: voting_api_field

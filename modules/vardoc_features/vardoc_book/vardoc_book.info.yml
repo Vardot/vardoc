@@ -1,0 +1,56 @@
+name: 'Vardoc Book page'
+description: 'Provides Book page content type and related configuration. <em>Books</em> have a built-in hierarchical navigation. Use for handbooks or tutorials.'
+type: module
+core: 8.x
+dependencies:
+  - ace_editor
+  - advanced_text_formatter
+  - better_exposed_filters
+  - block
+  - block_class
+  - book
+  - ckeditor_media_embed
+  - comment
+  - ctools
+  - ds
+  - editor
+  - entity_embed
+  - entityqueue
+  - features
+  - field
+  - field_group
+  - file
+  - filter
+  - flag
+  - focal_point
+  - history
+  - image
+  - image_resize_filter
+  - link
+  - menu_block
+  - menu_ui
+  - metatag
+  - node
+  - panelizer
+  - path
+  - pathauto
+  - pathologic
+  - rabbit_hole
+  - search_api
+  - search_api_db
+  - sharethis
+  - smart_trim
+  - statistics
+  - system
+  - taxonomy
+  - text
+  - user
+  - varbase_editor
+  - varbase_seo
+  - video_embed_wysiwyg
+  - views
+  - views_bootstrap
+  - votingapi
+  - votingapi_widgets
+version: 8.x-1.0-rc1
+package: Vardoc

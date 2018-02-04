@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - book
+    - system
+  theme:
+    - vardoctheme
+third_party_settings:
+  block_class:
+    classes: ''
+id: booknavigation
+theme: vardoctheme
+region: sidebar_second
+weight: -7
+provider: null
+plugin: book_navigation
+settings:
+  id: book_navigation
+  label: 'Book navigation'
+  provider: book
+  label_display: '0'
+  block_mode: 'all pages'
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/user/*"
+    negate: true
+    context_mapping: {  }

@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: books_pattern
+label: 'Book pages pattern'
+type: 'canonical_entities:node'
+pattern: '[node:book:title]/[node:title]'
+selection_criteria:
+  46c4ac01-46a8-4c0f-870c-30a069328a6f:
+    id: node_type
+    bundles:
+      book: book
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 46c4ac01-46a8-4c0f-870c-30a069328a6f
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,102 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/vote\/vote"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/vote\/vote\/entity_id": [
+            {
+                "href": "http:\/\/default\/managing-content-vardoc\/managing-content-vardoc?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/vote\/vote\/user_id": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 1
+        }
+    ],
+    "uuid": [
+        {
+            "value": "2bf7d103-8ea5-4d4b-8313-d1e644fd9db1"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "vote"
+        }
+    ],
+    "entity_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/vote\/vote\/entity_id": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/managing-content-vardoc\/managing-content-vardoc?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/node\/book"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "798f32ba-9943-4977-b3fd-32fc16fde9ef"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/vote\/vote\/user_id": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "3394832f-448b-4a78-a44a-d1d31ad7ab10"
+                    }
+                ]
+            }
+        ]
+    },
+    "value": [
+        {
+            "value": 2
+        }
+    ],
+    "value_type": [
+        {
+            "value": "percent"
+        }
+    ],
+    "timestamp": [
+        {
+            "value": "2018-01-17T13:03:22+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "vote_source": [
+        {
+            "value": "127.0.0.1"
+        }
+    ],
+    "field_name": [
+        {
+            "value": "field_rating"
+        }
+    ]
+}

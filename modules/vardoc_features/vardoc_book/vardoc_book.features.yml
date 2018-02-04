@@ -1,0 +1,8 @@
+bundle: vardoc
+excluded:
+  - block.block.useraccountmenu
+  - block.block.views_block__profile_block_user
+  - image.style.avatar
+  - views.view.profile
+  - views.view.profile_content
+required: true
