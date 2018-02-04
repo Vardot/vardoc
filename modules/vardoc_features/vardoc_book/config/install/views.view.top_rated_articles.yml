@@ -208,7 +208,7 @@ display:
           table: votingapi_vote
           field: value
           relationship: none
-          group_type: group
+          group_type: avg
           admin_label: ''
           order: DESC
           exposed: false
@@ -217,21 +217,6 @@ display:
           entity_type: vote
           entity_field: value
           plugin_id: standard
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          relationship: entity_id
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-          entity_type: node
-          entity_field: created
-          plugin_id: date
       title: 'Top Rated Articles'
       header: {  }
       footer: {  }
@@ -261,7 +246,7 @@ display:
           plugin_id: standard
       arguments: {  }
       display_extenders: {  }
-      group_by: false
+      group_by: true
     cache_metadata:
       max-age: -1
       contexts:
