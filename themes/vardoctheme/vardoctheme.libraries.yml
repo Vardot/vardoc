@@ -28,7 +28,9 @@ vbp-colors:
   css:
     theme:
       css/theme/vbp-colors.theme.css: {}
-    
+
+
+
 # Vardoc theme Vartheme styles library.
 vartheme-styles:
   css:

@@ -36,6 +36,9 @@ libraries:
 # Vardoc theme Varbase Bootstrap Paragraphs colors theme.
   - vardoctheme/vbp-colors
 
+# Vardoc Better Login theme.
+#  - vardoctheme/betterlogin
+
 # OPTIONALLY: You can choose to remove Vartheme base theme stylesheets and/or
 # Javascript files.
 libraries-override:
@@ -58,6 +61,7 @@ libraries-override:
 # Vardoc theme Varbase Bootstrap Paragraphs colors theme.
   varbase_bootstrap_paragraphs/vbp-colors: vardoctheme/vbp-colors
   vartheme/vbp-colors: vardoctheme/vbp-colors
+#  vartheme/betterlogin: vardoctheme/betterlogin
   
 # Uncomment lines to replace, exclude css and js files from vartheme.
 # You will need to copy less/css files from Vartheme to use theme for the

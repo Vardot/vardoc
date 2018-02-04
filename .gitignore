@@ -36,3 +36,6 @@ ehthumbs.db
 errors.log
 
 
+/css/variables.css
+/themes/vardoctheme/css/variables.css
+/themes/vardoctheme/css/mixins.css
