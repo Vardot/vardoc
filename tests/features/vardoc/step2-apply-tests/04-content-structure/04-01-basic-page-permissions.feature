@@ -54,7 +54,6 @@ So that the "Basic page" will show up in the structured menu under its parent pa
      When I go to "/node/add/page"
       And I wait
      Then I should see "Create Basic page"
-      And I should see "Language"
       And I should see "Title"
       And I should see "Body"
 
