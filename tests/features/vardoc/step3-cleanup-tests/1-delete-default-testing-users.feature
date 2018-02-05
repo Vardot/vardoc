@@ -3,6 +3,7 @@ Feature: Delete default testing users.
 # test_authenticated: { email: 'authenticated.test@vardot.com', password: 'dD.123123ddd' }
 # test_editor: { email: 'editor.test@vardot.com', password: 'dD.123123ddd' }
 # test_content_admin: { email: 'content.admin.test@vardot.com', password: 'dD.123123ddd' }
+# test_seo_admin: { email: 'seo.admin.test@vardot.com', password: 'dD.123123ddd' }
 # test_site_admin: { email: 'site.admin.test@vardot.com', password: 'dD.123123ddd' }
 # test_super_admin: { email: 'super.admin.test@vardot.com', password: 'dD.123123ddd' }
 
@@ -20,7 +21,7 @@ Feature: Delete default testing users.
      When I click "test_authenticated"
       And I wait
      Then I should see "test_authenticated"
-     When I click "Edit"
+     When I click "Edit my profile"
       And I wait
      Then I should see "test_authenticated"
      When I press "Cancel account"
@@ -42,7 +43,7 @@ Feature: Delete default testing users.
      When I click "test_editor"
       And I wait
      Then I should see "test_editor"
-     When I click "Edit"
+     When I click "Edit my profile"
       And I wait
      Then I should see "test_editor"
      When I press "Cancel account"
@@ -63,7 +64,7 @@ Feature: Delete default testing users.
      When I click "test_content_admin"
       And I wait
      Then I should see "test_content_admin"
-     When I click "Edit"
+     When I click "Edit my profile"
       And I wait
      Then I should see "test_content_admin"
      When I press "Cancel account"
@@ -85,7 +86,7 @@ Feature: Delete default testing users.
      When I click "test_seo_admin"
       And I wait
      Then I should see "test_seo_admin"
-     When I click "Edit"
+     When I click "Edit my profile"
       And I wait
      Then I should see "test_seo_admin"
      When I press "Cancel account"
@@ -107,7 +108,7 @@ Feature: Delete default testing users.
      When I click "test_site_admin"
       And I wait
      Then I should see "test_site_admin"
-     When I click "Edit"
+     When I click "Edit my profile"
       And I wait
      Then I should see "test_site_admin"
      When I press "Cancel account"
@@ -129,7 +130,7 @@ Feature: Delete default testing users.
      When I click "test_super_admin"
       And I wait
      Then I should see "test_super_admin"
-     When I click "Edit"
+     When I click "Edit my profile"
       And I wait
      Then I should see "test_super_admin"
      When I press "Cancel account"
