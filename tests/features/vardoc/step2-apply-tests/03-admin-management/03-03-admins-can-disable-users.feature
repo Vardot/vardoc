@@ -26,7 +26,7 @@ So that they will be disabled and not be able to use the site.
      When I click "test_authenticated"
       And I wait
      Then I should see "test_authenticated"
-     When I click "Edit"
+     When I click "Edit my profile"
       And I wait
      Then I should see "test_authenticated"
      When I select the radio button "Blocked"
