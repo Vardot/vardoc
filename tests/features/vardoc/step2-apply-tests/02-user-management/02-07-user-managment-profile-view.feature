@@ -8,7 +8,7 @@ So that I will be able to view/add/edit/ or delete content in the site
     Given I am a logged in user with the "webmaster" user
      When I go to "/user/1"
       And I wait
-     Then I should see "Vardot Webmaster"
+     Then I should see "Webmaster"
       And I should see "New content"
       And I should see "Favorite content"
      When I click "New content"

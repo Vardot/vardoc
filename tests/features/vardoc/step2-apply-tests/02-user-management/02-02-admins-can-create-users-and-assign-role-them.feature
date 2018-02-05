@@ -17,7 +17,9 @@ So that they will be able to use the site.
   @javascript @local @development @staging @production
   Scenario: Check if admins can create a new user account as an (authenticated user).
     Given I go to "/admin/people/create"
-     When I fill in "tester@vardot.com" for "Email address"
+     When I fill in "Tester" for "First name"
+      And I fill in "Tester family" for "Last name"
+      And I fill in "tester@vardot.com" for "Email address"
       And I fill in "Tester" for "Username"
       And I fill in "dD.123123ddd" for "Password"
       And I fill in "dD.123123ddd" for "Confirm password"
@@ -33,9 +35,10 @@ So that they will be able to use the site.
      When I click "Tester"
       And I wait
      Then I should see "Tester"
-     When I click "Edit"
+     When I click "Edit my profile"
       And I wait
-      And I press "Cancel account"
+     Then I should see "Tester"
+     When I press "Cancel account"
       And I wait
      Then I should see "Are you sure you want to cancel the account Tester?"
      When I select the radio button "Delete the account and its content."
