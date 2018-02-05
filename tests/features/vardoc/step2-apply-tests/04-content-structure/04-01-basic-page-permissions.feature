@@ -3,8 +3,8 @@ As a logged in user with a permission to mange Basic pages
 I want to be able to add a "Basic page" to the site with a fixed layout
 So that the "Basic page" will show up in the structured menu under its parent page
 
-# Check if users with the ( "authenticated user", "Editor", "Content Admin",
-# "Site Admin", or "Super Admin" ) role can add [Basic page]
+Check if users with the ( "authenticated user", "Editor", "Content Admin",
+"Site Admin", or "Super Admin" ) role can add [Basic page]
 
   @javascript @local @development @staging @production
   Scenario: Check if [authenticated user] can add content of "Basic page" type.
@@ -67,23 +67,6 @@ So that the "Basic page" will show up in the structured menu under its parent pa
       And I press "Save"
       And I wait
      Then I should see "Basic page Test Basic page has been created."
-
-  @javascript @local @development @staging @production
-  Scenario: Check if a user with a permission to manage "Basic page" content type
-    Given I am a logged in user with the "test_super_admin" user
-     When I go to "admin/content"
-      And I wait
-     Then I should see "Content"
-     When I fill in "Test Basic page" for "Title"
-      And I press the "Filter" button
-      And I wait
-     Then I should see "Test Basic page"
-     When I click "Test Basic page"
-      And I wait
-     Then I should see "Test Basic page body"
-     When I click "Edit"
-      And I wait
-     Then I should see "Edit Basic page Test Basic page"
 
   @javascript @local @development @staging @production
   Scenario: Check that we did not Allow content of "Basic page" type to have its display controlled by Panelizer.
