@@ -3,7 +3,7 @@ status: true
 dependencies: {  }
 id: site_admin
 label: 'Site Admin'
-weight: 4
+weight: -5
 is_admin: null
 permissions:
   - 'access administration pages'
@@ -75,6 +75,7 @@ permissions:
   - 'edit own comments'
   - 'edit own landing_page content'
   - 'edit own page content'
+  - 'have total control'
   - 'manipulate all entityqueues'
   - 'manipulate entityqueues'
   - 'post comments'
