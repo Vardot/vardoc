@@ -57,7 +57,7 @@
     "drupal/flag": "4.0-alpha2",
     "drupal/sharethis": "2.0-beta3",
     "drupal/faq": "1.x-dev#2bdc0f0fd3fa1941bf7d3579a498e6f40ca9c69a",
-    "drupal/varbase_faqs": "4.1-alpha1"
+    "drupal/varbase_faqs": "4.0-alpha1"
   },
   "require-dev": {
     "drush/drush": "8.1.15",
