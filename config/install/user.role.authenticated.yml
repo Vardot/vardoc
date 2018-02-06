@@ -19,4 +19,3 @@ permissions:
   - userprotect.mail.edit
   - userprotect.pass.edit
   - 'view media'
-  - 'view faq page'
