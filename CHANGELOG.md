@@ -1,3 +1,75 @@
+### 8.1.0-rc2
+
+
+### Highlighted important changes since Vardoc 8.1.0-rc1:
+* Issue [#2940598](https://www.drupal.org/node/2940598):
+        Added [Varbase FAQs] feature module.
+* Issue [#2939452](https://www.drupal.org/node/2939452):
+        Added [Vardoc profile] feature module.
+* Issue [#2939467](https://www.drupal.org/node/2939467):
+        Changed [Vardoc homepage] feature module, added top rated
+        articles instead of featured articles.
+* Issue [#2939443](https://www.drupal.org/node/2939443):
+        Changed [Vardoc book] feature module with more fields for
+        documents and statistics.
+* Issue [#2940237](https://www.drupal.org/node/2940237):
+        Added external links field to add external documents like Google docs.
+* Issue [#2940694](https://www.drupal.org/node/2940694):
+        Added the [Feature: Content Structure - Article (Book page)]
+        automated functional acceptance tests and revoke [create book content]
+        permission from authenticated users.
+* Issue [#2939473](https://www.drupal.org/node/2939473):
+        Changed [Vardoc page] feature module page full content display mode.
+* Issue [#2937774](https://www.drupal.org/node/2937774):
+        Updated [Varbase] form 8.4.13 to 8.4.14
+
+### Added since Vardoc 8.1.0-rc1:
+* Issue [#2940598](https://www.drupal.org/node/2940598):
+        Added [Varbase FAQs] feature module.
+* Issue [#2939452](https://www.drupal.org/node/2939452):
+        Added [Vardoc profile] feature module.
+* Issue [#2939437](https://www.drupal.org/node/2939437):
+        Added [Flag] module 8.4.0-alpha2
+* Issue [#2937769](https://www.drupal.org/node/2937769):
+        Added [Votingapi] module 8.3.0-alpha2
+* Issue [#2937804](https://www.drupal.org/node/2937804):
+        Added [Votingapi Widgets] module 1.x-dev 97133dd
+* Issue [#2939439](https://www.drupal.org/node/2939439):
+        Added [Share this] module 8.2.0-beta3
+* Issue [#2940237](https://www.drupal.org/node/2940237):
+        Added external links field to add external documents like Google docs.
+* Issue [#2940694](https://www.drupal.org/node/2940694):
+        Added the [Feature: Content Structure - Article (Book page)]
+        automated functional acceptance tests and revoke [create book content]
+        permission from authenticated users.
+
+### Changed since Vardoc 8.1.0-rc1:
+* Issue [#2939467](https://www.drupal.org/node/2939467):
+        Changed [Vardoc homepage] feature module, added top rated articles
+        instead of featured articles.
+* Issue [#2939443](https://www.drupal.org/node/2939443):
+        Changed [Vardoc book] feature module with more fields for documents
+        and statistics.
+* Issue [#2939473](https://www.drupal.org/node/2939473):
+        Changed [Vardoc page] feature module page full content display mode.
+* Issue [#2939475](https://www.drupal.org/node/2939475):
+        Changed [Vardoc search] feature module themed the result page.
+* Issue [#2939478](https://www.drupal.org/node/2939478):
+        Changed [Vardoc demo content] feature module with more files
+        documents and content vote.
+* Issue [#2937953](https://www.drupal.org/node/2937953):
+        Changed composer SPDX license identifier
+        from GPL-2.0+ to GPL-2.0-or-later
+
+### Updates since Vardoc 8.1.0-rc1:
+* Issue [#2937774](https://www.drupal.org/node/2937774):
+        Updated [Varbase] from 8.4.13 to 8.4.14
+
+### Fixes since Vardoc 8.1.0-rc1:
+* Issue [#2929774](https://www.drupal.org/node/2929774):
+        Fixed Child menu overlaps parent menu item in main navigation.
+
+
 ## 8.1.0-rc1
 
 ### Highlighted important changes since Vardoc 8.1.0-beta3:

@@ -78,7 +78,7 @@ $ ../../../bin/behat tests/features/vardoc
 ```
 4. Run the behat command at PROJECT_DIR_NAME/docroot/profiles/vardoc/testes
 
-$ ../../../bin/behat features/vardoc/step2-apply-tests/01-website-base-requirements_user-registration_only-admins-login_v1-0.feature
+$ ../../../bin/behat tests/features/vardoc/step2-apply-tests/01-website-base-requirements/01-01-user-registration_only-admins-login.feature
 
 ================================================================================
 
@@ -119,8 +119,8 @@ So that I will need a site admin or super admin to add me to the website
 --------------------------------------------------------------------------------
 5. Run this command with the .feature file to run the Gherkin Script in it to the installed site.
 
-$ ../../../bin/behat features/vardoc/your-gherkin-feature.feature
-$ ../../../bin/behat features/project-name/your-gherkin-feature.feature
+$ ../../../bin/behat tests/features/vardoc/your-gherkin-feature.feature
+$ ../../../bin/behat tests/features/project-name/your-gherkin-feature.feature
 
 --------------------------------------------------------------------------------
 8. Run this command to print all available step definitions
@@ -160,13 +160,13 @@ $ ../../../bin/behat -di
    Example:
 ================================================================================
 ```
-    $ ../../../bin/behat --tags '@development' features/vardoc/
+    $ ../../../bin/behat --tags '@development' tests/features/vardoc/
 ```
     Which it will run Scenarios which has got the @development tag.
 
 ================================================================================
 ```
-    $ ../../../bin/behat --tags '@staging' features/vardoc/
+    $ ../../../bin/behat --tags '@staging' tests/features/vardoc/
 
     Which it will run Scenarios which has got the @staging tag.
 ```
@@ -208,9 +208,9 @@ $ ../../../bin/behat -di
     initialization and cleaning up after the test.
 
 ```
-    $ ../../../bin/behat features/vardoc/step1-init-tests
-    $ ../../../bin/behat features/vardoc/step2-apply-tests
-    $ ../../../bin/behat features/vardoc/step3-cleanup-tests
+    $ ../../../bin/behat tests/features/vardoc/step1-init-tests
+    $ ../../../bin/behat tests/features/vardoc/step2-apply-tests
+    $ ../../../bin/behat tests/features/vardoc/step3-cleanup-tests
 ```
 
 # Advanced customized automated testing

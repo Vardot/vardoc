@@ -51,6 +51,5 @@ dependencies:
   - views
   - views_bootstrap
   - votingapi
-  - votingapi_widgets
-version: 8.x-1.0-rc1
-package: Vardoc
+  - votingapi_widget
+  
