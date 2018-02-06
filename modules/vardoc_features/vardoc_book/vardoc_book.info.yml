@@ -51,5 +51,5 @@ dependencies:
   - views
   - views_bootstrap
   - votingapi
-  - votingapi_widget
+  - votingapi_widgets
   

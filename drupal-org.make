@@ -43,10 +43,6 @@ projects[flag][version] = 4.0-alpha2
 projects[sharethis][type] = module
 projects[sharethis][version] = 2.0-beta3
 
-projects[varbase][type] = profile
-projects[varbase][subdir] = ""
-projects[varbase][version] = "4.14"
-
 projects[faq][type] = module
 projects[faq][download][url] = https://git.drupal.org/project/faq.git
 projects[faq][download][revision] = 2bdc0f0fd3fa1941bf7d3579a498e6f40ca9c69a
@@ -55,8 +51,11 @@ projects[faq][download][branch] = 1.x-dev
 projects[faq][patch][] = https://www.drupal.org/files/issues/unable-to-add-faq-block-2932028-9.patch
 
 projects[varbase_faqs][type] = module
-projects[varbase_faqs][download][url] = git://git.drupal.org/project/varbase_faqs.git
-projects[varbase_faqs][download][branch] = 4.x-dev
+projects[varbase_faqs][version] = 4.0-alpha1
+
+projects[varbase][type] = profile
+projects[varbase][subdir] = ""
+projects[varbase][version] = "4.14"
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
