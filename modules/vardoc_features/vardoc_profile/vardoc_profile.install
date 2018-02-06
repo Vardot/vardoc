@@ -1,0 +1,24 @@
+<?php
+
+use Drupal\user\Entity\User;
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_install().
+ */
+function vardoc_profile_install() {
+  //Load the user 1 to fill in first name, last name, and profile image
+  $user = User::load(1);
+  $user->set('field_first_name', 'Vardoc')
+    ->set('field_last_name', 'Webmaster');
+  
+  //Create avatar file entity
+  $data = file_get_contents(drupal_get_path('module', 'vardoc_profile') .  '/images/avatar.png');
+  $file = file_save_data($data, 'public://avatar.png', FILE_EXISTS_REPLACE);
+  //Attach the file into user profile image and then save it
+  $user->field_profile_image->setValue(['target_id' => $file->id()]);
+  $user->save();
+}

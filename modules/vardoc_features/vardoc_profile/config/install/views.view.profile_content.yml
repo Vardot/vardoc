@@ -659,7 +659,7 @@ display:
           tokenize: false
           content: '<h3>There are currently no new content.</h3>'
           plugin_id: text_custom
-      title: 'New contents'
+      title: 'New content'
       filters:
         status:
           value: '1'

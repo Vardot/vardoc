@@ -1,0 +1,44 @@
+{#
+/**
+ * @file
+ * Page user login.
+ */
+#}
+
+{% extends  "page.html.twig" %}
+
+{# Main #}
+{% block main %}
+<div role="main" class="main-container {{ container }}">
+  <div class="row">
+    <div id="auth-box" class="login col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4">
+      <div id="top-part">
+        {# Highlighted #}
+        {% if page.highlighted %}
+          {% block highlighted %}
+            <div class="highlighted">{{ page.highlighted }}</div>
+          {% endblock %}
+        {% endif %}
+      </div>
+      <div id="middle-part">
+        <h2 class="title">{{ title }}</h2>
+        {{ page.content_top|without('vardoctheme_local_tasks', 'vardoctheme_breadcrumbs', 'vardoctheme_local_actions', 'vardoctheme_page_title', 'exposedformbook_searchpage_search_sidebar') }}
+        {{ page.content }}
+      </div>
+      <div id="bottom-part">
+        <div class="password-link">
+          <a href="{{ path('user.pass') }}"><span class="icon glyphicon glyphicon-log-in" aria-hidden="true"></span> {{ 'Forgot your password?'|t }}</a>
+        </div>
+      {% if not logged_in and not user_settings_register_admin_only %}
+        <div class="register-link">
+          <a href="{{ path('user.register') }}"><span class="icon glyphicon glyphicon-user" aria-hidden="true"></span> {{ 'Register a new account'|t }}</a>
+        </div>
+      {% endif %}
+        <div class="back-link">
+          <a href="{{ url('<front>') }}"><span class="icon glyphicon glyphicon-home" aria-hidden="true"></span> {{ 'Back to'|t }}  {{ site_name }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock main %}
