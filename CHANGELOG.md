@@ -1,5 +1,4 @@
-### 8.1.0-rc2
-
+## 8.1.0-rc2
 
 ### Highlighted important changes since Vardoc 8.1.0-rc1:
 * Issue [#2940598](https://www.drupal.org/node/2940598):
