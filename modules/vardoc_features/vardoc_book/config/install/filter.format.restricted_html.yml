@@ -27,6 +27,7 @@ filters:
       show_invisibles: '0'
       print_margins: '1'
       auto_complete: '1'
+      use_wrap_mode: true
   filter_url:
     id: filter_url
     provider: filter

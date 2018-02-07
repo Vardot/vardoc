@@ -83,6 +83,9 @@ content:
       more_class: more-link
     third_party_settings: {  }
     region: main
+  sharethis:
+    weight: 10
+    region: content
 hidden:
   field_meta_tags: true
   langcode: true

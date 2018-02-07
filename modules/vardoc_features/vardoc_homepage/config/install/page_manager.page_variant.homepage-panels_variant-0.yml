@@ -5,10 +5,7 @@ dependencies:
     - page_manager.page.homepage
     - views.view.book
     - views.view.top_rated_articles
-  content:
-    - 'block_content:block_image:80048eaf-62c1-4bce-ac81-20f8b4ecbd8f'
   module:
-    - block_content
     - panels
     - views
 id: homepage-panels_variant-0

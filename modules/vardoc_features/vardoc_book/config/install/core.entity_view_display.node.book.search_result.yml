@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.book.field_category
     - field.field.node.book.field_comment
     - field.field.node.book.field_documents
+    - field.field.node.book.field_external_links
     - field.field.node.book.field_meta_tags
     - field.field.node.book.field_rating
     - node.type.book
@@ -99,6 +100,7 @@ hidden:
   field_category: true
   field_comment: true
   field_documents: true
+  field_external_links: true
   field_meta_tags: true
   field_rating: true
   flag_favorite: true
