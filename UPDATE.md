@@ -125,7 +125,43 @@ while working on the project.
    When we go to "/admin/config/development/features"
    Then we should see "Changed"
    When we follow with each feature to import new changes.
-   Then we will have the Vardoc site updated to the latest version.
+    And we import all new changes from features.
+   Then we should need to enable some modules to have the right import
+    And we will not have configs as imported configs "messing".
+   When we go to "/admin/modules"
+    And we check the "Varbase FAQ" check box
+    And we check the "Vardoc Profile" check box
+    And we press "Install" button
+   Then we will have newly added modules enabled
+   When we have to use "Configuration updates report for All configuration"
+    And we go to "/admin/config/development/configuration/report/import/system.simple/ds.field.print"
+    And we press "Revert" button
+    And we go to /admin/config/development/configuration/report/import/system.simple/ds.field.views"
+    And we press "Revert" button
+   Then we will not see "messing" at the features page
+    And we should see the new fields of "views" and "print" in the Book full content page
+   When we go to /admin/config/development/configuration/report/revert/block/vardoctheme_branding"
+    And we press "Revert" button
+    And we go to /admin/config/development/configuration/report/revert/block/vardoctheme_breadcrumbs"
+    And we press "Revert" button
+    And we go to /admin/config/development/configuration/report/revert/block/vardoctheme_content"
+    And we press "Revert" button
+    And we go to /admin/config/development/configuration/report/revert/block/vardoctheme_footer"
+    And we press "Revert" button
+    And we go to /admin/config/development/configuration/report/revert/block/vardoctheme_help"
+    And we press "Revert" button
+    And we go to /admin/config/development/configuration/report/revert/block/vardoctheme_local_actions"
+    And we press "Revert" button
+    And we go to /admin/config/development/configuration/report/revert/block/vardoctheme_local_tasks"
+    And we press "Revert" button
+    And we go to /admin/config/development/configuration/report/revert/block/vardoctheme_main_menu"
+    And we press "Revert" button
+    And we go to /admin/config/development/configuration/report/revert/block/vardoctheme_messages"
+    And we press "Revert" button
+    And we go to /admin/config/development/configuration/report/revert/block/vardoctheme_page_title"
+    And we press "Revert" button
+   Then we will have "blocks" of "Vardoc Theme" positioned in the new region location.
+    And we will have the Vardoc site updated to the latest version.
 
 
 

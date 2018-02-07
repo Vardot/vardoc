@@ -20,7 +20,7 @@
 * Issue [#2939473](https://www.drupal.org/node/2939473):
         Changed [Vardoc page] feature module page full content display mode.
 * Issue [#2937774](https://www.drupal.org/node/2937774):
-        Updated [Varbase] form 8.4.13 to 8.4.14
+        Updated [Varbase core] profile from 8.4.13 to 8.4.14
 
 ### Added since Vardoc 8.1.0-rc1:
 * Issue [#2940598](https://www.drupal.org/node/2940598):
@@ -59,10 +59,13 @@
 * Issue [#2937953](https://www.drupal.org/node/2937953):
         Changed composer SPDX license identifier
         from GPL-2.0+ to GPL-2.0-or-later
+* Issue [#2939499](https://www.drupal.org/node/2939499):
+        Vardoc 8.1.0-rc2 : Updated [CHANGELOG.md, UPDATE.md] files and
+        filtered the code for Drupal 8 Coding Standard.
 
 ### Updates since Vardoc 8.1.0-rc1:
 * Issue [#2937774](https://www.drupal.org/node/2937774):
-        Updated [Varbase] from 8.4.13 to 8.4.14
+        Updated [Varbase core] profile from 8.4.13 to 8.4.14
 
 ### Fixes since Vardoc 8.1.0-rc1:
 * Issue [#2929774](https://www.drupal.org/node/2929774):
