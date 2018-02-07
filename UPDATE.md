@@ -136,34 +136,33 @@ while working on the project.
    When we have to use "Configuration updates report for All configuration"
     And we go to "/admin/config/development/configuration/report/import/system.simple/ds.field.print"
     And we press "Revert" button
-    And we go to /admin/config/development/configuration/report/import/system.simple/ds.field.views"
+    And we go to "/admin/config/development/configuration/report/import/system.simple/ds.field.views"
     And we press "Revert" button
    Then we will not see "messing" at the features page
     And we should see the new fields of "views" and "print" in the Book full content page
-   When we go to /admin/config/development/configuration/report/revert/block/vardoctheme_branding"
+   When we go to "/admin/config/development/configuration/report/revert/block/vardoctheme_branding"
     And we press "Revert" button
-    And we go to /admin/config/development/configuration/report/revert/block/vardoctheme_breadcrumbs"
+    And we go to "/admin/config/development/configuration/report/revert/block/vardoctheme_breadcrumbs"
     And we press "Revert" button
-    And we go to /admin/config/development/configuration/report/revert/block/vardoctheme_content"
+    And we go to "/admin/config/development/configuration/report/revert/block/vardoctheme_content"
     And we press "Revert" button
-    And we go to /admin/config/development/configuration/report/revert/block/vardoctheme_footer"
+    And we go to "/admin/config/development/configuration/report/revert/block/vardoctheme_footer"
     And we press "Revert" button
-    And we go to /admin/config/development/configuration/report/revert/block/vardoctheme_help"
+    And we go to "/admin/config/development/configuration/report/revert/block/vardoctheme_help"
     And we press "Revert" button
-    And we go to /admin/config/development/configuration/report/revert/block/vardoctheme_local_actions"
+    And we go to "/admin/config/development/configuration/report/revert/block/vardoctheme_local_actions"
     And we press "Revert" button
-    And we go to /admin/config/development/configuration/report/revert/block/vardoctheme_local_tasks"
+    And we go to "/admin/config/development/configuration/report/revert/block/vardoctheme_local_tasks"
     And we press "Revert" button
-    And we go to /admin/config/development/configuration/report/revert/block/vardoctheme_main_menu"
+    And we go to "/admin/config/development/configuration/report/revert/block/vardoctheme_main_menu"
     And we press "Revert" button
-    And we go to /admin/config/development/configuration/report/revert/block/vardoctheme_messages"
+    And we go to "/admin/config/development/configuration/report/revert/block/vardoctheme_messages"
     And we press "Revert" button
-    And we go to /admin/config/development/configuration/report/revert/block/vardoctheme_page_title"
+    And we go to "/admin/config/development/configuration/report/revert/block/vardoctheme_page_title"
     And we press "Revert" button
    Then we will have "blocks" of "Vardoc Theme" positioned in the new region location.
     And we will have the Vardoc site updated to the latest version.
-
-
+```
 
 
 # Updating Vardot 8.1.0-beta3 to Vardot 8.1.0-rc1
