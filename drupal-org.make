@@ -27,7 +27,7 @@ projects[votingapi_widgets][download][revision] = 4aa50d00ad3928cd90eb1f922956b9
 projects[votingapi_widgets][download][branch] = 1.x-dev
 
 projects[flag][type] = module
-projects[flag][version] = 4.0-alpha2
+projects[flag][version] = 4.0-alpha3
 
 projects[sharethis][type] = module
 projects[sharethis][version] = 2.0-beta3
