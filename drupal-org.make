@@ -19,7 +19,7 @@ projects[menu_item_visibility][download][revision] = 7806c36b68bdc1ac3582e3a034b
 projects[menu_item_visibility][download][branch] = 1.x-dev
 
 projects[votingapi][type] = module
-projects[votingapi][version] = 3.0-alpha2
+projects[votingapi][version] = 3.0-alpha5
 
 projects[votingapi_widgets][type] = module
 projects[votingapi_widgets][download][url] = https://git.drupal.org/project/votingapi_widgets.git
