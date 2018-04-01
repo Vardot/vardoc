@@ -7,15 +7,6 @@ defaults[projects][subdir] = contrib
 ;; Contrib modules
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[social_api][type] = module
-projects[social_api][version] = 1.1
-
-projects[social_auth][type] = module
-projects[social_auth][version] = 1.0
-
-projects[social_auth_google][type] = module
-projects[social_auth_google][version] = 1.0
-
 projects[fontawesome][type] = module
 projects[fontawesome][version] = 1.3
 
@@ -32,10 +23,8 @@ projects[votingapi][version] = 3.0-alpha2
 
 projects[votingapi_widgets][type] = module
 projects[votingapi_widgets][download][url] = https://git.drupal.org/project/votingapi_widgets.git
-projects[votingapi_widgets][download][revision] = 97133ddc9798a912eababe63e1a86deff3e5d9c9
+projects[votingapi_widgets][download][revision] = 4aa50d00ad3928cd90eb1f922956b9f46ab18f2c
 projects[votingapi_widgets][download][branch] = 1.x-dev
-;; Issue #2905948: Strict Warning for $stringTranslation.
-projects[votingapi_widgets][patch][] = https://www.drupal.org/files/issues/strict-warning-stringtranslation-2905948-2.patch
 
 projects[flag][type] = module
 projects[flag][version] = 4.0-alpha2
@@ -55,7 +44,7 @@ projects[varbase_faqs][version] = 4.0-alpha1
 
 projects[varbase][type] = profile
 projects[varbase][subdir] = ""
-projects[varbase][version] = "4.14"
+projects[varbase][version] = "4.18"
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
@@ -82,3 +71,7 @@ libraries[ace][directory_name] = "ace"
 libraries[ace][download][type] = "get"
 libraries[ace][download][url] = "http://github.com/ajaxorg/ace-builds/archive/v1.2.6.tar.gz"
 libraries[ace][destination] = "libraries"
+
+libraries[jquery-bar-rating][download][type] = "get"
+libraries[jquery-bar-rating][download][url] = "https://github.com/antennaio/jquery-bar-rating/archive/v1.2.2.tar.gz"
+libraries[jquery-bar-rating][destination] = "libraries"

@@ -72,13 +72,14 @@ class VardocDemoEventSubscriber implements EventSubscriberInterface {
         "p3" => 0, "p4" => 0, "p5" => 0, "p6" => 0, "p7" => 0, "p8" => 0, "p9" => 0,
       ],
     ];
+
     $book_children = [];
     $entities = $event->getImportedEntities();
     $book_manager = \Drupal::service('book.manager');
     foreach ($entities as $uuid => $entity) {
-      if($entity->getEntityTypeId() == 'node' && book_type_is_allowed($entity->getType())) {
-        if(array_key_exists ($uuid, $books)) {
-          if($books[$uuid]['bid'] == $uuid) {
+      if ($entity->getEntityTypeId() == 'node' && book_type_is_allowed($entity->getType())) {
+        if (array_key_exists ($uuid, $books)) {
+          if ($books[$uuid]['bid'] == $uuid) {
             // Create a new book
             $new_book = $books[$uuid];
             $new_book['nid'] = $entity->id();
@@ -92,6 +93,7 @@ class VardocDemoEventSubscriber implements EventSubscriberInterface {
         }
       }
     }
+
     foreach ($book_children as $child_uuid => $child_book) {
       // Create a new book
       $new_book = $books[$child_uuid];

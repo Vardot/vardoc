@@ -20,16 +20,29 @@
     {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "antennaio/jquery-bar-rating",
+        "version": "1.2.2",
+        "type": "drupal-library",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/antennaio/jquery-bar-rating/archive/v1.2.2.zip"
+        }
+      }
     }
   ],
   "require": {
-    "composer/installers": "1.4.0",
+    "composer/installers": "1.5.0",
+    "oomphinc/composer-installers-extender": "1.1.2",
     "cweagans/composer-patches": "1.6.4",
     "drupal-composer/drupal-scaffold": "2.4.0",
     "drupal/drupal-library-installer-plugin": "0.3",
-    "webflo/drupal-finder": "1.0",
-    "webmozart/path-util": "2.3",
-    "vardot/varbase": "8.4.14",
+    "webflo/drupal-finder": "1.1.0",
+    "webmozart/path-util": "2.3.0",
+    "vardot/varbase": "8.4.18",
     "drupal/views_bootstrap": "3.x-dev#ec4e7872315db6a7287014b029c3167962647588",
     "drupal/extlink": "1.x-dev#8a773a6c5519ccb167e18cc39d68551b30b0e4b3",
     "drupal/image_resize_filter": "1.x-dev#c3f4b23b02005859092aaff746b9f21b794adc58",
@@ -42,35 +55,34 @@
     "drupal/security_review": "1.x-dev#35ebae445bb260e961e47c4c58efe7c50c228999",
     "drupal/menu_position": "1.x-dev#d134276b4bbd08b3c9678943d0225fbef7dd05b5",
     "drupal/mail_edit": "1.x-dev#bcd0041830d8581b36e6211f0c8eabd8caf9652b",
-    "drupal/libraries": "3.x-dev#061ead081c92a6209b09eaf23b4e3103f360946e",
+    "drupal/taxonomy_menu": "3.x-dev#1103ad0855de4d242364a5b7e74a5c5fc1ce9e02",
+    "drupal/material_admin_support": "1.x-dev#96ce192c31643faf69d77aca3c68578f778be3bc",
+    "drupal/type_style": "1.x-dev#486a8ec7c1c7dcd93790ee281c78cfa3dba90d78",
     "drupal/google_analytics_reports": "3.x-dev#2b6bb8efbc7f61ce3c1225638075aa6037b8db44",
     "drupal/login_destination": "1.x-dev#54be8b89fdc073ca40af6b9b2eeb050e0aeb7908",
     "drupal/betterlogin": "1.x-dev#f7cf1c5c9ec5e80c6ac0ef04ed605e25495232cd",
-    "drupal/social_api": "1.1",
-    "drupal/social_auth": "1.0",
-    "drupal/social_auth_google": "1.0",
     "drupal/fontawesome": "1.3",
     "drupal/better_normalizers": "1.0-beta3",
     "drupal/menu_item_visibility": "1.x-dev#7806c36b68bdc1ac3582e3a034b94126cd3d1d32",
-    "drupal/votingapi": "3.0-alpha2",
-    "drupal/votingapi_widgets": "1.x-dev#97133ddc9798a912eababe63e1a86deff3e5d9c9",
+    "drupal/votingapi": "3.0-alpha5",
+    "drupal/votingapi_widgets": "1.x-dev#4aa50d00ad3928cd90eb1f922956b9f46ab18f2c",
     "drupal/flag": "4.0-alpha2",
     "drupal/sharethis": "2.0-beta3",
     "drupal/faq": "1.x-dev#2bdc0f0fd3fa1941bf7d3579a498e6f40ca9c69a",
-    "drupal/varbase_faqs": "4.0-alpha1"
+    "drupal/varbase_faqs": "4.x-dev"
   },
   "require-dev": {
-    "drush/drush": "8.1.15",
+    "drush/drush": "8.1.16",
     "drupal/coder": "8.2.12",
-    "drupal/drupal-extension": "3.3.1",
-    "phing/phing": "2.16.0",
-    "behat/behat": "3.4.1",
+    "drupal/drupal-extension": "3.4.1",
+    "phing/phing": "2.16.1",
+    "behat/behat": "3.4.3",
     "behat/mink": "1.7.1",
-    "behat/mink-extension": "2.3.0",
+    "behat/mink-extension": "2.3.1",
     "behat/mink-goutte-driver": "1.2.1",
     "behat/mink-zombie-driver": "1.4.0",
     "behat/mink-selenium2-driver": "1.3.1",
-    "behatch/contexts": "3.0.0",
+    "behatch/contexts": "3.1.0",
     "emuse/behat-html-formatter": "0.1.0"
   },
   "config": {
@@ -125,10 +137,6 @@
       "drush/drush": {
         "Add profile dependencies for drush.":
         "https://patch-diff.githubusercontent.com/raw/drush-ops/drush/pull/2697.patch"
-      },
-      "drupal/votingapi_widgets": {
-        "Issue #2905948: Strict Warning for $stringTranslation":
-        "https://www.drupal.org/files/issues/strict-warning-stringtranslation-2905948-2.patch"
       },
       "drupal/faq": {
         "Issue #2932028: Unable to place FAQ Categories block.":
