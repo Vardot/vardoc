@@ -20,9 +20,8 @@ dependencies:
   - node
   - panelizer
   - smart_trim
+  - tracker
   - user
   - varbase_media
   - vardoc_book
-  - vardoc_profile
   - views
-

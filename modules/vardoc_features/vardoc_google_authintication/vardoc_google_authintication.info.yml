@@ -8,5 +8,5 @@ dependencies:
   - block
   - block_class
   - social_auth
-  - social_auth_google
   - system
+  - user

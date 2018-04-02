@@ -3,7 +3,6 @@ status: true
 dependencies:
   module:
     - block_class
-    - vardoc_profile
   theme:
     - vardoctheme
 third_party_settings:
