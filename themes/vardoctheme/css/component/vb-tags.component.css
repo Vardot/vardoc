@@ -1,0 +1,25 @@
+.vb-tags {
+  padding-left: 0;
+  margin: 20px 0;
+  list-style: none;
+}
+.vb-tags li {
+  display: inline;
+}
+.vb-tags li > a,
+.vb-tags li > span {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+.vb-tags li > a:hover,
+.vb-tags li > a:focus {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+[dir="rtl"] .vb-tags {
+  padding-right: 0;
+  padding-left: initial;
+}

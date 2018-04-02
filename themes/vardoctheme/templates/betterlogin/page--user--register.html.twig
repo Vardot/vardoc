@@ -21,9 +21,16 @@
         {% endif %}
       </div>
       <div id="middle-part">
-        <h2 class="title">{{ title }}</h2>
         {{ page.content_top|without('vardoctheme_local_tasks', 'vardoctheme_breadcrumbs', 'vardoctheme_local_actions', 'vardoctheme_page_title', 'exposedformbook_searchpage_search_sidebar') }}
-        {{ page.content }}
+        {% if (varbase.we_do_have_enabled_social_auth_modules.value) and (page.content.vardoctheme_socialauthlogin) %}
+          <h2 class="block-title"><span> {{ "Sign up with"|t }} </span></h2>
+          {{ page.content.vardoctheme_socialauthlogin }}
+          <h2 class="block-title"><span> {{ "or"|t }} </span></h2>
+          {{ page.content|without('vardoctheme_socialauthlogin') }}
+        {% else %}
+          <h2 class="block-title"><span> {{ title }} </span></h2>
+          {{ page.content }}
+        {% endif %}
       </div>
       <div id="bottom-part">
       {% if not logged_in %}

@@ -2,7 +2,7 @@ core: 8.x
 type: theme
 base theme: vartheme
 
-name: 'Vardoc Theme'
+name: 'vardoctheme'
 description: 'Uses the Bootstrap framework LESS source files and must be compiled (not for beginners).'
 package: 'Varbase'
 
@@ -12,6 +12,7 @@ regions:
   header_right: 'Header Right'
   header: 'Top Bar'
   content_top: 'Top Content'
+  hero_slider: 'Media Hero Slider'
   highlighted: 'Highlighted'
   help: 'Help'
   content: 'Content'
@@ -26,17 +27,17 @@ libraries:
   - vardoctheme/bootstrap-styles
   - vardoctheme/bootstrap-scripts
   
-# Vardoc theme custom Vartheme styles and scripts libraries.
+# vardoctheme custom Vartheme styles and scripts libraries.
   - vardoctheme/vartheme-styles
 
-# Vardoc theme global styles and scripts libraries.
+# vardoctheme global styles and scripts libraries.
   - vardoctheme/global-styles
   - vardoctheme/global-scripts
   
-# Vardoc theme Varbase Bootstrap Paragraphs colors theme.
+# vardoctheme Varbase Bootstrap Paragraphs colors theme.
   - vardoctheme/vbp-colors
-
-# Vardoc Better Login theme.
+  
+# vardoctheme Better Login theme.
 #  - vardoctheme/betterlogin
 
 # OPTIONALLY: You can choose to remove Vartheme base theme stylesheets and/or
@@ -50,15 +51,16 @@ libraries-override:
   vartheme/bootstrap-scripts: false
   vartheme/global-styles: false
   vartheme/global-scripts: true
-  
+
 # Comment lines to use (RTL) libraries from vartheme.
   vartheme/bootstrap-styles-rtl: false
   vartheme/global-styles-rtl: false
+# Comment lines to use (RTL) libraries from vardoctheme.
   vardoctheme/bootstrap-styles-rtl: false
   vardoctheme/vartheme-styles-rtl: false
   vardoctheme/global-styles-rtl: false
 
-# Vardoc theme Varbase Bootstrap Paragraphs colors theme.
+# vardoctheme Varbase Bootstrap Paragraphs colors theme.
   varbase_bootstrap_paragraphs/vbp-colors: vardoctheme/vbp-colors
   vartheme/vbp-colors: vardoctheme/vbp-colors
 #  vartheme/betterlogin: vardoctheme/betterlogin
@@ -67,10 +69,12 @@ libraries-override:
 # You will need to copy less/css files from Vartheme to use theme for the
 # overriden library.
 # ------------------------------------------------------------------------------
-  vartheme/bs-callouts: vardoctheme/bs-callouts
-  vartheme/outside-in: vardoctheme/outside-in
-  vartheme/edge2edge: vardoctheme/edge2edge
-  vartheme/navbar-admin: vardoctheme/navbar-admin
+#  vartheme/bs-callouts: vardoctheme/bs-callouts
+#  vartheme/card: vardoctheme/card
+#  vartheme/outside-in: vardoctheme/outside-in
+#  vartheme/edge2edge: vardoctheme/edge2edge
+#  vartheme/equal-height: vardoctheme/equal-height
+#  vartheme/navbar-admin: vardoctheme/navbar-admin
 # ------------------------------------------------------------------------------
 #  vartheme/ajax: vardoctheme/ajax
 #  vartheme/alert: vardoctheme/alert
@@ -87,6 +91,13 @@ libraries-override:
 #  vartheme/tabs: vardoctheme/tabs
 #  vartheme/toolbar: vardoctheme/toolbar
 #  vartheme/autocomplete: vardoctheme/autocomplete
+
+#  Uncomment the following if you want to keep bootstrap/framework
+#    and you want to extend it.
+#libraries-extend:
+#  bootstrap/framework:
+#    - vartheme/framework
+#    - vardoctheme/framework
 
 ckeditor_stylesheets:
   - css/base/bootstrap.base.css

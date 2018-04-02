@@ -46,3 +46,13 @@ body.toolbar-fixed {
   }
 
 }
+
+// Remove flicking.
+body.toolbar-loading {
+
+  margin-top: 0;
+
+  &.toolbar {
+    margin-bottom: (@grid-gutter-width / 2);
+  }
+}

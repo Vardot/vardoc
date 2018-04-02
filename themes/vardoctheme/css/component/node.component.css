@@ -4,7 +4,8 @@
 .node-preview-form-select {
   padding: 15px;
 }
-.node-unpublished {
+.node-unpublished,
+.is-unpublished {
   background-color: #fff4f4;
 }
 .unpublished {

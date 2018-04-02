@@ -1,5 +1,5 @@
 //
-// Variables
+// vardoctheme Variables ovarrides.
 // --------------------------------------------------
 
 
@@ -14,7 +14,11 @@
 @gray-light:             lighten(@gray-base, 46.7%); // #777
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
-@blue-dark:              #23527c;
+@brand-primary:         darken(#428bca, 6.5%);
+@brand-success:         #5cb85c;
+@brand-info:            #5bc0de;
+@brand-warning:         #f0ad4e;
+@brand-danger:          #d9534f;
 
 @brand-primary:          darken(#428bca, 6.5%);
 @brand-success:          #5cb85c;
@@ -37,7 +41,7 @@
 //** Link hover color set via `darken()` function.
 @link-hover-color:      darken(@link-color, 15%);
 //** Link hover decoration.
-@link-hover-decoration: none;
+@link-hover-decoration: underline;
 
 
 //== Typography
@@ -78,7 +82,7 @@
 //## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
 
 //** Load fonts from this directory.
-@icon-font-path:          "../bootstrap/fonts/";
+@icon-font-path:          "../../bootstrap/fonts/";
 //** File name for all font files.
 @icon-font-name:          "glyphicons-halflings-regular";
 //** Element ID within SVG icon file.
@@ -857,6 +861,10 @@
 //** Horizontal line color.
 @hr-border:                   @gray-lighter;
 
+// =============================================================================
+// Custom Vartheme variables.
+// =============================================================================
+
 // Media query variables.
 @mobile:          ~"screen and (max-width: @{screen-xs-max})";
 @tablet:          ~"screen and (min-width: @{screen-sm-min})";
@@ -864,8 +872,25 @@
 @wide:            ~"screen and (min-width: @{screen-lg-min})";
 @grid-breakpoint: ~"screen and (min-width: @{grid-float-breakpoint})";
 
-// Set the proper directory for the Bootstrap Glyphicon font.
-@icon-font-path: '../../bootstrap/fonts/';
+// Card bootstrap3 back-ported from bootstrap4.
+@card-spacer-y:                     0.75rem;
+@card-spacer-x:                     1.25rem;
+@card-border-width:                 1px;
+@card-border-radius:                @border-radius-base;
+@card-border-color:                 rgba(red(@gray-base), green(@gray-base), blue(@gray-base), 0.125);
+@card-inner-border-radius:          calc(@card-border-radius - @card-border-width);
+@card-cap-bg:                       rgba(red(@gray-base), green(@gray-base), blue(@gray-base), 0.03);
+@card-bg:                           #fff;
+
+@card-img-overlay-padding:          1.25rem;
+
+@card-group-margin:                 floor(@grid-gutter-width/2);
+@card-deck-margin:                  @card-group-margin;
+
+@card-columns-count:                3;
+@card-columns-gap:                  1.25rem;
+@card-columns-margin:               @card-spacer-y;
+
 
 // Footer wrapper background color.
 @footer-wrapper-bg:             #f2f2f2;
@@ -874,21 +899,24 @@
 // less/theme/vbp-colors.theme.less
 
 // Site Colors
-@DarkGray:                    #303030;
-@DimGray:                     #696969;
-@Black:                       #000;
-@White:                       #fff;
-@Curious-Blue:                #328ec7;
-@Gainsboro:                   #d8d8d8;
-@Shady-Gray:                  #979797;
-@White-Smoke:                 #f7f7f7;
-@White-light:                 #fafafa;
-@Blue-light:                  #99B3DD;
+@dark-gray:                   #303030;
+@dim-gray:                    #696969;
+@black:                       #000;
+@black-light:                 #2A2A2A;
+@white:                       #fff;
+@white-smoke:                 #f7f7f7;
+@white-light:                 #fafafa;
+
+@gainsboro:                   #d8d8d8;
+@shady-gray:                  #979797;
+
+@blue-base:                   #337ab7;
+@blue-light:                  #99B3DD;
+@blue-dark:                   #23527c;
+@curious-blue:                #328ec7;
+
 @social-color:                #686868;
 @icon-color:                  #1985c4;
-@white:                       #ffffff;
 @gray-bg:                     #f6f6f6;
 @light-orange:                #fdb334;
-@blue-base:                   #337ab7;
-@black-light:                 #2A2A2A;
 @pink-base:                   #f05f70;

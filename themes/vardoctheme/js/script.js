@@ -12,7 +12,7 @@
       $('#block-exposedformbook-searchpage-search form').submit(function () {
         if ($.trim($(".form-text").val()) === "") {
           return false;
-        }
+      }
       });
       // Adding the title attribute for the sharethis wrapper. 
       $('.sharethis-wrapper').attr('title', Drupal.t('Share'));

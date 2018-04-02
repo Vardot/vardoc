@@ -217,7 +217,7 @@ header#navbar .menu .active a {
   padding-right: 15px;
   position: relative;
   font-size: 14px;
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
 }
 .navbar-default .user-account-wrapper .header-avatar .dropdown-toggle .user-full-name::after {
@@ -242,7 +242,7 @@ header#navbar .menu .active a {
 .navbar-default .user-account-wrapper .header-avatar .notifications-count a {
   font-size: 10px;
   font-weight: bold;
-  color: #ffffff;
+  color: #fff;
 }
 .navbar-default .user-account-wrapper .header-account-menu {
   top: 58px;

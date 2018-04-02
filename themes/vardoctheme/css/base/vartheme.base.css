@@ -74,7 +74,9 @@ ul.secondary {
 .block:first-child h2.block-title {
   margin-top: 0;
 }
-p:last-child {
+p:last-child,
+.form-group:last-child,
+.panel:last-child {
   margin-bottom: 0;
 }
 .region-help > .glyphicon {
@@ -639,4 +641,23 @@ img {
 }
 .maintenance-page #page {
   text-align: center;
+}
+.hidden-anonymous {
+  display: none !important;
+}
+body.user-logged-in .visible-admin {
+  display: inline-block !important;
+}
+body.user-logged-in .btn.visible-admin {
+  display: inline-block !important;
+}
+.justify-content-center {
+  -webkit-box-pack: center!important;
+  -ms-flex-pack: center!important;
+  justify-content: center!important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }

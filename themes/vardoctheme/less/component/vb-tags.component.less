@@ -1,0 +1,45 @@
+// Varbase bootstrap tags styling.
+// --------------------------------------------------
+// vb-tags: Styles a list of tags, which much looks like the pager with
+//          rounded borders.
+// -----------------------------------------------------------------------------
+@import "../../bootstrap/less/variables.less";  // Bootstrap variables.
+@import "../../bootstrap/less/mixins.less";     // Bootstrap mixins.
+@import "../variables.less";                    // vardoctheme variables.
+@import "../mixins.less";                       // vardoctheme mixins.
+// -----------------------------------------------------------------------------
+
+//
+// Vartheme Bootstrap tags component styling.
+// --------------------------------------------------
+.vb-tags {
+  padding-left: 0;
+  margin: @line-height-computed 0;
+  list-style: none;
+  &:extend(.clearfix all);
+  li {
+    display: inline;
+    > a,
+    > span {
+      display: inline-block;
+      padding: 5px 14px;
+      background-color: @pager-bg;
+      border: 1px solid @pager-border;
+      border-radius: @pager-border-radius;
+    }
+
+    > a:hover,
+    > a:focus {
+      text-decoration: none;
+      background-color: @pager-hover-bg;
+    }
+  }
+}
+
+//
+// Vartheme Material Bootstrap tags component RTL styling.
+// --------------------------------------------------
+[dir="rtl"] .vb-tags {
+  padding-right: 0;
+  padding-left: initial;
+}

@@ -1,4 +1,38 @@
-# Vardoc theme global styles library.
+# vardoctheme framework as which could be used to extend bootstrap/framework
+#          vardoctheme/framework = vardoctheme/bootstrap-styles
+#                                      + vardoctheme/bootstrap-scripts
+#                                      + vardoctheme/vartheme-styles
+#                                      + vardoctheme/global-styles
+#                                      + vardoctheme/global-scripts 
+#                                      + vartheme/bootstrap-print
+framework:
+  css: {}
+  js: {}
+  dependencies:
+    - core/jquery
+    - vardoctheme/bootstrap-styles
+    - vardoctheme/bootstrap-scripts
+    - vardoctheme/vartheme-styles
+    - vardoctheme/global-styles
+    - vardoctheme/global-scripts
+    - vartheme/bootstrap-print
+
+# vardoctheme framework RTL as which could be used to extend bootstrap/framework
+#          vardoctheme/framework-rtl = vardoctheme/bootstrap-rtl
+#                                          + vardoctheme/vartheme-styles-rtl
+#                                          + vardoctheme/global-styles-rtl
+#                                          + vartheme/bootstrap-print-rtl
+framework-rtl:
+  css: {}
+  js: {}
+  dependencies:
+    - core/jquery
+    - vardoctheme/bootstrap-rtl
+    - vardoctheme/vartheme-styles-rtl
+    - vardoctheme/global-styles-rtl
+    - vartheme/bootstrap-print-rtl
+
+# vardoctheme global styles library.
 global-styles: 
   css:
     base:
@@ -7,8 +41,10 @@ global-styles:
       css/theme/header.theme.css: {}
       css/theme/content.theme.css: {}
       css/theme/footer.theme.css: {}
+  dependencies:
+    - core/jquery
 
-# Vardoc theme global (RTL) styles library.
+# vardoctheme global (RTL) styles library.
 global-styles-rtl:
   css:
     base:
@@ -17,45 +53,41 @@ global-styles-rtl:
       css/rtl/theme/header-rtl.theme.css: {}
       css/rtl/theme/content-rtl.theme.css: {}
       css/rtl/theme/footer-rtl.theme.css: {}
+  dependencies:
+    - core/jquery
 
-# Vardoc theme global scripts library.
+# vardoctheme global scripts library.
 global-scripts:
   js:
     js/script.js: {}
+  dependencies:
+    - core/jquery
     
-# Vardoc theme Varbase Bootstrap Paragraphs colors theme.
-vbp-colors:
-  css:
-    theme:
-      css/theme/vbp-colors.theme.css: {}
-
-
-
-# Vardoc theme Vartheme styles library.
+# vardoctheme Vartheme styles library.
 vartheme-styles:
   css:
     base:
       css/base/vartheme.base.css: {}
 
-# Vardoc theme Vartheme (RTL) styles library.
+# vardoctheme Vartheme (RTL) styles library.
 vartheme-styles-rtl:
   css:
     base:
       css/rtl/base/vartheme-rtl.base.css: {}
-
-# Vardoc theme Bootstrap global styles library.
+      
+# vardoctheme Bootstrap global styles library.
 bootstrap-styles:
   css:
     base:
       css/base/bootstrap.base.css: {}
 
-# Vardoc theme Bootstrap global (RTL) styles library.
+# vardoctheme Bootstrap global (RTL) styles library.
 bootstrap-styles-rtl:
   css:
     base:
       css/rtl/base/bootstrap-rtl.base.css: {}
       
-# Vardoc theme Bootstrap global scripts library.
+# vardoctheme Bootstrap global scripts library.
 bootstrap-scripts:
   js:
     bootstrap/js/affix.js: {}
@@ -69,9 +101,21 @@ bootstrap-scripts:
     bootstrap/js/popover.js: {}
     bootstrap/js/scrollspy.js: {}
     bootstrap/js/tab.js: {}
-#    bootstrap/js/tooltip.js: {}
     bootstrap/js/transition.js: {}
     
+# vardoctheme Varbase Bootstrap Paragraphs colors theme.
+vbp-colors:
+  css:
+    theme:
+      css/theme/vbp-colors.theme.css: {}
+
+# vardoctheme better login theme.
+#betterlogin:
+#  css:
+#    theme:
+#      css/theme/betterlogin.theme.css: {}
+
+   
 # ------------------------------------------------------------------------------
 # Vartheme custom theme, layout, and components.
 # ------------------------------------------------------------------------------
@@ -102,11 +146,23 @@ edge2edge:
     layout:
       css/layout/edge2edge.layout.css: {}
 
+# Vartheme Material Equal height layout library.
+#equal-height:
+#  css:
+#    layout:
+#      css/layout/equal-height.layout.css: {}
+
 # Vartheme Bootstrap Callouts component library.
 bs-callouts:
   css:
     component:
       css/component/bs-callouts.component.css: {}
+
+# Vartheme bootstrap card component.
+#card:
+#  css:
+#    component:
+#      css/component/card.component.css: {}
 
 # Vartheme Outside in component library.
 outside-in:

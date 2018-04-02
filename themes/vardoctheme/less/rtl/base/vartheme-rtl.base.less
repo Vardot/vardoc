@@ -6,12 +6,14 @@
 @import "../../mixins.less";                       // vardoctheme mixins.
 
 // Core variables and mixins imported from the latest original bootstrap.
-// Mixins
-// --------------------------------------------------
-@import "../../../bootstrap-rtl/less/mixins/pagination-rtl.less"; // RTL
-@import "../../../bootstrap-rtl/less/mixins/gradients-rtl.less"; // RTL
-@import "../../../bootstrap-rtl/less/mixins/grid-framework-rtl.less"; // RTL
-@import "../../../bootstrap-rtl/less/mixins/grid-rtl.less"; // RTL
+@import "../../../bootstrap-rtl/less/mixins-rtl.less";
 // -----------------------------------------------------------------------------
 
 // Insert your Bootstrap (RTL) overrides for bootstrap-rtl library.
+
+// Justify content center.
+[dir="rtl"] .justify-content-center {
+  &.nav-pills > li + li {
+    margin-left: inherit;
+  }
+}

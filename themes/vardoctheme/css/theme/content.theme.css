@@ -365,7 +365,7 @@ body.user-logged-in.navbar-is-fixed-top .navbar-fixed-top {
 .view-display-id-block_books_level_1 .views-field-title span a:hover,
 .view-display-id-block_books_level_1 .views-field-title span a:focus,
 .view-display-id-block_books_level_1 .views-field-title span a:active {
-  color: #ffffff;
+  color: #fff;
 }
 .view-display-id-block_books_level_1 .views-field-title span a:hover:before,
 .view-display-id-block_books_level_1 .views-field-title span a:focus:before,
@@ -732,7 +732,7 @@ body.user-logged-in.navbar-is-fixed-top .navbar-fixed-top {
   float: right;
   border: 2px solid #337ab7;
   padding: 5px 20px;
-  background: #ffffff;
+  background: #fff;
   color: #337ab7;
   font-weight: 600;
   display: inline-block;
@@ -780,7 +780,7 @@ body.user-logged-in.navbar-is-fixed-top .navbar-fixed-top {
 .user-blocks .views-row .views-field-view-node a:active,
 .user-blocks .views-row .field-node-link a:active,
 .user-blocks .views-row .field--name-node-link a:active {
-  color: #ffffff;
+  color: #fff;
 }
 .user-blocks .views-row .views-field-view-node a:hover:before,
 .user-blocks .views-row .field-node-link a:hover:before,
@@ -876,7 +876,7 @@ body.user-logged-in.navbar-is-fixed-top .navbar-fixed-top {
 .hvr-sweep-to-bottom:hover,
 .hvr-sweep-to-bottom:focus,
 .hvr-sweep-to-bottom:active {
-  color: #ffffff;
+  color: #fff;
 }
 .hvr-sweep-to-bottom:hover:before,
 .hvr-sweep-to-bottom:focus:before,
