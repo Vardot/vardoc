@@ -5,12 +5,17 @@ core: 8.x
 version: 8.x-1.x-dev
 package: Vardoc
 dependencies:
+  - better_exposed_filters
   - block
   - block_class
+  - ctools
+  - ds
   - node
+  - panelizer
   - search_api
   - search_api_db
   - system
+  - text
   - ultimate_cron
   - user
   - vardoc_book

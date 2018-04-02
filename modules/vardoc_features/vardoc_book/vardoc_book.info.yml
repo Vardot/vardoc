@@ -6,6 +6,8 @@ version: 8.x-1.x-dev
 package: Vardoc
 dependencies:
   - ace_editor
+  - advanced_text_formatter
+  - better_exposed_filters
   - block
   - block_class
   - book
@@ -22,8 +24,12 @@ dependencies:
   - file
   - filter
   - flag
+  - focal_point
+  - history
+  - image
   - image_resize_filter
   - link
+  - menu_block
   - menu_ui
   - metatag
   - node
@@ -32,16 +38,19 @@ dependencies:
   - pathauto
   - pathologic
   - rabbit_hole
+  - search_api
+  - search_api_db
   - sharethis
-  - simple_sitemap
   - smart_trim
   - statistics
   - system
   - taxonomy
   - text
   - user
+  - varbase_editor
   - varbase_seo
   - video_embed_wysiwyg
   - views
+  - views_bootstrap
   - votingapi
   - votingapi_widgets
