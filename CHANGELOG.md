@@ -1,3 +1,38 @@
+## 8.1.0-rc3
+
+### Highlighted important changes since Vardoc 8.1.0-rc2:
+* Issue [#2957005](https://www.drupal.org/node/2957005):
+                  Updated [Varbase core] profile from 8.4.14 to 8.4.18
+* Issue [#2957811](https://www.drupal.org/node/2957811):
+                  Updated [Vardoc Theme] to use the latest updates
+                  from [Vartheme 8.4.17] and VARTHEME_SUBTHEME options.
+
+### Added since Vardoc 8.1.0-rc2:
+* No added new features.
+
+### Changed since Vardoc 8.1.0-rc2:
+* No changes to features.
+
+### Updates since Vardoc 8.1.0-rc2:
+* Issue [#2957005](https://www.drupal.org/node/2957005):
+                  Updated [Varbase core] profile from 8.4.14 to 8.4.18
+* Issue [#2957811](https://www.drupal.org/node/2957811):
+                  Updated [Vardoc Theme] to use the latest updates
+                  from [Vartheme 8.4.17] and VARTHEME_SUBTHEME options.
+* Issue [#2957853](https://www.drupal.org/node/2957853):
+                  Updated [Varbase FAQs] module
+                  from 8.4.0-alpha1 to 8.4.0-alpha2
+* Issue [#2957665](https://www.drupal.org/node/2957665):
+                  Updated [Flag] module from 8.4.0-alpha2 to 8.4.0-alpha3
+* Issue [#2957667](https://www.drupal.org/node/2957667):
+                  Updated [Voting API] module
+                  from 8.4.0-alpha2 to 8.3.0-alpha5
+
+### Fixes since Vardoc 8.1.0-rc2:
+* No fixes.
+
+---
+
 ## 8.1.0-rc2
 
 ### Highlighted important changes since Vardoc 8.1.0-rc1:
@@ -71,6 +106,7 @@
 * Issue [#2929774](https://www.drupal.org/node/2929774):
         Fixed Child menu overlaps parent menu item in main navigation.
 
+---
 
 ## 8.1.0-rc1
 
@@ -120,6 +156,7 @@
         Fixed the print logo for [Vardoc theme] which had a wrong URL,
         as it was fixed in vartheme.
 
+---
 
 ## 8.1.0-beta3
 
@@ -163,7 +200,7 @@
 * Only added 2 patches for [Drupal core] and [Simple XML sitemap].
 
 
-
+---
 
 ## 8.1.0-beta2
 * Issue [#2897770](https://www.drupal.org/node/2897770):
@@ -175,6 +212,8 @@
 * Issue [#2899498](https://www.drupal.org/node/2899498):
                    Vardoc 8.1.0-beta2 : Updated [CHANGELOG.md, UPDATE.md]
                    files and filtered the code for Drupal 8 Coding Standard
+
+---
 
 ## 8.1.0-beta1
 * Initial commit
