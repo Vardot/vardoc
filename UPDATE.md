@@ -98,6 +98,8 @@ while working on the project.
     And we make sure that we have all custom module or themes still in the
         "sites" folder
     And we make sure that all new used modules and features are present.
+    And we have the "jquery-bar-rating" added to libraries.
+    https://github.com/antennaio/jquery-bar-rating/archive/v1.2.2.zip 
    Then we will be ready to update the active config and database.
 ```
 
@@ -107,6 +109,25 @@ while working on the project.
   Given that we are at the root folder for Vardoc project, not the docroot
     And we make sure that the current "vardoc-project" composer.json file and
         files are the latest
+    And we need to add:
+    
+        {
+          "type": "package",
+          "package": {
+            "name": "antennaio/jquery-bar-rating",
+            "version": "1.2.2",
+            "type": "drupal-library",
+            "dist": {
+              "type": "zip",
+              "url": "https://github.com/antennaio/jquery-bar-rating/archive/v1.2.2.zip"
+            }
+          }
+        }
+    
+      Into our vardoc-project composer.json file with all updated hash commits.
+      as you can see in 
+      https://github.com/Vardot/vardoc-project/blob/70a729ee815d7e01017778e984debab21ca02513/composer.json
+
    When we delete the "vendor" folder
     And we delete the "composer.lock" file
     And we run the "composer require vardot/vardoc:8.1.0-rc3" command

@@ -11,7 +11,9 @@
 * No added new features.
 
 ### Changed since Vardoc 8.1.0-rc2:
-* No changes to features.
+* Issue [#2957856](https://www.drupal.org/node/2957856):
+                  Vardoc 8.1.0-rc3 : Updated [CHANGELOG.md, UPDATE.md] files
+                  and filtered the code for Drupal 8 Coding Standard.
 
 ### Updates since Vardoc 8.1.0-rc2:
 * Issue [#2957005](https://www.drupal.org/node/2957005):
@@ -26,7 +28,7 @@
                   Updated [Flag] module from 8.4.0-alpha2 to 8.4.0-alpha3
 * Issue [#2957667](https://www.drupal.org/node/2957667):
                   Updated [Voting API] module
-                  from 8.4.0-alpha2 to 8.3.0-alpha5
+                  from 8.4.0-alpha2 to 8.3.0-alpha6
 
 ### Fixes since Vardoc 8.1.0-rc2:
 * No fixes.
