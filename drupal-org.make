@@ -8,7 +8,7 @@ defaults[projects][subdir] = contrib
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[fontawesome][type] = module
-projects[fontawesome][version] = 1.3
+projects[fontawesome][version] = 1.4
 
 projects[better_normalizers][type] = module
 projects[better_normalizers][version] = 1.0-beta3
