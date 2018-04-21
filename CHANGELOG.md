@@ -1,3 +1,27 @@
+## 8.1.0-rc4
+
+### Highlighted important changes since Vardoc 8.1.0-rc3:
+* Issue [#2962858](https://www.drupal.org/node/2962858):
+                  Updated [Varbase core] profile from 8.4.18 to 8.4.20
+
+### Added since Vardoc 8.1.0-rc3:
+* No new added features.
+
+### Changed since Vardoc 8.1.0-rc3:
+* Issue [#2962869](https://www.drupal.org/node/2962869):
+                  Vardoc 8.1.0-rc4 : Updated [CHANGELOG.md, UPDATE.md] files
+                  and filtered the code for Drupal 8 Coding Standard.
+
+### Updates since Vardoc 8.1.0-rc3:
+* Issue [#2962858](https://www.drupal.org/node/2962858):
+                  Updated [Varbase core] profile from 8.4.18 to 8.4.20
+* Issue [#2962864](https://www.drupal.org/node/2962864):
+                  Updated [Font Awesome Icons] module from 8.1.3 to 8.1.4
+
+### Fixes since Vardoc 8.1.0-rc3:
+* No fixed issues.
+
+
 ## 8.1.0-rc3
 
 ### Highlighted important changes since Vardoc 8.1.0-rc2:
