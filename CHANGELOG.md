@@ -1,3 +1,15 @@
+## 8.1.0-rc5
+
+### Highlighted important changes since Vardoc 8.1.0-rc4:
+* Issue [#2966675](https://www.drupal.org/node/2966675):
+                   Updated [Varbase core] profile from 8.4.20 to 8.4.21
+
+### Changed since Vardoc 8.1.0-rc4:
+* Issue [#2966765](https://www.drupal.org/node/2966765):
+                  Vardoc 8.1.0-rc5 : Updated [CHANGELOG.md, UPDATE.md] files
+                  and filtered the code for Drupal 8 Coding Standard.
+
+
 ## 8.1.0-rc4
 
 ### Highlighted important changes since Vardoc 8.1.0-rc3:
