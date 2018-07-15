@@ -1,3 +1,10 @@
+## 8.1.0
+
+* Issue [#2985877](https://www.drupal.org/node/2985877):
+                  Updated [Varbase core] profile from 8.4.21 to 8.4.22
+* Issue [#2985881](https://www.drupal.org/node/2985881):
+                  Updated [Voting API] module from 8.3.0-alpha6 to 8.3.0-alpha7
+
 ## 8.1.0-rc5
 
 ### Highlighted important changes since Vardoc 8.1.0-rc4:
