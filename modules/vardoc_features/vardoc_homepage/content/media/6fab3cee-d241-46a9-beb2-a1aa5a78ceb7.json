@@ -21,7 +21,7 @@
                 "href": "http:\/\/default\/user\/1?_format=hal_json"
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/media\/image\/field_image": [
+        "http:\/\/drupal.org\/rest\/relation\/media\/image\/field_media_image": [
             {
                 "href": "http:\/\/default\/sites\/default\/files\/2017-07\/connection-vintage-technology.png"
             }
@@ -114,7 +114,7 @@
                 ]
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/media\/image\/field_image": [
+        "http:\/\/drupal.org\/rest\/relation\/media\/image\/field_media_image": [
             {
                 "_links": {
                     "self": {
@@ -149,11 +149,6 @@
     "changed": [
         {
             "value": 1501159474
-        }
-    ],
-    "revision_timestamp": [
-        {
-            "value": 1501144348
         }
     ],
     "default_langcode": [

@@ -22,11 +22,6 @@
             "value": "67e30b7a-d8cd-4e86-a8c7-b34249d9c698"
         }
     ],
-    "revision_id": [
-        {
-            "value": 6
-        }
-    ],
     "langcode": [
         {
             "value": "en",
@@ -45,11 +40,6 @@
         }
     ],
     "changed": [
-        {
-            "value": 1500509718
-        }
-    ],
-    "revision_created": [
         {
             "value": 1500509718
         }
@@ -73,12 +63,6 @@
             }
         ]
     },
-    "revision_translation_affected": [
-        {
-            "value": true,
-            "lang": "en"
-        }
-    ],
     "default_langcode": [
         {
             "value": true,

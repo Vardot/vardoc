@@ -16,12 +16,16 @@
     "issues": "http://drupal.org/project/issues/vardoc",
     "source": "http://cgit.drupalcode.org/vardoc"
   },
-  "repositories": [
-    {
+  "repositories": {
+    "drupal": {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
+      },
+    "assets": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
     },
-    {
+    "antennaio": {
       "type": "package",
       "package": {
         "name": "antennaio/jquery-bar-rating",
@@ -33,7 +37,7 @@
         }
       }
     }
-  ],
+  },
   "require": {
     "composer/installers": "1.5.0",
     "oomphinc/composer-installers-extender": "1.1.2",
@@ -42,7 +46,7 @@
     "drupal/drupal-library-installer-plugin": "0.3",
     "webflo/drupal-finder": "1.1.0",
     "webmozart/path-util": "2.3.0",
-    "vardot/varbase": "8.4.22",
+    "vardot/varbase": "8.5.0-alpha3",
     "drupal/views_bootstrap": "3.x-dev#ec4e7872315db6a7287014b029c3167962647588",
     "drupal/extlink": "1.x-dev#8a773a6c5519ccb167e18cc39d68551b30b0e4b3",
     "drupal/image_resize_filter": "1.x-dev#c3f4b23b02005859092aaff746b9f21b794adc58",
@@ -68,7 +72,7 @@
     "drupal/flag": "4.0-alpha3",
     "drupal/sharethis": "2.0-beta3",
     "drupal/faq": "1.x-dev#2bdc0f0fd3fa1941bf7d3579a498e6f40ca9c69a",
-    "drupal/varbase_faqs": "4.0-alpha2"
+    "drupal/varbase_faqs": "5.x-dev"
   },
   "require-dev": {
     "drush/drush": "8.1.16",
@@ -115,16 +119,35 @@
     "drupal/drupal": "*"
   },
   "extra": {
-    "branch-alias": {
-      "dev-8.x-1.x": "8.1.x-dev"
+   "branch-alias": {
+      "dev-8.x-2.x": "8.2.x-dev"
     },
+    "installer-types": [
+      "bower-asset",
+      "npm-asset"
+    ],
     "installer-paths": {
       "docroot/core": ["drupal/core"],
       "docroot/profiles/{$name}": ["type:drupal-profile"],
       "docroot/modules/contrib/{$name}": ["type:drupal-module"],
       "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
-      "docroot/libraries/{$name}": ["type:drupal-library"],
+      "docroot/libraries/slick": ["npm-asset/slick-carousel"],
+      "docroot/libraries/ace": ["npm-asset/ace-builds"],
+      "docroot/libraries/{$name}": [
+        "type:drupal-library",
+        "type:bower-asset",
+        "type:npm-asset"
+      ],
       "drush/contrib/{$name}": ["type:drupal-drush"]
+    },
+    "drupal-libraries": {
+      "library-directory": "docroot/libraries",
+      "libraries": [
+          {"name": "dropzone","package": "npm-asset/dropzone"},
+          {"name": "blazy", "package": "npm-asset/blazy"},
+          {"name": "slick", "package": "npm-asset/slick-carousel"},
+          {"name": "ace", "package": "npm-asset/ace-builds"}
+      ]
     },
     "enable-patching": true,
     "composer-exit-on-patch-failure": true,

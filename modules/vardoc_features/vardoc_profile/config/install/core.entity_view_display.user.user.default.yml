@@ -7,7 +7,7 @@ dependencies:
     - field.field.user.user.field_last_password_reset
     - field.field.user.user.field_password_expiration
     - field.field.user.user.field_profile_image
-    - image.style.d7_square
+    - image.style.d07_square
   module:
     - ds
     - image
@@ -112,7 +112,7 @@ content:
     weight: 1
     label: hidden
     settings:
-      image_style: d7_square
+      image_style: d07_square
       image_link: ''
     third_party_settings:
       ds:

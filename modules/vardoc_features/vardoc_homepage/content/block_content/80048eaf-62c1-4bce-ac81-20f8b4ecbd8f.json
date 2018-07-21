@@ -56,11 +56,6 @@
             "lang": "en"
         }
     ],
-    "revision_created": [
-        {
-            "value": 1501145213
-        }
-    ],
     "_embedded": {
         "http:\/\/drupal.org\/rest\/relation\/block_content\/block_image\/revision_user": [
             {

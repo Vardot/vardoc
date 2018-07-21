@@ -4,7 +4,7 @@ dependencies:
   config:
     - block_content.type.block_image
     - field.storage.block_content.field_image
-    - media_entity.bundle.image
+    - media.type.image
 id: block_content.block_image.field_image
 field_name: field_image
 entity_type: block_content

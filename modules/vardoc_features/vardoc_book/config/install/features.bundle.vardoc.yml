@@ -86,7 +86,6 @@ assignments:
         image_style: image_style
         configurable_language: configurable_language
         linkit_profile: linkit_profile
-        media_bundle: media_bundle
         menu: menu
         metatag_defaults: metatag_defaults
         page: page
