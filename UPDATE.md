@@ -8,7 +8,7 @@ developers need to do to update the last release to the new release.
 
 
 #  For Example:
-* https://www.drupal.org/project/vardoc/releases/8.x-1-0
+* https://www.drupal.org/project/vardoc/releases/8.x-1-0-rc6
 * https://www.drupal.org/project/vardoc/releases/8.x-1-0-rc5
 * https://www.drupal.org/project/vardoc/releases/8.x-1-0-rc4
 * https://www.drupal.org/project/vardoc/releases/8.x-1-0-rc3
@@ -87,10 +87,10 @@ while working on the project.
 
 --------------------------------------------------------------------------------
 
-# Updating Vardot 8.1.0-rc5 to Vardot 8.1.0
+# Updating Vardot 8.1.0-rc5 to Vardot 8.1.0-rc6
 
 
-## First way is by updating files with Copy and Paste for Vardot 8.1.0 over Vardoc 8.1.0-rc5
+## First way is by updating files with Copy and Paste for Vardot 8.1.0-rc6 over Vardoc 8.1.0-rc5
 ```
   Given that we are at the drupal root folder for Vardoc
    When we delete all drupal core folders and files
@@ -109,7 +109,7 @@ while working on the project.
         files are the latest
    When we delete the "vendor" folder
     And we delete the "composer.lock" file
-    And we run the "composer require vardot/vardoc:8.1.0" command
+    And we run the "composer require vardot/vardoc:8.1.0-rc6" command
     And wait for composer to finish work
    Then we should not see any issues in the terminal
     And we should see "Writing lock file" in the terminal
@@ -118,14 +118,14 @@ while working on the project.
    Then we will be ready to update the active config and database.
 ```
 
-## Updating the active config and database from Vardot 8.1.0-rc5 to Vardot 8.1.0-rc
+## Updating the active config and database from Vardot 8.1.0-rc5 to Vardot 8.1.0-rc6
 ```
   Given that we are in the docroot of the current Vardoc project
     And all files are updated using (copy and past) or (composer require/update
    When we run drush "updb" or go to "/update.php"
    Then we should see the steps of updates.
    When we run drush "updb" or go to "/update.php" again
-   Then we will have the site update with the new Vardoc 8.1.0 version
+   Then we will have the site update with the new Vardoc 8.1.0-rc6 version
    When we go to "/admin/config/development/features"
    Then we should see "Changed"
    When we follow with each feature to import new changes.

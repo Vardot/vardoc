@@ -1,4 +1,4 @@
-## 8.1.0
+## 8.1.0-rc6
 
 * Issue [#2985877](https://www.drupal.org/node/2985877):
                   Updated [Varbase core] profile from 8.4.21 to 8.4.22

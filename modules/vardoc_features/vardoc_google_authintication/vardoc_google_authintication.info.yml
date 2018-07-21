@@ -2,7 +2,7 @@ name: 'Vardoc google authintication'
 description: 'Provides Google authentication (login) service for Vardoc.'
 type: module
 core: 8.x
-version: 8.x-1.0
+version: 8.x-1.0-rc6
 package: Vardoc
 dependencies:
   - block
