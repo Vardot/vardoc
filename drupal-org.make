@@ -44,7 +44,7 @@ projects[varbase_faqs][version] = 5.x-dev
 
 projects[varbase][type] = profile
 projects[varbase][subdir] = ""
-projects[varbase][version] = "5.0-alpha3"
+projects[varbase][version] = "5.0-alpha4"
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
