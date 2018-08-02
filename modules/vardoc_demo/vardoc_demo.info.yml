@@ -2,7 +2,7 @@ name: 'Vardoc Demo Content'
 description: 'Demo content feature for Vardoc.'
 type: module
 core: 8.x
-version: 8.x-1.x-dev
+version: 8.x-1.0-rc7
 package: Vardoc
 dependencies:
   - vardoc_homepage
