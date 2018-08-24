@@ -78,5 +78,5 @@ while working on the project.
 
 
 --------------------------------------------------------------------------------
-# No upgrade path to update Vardoc 8.x-1.x to 8.x-2.x yet
+# No upgrade path to update Vardoc 8.x-2.x to 8.x-3.x yet
 You will need to manage a migration, or a hard update process.
