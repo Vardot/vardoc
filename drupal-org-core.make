@@ -14,3 +14,5 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/drupal_8-allow_s
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-08-08/2599228-58.patch
 ;; Issue #2893892: Fixed Warning Invalid argument supplied for foreach() in Drupal
 projects[drupal][patch][] = https://www.drupal.org/files/issues/patch_empty_fix.patch
+;; Issue #2828681: Book Navigation Block does not sort Books by weight.
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2828681-13.patch
