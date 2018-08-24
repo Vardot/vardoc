@@ -1,6 +1,7 @@
 core: 8.x
 type: theme
 base theme: vartheme
+version: 8.x-3.x-dev
 
 name: 'Vardoc Theme'
 description: 'Uses the Bootstrap framework LESS source files and must be compiled (not for beginners).'
