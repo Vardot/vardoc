@@ -146,7 +146,7 @@ edge2edge:
     layout:
       css/layout/edge2edge.layout.css: {}
 
-# Vartheme Material Equal height layout library.
+# Vartheme Equal height layout library.
 #equal-height:
 #  css:
 #    layout:
