@@ -1,3 +1,16 @@
+## 8.1.0
+
+### Highlighted important changes since Vardoc 8.1.0-rc7:
+* Issue [#2998291](https://www.drupal.org/node/2998291):
+                 Update [Varbase core] profile from 8.4.23 to 8.4.25
+* Issue [#2998309](https://www.drupal.org/node/2998309):
+                 Update [Varbase FAQs] module from 8.4.0-alpha2 to ^8.4.0
+* Issue [#2995492](https://www.drupal.org/node/2995492):
+                 Remove [Vartheme Material Design] themes and related modules
+* Issue [#2991872](https://www.drupal.org/node/2991872)
+              by [bhanuprakashnani](https://www.drupal.org/u/bhanuprakashnani):
+              Fix non-https fonts in vardoctheme
+
 ## 8.1.0-rc7
 
 ### Highlighted important changes since Vardoc 8.1.0-rc6:
