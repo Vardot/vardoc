@@ -11,7 +11,6 @@ dependencies:
   - ctools
   - ds
   - node
-  - panelizer
   - search_api
   - search_api_db
   - system

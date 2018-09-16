@@ -18,7 +18,6 @@ dependencies:
   - image
   - menu_block
   - node
-  - panelizer
   - smart_trim
   - user
   - varbase_media

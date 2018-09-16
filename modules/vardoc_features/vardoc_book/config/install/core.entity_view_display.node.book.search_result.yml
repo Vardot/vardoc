@@ -13,7 +13,6 @@ dependencies:
     - node.type.book
   module:
     - ds
-    - panelizer
     - smart_trim
     - user
 third_party_settings:
@@ -63,11 +62,6 @@ third_party_settings:
         weight: 2
         label: hidden
         formatter: default
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.book.search_result
 targetEntityType: node
 bundle: book

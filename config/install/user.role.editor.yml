@@ -25,7 +25,6 @@ permissions:
   - 'access user profiles'
   - 'add content to books'
   - 'administer faq order'
-  - 'administer panelizer node landing_page content'
   - 'create book content'
   - 'create faq content'
   - 'create landing_page content'

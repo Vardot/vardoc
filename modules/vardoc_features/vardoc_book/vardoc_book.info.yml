@@ -33,7 +33,6 @@ dependencies:
   - menu_ui
   - metatag
   - node
-  - panelizer
   - path
   - pathauto
   - pathologic

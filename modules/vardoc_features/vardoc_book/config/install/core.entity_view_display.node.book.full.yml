@@ -18,42 +18,10 @@ dependencies:
     - field_group
     - file
     - link
-    - panelizer
     - text
     - user
     - votingapi_widgets
 third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
-    displays:
-      default:
-        blocks:
-          2b65792b-e375-460e-95f9-f98e97855ccc:
-            id: 'entity_view:node'
-            label: 'Entity view (Content)'
-            provider: ctools
-            label_display: '0'
-            view_mode: default
-            region: ds_content
-            weight: 0
-            uuid: 2b65792b-e375-460e-95f9-f98e97855ccc
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-        id: panels_variant
-        label: Default
-        uuid: d6a14a8d-3675-4918-9cdf-d0a9228f76b8
-        weight: 0
-        layout: ds_1col
-        layout_settings: {  }
-        page_title: ''
-        storage_type: panelizer_default
-        storage_id: 'node:book:full:default'
-        builder: ipe
-        pattern: panelizer
-        static_context: {  }
   ds:
     layout:
       id: bs_1col

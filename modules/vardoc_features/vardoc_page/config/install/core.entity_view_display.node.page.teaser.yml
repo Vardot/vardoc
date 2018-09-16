@@ -8,15 +8,9 @@ dependencies:
     - node.type.page
   module:
     - ds
-    - panelizer
     - smart_trim
     - user
 third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
   ds:
     layout:
       id: bs_1col
