@@ -39,14 +39,14 @@
     }
   },
   "require": {
-    "composer/installers": "1.5.0",
-    "oomphinc/composer-installers-extender": "1.1.2",
-    "cweagans/composer-patches": "1.6.4",
-    "drupal-composer/drupal-scaffold": "2.4.0",
-    "drupal/drupal-library-installer-plugin": "0.3",
-    "webflo/drupal-finder": "1.1.0",
-    "webmozart/path-util": "2.3.0",
-    "vardot/varbase": "8.5.0-alpha5",
+    "composer/installers": "^1.5.0",
+    "oomphinc/composer-installers-extender": "^1.1.2",
+    "cweagans/composer-patches": "^1.6.4",
+    "drupal-composer/drupal-scaffold": "^2.4.0",
+    "drupal/drupal-library-installer-plugin": "^0.3",
+    "webflo/drupal-finder": "^1.1.0",
+    "webmozart/path-util": "^2.3.0",
+    "vardot/varbase": "8.5.0",
     "drupal/views_bootstrap": "3.x-dev#ec4e7872315db6a7287014b029c3167962647588",
     "drupal/extlink": "1.x-dev#8a773a6c5519ccb167e18cc39d68551b30b0e4b3",
     "drupal/image_resize_filter": "1.x-dev#c3f4b23b02005859092aaff746b9f21b794adc58",
@@ -70,7 +70,7 @@
     "drupal/flag": "4.0-alpha3",
     "drupal/sharethis": "2.0-beta3",
     "drupal/faq": "1.x-dev#2bdc0f0fd3fa1941bf7d3579a498e6f40ca9c69a",
-    "drupal/varbase_faqs": "5.x-dev"
+    "drupal/varbase_faqs": "^5.0"
   },
   "require-dev": {
     "drush/drush": "8.1.16",
@@ -88,7 +88,11 @@
   },
   "config": {
     "bin-dir": "bin/",
-    "secure-http": false
+    "secure-http": false,
+    "optimize-autoloader": true,
+    "preferred-install": {
+      "drupal/core": "dist"
+    }
   },
   "autoload": {
     "psr-4": {
@@ -136,6 +140,8 @@
         "type:bower-asset",
         "type:npm-asset"
       ],
+      "docroot/modules/custom/{$name}": ["type:drupal-custom-module"],
+      "docroot/themes/custom/{$name}": ["type:drupal-custom-theme"],
       "drush/contrib/{$name}": ["type:drupal-drush"]
     },
     "drupal-libraries": {
