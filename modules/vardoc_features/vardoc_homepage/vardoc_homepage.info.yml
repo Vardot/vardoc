@@ -2,7 +2,7 @@ name: 'Vardoc Homepage'
 description: 'Homepage feature for Vardoc.'
 type: module
 core: 8.x
-version: 8.x-2.0
+version: 8.x-2.x-dev
 package: Vardoc
 dependencies:
   - better_normalizers
