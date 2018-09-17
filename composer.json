@@ -62,13 +62,13 @@
     "drupal/google_analytics_reports": "3.x-dev#2b6bb8efbc7f61ce3c1225638075aa6037b8db44",
     "drupal/login_destination": "1.x-dev#54be8b89fdc073ca40af6b9b2eeb050e0aeb7908",
     "drupal/betterlogin": "1.x-dev#f7cf1c5c9ec5e80c6ac0ef04ed605e25495232cd",
-    "drupal/fontawesome": "1.4",
-    "drupal/better_normalizers": "1.0-beta3",
+    "drupal/fontawesome": "^1.4",
+    "drupal/better_normalizers": "^1.0-beta3",
     "drupal/menu_item_visibility": "1.x-dev#7806c36b68bdc1ac3582e3a034b94126cd3d1d32",
-    "drupal/votingapi": "3.0-alpha7",
+    "drupal/votingapi": "^3.0-alpha7",
     "drupal/votingapi_widgets": "1.x-dev#4aa50d00ad3928cd90eb1f922956b9f46ab18f2c",
-    "drupal/flag": "4.0-alpha3",
-    "drupal/sharethis": "2.0-beta3",
+    "drupal/flag": "^4.0-alpha3",
+    "drupal/sharethis": "^2.0-beta3",
     "drupal/varbase_faqs": "^5.0"
   },
   "require-dev": {
