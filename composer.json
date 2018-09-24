@@ -46,8 +46,7 @@
     "drupal/drupal-library-installer-plugin": "^0.3",
     "webflo/drupal-finder": "^1.1.0",
     "webmozart/path-util": "^2.3.0",
-    "vardot/varbase": "8.5.0",
-    "drupal/views_bootstrap": "3.x-dev#ec4e7872315db6a7287014b029c3167962647588",
+    "vardot/varbase": "8.5.1",
     "drupal/extlink": "1.x-dev#8a773a6c5519ccb167e18cc39d68551b30b0e4b3",
     "drupal/image_resize_filter": "1.x-dev#c3f4b23b02005859092aaff746b9f21b794adc58",
     "drupal/entity_clone": "1.x-dev#6d0ce053605e9aaf8412927a9b0ea8da7a9a06e5",
@@ -67,7 +66,6 @@
     "drupal/menu_item_visibility": "1.x-dev#7806c36b68bdc1ac3582e3a034b94126cd3d1d32",
     "drupal/votingapi": "^3.0-alpha7",
     "drupal/votingapi_widgets": "1.x-dev#4aa50d00ad3928cd90eb1f922956b9f46ab18f2c",
-    "drupal/flag": "^4.0-alpha3",
     "drupal/sharethis": "^2.0-beta3",
     "drupal/varbase_faqs": "^5.0"
   },
