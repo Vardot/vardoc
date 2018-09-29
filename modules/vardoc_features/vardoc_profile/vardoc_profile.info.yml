@@ -4,24 +4,11 @@ type: module
 core: 8.x
 version: 8.x-3.x-dev
 package: Vardoc
+project: vardoc
 dependencies:
-  - block
-  - block_class
-  - datetime
-  - ds
-  - field
-  - field_group
-  - file
-  - flag
-  - focal_point
-  - history
-  - image
-  - menu_block
-  - node
-  - panelizer
-  - smart_trim
-  - user
-  - varbase_media
-  - vardoc_book
-  - views
-  
+  - varbase_core:varbase_core
+  - varbase_media:varbase_media
+  - vardoc:vardoc_book
+  - drupal:datetime
+  - drupal:history
+  - flag:flag

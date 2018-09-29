@@ -67,10 +67,3 @@ Check if users with the ( "authenticated user", "Editor", "Content Admin",
       And I press "Save"
       And I wait
      Then I should see "Basic page Test Basic page has been created."
-
-  @javascript @local @development @staging @production
-  Scenario: Check that we did not Allow content of "Basic page" type to have its display controlled by Panelizer.
-    Given I am a logged in user with the "webmaster" user
-     When I go to "/admin/structure/types/manage/page/display"
-      And I wait
-     Then the "Panelize this view mode" checkbox should not be checked

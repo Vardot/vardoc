@@ -4,23 +4,12 @@ type: module
 core: 8.x
 version: 8.x-3.x-dev
 package: Vardoc
+project: vardoc
 dependencies:
-  - better_normalizers
-  - block
-  - block_class
-  - block_content
-  - default_content
-  - ds
-  - entity_browser
-  - entityqueue
-  - field
-  - field_group
-  - node
-  - page_manager
-  - panels
-  - text
-  - varbase_core
-  - varbase_media
-  - varbase_webform
-  - vardoc_book
-  - views
+  - varbase_core:varbase_core
+  - varbase_media:varbase_media
+  - varbase_core:varbase_webform
+  - entityqueue:entityqueue
+  - page_manager:page_manager
+  - panels:panels
+  - vardoc:vardoc_book

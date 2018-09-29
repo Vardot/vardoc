@@ -17,41 +17,9 @@ dependencies:
     - file
     - link
     - metatag
-    - panelizer
     - text
     - user
 third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
-    displays:
-      default:
-        blocks:
-          2c428de1-5964-4678-82a5-91f214efc97b:
-            id: 'entity_view:node'
-            label: 'Entity view (Content)'
-            provider: ctools
-            label_display: '0'
-            view_mode: full
-            region: content
-            weight: 0
-            uuid: 2c428de1-5964-4678-82a5-91f214efc97b
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-        id: panels_variant
-        label: Default
-        uuid: 69af7fc3-30c1-4a95-bf13-af827af712eb
-        weight: 0
-        layout: layout_onecol
-        layout_settings: {  }
-        page_title: ''
-        storage_type: panelizer_default
-        storage_id: 'node:book:default:default'
-        builder: ipe
-        pattern: panelizer
-        static_context: {  }
   ds:
     layout:
       id: bs_1col
