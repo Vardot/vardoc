@@ -1,4 +1,12 @@
-## 8.1.0
+# 8.1.1
+
+### Highlighted important changes since Vardoc 8.1.0:
+* Issue [#3007666](https://www.drupal.org/node/2998291):
+                 Update [Varbase core] from 8.4.25 to 8.4.26
+
+--------------------------------------------------------------------------------
+
+# 8.1.0
 
 ### Highlighted important changes since Vardoc 8.1.0-rc7:
 * Issue [#2998291](https://www.drupal.org/node/2998291):
@@ -11,7 +19,9 @@
               by [bhanuprakashnani](https://www.drupal.org/u/bhanuprakashnani):
               Fix non-https fonts in vardoctheme
 
-## 8.1.0-rc7
+--------------------------------------------------------------------------------
+
+# 8.1.0-rc7
 
 ### Highlighted important changes since Vardoc 8.1.0-rc6:
 * Issue [#2990159](https://www.drupal.org/node/2990159):
@@ -25,8 +35,9 @@
 * Zend Security Advisory: ZF2018-01 ZF2018-01: URL Rewrite vulnerability
 * https://framework.zend.com/security/advisory/ZF2018-01
 
+--------------------------------------------------------------------------------
 
-## 8.1.0-rc6
+#  8.1.0-rc6
 
 ### Highlighted important changes since Vardoc 8.1.0-rc5:
 * Issue [#2985877](https://www.drupal.org/node/2985877):
@@ -34,7 +45,9 @@
 * Issue [#2985881](https://www.drupal.org/node/2985881):
                   Updated [Voting API] module from 8.3.0-alpha6 to 8.3.0-alpha7
 
-## 8.1.0-rc5
+--------------------------------------------------------------------------------
+
+# 8.1.0-rc5
 
 ### Highlighted important changes since Vardoc 8.1.0-rc4:
 * Issue [#2966675](https://www.drupal.org/node/2966675):
@@ -45,8 +58,9 @@
                   Vardoc 8.1.0-rc5 : Updated [CHANGELOG.md, UPDATE.md] files
                   and filtered the code for Drupal 8 Coding Standard.
 
+--------------------------------------------------------------------------------
 
-## 8.1.0-rc4
+# 8.1.0-rc4
 
 ### Highlighted important changes since Vardoc 8.1.0-rc3:
 * Issue [#2962858](https://www.drupal.org/node/2962858):
@@ -69,8 +83,9 @@
 ### Fixes since Vardoc 8.1.0-rc3:
 * No fixed issues.
 
+--------------------------------------------------------------------------------
 
-## 8.1.0-rc3
+# 8.1.0-rc3
 
 ### Highlighted important changes since Vardoc 8.1.0-rc2:
 * Issue [#2957005](https://www.drupal.org/node/2957005):
@@ -105,9 +120,9 @@
 ### Fixes since Vardoc 8.1.0-rc2:
 * No fixes.
 
----
+--------------------------------------------------------------------------------
 
-## 8.1.0-rc2
+# 8.1.0-rc2
 
 ### Highlighted important changes since Vardoc 8.1.0-rc1:
 * Issue [#2940598](https://www.drupal.org/node/2940598):
@@ -180,9 +195,9 @@
 * Issue [#2929774](https://www.drupal.org/node/2929774):
         Fixed Child menu overlaps parent menu item in main navigation.
 
----
+--------------------------------------------------------------------------------
 
-## 8.1.0-rc1
+#  8.1.0-rc1
 
 ### Highlighted important changes since Vardoc 8.1.0-beta3:
 * Issue [#2931298](https://www.drupal.org/node/2931298):
@@ -230,9 +245,9 @@
         Fixed the print logo for [Vardoc theme] which had a wrong URL,
         as it was fixed in vartheme.
 
----
+--------------------------------------------------------------------------------
 
-## 8.1.0-beta3
+#  8.1.0-beta3
 
 ### Highlighted important changes since Vardoc 8.1.0-beta2:
 * Issue [#2921893](https://www.drupal.org/node/2921893):
@@ -273,10 +288,9 @@
 ### Fixes since Vardoc 8.1.0-beta2:
 * Only added 2 patches for [Drupal core] and [Simple XML sitemap].
 
+--------------------------------------------------------------------------------
 
----
-
-## 8.1.0-beta2
+#  8.1.0-beta2
 * Issue [#2897770](https://www.drupal.org/node/2897770):
                    Added Travis-ci Integration to have
                    automated functional testing.
@@ -287,9 +301,10 @@
                    Vardoc 8.1.0-beta2 : Updated [CHANGELOG.md, UPDATE.md]
                    files and filtered the code for Drupal 8 Coding Standard
 
----
+--------------------------------------------------------------------------------
 
-## 8.1.0-beta1
+# 8.1.0-beta1
+
 * Initial commit
 * Added git ignore file
 * Skipped select language step

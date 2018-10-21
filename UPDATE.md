@@ -81,6 +81,53 @@ while working on the project.
 
 --------------------------------------------------------------------------------
 
+# Updating Vardot 8.1.0 to Vardot 8.1.1
+
+
+## First way is by updating files with Copy and Paste for Vardot 8.1.0 over Vardoc 8.1.1
+```
+  Given that we are at the drupal root folder for Vardoc
+   When we delete all drupal core folders and files
+    And we copy all new Vardoc files drupal root folder for Vardoc
+    And we make sure that we have all custom module or themes still in the
+        "sites" folder
+    And we make sure that all new used modules and features are present.
+   Then we will be ready to update the active config and database.
+```
+
+## The composer way of Vardoc Procedures to update the base code.
+   not in any vardoc-project or vardoc-project project builders.
+```
+  Given that we are at the root folder for Vardoc project, not the docroot
+    And we make sure that the current "vardoc-project" composer.json file and
+        files are the latest
+   When we delete the "vendor" folder
+    And we delete the "composer.lock" file
+    And we run the "composer require vardot/vardoc:8.1.1" command
+    And wait for composer to finish work
+   Then we should not see any issues in the terminal
+    And we should see "Writing lock file" in the terminal
+    And we should see "Generating autoload files" in the terminal
+   When the composer finishes work with no errors
+   Then we will be ready to update the active config and database.
+```
+
+## Updating the active config and database from Vardot 8.1.0 to Vardot 8.1.1
+```
+  Given that we are in the docroot of the current Vardoc project
+    And all files are updated using (copy and past) or (composer require/update
+   When we run drush "updb" or go to "/update.php"
+   Then we should see the steps of updates.
+   When we run drush "updb" or go to "/update.php" again
+   Then we will have the site update with the new Vardoc 8.1.1 version
+   When we go to "/admin/config/development/features"
+   Then we should see "Changed"
+   When we follow with each feature to import new changes.
+   Then we will have the Vardoc site updated to the latest version.
+```
+
+--------------------------------------------------------------------------------
+
 # Updating Vardot 8.1.0-rc7 to Vardot 8.1.0
 
 
