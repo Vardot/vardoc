@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Vardot/vardoc.svg?branch=8.x-2.0)](https://travis-ci.org/Vardot/vardoc/builds/429620545) Vardoc 8.2.0
+[![Build Status](https://travis-ci.org/Vardot/vardoc.svg?branch=8.x-2.1)](https://travis-ci.org/Vardot/vardoc) Vardoc 8.2.1
 # Vardoc: Knowledge Base System and Documentation Site
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Vardoc%20-%20No%20Padding.png)](https://www.drupal.org/project/vardoc)
@@ -51,7 +51,7 @@ Our goal is to bring ease to you when writing and creating a documentation
 
 To install the most recent stable release of Vardoc 8.2.x run this command:
 ```
-composer create-project Vardot/vardoc-project:^8.2.0 PROJECT_DIR_NAME --no-dev --no-interaction
+composer create-project Vardot/vardoc-project:8.2.1 PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
 To install the dev version of Vardoc 8.2.x run this command:
