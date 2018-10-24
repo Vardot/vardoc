@@ -4,52 +4,18 @@ type: module
 core: 8.x
 version: 8.x-2.x-dev
 package: Vardoc
+project: vardoc
 dependencies:
-  - ace_editor
-  - advanced_text_formatter
-  - better_exposed_filters
-  - block
-  - block_class
-  - book
-  - ckeditor_media_embed
-  - comment
-  - ctools
-  - ds
-  - editor
-  - entity_embed
-  - entityqueue
-  - features
-  - field
-  - field_group
-  - file
-  - filter
-  - flag
-  - focal_point
-  - history
-  - image
-  - image_resize_filter
-  - link
-  - menu_block
-  - menu_ui
-  - metatag
-  - node
-  - path
-  - pathauto
-  - pathologic
-  - rabbit_hole
-  - search_api
-  - search_api_db
-  - sharethis
-  - smart_trim
-  - statistics
-  - system
-  - taxonomy
-  - text
-  - user
-  - varbase_editor
-  - varbase_seo
-  - video_embed_wysiwyg
-  - views
-  - views_bootstrap
-  - votingapi
-  - votingapi_widgets
+  - varbase_media:varbase_media
+  - varbase_editor:varbase_editor
+  - varbase_seo:varbase_seo
+  - drupal:book
+  - drupal:comment
+  - drupal:history
+  - drupal:menu_ui
+  - drupal:statistics
+  - entityqueue:entityqueue
+  - flag:flag
+  - sharethis:sharethis
+  - votingapi:votingapi
+  - votingapi_widgets:votingapi_widgets

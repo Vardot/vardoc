@@ -4,9 +4,8 @@ type: module
 core: 8.x
 version: 8.x-2.x-dev
 package: Vardoc
+project: vardoc
 dependencies:
-  - block
-  - block_class
-  - social_auth
-  - social_auth_google
-  - system
+  - varbase_core:varbase_core
+  - social_auth:social_auth
+  - social_auth:social_auth_google
