@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Vardot/vardoc.svg?branch=8.x-1.2)](https://travis-ci.org/Vardot/vardoc/builds/450425742) Vardoc 8.1.2
+[![Build Status](https://travis-ci.org/Vardot/vardoc.svg?branch=8.x-1.2)](https://travis-ci.org/Vardot/vardoc/builds/450440526) Vardoc 8.1.2
 # Vardoc: Knowledge Base System and Documentation Site
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Vardoc%20-%20No%20Padding.png)](https://www.drupal.org/project/vardoc)
