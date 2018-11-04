@@ -40,14 +40,14 @@ projects[faq][download][branch] = 1.x-dev
 projects[faq][patch][] = https://www.drupal.org/files/issues/unable-to-add-faq-block-2932028-9.patch
 
 projects[varbase_faqs][type] = module
-projects[varbase_faqs][version] = 4.0
+projects[varbase_faqs][version] = 4.x-dev
 
 projects[varbase][type] = profile
 projects[varbase][subdir] = ""
-projects[varbase][version] = "4.27"
+projects[varbase][version] = "4.x-dev"
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 1.4
+projects[varbase_total_control][version] = 1.x-dev
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
