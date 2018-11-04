@@ -5,10 +5,10 @@ core: 8.x
 version: 8.x-2.x-dev
 base profile: varbase
 dependencies:
-  - drupal:action
-  - drupal:tracker
-  - drupal:aggregator
-  - fontawesome:fontawesome
+  - action
+  - tracker
+  - aggregator
+  - fontawesome
 themes:
   # Contrib themes.
   - adminimal_theme
