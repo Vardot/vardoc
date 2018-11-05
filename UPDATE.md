@@ -148,7 +148,7 @@ while working on the project.
   which you can follow in [Step #2](#step-2-vardot-820-to-vardot-821).
 
 ## Step #2 Vardot 8.2.0 to Vardot 8.2.1
-## Update the active config and database from Vardot 8.2.0 to Vardot 8.2.1
+## Update the active config and database
 
 * For example let us have mysite vardoc folder at:
   "/var/www/html/projects/mysite"
