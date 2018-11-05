@@ -8,8 +8,8 @@ developers need to do to update the last release to the new release.
 
 
 #  For Example:
-* https://www.drupal.org/project/vardoc/releases/8.x-2-1
-* https://www.drupal.org/project/vardoc/releases/8.x-2-0
+* https://www.drupal.org/project/vardoc/releases/8.x-2.1
+* https://www.drupal.org/project/vardoc/releases/8.x-2.0
 
 # 2 - Backups
 
