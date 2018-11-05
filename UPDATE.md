@@ -80,9 +80,8 @@ while working on the project.
 
 # Updating Vardot 8.2.0 to Vardot 8.2.1
 
-## STEP #1 Option #1
-### Copy and Paste
-    for Vardot 8.2.1 files over Vardoc 8.2.0 files
+## Step #1 Option #1 Vardot 8.2.0 to Vardot 8.2.1
+## Copy and Paste 
 
 * For example let us have mysite vardoc folder at:
   "/var/www/html/projects/mysite"
@@ -108,10 +107,10 @@ while working on the project.
 * Change permissions and owner ship for all files and folders to work with
   Drupal standard.
 * At this point you will be ready to update the active config and database,
-  which you can follow in STEP #2.
+  which you can follow in [Step #2](#step-2-vardot-820-to-vardot-821).
 
-## STEP #1 Option #2
-### Composer Update
+## Step #1 Option #2 Vardot 8.2.0 to Vardot 8.2.1
+## Composer Update
     The composer way of Vardoc's procedures to update the base code.
     only if you had build the vardoc site with the
     [vardoc-project](https://github.com/Vardot/vardoc-project/tree/8.x-2.x)
@@ -146,9 +145,9 @@ while working on the project.
 * Change permissions and owner ship for all files and folders to work with
   Drupal standard.
 * At this point you will be ready to update the active config and database,
-  which you can follow in STEP #2.
+  which you can follow in [Step #2](#step-2-vardot-820-to-vardot-821).
 
-## STEP #2
+## Step #2 Vardot 8.2.0 to Vardot 8.2.1
 ## Update the active config and database from Vardot 8.2.0 to Vardot 8.2.1
 
 * For example let us have mysite vardoc folder at:
