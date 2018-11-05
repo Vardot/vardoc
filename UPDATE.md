@@ -7,6 +7,9 @@ For each stable release we will have some notes, and extra steps,
 developers need to do to update the last release to the new release.
 
 
+#  For Example:
+* https://www.drupal.org/project/vardoc/releases/8.x-2-1
+* https://www.drupal.org/project/vardoc/releases/8.x-2-0
 
 # 2 - Backups
 
@@ -25,18 +28,18 @@ developers need to do to update the last release to the new release.
 # For Example:
 
 ```
-Given that we do have a project at the /var/www/html/projects/example folder
+Given that you do have a project at the /var/www/html/projects/mysite folder
   And we do have our custom themes, features, custom modules in
-   /var/www/html/projects/example/themes/custom/
-   /var/www/html/projects/example/modules/custom/
-   /var/www/html/projects/example/sites/default
+   /var/www/html/projects/mysite/themes/custom/
+   /var/www/html/projects/mysite/modules/custom/
+   /var/www/html/projects/mysite/sites/default
 so on ...
 like contributed modules which we had theme added
 while working on the project.
 
   And we opened a terminal console window
   And we changed directory to our project folder
-  cd /var/www/html/projects/example in Linux
+  cd /var/www/html/projects/mysite in Linux
 
   When we delete all files and folders, except our changes on Vardoc.
   Then we will be left with only custom changes
@@ -88,10 +91,10 @@ while working on the project.
 
 * Use the terminal command to change directory to:
 ```
- $ cd /var/www/html/projects/mysite/docroot
+ $ cd /var/www/html/projects/mysite
 ```
 
-* Delete all old drupal core folders and files
+* Delete all old Drupal core folders and files
 ```
  $ rm -rf docroot/modules/contrib
  $ rm -rf docroot/themes/contrib
@@ -106,6 +109,10 @@ while working on the project.
 * Be sure that all new used modules and features are present.
 * Change permissions and owner ship for all files and folders to work with
   Drupal standard.
+```
+sudo chmod 775 -R .;
+sudo chown www-data:$USER -R .;
+```
 * At this point you will be ready to update the active config and database,
   which you can follow in [Step #2](#step-2-vardot-820-to-vardot-821).
 
@@ -121,7 +128,7 @@ while working on the project.
 
 * Use the terminal command to change directory to:
 ```
- $ cd /var/www/html/projects/mysite/docroot
+ $ cd /var/www/html/projects/mysite
 ```
 * Be sure that the current "vardoc-project" composer.json file and files are
   the latest
@@ -129,7 +136,7 @@ while working on the project.
 * Delete old composer lock and the vendor folder
 ```
  $ rm composer.lock
- $ rm vender
+ $ rm -rf vender
  $ rm -rf docroot/modules/contrib
  $ rm -rf docroot/themes/contrib
  $ rm -rf docroot/libraries
@@ -144,6 +151,10 @@ while working on the project.
 * if the composer finishes work with no errors
 * Change permissions and owner ship for all files and folders to work with
   Drupal standard.
+```
+sudo chmod 775 -R .;
+sudo chown www-data:$USER -R .;
+```
 * At this point you will be ready to update the active config and database,
   which you can follow in [Step #2](#step-2-vardot-820-to-vardot-821).
 
