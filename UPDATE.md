@@ -76,6 +76,98 @@ while working on the project.
 
 ---
 
+--------------------------------------------------------------------------------
+
+# Updating Vardot 8.2.0 to Vardot 8.2.1
+
+## STEP #1 Option #1
+### Copy and Paste
+    for Vardot 8.2.1 files over Vardoc 8.2.0 files
+
+* For example let us have mysite vardoc folder at:
+  "/var/www/html/projects/mysite"
+
+* Use the terminal command to change directory to:
+```
+ $ cd /var/www/html/projects/mysite/docroot
+```
+
+* Delete all old drupal core folders and files
+```
+ $ rm -rf docroot/modules/contrib
+ $ rm -rf docroot/themes/contrib
+ $ rm -rf docroot/libraries
+ $ rm -rf docroot/profiles/varbase
+ $ rm -rf docroot/profiles/vardoc
+```
+* Copy all new Vardoc files and folders over the old one, you could do this
+  from the GUI.
+* Be sure that you have deleted all not customized files and folders.
+* Be sure that you have all custom module or themes still site.
+* Be sure that all new used modules and features are present.
+* Change permissions and owner ship for all files and folders to work with
+  Drupal standard.
+* At this point you will be ready to update the active config and database,
+  which you can follow in STEP #2.
+
+## STEP #1 Option #2
+### Composer Update
+    The composer way of Vardoc's procedures to update the base code.
+    only if you had build the vardoc site with the
+    [vardoc-project](https://github.com/Vardot/vardoc-project/tree/8.x-2.x)
+    template.
+
+* For example let us have mysite vardoc folder at:
+  "/var/www/html/projects/mysite"
+
+* Use the terminal command to change directory to:
+```
+ $ cd /var/www/html/projects/mysite/docroot
+```
+* Be sure that the current "vardoc-project" composer.json file and files are
+  the latest
+
+* Delete old composer lock and the vendor folder
+```
+ $ rm composer.lock
+ $ rm vender
+ $ rm -rf docroot/modules/contrib
+ $ rm -rf docroot/themes/contrib
+ $ rm -rf docroot/libraries
+ $ rm -rf docroot/profiles/varbase
+ $ rm -rf docroot/profiles/vardoc
+```
+* Run the "composer require vardot/vardoc:8.2.1" command
+* ait for composer to finish work
+* Be sure not see any issues in the terminal
+* At the end of composer work make sure that you can see
+  "Writing lock file" and "Generating autoload files" in the terminal
+* if the composer finishes work with no errors
+* Change permissions and owner ship for all files and folders to work with
+  Drupal standard.
+* At this point you will be ready to update the active config and database,
+  which you can follow in STEP #2.
+
+## STEP #2
+## Update the active config and database from Vardot 8.2.0 to Vardot 8.2.1
+
+* For example let us have mysite vardoc folder at:
+  "/var/www/html/projects/mysite"
+* Make sure that all files are updated using (copy and past) or
+  (composer require/update).
+* Use the terminal command to change directory to:
+```
+ $ cd /var/www/html/projects/mysite/docroot
+```
+* Run drush "updb" or go to "/update.php" from the web browser.
+* You will see the steps of updates to follow with next steps.
+* In your web browser go to "/admin/config/development/features"
+* Check all "Changed" features, or you could use the normal config sync
+* Follow with each feature to import new changes if you need them.
+* Do a regression testing for the site and functional testing to make sure
+  that you do not have any change of behaviours in the site.
+* At this point you will have the Vardoc site updated to the latest version.
+
 
 --------------------------------------------------------------------------------
 # No upgrade path to update Vardoc 8.x-1.x to 8.x-2.x yet

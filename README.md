@@ -51,7 +51,7 @@ Our goal is to bring ease to you when writing and creating a documentation
 
 To install the most recent stable release of Vardoc 8.2.x run this command:
 ```
-composer create-project Vardot/vardoc-project:8.2.1 PROJECT_DIR_NAME --no-dev --no-interaction
+composer create-project Vardot/vardoc-project:^8.2.1 PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
 To install the dev version of Vardoc 8.2.x run this command:

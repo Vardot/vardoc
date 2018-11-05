@@ -1,3 +1,27 @@
+# 8.2.1
+
+### Highlighted important changes since Vardoc 8.2.0:
+* Issue  [#3011288](http://drupal.org/node/3011288):
+                   Updated [Varbase core] from 8.5.2 to 8.5.3
+* Issue  [#3007665](http://drupal.org/node/3007665):
+                   Updated [Varbase core] profile from 8.5.1 to 8.5.2 - But we
+                   had some issues on the parent profile order of load, which
+                   was fixed in Varbase 8.5.3
+* Issue  [#3001840](http://drupal.org/node/3001840):
+                   Updated [Varbase core] profile from 8.5.0 to 8.5.1 - But we
+                   had some issues on the parent profile order of load, which
+                   was fixed in Varbase 8.5.3
+* Issue  [#3003280](http://drupal.org/node/3003280):
+                   Changed [Vardoc] profile info.yml to project:module syntax
+                   standard not to have a broken installation of sub profiles.
+* Issue  [#3003280](http://drupal.org/node/3003280):
+                   Fixed an issue with the Drupal.org packaged zip file when
+                   we get Varbase by [Drush dl varbase-8][zip] required Modules
+                   not found.
+* Issue  [#3011262](http://drupal.org/node/3011262):
+                   Updated [Voting API] module from 3.0-alpha7 to ^3.0-beta1
+
+
 # 8.2.0
 
 ### Highlighted important changes since Vardoc 8.1.x:
