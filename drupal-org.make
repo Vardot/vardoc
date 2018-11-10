@@ -44,10 +44,7 @@ projects[varbase_faqs][version] = 5.0
 
 projects[varbase][type] = profile
 projects[varbase][subdir] = ""
-projects[varbase][version] = "5.3"
-
-projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 5.3
+projects[varbase][version] = "5.4"
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
