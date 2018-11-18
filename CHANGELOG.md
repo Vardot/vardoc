@@ -1,3 +1,11 @@
+# 8.2.2
+
+### Highlighted important changes since Vardoc 8.2.1:
+Issue [#3012837](http://drupal.org/node/3012837):
+                 Updated [Varbase core] from 8.5.3 to 8.5.4
+
+--------------------------------------------------------------------------------
+
 # 8.2.1
 
 ### Highlighted important changes since Vardoc 8.2.0:
@@ -21,6 +29,7 @@
 * Issue  [#3011262](http://drupal.org/node/3011262):
                    Updated [Voting API] module from 3.0-alpha7 to ^3.0-beta1
 
+--------------------------------------------------------------------------------
 
 # 8.2.0
 
