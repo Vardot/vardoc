@@ -8,7 +8,7 @@ developers need to do to update the last release to the new release.
 
 
 #  For Example:
-* https://www.drupal.org/project/vardoc/releases/8.x-2.3
+* https://www.drupal.org/project/vardoc/releases/8.x-2.2
 * https://www.drupal.org/project/vardoc/releases/8.x-2.1
 * https://www.drupal.org/project/vardoc/releases/8.x-2.0
 
@@ -158,7 +158,7 @@ sudo chmod 775 -R .;
 sudo chown www-data:$USER -R .;
 ```
 * At this point you will be ready to update the active config and database,
-  which you can follow in [Step #2](#step-2-vardot-820-to-vardot-821).
+  which you can follow in [Step #2](#step-2-vardoc-820-to-vardoc-821).
 
 ## Step #2 Vardoc 8.2.0 to Vardoc 8.2.1
 ## Update the active config and database
@@ -218,7 +218,7 @@ sudo chown www-data:$USER -R .;
 * At this point you will be ready to update the active config and database,
   which you can follow in [Step #2](#step-2-vardoc-820-to-vardoc-821).
 
-## Step #1 Option #2 Vardot 8.2.0 to Vardot 8.2.1
+## Step #1 Option #2 Vardoc 8.2.0 to Vardoc 8.2.1
 ## Composer Update
     The composer way of Vardoc's procedures to update the base code.
     only if you had build the vardoc site with the
