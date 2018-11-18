@@ -142,6 +142,14 @@ sudo chown www-data:$USER -R .;
  $ rm -rf docroot/profiles/varbase
  $ rm -rf docroot/profiles/vardoc
 ```
+* Remove the following from your Vardoc composer.json project file.
+```
+"drupal/votingapi_widgets": "1.x-dev#4aa50d00ad3928cd90eb1f922956b9f46ab18f2c",
+```
+as we started to use
+```
+ "drupal/votingapi_widgets": "^1.0-alpha5",
+```
 * Run the "composer require vardot/vardoc:8.2.2" command
 ```
 composer require vardot/vardoc:8.2.2

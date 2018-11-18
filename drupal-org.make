@@ -22,9 +22,7 @@ projects[votingapi][type] = module
 projects[votingapi][version] = 3.0-beta1
 
 projects[votingapi_widgets][type] = module
-projects[votingapi_widgets][download][url] = https://git.drupal.org/project/votingapi_widgets.git
-projects[votingapi_widgets][download][revision] = 4aa50d00ad3928cd90eb1f922956b9f46ab18f2c
-projects[votingapi_widgets][download][branch] = 1.x-dev
+projects[votingapi_widgets][version] = 1.0-alpha5
 
 projects[flag][type] = module
 projects[flag][version] = 4.0-alpha3
