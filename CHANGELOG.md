@@ -1,8 +1,11 @@
 # 8.2.2
 
 ### Highlighted important changes since Vardoc 8.2.1:
-Issue [#3012837](http://drupal.org/node/3012837):
+* Issue [#3012837](http://drupal.org/node/3012837):
                  Updated [Varbase core] from 8.5.3 to 8.5.4
+* Issue [#3014560](http://drupal.org/node/3014560):
+                 Updated [Votingapi Widgets] module
+                 from 1.x-dev 4aa50d00 to ^1.0-alpha5
 
 --------------------------------------------------------------------------------
 

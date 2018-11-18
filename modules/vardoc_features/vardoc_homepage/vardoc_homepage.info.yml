@@ -8,6 +8,8 @@ dependencies:
   - varbase_core:varbase_core
   - varbase_media:varbase_media
   - varbase_core:varbase_webform
+  - default_content:default_content
+  - better_normalizers:better_normalizers
   - entityqueue:entityqueue
   - page_manager:page_manager
   - panels:panels

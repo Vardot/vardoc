@@ -6,6 +6,6 @@ version: 8.x-2.2
 package: Vardoc
 project: vardoc
 dependencies:
-  - vardoc:vardoc_homepage
   - default_content:default_content
   - better_normalizers:better_normalizers
+  - vardoc:vardoc_homepage
