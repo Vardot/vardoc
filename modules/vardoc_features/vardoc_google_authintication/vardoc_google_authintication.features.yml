@@ -1,4 +1,0 @@
-bundle: vardoc
-excluded:
-  - social_auth_google.settings
-required: true
