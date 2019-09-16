@@ -39,49 +39,36 @@
     }
   },
   "require": {
-    "composer/installers": "^1.5.0",
-    "oomphinc/composer-installers-extender": "^1.1.2",
-    "cweagans/composer-patches": "^1.6.4",
-    "drupal-composer/drupal-scaffold": "^2.4.0",
+    "composer/installers": "~1.0",
+    "oomphinc/composer-installers-extender": "~1.0",
+    "cweagans/composer-patches": "~1.0",
+    "drupal-composer/drupal-scaffold": "~2.0",
     "drupal/drupal-library-installer-plugin": "^0.3",
-    "webflo/drupal-finder": "^1.1.0",
-    "webmozart/path-util": "^2.3.0",
-    "vardot/varbase": "8.5.4",
-    "drupal/extlink": "1.x-dev#8a773a6c5519ccb167e18cc39d68551b30b0e4b3",
-    "drupal/image_resize_filter": "1.x-dev#c3f4b23b02005859092aaff746b9f21b794adc58",
-    "drupal/entity_clone": "1.x-dev#6d0ce053605e9aaf8412927a9b0ea8da7a9a06e5",
-    "drupal/tour_ui": "1.x-dev#5cf793c071aeddea0ecd20d80b541606bfe2aff1",
-    "drupal/tour_builder": "1.x-dev#d70e898949b7ec4095efb391a0dbec56d0117558",
-    "drupal/l10n_client": "1.x-dev#9bf8d597732870bdca301512c71b6e5d74d48db2",
-    "drupal/node_edit_protection": "1.x-dev#902339c08222f838030c07aaea23bdc51ababebd",
-    "drupal/security_review": "1.x-dev#35ebae445bb260e961e47c4c58efe7c50c228999",
-    "drupal/menu_position": "1.x-dev#d134276b4bbd08b3c9678943d0225fbef7dd05b5",
-    "drupal/mail_edit": "1.x-dev#bcd0041830d8581b36e6211f0c8eabd8caf9652b",
-    "drupal/taxonomy_menu": "3.x-dev#1103ad0855de4d242364a5b7e74a5c5fc1ce9e02",
-    "drupal/google_analytics_reports": "3.x-dev#2b6bb8efbc7f61ce3c1225638075aa6037b8db44",
-    "drupal/login_destination": "1.x-dev#54be8b89fdc073ca40af6b9b2eeb050e0aeb7908",
-    "drupal/betterlogin": "1.x-dev#f7cf1c5c9ec5e80c6ac0ef04ed605e25495232cd",
-    "drupal/fontawesome": "^1.4",
-    "drupal/better_normalizers": "^1.0-beta3",
+    "webflo/drupal-finder": "~1.0",
+    "webmozart/path-util": "~2.0",
+    "vardot/varbase": "~8.6.0",
+    "drupal/fontawesome": "~1.0",
+    "drupal/better_normalizers": "~1.0",
     "drupal/menu_item_visibility": "1.x-dev#7806c36b68bdc1ac3582e3a034b94126cd3d1d32",
-    "drupal/votingapi": "^3.0-beta1",
-    "drupal/votingapi_widgets": "^1.0-alpha5",
-    "drupal/flag": "^4.0-alpha3",
-    "drupal/sharethis": "^2.0-beta3",
-    "drupal/varbase_faqs": "^5.0"
+    "drupal/votingapi": "~3.0",
+    "drupal/votingapi_widgets": "~1.0",
+    "drupal/flag": "~4.0",
+    "drupal/sharethis": "~2.0",
+    "drupal/varbase_faqs": "~6.0"
   },
   "require-dev": {
-    "drush/drush": "^8.1.16",
-    "drupal/coder": "^8.2.12",
-    "drupal/drupal-extension": "^3.4.1",
-    "phing/phing": "^2.16.1",
-    "behat/behat": "^3.4.3",
-    "behat/mink": "^1.7.1",
-    "behat/mink-extension": "^2.3.1",
-    "behat/mink-goutte-driver": "^1.2.1",
-    "behat/mink-zombie-driver": "^1.4.0",
-    "behat/mink-selenium2-driver": "^1.3.1",
-    "behatch/contexts": "^3.1.0",
+    "drupal/console": "~1.0",
+    "drush/drush": "~9.0",
+    "drupal/coder": "~8.0",
+    "drupal/drupal-extension": "~3.0",
+    "phing/phing": "~2.0",
+    "behat/behat": "~3.0",
+    "behat/mink": "~1.0",
+    "behat/mink-extension": "~2.0",
+    "behat/mink-goutte-driver": "~1.0",
+    "behat/mink-zombie-driver": "~1.0",
+    "behat/mink-selenium2-driver": "~1.0",
+    "behatch/contexts": "~3.0",
     "emuse/behat-html-formatter": "^0.1.0"
   },
   "config": {
@@ -127,12 +114,13 @@
       "npm-asset"
     ],
     "installer-paths": {
-      "docroot/core": ["drupal/core"],
+      "docroot/core": ["type:drupal-core"],
       "docroot/profiles/{$name}": ["type:drupal-profile"],
       "docroot/modules/contrib/{$name}": ["type:drupal-module"],
       "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
       "docroot/libraries/slick": ["npm-asset/slick-carousel"],
       "docroot/libraries/ace": ["npm-asset/ace-builds"],
+      "docroot/libraries/masonry": ["npm-asset/masonry-layout"],
       "docroot/libraries/{$name}": [
         "type:drupal-library",
         "type:bower-asset",
@@ -145,14 +133,23 @@
     "drupal-libraries": {
       "library-directory": "docroot/libraries",
       "libraries": [
-          {"name": "dropzone","package": "npm-asset/dropzone"},
-          {"name": "blazy", "package": "npm-asset/blazy"},
-          {"name": "slick", "package": "npm-asset/slick-carousel"},
-          {"name": "ace", "package": "npm-asset/ace-builds"}
+        {"name": "dropzone","package": "npm-asset/dropzone"},
+        {"name": "blazy", "package": "npm-asset/blazy"},
+        {"name": "slick", "package": "npm-asset/slick-carousel"},
+        {"name": "ace", "package": "npm-asset/ace-builds"},
+        {"name": "chartjs", "package": "bower-asset/chartjs"},
+        {"name": "c3","package": "bower-asset/c3"},
+        {"name": "d3", "package": "bower-asset/d3"},
+        {"name": "masonry", "package": "npm-asset/masonry-layout"},
+        {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
+        {"name": "swagger-ui", "package": "swagger-api/swagger-ui"}
       ]
     },
     "enable-patching": true,
     "composer-exit-on-patch-failure": true,
+    "patchLevel": {
+       "drupal/core": "-p2"
+    },
     "patches": {
       "drupal/core": {
         "Issue #2828681: Book Navigation Block does not sort Books by weight.":
