@@ -3,7 +3,7 @@
     "install-libraries": "npm install && bower install"
   },
   "dependencies": {
-    "bower": "1.7.x"
+    "bower": "1.8.x"
   },
   "license": "GPL-2.0",
   "repository": {
