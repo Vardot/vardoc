@@ -20,4 +20,5 @@ themes:
   - vartheme_admin
 distribution:
   name: Vardoc
-features: true
+  install:
+    theme: vartheme_admin
