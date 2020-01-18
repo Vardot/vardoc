@@ -3,10 +3,13 @@
  * Behaviors for the Vardoc profile installation.
  */
 
-(function ($, _, Drupal, VardocProfileInstallation) {
+(function ($, _, Drupal, drupalSettings) {
+
   'use strict';
-  Drupal.behaviors.search = {
+
+  Drupal.behaviors.VardocProfileInstallation = {
     attach: function (context) {
+
       $('#install-select-language-form #edit-langcode').on('change', function () {
         var languages = ['ar', 'en'];
         if(jQuery.inArray($(this).val(), languages) == -1) {
