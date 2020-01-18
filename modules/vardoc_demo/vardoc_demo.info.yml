@@ -6,6 +6,7 @@ version: 8.x-2.x-dev
 package: Vardoc
 project: vardoc
 dependencies:
+  - drupal:hal
   - default_content:default_content
   - better_normalizers:better_normalizers
   - vardoc:vardoc_homepage
