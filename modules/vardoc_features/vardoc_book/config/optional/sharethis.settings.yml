@@ -6,7 +6,6 @@ node_types:
   book: book
   page: null
 option_extras:
-  'Google Plus One:plusone': '0'
   'Facebook Like:fblike': '0'
 option_neworzero: 0
 option_onhover: 1

@@ -14,9 +14,7 @@ projects[better_normalizers][type] = module
 projects[better_normalizers][version] = 1.0-beta3
 
 projects[menu_item_visibility][type] = module
-projects[menu_item_visibility][download][url] = https://git.drupal.org/project/menu_item_visibility.git
-projects[menu_item_visibility][download][revision] = 7806c36b68bdc1ac3582e3a034b94126cd3d1d32
-projects[menu_item_visibility][download][branch] = 1.x-dev
+projects[menu_item_visibility][version] = 1.x-dev
 
 projects[votingapi][type] = module
 projects[votingapi][version] = 3.0-beta1
@@ -31,18 +29,14 @@ projects[sharethis][type] = module
 projects[sharethis][version] = 2.0-beta3
 
 projects[faq][type] = module
-projects[faq][download][url] = https://git.drupal.org/project/faq.git
-projects[faq][download][revision] = 2bdc0f0fd3fa1941bf7d3579a498e6f40ca9c69a
-projects[faq][download][branch] = 1.x-dev
-;; Issue #2932028: Unable to place FAQ Categories block.
-projects[faq][patch][] = https://www.drupal.org/files/issues/unable-to-add-faq-block-2932028-9.patch
+projects[faq][version] = 1.0-alpha1
 
 projects[varbase_faqs][type] = module
 projects[varbase_faqs][version] = 5.0
 
 projects[varbase][type] = profile
 projects[varbase][subdir] = ""
-projects[varbase][version] = "5.4"
+projects[varbase][version] = "7.4"
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
