@@ -3,6 +3,8 @@
   "description": "Vardoc: Knowledge Base System and Documentation Site",
   "type": "drupal-profile",
   "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "authors": [
     {
       "name": "Vardot",
@@ -18,7 +20,7 @@
     "drupal": {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
-      },
+    },
     "assets": {
       "type": "composer",
       "url": "https://asset-packagist.org"
@@ -34,10 +36,6 @@
           "url": "https://github.com/antennaio/jquery-bar-rating/archive/v1.2.2.zip"
         }
       }
-    },
-    "composer-patches": {
-      "type": "vcs",
-      "url": "https://github.com/vardot/composer-patches"
     }
   },
   "require": {
@@ -58,13 +56,24 @@
     "drupal/sharethis": "~2.0",
     "drupal/varbase_faqs": "~6.0"
   },
-  "replace": {
-    "ajaxorg/ace-builds": "*"
+  "require-dev": {
+    "drupal/console": "~1.0",
+    "drush/drush": "~9.0",
+    "drupal/coder": "~8.0",
+    "drupal/drupal-extension": "~3.0",
+    "phing/phing": "~2.0",
+    "behat/behat": "~3.0",
+    "behat/mink": "~1.0",
+    "behat/mink-extension": "~2.0",
+    "behat/mink-goutte-driver": "~1.0",
+    "behat/mink-zombie-driver": "~1.0",
+    "behat/mink-selenium2-driver": "~1.0",
+    "behatch/contexts": "~3.0",
+    "emuse/behat-html-formatter": "^0.2.0"
   },
   "config": {
     "bin-dir": "bin/",
     "secure-http": false,
-    "optimize-autoloader": true,
     "preferred-install": {
       "drupal/core": "dist"
     }
@@ -92,22 +101,7 @@
       "Vardoc\\composer\\ScriptHandler::postDrupalScaffoldSubProfileProcedure"
     ]
   },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "conflict": {
-    "drupal/drupal": "*"
-  },
   "extra": {
-    "_readme": [
-      "NOTICE: We're now using composer patches from Vardot repository to suggest",
-      "several fixes and better handling of patches in your Drupal project.",
-      "You'll notice that we have included (https://github.com/vardot/composer-patches)",
-      "in this composer.json repositories. This will replace the original",
-      "library (cweagans/composer-patches) with our own from (vardot/composer-patches).",
-      "See https://github.com/cweagans/composer-patches/pull/243 and more details",
-      "on our changes on the composer-patches package. Once our changes get merged,",
-      "we will revert to using (cweagans/composer-patches) without this override."
-    ],
     "branch-alias": {
       "dev-8.x-2.x": "8.2.x-dev"
     },
