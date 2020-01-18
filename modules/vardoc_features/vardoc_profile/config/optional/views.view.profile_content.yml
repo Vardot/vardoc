@@ -845,7 +845,7 @@ display:
             trim_type: chars
             trim_suffix: ...
             more_link: '0'
-            more_text: المزيد
+            more_text: more
             summary_handler: ignore
             trim_options:
               text: text

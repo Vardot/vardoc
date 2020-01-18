@@ -36,10 +36,9 @@ function vardoc_profile_install() {
   $optional_install_path = $module_path . '/' . InstallStorage::CONFIG_OPTIONAL_DIRECTORY;
   if (is_dir($optional_install_path)) {
     $config_installer = \Drupal::service('config.installer');
-    $config_installer->installDefaultConfig('module', $module_name);
-
-    // Create field storage configs first in active config.
-    $storage_config_files = file_scan_directory($optional_install_path, '/^field.storage.*\\.(yml)$/i');
+    
+    // Import Image styles.
+    $storage_config_files = file_scan_directory($optional_install_path, '/^image.style.*\\.(yml)$/i');
     if (isset($storage_config_files) && is_array($storage_config_files)) {     
       foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
@@ -49,12 +48,75 @@ function vardoc_profile_install() {
       }
     }
 
-    // Install any optional config the module provides.
-    $storage = new FileStorage($optional_install_path, StorageInterface::DEFAULT_COLLECTION);
-    $config_installer->installOptionalConfig($storage, '');
+   
+    // Import DS Fields.
+    $storage_config_files = file_scan_directory($optional_install_path, '/^ds.field.*\\.(yml)$/i');
+    if (isset($storage_config_files) && is_array($storage_config_files)) {     
+      foreach ($storage_config_files as $storage_config_file) {
+        $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
+        $storage_config_file_data = (array) Yaml::parse($storage_config_file_content);
+        $config_factory = \Drupal::configFactory()->getEditable($storage_config_file->name);
+        $config_factory->setData($storage_config_file_data)->save(TRUE);
+      }
+    }
 
-    // Import Views.
+    // Import Fields.
+    $storage_config_files = file_scan_directory($optional_install_path, '/^field.field.user.*\\.(yml)$/i');
+    if (isset($storage_config_files) && is_array($storage_config_files)) {     
+      foreach ($storage_config_files as $storage_config_file) {
+        $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
+        $storage_config_file_data = (array) Yaml::parse($storage_config_file_content);
+        $config_factory = \Drupal::configFactory()->getEditable($storage_config_file->name);
+        $config_factory->setData($storage_config_file_data)->save(TRUE);
+      }
+    }
+    
+    // Import entity view modes.
+    $storage_config_files = file_scan_directory($optional_install_path, '/^core.entity_view_mode.user.*\\.(yml)$/i');
+    if (isset($storage_config_files) && is_array($storage_config_files)) {     
+      foreach ($storage_config_files as $storage_config_file) {
+        $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
+        $storage_config_file_data = (array) Yaml::parse($storage_config_file_content);
+        $config_factory = \Drupal::configFactory()->getEditable($storage_config_file->name);
+        $config_factory->setData($storage_config_file_data)->save(TRUE);
+      }
+    }
+    
+    // Import entity entity form display.
+    $storage_config_files = file_scan_directory($optional_install_path, '/^core.entity_form_display.user.*\\.(yml)$/i');
+    if (isset($storage_config_files) && is_array($storage_config_files)) {     
+      foreach ($storage_config_files as $storage_config_file) {
+        $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
+        $storage_config_file_data = (array) Yaml::parse($storage_config_file_content);
+        $config_factory = \Drupal::configFactory()->getEditable($storage_config_file->name);
+        $config_factory->setData($storage_config_file_data)->save(TRUE);
+      }
+    }
+    
+    // Import entity entity view display.
+    $storage_config_files = file_scan_directory($optional_install_path, '/^core.entity_view_display.user.*\\.(yml)$/i');
+    if (isset($storage_config_files) && is_array($storage_config_files)) {     
+      foreach ($storage_config_files as $storage_config_file) {
+        $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
+        $storage_config_file_data = (array) Yaml::parse($storage_config_file_content);
+        $config_factory = \Drupal::configFactory()->getEditable($storage_config_file->name);
+        $config_factory->setData($storage_config_file_data)->save(TRUE);
+      }
+    }
+
+    // Import View.
     $storage_config_files = file_scan_directory($optional_install_path, '/^views.view.*\\.(yml)$/i');
+    if (isset($storage_config_files) && is_array($storage_config_files)) {     
+      foreach ($storage_config_files as $storage_config_file) {
+        $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
+        $storage_config_file_data = (array) Yaml::parse($storage_config_file_content);
+        $config_factory = \Drupal::configFactory()->getEditable($storage_config_file->name);
+        $config_factory->setData($storage_config_file_data)->save(TRUE);
+      }
+    }
+    
+    // Import Blocks.
+    $storage_config_files = file_scan_directory($optional_install_path, '/^block.block.*\\.(yml)$/i');
     if (isset($storage_config_files) && is_array($storage_config_files)) {     
       foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
@@ -65,27 +127,8 @@ function vardoc_profile_install() {
     }
 
   }
-  // --------------------------------------------------------------------------.
-  // Entity updates to clear up any mismatched entity and/or field definitions
-  // And Fix changes were detected in the entity type and field definitions.
-  \Drupal::classResolver()
-    ->getInstanceFromDefinition(VarbaseEntityDefinitionUpdateManager::class)
-    ->applyUpdates();
 
-  // Full flash and clear cash and rebuilding newly created routes.
-  // After install of extra modules by install: in the .info.yml files.
-  // In Varbase profile and all Varbase components.
-  // ---------------------------------------------------------------------------
-  // * Necessary inlitilization for the entire system.
-  // * Account for changed config by the end install.
-  // * Flush all persistent caches.
-  // * Flush asset file caches.
-  // * Wipe the Twig PHP Storage cache.
-  // * Rebuild module and theme data.
-  // * Clear all plugin caches.
-  // * Rebuild the menu router based on all rebuilt data.
-  drupal_flush_all_caches();
-  
+  // --------------------------------------------------------------------------.
   // Load the user 1 to fill in first name, last name, and profile image
   $user = User::load(1);
   $user->set('field_first_name', 'Vardoc')
@@ -97,4 +140,11 @@ function vardoc_profile_install() {
   // Attach the file into user profile image and then save it
   $user->field_profile_image->setValue(['target_id' => $file->id()]);
   $user->save();
+  
+  // Entity updates to clear up any mismatched entity and/or field definitions
+  // And Fix changes were detected in the entity type and field definitions.
+  \Drupal::classResolver()
+    ->getInstanceFromDefinition(VarbaseEntityDefinitionUpdateManager::class)
+    ->applyUpdates();
+
 }
