@@ -86,6 +86,5 @@ hidden:
   field_last_password_reset: true
   field_password_expiration: true
   google_analytics: true
-  langcode: true
   language: true
   timezone: true

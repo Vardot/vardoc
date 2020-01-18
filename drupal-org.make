@@ -10,9 +10,6 @@ defaults[projects][subdir] = contrib
 projects[fontawesome][type] = module
 projects[fontawesome][version] = 1.4
 
-projects[better_normalizers][type] = module
-projects[better_normalizers][version] = 1.0-beta3
-
 projects[menu_item_visibility][type] = module
 projects[menu_item_visibility][version] = 1.x-dev
 
@@ -23,7 +20,7 @@ projects[votingapi_widgets][type] = module
 projects[votingapi_widgets][version] = 1.0-alpha5
 
 projects[flag][type] = module
-projects[flag][version] = 4.0-alpha3
+projects[flag][version] = 4.0-beta1
 
 projects[sharethis][type] = module
 projects[sharethis][version] = 2.0-beta3
@@ -32,7 +29,7 @@ projects[faq][type] = module
 projects[faq][version] = 1.0-alpha1
 
 projects[varbase_faqs][type] = module
-projects[varbase_faqs][version] = 5.0
+projects[varbase_faqs][version] = 6.6
 
 projects[varbase][type] = profile
 projects[varbase][subdir] = ""

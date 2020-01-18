@@ -6,9 +6,6 @@ dependencies:
     - vardoc_profile
   theme:
     - vardoctheme
-third_party_settings:
-  block_class:
-    classes: ''
 id: avatarblock
 theme: vardoctheme
 region: header_right
