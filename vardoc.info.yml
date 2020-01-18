@@ -20,4 +20,6 @@ themes:
   - vartheme_admin
 distribution:
   name: Vardoc
+  install:
+    theme: vartheme_admin
 features: true
