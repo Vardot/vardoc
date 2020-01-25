@@ -30,7 +30,7 @@
 .ui-dialog-offcanvas .panel-default .panel-heading .panel-title {
   background-color: #333;
   color: #ddd;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 .ui-dialog-offcanvas .panel-default .panel-heading .panel-title.collapsed {
   background-color: #474747;
@@ -65,7 +65,7 @@
   font-weight: normal;
   color: #85bef4;
   text-decoration: none;
-  transition: color .5s ease;
+  transition: color 0.5s ease;
   box-shadow: none;
   text-shadow: none;
 }
@@ -89,7 +89,7 @@
   margin: 0;
   border: 0;
   color: #eee;
-  transition: background .5s ease;
+  transition: background 0.5s ease;
   padding: 0.1em 0.8em;
   border-radius: 0;
 }

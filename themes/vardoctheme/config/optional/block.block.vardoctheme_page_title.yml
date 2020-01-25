@@ -1,18 +1,12 @@
 langcode: en
 status: true
 dependencies:
-  module:
-    - block_class
   theme:
-    - vartheme
     - vardoctheme
-third_party_settings:
-  block_class:
-    classes: ''
 id: vardoctheme_page_title
 theme: vardoctheme
 region: content_top
-weight: -3
+weight: -9
 provider: null
 plugin: page_title_block
 settings:

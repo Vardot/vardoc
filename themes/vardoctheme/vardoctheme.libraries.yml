@@ -141,16 +141,22 @@ vbp-colors:
 #      bootstrap-no-spacing/css/bootstrap-no-spacing.css: {}
 
 # Vartheme Edge to Edge layout library.
-edge2edge:
-  css:
-    layout:
-      css/layout/edge2edge.layout.css: {}
+#edge2edge:
+#  css:
+#    layout:
+#      css/layout/edge2edge.layout.css: {}
 
-# Vartheme Equal height layout library.
+# Vartheme Material Equal height layout library.
 #equal-height:
 #  css:
 #    layout:
 #      css/layout/equal-height.layout.css: {}
+
+# Vartheme Spacing layout library.
+#spacing:
+#  css:
+#    layout:
+#      css/layout/spacing.layout.css: {}
 
 # Vartheme Bootstrap Callouts component library.
 bs-callouts:
@@ -269,3 +275,11 @@ navbar-admin:
 #  css:
 #    component:
 #      css/component/autocomplete.component.css: {}
+
+# Varbase hero slider media general styling.
+#varbase-heroslider-media:
+#  css:
+#    component:
+#      css/component/varbase-heroslider-media.component.css: { }
+#    theme:
+#      css/theme/varbase-heroslider-media.theme.css: { }

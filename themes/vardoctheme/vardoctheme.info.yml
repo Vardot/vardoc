@@ -40,6 +40,9 @@ libraries:
 # vardoctheme Better Login theme.
 #  - vardoctheme/betterlogin
 
+# vardoctheme Varbase hero slider media general styling.
+#  - vardoctheme/varbase-heroslider-media
+
 # OPTIONALLY: You can choose to remove Vartheme base theme stylesheets and/or
 # Javascript files.
 libraries-override:
@@ -50,7 +53,7 @@ libraries-override:
   vartheme/bootstrap-styles: false
   vartheme/bootstrap-scripts: false
   vartheme/global-styles: false
-  vartheme/global-scripts: true
+#  vartheme/global-scripts: false
 
 # Comment lines to use (RTL) libraries from vartheme.
   vartheme/bootstrap-styles-rtl: false
@@ -64,6 +67,7 @@ libraries-override:
   varbase_bootstrap_paragraphs/vbp-colors: vardoctheme/vbp-colors
   vartheme/vbp-colors: vardoctheme/vbp-colors
 #  vartheme/betterlogin: vardoctheme/betterlogin
+#  varbase_heroslider_media/general-styling: vardoctheme/varbase-heroslider-media
   
 # Uncomment lines to replace, exclude css and js files from vartheme.
 # You will need to copy less/css files from Vartheme to use theme for the
@@ -74,6 +78,7 @@ libraries-override:
 #  vartheme/outside-in: vardoctheme/outside-in
 #  vartheme/edge2edge: vardoctheme/edge2edge
 #  vartheme/equal-height: vardoctheme/equal-height
+#  vartheme/spacing: vardoctheme/spacing
 #  vartheme/navbar-admin: vardoctheme/navbar-admin
 # ------------------------------------------------------------------------------
 #  vartheme/ajax: vardoctheme/ajax
@@ -109,3 +114,4 @@ ckeditor_stylesheets:
   - css/component/node.component.css
   - css/component/bs-callouts.component.css
   - css/layout/edge2edge.layout.css
+  - css/layout/spacing.layout.css

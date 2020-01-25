@@ -6,7 +6,12 @@
 @import "../../mixins.less";                       // vardoctheme mixins.
 
 // Core variables and mixins imported from the latest original bootstrap.
-@import "../../../bootstrap-rtl/less/mixins-rtl.less";
+// Mixins
+// --------------------------------------------------
+@import "../../../bootstrap-rtl/less/mixins/pagination-rtl.less"; // RTL
+@import "../../../bootstrap-rtl/less/mixins/gradients-rtl.less"; // RTL
+@import "../../../bootstrap-rtl/less/mixins/grid-framework-rtl.less"; // RTL
+@import "../../../bootstrap-rtl/less/mixins/grid-rtl.less"; // RTL
 // -----------------------------------------------------------------------------
 
 // Insert your Bootstrap (RTL) overrides for bootstrap-rtl library.
@@ -16,4 +21,10 @@
   &.nav-pills > li + li {
     margin-left: inherit;
   }
+}
+
+@import url(//fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
+body {
+  font-family: 'Droid Arabic Kufi', sans-serif;
 }

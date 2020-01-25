@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - vartheme
     - vardoctheme
 id: vardoctheme_local_actions
 theme: vardoctheme

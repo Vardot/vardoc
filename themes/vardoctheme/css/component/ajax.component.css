@@ -15,12 +15,12 @@ a .glyphicon-spin {
   text-decoration: none;
 }
 html.js .btn .ajax-throbber {
-  margin-left: .5em;
+  margin-left: 0.5em;
   margin-right: -0.25em;
 }
 html.js .form-item .input-group-addon .glyphicon {
   color: #777777;
-  opacity: .5;
+  opacity: 0.5;
   transition: 150ms color, 150ms opacity;
 }
 html.js .form-item .input-group-addon .glyphicon.glyphicon-spin {

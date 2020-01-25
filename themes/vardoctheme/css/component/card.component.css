@@ -13,6 +13,10 @@
   margin-right: 0;
   margin-left: 0;
 }
+.card > a {
+  display: block;
+  height: 100%;
+}
 .card > .list-group:first-child .list-group-item:first-child {
   border-radius: 4px;
 }
@@ -33,7 +37,7 @@
 .card-text:last-child {
   margin-bottom: 0;
 }
-.card-link::hover {
+.card-link:hover {
   text-decoration: none;
 }
 .card-link + .card-link {
@@ -46,7 +50,7 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 .card-header:first-child {
-  border-radius: calc(3px) calc(3px) 0 0;
+  border-radius: calc(4px - 1px) calc(4px - 1px) 0 0;
 }
 .card-header + .list-group .list-group-item:first-child {
   border-top: 0;
@@ -57,7 +61,7 @@
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 .card-footer:last-child {
-  border-radius: 0 0 calc(3px) calc(3px);
+  border-radius: 0 0 calc(4px - 1px) calc(4px - 1px);
 }
 .card-header-tabs {
   margin-right: -0.625rem;
@@ -79,11 +83,11 @@
 }
 .card-img {
   width: 100%;
-  border-radius: calc(3px);
+  border-radius: calc(4px - 1px);
 }
 .card-img-top {
   width: 100%;
-  border-radius: calc(3px);
+  border-radius: calc(4px - 1px);
 }
 .card-img-bottom {
   width: 100%;
@@ -91,16 +95,13 @@
 .card-deck {
   display: flex;
   flex-direction: column;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 .card-deck .card {
   margin-bottom: 15px;
 }
 @media (min-width: 768px) {
-  .card-deck {
-    flex-flow: row wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-  }
   .card-deck .card {
     display: flex;
     flex: 1 0 0%;

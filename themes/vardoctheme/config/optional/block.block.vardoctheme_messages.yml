@@ -1,10 +1,7 @@
 langcode: en
 status: true
 dependencies:
-  module:
-    - system
   theme:
-    - vartheme
     - vardoctheme
 id: vardoctheme_messages
 theme: vardoctheme
