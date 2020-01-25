@@ -4,8 +4,9 @@ base theme: vartheme
 
 name: 'Vardoc Theme (Bootstrap 3 - LESS)'
 description: 'Uses the Bootstrap framework LESS source files and must be compiled (not for beginners).'
-package: 'Varbase'
-
+version: 8.x-2.3
+package: Vardoc
+project: vardoc
 regions:
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'

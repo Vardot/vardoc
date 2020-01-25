@@ -1,3 +1,17 @@
+# 8.2.3
+
+* Issue [#3012838](http://drupal.org/node/3012838):
+                  Updated [Varbase profile] to 8.7.4
+* Issue [#3107228](http://drupal.org/node/3107228):
+                  Styled Vardoc Installation steps and copyrights for
+                  stable releases
+* Issue [#3091934](http://drupal.org/node/3091934):
+                  Bumped up package.json potential security vulnerability
+                  in dependencies
+* Issue [#3108790](http://drupal.org/node/3108790):
+                  Updated [Vardoc Theme] to use the latest Vartheme BS3 with
+                  (Bootstrap 3 LESS) changes and Bootstrap 3.4.1
+
 # 8.2.2
 
 ### Highlighted important changes since Vardoc 8.2.1:
