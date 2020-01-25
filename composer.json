@@ -79,7 +79,7 @@
   },
   "autoload": {
     "psr-4": {
-      "VarbaseSubProfileBasic\\composer\\": "src/composer"
+      "Vardoc\\composer\\": "src/composer"
     }
   },
   "scripts": {
