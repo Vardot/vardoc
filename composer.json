@@ -42,11 +42,9 @@
     "composer/installers": "~1.0",
     "oomphinc/composer-installers-extender": "~1.0",
     "cweagans/composer-patches": "~1.0",
-    "drupal-composer/drupal-scaffold": "~2.0",
+    "drupal/core-composer-scaffold": "^8.8.0",
     "drupal/drupal-library-installer-plugin": "^0.3",
-    "webflo/drupal-finder": "~1.0",
-    "webmozart/path-util": "~2.0",
-    "vardot/varbase": "~8.7.0",
+    "vardot/varbase": "~8.8.0",
     "drupal/fontawesome": "~1.0",
     "drupal/better_normalizers": "~1.0",
     "drupal/menu_item_visibility": "*",
@@ -74,21 +72,22 @@
   "config": {
     "bin-dir": "bin/",
     "secure-http": false,
+    "optimize-autoloader": true,
     "preferred-install": {
       "drupal/core": "dist"
     }
   },
   "autoload": {
     "psr-4": {
-      "Vardoc\\composer\\": "src/composer"
+      "VarbaseSubProfileBasic\\composer\\": "src/composer"
     }
   },
   "scripts": {
-    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+    "pre-install-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
+    "pre-update-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
     "post-install-cmd": [
       "Varbase\\composer\\ScriptHandler::createRequiredFiles",
       "Varbase\\composer\\ScriptHandler::removeGitDirectories",
-      "@composer drupal-scaffold",
       "./bin/phing push"
     ],
     "post-update-cmd": [
@@ -102,6 +101,11 @@
     ]
   },
   "extra": {
+    "drupal-scaffold": {
+      "locations": {
+        "web-root": "docroot/"
+      }
+    },
     "branch-alias": {
       "dev-8.x-2.x": "8.2.x-dev"
     },
