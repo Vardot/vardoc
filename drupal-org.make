@@ -53,12 +53,12 @@ libraries[blazy][download][url] = "https://github.com/dinbror/blazy/archive/1.8.
 libraries[blazy][destination] = "libraries"
 
 libraries[slick][download][type] = get
-libraries[slick][download][url] = "https://github.com/kenwheeler/slick/archive/1.6.0.tar.gz"
+libraries[slick][download][url] = "https://github.com/kenwheeler/slick/archive/v1.8.1.tar.gz"
 libraries[slick][destination] = "libraries"
 
 libraries[ace][directory_name] = "ace"
 libraries[ace][download][type] = "get"
-libraries[ace][download][url] = "http://github.com/ajaxorg/ace-builds/archive/v1.2.6.tar.gz"
+libraries[ace][download][url] = "http://github.com/ajaxorg/ace-builds/archive/v1.4.4.tar.gz"
 libraries[ace][destination] = "libraries"
 
 libraries[jquery-bar-rating][download][type] = "get"

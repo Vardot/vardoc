@@ -1,5 +1,14 @@
+# 8.2.4
+
+### Highlighted important changes since Vardoc 8.2.3:
+* Issue [#3108911](http://drupal.org/node/3108911):
+                  Updated [Varbase profile]
+                  from 8.7.4 ( ~8.7.0 ) to 8.8.1 ( ~8.8.0 )
+--------------------------------------------------------------------------------
+
 # 8.2.3
 
+### Highlighted important changes since Vardoc 8.2.2:
 * Issue [#3012838](http://drupal.org/node/3012838):
                   Updated [Varbase profile] to 8.7.4
 * Issue [#3107228](http://drupal.org/node/3107228):
@@ -11,6 +20,8 @@
 * Issue [#3108790](http://drupal.org/node/3108790):
                   Updated [Vardoc Theme] to use the latest Vartheme BS3 with
                   (Bootstrap 3 LESS) changes and Bootstrap 3.4.1
+
+--------------------------------------------------------------------------------
 
 # 8.2.2
 
