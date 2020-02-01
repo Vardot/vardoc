@@ -21,11 +21,9 @@ install:
 themes:
   # Contrib themes.
   - adminimal_theme
-  - bootstrap
-
-  # Custom themes.
+  - bootstrap_barrio
+  - vartheme_bs4
   - vardoc_theme
-  - vartheme
   - vartheme_admin
 distribution:
   name: Vardoc
