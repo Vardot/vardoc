@@ -8,12 +8,12 @@ dependencies:
     - ctools
     - views
   theme:
-    - vardoctheme
+    - vardoc_theme
 third_party_settings:
   block_class:
     classes: ''
 id: views_block__book_block_related_articles
-theme: vardoctheme
+theme: vardoc_theme
 region: sidebar_second
 weight: -6
 provider: null

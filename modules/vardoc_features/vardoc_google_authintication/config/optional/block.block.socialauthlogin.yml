@@ -6,12 +6,12 @@ dependencies:
     - social_auth
     - system
   theme:
-    - vardoctheme
+    - vardoc_theme
 third_party_settings:
   block_class:
     classes: ''
 id: socialauthlogin
-theme: vardoctheme
+theme: vardoc_theme
 region: content
 weight: 0
 provider: null

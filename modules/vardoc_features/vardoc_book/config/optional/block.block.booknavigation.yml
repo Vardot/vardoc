@@ -6,12 +6,12 @@ dependencies:
     - book
     - system
   theme:
-    - vardoctheme
+    - vardoc_theme
 third_party_settings:
   block_class:
     classes: ''
 id: booknavigation
-theme: vardoctheme
+theme: vardoc_theme
 region: sidebar_second
 weight: -7
 provider: null

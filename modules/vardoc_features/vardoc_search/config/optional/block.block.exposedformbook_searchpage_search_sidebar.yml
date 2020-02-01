@@ -8,12 +8,12 @@ dependencies:
     - system
     - views
   theme:
-    - vardoctheme
+    - vardoc_theme
 third_party_settings:
   block_class:
     classes: ''
 id: exposedformbook_searchpage_search_sidebar
-theme: vardoctheme
+theme: vardoc_theme
 region: content_top
 weight: -6
 provider: null
