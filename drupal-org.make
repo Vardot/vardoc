@@ -36,6 +36,13 @@ projects[varbase][subdir] = ""
 projects[varbase][version] = "8.1"
 
 ;;;;;;;;;;;;;;;;;;;;;
+;; Vardoc public contributed themes.
+;;;;;;;;;;;;;;;;;;;;;
+
+projects[vardoc_theme][type] = theme
+projects[vardoc_theme][version] = 1.x-dev
+
+;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
 ;;;;;;;;;;;;;;;;;;;;;
 

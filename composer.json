@@ -52,7 +52,8 @@
     "drupal/votingapi_widgets": "~1.0",
     "drupal/flag": "~4.0",
     "drupal/sharethis": "~2.0",
-    "drupal/varbase_faqs": "~6.0"
+    "drupal/varbase_faqs": "~6.0",
+    "drupal/vardoc_theme": "1.x-dev"
   },
   "require-dev": {
     "drupal/console": "~1.0",
