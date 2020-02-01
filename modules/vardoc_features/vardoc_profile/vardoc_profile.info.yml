@@ -4,7 +4,6 @@ type: module
 core: 8.x
 version: 8.x-3.x-dev
 package: Vardoc
-project: vardoc
 dependencies:
   - varbase_core:varbase_core
   - varbase_media:varbase_media
@@ -12,3 +11,4 @@ dependencies:
   - drupal:datetime
   - drupal:history
   - flag:flag
+  

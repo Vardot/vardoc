@@ -10,41 +10,30 @@ defaults[projects][subdir] = contrib
 projects[fontawesome][type] = module
 projects[fontawesome][version] = 1.4
 
-projects[better_normalizers][type] = module
-projects[better_normalizers][version] = 1.0-beta3
-
 projects[menu_item_visibility][type] = module
-projects[menu_item_visibility][download][url] = https://git.drupal.org/project/menu_item_visibility.git
-projects[menu_item_visibility][download][revision] = 7806c36b68bdc1ac3582e3a034b94126cd3d1d32
-projects[menu_item_visibility][download][branch] = 1.x-dev
+projects[menu_item_visibility][version] = 1.x-dev
 
 projects[votingapi][type] = module
-projects[votingapi][version] = 3.0-alpha7
+projects[votingapi][version] = 3.0-beta1
 
 projects[votingapi_widgets][type] = module
-projects[votingapi_widgets][download][url] = https://git.drupal.org/project/votingapi_widgets.git
-projects[votingapi_widgets][download][revision] = 4aa50d00ad3928cd90eb1f922956b9f46ab18f2c
-projects[votingapi_widgets][download][branch] = 1.x-dev
+projects[votingapi_widgets][version] = 1.0-alpha5
 
 projects[flag][type] = module
-projects[flag][version] = 4.0-alpha3
+projects[flag][version] = 4.0-beta1
 
 projects[sharethis][type] = module
 projects[sharethis][version] = 2.0-beta3
 
 projects[faq][type] = module
-projects[faq][download][url] = https://git.drupal.org/project/faq.git
-projects[faq][download][revision] = 2bdc0f0fd3fa1941bf7d3579a498e6f40ca9c69a
-projects[faq][download][branch] = 1.x-dev
-;; Issue #2932028: Unable to place FAQ Categories block.
-projects[faq][patch][] = https://www.drupal.org/files/issues/unable-to-add-faq-block-2932028-9.patch
+projects[faq][version] = 1.0-alpha1
 
 projects[varbase_faqs][type] = module
-projects[varbase_faqs][version] = 6.x-dev
+projects[varbase_faqs][version] = 6.6
 
 projects[varbase][type] = profile
 projects[varbase][subdir] = ""
-projects[varbase][version] = "6.x-dev"
+projects[varbase][version] = "8.1"
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
@@ -64,12 +53,12 @@ libraries[blazy][download][url] = "https://github.com/dinbror/blazy/archive/1.8.
 libraries[blazy][destination] = "libraries"
 
 libraries[slick][download][type] = get
-libraries[slick][download][url] = "https://github.com/kenwheeler/slick/archive/1.6.0.tar.gz"
+libraries[slick][download][url] = "https://github.com/kenwheeler/slick/archive/v1.8.1.tar.gz"
 libraries[slick][destination] = "libraries"
 
 libraries[ace][directory_name] = "ace"
 libraries[ace][download][type] = "get"
-libraries[ace][download][url] = "http://github.com/ajaxorg/ace-builds/archive/v1.2.6.tar.gz"
+libraries[ace][download][url] = "http://github.com/ajaxorg/ace-builds/archive/v1.4.4.tar.gz"
 libraries[ace][destination] = "libraries"
 
 libraries[jquery-bar-rating][download][type] = "get"

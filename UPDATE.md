@@ -1,82 +1,96 @@
-# Vardoc Update
-General instructions on how to update Vardoc
+Visit https://docs.varbase.vardot.com/updating-varbase for an up-to-date and
+ further detailed documentation process.
 
-# 1 - Read the release notes to know what had been changed.
+# Updating a Varbase Site
 
-For each stable release we will have some notes, and extra steps,
-developers need to do to update the last release to the new release.
+## Before You Update
 
+Updating Varbase is best done through Composer. We will assume that you have
+ [installed Varbase the recommended way](../getting-started/installing-varbase.md) through the Composer-based project template [varbase-project](https://github.com/Vardot/varbase-project) by running the command: `composer create-project Vardot/varbase-project:^8.6 YOUR_PROJECT --no-dev --no-interaction`
 
-
-# 2 - Backups
-
-* Backup your project database.
-* Backup your project files.
-* Test restore your backups, on a test restore site.
-
-# 3 - Get the packaged files for the new version of Vardoc 8.2.x
-
-* From Drupal website: https://www.drupal.org/project/vardoc
-* With the composer using vardoc-project: https://packagist.org/packages/vardot/vardoc-project
-
-# 4 - From your terminal, change directory to the root directory of your
-#     project to do the update:
-
-# For Example:
-
-```
-Given that we do have a project at the /var/www/html/projects/example folder
-  And we do have our custom themes, features, custom modules in
-   /var/www/html/projects/example/themes/custom/
-   /var/www/html/projects/example/modules/custom/
-   /var/www/html/projects/example/sites/default
-so on ...
-like contributed modules which we had theme added
-while working on the project.
-
-  And we opened a terminal console window
-  And we changed directory to our project folder
-  cd /var/www/html/projects/example in Linux
-
-  When we delete all files and folders, except our changes on Vardoc.
-  Then we will be left with only custom changes
-
-  When we copy all Vardoc files
-  And we make sure that we do not have any overridden files or folders
-     only delete old ones and copy new folder of modules to the same place
-```
-
-# 5 - Set the right file permissions.
-# 6 - Update composer packages. use "composer outdated"
-# $ composer update
-
-  Make sure that you do have modules in the right place.
-
-# 7 - Import Vardoc Core Features and Bundles:
-
-```
- Given that you are logged in with the "webmaster" user
-   And the "Features" module is enabled
-   And the "Features UI" module is enabled
-  When you go to "admin/config/development/features"
-  Then you should not see any changed features in the Vardoc core bundle.
-  When you click on all "Changed"
-  Then you will be able to see all changes
-   And you will be able to import new changes if you need them
-```
-
-# 8 - Do your Drupal 8 database updates
-
-* By the terminal "drush updb".
-* By the web browser by going to "yousite.domain/update.php"
-
-# 9 - Regression test the full site.
-
-* Done :\)
-
----
+This will create the Varbase project directory that will look like this:
+ `/path/to/YOUR_PROJECT` with the Drupal 8 codebase installed via Varbase
+ installation profile in `/path/to/YOUR_PROJECT/docroot`.
 
 
---------------------------------------------------------------------------------
-# No upgrade path to update Vardoc 8.x-2.x to 8.x-3.x yet
-You will need to manage a migration, or a hard update process.
+## The Update Process
+
+There are two main update processes we will cover. 1\) Automated process
+ using a tool we've developed to ease the update process for Varbase called
+ [varbase-updater](https://github.com/Vardot/varbase-updater). 2\) Manual
+ process if you wish to take matters into your own hands.
+
+### OPTION 1: Automated Process — Using Varbase Updater
+
+If you previously used our Composer-based project template to install
+ Varbase [varbase-project](https://github.com/Vardot/varbase-project), 
+complete the following steps to update your codebase’s installed version
+ of Varbase:
+
+1. From a command prompt window, navigate to your project:
+ `cd /path/to/YOUR_PROJECT`  
+2. If you're using Varbase 8.6.2 or older, install
+ [varbase-updater](https://github.com/Vardot/varbase-updater) through
+ Composer. `composer require vardot/varbase-updater`   
+ If you're using Varbase 8.6.3 or newer, skip this step;
+ [varbase-updater](https://github.com/Vardot/varbase-updater)
+ comes pre-installed with your Varbase project. 
+3. Run the Varbase update tool. `./bin/update-varbase.sh`  
+4. Follow the wizard. 
+
+   _Curious?_ [_Learn more_ ](understanding-varbase-updater-package.md)_about what's going on in the Varbase Updater wizard._
+
+5. Buy yourself a drink! You're done. 
+6. After the update finishes and you get a success message, navigate to
+ _http://my.varbase-site.local/admin/config/development/update-helper_
+ \(where my.varbase-site.local is the URL for your website\) to learn about
+ the new changes and updates introduced in your Varbase site.
+
+
+At the end of the update process, two log files are useful to troubleshoot
+ your update:
+
+* `varbase_update_error.log`: a log of all errors that occurred during the
+ update process.
+* `varbase_failed_patches.log`: a log of all patches that failed to apply
+ during the update process.
+
+
+
+### OPTION 2: Manual Process — Do it Yourself
+
+1. From a command prompt window, navigate to your project:
+  `cd /path/to/YOUR_PROJECT`  
+2. Edit your _composer.json_ file to be ready for updates. You have two choices.
+   1. **The hard way:** Edit your _composer.json_ to include
+ all the new updates made in
+ [varbase-project](https://github.com/Vardot/varbase-project/blob/8.7.x/composer.json).
+ This includes the new components required and its versions
+ _"require"_, _"repositories"_, _"extra"_, and any other important config.
+ You can use a diff tool such as [Meld](http://meldmerge.org/) or
+ [DiffMerge](https://sourcegear.com/diffmerge/) to help you diff between
+ your old _composer.json_ and the new one from
+ [varbase-project](https://github.com/Vardot/varbase-project/blob/8.7.x/composer.json). 
+   2. **The easy way:** 
+      1. If you're using Varbase 8.6.2 or older, install
+ [varbase-updater](https://github.com/Vardot/varbase-updater) through Composer.
+ `composer require vardot/varbase-updater`  
+ If you're using Varbase 8.6.3 or newer, skip this step;
+ [varbase-updater](https://github.com/Vardot/varbase-updater)
+ comes pre-installed with your Varbase project. 
+      2. Then run:
+ `composer varbase-refactor-composer composer.new.json docroot`
+  where _docroot_ is your Drupal project codebase. 
+      3. Move your new Composer file _composer.new.json_ in place of
+ the old one. `mv composer.json composer.json.b; \ mv composer.new.json composer.json` 
+3. Back up your code and database 
+4. Execute Composer update to download updates to modules and libraries.
+ `composer update`  
+5. Run your database updates. `drush updatedb`  or by navigating
+ to _http://my.varbase-site.local/update.php_ 
+\(where _my.varbase-site.local_ is the URL for your website\) and
+ follow the on-screen instructions. 
+6. After the update finishes and you get a success message, navigate
+ to _http://my.varbase-site.local/admin/config/development/update-helper_ 
+\(where _my.varbase-site.local_ is the URL for your website\) to learn
+ about the new changes and updates introduced in your Varbase site.

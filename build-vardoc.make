@@ -5,4 +5,4 @@ includes[] = drupal-org-core.make
 
 projects[vardoc][type] = "profile"
 projects[vardoc][download][type] = "git"
-projects[vardoc][download][branch] = "8.x-1.x"
+projects[vardoc][download][branch] = "8.x-3.x"

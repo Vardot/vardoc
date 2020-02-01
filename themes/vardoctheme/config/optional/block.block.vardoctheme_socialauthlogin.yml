@@ -2,15 +2,10 @@ langcode: en
 status: true
 dependencies:
   module:
-    - block_class
     - social_auth
-    - system
     - varbase_auth
   theme:
     - vardoctheme
-third_party_settings:
-  block_class:
-    classes: ''
 id: vardoctheme_socialauthlogin
 theme: vardoctheme
 region: content

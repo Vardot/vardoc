@@ -4,7 +4,7 @@ I want to be able Block user accounts
 So that they will be disabled and not be able to use the site.
 
   @javascript @local @development @staging @production
-  Scenario: Check if the "test_authenticated" user is not blocked. and can login.
+  Scenario: Check if the test_authenticated user is not blocked and can login
     Given I am on "user/login"
       And I wait
      When I fill in "test_authenticated" for "Username"
@@ -14,7 +14,7 @@ So that they will be disabled and not be able to use the site.
      Then I should see "test_authenticated"
 
   @javascript @local @development @staging @production
-  Scenario: Check if the site admin can Administer users and disable a User account "test_authenticated" from accessing the site.
+  Scenario: Check if the site admin can Administer users and disable a User account test_authenticated from accessing the site
     Given I am a logged in user with the "test_site_admin" user
      When I go to "/admin/people"
       And I wait
@@ -23,20 +23,16 @@ So that they will be disabled and not be able to use the site.
       And I press "Filter"
       And I wait
      Then I should see "test_authenticated"
-     When I click "test_authenticated"
-      And I wait
-     Then I should see "test_authenticated"
-     When I click "Edit my profile"
+     When I click "Edit" in the "test_authenticated" row
       And I wait
      Then I should see "test_authenticated"
      When I select the radio button "Blocked"
       And I press "Save"
       And I wait
      Then I should see "The changes have been saved."
-      And the "Blocked" checkbox should be checked
 
   @javascript @local @development @staging @production
-  Scenario: Check if the blocked user with user id of <Test Blocked User ID> can or can not login.
+  Scenario: Check if the blocked user with user id of Test Blocked User ID can or can not login
     Given I am on "user/login"
       And I wait
      When I fill in "test_authenticated" for "Username"

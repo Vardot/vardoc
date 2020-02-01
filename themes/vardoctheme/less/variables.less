@@ -20,12 +20,6 @@
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
 
-@brand-primary:          darken(#428bca, 6.5%);
-@brand-success:          #5cb85c;
-@brand-info:             #5bc0de;
-@brand-warning:          #f0ad4e;
-@brand-danger:           #d9534f;
-
 
 //== Scaffolding
 //
@@ -891,6 +885,65 @@
 @card-columns-gap:                  1.25rem;
 @card-columns-margin:               @card-spacer-y;
 
+
+// Custom Varbase Hero slider media variables.
+// -----------------------------------------------------------------------------
+// Text color.
+@hero-title-text-color: #fff;
+@hero-brief-text-color: #fff;
+@hero-link-text-color: #fff;
+
+// Font sizes with responsive sizes.
+@hero-xlarge-title-font-size-xs: 3.3rem;
+@hero-xlarge-title-font-size-sm: 57px;
+@hero-xlarge-title-font-size-md: 57px;
+@hero-xlarge-title-font-size-lg: 57px;
+
+// Hero content style.
+@hero-content-hover-opacity: 0.7;
+@hero-content-background-color1: rgb(0,0,0);
+@hero-content-background-color2: rgba(0,0,0,0.3);
+
+// Empty hero background color.
+@hero-empty-view-background: #e0e0e0;
+
+// Gatter for arrow of navigation.
+@hero-arrow-gatter: 10px;
+
+// Height for screen size xs and less.
+@hero-min-height-xs: 300px;
+@hero-max-height-xs: 300px;
+
+// For screen size sm and more.
+@hero-min-height-sm: 600px;
+@hero-max-height-sm: 600px;
+
+
+// Grid breakpoints
+// -----------------------------------------------------------------------------
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+@grid-breakpoints:
+	xs ~"@{screen-xs-max}",
+	sm ~"@{screen-sm-min}",
+	md ~"@{screen-md-min}",
+	lg ~"@{screen-lg-min}";
+
+// Spacing
+// -----------------------------------------------------------------------------
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the @spacers map, should you need more variation.
+
+@spacer: 1rem;
+@spacers:
+	0 0,
+	1 (@spacer * 0.25),
+	2 (@spacer * 0.5),
+	3 @spacer,
+	4 (@spacer * 1.5),
+	5 (@spacer * 3);
 
 // Footer wrapper background color.
 @footer-wrapper-bg:             #f2f2f2;

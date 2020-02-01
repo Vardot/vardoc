@@ -3,10 +3,7 @@ status: true
 dependencies:
   config:
     - system.menu.main
-  module:
-    - system
   theme:
-    - vartheme
     - vardoctheme
 id: vardoctheme_main_menu
 theme: vardoctheme

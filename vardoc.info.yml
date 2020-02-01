@@ -4,11 +4,20 @@ description: 'Vardoc: Knowledge Base System and Documentation Site'
 core: 8.x
 version: 8.x-3.x-dev
 base profile: varbase
-dependencies:
-  - drupal:action
-  - drupal:tracker
-  - drupal:aggregator
-  - fontawesome:fontawesome
+install:
+  - system
+  - action
+  - tracker
+  - aggregator
+  - user
+  - node
+  - block
+  - datetime
+  - help
+  - image
+  - views
+  - file
+  - fontawesome
 themes:
   # Contrib themes.
   - adminimal_theme

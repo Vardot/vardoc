@@ -1,18 +1,18 @@
 a.icon-before .glyphicon,
 a .glyphicon.icon-before {
-  margin-right: .25em;
+  margin-right: 0.25em;
 }
 a.icon-after .glyphicon,
 a .glyphicon.icon-after {
-  margin-left: .25em;
+  margin-left: 0.25em;
 }
 .btn.icon-before .glyphicon,
 .btn .glyphicon.icon-before {
   margin-left: -0.25em;
-  margin-right: .25em;
+  margin-right: 0.25em;
 }
 .btn.icon-after .glyphicon,
 .btn .glyphicon.icon-after {
-  margin-left: .25em;
+  margin-left: 0.25em;
   margin-right: -0.25em;
 }

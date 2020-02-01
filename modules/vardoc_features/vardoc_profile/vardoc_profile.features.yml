@@ -1,4 +1,0 @@
-bundle: vardoc
-excluded:
-  - core.entity_form_mode.user.register
-required: true

@@ -22,6 +22,11 @@
     margin-left: 0;
   }
 
+  > a {
+    display: block;
+    height: 100%;
+  }
+
   > .list-group:first-child {
     .list-group-item:first-child {
       border-radius: @card-border-radius;
@@ -56,7 +61,7 @@
 }
 
 .card-link {
-  &::hover {
+  &:hover {
     text-decoration: none;
   }
 
@@ -145,16 +150,14 @@
 .card-deck {
   display: flex;
   flex-direction: column;
+  margin-right: -@card-deck-margin;
+  margin-left: -@card-deck-margin;
 
   .card {
     margin-bottom: @card-deck-margin;
   }
 
   @media (min-width: @screen-sm) {
-    flex-flow: row wrap;
-    margin-right: -@card-deck-margin;
-    margin-left: -@card-deck-margin;
-
     .card {
       display: flex;
       // Flexbugs #4: https://github.com/philipwalton/flexbugs#4-flex-shorthand-declarations-with-unitless-flex-basis-values-are-ignored

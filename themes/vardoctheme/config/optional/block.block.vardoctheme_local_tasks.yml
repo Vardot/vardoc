@@ -1,15 +1,8 @@
 langcode: en
 status: true
 dependencies:
-  module:
-    - block_class
-    - system
   theme:
-    - vartheme
     - vardoctheme
-third_party_settings:
-  block_class:
-    classes: ''
 id: vardoctheme_local_tasks
 theme: vardoctheme
 region: content_top

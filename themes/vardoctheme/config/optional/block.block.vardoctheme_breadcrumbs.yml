@@ -1,15 +1,12 @@
 langcode: en
 status: true
 dependencies:
-  module:
-    - system
   theme:
-    - vartheme
     - vardoctheme
 id: vardoctheme_breadcrumbs
 theme: vardoctheme
 region: content_top
-weight: -8
+weight: -9
 provider: null
 plugin: system_breadcrumb_block
 settings:

@@ -9,6 +9,8 @@ body.install-page {
   background-origin: initial !important;
   background-clip: initial !important;
   background-color: initial !important;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .other-lang-warn {

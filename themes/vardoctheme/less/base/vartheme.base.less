@@ -76,18 +76,6 @@ html {
   width: 1px;
 }
 
-// Branding.
-.navbar .logo {
-  margin-right: -15px;
-  padding-left: 15px;
-  padding-right: 15px;
-
-  @media @tablet {
-    margin-right: 0;
-    padding-left: 0;
-  }
-}
-
 // Navigation.
 ul.secondary {
   float: left;
@@ -164,7 +152,10 @@ ul.action-links {
 }
 
 // Form elements.
-input, textarea, select, .uneditable-input {
+input,
+textarea,
+select,
+.uneditable-input {
   max-width: 100%;
   width: auto;
 }
@@ -756,11 +747,6 @@ div.features-export-list {
   }
 }
 
-// Form overrides.
-.form-control {
-  max-width: 400px;
-}
-
 .form-textarea-wrapper textarea {
   max-width: 100%;
 }
@@ -804,26 +790,6 @@ img {
   }
 }
 
-// Node styles.
-.node-unpublished {
-  background-color: #fff4f4;
-}
-
-.unpublished {
-  height: 0;
-  display: block;
-  overflow: visible;
-  background-color: transparent;
-  color: #d8d8d8;
-  font-size: 74px;
-  line-height: 1;
-  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  word-wrap: break-word
-}
-
 .maintenance-page {
   #page {
     text-align: center;
@@ -857,4 +823,17 @@ body.user-logged-in {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; 
+}
+
+body.path-frontpage {
+  h1.page-header {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
 }
