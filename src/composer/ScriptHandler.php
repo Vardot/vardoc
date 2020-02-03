@@ -6,6 +6,7 @@ use Composer\Semver\Comparator;
 use Symfony\Component\Filesystem\Filesystem;
 use Composer\EventDispatcher\Event;
 use Symfony\Component\Yaml\Yaml;
+use DrupalFinder\DrupalFinder;
 
 /**
  * Vardoc Composer Script Handler.
@@ -16,13 +17,22 @@ class ScriptHandler {
    * Get the Drupal root directory.
    *
    * @param string $project_root
-   *    Project root.
+   *   Project root.
    *
    * @return string
-   *    Drupal root path.
+   *   Drupal root path.
    */
   protected static function getDrupalRoot($project_root) {
-    return $project_root . '/docroot';
+    $fs = new Filesystem();
+    $drupalFinder = new DrupalFinder();
+    $drupalFinder->locateRoot(getcwd());
+    $drupalRoot = $drupalFinder->getDrupalRoot();
+    if (!$fs->exists($drupalRoot . '/core')) {
+      return $project_root . '/docroot';
+    }
+    else {
+      return $drupalRoot;
+    }
   }
 
   /**
