@@ -33,7 +33,7 @@ projects[varbase_faqs][version] = 6.6
 
 projects[varbase][type] = profile
 projects[varbase][subdir] = ""
-projects[varbase][version] = "8.1"
+projects[varbase][version] = "8.2"
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Vardoc public contributed themes.
