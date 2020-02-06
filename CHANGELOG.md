@@ -1,9 +1,26 @@
+# 8.2.5
+
+### Highlighted important changes since Vardoc 8.2.4:
+* Issue [#3111150](http://drupal.org/node/3111150):
+                  Updated [Varbase profile] from 8.8.1 to 8.8.2 ( ~8.8.0 )
+* Issue [#3110702](http://drupal.org/node/3110702)
+                  by [metalbote](https://www.drupal.org/u/metalbote)
+                 : Changed web-root logic as drupal-root should
+                  not be hard-coded in the composer Script handler
+* Issue [#3111614](http://drupal.org/node/3111614):
+                  Vardoc 8.2.5 : Update [CHANGELOG.md, README.md,
+                  drupal-org.make] files and filter the code for Drupal
+                  8 Coding Standard
+
+--------------------------------------------------------------------------------
+
 # 8.2.4
 
 ### Highlighted important changes since Vardoc 8.2.3:
 * Issue [#3108911](http://drupal.org/node/3108911):
                   Updated [Varbase profile]
                   from 8.7.4 ( ~8.7.0 ) to 8.8.1 ( ~8.8.0 )
+
 --------------------------------------------------------------------------------
 
 # 8.2.3

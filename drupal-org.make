@@ -35,6 +35,11 @@ projects[varbase][type] = profile
 projects[varbase][subdir] = ""
 projects[varbase][version] = "8.2"
 
+;; #temp as we had a had after we had released Varbase 8.8.2
+;; Views Bulk Operations (VBO) - Less critical - Acce - SA-CONTRIB-2020-003. 
+projects[views_bulk_operations][type] = module
+projects[views_bulk_operations][version] = 2.6
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
 ;;;;;;;;;;;;;;;;;;;;;
