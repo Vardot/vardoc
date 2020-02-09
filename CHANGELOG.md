@@ -1,6 +1,8 @@
 # 8.2.5
 
 ### Highlighted important changes since Vardoc 8.2.4:
+* Issue [#3112296](http://drupal.org/node/3112296):
+                  Updated [Varbase profile] from 8.8.2 to 8.8.3 ( ~8.8.0 )
 * Issue [#3111150](http://drupal.org/node/3111150):
                   Updated [Varbase profile] from 8.8.1 to 8.8.2 ( ~8.8.0 )
 * Issue [#3110702](http://drupal.org/node/3110702)
