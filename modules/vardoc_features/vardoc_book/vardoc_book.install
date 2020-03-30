@@ -37,7 +37,7 @@ function vardoc_book_install() {
     $config_installer->installDefaultConfig('module', $module_name);
 
     // Create field storage configs first in active config.
-    $storage_config_files = file_scan_directory($optional_install_path, '/^field.storage.*\\.(yml)$/i');
+    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^field.storage.*\\.(yml)$/i');
     if (isset($storage_config_files) && is_array($storage_config_files)) {
       foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
@@ -52,7 +52,7 @@ function vardoc_book_install() {
     $config_installer->installOptionalConfig($storage, '');
 
     // Have the .settings.yml configs into the active config.
-    $settings_config_files = file_scan_directory($optional_install_path, '/^.*\\.(settings.yml)$/i');
+    $settings_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^.*\\.(settings.yml)$/i');
     if (isset($settings_config_files) && is_array($settings_config_files)) {
       foreach ($settings_config_files as $settings_config_file) {
         $settings_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $settings_config_file->uri);
