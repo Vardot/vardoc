@@ -803,7 +803,7 @@ body.user-logged-in.navbar-is-fixed-top .navbar-fixed-top {
 }
 .user--type-user .field-custom-full-name a {
   font-size: 24px;
-  color: #2A2A2A;
+  color: #2a2a2a;
   font-weight: bold;
   text-decoration: none;
 }
@@ -825,7 +825,7 @@ body.user-logged-in.navbar-is-fixed-top .navbar-fixed-top {
 .user--type-user .latest-text h3 a,
 .user--type-user .favorite-text h3 a {
   font-size: 24px;
-  color: #2A2A2A;
+  color: #2a2a2a;
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 10px;

@@ -7,9 +7,6 @@
 
 use Symfony\Component\Yaml\Yaml;
 use Drupal\Core\Config\InstallStorage;
-use Drupal\Core\Config\StorageInterface;
-use Drupal\Core\Config\FileStorage;
-use Drupal\file\Entity\File;
 use Drupal\user\Entity\User;
 use Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager;
 
@@ -35,11 +32,10 @@ function vardoc_profile_install() {
   // Install optional configs.
   $optional_install_path = $module_path . '/' . InstallStorage::CONFIG_OPTIONAL_DIRECTORY;
   if (is_dir($optional_install_path)) {
-    $config_installer = \Drupal::service('config.installer');
 
     // Import Fields.
     $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^field.field.user.*\\.(yml)$/i');
-    if (isset($storage_config_files) && is_array($storage_config_files)) {     
+    if (isset($storage_config_files) && is_array($storage_config_files)) {
       foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
         $storage_config_file_data = (array) Yaml::parse($storage_config_file_content);
@@ -50,7 +46,7 @@ function vardoc_profile_install() {
 
     // Import entity view modes.
     $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^core.entity_view_mode.user.*\\.(yml)$/i');
-    if (isset($storage_config_files) && is_array($storage_config_files)) {     
+    if (isset($storage_config_files) && is_array($storage_config_files)) {
       foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
         $storage_config_file_data = (array) Yaml::parse($storage_config_file_content);
@@ -61,7 +57,7 @@ function vardoc_profile_install() {
 
     // Import entity entity form display.
     $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^core.entity_form_display.user.*\\.(yml)$/i');
-    if (isset($storage_config_files) && is_array($storage_config_files)) {     
+    if (isset($storage_config_files) && is_array($storage_config_files)) {
       foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
         $storage_config_file_data = (array) Yaml::parse($storage_config_file_content);
@@ -72,7 +68,7 @@ function vardoc_profile_install() {
 
     // Import entity entity view display.
     $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^core.entity_view_display.user.*\\.(yml)$/i');
-    if (isset($storage_config_files) && is_array($storage_config_files)) {     
+    if (isset($storage_config_files) && is_array($storage_config_files)) {
       foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
         $storage_config_file_data = (array) Yaml::parse($storage_config_file_content);
@@ -83,7 +79,7 @@ function vardoc_profile_install() {
 
     // Import View.
     $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^views.view.*\\.(yml)$/i');
-    if (isset($storage_config_files) && is_array($storage_config_files)) {     
+    if (isset($storage_config_files) && is_array($storage_config_files)) {
       foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
         $storage_config_file_data = (array) Yaml::parse($storage_config_file_content);
@@ -94,7 +90,7 @@ function vardoc_profile_install() {
 
     // Import Blocks.
     $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^block.block.*\\.(yml)$/i');
-    if (isset($storage_config_files) && is_array($storage_config_files)) {     
+    if (isset($storage_config_files) && is_array($storage_config_files)) {
       foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
         $storage_config_file_data = (array) Yaml::parse($storage_config_file_content);
@@ -111,10 +107,10 @@ function vardoc_profile_install() {
   $user->set('field_first_name', 'Vardoc')
     ->set('field_last_name', 'Webmaster');
 
-  // Create avatar file entity
-  $data = file_get_contents(drupal_get_path('module', 'vardoc_profile') .  '/images/avatar.png');
+  // Create avatar file entity.
+  $data = file_get_contents(drupal_get_path('module', 'vardoc_profile') . '/images/avatar.png');
   $file = file_save_data($data, 'public://avatar.png', FILE_EXISTS_REPLACE);
-  // Attach the file into user profile image and then save it
+  // Attach the file into user profile image and then save it.
   $user->field_profile_image->setValue(['target_id' => $file->id()]);
   $user->save();
 

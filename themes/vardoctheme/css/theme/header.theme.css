@@ -108,7 +108,7 @@ header#navbar .menu .active a {
   padding-top: 20px;
 }
 .path-frontpage .navbar .navbar-nav li a:hover {
-  color: #99B3DD;
+  color: #99b3dd;
 }
 @media (min-width: 768px) {
   .navbar-collapse {
@@ -126,7 +126,7 @@ header#navbar .menu .active a {
   text-transform: uppercase;
 }
 .navbar .navbar-nav li a:hover {
-  color: #99B3DD;
+  color: #99b3dd;
 }
 .page-header {
   border-bottom: 0;
@@ -242,7 +242,7 @@ header#navbar .menu .active a {
   background-color: transparent;
 }
 .navbar-default .user-account-wrapper .header-avatar .dropdown-toggle:hover .user-full-name {
-  color: #99B3DD;
+  color: #99b3dd;
 }
 .navbar-default .user-account-wrapper .header-avatar .dropdown-toggle .user-avatar {
   display: inline-block;
@@ -337,7 +337,7 @@ header#navbar .menu .active a {
 }
 .navbar-default .user-account-wrapper .header-account-menu ul li a {
   font-size: 12px;
-  color: #2A2A2A;
+  color: #2a2a2a;
   padding: 10px;
   text-transform: initial;
 }

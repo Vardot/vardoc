@@ -2,42 +2,14 @@
 
 namespace Drupal\vardoc\Form;
 
-use Drupal\Core\Extension\ExtensionDiscovery;
-use Drupal\Core\Extension\InfoParserInterface;
-use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\StringTranslation\TranslationInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\varbase\Config\ConfigBit;
-use Drupal\varbase\Form\FormHelper;
-use Drupal\varbase\Form\AssemblerForm;
+use Drupal\varbase\Form\AssemblerForm as VarbaseAssemblerForm;
 
 /**
  * Defines form for selecting extra compoennts for the assembler to install.
  */
-class VardocAssemblerForm extends AssemblerForm {
-  /**
-   * Assembler Form constructor.
-   *
-   * @param string $root
-   *   The Drupal application root.
-   * @param InfoParserInterface $info_parser
-   *   The info parser service.
-   * @param TranslationInterface $translator
-   *   The string translation service.
-   * @param \Drupal\varbase\Form\FormHelper $form_helper
-   *   The form helper.
-   */
-  public function __construct($root, InfoParserInterface $info_parser, TranslationInterface $translator, FormHelper $form_helper) {
-    parent::__construct($root, $info_parser, $translator, $form_helper);
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public static function create(ContainerInterface $container) {
-    return parent::create($container);
-  }
+class VardocAssemblerForm extends VarbaseAssemblerForm {
 
   /**
    * {@inheritdoc}
@@ -95,7 +67,7 @@ class VardocAssemblerForm extends AssemblerForm {
           '#default_value' => $checkbox_selected,
         ];
 
-        if (isset ($extra_feature_info['config_form']) &&
+        if (isset($extra_feature_info['config_form']) &&
                    $extra_feature_info['config_form'] == TRUE) {
           $form['extra_features'][$extra_feature_key . '_config'] = [
             '#type' => 'fieldset',
@@ -116,7 +88,12 @@ class VardocAssemblerForm extends AssemblerForm {
 
               include_once $formbit_file_name;
               // Add configuration form element in the formbit position.
-              call_user_func_array($extra_feature_key . "_build_formbit", array(&$form['extra_features'][$extra_feature_key . '_config'], &$form_state, &$install_state));
+              call_user_func_array($extra_feature_key . "_build_formbit",
+                [
+                  &$form['extra_features'][$extra_feature_key . '_config'],
+                  &$form_state,
+                  &$install_state,
+                ]);
             }
           }
 
@@ -179,7 +156,12 @@ class VardocAssemblerForm extends AssemblerForm {
 
               include_once $formbit_file_name;
               // Add configuration form element in the formbit position.
-              call_user_func_array($demo_content_key . "_build_formbit", array(&$form['demo_content'][$demo_content_key . '_config'], &$form_state, &$install_state));
+              call_user_func_array($demo_content_key . "_build_formbit",
+                [
+                  &$form['demo_content'][$demo_content_key . '_config'],
+                  &$form_state,
+                  &$install_state,
+                ]);
             }
           }
 
@@ -213,7 +195,7 @@ class VardocAssemblerForm extends AssemblerForm {
 
       foreach ($extraFeatures as $extra_feature_key => $extra_feature_info) {
 
-        // if form state has got value for this extra feature.
+        // If form state has got value for this extra feature.
         if ($form_state->hasValue($extra_feature_key)) {
           $extra_features_values[$extra_feature_key] = $form_state->getValue($extra_feature_key);
         }
@@ -224,11 +206,11 @@ class VardocAssemblerForm extends AssemblerForm {
           if (file_exists($formbit_file_name)) {
 
             include_once $formbit_file_name;
-            $extra_features_editable_configs = call_user_func_array($extra_feature_key . "_get_editable_config_names", array());
+            $extra_features_editable_configs = call_user_func_array($extra_feature_key . "_get_editable_config_names", []);
 
             if (count($extra_features_editable_configs)) {
-              foreach($extra_features_editable_configs as $extra_features_editable_config_key => $extra_features_editable_config) {
-                foreach($extra_features_editable_config as $extra_features_config_item_key => $extra_features_config_item_value) {
+              foreach ($extra_features_editable_configs as $extra_features_editable_config_key => $extra_features_editable_config) {
+                foreach ($extra_features_editable_config as $extra_features_config_item_key => $extra_features_config_item_value) {
                   if ($form_state->hasValue($extra_features_config_item_key)) {
                     $extra_features_editable_configs[$extra_features_editable_config_key][$extra_features_config_item_key] = $form_state->getValue($extra_features_config_item_key);
                   }
@@ -244,7 +226,6 @@ class VardocAssemblerForm extends AssemblerForm {
       $GLOBALS['install_state']['varbase']['extra_features_values'] = $extra_features_values;
     }
 
-
     // Demo Content.
     $demoContent = ConfigBit::getList('configbit/demo.content.vardoc.bit.yml', 'show_demo', TRUE, 'dependencies', 'profile', 'vardoc');
     if (count($demoContent)) {
@@ -252,7 +233,7 @@ class VardocAssemblerForm extends AssemblerForm {
 
       foreach ($demoContent as $demo_content_key => $demo_content_info) {
 
-        // if form state has got value for this demo content.
+        // If form state has got value for this demo content.
         if ($form_state->hasValue($demo_content_key)) {
           $demo_content_values[$demo_content_key] = $form_state->getValue($demo_content_key);
         }
@@ -263,11 +244,11 @@ class VardocAssemblerForm extends AssemblerForm {
           if (file_exists($formbit_file_name)) {
 
             include_once $formbit_file_name;
-            $demo_content_editable_configs = call_user_func_array($demo_content_key . "_get_editable_config_names", array());
+            $demo_content_editable_configs = call_user_func_array($demo_content_key . "_get_editable_config_names", []);
 
             if (count($demo_content_editable_configs)) {
-              foreach($demo_content_editable_configs as $demo_content_editable_config_key => $demo_content_editable_config) {
-                foreach($demo_content_editable_config as $demo_content_config_item_key => $demo_content_config_item_value) {
+              foreach ($demo_content_editable_configs as $demo_content_editable_config_key => $demo_content_editable_config) {
+                foreach ($demo_content_editable_config as $demo_content_config_item_key => $demo_content_config_item_value) {
                   if ($form_state->hasValue($demo_content_config_item_key)) {
                     $demo_content_editable_configs[$demo_content_editable_config_key][$demo_content_config_item_key] = $form_state->getValue($demo_content_config_item_key);
                   }
