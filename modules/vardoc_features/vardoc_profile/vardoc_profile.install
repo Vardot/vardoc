@@ -38,7 +38,7 @@ function vardoc_profile_install() {
     $config_installer = \Drupal::service('config.installer');
 
     // Import Fields.
-    $storage_config_files = file_scan_directory($optional_install_path, '/^field.field.user.*\\.(yml)$/i');
+    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^field.field.user.*\\.(yml)$/i');
     if (isset($storage_config_files) && is_array($storage_config_files)) {     
       foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
@@ -49,7 +49,7 @@ function vardoc_profile_install() {
     }
     
     // Import entity view modes.
-    $storage_config_files = file_scan_directory($optional_install_path, '/^core.entity_view_mode.user.*\\.(yml)$/i');
+    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^core.entity_view_mode.user.*\\.(yml)$/i');
     if (isset($storage_config_files) && is_array($storage_config_files)) {     
       foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
@@ -60,7 +60,7 @@ function vardoc_profile_install() {
     }
     
     // Import entity entity form display.
-    $storage_config_files = file_scan_directory($optional_install_path, '/^core.entity_form_display.user.*\\.(yml)$/i');
+    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^core.entity_form_display.user.*\\.(yml)$/i');
     if (isset($storage_config_files) && is_array($storage_config_files)) {     
       foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
@@ -71,7 +71,7 @@ function vardoc_profile_install() {
     }
     
     // Import entity entity view display.
-    $storage_config_files = file_scan_directory($optional_install_path, '/^core.entity_view_display.user.*\\.(yml)$/i');
+    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^core.entity_view_display.user.*\\.(yml)$/i');
     if (isset($storage_config_files) && is_array($storage_config_files)) {     
       foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
@@ -82,7 +82,7 @@ function vardoc_profile_install() {
     }
 
     // Import View.
-    $storage_config_files = file_scan_directory($optional_install_path, '/^views.view.*\\.(yml)$/i');
+    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^views.view.*\\.(yml)$/i');
     if (isset($storage_config_files) && is_array($storage_config_files)) {     
       foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
@@ -93,7 +93,7 @@ function vardoc_profile_install() {
     }
     
     // Import Blocks.
-    $storage_config_files = file_scan_directory($optional_install_path, '/^block.block.*\\.(yml)$/i');
+    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^block.block.*\\.(yml)$/i');
     if (isset($storage_config_files) && is_array($storage_config_files)) {     
       foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
