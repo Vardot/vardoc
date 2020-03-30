@@ -51,7 +51,7 @@ function vardoc_profile_install() {
     // Import entity view modes.
     $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^core.entity_view_mode.user.*\\.(yml)$/i');
     if (isset($storage_config_files) && is_array($storage_config_files)) {     
-      foreach ($storage_config_files a$storage_config_filess $storage_config_file) {
+      foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
         $storage_config_file_data = (array) Yaml::parse($storage_config_file_content);
         $config_factory = \Drupal::configFactory()->getEditable($storage_config_file->name);
