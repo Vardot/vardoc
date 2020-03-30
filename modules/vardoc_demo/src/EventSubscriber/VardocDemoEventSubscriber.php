@@ -10,7 +10,7 @@ use Drupal\book\BookManagerInterface;
 /**
  * Subscribe to ImportEvent.
  */
-class VardocDemoEventSubscriber implements EventSubscriberInterface {
+class VardocDemoEventSubscriber implements EventSubscriberInterface, ContainerFactoryPluginInterface {
 
   /**
    * The book manager.
