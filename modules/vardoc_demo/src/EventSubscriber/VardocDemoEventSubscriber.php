@@ -7,12 +7,12 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\default_content\Event\ImportEvent;
 use Drupal\default_content\Event\DefaultContentEvents;
 use Drupal\book\BookManagerInterface;
-use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 
 /**
  * Subscribe to ImportEvent.
  */
-class VardocDemoEventSubscriber implements EventSubscriberInterface, ContainerFactoryPluginInterface {
+class VardocDemoEventSubscriber implements EventSubscriberInterface, ContainerInjectionInterface {
 
   /**
    * The book manager.
