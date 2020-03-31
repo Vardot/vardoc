@@ -1,3 +1,28 @@
+# 8.2.6
+
+### Highlighted important changes since Vardoc 8.2.5:
+
+* Issue [#3123308](http://drupal.org/node/3123308):
+                  Updated [Varbase profile] from 8.8.3 to 8.8.4 ( ~8.8.0 )
+* Issue [#3123307](http://drupal.org/node/3123307):
+                  Drupal 9 readiness for [Vardoc distribution] installation
+                  profile with Drupal coding standard and practice
+* Issue [#3121627](http://drupal.org/node/3121627)
+                  by Neslee Canil Pinto
+                 : Replaced deprecated method file_scan_directory
+* Issue [#3119880](http://drupal.org/node/3119880):
+                  Vardoc 8.2.6 : Updated [CHANGELOG.md, README.md,
+                  drupal-org.make] files and filtered the code for
+                  Drupal 8 Coding Standard
+* Issue [#3113175](http://drupal.org/node/3113175):
+                  Drupal 9 Readiness for [Varbase FAQs] with Drupal
+                  coding standard and practice
+* Issue [#3102163](http://drupal.org/node/3102163)
+                  by YousefAnbar
+                 : Changed FAQ Cache tags based on node_list tag
+
+--------------------------------------------------------------------------------
+
 # 8.2.5
 
 ### Highlighted important changes since Vardoc 8.2.4:

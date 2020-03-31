@@ -29,7 +29,7 @@ projects[faq][type] = module
 projects[faq][version] = 1.0-alpha1
 
 projects[varbase_faqs][type] = module
-projects[varbase_faqs][version] = 6.6
+projects[varbase_faqs][version] = 6.7
 
 projects[varbase][type] = profile
 projects[varbase][subdir] = ""
