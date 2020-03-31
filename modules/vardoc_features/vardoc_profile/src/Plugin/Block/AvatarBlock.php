@@ -2,7 +2,7 @@
 
 namespace Drupal\vardoc_profile\Plugin\Block;
 
-use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Session\AccountInterface;
@@ -23,9 +23,9 @@ class AvatarBlock extends BlockBase implements ContainerFactoryPluginInterface {
   /**
    * The request object.
    *
-   * @var \Symfony\Component\HttpFoundation\RequestStack
+   * @var \Symfony\Component\HttpFoundation\Request
    */
-  protected $requestStack;
+  protected $request;
 
   /**
    * Creates an Avatar block instance.
@@ -36,12 +36,12 @@ class AvatarBlock extends BlockBase implements ContainerFactoryPluginInterface {
    *   The plugin_id for the plugin instance.
    * @param mixed $plugin_definition
    *   The plugin implementation definition.
-   * @param \Symfony\Component\HttpFoundation\RequestStack $request_stack
+   * @param \Symfony\Component\HttpFoundation\Request $request
    *   The request stack object.
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, RequestStack $request_stack) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, Request $request) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
-    $this->requestStack = $request_stack;
+    $this->request = $request;
   }
 
   /**
@@ -62,7 +62,7 @@ class AvatarBlock extends BlockBase implements ContainerFactoryPluginInterface {
   public function build() {
     return [
       '#theme' => 'vardoc_user_avatar_block',
-      '#content' => $this->requestStack->getBaseUrl() . '/' . drupal_get_path('module', 'vardoc_profile') . '/images/avatar-small.png',
+      '#content' => $this->request->getBaseUrl() . '/' . drupal_get_path('module', 'vardoc_profile') . '/images/avatar-small.png',
     ];
   }
 
