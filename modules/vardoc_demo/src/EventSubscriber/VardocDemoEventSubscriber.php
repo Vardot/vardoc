@@ -22,31 +22,20 @@ class VardocDemoEventSubscriber implements EventSubscriberInterface, ContainerFa
   protected $bookManager;
 
   /**
-   * Constructs a new Vardoc Demo Event Subscriber instance.
+   * Creates a new BookOutlineConstraintValidator instance.
    *
-   * @param array $configuration
-   *   A configuration array containing information about the plugin instance.
-   * @param string $plugin_id
-   *   The plugin_id for the plugin instance.
-   * @param mixed $plugin_definition
-   *   The plugin implementation definition.
    * @param \Drupal\book\BookManagerInterface $book_manager
    *   The book manager.
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, BookManagerInterface $book_manager) {
-    parent::__construct($configuration, $plugin_id, $plugin_definition);
-
+  public function __construct(BookManagerInterface $book_manager) {
     $this->bookManager = $book_manager;
   }
 
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+  public static function create(ContainerInterface $container) {
     return new static(
-      $configuration,
-      $plugin_id,
-      $plugin_definition,
       $container->get('book.manager')
     );
   }
