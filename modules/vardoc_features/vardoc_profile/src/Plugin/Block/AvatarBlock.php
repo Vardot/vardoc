@@ -2,10 +2,12 @@
 
 namespace Drupal\vardoc_profile\Plugin\Block;
 
+use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Access\AccessResult;
-use Symfony\Component\HttpFoundation\RequestStack;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 
 /**
  * Provides a Vardoc 'Avatar' block.

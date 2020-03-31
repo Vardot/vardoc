@@ -3,9 +3,11 @@
 namespace Drupal\vardoc_demo\EventSubscriber;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\default_content\Event\ImportEvent;
 use Drupal\default_content\Event\DefaultContentEvents;
 use Drupal\book\BookManagerInterface;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 
 /**
  * Subscribe to ImportEvent.
