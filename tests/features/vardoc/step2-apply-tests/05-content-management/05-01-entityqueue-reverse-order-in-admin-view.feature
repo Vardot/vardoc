@@ -33,7 +33,8 @@ Scenario: Check that Reverse order in admin view is working
    When I click "Edit items" in the "Test Queue" row
     And I wait
    Then I should see "Edit subqueue Test Queue"
-   When I click "Clear"
+   When I press "Clear"
+    And I wait
    When I press "Save"
     And I wait
    Then I should see "The entity subqueue Test Queue has been updated."
