@@ -33,6 +33,39 @@ Scenario: Check that Reverse order in admin view is working
    When I click "Edit items" in the "Test Queue" row
     And I wait
    Then I should see "Edit subqueue Test Queue"
+   When I click "Clear"
+   When I press "Save"
+    And I wait
+   Then I should see "The entity subqueue Test Queue has been updated."
+
+   When I click "Edit items" in the "Test Queue" row
+    And I wait
+   Then I should see "Edit subqueue Test Queue"
+
+  # Add "Test content N1" to the location #1 in the "Test Queue"
+   When I click "Edit items" in the "Test Queue" row
+    And I wait
+   Then I should see "Edit subqueue Test Queue"
+   When I fill in "Test content N1" for "items[add_more][new_item][target_id]"
+    And I press "Add item"
+    And I wait for AJAX to finish
+   Then I should see "Test content N1"
+
+  # Add "Test content N2" to the location #2 in the "Test Queue"
+   When I fill in "Test content N2" for "items[add_more][new_item][target_id]"
+    And I press "Add item"
+    And I wait for AJAX to finish
+   Then I should see "Test content N1"
+
+  # Add "Test content N3" to the location #3 in the "Test Queue"
+   When I fill in "Test content N3" for "items[add_more][new_item][target_id]"
+    And I press "Add item"
+    And I wait for AJAX to finish
+   Then I should see "Test content N1"
+   When I press "Save"
+    And I wait
+   Then I should see "3 items" in the "Test Queue" row
+
     And I should see "Test content N3" in the "#edit-items-0-target-id" element
     And I should see "Test content N2" in the "#edit-items-1-target-id" element
     And I should see "Test content N1" in the "#edit-items-2-target-id" element
