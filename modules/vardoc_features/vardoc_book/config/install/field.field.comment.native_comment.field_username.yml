@@ -10,7 +10,7 @@ entity_type: comment
 bundle: native_comment
 label: Name
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

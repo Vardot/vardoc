@@ -2,6 +2,7 @@
 
 namespace Drupal\vardoc_profile\Plugin\Menu;
 
+use Drupal\views\Views;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\Core\Menu\MenuLinkDefault;
 use Drupal\Core\Menu\StaticMenuLinkOverridesInterface;
@@ -44,7 +45,7 @@ class NotificationsMenuLink extends MenuLinkDefault {
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
-    $plugin_definition['options']['attributes'] = array('class' => 'notifications');
+    $plugin_definition['options']['attributes'] = ['class' => 'notifications'];
 
     return new static(
       $configuration,
@@ -60,15 +61,14 @@ class NotificationsMenuLink extends MenuLinkDefault {
    */
   public function getTitle() {
     if ($this->currentUser->isAuthenticated()) {
-      //Profile content notifications
-      $view = \Drupal\views\Views::getView('profile_content');
+      // Profile content notifications.
+      $view = Views::getView('profile_content');
       $view->build('notifications');
       $count = $view->query->query()->countQuery()->execute()->fetchField();
       if ($count > 0) {
         $signular = 'There is @count new content item';
         $plural = 'There are @count new content items';
-        //$output = new TranslatableMarkup('There are @count new content', array('@count' => $count));
-        $output = \Drupal::translation()->formatPlural($count, $signular, $plural, array('@count' => $count));
+        $output = \Drupal::translation()->formatPlural($count, $signular, $plural, ['@count' => $count]);
       }
       else {
         $output = new TranslatableMarkup('No new content');
@@ -78,11 +78,11 @@ class NotificationsMenuLink extends MenuLinkDefault {
     }
   }
 
-/**
+  /**
    * {@inheritdoc}
    */
   public function getCacheMaxAge() {
-    //Execlude the notifications menu item from cache.
+    // Execlude the notifications menu item from cache.
     return 0;
   }
 

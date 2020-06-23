@@ -1,21 +1,38 @@
-name: 'Vardoc Book page'
-description: 'Provides Book page content type and related configuration. <em>Books</em> have a built-in hierarchical navigation. Use for handbooks or tutorials.'
+name: vardoc_book
 type: module
 core: 8.x
-version: 8.x-3.x-dev
-package: Vardoc
-project: vardoc
 dependencies:
-  - varbase_media:varbase_media
-  - varbase_editor:varbase_editor
-  - varbase_seo:varbase_seo
-  - drupal:book
-  - drupal:comment
-  - drupal:history
-  - drupal:menu_ui
-  - drupal:statistics
-  - entityqueue:entityqueue
-  - flag:flag
-  - sharethis:sharethis
-  - votingapi:votingapi
-  - votingapi_widgets:votingapi_widgets
+  - advanced_text_formatter
+  - block
+  - block_class
+  - block_content
+  - book
+  - comment
+  - content_moderation
+  - ctools
+  - ds
+  - entityqueue
+  - field
+  - field_group
+  - file
+  - flag
+  - focal_point
+  - image
+  - length_indicator
+  - link
+  - maxlength
+  - metatag
+  - node
+  - page_manager
+  - panels
+  - path
+  - smart_trim
+  - statistics
+  - sharethis
+  - system
+  - taxonomy
+  - text
+  - user
+  - views
+  - views_bootstrap
+  - votingapi_widgets

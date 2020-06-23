@@ -1,20 +1,8 @@
 <?php
 
-/**
- * @file
- */
-
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 use Behat\Behat\Context\SnippetAcceptingContext;
-use Behat\Gherkin\Node\PyStringNode;
-use Behat\Gherkin\Node\TableNode;
-
 use Behat\Mink\Selector\CssSelector;
-use Behat\Mink\Selector\NamedSelector;
-use Behat\Mink\Exception\ExpectationException;
-
-use Behat\Behat\Hook\Scope\BeforeScenarioScope;
-
 use Symfony\Component\Yaml\Yaml;
 
 /**
@@ -27,14 +15,14 @@ class SelectorsContext extends RawDrupalContext implements SnippetAcceptingConte
    *
    * @var array
    */
-  protected $cssSelectors = array();
+  protected $cssSelectors = [];
 
   /**
    * Holed a list of XPaht Selectors.
    *
    * @var array
    */
-  protected $xpathSelectors = array();
+  protected $xpathSelectors = [];
 
   /**
    * Holed the file path for where we could have selector files.
@@ -98,19 +86,21 @@ class SelectorsContext extends RawDrupalContext implements SnippetAcceptingConte
 
             }
             else {
-              throw new Exception('The file "' . $this->filesPath . $selectorFile . '" is empty or does not exist under SelectorsContext');
+              throw new \Exception('The file "' . $this->filesPath . $selectorFile . '" is empty or does not exist under SelectorsContext');
             }
           }
         }
 
       }
       else {
-        throw new Exception('behat.yml should include "selectors" with css, xpath, files_path, and files parametars. under SelectorsContext');
+        throw new \Exception('behat.yml should include "selectors" with css, xpath, files_path, and files parametars. under SelectorsContext');
       }
     }
   }
 
   /**
+   * Register Selectors.
+   *
    * @BeforeStep @javascript
    */
   public function registerSelectors() {
@@ -130,9 +120,9 @@ class SelectorsContext extends RawDrupalContext implements SnippetAcceptingConte
   }
 
   /**
-   * #Selector : To add a new selector name with a css selector.
+   * Selector : To add a new selector name with a css selector.
    *
-   * Exmaple 1: When I add "mobile logo" selector for "header img#logo" css selector
+   * Example 1: When I add "mobile logo" selector for "header img#logo" css selector
    * Example 2:  And I add "breadcrumb" selector for ".breadcrumb" css selector
    * Example 3:  And I add "breadcrumb first link" selector for ".breadcrumb li:nth-child(1) a" css selector.
    *
@@ -167,12 +157,12 @@ class SelectorsContext extends RawDrupalContext implements SnippetAcceptingConte
       $selectorHandler->registerNamedXpath($selectorName, $xpathSelector);
     }
     else {
-      throw new Exception('The selector name and the CSS selector must not be empty.');
+      throw new \Exception('The selector name and the CSS selector must not be empty.');
     }
   }
 
   /**
-   * #Selector : To add a new selector name with a XPath selector.
+   * Selector : To add a new selector name with a XPath selector.
    *
    * Exmaple 1: When I add "page title" selector for "//h1[contains(@class, 'page-header')" xpath selector
    * Example 2:  And I add "Dashboard" selector for "//*[@id='navbar-link-admin-dashboard']" xpath selector
@@ -195,7 +185,7 @@ class SelectorsContext extends RawDrupalContext implements SnippetAcceptingConte
    *
    * @When /^I add "(?P<selectorName>[^"]*)" selector for "(?P<xpathSelector>[^"]*)" xpath selector$/
    */
-  public function addSelectorNameForXPathSelector($selectorName, $xpathSelector) {
+  public function addSelectorNameForXpathSelector($selectorName, $xpathSelector) {
     if (!empty($selectorName) && $selectorName != '' && !empty($xpathSelector) && $xpathSelector != '') {
       // Add the selector name for the XPath selector to the selectors array.
       $this->xpathSelectors[$selectorName] = $xpathSelector;
@@ -205,20 +195,20 @@ class SelectorsContext extends RawDrupalContext implements SnippetAcceptingConte
       $selectorHandler->registerNamedXpath($selectorName, $xpathSelector);
     }
     else {
-      throw new Exception('The selector name and the XPath selector must not be empty.');
+      throw new \Exception('The selector name and the XPath selector must not be empty.');
     }
   }
 
   /**
-   * #Selector : To add a new selector name with a css selector.
+   * Selector : To add a new selector name with a css selector.
    *
-   * Exmaple 1: When I load selectors from "" file
+   * Example 1: When I load selectors from "" file
    * Example 2:  And I add "breadcrumb" selector for ".breadcrumb" css selector
    * Example 3:  And I add "breadcrumb first link" selector for ".breadcrumb li:nth-child(1) a" css selector.
    *
    * @When /^I add selectors from "(?P<fileName>[^"]*)" file$/
    */
-  public function IAddSelectorsFromFile($fileName) {
+  public function iAddSelectorsFromFile($fileName) {
 
     if (!empty($fileName) && $fileName != '' &&
         isset($this->filesPath) && $this->filesPath != '') {
@@ -259,18 +249,18 @@ class SelectorsContext extends RawDrupalContext implements SnippetAcceptingConte
 
       }
       else {
-        throw new Exception('The file "' . $this->filesPath . $fileName . '" is empty or does not exist under SelectorsContext');
+        throw new \Exception('The file "' . $this->filesPath . $fileName . '" is empty or does not exist under SelectorsContext');
       }
     }
     else {
-      throw new Exception('No file name or the file_path parameter is not right in the behat.yml file');
+      throw new \Exception('No file name or the file_path parameter is not right in the behat.yml file');
     }
   }
 
   /**
-   * #Selector : To print list of CSS selectors which has been registered.
+   * Selector: To print list of CSS selectors which has been registered.
    *
-   * Exmaple : When I print css selectors.
+   * Example: When I print css selectors.
    *
    * @Then /^(?:|I )print css selectors$/
    */
@@ -279,53 +269,53 @@ class SelectorsContext extends RawDrupalContext implements SnippetAcceptingConte
   }
 
   /**
-   * #Selector : To print list of XPath selectors which has been registered.
+   * Selector: To print list of XPath selectors which has been registered.
    *
-   * Exmaple : When I print xpath selectors.
+   * Example: When I print xpath selectors.
    *
    * @Then /^(?:|I )print xpath selectors$/
    */
-  public function printXPathSelectors() {
+  public function printXpathSelectors() {
     echo Yaml::dump($this->xpathSelectors);
   }
 
   /**
-   * #vardot : Move the focus to selected field input element.
+   * Move the focus to selected field input element.
    *
    * Example #1: When I move focus to "Title" field
    * Example #2:  And I move focus to "Body" field.
    *
    * @When /^(?:|I )move focus to "(?P<selectedField>[^"]*)" field$/
    */
-  function moveFocusToField($selectedField) {
+  public function moveFocusToField($selectedField) {
     $field = $this->getSession()->getPage()->findField($selectedField);
     $fieldid = $field->getAttribute('id');
     $this->getSession()->getDriver()->evaluateScript("jQuery('#{$fieldid}').focus();");
   }
 
   /**
-   * #vardot : Select all text in selected field input element.
+   * Select all text in selected field input element.
    *
    * Example #1: When I select all text in "Title" field
    * Example #2:  And I select all text in "Description" field.
    *
    * @When /^(?:|I )select all text in "(?P<selectedField>[^"]*)" field$/
    */
-  function selectAllTextInField($selectedField) {
+  public function selectAllTextInField($selectedField) {
     $field = $this->getSession()->getPage()->findField($selectedField);
     $fieldid = $field->getAttribute('id');
     $this->getSession()->getDriver()->evaluateScript('document.getElementById("' . $fieldid . '").select();');
   }
 
   /**
-   * #vardot : Select part of the text in selected field input element.
+   * Select part of the text in selected field input element.
    *
    * Example #1: When I select from 0 to 5 text in "Title" field
    * Example #2:  And I select from 0 to 5 text in "Description" field.
    *
    * @When /^(?:|I )select from (?P<from>\d+) to (?P<to>\d+) text in "(?P<selectedField>[^"]*)" field$/
    */
-  function setSelectionRangeFromField($from, $to, $selectedField) {
+  public function setSelectionRangeFromField($from, $to, $selectedField) {
     $field = $this->getSession()->getPage()->findField($selectedField);
     $fieldid = $field->getAttribute('id');
 
@@ -341,14 +331,14 @@ class SelectorsContext extends RawDrupalContext implements SnippetAcceptingConte
   }
 
   /**
-   * #vardot : Select a part text in selected field input element.
+   * Select a part text in selected field input element.
    *
    * Example #1: When I select "title name" text in "Title" field
    * Example #2:  And I select "some content" text in "Description" field.
    *
    * @When /^(?:|I )select "(?P<selectedText>[^"]*)" text in "(?P<selectedField>[^"]*)" field$/
    */
-  function selectTextInField($selectedText, $selectedField) {
+  public function selectTextInField($selectedText, $selectedField) {
     $field = $this->getSession()->getPage()->findField($selectedField);
     $fieldid = $field->getAttribute('id');
 
@@ -358,7 +348,7 @@ class SelectorsContext extends RawDrupalContext implements SnippetAcceptingConte
     // Have the $selectionStart.
     $selectionStart = strpos($fieldValue, $selectedText);
     if (empty($selectionStart)) {
-      throw new Exception(sprintf('We do not have "%s" in the "%s" field.', $selectedText, $selectedField));
+      throw new \Exception(sprintf('We do not have "%s" in the "%s" field.', $selectedText, $selectedField));
     }
 
     // Have the selectionEnd.

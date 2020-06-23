@@ -1,14 +1,11 @@
 <?php
+
 /**
  * @file
- * Enables modules and site configuration for a Vardoc
- * site installation.
+ * Enables modules and site configuration for a Vardoc site installation.
  */
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\language\Entity\ConfigurableLanguage;
-use Drupal\varbase\Form\AssemblerForm;
-use Drupal\varbase\Form\ConfigureMultilingualForm;
 use Drupal\varbase\Config\ConfigBit;
 use Drupal\vardoc\Form\VardocAssemblerForm;
 
@@ -30,10 +27,6 @@ function vardoc_install_tasks(&$install_state) {
   $varbase_install_tasks = varbase_install_tasks($install_state);
 
   return [
-//    'varbase_multilingual_configuration_form' => $varbase_install_tasks['varbase_multilingual_configuration_form'],
-//    'varbase_configure_multilingual' => $varbase_install_tasks['varbase_configure_multilingual'],
-//    'varbase_extra_components' => $varbase_install_tasks['varbase_extra_components'],
-//    'varbase_assemble_extra_components' => $varbase_install_tasks['varbase_assemble_extra_components'],
     'vardoc_extra_components' => [
       'display_name' => t('Extra components'),
       'display' => TRUE,
@@ -56,7 +49,7 @@ function vardoc_install_tasks(&$install_state) {
 function vardoc_install_tasks_alter(&$tasks, $install_state) {
   include_once drupal_get_path('profile', 'varbase') . '/varbase.profile';
 
-  //Skip select language step to install it in English as default language
+  // Skip select language step to install it in English as default language.
   unset($tasks['install_select_language']);
   unset($tasks['install_download_translation']);
 }
@@ -119,7 +112,14 @@ function vardoc_assemble_extra_components(array &$install_state) {
 
             // Added the selected extra feature configs to the batch process
             // with the same function name in the formbit.
-            $batch['operations'][] = ['varbase_save_editable_config_values', (array) [$extra_feature_key, $formbit_file_name, $selected_extra_features_configs]];
+            $batch['operations'][] = [
+              'varbase_save_editable_config_values',
+              [
+                $extra_feature_key,
+                $formbit_file_name,
+                $selected_extra_features_configs,
+              ],
+            ];
           }
         }
       }
@@ -169,7 +169,14 @@ function vardoc_assemble_extra_components(array &$install_state) {
 
             // Added the selected development configs to the batch process
             // with the same function name in the formbit.
-            $batch['operations'][] = ['varbase_save_editable_config_values', (array) [$demo_content_key, $formbit_file_name, $selected_demo_content_configs]];
+            $batch['operations'][] = [
+              'varbase_save_editable_config_values',
+              [
+                $demo_content_key,
+                $formbit_file_name,
+                $selected_demo_content_configs,
+              ],
+            ];
           }
         }
       }

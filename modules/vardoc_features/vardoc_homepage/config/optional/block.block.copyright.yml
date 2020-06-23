@@ -4,12 +4,12 @@ dependencies:
   module:
     - block_class
   theme:
-    - vardoc_theme
+    - vardoctheme
 third_party_settings:
   block_class:
     classes: ''
 id: copyright
-theme: vardoc_theme
+theme: vardoctheme
 region: footer
 weight: -8
 provider: null

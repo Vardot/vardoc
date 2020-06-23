@@ -103,9 +103,9 @@
                 "referrer": "origin",
                 "rights": "\u00a92018 Vardoc. All rights reserved.",
                 "twitter_cards_page_url": "http:\/\/default\/%3Cnone%3E",
-                "twitter_cards_image": "http:\/\/default\/profiles\/vardoc\/themes\/vardoc_theme\/share-logo.png",
-                "og_image": "http:\/\/default\/profiles\/vardoc\/themes\/vardoc_theme\/share-logo.png",
-                "og_image_url": "http:\/\/default\/profiles\/vardoc\/themes\/vardoc_theme\/share-logo.png",
+                "twitter_cards_image": "http:\/\/default\/profiles\/vardoc\/themes\/vardoctheme\/share-logo.png",
+                "og_image": "http:\/\/default\/profiles\/vardoc\/themes\/vardoctheme\/share-logo.png",
+                "og_image_url": "http:\/\/default\/profiles\/vardoc\/themes\/vardoctheme\/share-logo.png",
                 "schema_web_site_publisher": {
                     "@type": "Organization",
                     "name": "Vardoc",

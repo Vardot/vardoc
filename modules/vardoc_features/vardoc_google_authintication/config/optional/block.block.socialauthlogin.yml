@@ -1,3 +1,4 @@
+uuid: 95465be7-83f9-4d68-8486-4aff4ec40661
 langcode: en
 status: true
 dependencies:
@@ -6,12 +7,11 @@ dependencies:
     - social_auth
     - system
   theme:
-    - vardoc_theme
-third_party_settings:
-  block_class:
-    classes: ''
+    - vardoctheme
+_core:
+  default_config_hash: c6aPQY8a98_54lipFmjIiZ34oOjHPR7PVPASo2OqbfM
 id: socialauthlogin
-theme: vardoc_theme
+theme: vardoctheme
 region: content
 weight: 0
 provider: null

@@ -5,9 +5,9 @@ dependencies:
     - block_class
     - vardoc_profile
   theme:
-    - vardoc_theme
+    - vardoctheme
 id: avatarblock
-theme: vardoc_theme
+theme: vardoctheme
 region: header_right
 weight: -8
 provider: null

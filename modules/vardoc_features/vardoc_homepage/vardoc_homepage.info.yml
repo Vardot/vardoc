@@ -2,7 +2,8 @@ name: 'Vardoc Homepage'
 description: 'Homepage feature for Vardoc.'
 type: module
 core: 8.x
-version: 8.x-3.x-dev
+core_version_requirement: ^8 || ^9
+version: 8.x-2.6
 package: Vardoc
 dependencies:
   - varbase_core:varbase_core
@@ -14,3 +15,4 @@ dependencies:
   - page_manager:page_manager
   - panels:panels
   - vardoc:vardoc_book
+  - search_api_autocomplete

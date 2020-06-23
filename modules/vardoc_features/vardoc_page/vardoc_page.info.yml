@@ -2,7 +2,8 @@ name: 'Vardoc Basic Page'
 description: 'Contains Vardoc Basic Page content type configurations.'
 type: module
 core: 8.x
-version: 8.x-3.x-dev
+core_version_requirement: ^8 || ^9
+version: 8.x-2.6
 package: Vardoc
 dependencies:
   - varbase_core:varbase_core

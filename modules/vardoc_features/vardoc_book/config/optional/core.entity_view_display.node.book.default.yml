@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.book.field_external_links
     - field.field.node.book.field_meta_tags
     - field.field.node.book.field_rating
+    - field.field.node.book.field_related_content
     - node.type.book
   module:
     - comment
@@ -61,6 +62,11 @@ content:
     region: main
     settings: {  }
     third_party_settings: {  }
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_comment:
     weight: 1
     label: above
@@ -104,6 +110,14 @@ content:
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: main
+  field_related_content:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   flag_favorite:
     weight: 5
     region: main
@@ -117,5 +131,5 @@ content:
 hidden:
   field_category: true
   field_rating: true
-  langcode: true
   links: true
+  search_api_excerpt: true

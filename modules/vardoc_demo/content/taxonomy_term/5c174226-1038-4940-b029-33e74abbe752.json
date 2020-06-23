@@ -1,0 +1,169 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/taxonomy\/term\/89?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/tools"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/tools\/revision_user": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/tools\/parent": [
+            null
+        ]
+    },
+    "tid": [
+        {
+            "value": 89
+        }
+    ],
+    "uuid": [
+        {
+            "value": "5c174226-1038-4940-b029-33e74abbe752"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 89
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "tools"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2020-05-13T11:56:50+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/tools\/revision_user": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "e64d222a-063e-43e6-b494-4ee775fb2027"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/tools\/parent": [
+            null
+        ]
+    },
+    "revision_log_message": [
+        {
+            "value": "Created new Tools"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "name": [
+        {
+            "value": "Company Wide Systems",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-05-13T11:56:50+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "schema_web_site_type": "WebSite",
+                "title": "Company Wide Systems | Vardot Knowledge Base",
+                "twitter_cards_type": "summary",
+                "schema_web_site_name": "Vardot Knowledge Base",
+                "canonical_url": "http:\/\/default\/node",
+                "og_site_name": "Vardot Knowledge Base",
+                "shortlink": "http:\/\/default\/node",
+                "twitter_cards_title": "| Vardot Knowledge Base",
+                "og_type": "website",
+                "schema_web_site_url": "http:\/\/default\/",
+                "google_plus_image_0": "http:\/\/default\/themes\/custom\/kb_bs4\/share-image.png",
+                "og_url": "http:\/\/default\/node",
+                "og_title": "| Vardot Knowledge Base",
+                "generator": "Varbase",
+                "referrer": "origin",
+                "rights": "\u00a92020 Vardot Knowledge Base. All rights reserved.",
+                "twitter_cards_page_url": "http:\/\/default\/node",
+                "twitter_cards_image": "http:\/\/default\/themes\/custom\/kb_bs4\/share-image.png",
+                "og_image_0": "http:\/\/default\/themes\/custom\/kb_bs4\/share-image.png",
+                "schema_web_site_publisher": {
+                    "@type": "Organization",
+                    "name": "Vardot Knowledge Base",
+                    "url": "http:\/\/default\/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "http:\/\/default\/themes\/custom\/kb_bs4\/logo.png"
+                    }
+                },
+                "og_image_url_0": "http:\/\/default\/themes\/custom\/kb_bs4\/share-image.png",
+                "mobileoptimized_0": "width",
+                "handheldfriendly_0": "true",
+                "apple_mobile_web_app_capable": "yes"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "rh_action": [
+        {
+            "value": "bundle_default"
+        }
+    ],
+    "rh_redirect_response": [
+        {
+            "value": 301
+        }
+    ]
+}

@@ -10,13 +10,14 @@ dependencies:
     - field.field.node.book.field_documents
     - field.field.node.book.field_external_links
     - field.field.node.book.field_meta_tags
+    - field.field.node.book.field_rating
+    - field.field.node.book.field_related_content
     - node.type.book
   module:
     - comment
     - taxonomy
     - text
     - user
-third_party_settings:
 id: node.book.teaser
 targetEntityType: node
 bundle: book
@@ -30,6 +31,11 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_category:
     type: entity_reference_rss_category
     weight: 0
@@ -46,6 +52,11 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
+  flag_favorite:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 101
     region: content
@@ -58,4 +69,6 @@ hidden:
   field_documents: true
   field_external_links: true
   field_meta_tags: true
-  langcode: true
+  field_rating: true
+  field_related_content: true
+  search_api_excerpt: true

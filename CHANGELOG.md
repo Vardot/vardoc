@@ -1,9 +1,53 @@
+# 8.2.6
+
+### Highlighted important changes since Vardoc 8.2.5:
+
+* Issue [#3123308](http://drupal.org/node/3123308):
+                  Updated [Varbase profile] from 8.8.3 to 8.8.4 ( ~8.8.0 )
+* Issue [#3123307](http://drupal.org/node/3123307):
+                  Drupal 9 readiness for [Vardoc distribution] installation
+                  profile with Drupal coding standard and practice
+* Issue [#3121627](http://drupal.org/node/3121627)
+                  by Neslee Canil Pinto
+                 : Replaced deprecated method file_scan_directory
+* Issue [#3119880](http://drupal.org/node/3119880):
+                  Vardoc 8.2.6 : Updated [CHANGELOG.md, README.md,
+                  drupal-org.make] files and filtered the code for
+                  Drupal 8 Coding Standard
+* Issue [#3113175](http://drupal.org/node/3113175):
+                  Drupal 9 Readiness for [Varbase FAQs] with Drupal
+                  coding standard and practice
+* Issue [#3102163](http://drupal.org/node/3102163)
+                  by YousefAnbar
+                 : Changed FAQ Cache tags based on node_list tag
+
+--------------------------------------------------------------------------------
+
+# 8.2.5
+
+### Highlighted important changes since Vardoc 8.2.4:
+* Issue [#3112296](http://drupal.org/node/3112296):
+                  Updated [Varbase profile] from 8.8.2 to 8.8.3 ( ~8.8.0 )
+* Issue [#3111150](http://drupal.org/node/3111150):
+                  Updated [Varbase profile] from 8.8.1 to 8.8.2 ( ~8.8.0 )
+* Issue [#3110702](http://drupal.org/node/3110702)
+                  by [metalbote](https://www.drupal.org/u/metalbote)
+                 : Changed web-root logic as drupal-root should
+                  not be hard-coded in the composer Script handler
+* Issue [#3111614](http://drupal.org/node/3111614):
+                  Vardoc 8.2.5 : Update [CHANGELOG.md, README.md,
+                  drupal-org.make] files and filter the code for Drupal
+                  8 Coding Standard
+
+--------------------------------------------------------------------------------
+
 # 8.2.4
 
 ### Highlighted important changes since Vardoc 8.2.3:
 * Issue [#3108911](http://drupal.org/node/3108911):
                   Updated [Varbase profile]
                   from 8.7.4 ( ~8.7.0 ) to 8.8.1 ( ~8.8.0 )
+
 --------------------------------------------------------------------------------
 
 # 8.2.3

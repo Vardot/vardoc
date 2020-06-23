@@ -8,12 +8,12 @@ dependencies:
     - user
     - views
   theme:
-    - vardoc_theme
+    - vardoctheme
 third_party_settings:
   block_class:
     classes: 'header-avatar avatar-logged-in'
 id: views_block__profile_block_user
-theme: vardoc_theme
+theme: vardoctheme
 region: header_right
 weight: -10
 provider: null

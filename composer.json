@@ -53,8 +53,7 @@
     "drupal/votingapi_widgets": "~1.0",
     "drupal/flag": "~4.0",
     "drupal/sharethis": "~2.0",
-    "drupal/varbase_faqs": "~6.0",
-    "drupal/vardoc_theme": "1.x-dev"
+    "drupal/varbase_faqs": "~6.0"
   },
   "require-dev": {
     "drupal/core-dev": "^8.8.0",
@@ -103,7 +102,7 @@
       }
     },
     "branch-alias": {
-      "dev-8.x-3.x": "8.3.x-dev"
+      "dev-8.x-2.x": "8.2.x-dev"
     },
     "installer-types": [
       "bower-asset",
@@ -145,6 +144,11 @@
     "composer-exit-on-patch-failure": true,
     "patchLevel": {
        "drupal/core": "-p2"
+    },
+    "patches": {
+      "drupal/ds": {
+        "Issue #2975313 Using token with external url to 'onclick attribute on layout wrapper' throws InvalidArgumentException": "https://www.drupal.org/files/issues/2018-10-26/ds-ds_url-2975313-7.patch"
+      }
     }
   }
 }
