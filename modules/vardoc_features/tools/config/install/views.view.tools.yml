@@ -1,3 +1,4 @@
+uuid: 419ffacf-b390-42f4-ac97-cb15679edb2a
 langcode: en
 status: true
 dependencies:
@@ -208,7 +209,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'Content queue'
-          required: true
+          required: false
           limit_queue: home_page_tools
           entity_type: node
           plugin_id: entity_queue
@@ -231,12 +232,27 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
+          order: DESC
           exposed: false
           expose:
             label: ''
           entity_type: node
           plugin_id: entity_queue_position
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          entity_type: node
+          entity_field: created
+          plugin_id: date
       title: 'Most Used Tools'
       pager:
         type: some

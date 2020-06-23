@@ -1,3 +1,4 @@
+uuid: 66e248a8-8acc-4ce7-bf9c-0521bacd2d40
 langcode: en
 status: true
 dependencies:
@@ -21,4 +22,4 @@ queue_settings:
   min_size: 0
   max_size: 0
   act_as_queue: false
-  reverse_in_admin: false
+  reverse: true
