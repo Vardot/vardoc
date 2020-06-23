@@ -1,12 +1,11 @@
 core: 8.x
 type: theme
 base theme: vartheme_bs4
-ckeditor_stylesheets:
-  - css/theme/wysiwyg.theme.css
 
-name: 'vardoc_theme Theme'
+name: 'Vardoc Theme'
 description: 'Based on Bootstrap 4 framework using SASS, and extending Vartheme (Bootstrap 4 - SASS).'
 core_version_requirement: ^8 || ^9
+version: 8.4.0
 
 regions:
   top_navigation: 'Top Navigation'
@@ -24,6 +23,9 @@ regions:
   footer: 'Footer'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
+
+ckeditor_stylesheets:
+  - css/theme/wysiwyg.theme.css
 
 libraries:
   # Bootstrap styles and scripts libraries.
