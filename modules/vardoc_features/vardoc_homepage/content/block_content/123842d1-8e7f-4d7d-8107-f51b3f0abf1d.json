@@ -143,9 +143,9 @@
     ],
     "body": [
         {
-            "value": "<div class=\"logo-color\">\r\n    <a href=\"\/\" title=\"Home\" rel=\"home\" class=\"navbar-brand-front\">\r\n      <img src=\"\/profiles\/vardoc\/themes\/vardoctheme\/images\/logo-print.png\" alt=\"Home\" class=\"\">\r\n          <\/a>\r\n<\/div>",
+            "value": "<div class=\"logo-color\">\r\n    <a href=\"\/\" title=\"Home\" rel=\"home\" class=\"navbar-brand-front\">\r\n      <img src=\"\/profiles\/vardoc\/themes\/vardoc_theme\/images\/logo-print.png\" alt=\"Home\" class=\"\">\r\n          <\/a>\r\n<\/div>",
             "format": "code_html",
-            "processed": "<div class=\"logo-color\">\n    <a href=\"\/\" title=\"Home\" rel=\"home\" class=\"navbar-brand-front\">\n      <img src=\"\/profiles\/vardoc\/themes\/vardoctheme\/images\/logo-print.png\" alt=\"Home\" class=\"\" \/>\n        <\/a>\n<\/div>",
+            "processed": "<div class=\"logo-color\">\n    <a href=\"\/\" title=\"Home\" rel=\"home\" class=\"navbar-brand-front\">\n      <img src=\"\/profiles\/vardoc\/themes\/vardoc_theme\/images\/logo-print.png\" alt=\"Home\" class=\"\" \/>\n        <\/a>\n<\/div>",
             "summary": "",
             "lang": "en"
         }

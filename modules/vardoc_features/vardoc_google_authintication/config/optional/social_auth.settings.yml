@@ -1,7 +1,7 @@
 auth:
   social_auth_google:
     route: social_auth_google.redirect_to_google
-    img_path: profiles/vardoc/themes/vardoctheme/images/google_logo.svg
+    img_path: profiles/vardoc/themes/vardoc_theme/images/google_logo.svg
 post_login: /user
 redirect_user_form: true
 disable_admin_login: false

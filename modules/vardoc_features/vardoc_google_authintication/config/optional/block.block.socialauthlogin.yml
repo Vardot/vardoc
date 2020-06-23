@@ -7,11 +7,11 @@ dependencies:
     - social_auth
     - system
   theme:
-    - vardoctheme
+    - vardoc_theme
 _core:
   default_config_hash: c6aPQY8a98_54lipFmjIiZ34oOjHPR7PVPASo2OqbfM
 id: socialauthlogin
-theme: vardoctheme
+theme: vardoc_theme
 region: content
 weight: 0
 provider: null

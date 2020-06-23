@@ -8,9 +8,9 @@ dependencies:
     - system
     - views
   theme:
-    - vardoctheme
+    - vardoc_theme
 id: exposedformbook_searchpage_search_3
-theme: vardoctheme
+theme: vardoc_theme
 region: top_navigation
 weight: 0
 provider: null

@@ -8,12 +8,12 @@ dependencies:
     - block_class
     - views
   theme:
-    - vardoctheme
+    - vardoc_theme
 third_party_settings:
   block_class:
     classes: mobile-search
 id: exposedformbook_searchpage_search_4
-theme: vardoctheme
+theme: vardoc_theme
 region: navigation_collapsible
 weight: 0
 provider: null

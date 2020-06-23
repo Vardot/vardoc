@@ -116,6 +116,6 @@
 * Issue [#2991872](http://drupal.org/node/2991872)
               by [bhanuprakashnani](https://www.drupal.org/u/bhanuprakashnani),
               [thomasfowles](https://www.drupal.org/u/thomasfowles):
-                  Fix non-https fonts in vardoctheme.
+                  Fix non-https fonts in vardoc_theme.
 * Issue [#2995492](http://drupal.org/node/2995492):
                   Remove [Vartheme Material Design] themes and related module.

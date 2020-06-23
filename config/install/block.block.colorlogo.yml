@@ -7,9 +7,9 @@ dependencies:
   module:
     - block_content
   theme:
-    - vardoctheme
+    - vardoc_theme
 id: colorlogo
-theme: vardoctheme
+theme: vardoc_theme
 region: navigation
 weight: 0
 provider: null
