@@ -55,6 +55,7 @@
     "drupal/varbase_faqs": "~6.0",
     "drupal/menu_link_attributes": "^1.0",
     "drupal/book_tree_menu": "^1.0",
+    "drupal/svg_image": "^1.13",
     "drupal/search_api_autocomplete": "^1.2"
   },
   "require-dev": {
