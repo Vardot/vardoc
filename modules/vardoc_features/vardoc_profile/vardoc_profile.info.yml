@@ -3,7 +3,7 @@ description: 'Provides User profile features like favorite content and latest co
 type: module
 core: 8.x
 core_version_requirement: ^8 || ^9
-version: 8.x-2.6
+version: 8.4.0
 package: Vardoc
 dependencies:
   - varbase_core:varbase_core

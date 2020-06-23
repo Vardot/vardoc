@@ -6,8 +6,6 @@ ckeditor_stylesheets:
 
 name: 'vardoc_theme Theme'
 description: 'Based on Bootstrap 4 framework using SASS, and extending Vartheme (Bootstrap 4 - SASS).'
-project: vartheme_bs4
-version: 8.x-6.x-dev
 core_version_requirement: ^8 || ^9
 
 regions:
