@@ -26,12 +26,8 @@ themes:
   # Contrib themes.
   - adminimal_theme
   - bootstrap
+  - vartheme
+  - vartheme_claro
 
   # Custom themes.
   - vardoc_theme
-  - vartheme
-  - vartheme_admin
-distribution:
-  name: Vardoc
-  install:
-    theme: vartheme_admin
