@@ -199,6 +199,29 @@ h3 {
   color: #214bff;
 }
 
+.view-display-id-block_related_articles .item-list li {
+  border-bottom: 1px solid #ced4da;
+  padding: 10px 0;
+}
+
+.view-display-id-block_related_articles .item-list li:first-child {
+  padding-top: 0;
+}
+
+.view-display-id-block_related_articles .item-list li:last-child {
+  border-bottom: 0;
+}
+
+.view-display-id-block_related_articles .item-list li a {
+  color: #292929;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.view-display-id-block_related_articles .item-list li a:hover {
+  color: #214bff;
+}
+
 .block-book-navigation {
   margin-bottom: 30px;
 }

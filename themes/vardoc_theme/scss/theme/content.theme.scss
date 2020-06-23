@@ -186,6 +186,29 @@ h3 {
   }
 }
 
+.view-display-id-block_related_articles {
+  .item-list {
+    li {
+      border-bottom: 1px solid $input-border-color;
+      padding: 10px 0;
+      &:first-child {
+        padding-top: 0;
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+      a {
+        color: $black-100;
+        font-weight: $font-weight-bold;
+        @include font-size(0.875rem);
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
 // Book navigation style
 .block-book-navigation {
   margin-bottom: 30px;
