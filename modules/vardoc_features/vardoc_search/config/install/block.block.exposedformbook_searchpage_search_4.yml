@@ -1,0 +1,27 @@
+uuid: 6a134bbc-4a84-4641-a409-33b6ff4186a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.book_search
+  module:
+    - block_class
+    - views
+  theme:
+    - vardoc_theme
+third_party_settings:
+  block_class:
+    classes: mobile-search
+id: exposedformbook_searchpage_search_4
+theme: vardoc_theme
+region: navigation_collapsible
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:book_search-page_search'
+settings:
+  id: 'views_exposed_filter_block:book_search-page_search'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility: {  }

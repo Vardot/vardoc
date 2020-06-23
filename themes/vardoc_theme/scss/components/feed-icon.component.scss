@@ -1,0 +1,13 @@
+// Feed icon styles for Bootstrap Barrio.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+ 
+.feed-icon {
+  border-bottom: none;
+  display: inline-block;
+  padding: $spacer 0 0 0;
+}

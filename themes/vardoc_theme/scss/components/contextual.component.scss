@@ -1,0 +1,12 @@
+// Contextual links styles for Bootstrap Barrio.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+
+.contextual-links a {
+  border-bottom: none;
+  text-shadow: 0 0 0;
+}

@@ -1,0 +1,29 @@
+uuid: 0e7f7856-005c-4428-b242-75a0fa62db0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.book_search
+  module:
+    - system
+    - views
+  theme:
+    - vardoc_theme
+id: exposedformbook_searchpage_search_3
+theme: vardoc_theme
+region: top_navigation
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:book_search-page_search'
+settings:
+  id: 'views_exposed_filter_block:book_search-page_search'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: true
+    context_mapping: {  }

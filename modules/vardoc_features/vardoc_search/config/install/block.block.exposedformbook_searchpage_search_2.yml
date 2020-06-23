@@ -1,0 +1,33 @@
+uuid: 194623a6-2878-4c03-8328-e84019f4536c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.book_search
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - vardoc_theme
+third_party_settings:
+  block_class:
+    classes: 'search-block col-lg-6'
+id: exposedformbook_searchpage_search_2
+theme: vardoc_theme
+region: header
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:book_search-page_search'
+settings:
+  id: 'views_exposed_filter_block:book_search-page_search'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: 'Need help finding something?'
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/search"
+    negate: false
+    context_mapping: {  }

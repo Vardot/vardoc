@@ -1,0 +1,7 @@
+#auth-box .user-login-form {
+  text-align: right;
+}
+
+#auth-box .user-login-form .option {
+  padding-right: 0;
+}

@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+  theme:
+    - vardoc_theme
+third_party_settings:
+  block_class:
+    classes: ''
+id: copyright
+theme: vardoc_theme
+region: footer
+weight: -8
+provider: null
+plugin: 'block_content:67e30b7a-d8cd-4e86-a8c7-b34249d9c698'
+settings:
+  id: 'block_content:67e30b7a-d8cd-4e86-a8c7-b34249d9c698'
+  label: Copyright
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

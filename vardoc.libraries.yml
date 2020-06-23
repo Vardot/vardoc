@@ -1,0 +1,6 @@
+install_page:
+  css:
+    theme:
+      css/install-page.css: {}
+  js:
+    js/installation.js: {}

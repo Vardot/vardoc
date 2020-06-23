@@ -1,0 +1,76 @@
+/* Insert your vardoc_theme WYSIWYG custom SASS styling. */
+.node--view-mode-full.cke_editable ul,
+.node--view-mode-full .field--name-body ul,
+body.cke_editable ul,
+body .field--name-body ul {
+  list-style-type: none;
+}
+
+.node--view-mode-full.cke_editable ul li:before,
+.node--view-mode-full .field--name-body ul li:before,
+body.cke_editable ul li:before,
+body .field--name-body ul li:before {
+  content: "\2022";
+  color: #214bff;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  font-size: 1.125rem;
+}
+
+.node--view-mode-full.cke_editable ul li a,
+.node--view-mode-full .field--name-body ul li a,
+body.cke_editable ul li a,
+body .field--name-body ul li a {
+  display: block;
+}
+
+.node--view-mode-full.cke_editable ul li ul,
+.node--view-mode-full .field--name-body ul li ul,
+body.cke_editable ul li ul,
+body .field--name-body ul li ul {
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+.node--view-mode-full.cke_editable ul li ul li:before,
+.node--view-mode-full .field--name-body ul li ul li:before,
+body.cke_editable ul li ul li:before,
+body .field--name-body ul li ul li:before {
+  content: "\26AC";
+  font-weight: 400;
+}
+
+.node--view-mode-full.cke_editable ol a,
+.node--view-mode-full .field--name-body ol a,
+body.cke_editable ol a,
+body .field--name-body ol a {
+  display: block;
+}
+
+.node--view-mode-full.cke_editable .quote,
+.node--view-mode-full .field--name-body .quote,
+body.cke_editable .quote,
+body .field--name-body .quote {
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+.node--view-mode-full.cke_editable a,
+.node--view-mode-full .field--name-body a,
+body.cke_editable a,
+body .field--name-body a {
+  display: inline-block;
+  word-wrap: break-word;
+}
+
+.text-with-bg {
+  display: block;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.cke_editable {
+  font-family: "Open Sans", sans-serif;
+}

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: native_comment
+label: 'Native comment'
+target_entity_type_id: node
+description: 'Native comment type.'

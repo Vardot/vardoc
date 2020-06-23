@@ -1,0 +1,179 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/node\/8?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/faq"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/faq\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/faq\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 8
+        }
+    ],
+    "uuid": [
+        {
+            "value": "0a0de621-40a7-4986-8444-e421ff18fb49"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "faq"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/faq\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "a79b1dcd-d458-40be-8834-7f2f2b68ddaa"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/faq\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "a79b1dcd-d458-40be-8834-7f2f2b68ddaa"
+                    }
+                ],
+                "lang": "en"
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "What is Vardoc?",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-01-31T10:01:46+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-01-31T10:02:19+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "schema_web_site_type": "WebSite",
+                "title": "Style Elements | Vardoc",
+                "shortlink": "http:\/\/default\/%3Cnone%3E",
+                "og_site_name": "Vardoc",
+                "schema_web_site_name": "Vardoc",
+                "canonical_url": "http:\/\/default\/%3Cnone%3E",
+                "twitter_cards_type": "summary_large_image",
+                "description": "H1 Heading\n\nPellentesque pellentesque eget tempor tellus. Fusce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. Fusce lacinia tempor malesuada.\n\n\u00a0\n\nH2 Heading\n\nPellentesque pellentesque usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. tellus eget tempor. Fusce lacinia tempor malesuada.\n\n\u00a0",
+                "twitter_cards_description": "H1 Heading\n\nPellentesque pellentesque eget tempor tellus. Fusce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. Fusce lacinia tempor malesuada.\n\n\u00a0\n\nH2 Heading\n\nPellentesque pellentesque usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. tellus eget tempor. Fusce lacinia tempor malesuada.\n\n\u00a0",
+                "schema_web_site_url": "http:\/\/default\/",
+                "og_type": "article",
+                "twitter_cards_title": "| Vardoc",
+                "og_url": "http:\/\/default\/%3Cnone%3E",
+                "abstract": "H1 Heading\n\nPellentesque pellentesque eget tempor tellus. Fusce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. Fusce lacinia tempor malesuada.\n\n\u00a0\n\nH2 Heading\n\nPellentesque pellentesque usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. tellus eget tempor. Fusce lacinia tempor malesuada.\n\n\u00a0",
+                "generator": "Varbase",
+                "og_title": "| Vardoc",
+                "referrer": "origin",
+                "rights": "\u00a92018 Vardoc. All rights reserved.",
+                "og_description": "H1 Heading\n\nPellentesque pellentesque eget tempor tellus. Fusce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. Fusce lacinia tempor malesuada.\n\n\u00a0\n\nH2 Heading\n\nPellentesque pellentesque usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. tellus eget tempor. Fusce lacinia tempor malesuada.\n\n\u00a0",
+                "twitter_cards_page_url": "http:\/\/default\/%3Cnone%3E",
+                "schema_web_site_publisher": {
+                    "@type": "Organization",
+                    "name": "Vardoc",
+                    "url": "http:\/\/default\/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "http:\/\/default\/logo.png"
+                    }
+                },
+                "mobileoptimized": "width",
+                "handheldfriendly": "true",
+                "apple_mobile_web_app_capable": "yes"
+            }
+        }
+    ],
+    "rh_action": [
+        {
+            "value": "bundle_default"
+        }
+    ],
+    "rh_redirect_response": [
+        {
+            "value": 301
+        }
+    ],
+    "body": [
+        {
+            "value": "<p><a href=\"https:\/\/www.vardot.com\/vardoc\" rel=\"noopener noreferrer\" target=\"_blank\">Vardoc<\/a>&nbsp;is a knowledge base system, a wiki system, and a documentation management system designed to host massive amount of content in a structured and easy-to-find format.<br \/>\r\n<a href=\"https:\/\/www.vardot.com\/vardoc\" rel=\"noopener noreferrer\" target=\"_blank\">Vardoc<\/a>&nbsp;helps you build a connected organization, product, or knowledge area to allow everyone involved to find the answers they seek, and contribute their expertise in the knowledge base.<\/p>\r\n\r\n<blockquote>\r\n<p>Think of it as a wiki site of your product, user manuals, or organizational processes. With easy&nbsp;structure, collaborative tools,&nbsp;and friendly design.<\/p>\r\n<\/blockquote>\r\n\r\n<p>Built on top of&nbsp;<a href=\"https:\/\/www.vardot.com\/varbase\" rel=\"noopener noreferrer\" target=\"_blank\">Varbase<\/a>, the open source&nbsp;<a href=\"https:\/\/www.drupal.org\/8\" rel=\"noopener noreferrer\" target=\"_blank\">Drupal 8<\/a>&nbsp;distribution,&nbsp;<a href=\"https:\/\/www.vardot.com\/vardoc\" rel=\"noopener noreferrer\" target=\"_blank\">Vardoc<\/a>&nbsp;provides powerful functional features such as editorial features, search function, taxonomy, user management, and customizable themes. It also delivers top-notch non-functional requirements such as enterprise security, fast performance, search engine optimization (SEO), accessibility compliance, and many more features.<\/p>\r\n\r\n<p>Our goal is to bring ease to you when writing and creating a documentation for your product, website, departmental processes, online manuals, or your enterprise as whole.<\/p>\r\n",
+            "format": "full_html",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}

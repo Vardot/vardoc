@@ -1,0 +1,59 @@
+uuid: a6331030-bd39-4e22-9ad8-e6b9b2440914
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lgebQmNSdx9o8GwBUjkJaGAzoWIbLcqCn0K9N9hm-F8
+id: authenticated
+label: 'Authenticated user'
+weight: -9
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access content overview'
+  - 'access sitemap'
+  - 'access user profiles'
+  - 'add terms in category'
+  - 'add terms in project'
+  - 'add terms in section'
+  - 'add terms in topic'
+  - 'administer taxonomy'
+  - 'create page content'
+  - 'create project_lessons_learned content'
+  - 'create sme content'
+  - 'create template content'
+  - 'create terms in category'
+  - 'create terms in project'
+  - 'create terms in section'
+  - 'create terms in topic'
+  - 'edit own comments'
+  - 'edit own page content'
+  - 'edit own project_lessons_learned content'
+  - 'edit own sme content'
+  - 'edit own template content'
+  - 'edit own vote on node:book:field_rating'
+  - 'edit terms in category'
+  - 'edit terms in project'
+  - 'edit terms in section'
+  - 'edit terms in topic'
+  - 'flag favorite'
+  - 'post comments'
+  - 'search content'
+  - 'unflag favorite'
+  - 'use editorial transition create_new_draft'
+  - 'use search_api_autocomplete for book_search'
+  - 'use text format basic_html'
+  - userprotect.account.edit
+  - userprotect.mail.edit
+  - userprotect.pass.edit
+  - 'view media'
+  - 'view post access counter'
+  - 'view terms in lesson_learning_topic'
+  - 'view terms in project'
+  - 'view terms in section'
+  - 'view terms in sme_category_'
+  - 'view terms in tools'
+  - 'view terms in topic'
+  - 'view terms in vardot_tools'
+  - 'vote on node:book:field_rating'

@@ -1,0 +1,98 @@
+/* Insert your vardoc_theme footer custom SASS styling. */
+.footer-wrapper {
+  background-color: #f3f3f3;
+  margin-top: 100px;
+  color: #292929;
+}
+
+@media (max-width: 767.98px) {
+  .footer-wrapper {
+    text-align: center;
+    margin-top: 50px;
+  }
+}
+
+.footer-wrapper .footer {
+  background-color: transparent;
+}
+
+.footer-wrapper .site-branding {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 767.98px) {
+  .footer-wrapper .site-branding img {
+    margin: 0 auto;
+  }
+}
+
+.footer-wrapper .region-footer {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.maintenance-page .footer {
+  background-color: transparent;
+}
+
+.menu--footer .navbar-nav {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  float: right;
+}
+
+@media (max-width: 767.98px) {
+  .menu--footer .navbar-nav {
+    float: none;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.menu--footer .navbar-nav .nav-item {
+  margin-right: 26px !important;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.menu--footer .navbar-nav .nav-item:last-child {
+  margin-right: 0 !important;
+}
+
+.menu--footer .navbar-nav .nav-item .nav-link {
+  font-size: 16px !important;
+  color: #214bff !important;
+  border-bottom: 0 !important;
+}
+
+.menu--footer .navbar-nav .nav-item .nav-link:before {
+  font-size: 0px;
+}
+
+.menu--footer .navbar-nav .nav-item .nav-link:hover:before {
+  color: #7324ff;
+}
+
+.menu--footer .navbar-nav .nav-item:hover {
+  -webkit-transform: translateY(-5px);
+       -o-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+#block-copyright {
+  float: right;
+  width: 50%;
+}
+
+@media (max-width: 767.98px) {
+  #block-copyright {
+    float: none;
+    width: 100%;
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "vardot",
+  "private": true,
+  "version": "8.2.0",
+  "description": "Vardoc: Knowledge Base System and Documentation Site",
+  "keywords": [
+    "Drupal",
+    "Varbase",
+    "Vardoc",
+    "Drupal profile",
+    "Bootstrap"
+  ],
+  "author": "Vardot",
+  "license": "GPL-2.0",
+  "scripts": {
+    "install-libraries": "npm install && bower install"
+  },
+  "dependencies": {
+    "bower": ">=1.8.8"
+  },
+  "license": "GPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Vardot/vardoc.git"
+  }
+}

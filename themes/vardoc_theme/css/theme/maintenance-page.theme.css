@@ -1,0 +1,4 @@
+/* Insert your vardoc_theme maintenance page custom SASS styling. */
+.maintenance-page footer .footer-credits {
+  font-size: 12px;
+}

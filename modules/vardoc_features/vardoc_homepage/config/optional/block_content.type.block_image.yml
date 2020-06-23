@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: block_image
+label: 'Block with image'
+revision: 1
+description: 'Custom block contains background image.'

@@ -1,0 +1,277 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/about-vardoc\/technical-documentation?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/book"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/field_category": [
+            {
+                "href": "http:\/\/default\/taxonomy\/term\/1?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/default\/taxonomy\/term\/3?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/field_documents": [
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2018-01\/Sample%20sheet.xlsx"
+            },
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2018-01\/Sample%20document_0.docx"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 2
+        }
+    ],
+    "uuid": [
+        {
+            "value": "14966d6e-b69e-4faa-bd3a-55362a8db656"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "book"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "3394832f-448b-4a78-a44a-d1d31ad7ab10"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "3394832f-448b-4a78-a44a-d1d31ad7ab10"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/field_category": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/taxonomy\/term\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/category"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "196ab93b-0559-49d3-85ba-ea6a44a07794"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/taxonomy\/term\/3?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/category"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "ff006e7c-a1db-4abe-ba61-280c7d0dea61"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/field_documents": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2018-01\/Sample%20sheet.xlsx"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "b059cd66-22f3-41d5-8a67-5c6a9a749ee6"
+                    }
+                ],
+                "display": "1",
+                "description": ""
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2018-01\/Sample%20document_0.docx"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "3e68bc25-b426-45f6-b12b-7f6cd69d8945"
+                    }
+                ],
+                "display": "1",
+                "description": ""
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "Technical Documentation",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2017-07-24T10:19:28+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-01-17T13:29:14+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "schema_web_site_type": "WebSite",
+                "title": "Technical Documentation | Vardoc",
+                "shortlink": "http:\/\/default\/%3Cnone%3E",
+                "og_site_name": "Vardoc",
+                "schema_web_site_name": "Vardoc",
+                "canonical_url": "http:\/\/default\/%3Cnone%3E",
+                "twitter_cards_type": "summary_large_image",
+                "description": "Vardoc\u00a0is a Drupal 8 distribution that extends Varbase;\u00a0the powerful Drupal distribution for faster development,\u00a0with editor experience in mind.",
+                "twitter_cards_description": "Vardoc\u00a0is a Drupal 8 distribution that extends Varbase;\u00a0the powerful Drupal distribution for faster development,\u00a0with editor experience in mind.",
+                "schema_web_site_url": "http:\/\/default\/",
+                "og_type": "article",
+                "twitter_cards_title": "| Vardoc",
+                "og_url": "http:\/\/default\/%3Cnone%3E",
+                "abstract": "Vardoc\u00a0is a Drupal 8 distribution that extends Varbase;\u00a0the powerful Drupal distribution for faster development,\u00a0with editor experience in mind.",
+                "generator": "Varbase",
+                "og_title": "| Vardoc",
+                "referrer": "origin",
+                "rights": "\u00a92018 Vardoc. All rights reserved.",
+                "og_description": "Vardoc\u00a0is a Drupal 8 distribution that extends Varbase;\u00a0the powerful Drupal distribution for faster development,\u00a0with editor experience in mind.",
+                "twitter_cards_page_url": "http:\/\/default\/%3Cnone%3E",
+                "schema_web_site_publisher": {
+                    "@type": "Organization",
+                    "name": "Vardoc",
+                    "url": "http:\/\/default\/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "http:\/\/default\/logo.png"
+                    }
+                },
+                "mobileoptimized": "width",
+                "handheldfriendly": "true",
+                "apple_mobile_web_app_capable": "yes"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/about-vardoc\/technical-documentation",
+            "pid": 97,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p dir=\"ltr\"><a href=\"https:\/\/www.drupal.org\/project\/vardoc\">Vardoc<\/a>&nbsp;is a <a href=\"https:\/\/www.drupal.org\/8\">Drupal 8<\/a> distribution that extends <a href=\"https:\/\/www.drupal.org\/project\/varbase\">Varbase<\/a>;&nbsp;the powerful Drupal distribution for faster development,&nbsp;with editor experience in mind.<\/p>\r\n\r\n<div class=\"bs-callout bs-callout-warning\">Visit Drupal.org for more information:&nbsp;<a href=\"http:\/\/www.drupal.org\/\" target=\"_blank\">http:\/\/www.drupal.org<\/a><br \/>\r\n<br \/>\r\nRead here about how Drupal 8's installation profile feature works:&nbsp;<a href=\"https:\/\/www.drupal.org\/docs\/8\/creating-distributions\" target=\"_blank\">https:\/\/www.drupal.org\/docs\/8\/creating-distributions<\/a><\/div>\r\n\r\n<p>The essence of <a href=\"https:\/\/www.drupal.org\/project\/varbase\">Varbase<\/a>&nbsp;lies within the basic concept that initiated it; <a href=\"https:\/\/www.wikiwand.com\/en\/Don't_repeat_yourself\">DRY (Don\u2019t Repeat Yourself)<\/a>. <a href=\"https:\/\/www.drupal.org\/project\/varbase\">Varbase<\/a> handles that for you, relieving you from repeating all the modules, features, configurations that are included in every Drupal project.<\/p>\r\n\r\n<p>&nbsp;<\/p>\r\n\r\n<p>The components that make up Vardoc are outlined in the Venn diagram below.<\/p>\r\n\r\n<drupal-entity alt=\"Vardoc Components Venn Diagram\" data-align=\"center\" data-caption=\"Vardoc Components Venn Diagram\" data-embed-button=\"media\" data-entity-embed-display=\"view_mode:media.original\" data-entity-type=\"media\" data-entity-uuid=\"45b8fcd4-d1a1-4ffe-8b0e-42843d786cb7\"><\/drupal-entity>\r\n\r\n<p>&nbsp;<\/p>\r\n\r\n<div class=\"alert alert-success\">To learn more about Varbase and Vardoc, and how to extend it,&nbsp;visit&nbsp;<a href=\"https:\/\/docs.varbase.vardot.com\/\">docs.varbase.vardot.com<\/a><\/div>\r\n",
+            "format": "full_html",
+            "summary": "",
+            "lang": "en"
+        }
+    ],
+    "field_comment": [
+        {
+            "status": 2,
+            "cid": 0,
+            "last_comment_timestamp": 1500892446,
+            "last_comment_name": null,
+            "last_comment_uid": 1,
+            "comment_count": 0
+        }
+    ],
+    "field_rating": [
+        {
+            "status": 1,
+            "value": null
+        }
+    ]
+}

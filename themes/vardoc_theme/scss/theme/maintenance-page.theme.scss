@@ -1,0 +1,17 @@
+// vardoc_theme Maintenance page custom style.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+
+/* Insert your vardoc_theme maintenance page custom SASS styling. */
+
+.maintenance-page {
+  footer {
+    .footer-credits {
+      font-size: 12px;
+    }
+  }
+}

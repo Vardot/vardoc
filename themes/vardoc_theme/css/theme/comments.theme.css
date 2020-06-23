@@ -1,0 +1,80 @@
+/* Insert your vardoc_theme comment custom SASS styling. */
+.comments-wrapper .comment-form__title {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.comments-wrapper .comment--type-native-comment {
+  width: 100%;
+}
+
+.comments-wrapper .comment--type-native-comment .field--name-field-username,
+.comments-wrapper .comment--type-native-comment .field--name-comment-user {
+  display: inline-block;
+}
+
+.comments-wrapper .comment--type-native-comment .field--name-comment-user {
+  float: left;
+  padding-right: 15px;
+}
+
+.comments-wrapper .comment--type-native-comment .field--name-comment-user img {
+  border-radius: 50%;
+}
+
+.comments-wrapper .comment--type-native-comment .field--name-comment-changed-date {
+  color: #636363;
+  font-size: 0.8125rem;
+}
+
+.comments-wrapper .comment--type-native-comment .field--name-field-comment {
+  color: #636363;
+  border-bottom: 1px solid #ced4da;
+  padding-bottom: 20px;
+}
+
+.comments-wrapper .comment-native-comment-form .form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.comments-wrapper .comment-native-comment-form .form-group label {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
+}
+
+.comments-wrapper .comment-native-comment-form .form-group:before {
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 10px;
+  left: 13px;
+  font-size: 1.125rem;
+  color: #adb5bd;
+}
+
+.comments-wrapper .comment-native-comment-form .form-group input {
+  padding-left: 35px;
+  margin-top: 0;
+  width: 50%;
+}
+
+@media (max-width: 767.98px) {
+  .comments-wrapper .comment-native-comment-form .form-group input {
+    width: 100%;
+  }
+}
+
+.comments-wrapper .comment-native-comment-form .form-group.js-form-type-textfield:before {
+  content: "\f007";
+}
+
+.comments-wrapper .comment-native-comment-form .form-group.js-form-type-email:before {
+  content: "\f0e0";
+  top: 11px;
+  left: 12px;
+}

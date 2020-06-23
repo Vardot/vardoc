@@ -1,0 +1,19 @@
+// Visual styles for table drag.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+ 
+tr.drag {
+  background-color: #fffff0;
+}
+
+tr.drag-previous {
+  background-color: #ffd;
+}
+
+body div.tabledrag-changed-warning {
+  margin-bottom: ($spacer / 2);
+}

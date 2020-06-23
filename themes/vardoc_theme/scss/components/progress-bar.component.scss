@@ -1,0 +1,25 @@
+// Progress bar styles.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+
+.progress-wrapper {
+  margin-bottom: $form-group-margin-bottom;
+
+  &:last-child .progress {
+    margin-bottom: 5px;
+  }
+
+  .message {
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  .progress-bar {
+    min-width: 2em;
+  }
+
+}

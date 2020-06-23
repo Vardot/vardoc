@@ -1,0 +1,17 @@
+// List group.
+// A list of links, grouped together.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+ 
+.list-group__link {
+  border-top: $border-width solid $border-color;
+  padding: $list-group-item-padding-y 0 0;
+}
+
+.list-group__description {
+  margin: 0 0 $list-group-item-padding-y;
+}

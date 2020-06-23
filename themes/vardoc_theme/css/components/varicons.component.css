@@ -1,0 +1,65 @@
+.varicon.varicon-refresh:before {
+  display: block;
+  content: ' ';
+  background-image: url("../../images/icons/refresh.svg");
+  -webkit-background-size: 28px 28px;
+          background-size: 28px 28px;
+  height: 28px;
+  width: 28px;
+}
+
+.varicon.varicon-spin:before {
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 4000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 4000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 4000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  -o-animation-name: spin;
+     animation-name: spin;
+  -o-animation-duration: 4000ms;
+     animation-duration: 4000ms;
+  -o-animation-iteration-count: infinite;
+     animation-iteration-count: infinite;
+  -o-animation-timing-function: linear;
+     animation-timing-function: linear;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes spin {
+  from {
+    -o-transform: rotate(0deg);
+       transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(360deg);
+       transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}

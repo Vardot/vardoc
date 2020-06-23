@@ -1,0 +1,151 @@
+// vardoc_theme content type styling.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+
+/* Insert your vardoc_theme content type custom SASS styling. */
+
+// Filters Style
+.views-exposed-form {
+  .form-row {
+    .js-form-item {
+      margin: 0 20px 30px 5px;
+      @include media-breakpoint-down(md) {
+      width: 100%;
+      margin: 0 5px 15px;
+    }
+    > label {
+      display: none;
+    }
+    input {
+      margin-top: 0;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+      &::placeholder {
+        color: $gray-600;
+        @include font-size(1rem);
+      }
+    }
+    .control-label {
+      display: none;
+    }
+    .SumoSelect {
+      > .CaptionCont {
+        label {
+          margin-bottom: 0;
+        }
+      }
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+      &.open {
+        > .CaptionCont {
+          box-shadow: 0 0 0 0.2rem rgba(33, 75, 255, 0.25);
+        }
+      }
+      .SelectBox {
+        border: 1px solid $input-border-color;
+        border-radius: 4px;
+        padding: 9px;
+        span {
+          &.placeholder {
+            font-style: normal;
+            color: $gray-600;
+            font-weight: normal;
+          }
+        }
+        i {
+          &::before {
+            content: none;
+          }
+        }
+      }
+      .optWrapper {
+        label {
+          margin: 8px 0;
+        }
+      }
+    }
+  }
+    }
+  .form-actions {
+    margin-left: 5px;
+    @include media-breakpoint-down(md) {
+      z-index: 1;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.view-lessons-learned,
+.view-sme,
+.view-template {
+  ul {
+    padding-inline-start: 20px;
+  }
+}
+
+.SumoSelect.open > .optWrapper {
+  z-index: 9;
+}
+
+.table-responsive {
+  box-shadow: $box-shadow;
+  .table {
+    margin-bottom: 0;
+  }
+}
+
+.pagination {
+  margin-top: 50px;
+  justify-content: center;
+}
+
+//Change Ajax loader
+.ajax-progress-fullscreen {
+  background-image: url('../../images/loader.svg');
+  background-color: transparent;
+  -webkit-background-size: 55px 55px;
+  background-size: 55px;
+  left: 48%;
+  width: 55px;
+  height: 55px;
+}
+
+.node--type-sme,
+.node--type-template,
+.node--type-project-lessons-learned {
+  &.node--view-mode-full {
+    .field {
+      margin-bottom: 20px;
+      .field__label {
+        font-weight: $font-weight-extra-bold;
+        &:after {
+          content: ' :';
+        }
+      }
+      .field__items {
+        display: inline-block;
+      }
+      &.field--name-field-person,
+      &.field--name-field-category {
+        .field__items {
+          .field__item {
+            &:after {
+              content: ',';
+            }
+            &:last-child {
+              &:after {
+                content: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+uuid: efcc1c07-3f92-4890-b7e8-479d2f7a1042
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - vardoc_theme
+_core:
+  default_config_hash: v7FxDmXnOAETxnHNFbA8Jhb7WMb7v9jhLRVhpFkQFM4
+id: vardoc_theme_help
+theme: vardoc_theme
+region: help
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

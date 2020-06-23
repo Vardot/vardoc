@@ -1,0 +1,14 @@
+uuid: 544bfc0f-814c-446e-81bf-3bf1914ea8fb
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: hxN7-oq_vQlE6lsOypn2nclrbdV9uLI1P-D9-29FLWw
+id: homepage
+label: Homepage
+description: ''
+use_admin_theme: false
+path: /node
+access_logic: and
+access_conditions: {  }
+parameters: {  }

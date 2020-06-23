@@ -1,0 +1,101 @@
+/*!
+
+=========================================================
+* Argon Design System - v1.1.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-design-system
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md)
+
+* Coded by www.creative-tim.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
+
+// Core
+
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/functions";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/functions";
+
+@import "../agron-variables";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/variables";
+
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/mixins";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/mixins";
+
+// Bootstrap components
+
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/root";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/reboot";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/type";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/images";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/code";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/grid";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/tables";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/forms";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/buttons";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/transitions";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/dropdown";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/button-group";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/input-group";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/custom-forms";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/nav";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/navbar";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/card";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/breadcrumb";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/pagination";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/badge";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/jumbotron";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/alert";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/progress";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/media";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/list-group";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/close";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/modal";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/tooltip";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/popover";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/carousel";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/utilities";
+@import "../../node_modules/argon-design-system-free/assets/scss/bootstrap/print";
+
+// Custom components
+
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/reboot.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/global.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/utilities.scss";
+
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/accordion.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/alert.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/avatar.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/badge.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/buttons.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/card.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/carousel.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/close.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/custom-forms.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/dropdown.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/footer.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/forms.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/grid.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/icons.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/input-group.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/list-group.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/modal.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/nav.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/navbar.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/pagination.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/popover.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/progress.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/section.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/separator.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/type.scss";
+
+// Vendor
+
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/vendor/bootstrap-datepicker.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/vendor/headroom.scss";
+@import "../../node_modules/argon-design-system-free/assets/scss/custom/vendor/nouislider.scss";

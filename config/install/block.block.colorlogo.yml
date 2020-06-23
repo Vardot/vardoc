@@ -1,0 +1,25 @@
+uuid: d0b18196-62d5-450b-87a4-26f33ac421f1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:123842d1-8e7f-4d7d-8107-f51b3f0abf1d'
+  module:
+    - block_content
+  theme:
+    - vardoc_theme
+id: colorlogo
+theme: vardoc_theme
+region: navigation
+weight: 0
+provider: null
+plugin: 'block_content:123842d1-8e7f-4d7d-8107-f51b3f0abf1d'
+settings:
+  id: 'block_content:123842d1-8e7f-4d7d-8107-f51b3f0abf1d'
+  label: 'color logo'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

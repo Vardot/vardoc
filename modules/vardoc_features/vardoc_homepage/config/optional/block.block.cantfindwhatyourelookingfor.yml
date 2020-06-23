@@ -1,0 +1,25 @@
+langcode: en
+status: false
+dependencies:
+  module:
+    - block_class
+  theme:
+    - vardoc_theme
+third_party_settings:
+  block_class:
+    classes: ''
+id: cantfindwhatyourelookingfor
+theme: vardoc_theme
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:3a8a60b0-9c42-4a69-bf27-c92f31b8b779'
+settings:
+  id: 'block_content:3a8a60b0-9c42-4a69-bf27-c92f31b8b779'
+  label: 'Can’t find what you’re looking for?'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

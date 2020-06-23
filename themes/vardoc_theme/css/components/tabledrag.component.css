@@ -1,0 +1,11 @@
+tr.drag {
+  background-color: #fffff0;
+}
+
+tr.drag-previous {
+  background-color: #ffd;
+}
+
+body div.tabledrag-changed-warning {
+  margin-bottom: 0.5rem;
+}

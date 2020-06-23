@@ -1,0 +1,37 @@
+// View Mode Inventory (VMI): Horizontal media teaser view mode.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+
+.horizontal-media-teaser-view-mode {
+  margin: $view-modes-padding 0 0 0;
+  padding: 0;
+
+  .right,
+  .left {
+    padding-left: 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .field--name-node-title {
+    h3 {
+      margin-top: 0;
+    }
+  }
+}
+
+[dir="rtl"] {
+  .horizontal-media-teaser-view-mode {
+    .right,
+    .left {
+      padding-left: $view-modes-padding;
+      padding-right: 0;
+    }
+  }
+}

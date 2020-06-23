@@ -1,0 +1,12 @@
+# ==============================================================================
+# List of extra varbase sub profile basic components, which they will be listed
+# in the extra components form, when we install varbase.
+# ==============================================================================
+config_bit:
+  type: list
+  for: /profiles/vardoc/vardoc.info.yml
+  when:
+    show_extra_components: true
+    list:
+      dependencies: { }
+      selected: { }

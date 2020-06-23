@@ -1,0 +1,33 @@
+// Footer Styling.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+ 
+.site-footer {
+  padding: $spacer 0;
+  .layout-container {
+      padding: 0 $spacer;
+  }
+}
+
+
+// Footer Top Styling.
+
+.site-footer__top .content {
+  margin-top: 0;
+}
+
+
+// Footer Bottom Styling.
+
+.site-footer__bottom .block {
+  margin: ($spacer / 2) 0;
+}
+
+.site-footer__bottom .content {
+  padding: ($spacer / 2) 0;
+  margin-top: 0;
+}

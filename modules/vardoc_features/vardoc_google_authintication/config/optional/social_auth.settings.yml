@@ -1,0 +1,14 @@
+auth:
+  social_auth_google:
+    route: social_auth_google.redirect_to_google
+    img_path: profiles/vardoc/themes/vardoc_theme/images/google_logo.svg
+post_login: /user
+redirect_user_form: true
+disable_admin_login: false
+disabled_roles:
+  editor: '0'
+  content_admin: '0'
+  seo_admin: '0'
+  site_admin: '0'
+  administrator: '0'
+user_allowed: register

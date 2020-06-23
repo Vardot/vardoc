@@ -1,0 +1,27 @@
+uuid: c0301a82-a237-4584-834d-5498358a0663
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - vardoc_theme
+_core:
+  default_config_hash: 2Z65CBDTIi0ZbNqpl7T5sGGIJcQYgeubxn2T4wtY8S0
+id: vardoc_theme_main_menu
+theme: vardoc_theme
+region: navigation_collapsible
+weight: -5
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }

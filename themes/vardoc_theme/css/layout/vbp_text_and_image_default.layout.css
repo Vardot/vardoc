@@ -1,0 +1,33 @@
+.paragraph--type--text-and-image .row {
+  margin-bottom: 0px !important;
+}
+
+.paragraph--type--text-and-image .wrapper {
+  padding: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  .paragraph--type--text-and-image .wrapper {
+    text-align: left;
+  }
+  .paragraph--type--text-and-image .bg-edge2edge .align2left.wrapper {
+    padding-left: 5rem;
+  }
+  .paragraph--type--text-and-image .bg-edge2edge .align2right.wrapper {
+    padding-right: 5rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  [dir="rtl"] .paragraph--type--text-and-image .wrapper {
+    text-align: right;
+  }
+  [dir="rtl"] .paragraph--type--text-and-image .bg-edge2edge .align2left.wrapper {
+    padding-left: 1rem;
+    padding-right: 5rem;
+  }
+  [dir="rtl"] .paragraph--type--text-and-image .bg-edge2edge .align2right.wrapper {
+    padding-right: 1rem;
+    padding-left: 5rem;
+  }
+}

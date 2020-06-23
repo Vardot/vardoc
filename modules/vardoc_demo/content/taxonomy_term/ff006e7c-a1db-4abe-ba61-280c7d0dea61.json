@@ -1,0 +1,92 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/taxonomy\/term\/3?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/category"
+        }
+    },
+    "tid": [
+        {
+            "value": 3
+        }
+    ],
+    "uuid": [
+        {
+            "value": "ff006e7c-a1db-4abe-ba61-280c7d0dea61"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "category"
+        }
+    ],
+    "name": [
+        {
+            "value": "Resources",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "changed": [
+        {
+            "value": "2017-07-22T08:13:29+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "schema_web_site_type": "WebSite",
+                "title": "Resources | Vardoc",
+                "canonical_url": "http:\/\/default\/%3Cnone%3E",
+                "twitter_cards_type": "summary",
+                "schema_web_site_name": "Vardoc",
+                "shortlink": "http:\/\/default\/%3Cnone%3E",
+                "og_site_name": "Vardoc",
+                "og_type": "website",
+                "twitter_cards_title": "| Vardoc",
+                "schema_web_site_url": "http:\/\/default\/",
+                "og_url": "http:\/\/default\/%3Cnone%3E",
+                "og_title": "| Vardoc",
+                "generator": "Varbase",
+                "referrer": "origin",
+                "rights": "\u00a92018 Vardoc. All rights reserved.",
+                "twitter_cards_page_url": "http:\/\/default\/%3Cnone%3E",
+                "twitter_cards_image": "http:\/\/default\/profiles\/vardoc\/themes\/vardoc_theme\/share-logo.png",
+                "og_image": "http:\/\/default\/profiles\/vardoc\/themes\/vardoc_theme\/share-logo.png",
+                "og_image_url": "http:\/\/default\/profiles\/vardoc\/themes\/vardoc_theme\/share-logo.png",
+                "schema_web_site_publisher": {
+                    "@type": "Organization",
+                    "name": "Vardoc",
+                    "url": "http:\/\/default\/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "http:\/\/default\/logo.png"
+                    }
+                },
+                "mobileoptimized": "width",
+                "handheldfriendly": "true",
+                "apple_mobile_web_app_capable": "yes"
+            }
+        }
+    ]
+}

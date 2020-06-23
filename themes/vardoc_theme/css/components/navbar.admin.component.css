@@ -1,0 +1,137 @@
+body.user-logged-in {
+  position: relative;
+}
+
+body.user-logged-in.navbar-is-fixed-bottom {
+  padding-bottom: 71px !important;
+}
+
+body.user-logged-in.navbar-is-fixed-bottom .navbar.fixed-bottom {
+  bottom: -25px;
+}
+
+body.user-logged-in.toolbar-fixed {
+  padding-top: 40px !important;
+}
+
+body.user-logged-in.toolbar-fixed .navbar.fixed-top, body.user-logged-in.toolbar-fixed .navbar.sticky-top {
+  top: 40px;
+}
+
+body.user-logged-in.toolbar-fixed.navbar-is-fixed-top {
+  padding-top: 136px !important;
+}
+
+body.user-logged-in.toolbar-fixed.navbar-is-fixed-bottom {
+  padding-top: 60px !important;
+}
+
+body.user-logged-in.toolbar-tray-open {
+  padding-top: 79px !important;
+}
+
+body.user-logged-in.toolbar-tray-open .navbar.fixed-top, body.user-logged-in.toolbar-tray-open .navbar.sticky-top {
+  top: 79px;
+}
+
+body.user-logged-in.toolbar-tray-open.navbar-is-fixed-top {
+  padding-top: 175px !important;
+}
+
+body.user-logged-in.toolbar-tray-open.navbar-is-fixed-bottom {
+  padding-top: 100px !important;
+}
+
+body.user-logged-in.toolbar-tray-open.toolbar-vertical {
+  padding-top: 40px !important;
+}
+
+body.user-logged-in.toolbar-tray-open.toolbar-vertical .navbar.fixed-top, body.user-logged-in.toolbar-tray-open.toolbar-vertical .navbar.sticky-top {
+  top: 40px;
+  margin-left: 241px;
+}
+
+body.user-logged-in.toolbar-tray-open.toolbar-vertical.navbar-is-fixed-top {
+  padding-top: 136px !important;
+}
+
+body.user-logged-in.toolbar-tray-open.toolbar-vertical.navbar-is-fixed-bottom {
+  padding-top: 60px !important;
+}
+
+body.user-logged-in.toolbar-tray-open.toolbar-vertical.navbar-is-fixed-bottom .navbar.fixed-bottom {
+  margin-left: 241px;
+}
+
+body.user-logged-in.admin-menu .navbar.fixed-top, body.user-logged-in.admin-menu .navbar.sticky-top {
+  top: 29px;
+}
+
+body.user-logged-in.admin-menu.navbar-is-fixed-top {
+  padding-top: 93px !important;
+}
+
+body.user-logged-in div#admin-toolbar {
+  z-index: 1600;
+}
+
+body.user-logged-in #toolbar, body.user-logged-in #admin-menu, body.user-logged-in #admin-toolbar {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body.user-logged-in #admin-menu {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  z-index: 1600;
+}
+
+body.user-logged-in #admin-menu .dropdown li {
+  line-height: normal;
+}
+
+body.user-logged-in.navbar-is-fixed-top .navbar.fixed-top,
+body.user-logged-in.navbar-is-fixed-top .navbar.sticky-top,
+body.user-logged-in.navbar-is-fixed-top .navbar.fixed-bottom {
+  z-index: 499;
+}
+
+body.user-logged-in.navbar-is-fixed-top#navbar-administration.navbar-horizontal.navbar-tray-open {
+  margin-top: 143px !important;
+}
+
+body.user-logged-in.navbar-is-fixed-top#navbar-administration.navbar-horizontal.navbar-tray-open .navbar-tray-open {
+  top: 79px;
+}
+
+body.user-logged-in.navbar-is-fixed-top#navbar-administration .navbar.fixed-top, body.user-logged-in.navbar-is-fixed-top#navbar-administration .navbar.sticky-top {
+  top: 39px;
+}
+
+body.user-logged-in #navbar-administration.navbar-oriented .navbar-bar {
+  z-index: 1032;
+}
+
+body.user-logged-in #navbar-administration.navbar-oriented .navbar-tray-vertical {
+  width: 24rem;
+}
+
+body.user-logged-in #navbar-administration .navbar-tray {
+  z-index: 1031;
+}
+
+body.user-logged-in.navbar-is-fixed-top#navbar-administration.navbar-vertical.navbar-tray-open .navbar.fixed-top, body.user-logged-in.navbar-is-fixed-top#navbar-administration.navbar-vertical.navbar-tray-open .navbar.sticky-top {
+  left: 240px;
+  left: 24rem;
+}
+
+[dir="rtl"] body.user-logged-in.toolbar-tray-open.toolbar-vertical .navbar.fixed-top, [dir="rtl"] body.user-logged-in.toolbar-tray-open.toolbar-vertical .navbar.sticky-top {
+  margin-left: 0px;
+  margin-right: 241px;
+}
+
+[dir="rtl"] body.user-logged-in.toolbar-tray-open.toolbar-vertical.navbar-is-fixed-bottom .navbar.fixed-bottom {
+  margin-left: 0px;
+  margin-right: 241px;
+}

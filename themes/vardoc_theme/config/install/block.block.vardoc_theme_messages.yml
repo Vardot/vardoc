@@ -1,0 +1,27 @@
+uuid: 652a53b2-969b-4dfd-b7bf-08d3fa4c7ba1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vardoc_theme
+_core:
+  default_config_hash: aNVrCj3CigefVc6oTzwYZirgZ-JjLw-Gg3ha2VQtkKo
+id: vardoc_theme_messages
+theme: vardoc_theme
+region: content_top
+weight: -4
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: ''
+    negate: true
+    context_mapping: {  }

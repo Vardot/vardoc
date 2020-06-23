@@ -1,0 +1,9 @@
+.book-navigation .menu {
+  border-top: 1px solid #636363;
+}
+
+.book-navigation .book-pager {
+  border-bottom: 1px solid #636363;
+  border-top: 1px solid #636363;
+  margin: 0;
+}

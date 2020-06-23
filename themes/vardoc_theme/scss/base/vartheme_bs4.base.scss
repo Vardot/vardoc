@@ -1,0 +1,639 @@
+// Varbase BS4 base from bootstrap library 
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+
+html {
+  &.overlay-open .navbar-fixed-top {
+    z-index: 400;
+  }
+  &.js {
+    // Collapsible fieldsets.
+    fieldset.collapsed {
+      border-left-width: 1px;
+      border-right-width: 1px;
+      height: auto;
+    }
+    // Throbbers.
+    input.form-autocomplete {
+      background-image: none;
+    }
+    // Autocomplete.
+    input.form-autocomplete {
+      background-image: none;
+    }
+    // Autocomplete (fallback throbber, no icon).
+    .autocomplete-throbber {
+      background-position: 100% 2px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      height: 15px;
+      margin: 2px 0 0 2px;
+      width: 15px;
+    }
+    .autocomplete-throbber.throbbing {
+      background-position: 100% -18px;
+    }
+  }
+}
+
+// Adjust z-index of core components.
+#overlay-container,
+.overlay-modal-background,
+.overlay-element {
+  z-index: 1500;
+}
+
+#toolbar {
+  z-index: 1600;
+}
+
+// Adjust z-index of bootstrap modals
+.modal {
+  z-index: 1620;
+}
+
+.modal-dialog {
+  z-index: 1630;
+}
+
+.ctools-modal-dialog .modal-body {
+  width: 100% !important;
+  overflow: auto;
+}
+
+.modal-backdrop {
+  z-index: 1610;
+}
+
+// Element invisible fix
+.element-invisible {
+  margin: 0;
+  padding: 0;
+  width: 1px;
+}
+
+// Navigation.
+ul.secondary {
+  float: left;
+}
+
+// Page header.
+.page-header {
+  margin-top: 0;
+}
+
+// Blocks
+.block {
+  &:first-child h2.block-title {
+    margin-top: 0;
+  }
+}
+
+// Paragraphs.
+p:last-child,
+.form-group:last-child,
+.panel:last-child {
+  margin-bottom: 0;
+}
+
+// Form elements.
+input,
+textarea,
+select,
+.uneditable-input {
+  max-width: 100%;
+  width: auto;
+}
+
+fieldset legend.panel-heading {
+  float: left;
+  line-height: 1em;
+  margin: 0;
+}
+
+fieldset .panel-body {
+  clear: both;
+  display: inherit;
+}
+
+fieldset .panel-heading a.panel-title {
+  color: inherit;
+  display: block;
+  margin: -10px -15px;
+  padding: 10px 15px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.form-group:last-child,
+.panel:last-child {
+  margin-bottom: 0;
+}
+
+.form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.form-actions{
+  clear: both;
+}
+
+.managed-files.table {
+  td:first-child {
+    width: 100%;
+  }
+}
+
+div.image-widget-data {
+  float: none;
+  overflow: hidden;
+}
+
+.text-format-wrapper {
+  // Use same value as .form-group.
+  margin-bottom: 15px;
+  > .form-type-textarea,
+  .filter-wrapper {
+    margin-bottom: 0;
+  }
+}
+
+.radio, .checkbox {
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.panel-heading {
+  display: block;
+}
+
+a.tabledrag-handle .handle {
+  height: auto;
+  width: auto;
+}
+
+// Lists.
+.nav-tabs {
+  margin-bottom: 10px;
+}
+
+ul li.collapsed,
+ul li.expanded,
+ul li.leaf {
+  list-style: none;
+  list-style-image: none;
+}
+
+.tabs--secondary {
+  margin: 0 0 10px;
+}
+
+// Submitted.
+.submitted {
+  margin-bottom: 1em;
+  font-style: italic;
+  font-weight: normal;
+  color: #777;
+}
+
+// Password strength/match.
+.form-type-password-confirm {
+  position: relative;
+
+  label {
+    display: block;
+
+    .label {
+      float: right;
+    }
+  }
+  .password-help {
+    padding-left: 2em;
+  }
+
+  .progress {
+    background: transparent;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    @include box-shadow(none);
+    height: 4px;
+    margin: -5px 0px 0;
+  }
+
+  .form-type-password {
+    clear: left;
+  }
+
+  .form-control-feedback {
+    right: 15px;
+  }
+
+  .help-block {
+    clear: both;
+  }
+}
+
+// Views AJAX pager.
+ul.pagination li > a {
+  &.progress-disabled {
+    float: left;
+  }
+}
+
+@-moz-keyframes adjust-hue {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes adjust-hue {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes adjust-hue {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+
+@-ms-keyframes adjust-hue {
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(359deg);
+  }
+}
+
+@keyframes adjust-hue {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+// Checkbox cell fix.
+th.checkbox,
+td.checkbox,
+th.radio,
+td.radio {
+  display: table-cell;
+}
+
+// Views UI fixes.
+.views-display-settings {
+  .label {
+    font-size: 100%;
+    color:#666666;
+  }
+
+  .footer {
+    padding:0;
+    margin:4px 0 0 0;
+  }
+}
+
+.views-exposed-form {
+  .views-exposed-widget {
+    .btn {
+      margin-top: 1.8em;
+    }
+  }
+}
+
+// Radio and checkbox in table fixes
+table {
+  .radio input[type="radio"],
+  .checkbox input[type="checkbox"] {
+    max-width: inherit;
+  }
+}
+
+// Exposed filters
+.form-horizontal .form-group label {
+  position: relative;
+  min-height: 1px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px;
+  padding-left:  ($grid-gutter-width / 2);
+  padding-right: ($grid-gutter-width / 2);
+  text-align: right;
+}
+
+// Override image module.
+div.image-style-new {
+  display: block;
+
+  div {
+    display: block;
+  }
+
+  div.input-group {
+    display: table;
+  }
+}
+
+td.module,
+.table-striped>tbody>tr:nth-child(odd)>td.module,
+.table>tbody>tr>td.module {
+  background: $table-border-color;
+  font-weight: 700;
+}
+
+// Book module.
+.book-toc > .dropdown-menu {
+  overflow: hidden;
+
+  > .dropdown-header {
+    white-space: nowrap;
+  }
+
+  > li:nth-child(1) > a {
+    font-weight: bold;
+  }
+
+  .dropdown-menu {
+    @include box-shadow(none);
+    border: 0;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: static;
+    width: 100%;
+
+    > li {
+      padding-left: 20px;
+
+      > a {
+        margin-left: -40px;
+        padding-left: 60px;
+      }
+    }
+  }
+}
+
+// Features module.
+#features-filter {
+  .form-item.form-type-checkbox {
+    padding-left: 20px;
+  }
+}
+
+fieldset.features-export-component {
+
+  .panel-heading {
+    padding: 5px 10px;
+    a.panel-title {
+      font-weight: 500;
+      margin: -5px -10px;
+      padding: 5px 10px;
+    }
+  }
+
+  .panel-body {
+    padding: 0 10px;
+  }
+}
+
+div.features-export-list {
+  margin: -11px 0 10px;
+  padding: 0 10px;
+}
+
+fieldset {
+  &.features-export-component {
+    .component-select {
+      .form-type-checkbox {
+        line-height: 1em;
+        margin: 5px 5px 5px 0 !important;
+        min-height: 0;
+        padding: 3px 3px 3px 25px !important;
+
+        input[type=checkbox] {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+div.features-export-list {
+  .form-type-checkbox {
+    line-height: 1em;
+    margin: 5px 5px 5px 0 !important;
+    min-height: 0;
+    padding: 3px 3px 3px 25px!important;
+
+    input[type=checkbox] {
+      margin-top: 0;
+    }
+  }
+}
+
+.region-navigation {
+  clear: both;
+}
+
+// Fix page title and tabs in the region header.
+.main-container {
+  .region {
+    &.region-header {
+      h1,
+      .h1 {
+        margin-top: 0;
+      }
+
+      .tabs {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+// Password policy.
+.form-type-password-confirm > * {
+  float: none;
+}
+
+// Bootstrap Overrides.
+.form-control.form-wrapper.form-group {
+  height: auto;
+}
+
+.navigation-top-wrapper {
+  padding-top: 15px;
+}
+
+// CKEditor Improvements.
+.cke_editable body {
+  background: white;
+}
+
+.cke_editable {
+  padding: 10px;
+}
+
+.field-collection-view {
+  padding: 0;
+  margin: 0;
+  border-bottom: 0 none;
+}
+.field-collection-container {
+  border-bottom: 0 none;
+}
+
+// Administration menu Overrides.
+#admin-menu-search {
+  float: right;
+  .form-control {
+    float: auto;
+  }
+}
+
+.form-textarea-wrapper textarea {
+  max-width: 100%;
+}
+
+// HTML elements setup.
+dt {
+  font-size: 120%;
+}
+
+dd{
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+img {
+ max-width: 100%;
+}
+
+// Overrides Panels & Content Modal.
+.ajax-progress-throbber {
+  background: transparent;
+  min-height: 0;
+  opacity: 1;
+  padding: 0;
+  width: auto;
+  vertical-align: baseline;
+}
+
+.modal-content .panels-add-content-modal {
+  background: white;
+  margin-left: 175px;
+  padding-left: 0;
+
+  .panels-modal-add-category {
+    margin-right: 5px;
+  }
+
+  .panels-section-column-body {
+    padding: 0 10px;
+  }
+}
+
+.maintenance-page {
+  #page {
+    text-align: center;
+  }
+}
+
+// Hide for anonymous users.
+.hidden-anonymous,
+.visible-admin,
+.visible-logged-in {
+  display: none !important;
+}
+
+// Show only for logged in users.
+body.user-logged-in {
+  .visible-admin,
+  .visible-logged-in,
+  .hidden-anonymous {
+    display: inline-block !important;
+  }
+
+  .btn {
+    .visible-admin,
+    .visible-logged-in, 
+    .hidden-anonymous {
+      display: inline-block !important;
+    }
+  }
+}
+
+body.path-frontpage {
+  h1.page-header {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+}
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #333333;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+// Fixed hidden tour list group as bootstrap base is forcing list group to flex.
+#tour {
+  &.hidden.list-group {
+    display: none;
+  }
+}
+
+// Fixed card deck and space under img card on IE.
+.card-deck {
+  display: block;
+}
+
+.card {
+  .card-top-image {
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+}
+ 
+select::-ms-expand {
+  display: none;
+}

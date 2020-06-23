@@ -1,0 +1,276 @@
+// Bootstrap RTL base
+// -----------------------------------------------------------------------------
+@import "../../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../../variables";                // vardoc_theme variables.
+@import "../../mixins";                   // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+
+$direction: 'rtl';
+$right: right;
+$left: left;
+
+body {
+  direction: rtl;
+  text-align: right;
+
+  .nav {
+    padding-right: 0;
+  }
+
+  .navbar-nav .nav-item {
+    float: right;
+  }
+
+  th {
+    text-align: right;
+  }
+
+  .alert-dismissible {
+    padding-left: 4rem;
+    padding-right: 1.25rem;
+  }
+
+  .dropdown-menu {
+    right: 0;
+    left: auto;
+    text-align: right;
+  }
+
+  .checkbox label {
+    padding-right: 1.25rem;
+    padding-left: inherit;
+  }
+
+  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-radius: 0 $border-radius $border-radius 0;
+  }
+
+  .btn-group > .btn:last-child:not(:first-child),
+  .btn-group > .dropdown-toggle:not(:first-child) {
+    border-radius: $border-radius 0 0 $border-radius;
+  }
+
+  .btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
+    border-radius: $border-radius 0 0 $border-radius;
+  }
+
+  .custom-control-label::after,
+  .custom-control-label::before {
+    right: -25px;
+    left: auto;
+  }
+
+  .custom-select {
+    padding: $custom-select-padding-y $custom-select-padding-x $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding);
+    background: $custom-select-bg $custom-select-indicator no-repeat left $custom-select-padding-x center;
+    background-size: $custom-select-bg-size;
+  }
+
+  .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+  .input-group > .input-group-append:last-child > .input-group-text:not(:last-child),
+  .input-group > .input-group-append:not(:last-child) > .btn,
+  .input-group > .input-group-append:not(:last-child) > .input-group-text,
+  .input-group > .input-group-prepend > .btn,
+  .input-group > .input-group-prepend > .input-group-text {
+    border-radius: 0 $border-radius $border-radius 0;
+  }
+
+  .input-group > .input-group-append > .btn,
+  .input-group > .input-group-append > .input-group-text,
+  .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
+  .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child),
+  .input-group > .input-group-prepend:not(:first-child) > .btn,
+  .input-group > .input-group-prepend:not(:first-child) > .input-group-text {
+    border-radius: $border-radius 0 0 $border-radius;
+  }
+
+  .input-group > .custom-select:not(:first-child),
+  .input-group > .form-control:not(:first-child) {
+    border-radius: $border-radius 0 0 $border-radius;
+  }
+
+  .input-group > .custom-select:not(:last-child),
+  .input-group > .form-control:not(:last-child) {
+    border-radius: 0 $border-radius $border-radius 0;
+  }
+
+  .input-group > .custom-select:not(:last-child):not(:first-child),
+  .input-group > .form-control:not(:last-child):not(:first-child) {
+    border-radius: 0;
+  }
+
+  .custom-control {
+    margin-left: 1rem;
+    padding-left: inherit;
+    margin-right: inherit;
+    padding-right: $custom-control-spacer-x;
+  }
+
+  .custom-control-indicator {
+    right: 0;
+    left: inherit;
+  }
+
+  .custom-file-label::after {
+    left: -1px;
+    right: initial;
+    border-radius: .25rem 0 0 .25rem;
+  }
+
+  .radio input,
+  .radio-inline,
+  .checkbox input,
+  .checkbox-inline input {
+    margin-right: -1.25rem;
+    margin-left: inherit;
+  }
+
+  .list-group {
+    padding-right: 0;
+    padding-left: $list-group-item-padding-x;
+  }
+
+  .close {
+    float: left;
+  }
+
+  .modal-header .close {
+    margin-top: - $grid-gutter-width;
+    margin-right: auto;
+    margin-left: - $grid-gutter-width;
+    margin-bottom: - $grid-gutter-width;
+  }
+
+  .modal-footer > :not(:first-child) {
+    margin-right: .25rem;
+  }
+
+  .alert-dismissible .close {
+    left: 0;
+    right: inherit;
+  }
+
+  .dropdown-toggle::after {
+    margin-left: 0;
+    margin-right: .255em;
+  }
+
+  .form-check-input {
+    margin-left: inherit;
+    margin-right: -1.25rem;
+  }
+
+  .form-check-label {
+    padding-right: 1.25rem;
+    padding-left: inherit;
+  }
+
+  .pagination .page-item:first-child .page-link {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+
+  .pagination .page-item:last-child .page-link {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+
+  .pagination-sm .page-item:first-child .page-link {
+    border-top-right-radius: $border-radius-sm;
+    border-bottom-right-radius: $border-radius-sm;
+  }
+
+  .pagination-sm .page-item:last-child .page-link {
+    border-top-left-radius: $border-radius-sm;
+    border-bottom-left-radius: $border-radius-sm;
+  }
+
+  .pagination-lg .page-item:first-child .page-link {
+    border-top-right-radius: $border-radius-lg;
+    border-bottom-right-radius: $border-radius-lg;
+  }
+
+  .pagination-lg .page-item:last-child .page-link {
+    border-top-left-radius: $border-radius-lg;
+    border-bottom-left-radius: $border-radius-lg;
+  }
+
+  .input-group > .custom-file:not(:last-child) .custom-file-label, .input-group > .custom-file:not(:last-child) .custom-file-label::after {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+
+  @mixin make-col-offset($size, $columns: $grid-columns) {
+    $num: $size / $columns;
+    margin-left: 0;
+    margin-right: if($num == 0, 0, percentage($num));
+  }
+
+  @mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+    @each $breakpoint in map-keys($breakpoints) {
+      $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+      @include media-breakpoint-up($breakpoint, $breakpoints) {
+        @for $i from 0 through ($columns - 1) {
+          @if not ($infix == "" and $i == 0) {
+            .offset#{$infix}-#{$i} {
+                @include make-col-offset($i, $columns);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @if $enable-grid-classes {
+    @include make-grid-columns();
+  }
+
+  // stylelint-disable declaration-no-important
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+      @each $size, $length in $spacers {
+        .mr#{$infix}-#{$size} {
+          margin-right: 0 !important;
+          margin-left: $length !important;
+        }
+        .ml#{$infix}-#{$size} {
+          margin-right: $length !important;
+          margin-left: 0 !important;
+        }
+      }
+
+      @each $size, $length in $spacers {
+        .pr#{$infix}-#{$size} {
+          padding-right: 0 !important;
+          padding-left: $length !important;
+        }
+        .pl#{$infix}-#{$size} {
+          padding-right: $length !important;
+          padding-left: 0 !important;
+        }
+      }
+      .mr#{$infix}-auto {
+        margin-right: 0 !important;
+        margin-left: auto !important;
+      }
+      .ml#{$infix}-auto {
+        margin-right: auto !important;
+        margin-left: 0 !important;
+      }
+      .mx#{$infix}-auto {
+        margin-right: auto !important;
+        margin-left: auto !important;
+      }
+    }
+  }
+}

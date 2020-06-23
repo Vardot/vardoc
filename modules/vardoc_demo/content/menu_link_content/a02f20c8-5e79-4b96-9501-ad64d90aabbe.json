@@ -1,0 +1,124 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/admin\/structure\/menu\/item\/8\/edit?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/menu_link_content\/menu_link_content"
+        }
+    },
+    "id": [
+        {
+            "value": 8
+        }
+    ],
+    "uuid": [
+        {
+            "value": "a02f20c8-5e79-4b96-9501-ad64d90aabbe"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "bundle": [
+        {
+            "value": "menu_link_content"
+        }
+    ],
+    "title": [
+        {
+            "value": "Home",
+            "lang": "en"
+        }
+    ],
+    "menu_name": [
+        {
+            "value": "main"
+        }
+    ],
+    "link": [
+        {
+            "uri": "internal:\/",
+            "title": "",
+            "options": []
+        }
+    ],
+    "external": [
+        {
+            "value": false
+        }
+    ],
+    "rediscover": [
+        {
+            "value": true
+        }
+    ],
+    "weight": [
+        {
+            "value": -50
+        }
+    ],
+    "expanded": [
+        {
+            "value": false
+        }
+    ],
+    "enabled": [
+        {
+            "value": true
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-01-17T13:34:48+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "schema_web_site_type": "WebSite",
+                "title": "| Vardoc",
+                "canonical_url": "http:\/\/default\/%3Cnone%3E",
+                "twitter_cards_type": "summary",
+                "og_site_name": "Vardoc",
+                "shortlink": "http:\/\/default\/%3Cnone%3E",
+                "schema_web_site_name": "Vardoc",
+                "schema_web_site_url": "http:\/\/default\/",
+                "og_type": "website",
+                "twitter_cards_title": "| Vardoc",
+                "og_url": "http:\/\/default\/%3Cnone%3E",
+                "og_title": "| Vardoc",
+                "generator": "Varbase",
+                "referrer": "origin",
+                "rights": "\u00a92018 Vardoc. All rights reserved.",
+                "twitter_cards_page_url": "http:\/\/default\/%3Cnone%3E",
+                "twitter_cards_image": "http:\/\/default\/profiles\/vardoc\/themes\/vardoc_theme\/share-logo.png",
+                "og_image": "http:\/\/default\/profiles\/vardoc\/themes\/vardoc_theme\/share-logo.png",
+                "og_image_url": "http:\/\/default\/profiles\/vardoc\/themes\/vardoc_theme\/share-logo.png",
+                "schema_web_site_publisher": {
+                    "@type": "Organization",
+                    "name": "Vardoc",
+                    "url": "http:\/\/default\/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "http:\/\/default\/logo.png"
+                    }
+                },
+                "mobileoptimized": "width",
+                "handheldfriendly": "true",
+                "apple_mobile_web_app_capable": "yes"
+            }
+        }
+    ]
+}

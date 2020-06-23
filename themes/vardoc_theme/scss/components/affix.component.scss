@@ -1,0 +1,15 @@
+// Styles for Bootstrap Barrio affix effect.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+
+.affix {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1035;
+  left: 0;
+}

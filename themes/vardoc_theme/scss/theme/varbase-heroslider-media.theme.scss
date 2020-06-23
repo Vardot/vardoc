@@ -1,0 +1,349 @@
+// Varbase Hero slider media style
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+.varbase-heroslider-media {
+  position: relative;
+  overflow: hidden;
+
+  .slick-slide {
+    .slide__caption {
+      position: absolute;
+      left: 0;
+      bottom: 20%;
+      top: auto;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      -webkit-transform: scale(.95);
+      transform: scale(.95);
+      -webkit-transition: opacity 1.25s cubic-bezier(.19,1,.22,1) 0s,-webkit-transform 0s cubic-bezier(.19,1,.22,1) 1.25s;
+      transition: opacity 1.25s cubic-bezier(.19,1,.22,1) 0s,-webkit-transform 0s cubic-bezier(.19,1,.22,1) 1.25s;
+      transition: transform 0s cubic-bezier(.19,1,.22,1) 1.25s,opacity 1.25s cubic-bezier(.19,1,.22,1) 0s;
+      transition: transform 0s cubic-bezier(.19,1,.22,1) 1.25s,opacity 1.25s cubic-bezier(.19,1,.22,1) 0s,-webkit-transform 0s cubic-bezier(.19,1,.22,1) 1.25s;
+    }
+
+    .img-responsive {
+      -webkit-transition: -webkit-transform 3s cubic-bezier(.19,1,.22,1) 0s;
+      transition: -webkit-transform 3s cubic-bezier(.19,1,.22,1) 0s;
+      transition: transform 3s cubic-bezier(.19,1,.22,1) 0s;
+      transition: transform 3s cubic-bezier(.19,1,.22,1) 0s,-webkit-transform 3s cubic-bezier(.19,1,.22,1) 0s;
+      -webkit-transform: scale(1.15);
+      transform: scale(1.15);
+    }
+
+    .unpublished {
+      padding: 0;
+      height: auto;
+    }
+  }
+
+  .slick-active {
+    .slide__caption {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      -webkit-transition: opacity 1.25s cubic-bezier(.19,1,.22,1) .5s,-webkit-transform 1.25s cubic-bezier(.19,1,.22,1) 0.5s;
+      transition: opacity 1.25s cubic-bezier(.19,1,.22,1) .5s,-webkit-transform 1.25s cubic-bezier(.19,1,.22,1) 0.5s;
+      transition: transform 1.25s cubic-bezier(.19,1,.22,1) .5s,opacity 1.25s cubic-bezier(.19,1,.22,1) 0.5s;
+      transition: transform 1.25s cubic-bezier(.19,1,.22,1) .5s,opacity 1.25s cubic-bezier(.19,1,.22,1) .5s,-webkit-transform 1.25s cubic-bezier(.19,1,.22,1) 0.5s;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+
+    .img-responsive {
+      -webkit-transition: -webkit-transform 3s cubic-bezier(.19,1,.22,1) 0s;
+      transition: -webkit-transform 3s cubic-bezier(.19,1,.22,1) 0s;
+      transition: transform 3s cubic-bezier(.19,1,.22,1) 0s;
+      transition: transform 3s cubic-bezier(.19,1,.22,1) 0s,-webkit-transform 3s cubic-bezier(.19,1,.22,1) 0s;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+
+  .slide__caption {
+    .slide__title {
+      a {
+        color: $hero-title-text-color;
+      }
+    }
+
+    .slick__text {
+      color: $hero-title-text-color;
+    }
+  }
+
+  .slick__arrow {
+    .slick-arrow::before {
+      color: $hero-title-text-color;
+      background-color: $hero-content-background-color2;
+      border-radius: 50%;
+    }
+
+    $top_max_value: $hero-max-height/2;
+
+    top: $hero-max-height;
+    transform: translateY(-$top_max_value);
+
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      $top_min_value: $hero-min-height-md/2;
+      top: $hero-min-height-md;
+      transform: translateY(-$top_min_value);
+    }
+
+  }
+
+  .slick-prev {
+    left: $hero-arrow-gutter;
+    right: auto;
+  }
+
+  .slick-next {
+    right: $hero-arrow-gutter;
+    left: auto;
+  }
+
+  .slide__link {
+    margin: 10px auto;
+
+    a {
+      color: $hero-title-text-color;
+    }
+  }
+
+  .node--type-varbase-heroslider-media {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    min-height: $hero-min-height;
+    max-height: $hero-max-height;
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      min-height: $hero-min-height-md;
+      max-height: $hero-max-height-md;
+    }
+
+    .hero-slide-content-wrapper {
+      position: absolute;
+      z-index: 9;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .hero-slide-content {
+      padding: $hero-container-v-padding;
+
+      .field--name-node-title {
+        h2,
+        h3 {
+          margin: 0;
+          padding: 0;
+          color: $hero-title-text-color;
+
+          @include font-size($hero-xlarge-title-font-size-xs);
+
+          @media screen and (min-width: map-get($grid-breakpoints, "sm")) {
+            @include font-size($hero-xlarge-title-font-size-sm);
+          }
+
+          @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+            @include font-size($hero-xlarge-title-font-size-md);
+          }
+
+          @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+            @include font-size($hero-xlarge-title-font-size-lg);
+          }
+
+          @media screen and (min-width: map-get($grid-breakpoints, "xl")) {
+            @include font-size($hero-xlarge-title-font-size-xl);
+          }
+        }
+      }
+
+      .field--name-field-brief {
+        margin-top: 1rem;
+        color: $hero-brief-text-color;
+      }
+
+      .field--name-field-link {
+        margin-top: 1rem;
+
+        a {
+          color: $hero-link-text-color;
+          text-decoration: none;
+
+          &:hover,
+          &:focus,
+          &:active {
+            opacity: $hero-content-hover-opacity;
+          }
+        }
+      }
+    }
+
+    .field--name-field-media-single {
+      overflow: hidden;
+
+      min-height: $hero-min-height;
+      max-height: $hero-max-height;
+      @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+        min-height: $hero-min-height-md;
+        max-height: $hero-max-height-md;
+      }
+
+      .contextual-region{
+        position: unset;
+      }
+
+      .varbase-video-player {
+        &.embed-responsive {
+          position: relative;
+          width: 100vw;
+          height: 130vh;
+          top: 50%;
+          left: 50%;
+          transform: translateY(-50%) translateX(-50%);
+          padding-bottom: 0;
+        }
+      }
+
+      .field--type-image {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 100%;
+      }
+
+      img {
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+
+      .media {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        img {
+          top: 0;
+          left: 0;
+          width: 100%;
+        }
+
+        video {
+          top: 0;
+          left: 0;
+          width: 100%;
+        }
+
+        iframe {
+          top: 0;
+          left: 0;
+          width: 100%;
+        }
+      }
+
+      /* 1. No object-fit support: */
+      @media (max-aspect-ratio: #{"16/9"}) {
+        .varbase-video-player {
+          &.embed-responsive {
+            position: relative;
+            width: 240vw;
+            height: 140vh;
+            top: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            padding-bottom: 0 !important;
+            left: 50%;
+          }
+        }
+      }
+      /* 2. If supporting object-fit, overriding (1): */
+     @supports (object-fit: cover) {
+        img {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+          @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+            position: unset;
+          }
+        }
+
+        .media {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+          img {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+              position: unset;
+            }
+          }
+
+          video {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          iframe {
+            position: absolute;
+            left: 0;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+[dir="rtl"] .varbase-heroslider-media {
+  .node--type-varbase-heroslider-media {
+    .field--name-field-media-single {
+      @media (max-aspect-ratio: #{"16/9"}) {
+        .varbase-video-player {
+          &.embed-responsive {
+            left: 0;
+            right: 0;
+            transform: translateY(-50%) translateX(0);
+          }
+        }
+      }
+    }
+  }
+
+  .slick-prev {
+    right: $hero-arrow-gutter;
+    left: auto;
+  }
+
+  .slick-next {
+    left: $hero-arrow-gutter;
+    right: auto;
+  }
+}

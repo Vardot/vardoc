@@ -1,0 +1,31 @@
+uuid: 0568b52d-7ba6-49da-a86e-3dcfef02798d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - block_class
+    - system
+  theme:
+    - vardoc_theme
+third_party_settings:
+  block_class:
+    classes: 'col-lg-6 col-xs-12'
+_core:
+  default_config_hash: hMCdwpxiCSds-uvlEsdGWbovyqZwUdFv-FczHPjyQvQ
+id: vardoc_theme_footer
+theme: vardoc_theme
+region: footer
+weight: -4
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Footer menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,83 @@
+// vardoc_theme footer styling.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+
+/* Insert your vardoc_theme footer custom SASS styling. */
+
+.footer-wrapper {
+  background-color: $navbar-light-border-color;
+  margin-top: 100px;
+  color: $black-100;
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .footer {
+    background-color: transparent;
+  }
+  .site-branding {
+    margin-bottom: 6px;
+    @include media-breakpoint-down(sm) {
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+  .region-footer {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.maintenance-page {
+  .footer {
+    background-color: transparent;
+  }
+}
+
+.menu--footer {
+  .navbar-nav {
+    flex-direction: row;
+    float: right;
+    @include media-breakpoint-down(sm) {
+      float: none;
+      justify-content: center;
+    }
+    .nav-item {
+      margin-right: 26px !important;
+      transition: 0.25s;
+      &:last-child {
+        margin-right: 0 !important;
+      }
+      .nav-link {
+        font-size: 16px !important;
+        color: $primary !important;
+        border-bottom: 0 !important;
+        &:before {
+          font-size: 0px;
+        }
+        &:hover {
+          &:before {
+            color: $secondary;
+          }
+        }
+      }
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+}
+
+#block-copyright {
+  float: right;
+  width: 50%;
+  @include media-breakpoint-down(sm) {
+    float: none;
+    width: 100%;
+  }
+}

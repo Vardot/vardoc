@@ -1,0 +1,57 @@
+// #############################################################################
+// Vartheme bs4 custom variables
+// #############################################################################
+// All needed custom Vartheme bs4 variables
+// You can change them in vardoc_theme in the vartheme_bs4-variables.sass
+//
+
+// View Mode Inventory (VMI).
+// -----------------------------------------------------------------------------
+$grid-gutter-width: 30px;
+$view-modes-padding: floor(($grid-gutter-width / 2));
+
+
+// Custom Varbase Hero slider media variables.
+// -----------------------------------------------------------------------------
+
+// Text color.
+$hero-title-text-color: #fff;
+$hero-brief-text-color: #fff;
+$hero-link-text-color: #fff;
+
+// Font sizes with responsive sizes.
+$hero-xlarge-title-font-size-xs: 3.3rem;
+$hero-xlarge-title-font-size-sm: 3.3rem;
+$hero-xlarge-title-font-size-md: 57px;
+$hero-xlarge-title-font-size-lg: 57px;
+$hero-xlarge-title-font-size-xl: 57px;
+
+// Hero content style.
+$hero-content-hover-opacity: 0.7;
+$hero-content-background-color1: rgb(0,0,0);
+$hero-content-background-color2: rgba(0,0,0,0.3);
+
+// Empty hero background color.
+$hero-empty-view-background: #e0e0e0;
+
+// Gutter for arrow of navigation.
+$hero-arrow-gutter: 10px;
+
+// Height for screen size and less.
+$hero-min-height: 300px;
+$hero-max-height: 300px;
+
+// For screen size sm and more.
+$hero-min-height-sm: 300px;
+$hero-max-height-sm: 300px;
+
+// For screen size md and more.
+$hero-min-height-md: 600px;
+$hero-max-height-md: 600px;
+
+$hero-container-v-padding: 60px;
+
+
+// Footer wrapper background color.
+// -----------------------------------------------------------------------------
+$footer-wrapper-bg: #f2f2f2;

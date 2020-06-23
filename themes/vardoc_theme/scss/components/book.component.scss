@@ -1,0 +1,17 @@
+// Bootstrap Barrio specific styling for the Book module.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+
+.book-navigation .menu {
+  border-top: 1px solid $border-color;
+}
+
+.book-navigation .book-pager {
+  border-bottom: 1px solid $border-color;
+  border-top: 1px solid $border-color;
+  margin: 0;
+}

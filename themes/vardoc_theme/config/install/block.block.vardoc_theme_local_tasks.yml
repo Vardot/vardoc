@@ -1,0 +1,22 @@
+uuid: 762fb43c-eeef-4569-95bb-0b1c56d3850e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - vardoc_theme
+_core:
+  default_config_hash: JCnmWIN3K4YZoW7kNlH4n5PlwHFO4XvA8SOTGMbdfso
+id: vardoc_theme_local_tasks
+theme: vardoc_theme
+region: content_top
+weight: -1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

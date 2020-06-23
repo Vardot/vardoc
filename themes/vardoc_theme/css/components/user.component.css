@@ -1,0 +1,78 @@
+.password-strength__meter {
+  margin-top: 0.5em;
+  background-color: #cad1d7;
+}
+
+.password-strength__indicator {
+  background-color: #28a745;
+  -webkit-transition: width 0.5s ease-out;
+  -o-transition: width 0.5s ease-out;
+  transition: width 0.5s ease-out;
+}
+
+.password-strength__indicator.is-weak {
+  background-color: #dc3545;
+}
+
+.password-strength__indicator.is-fair {
+  background-color: #ffc107;
+}
+
+.password-strength__indicator.is-good {
+  background-color: #17a2b8;
+}
+
+.password-strength__indicator.is-strong {
+  background-color: #28a745;
+}
+
+.password-confirm,
+.password-field,
+.password-strength,
+.password-confirm-match {
+  width: 55%;
+}
+
+.password-suggestions {
+  padding: 0.2em 0.5em;
+  margin: 0.7em 0;
+  max-width: 34.7em;
+  border: 1px solid #636363;
+}
+
+.password-suggestions ul {
+  margin-bottom: 0;
+}
+
+.confirm-parent,
+.password-parent {
+  clear: left;
+  /* LTR */
+  margin: 0;
+  max-width: 33em;
+  overflow: hidden;
+}
+
+[dir="rtl"] .confirm-parent,
+[dir="rtl"] .password-parent {
+  clear: right;
+}
+
+.password-confirm .ok {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.password-confirm .error {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.page-user-login main .region-content,
+.page-user-password main .region-content {
+  max-width: 400px;
+  background: white;
+  padding: 1rem 1rem;
+  margin: 0 auto;
+  border-radius: 0.3rem;
+}

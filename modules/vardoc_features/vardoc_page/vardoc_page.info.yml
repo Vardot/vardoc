@@ -1,0 +1,16 @@
+name: 'Vardoc Basic Page'
+description: 'Contains Vardoc Basic Page content type configurations.'
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+version: 8.x-2.6
+package: Vardoc
+dependencies:
+  - varbase_core:varbase_core
+  - varbase_media:varbase_media
+  - varbase_seo:varbase_seo
+  - vardoc:vardoc_book
+  - drupal:rdf
+  - drupal:menu_ui
+  - page_manager:page_manager
+  - pathauto:pathauto

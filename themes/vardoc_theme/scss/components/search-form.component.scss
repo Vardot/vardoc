@@ -1,0 +1,20 @@
+// The visual styles for Bootstrap Barrio's search form(s).
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+
+input[type="search"] {
+  box-sizing: border-box;
+}
+
+header #search-block-form {
+  padding: 5px 15px;
+  flex-flow: row wrap;
+}
+
+#search-block-form {
+  display: flex;
+}

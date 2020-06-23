@@ -1,0 +1,29 @@
+uuid: 95465be7-83f9-4d68-8486-4aff4ec40661
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - social_auth
+    - system
+  theme:
+    - vardoc_theme
+_core:
+  default_config_hash: c6aPQY8a98_54lipFmjIiZ34oOjHPR7PVPASo2OqbfM
+id: socialauthlogin
+theme: vardoc_theme
+region: content
+weight: 0
+provider: null
+plugin: social_auth_login
+settings:
+  id: social_auth_login
+  label: 'Google Login'
+  provider: social_auth
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /user/login
+    negate: false
+    context_mapping: {  }

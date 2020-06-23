@@ -1,0 +1,83 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tools.field_category
+    - field.field.node.tools.field_link
+    - field.field.node.tools.field_tool_icon
+    - image.style.vardot_tools
+    - node.type.tools
+  module:
+    - ds
+    - svg_image
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: tokens
+        link_custom: '[node:field_link:uri]'
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_tool_icon
+        - node_title
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h5
+          class: ''
+          link: false
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+id: node.tools.teaser
+targetEntityType: node
+bundle: tools
+mode: teaser
+content:
+  field_tool_icon:
+    type: image
+    weight: 0
+    region: ds_content
+    label: hidden
+    settings:
+      image_style: vardot_tools
+      image_link: ''
+      svg_render_as_image: true
+      svg_attributes:
+        width: null
+        height: null
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+hidden:
+  content_moderation_control: true
+  field_category: true
+  field_link: true
+  links: true
+  search_api_excerpt: true
+  sharethis: true

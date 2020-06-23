@@ -1,0 +1,22 @@
+// Vartheme (RTL) base, which Bootstrap (RTL) overrides.
+// -----------------------------------------------------------------------------
+@import "../../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../../variables";                // vardoc_theme variables.
+@import "../../mixins";                   // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+
+// Insert your Bootstrap (RTL) overrides for bootstrap-rtl library.
+
+// Justify content center.
+[dir="rtl"] .justify-content-center {
+  &.nav-pills > li + li {
+    margin-left: inherit;
+  }
+}
+
+@import url(//fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
+body {
+  font-family: 'Droid Arabic Kufi', sans-serif;
+}

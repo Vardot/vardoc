@@ -1,0 +1,17 @@
+// vardoc_theme Better Login styling (RTL).
+// -----------------------------------------------------------------------------
+@import "../../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../../variables";                // vardoc_theme variables.
+@import "../../mixins";                   // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+
+#auth-box {
+  .user-login-form {
+    text-align: right;
+
+    .option {
+      padding-right: 0;
+    }
+  }
+}

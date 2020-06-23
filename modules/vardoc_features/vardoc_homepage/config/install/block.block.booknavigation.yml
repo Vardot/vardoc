@@ -1,0 +1,35 @@
+uuid: af3ba09f-cde8-4d49-8213-74c26f610534
+langcode: en
+status: true
+dependencies:
+  module:
+    - book
+    - ctools
+    - system
+  theme:
+    - vardoc_theme
+id: booknavigation
+theme: vardoc_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: book_navigation
+settings:
+  id: book_navigation
+  label: 'Book navigation'
+  provider: book
+  label_display: '0'
+  block_mode: 'book pages'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      book: book
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

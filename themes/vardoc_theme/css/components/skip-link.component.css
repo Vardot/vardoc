@@ -1,0 +1,19 @@
+.skip-link {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+     transform: translateX(-50%);
+  z-index: 50;
+  background: #495057;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 1px 1rem 2px;
+  border-radius: 0 0 0.3rem 0.3rem;
+  border-bottom-width: 0;
+  outline: 0;
+}
+
+.skip-link.visually-hidden.focusable:focus {
+  position: absolute !important;
+  color: #fff;
+}

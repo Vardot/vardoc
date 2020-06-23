@@ -1,0 +1,41 @@
+{
+    "name": "vardoc_theme",
+    "private": true,
+    "version": "8.6.0",
+    "description": "Vartheme bootstrap 4 sub theme implementation",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "SASS",
+        "Bootstrap",
+        "Drupal",
+        "Varbase"
+    ],
+    "author": "Vardot",
+    "license": "GPL-2.0",
+    "dependencies": {
+        "argon-design-system-free": "^1.1.0",
+        "bootstrap": "^4.4.0",
+        "jquery": "^3.3.1",
+        "popper.js": "^1.14.3"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.24.7",
+        "del": "^3.0.0",
+        "gulp": "^4.0.0",
+        "gulp-sass": "^4.0.1",
+        "gulp-csscomb": "^3.1.0",
+        "gulp-autoprefixer": "^4.1.0",
+        "gulp-scss-lint": "^1.0.0",
+        "gulp-clean-css": "3.9.4",
+        "gulp-concat": "^2.6.1",
+        "gulp-html-replace": "^1.6.2",
+        "gulp-rename": "^1.2.2",
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp-postcss": "^8.0.0",
+        "gulp-uglify": "^3.0.0",
+        "merge-stream": "^1.0.1"
+    }
+}
