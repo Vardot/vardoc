@@ -1,0 +1,91 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.native_comment
+    - field.field.comment.native_comment.field_comment
+    - field.field.comment.native_comment.field_email
+    - field.field.comment.native_comment.field_username
+  module:
+    - ds
+    - smart_trim
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - field_username
+        - comment_user
+        - comment_changed_date
+        - field_comment
+    fields:
+      comment_user:
+        plugin_id: comment_user
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          entity_view_mode: compact
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+      comment_changed_date:
+        plugin_id: comment_changed_date
+        weight: 2
+        label: hidden
+        formatter: ds_post_date_short
+id: comment.native_comment.default
+targetEntityType: comment
+bundle: native_comment
+mode: default
+content:
+  field_comment:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: main
+  field_username:
+    type: smart_trim
+    weight: 0
+    region: main
+    label: hidden
+    settings:
+      trim_length: 600
+      trim_type: chars
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more_link: false
+      more_class: more-link
+      more_text: More
+      summary_handler: full
+      trim_options: {  }
+    third_party_settings: {  }
+hidden:
+  field_email: true
+  links: true
+  search_api_excerpt: true

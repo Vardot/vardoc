@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: tools
+label: Tools
+type: 'canonical_entities:node'
+pattern: 'tool/[node:title]'
+selection_criteria:
+  e632aaac-702e-4dc9-a8a5-bfc03af145a7:
+    id: node_type
+    bundles:
+      tools: tools
+    negate: false
+    context_mapping:
+      node: node
+    uuid: e632aaac-702e-4dc9-a8a5-bfc03af145a7
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,21 @@
+uuid: 2700fd12-82b8-486f-a3a0-b07d83fe4ce8
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+_core:
+  default_config_hash: AoTtVC9KN90-EgIIdTgZNCk4Aw6W7hr-mokUSiUA50g
+id: database_server
+name: 'Database server'
+description: 'Default database server for Book pages application.'
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  database_text: ''
+  min_chars: 3
+  partial_matches: true
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true
+  matching: words

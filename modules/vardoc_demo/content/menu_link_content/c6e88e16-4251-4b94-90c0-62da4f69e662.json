@@ -1,0 +1,177 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/admin\/structure\/menu\/item\/24\/edit?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/menu_link_content\/menu_link_content"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/menu_link_content\/menu_link_content\/revision_user": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 24
+        }
+    ],
+    "uuid": [
+        {
+            "value": "c6e88e16-4251-4b94-90c0-62da4f69e662"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 24
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "bundle": [
+        {
+            "value": "menu_link_content"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2020-05-26T12:12:03+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/menu_link_content\/menu_link_content\/revision_user": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "e64d222a-063e-43e6-b494-4ee775fb2027"
+                    }
+                ]
+            }
+        ]
+    },
+    "revision_log_message": [
+        {
+            "value": "Created new Custom menu link"
+        }
+    ],
+    "enabled": [
+        {
+            "value": true
+        }
+    ],
+    "title": [
+        {
+            "value": "Search",
+            "lang": "en"
+        }
+    ],
+    "menu_name": [
+        {
+            "value": "main"
+        }
+    ],
+    "link": [
+        {
+            "uri": "internal:#",
+            "title": "",
+            "options": {
+                "attributes": {
+                    "class": "ni ni-zoom-split-in",
+                    "data-toggle": "modal",
+                    "data-target": "#frameModalTop"
+                }
+            }
+        }
+    ],
+    "external": [
+        {
+            "value": false
+        }
+    ],
+    "rediscover": [
+        {
+            "value": true
+        }
+    ],
+    "weight": [
+        {
+            "value": -46
+        }
+    ],
+    "expanded": [
+        {
+            "value": false
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-05-26T12:18:28+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "schema_web_site_type": "WebSite",
+                "title": "| Vardot Knowledge Base",
+                "canonical_url": "http:\/\/default\/node",
+                "og_site_name": "Vardot Knowledge Base",
+                "shortlink": "http:\/\/default\/node",
+                "twitter_cards_type": "summary",
+                "schema_web_site_name": "Vardot Knowledge Base",
+                "twitter_cards_title": "| Vardot Knowledge Base",
+                "og_type": "website",
+                "schema_web_site_url": "http:\/\/default\/",
+                "google_plus_image_0": "http:\/\/default\/themes\/custom\/kb_bs4\/share-image.png",
+                "og_url": "http:\/\/default\/node",
+                "generator": "Varbase",
+                "og_title": "| Vardot Knowledge Base",
+                "rights": "\u00a92020 Vardot Knowledge Base. All rights reserved.",
+                "referrer": "origin",
+                "twitter_cards_page_url": "http:\/\/default\/node",
+                "twitter_cards_image": "http:\/\/default\/themes\/custom\/kb_bs4\/share-image.png",
+                "og_image_0": "http:\/\/default\/themes\/custom\/kb_bs4\/share-image.png",
+                "schema_web_site_publisher": {
+                    "@type": "Organization",
+                    "name": "Vardot Knowledge Base",
+                    "url": "http:\/\/default\/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "http:\/\/default\/themes\/custom\/kb_bs4\/logo.png"
+                    }
+                },
+                "og_image_url_0": "http:\/\/default\/themes\/custom\/kb_bs4\/share-image.png",
+                "mobileoptimized_0": "width",
+                "handheldfriendly_0": "true",
+                "apple_mobile_web_app_capable": "yes"
+            }
+        }
+    ]
+}

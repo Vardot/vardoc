@@ -1,0 +1,277 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/about-vardoc\/about-vardoc?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/book"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/field_category": [
+            {
+                "href": "http:\/\/default\/taxonomy\/term\/1?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/default\/taxonomy\/term\/3?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/field_documents": [
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2018-01\/Sample%20document_1.docx"
+            },
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2018-01\/Sample%20sheet_0.xlsx"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 1
+        }
+    ],
+    "uuid": [
+        {
+            "value": "ba9896a6-2cab-450c-858a-42fd1f3b76c3"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "book"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "3394832f-448b-4a78-a44a-d1d31ad7ab10"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "3394832f-448b-4a78-a44a-d1d31ad7ab10"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/field_category": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/taxonomy\/term\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/category"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "196ab93b-0559-49d3-85ba-ea6a44a07794"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/taxonomy\/term\/3?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/category"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "ff006e7c-a1db-4abe-ba61-280c7d0dea61"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/book\/field_documents": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2018-01\/Sample%20document_1.docx"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "dad35b69-855a-4f78-9548-689df5bbd1e5"
+                    }
+                ],
+                "display": "1",
+                "description": ""
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2018-01\/Sample%20sheet_0.xlsx"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "3b8d1b48-53fe-4f25-b121-a488db86139f"
+                    }
+                ],
+                "display": "1",
+                "description": ""
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "About Vardoc",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2017-07-24T10:12:32+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-01-17T13:28:32+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "schema_web_site_type": "WebSite",
+                "title": "About Vardoc | Vardoc",
+                "shortlink": "http:\/\/default\/%3Cnone%3E",
+                "og_site_name": "Vardoc",
+                "schema_web_site_name": "Vardoc",
+                "canonical_url": "http:\/\/default\/%3Cnone%3E",
+                "twitter_cards_type": "summary_large_image",
+                "description": "Introduction\n\nVardoc is a knowledge base system, a wiki system, and a documentation management system designed to host massive amount of content in a structured and easy-to-find format.Vardoc helps you build a connected organization, product, or knowledge area to allow everyone involved to find the answers they seek, and contribute their expertise in the knowledge base.",
+                "twitter_cards_description": "Introduction\n\nVardoc is a knowledge base system, a wiki system, and a documentation management system designed to host massive amount of content in a structured and easy-to-find format.Vardoc helps you build a connected organization, product, or knowledge area to allow everyone involved to find the answers they seek, and contribute their expertise in the knowledge base.",
+                "schema_web_site_url": "http:\/\/default\/",
+                "og_type": "article",
+                "twitter_cards_title": "| Vardoc",
+                "og_url": "http:\/\/default\/%3Cnone%3E",
+                "abstract": "Introduction\n\nVardoc is a knowledge base system, a wiki system, and a documentation management system designed to host massive amount of content in a structured and easy-to-find format.Vardoc helps you build a connected organization, product, or knowledge area to allow everyone involved to find the answers they seek, and contribute their expertise in the knowledge base.",
+                "generator": "Varbase",
+                "og_title": "| Vardoc",
+                "referrer": "origin",
+                "rights": "\u00a92018 Vardoc. All rights reserved.",
+                "og_description": "Introduction\n\nVardoc is a knowledge base system, a wiki system, and a documentation management system designed to host massive amount of content in a structured and easy-to-find format.Vardoc helps you build a connected organization, product, or knowledge area to allow everyone involved to find the answers they seek, and contribute their expertise in the knowledge base.",
+                "twitter_cards_page_url": "http:\/\/default\/%3Cnone%3E",
+                "schema_web_site_publisher": {
+                    "@type": "Organization",
+                    "name": "Vardoc",
+                    "url": "http:\/\/default\/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "http:\/\/default\/logo.png"
+                    }
+                },
+                "mobileoptimized": "width",
+                "handheldfriendly": "true",
+                "apple_mobile_web_app_capable": "yes"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/about-vardoc\/about-vardoc",
+            "pid": 99,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<h3>Introduction<\/h3>\r\n\r\n<p><a href=\"https:\/\/www.vardot.com\/vardoc\">Vardoc<\/a> is a knowledge base system, a wiki system, and a documentation management system designed to host massive amount of content in a structured and easy-to-find format.<br \/>\r\n<a href=\"https:\/\/www.vardot.com\/vardoc\">Vardoc<\/a> helps you build a connected organization, product, or knowledge area to allow everyone involved to find the answers they seek, and contribute their expertise in the knowledge base.<\/p>\r\n\r\n<blockquote>\r\n<p>Think of it as a wiki site of your product, user manuals, or organizational processes. With easy&nbsp;structure, collaborative tools,&nbsp;and friendly design.<\/p>\r\n<\/blockquote>\r\n\r\n<p>Built on top of <a href=\"https:\/\/www.vardot.com\/varbase\">Varbase<\/a>, the open source <a href=\"https:\/\/www.drupal.org\/8\">Drupal 8<\/a> distribution, <a href=\"https:\/\/www.vardot.com\/vardoc\">Vardoc<\/a> provides powerful functional features such as editorial features, search function, taxonomy, user management, and customizable themes. It also delivers top-notch non-functional requirements such as enterprise security, fast performance, search engine optimization (SEO), accessibility compliance, and many more features.<\/p>\r\n\r\n<p>Our goal is to bring ease to you when writing and creating a documentation for your product, website, departmental processes, online manuals, or your enterprise as whole.<\/p>\r\n\r\n<p>&nbsp;<\/p>\r\n\r\n<h3>Who can benefit from Vardoc?<\/h3>\r\n\r\n<ul>\r\n\t<li>Product documentation sites.<\/li>\r\n\t<li>Agencies who want to document software.<\/li>\r\n\t<li>Documentation for Open Source products\/projects.<\/li>\r\n\t<li>Organizations who want to document their processes.<\/li>\r\n\t<li>Online user manuals.<\/li>\r\n<\/ul>\r\n\r\n<p>&nbsp;<\/p>\r\n\r\n<h3>Credits<\/h3>\r\n\r\n<p><a href=\"https:\/\/www.vardot.com\/vardoc\">Vardoc<\/a> a product of <a href=\"https:\/\/www.vardot.com\/\">Vardot<\/a>, the enterprise Drupal solutions provider.<\/p>\r\n",
+            "format": "full_html",
+            "summary": "",
+            "lang": "en"
+        }
+    ],
+    "field_comment": [
+        {
+            "status": 2,
+            "cid": 0,
+            "last_comment_timestamp": 1501072979,
+            "last_comment_name": null,
+            "last_comment_uid": 1,
+            "comment_count": 0
+        }
+    ],
+    "field_rating": [
+        {
+            "status": 1,
+            "value": null
+        }
+    ]
+}

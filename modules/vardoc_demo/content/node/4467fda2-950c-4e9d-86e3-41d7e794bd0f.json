@@ -1,0 +1,179 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/node\/10?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/faq"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/faq\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/faq\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 10
+        }
+    ],
+    "uuid": [
+        {
+            "value": "4467fda2-950c-4e9d-86e3-41d7e794bd0f"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "faq"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/faq\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "a79b1dcd-d458-40be-8834-7f2f2b68ddaa"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/faq\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "a79b1dcd-d458-40be-8834-7f2f2b68ddaa"
+                    }
+                ],
+                "lang": "en"
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "How to Manage Content In Vardoc",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-01-31T10:01:51+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-01-31T10:02:59+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "schema_web_site_type": "WebSite",
+                "title": "Style Elements | Vardoc",
+                "shortlink": "http:\/\/default\/%3Cnone%3E",
+                "og_site_name": "Vardoc",
+                "schema_web_site_name": "Vardoc",
+                "canonical_url": "http:\/\/default\/%3Cnone%3E",
+                "twitter_cards_type": "summary_large_image",
+                "description": "H1 Heading\n\nPellentesque pellentesque eget tempor tellus. Fusce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. Fusce lacinia tempor malesuada.\n\n\u00a0\n\nH2 Heading\n\nPellentesque pellentesque usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. tellus eget tempor. Fusce lacinia tempor malesuada.\n\n\u00a0",
+                "twitter_cards_description": "H1 Heading\n\nPellentesque pellentesque eget tempor tellus. Fusce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. Fusce lacinia tempor malesuada.\n\n\u00a0\n\nH2 Heading\n\nPellentesque pellentesque usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. tellus eget tempor. Fusce lacinia tempor malesuada.\n\n\u00a0",
+                "schema_web_site_url": "http:\/\/default\/",
+                "og_type": "article",
+                "twitter_cards_title": "| Vardoc",
+                "og_url": "http:\/\/default\/%3Cnone%3E",
+                "abstract": "H1 Heading\n\nPellentesque pellentesque eget tempor tellus. Fusce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. Fusce lacinia tempor malesuada.\n\n\u00a0\n\nH2 Heading\n\nPellentesque pellentesque usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. tellus eget tempor. Fusce lacinia tempor malesuada.\n\n\u00a0",
+                "generator": "Varbase",
+                "og_title": "| Vardoc",
+                "referrer": "origin",
+                "rights": "\u00a92018 Vardoc. All rights reserved.",
+                "og_description": "H1 Heading\n\nPellentesque pellentesque eget tempor tellus. Fusce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. Fusce lacinia tempor malesuada.\n\n\u00a0\n\nH2 Heading\n\nPellentesque pellentesque usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. tellus eget tempor. Fusce lacinia tempor malesuada.\n\n\u00a0",
+                "twitter_cards_page_url": "http:\/\/default\/%3Cnone%3E",
+                "schema_web_site_publisher": {
+                    "@type": "Organization",
+                    "name": "Vardoc",
+                    "url": "http:\/\/default\/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "http:\/\/default\/logo.png"
+                    }
+                },
+                "mobileoptimized": "width",
+                "handheldfriendly": "true",
+                "apple_mobile_web_app_capable": "yes"
+            }
+        }
+    ],
+    "rh_action": [
+        {
+            "value": "bundle_default"
+        }
+    ],
+    "rh_redirect_response": [
+        {
+            "value": 301
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>Vardoc utilizes the powerful&nbsp;<a href=\"https:\/\/www.drupal.org\/docs\/8\/core\/modules\/book\/overview\" rel=\"noopener noreferrer\" target=\"_blank\">Book feature<\/a>&nbsp;to create&nbsp;hierarchical content that flows logically.<\/p>\r\n\r\n<p>A&nbsp;<em>book<\/em>&nbsp;is a set of pages tied together in a hierarchical sequence, perhaps with chapters, sections, subsections, and so on. You can use books for manuals, site resource guides, or whatever you'd like.<\/p>\r\n\r\n<p>When a visitor to a Vardoc site is viewing a book page, they will automatically see links at the bottom for navigating from the parent-page to the first child page, and from the previous page to the next page. A link labeled Up leads back to the parent page in the book structure.<\/p>\r\n\r\n<p>If the books on a Vardoc site&nbsp;are complex, you may find that you need additional navigational aids beyond the table of contents and the previous\/next\/up links for users to understand where they are in your book.<br \/>\r\nThat's where the navigational sidebar will have&nbsp;a menu that shows where the user is in your book; the menu is only visible when viewing the book.<\/p>\r\n",
+            "format": "full_html",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}

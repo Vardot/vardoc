@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: avatar
+label: 'Avatar (40x40)'
+effects:
+  41d0779e-1581-4b2b-818e-03e195489ef3:
+    uuid: 41d0779e-1581-4b2b-818e-03e195489ef3
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 40
+      height: 40
+      crop_type: focal_point

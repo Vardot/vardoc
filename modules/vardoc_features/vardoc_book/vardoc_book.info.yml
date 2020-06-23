@@ -1,0 +1,38 @@
+name: vardoc_book
+type: module
+core: 8.x
+dependencies:
+  - advanced_text_formatter
+  - block
+  - block_class
+  - block_content
+  - book
+  - comment
+  - content_moderation
+  - ctools
+  - ds
+  - entityqueue
+  - field
+  - field_group
+  - file
+  - flag
+  - focal_point
+  - image
+  - length_indicator
+  - link
+  - maxlength
+  - metatag
+  - node
+  - page_manager
+  - panels
+  - path
+  - smart_trim
+  - statistics
+  - sharethis
+  - system
+  - taxonomy
+  - text
+  - user
+  - views
+  - views_bootstrap
+  - votingapi_widgets

@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * @file
+ * Vardoc Profile customization.
+ */
+
+use Drupal\views\Views;
+use Drupal\Core\Url;
+use Drupal\Core\Link;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+
+/**
+ * Implements hook_theme().
+ */
+function vardoc_profile_theme($existing, $type, $theme, $path) {
+  return [
+    'vardoc_user_avatar_block' => [
+      'variables' => ['content' => NULL],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function vardoc_profile_link_alter(&$variables) {
+
+  /**
+   * The URL of the link.
+   *
+   * @var \Drupal\Core\Url
+   */
+  $url = $variables['url'];
+
+  if ($url->isRouted()) {
+    if ($url->getRouteName() == 'view.profile_content.page_latest' || $url->getRouteName() == 'view.profile_content.page_favorite') {
+      // Update the latest content menu link route parh.
+      $url->setRouteParameters(['user' => \Drupal::currentUser()->id()]);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function vardoc_profile_preprocess_block(&$variables) {
+  // Add notifications count to the user profile block.
+  if (isset($variables['elements']['#id']) && $variables['elements']['#id'] == 'views_block__profile_block_user') {
+    $view = Views::getView('profile_content');
+    $view->build('notifications');
+    $notifications_count = $view->query->query()->countQuery()->execute()->fetchField();
+    $url = Url::fromRoute('view.profile_content.page_latest', ['user' => \Drupal::currentUser()->id()]);
+    $variables['notifications_count'] = Link::fromTextAndUrl($notifications_count, $url)->toString();
+  }
+}
+
+/**
+ * Implements hook_local_tasks_alter().
+ */
+function vardoc_profile_local_tasks_alter(&$local_tasks) {
+  $local_tasks['entity.user.canonical']['title'] = new TranslatableMarkup('My account');
+  $local_tasks['entity.user.edit_form']['title'] = new TranslatableMarkup('Edit my profile');
+}

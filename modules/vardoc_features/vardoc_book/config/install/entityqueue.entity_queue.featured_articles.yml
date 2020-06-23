@@ -1,0 +1,27 @@
+uuid: 24b01047-9193-4a2d-acc7-498b2b635b82
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Dh8kUjnRIFg0oW6mqou00oXQa4ddBbIDBuC5CuhFqd8
+id: featured_articles
+label: Homepage-MIA
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      book: book
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 0
+  max_size: 10
+  act_as_queue: false
+  reverse_in_admin: false

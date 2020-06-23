@@ -1,0 +1,21 @@
+name: Tools
+type: module
+core: 8.x
+dependencies:
+  - ds
+  - entityqueue
+  - field
+  - field_group
+  - file
+  - image
+  - link
+  - menu_ui
+  - node
+  - path
+  - pathauto
+  - rabbit_hole
+  - svg_image
+  - taxonomy
+  - user
+  - views
+  - views_bootstrap

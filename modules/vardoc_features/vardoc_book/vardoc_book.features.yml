@@ -1,0 +1,4 @@
+excluded:
+  - block.block.views_block__profile_block_user
+  - metatag.metatag_defaults.node__page
+required: true

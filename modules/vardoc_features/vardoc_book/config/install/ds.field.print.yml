@@ -1,0 +1,13 @@
+id: print
+label: Print
+ui_limit: ''
+properties:
+  content:
+    value: "<div class=\"print-page\">\r\n  <a title=\"Print\" href=\"javascript:window.print()\">Print</a>\r\n</div>"
+    format: code_html
+type: token
+type_label: 'Token field'
+entities:
+  node: node
+_core:
+  default_config_hash: ubw0cXBxkUW1Bfxogf60XpK61tpMH49am01HVTg4-W8

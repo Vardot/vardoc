@@ -1,0 +1,13 @@
+name: 'Vardoc Demo Content'
+description: 'Demo content feature for Vardoc.'
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+version: 8.x-2.6
+package: Vardoc
+project: vardoc
+dependencies:
+  - drupal:hal
+  - default_content:default_content
+  - better_normalizers:better_normalizers
+  - vardoc:vardoc_homepage

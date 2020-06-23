@@ -1,0 +1,93 @@
+uuid: 5cf41120-00e4-41e0-854d-10b61d18741c
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.homepage
+    - views.view.book
+    - views.view.book_quicklinks
+    - views.view.tools
+  content:
+    - 'block_content:basic:450ff25d-2986-4594-b962-e47994447126'
+  module:
+    - block_content
+    - panels
+    - views
+_core:
+  default_config_hash: fw0mrRWfLkoebYmW504f38eXO7KAyGz4URIPT1fh_EE
+id: homepage-panels_variant-0
+label: Homepage
+variant: panels_variant
+variant_settings:
+  blocks:
+    55f8a569-0bee-4aaa-8c96-cfc154f9fb4f:
+      id: 'views_block:book-block_books_level_1'
+      label: 'Main Sections'
+      provider: views
+      label_display: visible
+      views_label: 'Main Sections'
+      items_per_page: none
+      region: top
+      weight: 1
+      context_mapping: {  }
+      uuid: 55f8a569-0bee-4aaa-8c96-cfc154f9fb4f
+    2c11bda5-369d-4b50-adb9-a6aec4c39a62:
+      id: 'views_block:book_quicklinks-most_important_articles'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: left
+      weight: 1
+      uuid: 2c11bda5-369d-4b50-adb9-a6aec4c39a62
+      context_mapping: {  }
+    06e632c9-ab2f-47e2-8b26-3d28dcacba69:
+      id: 'views_block:book_quicklinks-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: right
+      weight: 1
+      uuid: 06e632c9-ab2f-47e2-8b26-3d28dcacba69
+      context_mapping: {  }
+    ba9ce52c-fe94-4f43-8df8-dd3c75b4c474:
+      id: 'block_content:450ff25d-2986-4594-b962-e47994447126'
+      label: 'Can’t find what you’re looking for?'
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      context_mapping: {  }
+      region: bottom
+      uuid: ba9ce52c-fe94-4f43-8df8-dd3c75b4c474
+      weight: 1
+    1c79110d-64d2-4af3-ad53-f0d984907bef:
+      id: 'views_block:tools-block_most_used_tools'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: top
+      uuid: 1c79110d-64d2-4af3-ad53-f0d984907bef
+      weight: 2
+  id: panels_variant
+  uuid: d61dddde-a5ea-42e0-841f-f5468212c9c8
+  label: null
+  weight: 0
+  layout: bs_2col_stacked
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: homepage-panels_variant-0
+  builder: ipe
+page: homepage
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

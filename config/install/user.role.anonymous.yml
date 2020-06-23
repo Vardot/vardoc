@@ -1,0 +1,28 @@
+uuid: 872d4ee1-5ccc-452f-be17-230920f0db4a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wFz5TdDTf1PMze39L3X-QqD6KKx4K2RToI-aV8RAkwg
+id: anonymous
+label: 'Anonymous user'
+weight: -10
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access user profiles'
+  - 'edit own vote on node:book:field_rating'
+  - 'post comments'
+  - 'search content'
+  - 'use search_api_autocomplete for book_search'
+  - 'view media'
+  - 'view post access counter'
+  - 'view terms in lesson_learning_topic'
+  - 'view terms in project'
+  - 'view terms in section'
+  - 'view terms in sme_category_'
+  - 'view terms in tools'
+  - 'view terms in topic'
+  - 'view terms in vardot_tools'
+  - 'vote on node:book:field_rating'

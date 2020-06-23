@@ -1,0 +1,6 @@
+services:
+  vardoc_demo.event_subscriber:
+    class: Drupal\vardoc_demo\EventSubscriber\VardocDemoEventSubscriber
+    arguments: ['@book.manager']
+    tags:
+      - { name: event_subscriber }

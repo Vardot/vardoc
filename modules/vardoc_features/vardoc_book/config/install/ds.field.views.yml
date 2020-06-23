@@ -1,0 +1,20 @@
+id: views
+label: Views
+ui_limit: ''
+properties:
+  block: 'views_block:content_statistics-content_statistics'
+  use_block_title: false
+  config:
+    id: 'views_block:content_statistics-content_statistics'
+    label: ''
+    provider: views
+    label_display: visible
+    views_label: ''
+    items_per_page: none
+    context_mapping: {  }
+type: block
+type_label: 'Block field'
+entities:
+  node: node
+_core:
+  default_config_hash: xtOpjW7WYmSovB8SHD3UvMsdl5GD7BJyqWZD14LeKmc

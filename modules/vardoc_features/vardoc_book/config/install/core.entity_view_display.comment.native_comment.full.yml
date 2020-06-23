@@ -1,0 +1,66 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - comment.type.native_comment
+    - core.entity_view_mode.comment.full
+    - field.field.comment.native_comment.field_comment
+    - field.field.comment.native_comment.field_email
+    - field.field.comment.native_comment.field_username
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - field_username
+        - field_email
+        - field_comment
+id: comment.native_comment.full
+targetEntityType: comment
+bundle: native_comment
+mode: full
+content:
+  field_comment:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: main
+  field_email:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: main
+  field_username:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: main
+hidden:
+  links: true

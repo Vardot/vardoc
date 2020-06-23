@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Category
+vid: category
+description: 'Used to group books in categories.'
+weight: 0
