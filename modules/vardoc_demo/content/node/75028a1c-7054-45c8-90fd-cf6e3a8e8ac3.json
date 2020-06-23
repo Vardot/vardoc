@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/tool\/vardot-slack?_format=hal_json"
+            "href": "http:\/\/default\/tool\/slack?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/node\/tools"
@@ -230,7 +230,7 @@
                         "value": "f718ca96-3c14-46e6-afe1-52a61ebcdce1"
                     }
                 ],
-                "alt": "Vardot Slack",
+                "alt": "Slack",
                 "title": "",
                 "width": "144",
                 "height": "144"
@@ -250,7 +250,7 @@
     ],
     "title": [
         {
-            "value": "Vardot Slack",
+            "value": "Slack",
             "lang": "en"
         }
     ],
@@ -296,24 +296,24 @@
         {
             "value": {
                 "schema_web_site_type": "WebSite",
-                "title": "Vardot Slack | Vardot Knowledge Base",
+                "title": "Slack | Vardoc Knowledge Base",
                 "twitter_cards_type": "summary_large_image",
-                "schema_web_site_name": "Vardot Knowledge Base",
+                "schema_web_site_name": "Vardoc Knowledge Base",
                 "canonical_url": "http:\/\/default\/node",
-                "og_site_name": "Vardot Knowledge Base",
+                "og_site_name": "Vardoc Knowledge Base",
                 "shortlink": "http:\/\/default\/node",
                 "schema_web_site_url": "http:\/\/default\/",
                 "og_type": "article",
-                "twitter_cards_title": "| Vardot Knowledge Base",
+                "twitter_cards_title": "| Vardoc Knowledge Base",
                 "og_url": "http:\/\/default\/node",
-                "og_title": "| Vardot Knowledge Base",
+                "og_title": "| Vardoc Knowledge Base",
                 "generator": "Varbase",
                 "referrer": "origin",
-                "rights": "\u00a92020 Vardot Knowledge Base. All rights reserved.",
+                "rights": "\u00a92020 Vardoc Knowledge Base. All rights reserved.",
                 "twitter_cards_page_url": "http:\/\/default\/node",
                 "schema_web_site_publisher": {
                     "@type": "Organization",
-                    "name": "Vardot Knowledge Base",
+                    "name": "Vardoc Knowledge Base",
                     "url": "http:\/\/default\/",
                     "logo": {
                         "@type": "ImageObject",
@@ -328,7 +328,7 @@
     ],
     "path": [
         {
-            "alias": "\/tool\/vardot-slack",
+            "alias": "\/tool\/slack",
             "pid": 980,
             "langcode": "en",
             "lang": "en"
