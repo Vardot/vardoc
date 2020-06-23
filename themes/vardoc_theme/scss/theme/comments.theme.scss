@@ -1,0 +1,85 @@
+// vardoc_theme comment styling.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+
+/* Insert your vardoc_theme comment custom SASS styling. */
+
+//Comment style
+.comments-wrapper {
+  .comment-form__title {
+    @include font-size(1rem);
+    margin-bottom: 15px;
+    font-weight: $font-weight-base;
+  }
+
+  .comment--type-native-comment {
+    width: 100%;
+    .field--name-field-username,
+    .field--name-comment-user {
+      display: inline-block;
+    }
+    .field--name-comment-user {
+      float: left;
+      padding-right: 15px;
+      img {
+        border-radius: 50%;
+      }
+    }
+    .field--name-comment-changed-date {
+      color: $gray-dark;
+      @include font-size(0.8125rem);
+    }
+    .field--name-field-comment {
+      color: $gray-dark;
+      border-bottom: 1px solid $input-border-color;
+      padding-bottom: 20px;
+    }
+  }
+
+  .comment-native-comment-form {
+    .form-group {
+      margin-bottom: 20px;
+      position: relative;
+      label {
+        position: absolute !important;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+        width: 1px;
+        height: 1px;
+        word-wrap: normal;
+      }
+      &:before {
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        top: 10px;
+        left: 13px;
+        @include font-size(1.125rem);
+        color: $gray-500;
+      }
+      input {
+        padding-left: 35px;
+        margin-top: 0;
+        width: 50%;
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+        }
+      }
+      &.js-form-type-textfield {
+        &:before {
+          content: "\f007";
+        }
+      }
+      &.js-form-type-email {
+        &:before {
+          content: "\f0e0";
+          top: 11px;
+          left: 12px;
+        }
+      }
+    }
+  }
+}

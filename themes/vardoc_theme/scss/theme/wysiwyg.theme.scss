@@ -1,0 +1,66 @@
+// vardoc_theme WYSIWYG styling.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+
+/* Insert your vardoc_theme WYSIWYG custom SASS styling. */
+
+.node--view-mode-full,
+ body {
+  &.cke_editable,
+  .field--name-body {
+    ul {
+      list-style-type: none;
+      li {
+        &:before {
+          content: "\2022";
+          color: $primary;
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+          @include font-size(1.125rem);
+        }
+        a {
+          display: block;
+        }
+        ul {
+          margin-left: 0;
+          padding-left: 20px;
+          li {
+            &:before {
+              content: "\26AC";
+              font-weight: $font-weight-normal;
+            }
+          }
+        }
+      }
+    }
+    ol {
+      a {
+        display: block;
+      }
+    }
+    .quote {
+      @include font-size(1.25rem);
+      font-style: italic;
+    }
+    a {
+      display: inline-block;
+      word-wrap: break-word;
+    }
+  }
+}
+
+.text-with-bg {
+  display: block;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.cke_editable {
+  font-family: $font-family-base;
+}

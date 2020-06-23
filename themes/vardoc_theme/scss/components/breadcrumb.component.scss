@@ -1,0 +1,16 @@
+// Styles for Bootstrap Barrio's breadcrumbs.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+
+.breadcrumb {
+  @include font-size($font-size-sm);
+}
+
+.region-breadcrumb {
+  padding: 0 15px 0.25em;
+  width: 100%;
+}

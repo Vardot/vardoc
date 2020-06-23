@@ -1,0 +1,31 @@
+.js-form-managed-file {
+  position: relative;
+}
+
+.js-form-managed-file input[type='file'] + .varicon {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  -webkit-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.throbber-added {
+  position: relative;
+  padding-right: 50px;
+  position: relative;
+}
+
+.btn .ajax-throbber {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.btn .ajax-throbber::before {
+  background-image: url("../../images/icons/refresh-white.svg") !important;
+}

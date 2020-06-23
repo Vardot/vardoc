@@ -1,0 +1,22 @@
+uuid: c1576de6-6564-46e6-8d6f-104130e0b412
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vardoc_theme
+_core:
+  default_config_hash: Liv9Ts0gWFynNZo65urdgq-NIarsXGPZ8cJnJ9g_q_o
+id: vardoc_theme_content
+theme: vardoc_theme
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

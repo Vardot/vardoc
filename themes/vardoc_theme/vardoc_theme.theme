@@ -1,0 +1,249 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+use Drupal\node\NodeInterface;
+use Drupal\node\Entity\Node;
+use Drupal\file\Entity\File;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\views_bootstrap\ViewsBootstrap;
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function vardoc_theme_theme_registry_alter(&$theme_registry) {
+  // vardoc_theme path.
+  $vardoc_theme_path = Drupal::service('theme_handler')->getTheme('vardoc_theme')->getPath();
+  $theme_registry['entity_embed_container']['path'] = $vardoc_theme_path . '/templates/entity-embed';
+
+  $pages = [
+    'page__user__login' => 'page--user--login',
+    'page__user__register' => 'page--user--register',
+    'page__user__password' => 'page--user--password',
+    'page__user__reset' => 'page--user--reset',
+  ];
+
+  foreach ($pages as $key => $template) {
+    $theme_registry[$key]['path'] = $vardoc_theme_path . '/templates/betterlogin';
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function vardoc_theme_form_views_exposed_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  switch ($form['#id']) {
+    case 'views-exposed-form-book-search-page-search':
+      // Setting placeholder for search form.
+      $form['keywords']['#attributes']['placeholder'] = t('Search');
+      break;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function vardoc_theme_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    if (is_numeric($node)) {
+      $node = Node::load($node);
+    }
+    if ($node instanceof NodeInterface) {
+      array_splice($suggestions, 1, 0, 'page__' . $node->bundle());
+    }
+  }
+}
+
+/**
+ *
+ */
+function vardoc_theme_preprocess_html(&$variables) {
+  // Add information about the number of sidebars.
+  if (theme_get_setting('bootstrap_barrio_navbar_position')) {
+    $variables['navbar_position'] = theme_get_setting('bootstrap_barrio_navbar_position');
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function vardoc_theme_preprocess_page(&$variables) {
+  // Add the pring logo.
+  $variables['logo_print'] = \Drupal::request()->getBaseUrl() . '/' . drupal_get_path('theme', 'vardoc_theme') . '/logo-print.png';
+
+  // Add the site name and slogan.
+  $variables['site_name'] = \Drupal::config('system.site')->get('name');
+  $variables['site_slogan'] = \Drupal::config('system.site')->get('slogan');
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function vardoc_theme_preprocess_paragraph(&$variables) {
+  $file_path = NULL;
+  if (isset($variables['paragraph']->bp_image_field)
+    && isset($variables['paragraph']->bp_image_field->target_id)) {
+
+    // Get the target id and build the url.
+    $paragraph = &$variables['paragraph'];
+    if (isset($paragraph->get('bp_image_field')->entity)
+      && isset($paragraph->get('bp_image_field')->entity->field_media_image)
+      && isset($paragraph->get('bp_image_field')->entity->field_media_image->target_id)) {
+
+      $target_id = $paragraph->get('bp_image_field')->entity->field_media_image->target_id;
+      $file = File::load($target_id);
+      if (isset($file)) {
+        $file_uri = $file->getFileUri();
+        $style = ImageStyle::load('de2e');
+        $file_path = $style->buildUrl($file_uri);
+      }
+    }
+  }
+
+  $width_value = NULL;
+  if (isset($variables['paragraph']->bp_width)
+    && isset($variables['paragraph']->bp_width->value)) {
+
+    $width_value = $variables['paragraph']->bp_width->value;
+  }
+
+  $width_map = [
+    'paragraph--width--tiny' => 'col-md-4 offset-md-4 col-sm-8 offset-sm-2',
+    'paragraph--width--narrow' => 'col-md-6 offset-md-3 col-sm-10 offset-sm-1',
+    'paragraph--width--medium' => 'col-md-8 offset-md-2',
+    'paragraph--width--wide' => 'col-md-10 offset-md-1',
+    'paragraph--width--full' => 'col-12',
+    'bg-edge2edge' => 'bg-edge2edge col-12',
+  ];
+
+  $width = 'col-12';
+  if (isset($width_map[$width_value])) {
+    $width = $width_map[$width_value];
+  }
+
+  $custom_paragraph_classes_value = NULL;
+  if (isset($variables['paragraph']->bp_classes)
+      && isset($variables['paragraph']->bp_classes->value)) {
+    $custom_paragraph_classes_value = $variables['paragraph']->bp_classes->value;
+  }
+
+  $gutter_value = FALSE;
+  if (isset($variables['paragraph']->bp_gutter)
+      && isset($variables['paragraph']->bp_gutter->value)) {
+    $gutter_value = $variables['paragraph']->bp_gutter->value;
+  }
+
+  $title_status = FALSE;
+  if (isset($variables['paragraph']->bp_title_status)
+      && isset($variables['paragraph']->bp_title_status->value)) {
+    $title_status = $variables['paragraph']->bp_title_status->value;
+  }
+
+  // Add variables to template.
+  $variables["VBP"] = [
+    'background_image' => [
+      'type' => 'image',
+      'url' => $file_path,
+    ],
+    'bp_width' => [
+      'type' => 'string',
+      'value' => $width,
+    ],
+    'bp_classes' => [
+      'type' => 'string',
+      'value' => $custom_paragraph_classes_value,
+    ],
+    'bp_gutter' => [
+      'type' => 'bool',
+      'value' => $gutter_value,
+    ],
+    'bp_title_status' => [
+      'type' => 'bool',
+      'value' => $title_status,
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for views grid templates.
+ *
+ * Default template: views-bootstrap-grid.html.twig.
+ *
+ * @param array $vars
+ *   An associative array containing:
+ *   - view: A ViewExecutable object.
+ *   - rows: The raw row data.
+ */
+function vardoc_theme_preprocess_views_bootstrap_grid(array &$vars) {
+
+  if (isset($vars['options']) && isset($vars['options']["col_xs"])) {
+    $vars['options']["col_xs"] = str_replace("xs-", "", $vars['options']["col_xs"]);
+  }
+
+}
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function vardoc_theme_library_info_alter(&$libraries, $extension) {
+
+  // In Drupal ^8.8.0
+  // Popper.js added to Drupal core to replace jQuery UI Position.
+  // https://www.drupal.org/node/3086643
+  // ---------------------------------------------------------------------
+  // Issue #3074267: Replace jQuery UI position() with PopperJS.
+  // https://www.drupal.org/project/drupal/issues/3074267
+  // ---------------------------------------------------------------------
+  // Issue #3108402: Update to Popper.js to 2.0.0 Drupal core 9.
+  // https://www.drupal.org/project/drupal/issues/3108402
+  // ---------------------------------------------------------------------
+  // Issue #3115895: Provide support for Popper.js ^2.0.0 core/popperjs
+  // library and Drupal 9.
+  // ---------------------------------------------------------------------
+  // This fix will make it work for old and new Drupal sites.
+  // It will be removed when we branch for 9.x-1.x core branch.
+  // ---------------------------------------------------------------------.
+  // Only for older versions of Drupal.
+  // Less than 8.8.0.
+  if (version_compare(Drupal::VERSION, '8.8.0', 'lt')) {
+    if ($extension == 'vardoc_theme' && isset($libraries['bootstrap-scripts'])) {
+      $libraries['bootstrap-scripts']['js']['js/popper/popper.min.js'] = [];
+      foreach ($libraries['bootstrap-scripts']['dependencies'] as $dependency_index => $dependency) {
+        if ($dependency == 'core/popperjs') {
+          unset($libraries['bootstrap-scripts']['dependencies'][$dependency_index]);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * @param $variables
+ */
+function vardoc_theme_preprocess_input(&$variables) {
+  // To add outline button style for reset button
+  if ($variables['element']['#type'] == 'submit') {
+    if ($variables['element']["#attributes"]["data-drupal-selector"] == 'edit-reset') {
+      $variables['attributes']['class'] .= ' btn-outline-primary';
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_views_view()
+ * @param array $vars
+ */
+function vardoc_theme_preprocess_views_view(&$vars){
+  $vars['more']['#options']['attributes']['class'] = ['btn', 'btn-primary'];
+}
+
+// Change comment form buttons text
+function vardoc_theme_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if($form_id == 'comment_native_comment_form') {
+    $form['actions']['submit']['#value'] = t('Submit');
+  }
+}

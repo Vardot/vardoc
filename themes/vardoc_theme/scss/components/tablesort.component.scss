@@ -1,0 +1,15 @@
+// Table sort indicator.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+ 
+th.is-active img {
+  display: inline;
+}
+
+td.is-active {
+  background-color: $gray-300;
+}

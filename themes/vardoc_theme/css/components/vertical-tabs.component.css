@@ -1,0 +1,117 @@
+.vertical-tabs__menu {
+  margin: -1px 0 -1px;
+  /* LTR */
+  padding: 0;
+}
+
+[dir="rtl"] .vertical-tabs__menu {
+  margin-left: 0;
+  margin-right: -1em;
+  /* This is required to win specificity over [dir="rtl"] .region-content ul */
+  padding: 0;
+}
+
+.vertical-tabs {
+  margin: 0;
+  /* LTR */
+  border: 1px solid #636363;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 0.875rem;
+}
+
+[dir="rtl"] .vertical-tabs {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.vertical-tabs__menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  /* LTR */
+  width: 15em;
+  margin: 0;
+  /* LTR */
+  padding: 0;
+  border-top: 1px solid #636363;
+  list-style: none;
+}
+
+[dir="rtl"] .vertical-tabs__menu {
+  margin-left: 0;
+  margin-right: -15em;
+}
+
+.vertical-tabs__pane {
+  margin: 0;
+  border: 0;
+}
+
+.vertical-tabs__pane > summary {
+  display: none;
+}
+
+.vertical-tabs__menu-item {
+  border: 1px solid #636363;
+  border-top: 0;
+  background: #eee;
+}
+
+.vertical-tabs__menu-item a {
+  display: block;
+  padding: 0.5em 0.6em;
+  text-decoration: none;
+}
+
+.vertical-tabs__menu-item a:focus .vertical-tabs__menu-item-title,
+.vertical-tabs__menu-item a:active .vertical-tabs__menu-item-title,
+.vertical-tabs__menu-item a:hover .vertical-tabs__menu-item-title {
+  text-decoration: underline;
+}
+
+.vertical-tabs__menu-item a:hover {
+  outline: 1px dotted;
+}
+
+.vertical-tabs__menu-item.is-selected {
+  border-right-width: 0;
+  /* LTR */
+  background-color: #fff;
+}
+
+[dir="rtl"] .vertical-tabs__menu-item.is-selected {
+  border-left-width: 0;
+  border-right-width: 1px;
+}
+
+.vertical-tabs__menu-item.is-selected .vertical-tabs__menu-item-title {
+  color: #000;
+}
+
+.vertical-tabs__menu-item-summary {
+  display: block;
+  margin-bottom: 0;
+  line-height: normal;
+}

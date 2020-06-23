@@ -1,0 +1,25 @@
+uuid: ad31f1c7-4137-4af1-bb26-6fa87500f82c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vardoc_theme
+_core:
+  default_config_hash: zvF7yxpU_HCQldrs0tiyCZaYva4BJZhWj0yX37oRoJI
+id: vardoc_theme_branding
+theme: vardoc_theme
+region: navigation
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: true
+visibility: {  }

@@ -1,0 +1,10 @@
+.sticky-header thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #636363;
+}
+
+.sticky-header th {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #636363;
+}

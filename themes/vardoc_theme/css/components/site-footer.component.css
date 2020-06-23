@@ -1,0 +1,20 @@
+.site-footer {
+  padding: 1rem 0;
+}
+
+.site-footer .layout-container {
+  padding: 0 1rem;
+}
+
+.site-footer__top .content {
+  margin-top: 0;
+}
+
+.site-footer__bottom .block {
+  margin: 0.5rem 0;
+}
+
+.site-footer__bottom .content {
+  padding: 0.5rem 0;
+  margin-top: 0;
+}

@@ -1,0 +1,174 @@
+/* Insert your vardoc_theme content type custom SASS styling. */
+.views-exposed-form .form-row .js-form-item {
+  margin: 0 20px 30px 5px;
+}
+
+@media (max-width: 991.98px) {
+  .views-exposed-form .form-row .js-form-item {
+    width: 100%;
+    margin: 0 5px 15px;
+  }
+}
+
+.views-exposed-form .form-row .js-form-item > label {
+  display: none;
+}
+
+.views-exposed-form .form-row .js-form-item input {
+  margin-top: 0;
+}
+
+@media (max-width: 991.98px) {
+  .views-exposed-form .form-row .js-form-item input {
+    width: 100%;
+  }
+}
+
+.views-exposed-form .form-row .js-form-item input::-webkit-input-placeholder {
+  color: #8898aa;
+  font-size: 1rem;
+}
+
+.views-exposed-form .form-row .js-form-item input::-moz-placeholder {
+  color: #8898aa;
+  font-size: 1rem;
+}
+
+.views-exposed-form .form-row .js-form-item input::-ms-input-placeholder {
+  color: #8898aa;
+  font-size: 1rem;
+}
+
+.views-exposed-form .form-row .js-form-item input::placeholder {
+  color: #8898aa;
+  font-size: 1rem;
+}
+
+.views-exposed-form .form-row .js-form-item .control-label {
+  display: none;
+}
+
+.views-exposed-form .form-row .js-form-item .SumoSelect > .CaptionCont label {
+  margin-bottom: 0;
+}
+
+@media (max-width: 991.98px) {
+  .views-exposed-form .form-row .js-form-item .SumoSelect {
+    width: 100%;
+  }
+}
+
+.views-exposed-form .form-row .js-form-item .SumoSelect.open > .CaptionCont {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(33, 75, 255, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(33, 75, 255, 0.25);
+}
+
+.views-exposed-form .form-row .js-form-item .SumoSelect .SelectBox {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 9px;
+}
+
+.views-exposed-form .form-row .js-form-item .SumoSelect .SelectBox span.placeholder {
+  font-style: normal;
+  color: #8898aa;
+  font-weight: normal;
+}
+
+.views-exposed-form .form-row .js-form-item .SumoSelect .SelectBox i::before {
+  content: none;
+}
+
+.views-exposed-form .form-row .js-form-item .SumoSelect .optWrapper label {
+  margin: 8px 0;
+}
+
+.views-exposed-form .form-actions {
+  margin-left: 5px;
+}
+
+@media (max-width: 991.98px) {
+  .views-exposed-form .form-actions {
+    z-index: 1;
+    margin-bottom: 15px;
+  }
+}
+
+.view-lessons-learned ul,
+.view-sme ul,
+.view-template ul {
+  -webkit-padding-start: 20px;
+     -moz-padding-start: 20px;
+          padding-inline-start: 20px;
+}
+
+.SumoSelect.open > .optWrapper {
+  z-index: 9;
+}
+
+.table-responsive {
+  -webkit-box-shadow: 0 15px 35px 0 rgba(50, 50, 93, 0.1), 0 5px 4px 0 rgba(0, 0, 0, 0.07);
+          box-shadow: 0 15px 35px 0 rgba(50, 50, 93, 0.1), 0 5px 4px 0 rgba(0, 0, 0, 0.07);
+}
+
+.table-responsive .table {
+  margin-bottom: 0;
+}
+
+.pagination {
+  margin-top: 50px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ajax-progress-fullscreen {
+  background-image: url("../../images/loader.svg");
+  background-color: transparent;
+  -webkit-background-size: 55px 55px;
+  background-size: 55px;
+  left: 48%;
+  width: 55px;
+  height: 55px;
+}
+
+.node--type-sme.node--view-mode-full .field,
+.node--type-template.node--view-mode-full .field,
+.node--type-project-lessons-learned.node--view-mode-full .field {
+  margin-bottom: 20px;
+}
+
+.node--type-sme.node--view-mode-full .field .field__label,
+.node--type-template.node--view-mode-full .field .field__label,
+.node--type-project-lessons-learned.node--view-mode-full .field .field__label {
+  font-weight: 700;
+}
+
+.node--type-sme.node--view-mode-full .field .field__label:after,
+.node--type-template.node--view-mode-full .field .field__label:after,
+.node--type-project-lessons-learned.node--view-mode-full .field .field__label:after {
+  content: ' :';
+}
+
+.node--type-sme.node--view-mode-full .field .field__items,
+.node--type-template.node--view-mode-full .field .field__items,
+.node--type-project-lessons-learned.node--view-mode-full .field .field__items {
+  display: inline-block;
+}
+
+.node--type-sme.node--view-mode-full .field.field--name-field-person .field__items .field__item:after, .node--type-sme.node--view-mode-full .field.field--name-field-category .field__items .field__item:after,
+.node--type-template.node--view-mode-full .field.field--name-field-person .field__items .field__item:after,
+.node--type-template.node--view-mode-full .field.field--name-field-category .field__items .field__item:after,
+.node--type-project-lessons-learned.node--view-mode-full .field.field--name-field-person .field__items .field__item:after,
+.node--type-project-lessons-learned.node--view-mode-full .field.field--name-field-category .field__items .field__item:after {
+  content: ',';
+}
+
+.node--type-sme.node--view-mode-full .field.field--name-field-person .field__items .field__item:last-child:after, .node--type-sme.node--view-mode-full .field.field--name-field-category .field__items .field__item:last-child:after,
+.node--type-template.node--view-mode-full .field.field--name-field-person .field__items .field__item:last-child:after,
+.node--type-template.node--view-mode-full .field.field--name-field-category .field__items .field__item:last-child:after,
+.node--type-project-lessons-learned.node--view-mode-full .field.field--name-field-person .field__items .field__item:last-child:after,
+.node--type-project-lessons-learned.node--view-mode-full .field.field--name-field-category .field__items .field__item:last-child:after {
+  content: none;
+}

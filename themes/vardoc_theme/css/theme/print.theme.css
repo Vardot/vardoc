@@ -1,0 +1,37 @@
+/* Insert your KB print custom SASS styling. */
+@media print {
+  aside,
+  .block-system-breadcrumb-block,
+  .menu--footer {
+    display: none;
+  }
+  .node--view-mode-full .statistics-field,
+  .node--view-mode-full .book-navigation,
+  .node--view-mode-full .field--name-field-rating,
+  .node--view-mode-full .comments-wrapper {
+    display: none;
+  }
+  .block-views-blocktools-block-most-used-tools {
+    page-break-after: always;
+  }
+  .footer .site-branding {
+    display: none;
+  }
+  .footer .block-block-content {
+    margin: auto;
+  }
+  .footer .block-block-content .field--name-body {
+    text-align: center;
+  }
+  .path-frontpage .search-block-wrapper {
+    display: none;
+  }
+  .rating-wrapper,
+  .views-exposed-form,
+  .btn {
+    display: none;
+  }
+  .field--name-body a.btn {
+    display: none;
+  }
+}

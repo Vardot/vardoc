@@ -1,0 +1,8 @@
+@import url(//fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+[dir="rtl"] .justify-content-center.nav-pills > li + li {
+  margin-left: inherit;
+}
+
+body {
+  font-family: 'Droid Arabic Kufi', sans-serif;
+}

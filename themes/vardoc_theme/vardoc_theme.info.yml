@@ -1,0 +1,156 @@
+core: 8.x
+type: theme
+base theme: vartheme_bs4
+ckeditor_stylesheets:
+  - css/theme/wysiwyg.theme.css
+
+name: 'vardoc_theme Theme'
+description: 'Based on Bootstrap 4 framework using SASS, and extending Vartheme (Bootstrap 4 - SASS).'
+project: vartheme_bs4
+version: 8.x-6.x-dev
+core_version_requirement: ^8 || ^9
+
+regions:
+  top_navigation: 'Top Navigation'
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header_right: 'Header Right'
+  header: 'Top Bar'
+  content_top: 'Top Content'
+  hero_slider: 'Media Hero Slider'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries:
+  # Bootstrap styles and scripts libraries.
+  - vardoc_theme/bootstrap-styles
+  - vardoc_theme/bootstrap-scripts
+
+  # vardoc_theme Global styles and scripts libraries.
+  - vardoc_theme/global-styles
+  - vardoc_theme/global-scripts
+  - vardoc_theme/framework
+
+  # vardoc_theme Varbase Bootstrap Paragraphs colors style.
+  - vardoc_theme/vbp-colors
+
+  # vardoc_theme Varbase Layout Builder colors style.
+  - vardoc_theme/vlb-colors
+
+  # vardoc_theme Better Login style.
+  - vardoc_theme/betterlogin
+
+  # vardoc_theme Varbase Media Hero Slider style.
+  - vardoc_theme/heroslider
+
+  # Icons: Uncomment the following if you want to use icons.
+  #- vardoc_theme/material_design_icons
+  #- vardoc_theme/fontawesome
+
+  # Fonts: Uncomment the following if you want to use the roboto font.
+  #- vardoc_theme/roboto
+
+libraries-override:
+  vartheme_bs4/framework: false
+  vartheme_bs4/bootstrap-styles: false
+  vartheme_bs4/bootstrap-scripts: false
+  vartheme_bs4/global-styles: false
+  vartheme_bs4/global-scripts: false
+  vartheme_bs4/vbp-colors: false
+  vartheme_bs4/vlb-colors: false
+  vartheme_bs4/betterlogin: false
+  # Heroslider: Uncomment the following to disable the vartheme_bs4/heroslider
+  #             Libraray if it was enabled in vartheme_bs4 heroslider styling.
+  # vartheme_bs4/heroslider: false
+
+  vartheme_bs4/breadcrumb: vardoc_theme/breadcrumb
+  vartheme_bs4/dropbutton: vardoc_theme/dropbutton
+  vartheme_bs4/file: vardoc_theme/file
+  vartheme_bs4/form: vardoc_theme/form
+  vartheme_bs4/indented: vardoc_theme/indented
+  vartheme_bs4/maintenance_page: vardoc_theme/maintenance_page
+  vartheme_bs4/node: vardoc_theme/node
+  vartheme_bs4/sidebar-collapse: vardoc_theme/sidebar-collapse
+  vartheme_bs4/tabs: vardoc_theme/tabs
+  vartheme_bs4/verticaltabs: vardoc_theme/verticaltabs
+  vartheme_bs4/alerts: vardoc_theme/alerts
+
+  # Varbase module compnents overrides in vardoc_theme.
+  varbase_bootstrap_paragraphs/vbp-colors: vardoc_theme/vbp-colors
+  varbase_layout_builder/vlb-colors: vardoc_theme/vlb-colors
+  betterlogin/betterlogin_css: vardoc_theme/betterlogin
+  varbase_heroslider_media/general-styling: vardoc_theme/heroslider
+
+  vbp_text_and_image/vbp_text_and_image_default:
+    css:
+      theme:
+        css/default.css: css/layout/vbp_text_and_image_default.layout.css
+
+ckeditor_stylesheets:
+  # Base
+  - css/base/bootstrap.base.css
+  - css/base/vartheme_bs4.base.css
+  - css/base/vardoc_theme.base.css
+  # Components
+  - css/components/affix.component.css
+  - css/components/ajax.component.css
+  - css/components/alerts.component.css
+  - css/components/autocomplete.component.css
+  - css/components/book.component.css
+  - css/components/book-navigation.component.css
+  - css/components/breadcrumb.component.css
+  - css/components/bs-callouts.component.css
+  - css/components/comments.component.css
+  - css/components/contextual.component.css
+  - css/components/details.component.css
+  - css/components/dropbutton.component.css
+  - css/components/feed-icon.component.css
+  - css/components/field.component.css
+  - css/components/file.component.css
+  - css/components/form.component.css
+  - css/components/header.component.css
+  - css/components/help.component.css
+  - css/components/icons.component.css
+  - css/components/image-button.component.css
+  - css/components/indented.component.css
+  - css/components/item-list.component.css
+  - css/components/list-group.component.css
+  - css/components/navbar.admin.component.css
+  - css/components/navbar.component.css
+  - css/components/node.component.css
+  - css/components/node-preview.component.css
+  - css/components/page.component.css
+  - css/components/progress-bar.component.css
+  - css/components/search-form.component.css
+  - css/components/shortcut.component.css
+  - css/components/sidebar.component.css
+  - css/components/sidebar-collapse.component.css
+  - css/components/site-footer.component.css
+  - css/components/skip-link.component.css
+  - css/components/table.component.css
+  - css/components/tabledrag.component.css
+  - css/components/tableselect.component.css
+  - css/components/tablesort.component.css
+  - css/components/tablesort-indicator.component.css
+  - css/components/tabs.component.css
+  - css/components/textarea.component.css
+  - css/components/ui-dialog.component.css
+  - css/components/ui-widget.component.css
+  - css/components/user.component.css
+  - css/components/varicons.component.css
+  - css/components/vb-tags.component.css
+  - css/components/vertical-tabs.component.css
+  - css/components/views.component.css
+  # Layout
+  - css/layout/edge2edge.layout.css
+  - css/layout/equal-height.layout.css
+  # Theme
+  - css/theme/content.theme.css
+  - css/theme/vbp-colors.theme.css
+  - css/theme/vlb-colors.theme.css

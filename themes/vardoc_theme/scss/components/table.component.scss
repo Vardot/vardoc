@@ -1,0 +1,18 @@
+// Styles for Bootstrap Barrio's tables.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+ 
+.sticky-header thead th {
+  vertical-align: bottom;
+  border-bottom: (2 * $table-border-width) solid $table-border-color;
+}
+
+.sticky-header th {
+  padding: $table-cell-padding;
+  vertical-align: top;
+  border-top: $table-border-width solid $table-border-color;
+}

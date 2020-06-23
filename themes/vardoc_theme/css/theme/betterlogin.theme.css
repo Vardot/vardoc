@@ -1,0 +1,74 @@
+#auth-box {
+  padding: 1.875rem 0 0;
+}
+
+#auth-box h1#the-logo {
+  text-align: center;
+  margin: 0;
+  padding: 0 0 25px;
+}
+
+#auth-box h2.title {
+  margin: 0;
+  padding: 0 0 15px;
+  font-size: 2em;
+}
+
+#auth-box #middle-part {
+  border-radius: 3px;
+  background: #fff;
+  padding: 15px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 3px 1px 0 15px 35px 0 rgba(50, 50, 93, 0.1), 0 5px 4px 0 rgba(0, 0, 0, 0.07);
+          box-shadow: 0 0 3px 1px 0 15px 35px 0 rgba(50, 50, 93, 0.1), 0 5px 4px 0 rgba(0, 0, 0, 0.07);
+}
+
+#auth-box .back-link {
+  padding: 15px 0 0;
+}
+
+#auth-box #bottom-part {
+  font-size: 13px;
+  padding: 15px 0 0;
+  text-align: center;
+}
+
+#auth-box .user-form .form-control {
+  max-width: 100%;
+}
+
+#auth-box .block-title {
+  text-align: center;
+  background: #eee;
+  height: 1px;
+  margin: 30px 0;
+}
+
+#auth-box .block-title span {
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 0 10px;
+  background: #fff;
+  position: relative;
+  top: -30px;
+}
+
+#auth-box .user-login-form {
+  text-align: left;
+}
+
+#auth-box .user-login-form .form-checkbox {
+  margin-top: 0.5rem;
+}
+
+#auth-box .user-login-form .option {
+  font-size: 1rem;
+}
+
+#auth-box .form-actions {
+  text-align: center;
+}
+
+#auth-box .block-social-auth-login {
+  text-align: center;
+}

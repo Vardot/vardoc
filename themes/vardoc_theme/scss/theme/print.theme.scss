@@ -1,0 +1,54 @@
+// vardoc_theme content type styling.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+
+/* Insert your KB print custom SASS styling. */
+@media print {
+  aside,
+  .block-system-breadcrumb-block,
+  .menu--footer {
+    display: none;
+  }
+  .node--view-mode-full {
+    .statistics-field,
+    .book-navigation,
+    .field--name-field-rating,
+    .comments-wrapper {
+      display: none;
+    }
+  }
+  .block-views-blocktools-block-most-used-tools {
+    page-break-after: always;
+  }
+  .footer {
+    .site-branding {
+      display: none;
+    }
+    .block-block-content {
+      margin: auto;
+      .field--name-body {
+        text-align: center;
+      }
+    }
+  }
+  .path-frontpage {
+    .search-block-wrapper {
+      display: none;
+    }
+  }
+  .rating-wrapper,
+  .views-exposed-form,
+  .btn {
+    display: none;
+  }
+  .field--name-body {
+    a {
+      &.btn {
+        display: none;
+      }
+    }
+  }
+}

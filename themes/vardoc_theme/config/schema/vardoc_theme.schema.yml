@@ -1,0 +1,4 @@
+# Schema for the configuration files of the vardoc_theme.
+vardoc_theme.settings:
+  type: theme_settings
+  label: 'vardoc_theme settings'

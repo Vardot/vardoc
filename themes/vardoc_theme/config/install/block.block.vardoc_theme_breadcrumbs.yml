@@ -1,0 +1,27 @@
+uuid: 54c7fe93-945b-42a3-8399-58aaf437f011
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vardoc_theme
+_core:
+  default_config_hash: 7O9qHVugCR_0Iw64OdmGqTIJ4cJjFqljXLrfBkdIFpI
+id: vardoc_theme_breadcrumbs
+theme: vardoc_theme
+region: content_top
+weight: -3
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/search*'
+    negate: true
+    context_mapping: {  }

@@ -1,0 +1,19 @@
+// Basic styling for comment module.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+
+// Indent threaded comments.
+
+.indented {
+  margin-left: ($spacer * 1.5);
+  /* LTR */
+}
+
+[dir="rtl"] .indented {
+  margin-left: 0;
+  margin-right: ($spacer * 1.5);
+}

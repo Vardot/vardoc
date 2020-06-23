@@ -1,0 +1,111 @@
+//
+// vardoc_theme aliases ovarrides.
+// --------------------------------------------------
+// Bootstrap 4 aliases for Bootstrap 3
+// -----------------------------------------------------------------------------
+@import "../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "variables";                   // vardoc_theme variables.
+@import "mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+
+.pull-right {
+  @extend .float-right;
+}
+
+.pull-left {
+  @extend .float-left;
+}
+
+[dir="rtl"] {
+  .pull-right{
+    @extend .float-left;
+  }
+
+  .pull-left{
+    @extend .float-right;
+  }
+}
+.img-responsive{
+  @extend .img-fluid;
+}
+
+blockquote {
+  @extend .blockquote;
+
+  h6{
+    @extend .blockquote-footer;
+  }
+}
+
+.well {
+  @extend .card;
+  @extend .p-3;
+  @extend .mb-3;
+  background-color: $gray-200;
+
+  &.well-lg{
+    @extend .p-4;
+  }
+
+  &.well-sm{
+    @extend .p-2;
+  }
+}
+
+// no-margin and no-padding and no-spacing
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $prop, $abbrev in (margin: "no-margin", padding: "no-padding") {
+      .#{$abbrev}#{$infix} {
+        #{$prop}: 0 !important;
+      }
+      .#{$abbrev}-top#{$infix}{
+        #{$prop}-top: 0 !important;
+      }
+      .#{$abbrev}-right#{$infix} {
+        #{$prop}-right: 0 !important;
+      }
+      .#{$abbrev}-bottom#{$infix} {
+        #{$prop}-bottom: 0 !important;
+      }
+      .#{$abbrev}-left#{$infix} {
+        #{$prop}-left: 0 !important;
+      }
+      .#{$abbrev}-v#{$infix} {
+        #{$prop}-top: 0 !important;
+        #{$prop}-bottom: 0 !important;
+      }
+      .#{$abbrev}-h#{$infix} {
+        #{$prop}-left: 0 !important;
+        #{$prop}-right: 0 !important;
+      }
+    }
+
+    @each $prop, $abbrev in (margin: "no-spacing", padding: "no-spacing") {
+      .#{$abbrev}#{$infix} { #{$prop}: 0 !important; }
+      .#{$abbrev}-top#{$infix} {
+        #{$prop}-top: 0 !important;
+      }
+      .#{$abbrev}-right#{$infix} {
+        #{$prop}-right: 0 !important;
+      }
+      .#{$abbrev}-bottom#{$infix} {
+        #{$prop}-bottom: 0 !important;
+      }
+      .#{$abbrev}-left#{$infix} {
+        #{$prop}-left: 0 !important;
+      }
+      .#{$abbrev}-v#{$infix} {
+        #{$prop}-top: 0 !important;
+        #{$prop}-bottom: 0 !important;
+      }
+      .#{$abbrev}-h#{$infix} {
+        #{$prop}-right: 0 !important;
+        #{$prop}-left: 0 !important;
+      }
+    }
+  }
+}

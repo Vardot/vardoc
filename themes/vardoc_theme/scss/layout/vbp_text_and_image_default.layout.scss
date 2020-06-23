@@ -1,0 +1,60 @@
+// vardoc_theme Varbase Bootstrap paragraphs text and image layout.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions"; // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";    // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+
+.paragraph--type--text-and-image {
+  .row {
+    margin-bottom: 0px !important;
+  }
+
+  .wrapper {
+    padding: $spacer;
+  }
+
+  @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+    .wrapper {
+      text-align: left;
+    }
+
+    .bg-edge2edge {
+      .align2left {
+        &.wrapper {
+          padding-left: ($spacer * 5);
+        }
+      }
+
+      .align2right {
+        &.wrapper {
+          padding-right: ($spacer * 5);
+        }
+      }
+    }
+  }
+}
+
+[dir="rtl"] .paragraph--type--text-and-image {
+  @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+    .wrapper {
+      text-align: right;
+    }
+    .bg-edge2edge {
+      .align2left {
+        &.wrapper {
+          padding-left: $spacer;
+          padding-right: ($spacer * 5);
+        }
+      }
+
+      .align2right {
+        &.wrapper {
+          padding-right: $spacer;
+          padding-left: ($spacer * 5);
+        }
+      }
+    }
+  }
+}

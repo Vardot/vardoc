@@ -1,0 +1,295 @@
+# vardoc_theme framework
+framework:
+  css: {}
+  js: {}
+  dependencies:
+    - core/jquery
+    - vardoc_theme/bootstrap-styles
+    - vardoc_theme/bootstrap-scripts
+    - vardoc_theme/global-styles
+    - vardoc_theme/global-scripts
+
+# vardoc_theme framework RTL
+framework-rtl:
+  css: {}
+  js: {}
+  dependencies:
+    - core/jquery
+    - vardoc_theme/bootstrap-styles-rtl
+    - vardoc_theme/global-styles-rtl
+
+
+
+
+# ------------------------------------------------------------------------------
+# Bootstrap Barrio libraries.
+# ------------------------------------------------------------------------------
+
+# Bootstrap global styles library.
+bootstrap-styles:
+  css:
+    base:
+      css/base/bootstrap.base.css: {}
+    component:
+      css/components/affix.component.css: {}
+      css/components/alerts.component.css: {}
+      css/components/book-navigation.component.css: {}
+      css/components/book.component.css: {}
+      css/components/breadcrumb.component.css: {}
+      css/components/comments.component.css: {}
+      css/components/contextual.component.css: {}
+      css/components/details.component.css: {}
+      css/components/dropbutton.component.css: {}
+      css/components/feed-icon.component.css: {}
+      css/components/field.component.css: {}
+      css/components/file.component.css: {}
+      css/components/form.component.css: {}
+      css/components/header.component.css: {}
+      css/components/help.component.css: {}
+      css/components/icons.component.css: {}
+      css/components/image-button.component.css: {}
+      css/components/indented.component.css: {}
+      css/components/item-list.component.css: {}
+      css/components/list-group.component.css: {}
+      css/components/node-preview.component.css: {}
+      css/components/node.component.css: {}
+      css/components/page.component.css: {}
+      css/components/search-form.component.css: {}
+      css/components/shortcut.component.css: {}
+      css/components/sidebar-collapse.component.css: {}
+      css/components/sidebar.component.css: {}
+      css/components/site-footer.component.css: {}
+      css/components/skip-link.component.css: {}
+      css/components/table.component.css: {}
+      css/components/tabledrag.component.css: {}
+      css/components/tableselect.component.css: {}
+      css/components/tablesort-indicator.component.css: {}
+      css/components/tablesort.component.css: {}
+      css/components/tabs.component.css: {}
+      css/components/textarea.component.css: {}
+      css/components/ui-dialog.component.css: {}
+      css/components/ui-widget.component.css: {}
+      css/components/user.component.css: { weight: -10 }
+      css/components/vertical-tabs.component.css: {}
+      css/components/views.component.css: {}
+
+# Bootstrap global styles RTL library.
+bootstrap-styles-rtl:
+  css:
+    base:
+      css/rtl/base/bootstrap-rtl.base.css: {}
+
+# Bootstrap scripts library.
+bootstrap-scripts:
+  js:
+#    js/popper/popper.min.js: {} # use core/popperjs libraray in Drupal ^8.8.0 .
+    js/bootstrap/bootstrap.min.js: {}
+#
+#   Plugins can be included individually (using Bootstrap’s individual
+#   js/dist/*.js), or all at once using bootstrap.js or the minified
+#   bootstrap.min.js (don’t include both).
+#
+#     Alerts for dismissing
+#     Buttons for toggling states and checkbox/radio functionality
+#     Carousel for all slide behaviors, controls, and indicators
+#     Collapse for toggling visibility of content
+#     Dropdowns for displaying and positioning (also requires Popper.js)
+#     Modals for displaying, positioning, and scroll behavior
+#     Navbar for extending our Collapse plugin to implement responsive behavior
+#     Tooltips and popovers for displaying and positioning (also requires Popper.js)
+#     Scrollspy for scroll behavior and navigation updates
+#
+#    js/bootstrap/alert.js: {}
+#    js/bootstrap/button.js: {}
+#    js/bootstrap/carousel.js: {}
+#    js/bootstrap/collapse.js: {}
+#    js/bootstrap/dropdown.js: {}
+#    js/bootstrap/modal.js: {}
+#    js/bootstrap/popover.js: {}
+#    js/bootstrap/scrollspy.js: {}
+#    js/bootstrap/tab.js: {}
+#    js/bootstrap/toast.js: {}
+#    js/bootstrap/tooltip.js: {}
+#    js/bootstrap/util.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/popperjs
+
+# ------------------------------------------------------------------------------
+# vardoc_theme libraries.
+# ------------------------------------------------------------------------------
+
+# vardoc_theme global styles library.
+global-styles:
+  css:
+    base:
+      css/base/vartheme_bs4.base.css: {}
+      css/base/argon.base.css: {}
+      css/base/vardoc_theme.base.css: {}
+    component:
+      css/components/ajax.component.css: {}
+      css/components/autocomplete.component.css: {}
+      css/components/bs-callouts.component.css: {}
+      css/components/navbar.admin.component.css: {}
+      css/components/navbar.component.css: {}
+      css/components/progress-bar.component.css: { weight: -10 }
+      css/components/varicons.component.css: {}
+      css/components/vb-tags.component.css: {}
+    layout:
+      css/layout/edge2edge.layout.css: {}
+      css/layout/equal-height.layout.css: {}
+      css/layout/print.layout.css: {}
+    plugins:
+      css/plugins/sumoselect.css: {}
+    theme:
+      'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap': {type: external}
+      css/theme/wysiwyg.theme.css: {}
+      css/theme/comments.theme.css: {}
+      css/theme/node.theme.css: {}
+      css/theme/header.theme.css: {}
+      css/theme/content.theme.css: {}
+      css/theme/footer.theme.css: {}
+      css/theme/fonts.theme.css: {}
+      css/theme/betterlogin.theme.css: {}
+      css/theme/print.theme.css: {}
+      css/theme/nucleo/css/nucleo.css: {}
+  dependencies:
+    - core/jquery
+
+# vardoc_theme global (RTL) styles library.
+global-styles-rtl:
+  css:
+    base:
+      css/rtl/base/vartheme_bs4-rtl.base.css: {}
+      css/rtl/base/vardoc_theme-rtl.base.css: {}
+    theme:
+      css/rtl/theme/header-rtl.theme.css: {}
+      css/rtl/theme/content-rtl.theme.css: {}
+      css/rtl/theme/footer-rtl.theme.css: {}
+      css/rtl/theme/betterlogin-rtl.theme.css: {}
+  dependencies:
+    - core/jquery
+
+# vardoc_theme global scripts library.
+global-scripts:
+  js:
+    js/plugins/jquery.sumoselect.js: {}
+    js/argon/argon.js: {}
+    js/scripts.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+
+# vardoc_theme Varbase Bootstrap Paragraphs colors theme.
+vbp-colors:
+  css:
+    theme:
+      css/theme/vbp-colors.theme.css: {}
+
+# vardoc_theme Varbase Layout Builder colors theme.
+vlb-colors:
+  css:
+    theme:
+      css/theme/vlb-colors.theme.css: {}
+
+# vardoc_theme better login theme.
+betterlogin:
+  css:
+    theme:
+      css/theme/betterlogin.theme.css: {}
+
+# vardoc_theme Varbase Media Hero Slider theme.
+heroslider:
+  css:
+    theme:
+      css/theme/varbase-heroslider-media.theme.css: {}
+
+
+# ------------------------------------------------------------------------------
+# Bootstrap Barrio components overrides.
+# ------------------------------------------------------------------------------
+
+affix:
+  js:
+    js/bootstrap_barrio/affix.js: {}
+  css:
+    component:
+      css/components/affix.component.css: {}
+
+alerts:
+  css:
+    component:
+      css/components/alerts.component.css: {}
+
+book-navigation:
+  css:
+    component:
+      css/components/book-navigation.component.css: {}
+
+breadcrumb:
+  css:
+    component:
+      css/components/breadcrumb.component.css: {}
+
+dropbutton:
+  css:
+    component:
+      css/components/dropbutton.component.css: {}
+
+file:
+  css:
+    component:
+      css/components/file.component.css: { weight: -10 }
+
+form:
+  css:
+    component:
+      css/components/form.component.css: {}
+
+indented:
+  css:
+    component:
+      css/components/indented.component.css: {}
+
+maintenance_page:
+  css:
+    theme:
+      css/theme/maintenance-page.theme.css: {}
+  dependencies:
+    - system/maintenance
+    - vardoc_theme/global-styling
+
+node:
+  css:
+    component:
+      css/components/node.component.css: { weight: -10 }
+
+sidebar-collapse:
+  js:
+    js/bootstrap_barrio/sidebar-collapse.js: { external: true }
+  css:
+    component:
+      css/components/sidebar-collapse.component.css: {}
+
+tabs:
+  css:
+    component:
+      css/components/tabs.component.css: {}
+
+verticaltabs:
+  css:
+    component:
+      css/components/vertical-tabs.component.css: {}
+
+# icons
+material_design_icons:
+  css:
+    component:
+      //fonts.googleapis.com/icon?family=Material+Icons: {}
+
+fontawesome:
+  css:
+    component:
+      //use.fontawesome.com/releases/v5.0.13/css/all.css: {}

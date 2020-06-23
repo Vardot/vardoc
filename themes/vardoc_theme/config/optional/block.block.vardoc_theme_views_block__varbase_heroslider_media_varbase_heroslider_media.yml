@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.varbase_heroslider_media
+  module:
+    - block_class
+    - system
+    - views
+    - varbase_heroslider_media
+  theme:
+    - vardoc_theme
+third_party_settings:
+  block_class:
+    classes: ''
+id: vardoc_theme_views_block__varbase_heroslider_media_varbase_heroslider_media
+theme: vardoc_theme
+region: hero_slider
+weight: 0
+provider: null
+plugin: 'views_block:varbase_heroslider_media-varbase_heroslider_media'
+settings:
+  id: 'views_block:varbase_heroslider_media-varbase_heroslider_media'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,540 @@
+html.overlay-open .navbar-fixed-top {
+  z-index: 400;
+}
+
+html.js fieldset.collapsed {
+  border-left-width: 1px;
+  border-right-width: 1px;
+  height: auto;
+}
+
+html.js input.form-autocomplete {
+  background-image: none;
+}
+
+html.js input.form-autocomplete {
+  background-image: none;
+}
+
+html.js .autocomplete-throbber {
+  background-position: 100% 2px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 15px;
+  margin: 2px 0 0 2px;
+  width: 15px;
+}
+
+html.js .autocomplete-throbber.throbbing {
+  background-position: 100% -18px;
+}
+
+#overlay-container,
+.overlay-modal-background,
+.overlay-element {
+  z-index: 1500;
+}
+
+#toolbar {
+  z-index: 1600;
+}
+
+.modal {
+  z-index: 1620;
+}
+
+.modal-dialog {
+  z-index: 1630;
+}
+
+.ctools-modal-dialog .modal-body {
+  width: 100% !important;
+  overflow: auto;
+}
+
+.modal-backdrop {
+  z-index: 1610;
+}
+
+.element-invisible {
+  margin: 0;
+  padding: 0;
+  width: 1px;
+}
+
+ul.secondary {
+  float: left;
+}
+
+.page-header {
+  margin-top: 0;
+}
+
+.block:first-child h2.block-title {
+  margin-top: 0;
+}
+
+p:last-child,
+.form-group:last-child,
+.panel:last-child {
+  margin-bottom: 0;
+}
+
+input,
+textarea,
+select,
+.uneditable-input {
+  max-width: 100%;
+  width: auto;
+}
+
+fieldset legend.panel-heading {
+  float: left;
+  line-height: 1em;
+  margin: 0;
+}
+
+fieldset .panel-body {
+  clear: both;
+  display: inherit;
+}
+
+fieldset .panel-heading a.panel-title {
+  color: inherit;
+  display: block;
+  margin: -10px -15px;
+  padding: 10px 15px;
+}
+
+fieldset .panel-heading a.panel-title:hover {
+  text-decoration: none;
+}
+
+.form-group:last-child,
+.panel:last-child {
+  margin-bottom: 0;
+}
+
+.form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.form-actions {
+  clear: both;
+}
+
+.managed-files.table td:first-child {
+  width: 100%;
+}
+
+div.image-widget-data {
+  float: none;
+  overflow: hidden;
+}
+
+.text-format-wrapper {
+  margin-bottom: 15px;
+}
+
+.text-format-wrapper > .form-type-textarea,
+.text-format-wrapper .filter-wrapper {
+  margin-bottom: 0;
+}
+
+.radio:first-child, .checkbox:first-child {
+  margin-top: 0;
+}
+
+.radio:last-child, .checkbox:last-child {
+  margin-bottom: 0;
+}
+
+.panel-heading {
+  display: block;
+}
+
+a.tabledrag-handle .handle {
+  height: auto;
+  width: auto;
+}
+
+.nav-tabs {
+  margin-bottom: 10px;
+}
+
+ul li.collapsed,
+ul li.expanded,
+ul li.leaf {
+  list-style: none;
+  list-style-image: none;
+}
+
+.tabs--secondary {
+  margin: 0 0 10px;
+}
+
+.submitted {
+  margin-bottom: 1em;
+  font-style: italic;
+  font-weight: normal;
+  color: #777;
+}
+
+.form-type-password-confirm {
+  position: relative;
+}
+
+.form-type-password-confirm label {
+  display: block;
+}
+
+.form-type-password-confirm label .label {
+  float: right;
+}
+
+.form-type-password-confirm .password-help {
+  padding-left: 2em;
+}
+
+.form-type-password-confirm .progress {
+  background: transparent;
+  border-radius: 0 0 5px 5px;
+  height: 4px;
+  margin: -5px 0px 0;
+}
+
+.form-type-password-confirm .form-type-password {
+  clear: left;
+}
+
+.form-type-password-confirm .form-control-feedback {
+  right: 15px;
+}
+
+.form-type-password-confirm .help-block {
+  clear: both;
+}
+
+ul.pagination li > a.progress-disabled {
+  float: left;
+}
+
+@-webkit-keyframes adjust-hue {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes adjust-hue {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+
+@keyframes adjust-hue {
+  0% {
+    -webkit-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+         -o-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+th.checkbox,
+td.checkbox,
+th.radio,
+td.radio {
+  display: table-cell;
+}
+
+.views-display-settings .label {
+  font-size: 100%;
+  color: #666666;
+}
+
+.views-display-settings .footer {
+  padding: 0;
+  margin: 4px 0 0 0;
+}
+
+.views-exposed-form .views-exposed-widget .btn {
+  margin-top: 1.8em;
+}
+
+table .radio input[type="radio"],
+table .checkbox input[type="checkbox"] {
+  max-width: inherit;
+}
+
+.form-horizontal .form-group label {
+  position: relative;
+  min-height: 1px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: right;
+}
+
+div.image-style-new {
+  display: block;
+}
+
+div.image-style-new div {
+  display: block;
+}
+
+div.image-style-new div.input-group {
+  display: table;
+}
+
+td.module,
+.table-striped > tbody > tr:nth-child(odd) > td.module,
+.table > tbody > tr > td.module {
+  background: #636363;
+  font-weight: 700;
+}
+
+.book-toc > .dropdown-menu {
+  overflow: hidden;
+}
+
+.book-toc > .dropdown-menu > .dropdown-header {
+  white-space: nowrap;
+}
+
+.book-toc > .dropdown-menu > li:nth-child(1) > a {
+  font-weight: bold;
+}
+
+.book-toc > .dropdown-menu .dropdown-menu {
+  border: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: static;
+  width: 100%;
+}
+
+.book-toc > .dropdown-menu .dropdown-menu > li {
+  padding-left: 20px;
+}
+
+.book-toc > .dropdown-menu .dropdown-menu > li > a {
+  margin-left: -40px;
+  padding-left: 60px;
+}
+
+#features-filter .form-item.form-type-checkbox {
+  padding-left: 20px;
+}
+
+fieldset.features-export-component .panel-heading {
+  padding: 5px 10px;
+}
+
+fieldset.features-export-component .panel-heading a.panel-title {
+  font-weight: 500;
+  margin: -5px -10px;
+  padding: 5px 10px;
+}
+
+fieldset.features-export-component .panel-body {
+  padding: 0 10px;
+}
+
+div.features-export-list {
+  margin: -11px 0 10px;
+  padding: 0 10px;
+}
+
+fieldset.features-export-component .component-select .form-type-checkbox {
+  line-height: 1em;
+  margin: 5px 5px 5px 0 !important;
+  min-height: 0;
+  padding: 3px 3px 3px 25px !important;
+}
+
+fieldset.features-export-component .component-select .form-type-checkbox input[type=checkbox] {
+  margin-top: 0;
+}
+
+div.features-export-list .form-type-checkbox {
+  line-height: 1em;
+  margin: 5px 5px 5px 0 !important;
+  min-height: 0;
+  padding: 3px 3px 3px 25px !important;
+}
+
+div.features-export-list .form-type-checkbox input[type=checkbox] {
+  margin-top: 0;
+}
+
+.region-navigation {
+  clear: both;
+}
+
+.main-container .region.region-header h1,
+.main-container .region.region-header .h1 {
+  margin-top: 0;
+}
+
+.main-container .region.region-header .tabs {
+  margin-bottom: 10px;
+}
+
+.form-type-password-confirm > * {
+  float: none;
+}
+
+.form-control.form-wrapper.form-group {
+  height: auto;
+}
+
+.navigation-top-wrapper {
+  padding-top: 15px;
+}
+
+.cke_editable body {
+  background: white;
+}
+
+.cke_editable {
+  padding: 10px;
+}
+
+.field-collection-view {
+  padding: 0;
+  margin: 0;
+  border-bottom: 0 none;
+}
+
+.field-collection-container {
+  border-bottom: 0 none;
+}
+
+#admin-menu-search {
+  float: right;
+}
+
+#admin-menu-search .form-control {
+  float: auto;
+}
+
+.form-textarea-wrapper textarea {
+  max-width: 100%;
+}
+
+dt {
+  font-size: 120%;
+}
+
+dd {
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.ajax-progress-throbber {
+  background: transparent;
+  min-height: 0;
+  opacity: 1;
+  padding: 0;
+  width: auto;
+  vertical-align: baseline;
+}
+
+.modal-content .panels-add-content-modal {
+  background: white;
+  margin-left: 175px;
+  padding-left: 0;
+}
+
+.modal-content .panels-add-content-modal .panels-modal-add-category {
+  margin-right: 5px;
+}
+
+.modal-content .panels-add-content-modal .panels-section-column-body {
+  padding: 0 10px;
+}
+
+.maintenance-page #page {
+  text-align: center;
+}
+
+.hidden-anonymous,
+.visible-admin,
+.visible-logged-in {
+  display: none !important;
+}
+
+body.user-logged-in .visible-admin,
+body.user-logged-in .visible-logged-in,
+body.user-logged-in .hidden-anonymous {
+  display: inline-block !important;
+}
+
+body.user-logged-in .btn .visible-admin,
+body.user-logged-in .btn .visible-logged-in,
+body.user-logged-in .btn .hidden-anonymous {
+  display: inline-block !important;
+}
+
+body.path-frontpage h1.page-header {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #333333;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#tour.hidden.list-group {
+  display: none;
+}
+
+.card-deck {
+  display: block;
+}
+
+.card .card-top-image {
+  max-width: 100%;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+
+select::-ms-expand {
+  display: none;
+}

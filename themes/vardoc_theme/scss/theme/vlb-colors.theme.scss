@@ -1,0 +1,79 @@
+// Custom Varbase Layout Builder colors theme for vardoc_theme .
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+
+// Background colors;
+// -----------------------------------------------------------------------------
+// vlb_color_01: Blue
+// vlb_color_02: Madison
+// vlb_color_03: Dark Gray
+// vlb_color_04: Light Gray
+// vlb_color_05: Red
+
+$vlb_color_01: #338ec7; // Blue
+$vlb_color_02: #2c3e50; // Madison
+$vlb_color_03: #a4a4a4; // Dark Gray
+$vlb_color_04: #d3d3d3; // Light Gray
+$vlb_color_05: #cc3c2d; // Red
+
+// Foreground colors:
+// -----------------------------------------------------------------------------
+// vlb_foreground_color_01: White for background vlb_color_01 color.
+// vlb_foreground_color_02: White for background vlb_color_02 color.
+// vlb_foreground_color_03: White for background vlb_color_03 color.
+// vlb_foreground_color_04: Black for background vlb_color_04 color.
+// vlb_foreground_color_05: White for background vlb_color_05 color.
+
+$vlb_foreground_color_01: #ffffff; // White
+$vlb_foreground_color_02: #ffffff; // White
+$vlb_foreground_color_03: #ffffff; // White
+$vlb_foreground_color_04: #000000; // Black
+$vlb_foreground_color_05: #ffffff; // White
+
+// Varbase Layout Builder color default template for the vlb_color_{NUM}
+// we could copy this mixin and change it for other type of styling options.
+// This could be changed in your sub-theme, in the way you custom sites.
+@mixin vlb_color($vlb_color_name, $vlb_background_color, $vlb_foreground_color) {
+  #{$vlb_color_name} {
+    background-color: $vlb_background_color;
+    color: $vlb_foreground_color;
+
+    a {
+      color: $vlb_foreground_color;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &.is-active,
+      &.active {
+        color: $vlb_foreground_color;
+      }
+    }
+  }
+}
+
+// Varbase Layout Builder colors default template.
+// This could be changed in your sub-theme, in the way you custom sites.
+@mixin vlb_colors {
+
+  // Only listing 5 colors, this could work in a loop.
+  // or by writing the list of css color classes manually.
+  @include vlb_color(".vlb_color_01", $vlb_color_01, $vlb_foreground_color_01);
+  @include vlb_color(".vlb_color_02", $vlb_color_02, $vlb_foreground_color_02);
+  @include vlb_color(".vlb_color_03", $vlb_color_03, $vlb_foreground_color_03);
+  @include vlb_color(".vlb_color_04", $vlb_color_04, $vlb_foreground_color_04);
+  @include vlb_color(".vlb_color_05", $vlb_color_05, $vlb_foreground_color_05);
+
+}
+
+// Call the vlb_colors mixin for the front-end use.
+@include vlb_colors;
+
+// Add support for drupal off canvas editor and the layout builder settings try.
+#drupal-off-canvas {
+  @include vlb_colors;
+}

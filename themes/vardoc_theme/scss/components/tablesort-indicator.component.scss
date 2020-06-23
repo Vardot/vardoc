@@ -1,0 +1,20 @@
+// Tablesort indicator styles.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // vardoc_theme variables.
+@import "../mixins";                      // vardoc_theme mixins.
+// -----------------------------------------------------------------------------
+ 
+.tablesort {
+  width: 14px;
+  height: 14px;
+  vertical-align: top;
+  margin: 1px 0 0 5px;
+}
+.tablesort--asc {
+  background-image: url(../../../../misc/icons/ffffff/twistie-down.svg);
+}
+.tablesort--desc {
+  background-image: url(../../../../misc/icons/ffffff/twistie-up.svg);
+}

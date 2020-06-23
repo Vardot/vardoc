@@ -1,0 +1,20 @@
+uuid: c9fb0b81-4fca-4702-b381-a770666dc6d5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - vardoc_theme
+_core:
+  default_config_hash: Tgb59_-2n0JpTGWeI6OTZ484sqBuPDTzxc-aKndlkrA
+id: vardoc_theme_page_title
+theme: vardoc_theme
+region: content_top
+weight: -2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
