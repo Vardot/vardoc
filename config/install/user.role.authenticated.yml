@@ -1,6 +1,9 @@
+uuid: b99cc092-6cda-49df-ae6c-29f6aa1fa738
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: lgebQmNSdx9o8GwBUjkJaGAzoWIbLcqCn0K9N9hm-F8
 id: authenticated
 label: 'Authenticated user'
 weight: -9
@@ -8,14 +11,31 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
+  - 'access editor_media_browser entity browser pages'
+  - 'access image_browser entity browser pages'
+  - 'access media overview'
   - 'access shortcuts'
   - 'access sitemap'
   - 'access user profiles'
+  - 'create book content'
+  - 'create media'
+  - 'delete media'
+  - 'delete own book content'
+  - 'edit any book content'
+  - 'edit own book content'
   - 'edit own comments'
   - 'post comments'
   - 'search content'
+  - 'update media'
   - 'use text format basic_html'
+  - 'use text format code_html'
+  - 'use text format full_html'
   - userprotect.account.edit
   - userprotect.mail.edit
   - userprotect.pass.edit
+  - 'view book revisions'
+  - 'view latest version'
   - 'view media'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view the administration theme'
