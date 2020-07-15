@@ -21,6 +21,7 @@ permissions:
   - 'create media'
   - 'delete media'
   - 'delete own book content'
+  - 'dropzone upload files'
   - 'edit any book content'
   - 'edit own book content'
   - 'edit own comments'
