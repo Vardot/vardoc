@@ -7,10 +7,11 @@ dependencies:
     - field.field.user.user.field_last_password_reset
     - field.field.user.user.field_password_expiration
     - field.field.user.user.field_profile_image
+    - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - field_group
-    - image
+    - svg_image
     - user
 third_party_settings:
   field_group:
@@ -24,7 +25,6 @@ third_party_settings:
       weight: 0
       format_type: fieldset
       format_settings:
-        label: 'Profile information'
         description: ''
         required_fields: true
         id: ''
@@ -74,17 +74,10 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  user_picture:
-    type: image_image
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    weight: -1
-    region: content
 hidden:
   field_last_password_reset: true
   field_password_expiration: true
   google_analytics: true
   language: true
   timezone: true
+  user_picture: true
