@@ -28,6 +28,7 @@ permissions:
   - 'post comments'
   - 'search content'
   - 'update media'
+  - 'use search_api_autocomplete for book_search'
   - 'use text format basic_html'
   - 'use text format code_html'
   - 'use text format full_html'
