@@ -5,7 +5,7 @@ base theme: vartheme_bs4
 name: 'Vardoc Theme'
 description: 'Based on Bootstrap 4 framework using SASS, and extending Vartheme (Bootstrap 4 - SASS).'
 core_version_requirement: ^8 || ^9
-version: 8.4.0
+version: 4.0.0
 
 regions:
   top_navigation: 'Top Navigation'

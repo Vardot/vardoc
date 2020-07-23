@@ -3,7 +3,7 @@ description: 'Contains Vardoc Basic Page content type configurations.'
 type: module
 core: 8.x
 core_version_requirement: ^8 || ^9
-version: 8.4.0
+version: 4.0.0
 package: Vardoc
 dependencies:
   - varbase_core:varbase_core
