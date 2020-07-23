@@ -24,6 +24,7 @@ permissions:
   - 'access tour'
   - 'access user profiles'
   - 'add content to books'
+  - 'administer book outlines'
   - 'administer faq order'
   - 'administer footer menu items'
   - 'administer main menu items'

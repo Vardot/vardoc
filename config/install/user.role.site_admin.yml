@@ -40,6 +40,7 @@ permissions:
   - 'administer admin menu items'
   - 'administer block classes'
   - 'administer blocks'
+  - 'administer book outlines'
   - 'administer comments'
   - 'administer devel menu items'
   - 'administer entity browsers'
