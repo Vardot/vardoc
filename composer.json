@@ -13,8 +13,8 @@
     }
   ],
   "support": {
-    "issues": "http://drupal.org/project/issues/vardoc",
-    "source": "http://cgit.drupalcode.org/vardoc"
+    "issues": "http://drupal.org/project/issues/varbase",
+    "source": "http://cgit.drupalcode.org/varbase"
   },
   "repositories": {
     "drupal": {
@@ -24,6 +24,10 @@
     "assets": {
       "type": "composer",
       "url": "https://asset-packagist.org"
+    },
+    "drupal-ckeditor-plugins": {
+      "type": "composer",
+      "url": "https://panopoly.gitlab.io/drupal-ckeditor-plugins"
     },
     "antennaio": {
       "type": "package",
@@ -39,13 +43,12 @@
     }
   },
   "require": {
-    "composer/installers": "~1.0",
-    "oomphinc/composer-installers-extender": "~1.0",
+		"composer/installers": "~1.0 || ~2.0",
+    "oomphinc/composer-installers-extender": "~1.0 || ~2.0",
     "cweagans/composer-patches": "~1.0",
-    "drupal/core-composer-scaffold": "^8.8.0",
-    "drupal/drupal-library-installer-plugin": "^0.3",
-    "webflo/drupal-finder": "~1.0",
-    "vardot/varbase": "~8.8.0",
+    "drupal/core-composer-scaffold": "^9",
+    "drupal/core": "~9.0",
+    "vardot/varbase": "~9.0",
     "drupal/fontawesome": "~1.0",
     "drupal/better_normalizers": "~1.0",
     "drupal/votingapi": "~3.0",
@@ -59,18 +62,14 @@
     "drupal/search_api_autocomplete": "^1.2"
   },
   "require-dev": {
-    "drupal/core-dev": "^8.8.0",
-    "drupal/console": "^1.0",
-    "drush/drush": "^9.0",
-    "behat/behat": "~3.0",
-    "phing/phing": "~2.0",
-    "drupal/drupal-extension": "^3.2",
+    "drupal/core-dev": "~9.0",
+    "drush/drush": "~10.0",
+    "drupal/drupal-extension": "~4.0",
     "emuse/behat-html-formatter": "^0.2.0"
   },
   "config": {
     "bin-dir": "bin/",
     "secure-http": false,
-    "optimize-autoloader": true,
     "preferred-install": {
       "drupal/core": "dist"
     }
@@ -86,12 +85,10 @@
     "post-install-cmd": [
       "Varbase\\composer\\ScriptHandler::createRequiredFiles",
       "Varbase\\composer\\ScriptHandler::removeGitDirectories",
-      "./bin/phing push"
     ],
     "post-update-cmd": [
       "Varbase\\composer\\ScriptHandler::createRequiredFiles",
       "Varbase\\composer\\ScriptHandler::removeGitDirectories",
-      "./bin/phing push"
     ],
     "post-drupal-scaffold-cmd": [
       "Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure",
@@ -104,6 +101,9 @@
         "web-root": "docroot/"
       }
     },
+    "branch-alias": {
+      "dev-5.0.x": "5.0.x-dev"
+    },
     "installer-types": [
       "bower-asset",
       "npm-asset"
@@ -115,7 +115,7 @@
       "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
       "docroot/libraries/slick": ["npm-asset/slick-carousel"],
       "docroot/libraries/ace": ["npm-asset/ace-builds"],
-      "docroot/libraries/masonry": ["npm-asset/masonry-layout"],
+      "docroot/libraries/jquery-ui-touch-punch": ["bower-asset/jqueryui-touch-punch"],
       "docroot/libraries/{$name}": [
         "type:drupal-library",
         "type:bower-asset",
@@ -128,26 +128,29 @@
     "drupal-libraries": {
       "library-directory": "docroot/libraries",
       "libraries": [
+        {"name": "objectfitpolyfill", "package": "bower-asset/objectfitpolyfill"},
+        {"name": "chartjs", "package": "bower-asset/chartjs"},
+        {"name": "c3","package": "bower-asset/c3"},
+        {"name": "d3", "package": "bower-asset/d3"},
         {"name": "dropzone","package": "npm-asset/dropzone"},
         {"name": "blazy", "package": "npm-asset/blazy"},
         {"name": "slick", "package": "npm-asset/slick-carousel"},
         {"name": "ace", "package": "npm-asset/ace-builds"},
-        {"name": "chartjs", "package": "bower-asset/chartjs"},
-        {"name": "c3","package": "bower-asset/c3"},
-        {"name": "d3", "package": "bower-asset/d3"},
-        {"name": "masonry", "package": "npm-asset/masonry-layout"},
+        {"name": "jquery-ui-touch-punch", "package": "bower-asset/jqueryui-touch-punch"},
         {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
-        {"name": "swagger-ui", "package": "swagger-api/swagger-ui"}
+        {"name": "swagger-ui", "package": "swagger-api/swagger-ui"},
+        {"name": "fakeobjects", "package": "drupal-ckeditor-plugin/fakeobjects"}
       ]
     },
     "enable-patching": true,
     "composer-exit-on-patch-failure": true,
     "patchLevel": {
-       "drupal/core": "-p2"
+      "drupal/core": "-p2"
     },
     "patches": {
-      "drupal/ds": {
-        "Issue #2975313 Using token with external url to 'onclick attribute on layout wrapper' throws InvalidArgumentException": "https://www.drupal.org/files/issues/2018-10-26/ds-ds_url-2975313-7.patch"
+      "drupal/core": {
+        "Issue #1356276: Allow profiles to define a base/parent profile":
+        "https://www.drupal.org/files/issues/2020-12-13/1356276-633-by-mpotter-balsama-phenaproxima-9.1.0-9.2.x.patch"
       }
     }
   }

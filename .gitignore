@@ -39,3 +39,7 @@ errors.log
 /css/variables.css
 /themes/vardoc_theme/css/variables.css
 /themes/vardoc_theme/css/mixins.css
+
+# Ignore yarn lint dependencies.
+node_modules
+yarn.lock

@@ -1,8 +1,8 @@
 {
   "name": "vardot",
-  "private": true,
-  "version": "8.2.0",
   "description": "Vardoc: Knowledge Base System and Documentation Site",
+  "private": true,
+  "version": "5.0",
   "keywords": [
     "Drupal",
     "Varbase",
@@ -10,17 +10,25 @@
     "Drupal profile",
     "Bootstrap"
   ],
-  "author": "Vardot",
   "license": "GPL-2.0",
-  "scripts": {
-    "install-libraries": "npm install && bower install"
+  "engines": {
+    "yarn": ">= 1.6",
+    "node": ">= 8.11"
   },
-  "dependencies": {
-    "bower": ">=1.8.8"
-  },
-  "license": "GPL-2.0",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:Vardot/vardoc.git"
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "prettier": "^1.14.0",
+    "stylelint": "^13.0.0",
+    "stylelint-checkstyle-formatter": "^0.1.1",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-no-browser-hacks": "^1.2.1",
+    "stylelint-order": "^4.0.0"
   }
 }

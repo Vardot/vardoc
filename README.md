@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Vardot/vardoc.svg?branch=4.0.x-dev)](https://travis-ci.com/github/Vardot/vardoc/builds/156989941) Vardoc 4.0.x-dev
+[![Build Status](https://travis-ci.org/Vardot/vardoc.svg?branch=5.0.x-dev)](https://travis-ci.com/github/Vardot/vardoc/builds/156989941) Vardoc 5.0.x-dev
 # Vardoc: Knowledge Base System and Documentation Site
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Vardoc%20-%20No%20Padding.png)](https://www.drupal.org/project/vardoc)
@@ -49,14 +49,9 @@ Our goal is to bring ease to you when writing and creating a documentation
 
 # Install with Composer
 
-To install the most recent stable release of Vardoc 8.2.x run this command:
+To install the dev version of Vardoc 5.0.x run this command:
 ```
-composer create-project Vardot/vardoc-project:^8.2.6 PROJECT_DIR_NAME --no-dev --no-interaction
-```
-
-To install the dev version of Vardoc 8.2.x run this command:
-```
-composer create-project vardot/vardoc-project:8.2.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
+composer create-project vardot/vardoc-project:5.0.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
 ```
 
 # [Install with Composer](https://github.com/Vardot/vardoc-project)
@@ -68,12 +63,12 @@ This distribution is sponsored and developed by [Vardot](https://www.vardot.com)
 Initial building, ongoing maintenance and development.
 
 
-## [Automated Functional Testing](https://github.com/Vardot/vardoc/blob/8.x-2.x/tests/README.md)
+## [Automated Functional Testing](https://github.com/Vardot/vardoc/blob/5.0.x/tests/README.md)
 
-## [Vardoc Gherkin features](https://github.com/Vardot/vardoc/blob/8.x-2.x/tests/features/vardoc/README.md)
+## [Vardoc Gherkin features](https://github.com/Vardot/vardoc/blob/5.0.x/tests/features/vardoc/README.md)
 
 ## [Varbase Developer Guide](https://docs.varbase.vardot.com)
 
-## [CHANGELOG for Vardoc](https://github.com/Vardot/vardoc/blob/8.x-2.x/CHANGELOG.md)
+## [CHANGELOG for Vardoc](https://github.com/Vardot/vardoc/blob/5.0.x/CHANGELOG.md)
 
-## [General instructions on how to update Vardoc](https://github.com/Vardot/vardoc/blob/8.x-2.x/UPDATE.md)
+## [General instructions on how to update Vardoc](https://github.com/Vardot/vardoc/blob/5.0.x/UPDATE.md)
