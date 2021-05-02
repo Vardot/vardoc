@@ -49,16 +49,16 @@
     "drupal/core-composer-scaffold": "^9",
     "drupal/core": "~9.0",
     "vardot/varbase": "~9.0",
-    "drupal/fontawesome": "~1.0",
+    "drupal/fontawesome": "~2.0",
     "drupal/better_normalizers": "~1.0",
     "drupal/votingapi": "~3.0",
     "drupal/votingapi_widgets": "~1.0",
     "drupal/flag": "~4.0",
     "drupal/sharethis": "~2.0",
-    "drupal/menu_link_attributes": "^1.0",
-    "drupal/book_tree_menu": "^1.0",
-    "drupal/svg_image": "^1.13",
-    "drupal/search_api_autocomplete": "^1.2"
+    "drupal/menu_link_attributes": "~1.0",
+    "drupal/book_tree_menu": "~1.0",
+    "drupal/svg_image": "~1.0",
+    "drupal/search_api_autocomplete": "~1.0"
   },
   "require-dev": {
     "drupal/core-dev": "~9.0",
