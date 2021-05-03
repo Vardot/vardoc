@@ -39,3 +39,5 @@ errors.log
 /css/variables.css
 /themes/vardoc_theme/css/variables.css
 /themes/vardoc_theme/css/mixins.css
+
+/node_modules

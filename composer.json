@@ -143,12 +143,7 @@
     "enable-patching": true,
     "composer-exit-on-patch-failure": true,
     "patchLevel": {
-       "drupal/core": "-p2"
-    },
-    "patches": {
-      "drupal/ds": {
-        "Issue #2975313 Using token with external url to 'onclick attribute on layout wrapper' throws InvalidArgumentException": "https://www.drupal.org/files/issues/2018-10-26/ds-ds_url-2975313-7.patch"
-      }
+      "drupal/core": "-p2"
     }
   }
 }
