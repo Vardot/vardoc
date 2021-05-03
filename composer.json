@@ -150,7 +150,7 @@
     "patches": {
       "drupal/core": {
         "Issue #1356276: Allow profiles to define a base/parent profile":
-        "https://www.drupal.org/files/issues/2020-12-13/1356276-633-by-mpotter-balsama-phenaproxima-9.1.0-9.2.x.patch"
+        "https://www.drupal.org/files/issues/2020-12-15/3143958-6-subprofile-support-9.1.x.patch"
       }
     }
   }
