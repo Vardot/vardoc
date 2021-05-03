@@ -5,6 +5,13 @@
  * Install, update and uninstall functions for the Vardoc installation profile.
  */
 
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\Yaml\Yaml;
+use Drupal\Core\Config\InstallStorage;
+use Drupal\Core\Config\StorageInterface;
+use Drupal\Core\Config\FileStorage;
+use Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager;
+
 /**
  * Implements hook_install().
  *
