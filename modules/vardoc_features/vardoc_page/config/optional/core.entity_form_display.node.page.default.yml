@@ -1,4 +1,3 @@
-uuid: be10157d-87f6-4965-9969-acdad2567a38
 langcode: en
 status: true
 dependencies:
@@ -46,8 +45,6 @@ third_party_settings:
         formatter: open
         required_fields: true
       label: 'Basic information'
-_core:
-  default_config_hash: fz0THOAxPSfXqnsRrHKKMXQ-dLkhItE3PFh4n-nTPNU
 id: node.page.default
 targetEntityType: node
 bundle: page

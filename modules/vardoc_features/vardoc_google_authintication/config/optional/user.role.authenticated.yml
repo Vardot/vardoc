@@ -1,9 +1,6 @@
-uuid: a6331030-bd39-4e22-9ad8-e6b9b2440914
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: lgebQmNSdx9o8GwBUjkJaGAzoWIbLcqCn0K9N9hm-F8
 id: authenticated
 label: 'Authenticated user'
 weight: -9

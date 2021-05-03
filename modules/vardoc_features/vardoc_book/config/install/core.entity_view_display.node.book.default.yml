@@ -1,4 +1,3 @@
-uuid: db033f46-32a2-496b-84a8-f657f43a9792
 langcode: en
 status: true
 dependencies:
@@ -51,8 +50,6 @@ third_party_settings:
         - field_external_links
         - flag_favorite
         - sharethis
-_core:
-  default_config_hash: LvzQP-BR_lfMAsYRR0NGmBQk1-5uZtNOFZHIFd82eaY
 id: node.book.default
 targetEntityType: node
 bundle: book
