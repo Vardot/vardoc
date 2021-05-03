@@ -459,19 +459,6 @@ img {
   vertical-align: baseline;
 }
 
-.modal-content .panels-add-content-modal {
-  background: white;
-  margin-left: 175px;
-  padding-left: 0;
-}
-
-.modal-content .panels-add-content-modal .panels-modal-add-category {
-  margin-right: 5px;
-}
-
-.modal-content .panels-add-content-modal .panels-section-column-body {
-  padding: 0 10px;
-}
 
 .maintenance-page #page {
   text-align: center;

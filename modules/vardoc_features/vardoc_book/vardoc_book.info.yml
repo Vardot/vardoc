@@ -1,6 +1,6 @@
 name: vardoc_book
 type: module
-core: 8.x
+core_version_requirement: ^8 || ^9
 dependencies:
   - advanced_text_formatter
   - block
@@ -23,8 +23,6 @@ dependencies:
   - maxlength
   - metatag
   - node
-  - page_manager
-  - panels
   - path
   - smart_trim
   - statistics

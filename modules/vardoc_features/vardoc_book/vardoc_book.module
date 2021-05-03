@@ -18,3 +18,14 @@ function vardoc_book_editor_js_settings_alter(array &$settings) {
   ];
   $settings['editor']['formats']['full_html']['editorSettings'] += $extra_editor_settings;
 }
+
+/**
+ * Implements hook_theme().
+ */
+function vardoc_book_menu_theme() {
+  return [
+    'book_tree' => [
+	  'template' => 'book-tree',
+    ],
+  ];
+}

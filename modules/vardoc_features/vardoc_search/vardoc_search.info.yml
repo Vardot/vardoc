@@ -1,6 +1,7 @@
 name: 'Vardoc search'
 type: module
-core: 8.x
+core_version_requirement: ^8 || ^9
+package: Vardoc
 dependencies:
   - block
   - block_class

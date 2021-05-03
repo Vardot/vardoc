@@ -36,6 +36,5 @@ permissions:
   - 'edit own page content'
   - 'edit own varbase_heroslider_media content'
   - 'have total control'
-  - 'use panels dashboard'
   - 'use yoast seo'
   - 'view the administration theme'

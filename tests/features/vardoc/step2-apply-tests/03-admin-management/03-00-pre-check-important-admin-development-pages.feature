@@ -30,22 +30,6 @@ So that I can use them after the install or update.
       And I should see "Webforms"
 
   @local @development @staging @production
-  Scenario: Check the structure page.
-     When I go to "/admin/structure/page_manager"
-      And I wait
-     Then I should see "Pages"
-      And I should see "Homepage"
-      And I should see "Total Control dashboard"
-
-  @local @development @staging @production
-  Scenario: Check the Page Manager main page.
-     When I go to "/admin/structure/page_manager"
-      And I wait
-     Then I should see "Pages"
-      And I should see "Homepage"
-      And I should see "Total Control dashboard"
-
-  @local @development @staging @production
   Scenario: Check the views page.
      When I go to "/admin/structure/views"
       And I wait

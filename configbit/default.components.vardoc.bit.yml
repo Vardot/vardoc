@@ -9,12 +9,12 @@ config_bit:
     install_default_components: true
     list:
       dependencies:
-        # Enable listed modules in order at this installation step.
-        - libraries
         # Enable listed Varbase modules in order at this installation step.
         - varbase_core
         - varbase_media
         - varbase_editor
+        - varbase_layout_builder
+        - vlplb
         - varbase_admin
         - varbase_email
         - varbase_security
@@ -29,4 +29,4 @@ config_bit:
         - vardoc_profile
         - vardoc_search
         - vardoc_google_authintication
-        - tools
+        - vardoc_tools

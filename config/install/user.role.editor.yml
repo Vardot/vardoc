@@ -17,7 +17,6 @@ permissions:
   - 'access images_browser entity browser pages'
   - 'access in-place editing'
   - 'access media overview'
-  - 'access panels in-place editing'
   - 'access shortcuts'
   - 'access site in maintenance mode'
   - 'access toolbar'

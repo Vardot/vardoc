@@ -534,30 +534,6 @@ img {
  max-width: 100%;
 }
 
-// Overrides Panels & Content Modal.
-.ajax-progress-throbber {
-  background: transparent;
-  min-height: 0;
-  opacity: 1;
-  padding: 0;
-  width: auto;
-  vertical-align: baseline;
-}
-
-.modal-content .panels-add-content-modal {
-  background: white;
-  margin-left: 175px;
-  padding-left: 0;
-
-  .panels-modal-add-category {
-    margin-right: 5px;
-  }
-
-  .panels-section-column-body {
-    padding: 0 10px;
-  }
-}
-
 .maintenance-page {
   #page {
     text-align: center;
