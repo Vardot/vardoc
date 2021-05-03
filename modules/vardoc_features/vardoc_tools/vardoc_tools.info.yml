@@ -1,22 +1,10 @@
-name: Vardoc Tools
+name: 'Vardoc Tools'
+description: 'Provides tools configs and Tool contnet under the Tools section.'
 type: module
 core_version_requirement: ^8 || ^9
 package: Vardoc
 dependencies:
-  - ds
-  - entityqueue
-  - field
-  - field_group
-  - file
-  - image
-  - link
-  - menu_ui
-  - node
-  - path
-  - pathauto
-  - rabbit_hole
-  - svg_image
-  - taxonomy
-  - user
-  - views
-  - views_bootstrap
+  - varbase_core:varbase_core
+  - varbase_media:varbase_media
+  - varbase_seo:varbase_seo
+  - svg_image:svg_image

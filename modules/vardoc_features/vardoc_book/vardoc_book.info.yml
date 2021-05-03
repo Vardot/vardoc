@@ -1,36 +1,15 @@
 name: vardoc_book
+description: 'Provides Book managment and default configs for Vardoc.'
 type: module
 core_version_requirement: ^8 || ^9
 dependencies:
-  - advanced_text_formatter
-  - block
-  - block_class
-  - block_content
-  - book
-  - comment
-  - content_moderation
-  - ctools
-  - ds
-  - entityqueue
-  - field
-  - field_group
-  - file
-  - flag
-  - focal_point
-  - image
-  - length_indicator
-  - link
-  - maxlength
-  - metatag
-  - node
-  - path
-  - smart_trim
-  - statistics
-  - sharethis
-  - system
-  - taxonomy
-  - text
-  - user
-  - views
-  - views_bootstrap
-  - votingapi_widgets
+  - varbase_core:varbase_core
+  - varbase_media:varbase_media
+  - varbase_editor:varbase_editor
+  - varbase_seo:varbase_seo
+  - drupal:book
+  - drupal:comment
+  - drupal:statistics
+  - flag:flag
+  - sharethis:sharethis
+  - votingapi_widgets:votingapi_widgets

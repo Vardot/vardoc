@@ -11,13 +11,15 @@ dependencies:
     - field.field.node.book.field_rating
     - field.field.node.book.field_related_content
     - node.type.book
-    - workflows.workflow.editorial
   module:
+    - advanced_text_formatter
     - comment
     - content_moderation
     - field_group
     - file
+    - length_indicator
     - link
+    - maxlength
     - metatag
     - path
     - text
@@ -173,7 +175,18 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      length_indicator:
+        indicator: true
+        indicator_opt:
+          optimin: 10
+          optimax: 15
+          tolerance: 5
+      maxlength:
+        maxlength_js: null
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+      advanced_text_formatter:
+        show_token_tree: 0
   uid:
     type: entity_reference_autocomplete
     weight: 1
