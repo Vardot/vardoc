@@ -1,4 +1,3 @@
-uuid: be90c082-ddda-4e8d-9af2-da7ed1ea38c6
 langcode: en
 status: true
 dependencies:
@@ -8,8 +7,6 @@ dependencies:
   module:
     - node
     - search_api
-_core:
-  default_config_hash: PDT0D_LZLTBC6QpIIa9Tcd5AjdQtYYyPDJjAcgSEaCU
 id: book
 name: Book
 description: 'Default index for Book content type.'

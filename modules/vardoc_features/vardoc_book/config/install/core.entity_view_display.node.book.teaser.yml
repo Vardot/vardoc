@@ -1,4 +1,3 @@
-uuid: d7534a15-2f07-4ca7-b432-431abf197db8
 langcode: en
 status: true
 dependencies:
@@ -19,8 +18,6 @@ dependencies:
     - taxonomy
     - text
     - user
-_core:
-  default_config_hash: ETeAn9dkDpiwdslfJIO_CuUl6g1K7wXaGyrTFFDfq0s
 id: node.book.teaser
 targetEntityType: node
 bundle: book

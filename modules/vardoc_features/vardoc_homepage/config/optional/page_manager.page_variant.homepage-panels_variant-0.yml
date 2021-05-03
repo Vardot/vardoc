@@ -1,4 +1,3 @@
-uuid: 5cf41120-00e4-41e0-854d-10b61d18741c
 langcode: en
 status: true
 dependencies:
@@ -13,8 +12,6 @@ dependencies:
     - block_content
     - panels
     - views
-_core:
-  default_config_hash: fw0mrRWfLkoebYmW504f38eXO7KAyGz4URIPT1fh_EE
 id: homepage-panels_variant-0
 label: Homepage
 variant: panels_variant

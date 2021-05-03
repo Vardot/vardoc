@@ -1,9 +1,6 @@
-uuid: cc06fe8b-52b3-472b-b56d-1daad4d5cc0a
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: 2V_eqUxtH1W5KFLYMaixB94JOxrOumEawClIZ94p6BE
 id: site_admin
 label: 'Site Admin'
 weight: -5

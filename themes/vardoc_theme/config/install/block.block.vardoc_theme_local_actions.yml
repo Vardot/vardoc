@@ -1,11 +1,8 @@
-uuid: fab738be-8a12-42da-ab05-21e80659dc60
 langcode: en
 status: true
 dependencies:
   theme:
     - vardoc_theme
-_core:
-  default_config_hash: w9XzDB0hMkIorQzLK2YKk8i9jcjkdEyPZr2Lm-KrvXc
 id: vardoc_theme_local_actions
 theme: vardoc_theme
 region: content_top

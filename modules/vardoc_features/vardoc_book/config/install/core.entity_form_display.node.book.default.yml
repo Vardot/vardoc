@@ -1,4 +1,3 @@
-uuid: 3da6cbda-eb84-4b45-952d-b990aa080452
 langcode: en
 status: true
 dependencies:
@@ -85,8 +84,6 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: Link
-_core:
-  default_config_hash: arMygYcblHXGjm1oCdqAhmq_cBQeYDR4zvArXAaL8HM
 id: node.book.default
 targetEntityType: node
 bundle: book

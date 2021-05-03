@@ -1,4 +1,3 @@
-uuid: f39c5d3d-1557-49ef-9751-54fc9b5dada9
 langcode: en
 status: true
 dependencies:
@@ -9,8 +8,6 @@ dependencies:
   module:
     - search_api
     - user
-_core:
-  default_config_hash: EoUu2lzfnDIm9RuaJVQQegg_K691pdy608GHtBEM9lk
 id: book_search
 label: 'Book Search'
 module: views

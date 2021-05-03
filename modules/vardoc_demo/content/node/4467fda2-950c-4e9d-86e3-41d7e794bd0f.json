@@ -23,7 +23,7 @@
             "value": 10
         }
     ],
-    "uuid": [
+    "": [
         {
             "value": "4467fda2-950c-4e9d-86e3-41d7e794bd0f"
         }
@@ -50,7 +50,7 @@
                         "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
                     }
                 },
-                "uuid": [
+                "": [
                     {
                         "value": "a79b1dcd-d458-40be-8834-7f2f2b68ddaa"
                     }
@@ -67,7 +67,7 @@
                         "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
                     }
                 },
-                "uuid": [
+                "": [
                     {
                         "value": "a79b1dcd-d458-40be-8834-7f2f2b68ddaa"
                     }

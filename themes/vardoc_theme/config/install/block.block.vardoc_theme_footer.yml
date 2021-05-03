@@ -1,4 +1,3 @@
-uuid: 0568b52d-7ba6-49da-a86e-3dcfef02798d
 langcode: en
 status: true
 dependencies:
@@ -12,8 +11,6 @@ dependencies:
 third_party_settings:
   block_class:
     classes: 'col-lg-6 col-xs-12'
-_core:
-  default_config_hash: hMCdwpxiCSds-uvlEsdGWbovyqZwUdFv-FczHPjyQvQ
 id: vardoc_theme_footer
 theme: vardoc_theme
 region: footer

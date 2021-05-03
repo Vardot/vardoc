@@ -16,5 +16,3 @@ type: block
 type_label: 'Block field'
 entities:
   node: node
-_core:
-  default_config_hash: xtOpjW7WYmSovB8SHD3UvMsdl5GD7BJyqWZD14LeKmc

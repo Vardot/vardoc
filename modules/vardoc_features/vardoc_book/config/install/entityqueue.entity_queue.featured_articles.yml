@@ -1,11 +1,8 @@
-uuid: 24b01047-9193-4a2d-acc7-498b2b635b82
 langcode: en
 status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: Dh8kUjnRIFg0oW6mqou00oXQa4ddBbIDBuC5CuhFqd8
 id: featured_articles
 label: Homepage-MIA
 handler: simple
