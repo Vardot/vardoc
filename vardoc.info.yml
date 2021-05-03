@@ -1,9 +1,8 @@
 name: Vardoc
 type: profile
 description: 'Vardoc: Knowledge Base System and Documentation Site'
-core: 8.x
 core_version_requirement: ^8 || ^9
-version: 4.0.x-dev
+version: 5.0.x-dev
 base profile: varbase
 install:
   - system
@@ -23,16 +22,12 @@ install:
   - menu_block
   - block_content
 themes:
-  # Contrib themes.
-  - adminimal_theme
-  - bootstrap
-  - vartheme
+  - claro
   - vartheme_claro
-  - vartheme_admin
-
-  # Custom themes.
+  - bootstrap_barrio
+  - vartheme_bs4
   - vardoc_theme
 distribution:
   name: Vardoc
   install:
-    theme: vartheme_admin
+    theme: vartheme_claro
