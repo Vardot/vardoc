@@ -1,7 +1,5 @@
-core: 8.x
 type: theme
 base theme: vartheme_bs4
-
 name: 'Vardoc Theme'
 description: 'Based on Bootstrap 4 framework using SASS, and extending Vartheme (Bootstrap 4 - SASS).'
 core_version_requirement: ^8 || ^9
@@ -39,18 +37,11 @@ libraries:
   # vardoc_theme Varbase Bootstrap Paragraphs colors style.
   - vardoc_theme/vbp-colors
 
-  # vardoc_theme Varbase Layout Builder colors style.
-  - vardoc_theme/vlb-colors
-
   # vardoc_theme Better Login style.
   - vardoc_theme/betterlogin
 
   # vardoc_theme Varbase Media Hero Slider style.
   - vardoc_theme/heroslider
-
-  # Icons: Uncomment the following if you want to use icons.
-  #- vardoc_theme/material_design_icons
-  #- vardoc_theme/fontawesome
 
   # Fonts: Uncomment the following if you want to use the roboto font.
   #- vardoc_theme/roboto
