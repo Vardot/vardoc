@@ -1,4 +1,3 @@
-uuid: efcc1c07-3f92-4890-b7e8-479d2f7a1042
 langcode: en
 status: true
 dependencies:
@@ -6,8 +5,6 @@ dependencies:
     - help
   theme:
     - vardoc_theme
-_core:
-  default_config_hash: v7FxDmXnOAETxnHNFbA8Jhb7WMb7v9jhLRVhpFkQFM4
 id: vardoc_theme_help
 theme: vardoc_theme
 region: help

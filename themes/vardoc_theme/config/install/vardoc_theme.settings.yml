@@ -68,8 +68,6 @@ bootstrap_barrio_icons: fontawesome
 bootstrap_barrio_system_messages: ''
 bootstrap_barrio_table_style: ''
 bootstrap_barrio_table_head: ''
-_core:
-  default_config_hash: 3hpifCMU4YMVEy380w-qTXjkLHlszAk8ObqSQjN_mds
 bootstrap_barrio_region_clean_header_right: 0
 bootstrap_barrio_region_class_header_right: ''
 bootstrap_barrio_region_clean_content_top: 0

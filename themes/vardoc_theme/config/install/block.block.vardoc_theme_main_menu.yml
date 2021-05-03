@@ -1,4 +1,3 @@
-uuid: c0301a82-a237-4584-834d-5498358a0663
 langcode: en
 status: true
 dependencies:
@@ -8,8 +7,6 @@ dependencies:
     - system
   theme:
     - vardoc_theme
-_core:
-  default_config_hash: 2Z65CBDTIi0ZbNqpl7T5sGGIJcQYgeubxn2T4wtY8S0
 id: vardoc_theme_main_menu
 theme: vardoc_theme
 region: navigation_collapsible
