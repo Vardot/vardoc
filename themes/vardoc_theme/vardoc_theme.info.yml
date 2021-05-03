@@ -21,9 +21,6 @@ regions:
   page_top: 'Page top'
   page_bottom: 'Page bottom'
 
-ckeditor_stylesheets:
-  - css/theme/wysiwyg.theme.css
-
 libraries:
   # Bootstrap styles and scripts libraries.
   - vardoc_theme/bootstrap-styles
