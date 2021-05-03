@@ -5,8 +5,7 @@ core_version_requirement: ^8 || ^9
 package: Vardoc
 dependencies:
   - varbase_core:varbase_core
-  - varbase_search:varbase_search
-  - vardoc:vardoc_book
   - search_api:search_api
   - search_api_autocomplete:search_api_autocomplete
   - search_api_db:search_api_db
+  - vardoc:vardoc_book
