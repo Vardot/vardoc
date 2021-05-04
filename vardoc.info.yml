@@ -20,6 +20,11 @@ install:
   - image
   - views
   - file
+  - tracker
+  - aggregator
+  - menu_block
+  - block_content
+  - block_class
 themes:
   - bootstrap_barrio
   - vartheme_bs4
