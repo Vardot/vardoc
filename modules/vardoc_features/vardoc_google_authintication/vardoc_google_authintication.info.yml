@@ -2,8 +2,8 @@ name: 'Vardoc google authintication'
 description: 'Provides Google authentication (login) service for Vardoc.'
 type: module
 core_version_requirement: ^8 || ^9
+version: 5.0.x-dev
 package: Vardoc
-project: vardoc
 dependencies:
   - varbase_core:varbase_core
   - social_auth:social_auth

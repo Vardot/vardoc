@@ -2,6 +2,7 @@ name: 'Vardoc Tools'
 description: 'Provides tools configs and Tool contnet under the Tools section.'
 type: module
 core_version_requirement: ^8 || ^9
+version: 5.0.x-dev
 package: Vardoc
 dependencies:
   - varbase_core:varbase_core
