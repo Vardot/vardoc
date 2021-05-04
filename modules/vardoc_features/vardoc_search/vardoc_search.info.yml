@@ -6,7 +6,8 @@ version: 5.0.x-dev
 package: Vardoc
 dependencies:
   - varbase_core:varbase_core
-  - search_api:search_api
-  - search_api_autocomplete:search_api_autocomplete
-  - search_api_db:search_api_db
+  - varbase_media:varbase_media
   - vardoc:vardoc_book
+  - drupal:datetime
+  - drupal:history
+  - flag:flag

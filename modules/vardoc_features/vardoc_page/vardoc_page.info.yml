@@ -11,3 +11,4 @@ dependencies:
   - vardoc:vardoc_book
   - drupal:rdf
   - drupal:menu_ui
+  - pathauto:pathauto
