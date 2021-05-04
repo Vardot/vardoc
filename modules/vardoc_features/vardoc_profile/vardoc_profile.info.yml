@@ -11,4 +11,4 @@ dependencies:
   - drupal:datetime
   - drupal:history
   - flag:flag
-  
+  - svg_image:svg_image
