@@ -5,8 +5,16 @@
  * Enables modules and site configuration for a Vardoc site installation.
  */
 
+use Symfony\Component\Yaml\Yaml;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\language\Entity\ConfigurableLanguage;
 use Drupal\varbase\Config\ConfigBit;
+use Drupal\varbase\Form\ConfigureMultilingualForm;
+use Drupal\varbase\Form\AssemblerForm;
+use Drupal\varbase\Form\DevelopmentToolsAssemblerForm;
+use Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager;
+use Drupal\node\Entity\Node;
+use Drupal\path_alias\Entity\PathAlias;
 use Drupal\vardoc\Form\VardocAssemblerForm;
 
 /**
@@ -64,6 +72,8 @@ function vardoc_install_tasks_alter(&$tasks, $install_state) {
  *   The batch job definition.
  */
 function vardoc_assemble_extra_components(array &$install_state) {
+  include_once drupal_get_path('profile', 'varbase') . '/varbase.profile';
+
   // Default Vardoc components, which must be installed.
   $default_components = ConfigBit::getList('configbit/default.components.vardoc.bit.yml', 'install_default_components', TRUE, 'dependencies', 'profile', 'vardoc');
 
@@ -112,14 +122,7 @@ function vardoc_assemble_extra_components(array &$install_state) {
 
             // Added the selected extra feature configs to the batch process
             // with the same function name in the formbit.
-            $batch['operations'][] = [
-              'varbase_save_editable_config_values',
-              [
-                $extra_feature_key,
-                $formbit_file_name,
-                $selected_extra_features_configs,
-              ],
-            ];
+            $batch['operations'][] = ['varbase_save_editable_config_values', (array) [$extra_feature_key, $formbit_file_name, $selected_extra_features_configs]];
           }
         }
       }
