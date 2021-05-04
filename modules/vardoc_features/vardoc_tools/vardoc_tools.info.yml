@@ -1,6 +1,10 @@
-name: Tools
+name: 'Vardoc Tools'
+description: 'Provides tools configs and Tool contnet under the Tools section.'
 type: module
 core: 8.x
+core_version_requirement: ^8 || ^9
+version: 4.0.x-dev
+package: Vardoc
 dependencies:
   - ds
   - entityqueue
