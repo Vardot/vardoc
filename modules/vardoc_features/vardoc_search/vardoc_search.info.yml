@@ -5,9 +5,13 @@ core_version_requirement: ^8 || ^9
 version: 5.0.x-dev
 package: Vardoc
 dependencies:
-  - varbase_core:varbase_core
-  - varbase_media:varbase_media
+  - drupal:node
+  - drupal:block
+  - drupal:user
+  - drupal:views
+  - block_class:block_class
+  - ds:ds
+  - search_api:search_api
+  - search_api_autocomplete:search_api_autocomplete
+  - search_api_db:search_api_db
   - vardoc:vardoc_book
-  - drupal:datetime
-  - drupal:history
-  - flag:flag
