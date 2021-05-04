@@ -5,7 +5,6 @@ dependencies:
     - page_manager.page.homepage
     - views.view.book
     - views.view.book_quicklinks
-    - views.view.tools
   content:
     - 'block_content:basic:450ff25d-2986-4594-b962-e47994447126'
   module:
