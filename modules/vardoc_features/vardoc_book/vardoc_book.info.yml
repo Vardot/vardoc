@@ -15,3 +15,4 @@ dependencies:
   - flag:flag
   - sharethis:sharethis
   - votingapi_widgets:votingapi_widgets
+  - vardoc:vardoc_search
