@@ -5,16 +5,8 @@
  * Enables modules and site configuration for a Vardoc site installation.
  */
 
-use Symfony\Component\Yaml\Yaml;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\language\Entity\ConfigurableLanguage;
 use Drupal\varbase\Config\ConfigBit;
-use Drupal\varbase\Form\ConfigureMultilingualForm;
-use Drupal\varbase\Form\AssemblerForm;
-use Drupal\varbase\Form\DevelopmentToolsAssemblerForm;
-use Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager;
-use Drupal\node\Entity\Node;
-use Drupal\path_alias\Entity\PathAlias;
 use Drupal\vardoc\Form\VardocAssemblerForm;
 
 /**
