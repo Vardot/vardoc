@@ -8,6 +8,7 @@ dependencies:
   - varbase_core:varbase_core
   - varbase_media:varbase_media
   - varbase_seo:varbase_seo
+  - varbase_workflow:varbase_workflow
   - vardoc:vardoc_book
   - drupal:rdf
   - drupal:menu_ui

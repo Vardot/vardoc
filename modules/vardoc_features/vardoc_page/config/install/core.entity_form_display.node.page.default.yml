@@ -6,45 +6,14 @@ dependencies:
     - field.field.node.page.field_meta_tags
     - field.field.node.page.field_yoast_seo
     - node.type.page
-    - workflows.workflow.editorial
   module:
     - advanced_text_formatter
-    - content_moderation
-    - field_group
     - length_indicator
     - maxlength
     - metatag
     - path
     - text
-third_party_settings:
-  field_group:
-    group_tabs:
-      children:
-        - group_basic_information
-      parent_name: ''
-      weight: 0
-      format_type: tabs
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        direction: horizontal
-      label: Tabs
-    group_basic_information:
-      children:
-        - title
-        - body
-      parent_name: group_tabs
-      weight: 13
-      format_type: tab
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        formatter: open
-        required_fields: true
-      label: 'Basic information'
+    - yoast_seo
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -57,7 +26,6 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-      show_summary: false
     third_party_settings: {  }
     region: content
   created:
@@ -67,18 +35,25 @@ content:
     third_party_settings: {  }
     region: content
   field_meta_tags:
-    weight: 6
-    settings:
-      sidebar: true
+    weight: 26
+    settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
     region: content
-  moderation_state:
-    type: moderation_state_default
-    weight: 8
-    settings: {  }
-    region: content
+  field_yoast_seo:
+    weight: 27
+    settings:
+      body: body
     third_party_settings: {  }
+    type: yoast_seo_widget
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+    region: content
   path:
     type: path
     weight: 5
@@ -89,7 +64,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 120
     region: content
     third_party_settings: {  }
   title:
@@ -102,9 +77,9 @@ content:
       length_indicator:
         indicator: true
         indicator_opt:
-          optimin: 10
-          optimax: 15
-          tolerance: 5
+          optimin: 15
+          optimax: 50
+          tolerance: 10
       maxlength:
         maxlength_js: null
         maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
@@ -113,9 +88,9 @@ content:
     region: content
   translation:
     weight: 6
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 3
@@ -123,15 +98,13 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
     region: content
   url_redirects:
-    weight: 7
+    weight: 50
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_yoast_seo: true
   promote: true
   sticky: true

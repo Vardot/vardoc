@@ -13,8 +13,6 @@ config_bit:
         - varbase_core
         - varbase_media
         - varbase_editor
-        - varbase_layout_builder
-        - vlplb
         - varbase_admin
         - varbase_email
         - varbase_security
@@ -23,6 +21,8 @@ config_bit:
         - varbase_total_control
         - varbase_tour
         - varbase_faqs
+        - varbase_layout_builder
+        - vlplb
         # Enable default Vardoc features.
         - vardoc_book
         - vardoc_page
