@@ -25,8 +25,8 @@ install:
 themes:
   # Contrib themes.
   - adminimal_theme
-  - bootstrap
-  - vartheme
+  - bootstrap_barrio
+  - vartheme_bs4
   - vartheme_claro
   - vartheme_admin
 
