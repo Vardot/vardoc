@@ -23,10 +23,10 @@ config_bit:
         - varbase_tour
         - varbase_faqs
         # Enable default Vardoc features.
-        - vardoc_homepage
         - vardoc_book
         - vardoc_page
         - vardoc_profile
         - vardoc_search
         - vardoc_google_authintication
         - vardoc_tools
+        - vardoc_homepage
