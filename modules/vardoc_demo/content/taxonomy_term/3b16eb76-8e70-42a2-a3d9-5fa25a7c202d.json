@@ -113,38 +113,6 @@
     "metatag": [
         {
             "value": {
-                "schema_web_site_type": "WebSite",
-                "title": "Sales and Marketing | Vardot Knowledge Base",
-                "twitter_cards_type": "summary",
-                "schema_web_site_name": "Vardot Knowledge Base",
-                "canonical_url": "http:\/\/default\/node",
-                "og_site_name": "Vardot Knowledge Base",
-                "shortlink": "http:\/\/default\/node",
-                "twitter_cards_title": "| Vardot Knowledge Base",
-                "og_type": "website",
-                "schema_web_site_url": "http:\/\/default\/",
-                "google_plus_image_0": "http:\/\/default\/themes\/custom\/kb_bs4\/share-image.png",
-                "og_url": "http:\/\/default\/node",
-                "og_title": "| Vardot Knowledge Base",
-                "generator": "Varbase",
-                "referrer": "origin",
-                "rights": "\u00a92020 Vardot Knowledge Base. All rights reserved.",
-                "twitter_cards_page_url": "http:\/\/default\/node",
-                "twitter_cards_image": "http:\/\/default\/themes\/custom\/kb_bs4\/share-image.png",
-                "og_image_0": "http:\/\/default\/themes\/custom\/kb_bs4\/share-image.png",
-                "schema_web_site_publisher": {
-                    "@type": "Organization",
-                    "name": "Vardot Knowledge Base",
-                    "url": "http:\/\/default\/",
-                    "logo": {
-                        "@type": "ImageObject",
-                        "url": "http:\/\/default\/themes\/custom\/kb_bs4\/logo.png"
-                    }
-                },
-                "og_image_url_0": "http:\/\/default\/themes\/custom\/kb_bs4\/share-image.png",
-                "mobileoptimized_0": "width",
-                "handheldfriendly_0": "true",
-                "apple_mobile_web_app_capable": "yes"
             }
         }
     ],

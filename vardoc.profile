@@ -207,7 +207,7 @@ function vardoc_assemble_extra_components(array &$install_state) {
  * @return array
  *   A renderable array with a redirect header.
  */
-function varbase_after_install_finished(array &$install_state) {
+function vardoc_after_install_finished(array &$install_state) {
 
   // Mark all updates by the update helper checklist as successful on install.
   if (\Drupal::moduleHandler()->moduleExists('update_helper_checklist')) {
@@ -265,6 +265,9 @@ function varbase_after_install_finished(array &$install_state) {
   }
 
   global $base_url;
+
+  // After install direction.
+  $after_install_direction = $base_url . '/?welcome';
 
   install_finished($install_state);
   $output = [];

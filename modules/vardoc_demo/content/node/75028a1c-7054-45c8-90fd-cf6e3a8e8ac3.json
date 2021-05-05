@@ -295,34 +295,6 @@
     "metatag": [
         {
             "value": {
-                "schema_web_site_type": "WebSite",
-                "title": "Slack | Vardoc Knowledge Base",
-                "twitter_cards_type": "summary_large_image",
-                "schema_web_site_name": "Vardoc Knowledge Base",
-                "canonical_url": "http:\/\/default\/node",
-                "og_site_name": "Vardoc Knowledge Base",
-                "shortlink": "http:\/\/default\/node",
-                "schema_web_site_url": "http:\/\/default\/",
-                "og_type": "article",
-                "twitter_cards_title": "| Vardoc Knowledge Base",
-                "og_url": "http:\/\/default\/node",
-                "og_title": "| Vardoc Knowledge Base",
-                "generator": "Varbase",
-                "referrer": "origin",
-                "rights": "\u00a92020 Vardoc Knowledge Base. All rights reserved.",
-                "twitter_cards_page_url": "http:\/\/default\/node",
-                "schema_web_site_publisher": {
-                    "@type": "Organization",
-                    "name": "Vardoc Knowledge Base",
-                    "url": "http:\/\/default\/",
-                    "logo": {
-                        "@type": "ImageObject",
-                        "url": "http:\/\/default\/themes\/custom\/kb_bs4\/logo.png"
-                    }
-                },
-                "mobileoptimized_0": "width",
-                "handheldfriendly_0": "true",
-                "apple_mobile_web_app_capable": "yes"
             }
         }
     ],

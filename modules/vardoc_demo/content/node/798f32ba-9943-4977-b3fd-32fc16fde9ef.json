@@ -209,38 +209,6 @@
     "metatag": [
         {
             "value": {
-                "schema_web_site_type": "WebSite",
-                "title": "Managing Content in Vardoc | Vardoc",
-                "shortlink": "http:\/\/default\/%3Cnone%3E",
-                "og_site_name": "Vardoc",
-                "schema_web_site_name": "Vardoc",
-                "canonical_url": "http:\/\/default\/%3Cnone%3E",
-                "twitter_cards_type": "summary_large_image",
-                "description": "Vardoc utilizes the powerful Book feature\u00a0to create\u00a0hierarchical content that flows logically.\n\nA book is a set of pages tied together in a hierarchical sequence, perhaps with chapters, sections, subsections, and so on. You can use books for manuals, site resource guides, or whatever you'd like.",
-                "twitter_cards_description": "Vardoc utilizes the powerful Book feature\u00a0to create\u00a0hierarchical content that flows logically.\n\nA book is a set of pages tied together in a hierarchical sequence, perhaps with chapters, sections, subsections, and so on. You can use books for manuals, site resource guides, or whatever you'd like.",
-                "schema_web_site_url": "http:\/\/default\/",
-                "og_type": "article",
-                "twitter_cards_title": "| Vardoc",
-                "og_url": "http:\/\/default\/%3Cnone%3E",
-                "abstract": "Vardoc utilizes the powerful Book feature\u00a0to create\u00a0hierarchical content that flows logically.\n\nA book is a set of pages tied together in a hierarchical sequence, perhaps with chapters, sections, subsections, and so on. You can use books for manuals, site resource guides, or whatever you'd like.",
-                "generator": "Varbase",
-                "og_title": "| Vardoc",
-                "referrer": "origin",
-                "rights": "\u00a92018 Vardoc. All rights reserved.",
-                "og_description": "Vardoc utilizes the powerful Book feature\u00a0to create\u00a0hierarchical content that flows logically.\n\nA book is a set of pages tied together in a hierarchical sequence, perhaps with chapters, sections, subsections, and so on. You can use books for manuals, site resource guides, or whatever you'd like.",
-                "twitter_cards_page_url": "http:\/\/default\/%3Cnone%3E",
-                "schema_web_site_publisher": {
-                    "@type": "Organization",
-                    "name": "Vardoc",
-                    "url": "http:\/\/default\/",
-                    "logo": {
-                        "@type": "ImageObject",
-                        "url": "http:\/\/default\/logo.png"
-                    }
-                },
-                "mobileoptimized": "width",
-                "handheldfriendly": "true",
-                "apple_mobile_web_app_capable": "yes"
             }
         }
     ],

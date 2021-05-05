@@ -169,38 +169,6 @@
     "metatag": [
         {
             "value": {
-                "schema_web_site_type": "WebSite",
-                "title": "How to Get Support | Vardoc",
-                "shortlink": "http:\/\/default\/%3Cnone%3E",
-                "og_site_name": "Vardoc",
-                "schema_web_site_name": "Vardoc",
-                "canonical_url": "http:\/\/default\/%3Cnone%3E",
-                "twitter_cards_type": "summary_large_image",
-                "description": "Vardoc is Open Source\n\nVardoc is developed by a core team of experienced Drupal developments and is funded and supported by Vardot, a leading Drupal agency with offices in USA, Egypt, and Jordan.\u00a0",
-                "twitter_cards_description": "Vardoc is Open Source\n\nVardoc is developed by a core team of experienced Drupal developments and is funded and supported by Vardot, a leading Drupal agency with offices in USA, Egypt, and Jordan.\u00a0",
-                "schema_web_site_url": "http:\/\/default\/",
-                "og_type": "article",
-                "twitter_cards_title": "| Vardoc",
-                "og_url": "http:\/\/default\/%3Cnone%3E",
-                "abstract": "Vardoc is Open Source\n\nVardoc is developed by a core team of experienced Drupal developments and is funded and supported by Vardot, a leading Drupal agency with offices in USA, Egypt, and Jordan.\u00a0",
-                "generator": "Varbase",
-                "og_title": "| Vardoc",
-                "referrer": "origin",
-                "rights": "\u00a92018 Vardoc. All rights reserved.",
-                "og_description": "Vardoc is Open Source\n\nVardoc is developed by a core team of experienced Drupal developments and is funded and supported by Vardot, a leading Drupal agency with offices in USA, Egypt, and Jordan.\u00a0",
-                "twitter_cards_page_url": "http:\/\/default\/%3Cnone%3E",
-                "schema_web_site_publisher": {
-                    "@type": "Organization",
-                    "name": "Vardoc",
-                    "url": "http:\/\/default\/",
-                    "logo": {
-                        "@type": "ImageObject",
-                        "url": "http:\/\/default\/logo.png"
-                    }
-                },
-                "mobileoptimized": "width",
-                "handheldfriendly": "true",
-                "apple_mobile_web_app_capable": "yes"
             }
         }
     ],

@@ -207,38 +207,6 @@
     "metatag": [
         {
             "value": {
-                "schema_web_site_type": "WebSite",
-                "title": "Technical Documentation | Vardoc",
-                "shortlink": "http:\/\/default\/%3Cnone%3E",
-                "og_site_name": "Vardoc",
-                "schema_web_site_name": "Vardoc",
-                "canonical_url": "http:\/\/default\/%3Cnone%3E",
-                "twitter_cards_type": "summary_large_image",
-                "description": "Vardoc\u00a0is a Drupal 8 distribution that extends Varbase;\u00a0the powerful Drupal distribution for faster development,\u00a0with editor experience in mind.",
-                "twitter_cards_description": "Vardoc\u00a0is a Drupal 8 distribution that extends Varbase;\u00a0the powerful Drupal distribution for faster development,\u00a0with editor experience in mind.",
-                "schema_web_site_url": "http:\/\/default\/",
-                "og_type": "article",
-                "twitter_cards_title": "| Vardoc",
-                "og_url": "http:\/\/default\/%3Cnone%3E",
-                "abstract": "Vardoc\u00a0is a Drupal 8 distribution that extends Varbase;\u00a0the powerful Drupal distribution for faster development,\u00a0with editor experience in mind.",
-                "generator": "Varbase",
-                "og_title": "| Vardoc",
-                "referrer": "origin",
-                "rights": "\u00a92018 Vardoc. All rights reserved.",
-                "og_description": "Vardoc\u00a0is a Drupal 8 distribution that extends Varbase;\u00a0the powerful Drupal distribution for faster development,\u00a0with editor experience in mind.",
-                "twitter_cards_page_url": "http:\/\/default\/%3Cnone%3E",
-                "schema_web_site_publisher": {
-                    "@type": "Organization",
-                    "name": "Vardoc",
-                    "url": "http:\/\/default\/",
-                    "logo": {
-                        "@type": "ImageObject",
-                        "url": "http:\/\/default\/logo.png"
-                    }
-                },
-                "mobileoptimized": "width",
-                "handheldfriendly": "true",
-                "apple_mobile_web_app_capable": "yes"
             }
         }
     ],
