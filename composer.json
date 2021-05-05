@@ -58,7 +58,8 @@
     "drupal/sharethis": "~2.0",
     "drupal/menu_link_attributes": "~1.0",
     "drupal/svg_image": "~1.0",
-    "drupal/search_api_autocomplete": "~1.0"
+    "drupal/search_api_autocomplete": "~1.0",
+    "drupal/r4032login": "~2.0"
   },
   "require-dev": {
     "drupal/core-dev": "~9.0",
