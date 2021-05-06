@@ -23,11 +23,12 @@ config_bit:
         - varbase_faqs
         - varbase_layout_builder
         - vlplb
+        - varbase_auth
+        - social_auth_google
         # Enable default Vardoc features.
         - vardoc_book
         - vardoc_page
         - vardoc_profile
         - vardoc_search
-        - vardoc_google_authintication
         - vardoc_tools
         - vardoc_homepage
