@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.page.field_meta_tags
     - field.field.node.page.field_yoast_seo
     - node.type.page
-    - workflows.workflow.editorial
   module:
     - advanced_text_formatter
     - content_moderation
