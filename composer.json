@@ -28,18 +28,6 @@
     "drupal-ckeditor-plugins": {
       "type": "composer",
       "url": "https://panopoly.gitlab.io/drupal-ckeditor-plugins"
-    },
-    "antennaio": {
-      "type": "package",
-      "package": {
-        "name": "antennaio/jquery-bar-rating",
-        "version": "1.2.2",
-        "type": "drupal-library",
-        "dist": {
-          "type": "zip",
-          "url": "https://github.com/antennaio/jquery-bar-rating/archive/v1.2.2.zip"
-        }
-      }
     }
   },
   "require": {
@@ -59,7 +47,8 @@
     "drupal/menu_link_attributes": "~1.0",
     "drupal/svg_image": "~1.0",
     "drupal/search_api_autocomplete": "~1.0",
-    "drupal/r4032login": "~2.0"
+    "drupal/r4032login": "~2.0",
+    "npm-asset/jquery-bar-rating": "~1.0"
   },
   "require-dev": {
     "drupal/core-dev": "~9.0",
@@ -117,6 +106,7 @@
       "docroot/libraries/slick": ["npm-asset/slick-carousel"],
       "docroot/libraries/ace": ["npm-asset/ace-builds"],
       "docroot/libraries/jquery-ui-touch-punch": ["bower-asset/jqueryui-touch-punch"],
+      "docroot/libraries/jquery-bar-rating": ["npm-asset/jquery-bar-rating"],
       "docroot/libraries/{$name}": [
         "type:drupal-library",
         "type:bower-asset",
@@ -140,7 +130,8 @@
         {"name": "jquery-ui-touch-punch", "package": "bower-asset/jqueryui-touch-punch"},
         {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
         {"name": "swagger-ui", "package": "swagger-api/swagger-ui"},
-        {"name": "fakeobjects", "package": "drupal-ckeditor-plugin/fakeobjects"}
+        {"name": "fakeobjects", "package": "drupal-ckeditor-plugin/fakeobjects"},
+        {"name": "jquery-bar-rating", "package": "npm-asset/jquery-bar-rating"}
       ]
     },
     "enable-patching": true,
