@@ -1,0 +1,11 @@
+name: 'Vardoc Content Collections'
+description: 'Provides Groups managment with default configs for Vardoc.'
+type: module
+core_version_requirement: ^8 || ^9
+version: 5.0.x-dev
+package: Vardoc
+dependencies:
+  - drupal:group
+  - drupal:group_outsider_in
+  - drupal:group_content_menu
+  - drupal:group_members_extra

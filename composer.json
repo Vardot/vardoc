@@ -48,6 +48,10 @@
     "drupal/svg_image": "~1.0",
     "drupal/search_api_autocomplete": "~1.0",
     "drupal/r4032login": "~2.0",
+    "drupal/group": "~1.0",
+    "drupal/group_outsider_in": "~1.0",
+    "drupal/group_content_menu": "~1.0",
+    "drupal/group_members_extra": "~1.0",
     "npm-asset/jquery-bar-rating": "~1.0"
   },
   "require-dev": {
