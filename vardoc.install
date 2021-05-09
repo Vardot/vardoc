@@ -5,6 +5,16 @@
  * Install, update and uninstall functions for the Vardoc installation profile.
  */
 
+use Drupal\user\Entity\User;
+use Drupal\user\RoleInterface;
+use Drupal\shortcut\Entity\Shortcut;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\Yaml\Yaml;
+use Drupal\Core\Config\InstallStorage;
+use Drupal\Core\Config\StorageInterface;
+use Drupal\Core\Config\FileStorage;
+use Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager;
+
 /**
  * Implements hook_install().
  *
