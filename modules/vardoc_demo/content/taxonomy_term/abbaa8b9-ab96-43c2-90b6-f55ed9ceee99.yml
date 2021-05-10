@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: abbaa8b9-ab96-43c2-90b6-f55ed9ceee99
+  bundle: tools
+  default_langcode: en
+default:
+  revision_log_message:
+    -
+      value: 'Created new Tools'
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'Development Systems'
+  weight:
+    -
+      value: 0
+  parent:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301

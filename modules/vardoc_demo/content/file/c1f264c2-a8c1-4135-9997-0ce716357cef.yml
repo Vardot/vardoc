@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: c1f264c2-a8c1-4135-9997-0ce716357cef
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: asd-web-gmail@3x.jpg
+  uri:
+    -
+      value: 'public://2020-05/asd-web-gmail@3x.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 6999
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1590495761

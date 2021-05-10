@@ -1,0 +1,43 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: c6e88e16-4251-4b94-90c0-62da4f69e662
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  revision_log_message:
+    -
+      value: 'Created new Custom menu link'
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Search
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      uri: 'internal:#'
+      title: ''
+      options:
+        attributes:
+          class: 'ni ni-zoom-split-in'
+          data-toggle: modal
+          data-target: '#frameModalTop'
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -46
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: a02f20c8-5e79-4b96-9501-ad64d90aabbe
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log_message:
+    -
+      value: 'Created new Custom menu link'
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Home
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      uri: 'internal:/'
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -50
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

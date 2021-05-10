@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: a352d57d-df83-40d2-a7ae-536af8243976
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 'Sample document.docx'
+  uri:
+    -
+      value: 'public://2018-01/Sample document_2.docx'
+  filemime:
+    -
+      value: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+  filesize:
+    -
+      value: 4764
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1516194434

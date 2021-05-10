@@ -1,0 +1,69 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 3d2716bb-f0f5-4930-ba43-a991af39d86e
+  bundle: book
+  default_langcode: en
+  depends:
+    ff006e7c-a1db-4abe-ba61-280c7d0dea61: taxonomy_term
+    464246f8-463a-429a-aa54-a0e8366f4a05: file
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Edited as a part of bulk operation. Field changed: moderation_state'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'How to Get Support'
+  created:
+    -
+      value: 1500892457
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /about-vardoc/how-get-support
+      langcode: en
+      pathauto: 0
+  body:
+    -
+      value: "<h3 dir=\"ltr\">Vardoc is Open Source</h3>\r\n\r\n<p dir=\"ltr\"><a href=\"https://www.drupal.org/project/vardoc\">Vardoc</a> is developed by a core team of experienced Drupal developments and is funded and supported by <a href=\"https://www.vardot.com\">Vardot</a>, a leading Drupal agency with offices in USA, Egypt, and Jordan.&nbsp;</p>\r\n\r\n<div class=\"bs-callout bs-callout-info\" dir=\"ltr\"><a href=\"https://www.drupal.org/project/vardoc\">Vardoc</a> is available as an open source and FREE software&nbsp;for developers and development teams to install, host and run it yourself.</div>\r\n\r\n<p dir=\"ltr\">Open Source software is free and promotes the collaboration and sharing of ideas. Vardoc&nbsp;is built on Drupal which is Open Source and is completely free. Everyone should&nbsp;<a href=\"https://www.drupal.org/contribute\" rel=\"nofollow\">contribute something</a>, sometimes simply reporting and maybe fixing a minor bug can make a difference. The Drupal&nbsp;<a href=\"https://www.drupal.org/community\" rel=\"nofollow\">community</a>&nbsp;and the&nbsp;<a href=\"https://www.drupal.org/drupal-services\" rel=\"nofollow\">marketplace</a>&nbsp;make money supporting Drupal. If you need a feature or support you should contact the Vardoc&nbsp;<a href=\"https://www.vardot.com/contact\" rel=\"nofollow\">maintainer</a>.</p>\r\n\r\n<p dir=\"ltr\">&nbsp;</p>\r\n\r\n<h3 dir=\"ltr\">But I Need Professional Support</h3>\r\n\r\n<p dir=\"ltr\">Vardoc provides a great deal of functionality out of the box, which makes it possible for you to prototype your knowledge base, and try out and experiment all the available features.</p>\r\n\r\n<p>However, if you need professional support for implementation, customization, training, or hosted management, please contact Vardot at <a href=\"https://www.vardot.com/contact\">https://www.vardot.com/contact</a></p>\r\n\r\n<div class=\"bs-callout bs-callout-info\">You may also contact <a href=\"https://www.vardot.com\">Vardot</a>&nbsp;for professional and enterprise support of Vardoc by sending an email to: <a href=\"mailto:sales@vardot.com?subject=Requesting%20Vardoc%20Professional%20Support\">sales@vardot.com</a></div>\r\n"
+      format: full_html
+      summary: ''
+  field_category:
+    -
+      entity: ff006e7c-a1db-4abe-ba61-280c7d0dea61
+  field_comment:
+    -
+      status: 2
+      cid: 0
+      last_comment_timestamp: 1516195973
+      last_comment_name: ''
+      last_comment_uid: 1
+      comment_count: 0
+  field_documents:
+    -
+      entity: 464246f8-463a-429a-aa54-a0e8366f4a05
+      display: true
+      description: ''
+  field_rating:
+    -
+      status: 1

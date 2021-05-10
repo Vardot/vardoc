@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 768f211e-744b-47cb-bc43-53526b1ad975
+  default_langcode: en
+default:
+  filename:
+    -
+      value: embed-gallery.png
+  uri:
+    -
+      value: 'public://embed-gallery.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 1426
+  status:
+    -
+      value: false
+  created:
+    -
+      value: 1620635157

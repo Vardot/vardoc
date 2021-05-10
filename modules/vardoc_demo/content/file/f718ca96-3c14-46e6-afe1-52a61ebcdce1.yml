@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: f718ca96-3c14-46e6-afe1-52a61ebcdce1
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: group-14@3x.png
+  uri:
+    -
+      value: 'public://2020-05/group-14@3x.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 5847
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1590495704
