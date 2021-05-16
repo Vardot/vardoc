@@ -97,7 +97,7 @@ install:
   ## Build with the composer.
   - composer install --no-interaction -vvv
   - git clone --branch 5.0.x https://github.com/vardot/vardoc.git docroot/profiles/vardoc
-  - sudo chmod 777 -R /var/www/html/vardoc
+  - sudo chmod 777 -R . ;
 
   ## Install with drush.
   - cd docroot
