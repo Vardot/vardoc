@@ -8,6 +8,7 @@ framework:
     - vardoc_theme/bootstrap-scripts
     - vardoc_theme/global-styles
     - vardoc_theme/global-scripts
+    - vardoc_theme/jquery.sumoselect
 
 # vardoc_theme framework RTL
 framework-rtl:
@@ -140,8 +141,6 @@ global-styles:
       css/layout/edge2edge.layout.css: {}
       css/layout/equal-height.layout.css: {}
       css/layout/print.layout.css: {}
-    plugins:
-      css/plugins/sumoselect.css: {}
     theme:
       'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap': {type: external}
       css/theme/wysiwyg.theme.css: {}
@@ -174,7 +173,6 @@ global-styles-rtl:
 # vardoc_theme global scripts library.
 global-scripts:
   js:
-    js/plugins/jquery.sumoselect.js: {}
     js/argon/argon.js: {}
     js/scripts.js: {}
   dependencies:
@@ -293,3 +291,13 @@ fontawesome:
   css:
     component:
       //use.fontawesome.com/releases/v5.0.13/css/all.css: {}
+
+jquery.sumoselect:
+  css:
+    component:
+      libraries/sumoselect/css/sumoselect.css: { minified: true }
+  js:
+    libraries/sumoselect/js/jquery.sumoselect.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+    - core/drupal
