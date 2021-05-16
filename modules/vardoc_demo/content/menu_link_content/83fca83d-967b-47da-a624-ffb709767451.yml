@@ -5,11 +5,8 @@ _meta:
   bundle: menu_link_content
   default_langcode: und
   depends:
-    f936c260-cbf5-44f6-b882-80dad03c27b9: node
+    82327585-3f4a-424b-94db-f024d2285c21: node
 default:
-  revision_user:
-    -
-      target_id: 1
   revision_log_message:
     -
       value: 'Created new Custom menu link for the FAQs section page.'
