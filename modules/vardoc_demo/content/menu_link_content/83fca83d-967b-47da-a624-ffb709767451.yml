@@ -3,9 +3,7 @@ _meta:
   entity_type: menu_link_content
   uuid: 83fca83d-967b-47da-a624-ffb709767451
   bundle: menu_link_content
-  default_langcode: und
-  depends:
-    82327585-3f4a-424b-94db-f024d2285c21: node
+  default_langcode: en
 default:
   revision_log_message:
     -
@@ -21,15 +19,18 @@ default:
       value: main
   link:
     -
-      target_uuid: f936c260-cbf5-44f6-b882-80dad03c27b9
-      title: ''
-      options: {  }
+      uri: 'internal:/faqs/'
+      title: 'FAQs'
+      options:
+        attributes:
+          class:
+            - ''
   external:
     -
       value: false
   rediscover:
     -
-      value: false
+      value: true
   weight:
     -
       value: -47
