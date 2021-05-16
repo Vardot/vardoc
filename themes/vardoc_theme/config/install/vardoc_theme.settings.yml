@@ -38,7 +38,7 @@ bootstrap_barrio_region_class_hero_slider: row
 bootstrap_barrio_region_clean_highlighted: 1
 bootstrap_barrio_region_class_highlighted: ''
 bootstrap_barrio_region_clean_help: 0
-bootstrap_barrio_region_class_help: row
+bootstrap_barrio_region_class_help: ''
 bootstrap_barrio_region_clean_content: 1
 bootstrap_barrio_region_class_content: ''
 bootstrap_barrio_region_clean_sidebar_first: 1
@@ -75,5 +75,13 @@ bootstrap_barrio_region_class_content_top: ''
 bootstrap_barrio_navbar_top_class: ''
 bootstrap_barrio_navbar_class: ''
 email_logo_default: 0
-email_logo_path: /themes/custom/vardoc_theme/logo.png
+email_logo_path: /profiles/vardoc/themes/vardoc_theme/logo.png
 email_logo_upload: {  }
+bootstrap_barrio_source: '0'
+bootstrap_barrio_region_clean_top_navigation: 0
+bootstrap_barrio_region_class_top_navigation: row
+bootstrap_barrio_image_fluid: 0
+bootstrap_barrio_navbar_flyout: 0
+bootstrap_barrio_navbar_slide: 0
+bootstrap_barrio_tabs_style: ''
+bootstrap_barrio_bootstrap_icons: 0

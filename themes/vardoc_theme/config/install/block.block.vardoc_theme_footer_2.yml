@@ -22,9 +22,14 @@ settings:
   label: Footer
   provider: menu_block
   label_display: '0'
+  follow: 0
+  follow_parent: child
   level: 1
   depth: 0
-  expand: 0
+  expand_all_items: false
   parent: 'footer:'
   suggestion: footer
+  label_type: block
+  label_link: false
+  expand: 0
 visibility: {  }

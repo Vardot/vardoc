@@ -1,40 +1,41 @@
 _meta:
   version: '1.0'
   entity_type: menu_link_content
-  uuid: c6e88e16-4251-4b94-90c0-62da4f69e662
+  uuid: 83fca83d-967b-47da-a624-ffb709767451
   bundle: menu_link_content
-  default_langcode: en
+  default_langcode: und
+  depends:
+    f936c260-cbf5-44f6-b882-80dad03c27b9: node
 default:
+  revision_user:
+    -
+      target_id: 1
   revision_log_message:
     -
-      value: 'Created new Custom menu link'
+      value: 'Created new Custom menu link for the FAQs section page.'
   enabled:
     -
       value: true
   title:
     -
-      value: Search
+      value: FAQs
   menu_name:
     -
       value: main
   link:
     -
-      uri: 'internal:#'
+      target_uuid: f936c260-cbf5-44f6-b882-80dad03c27b9
       title: ''
-      options:
-        attributes:
-          class: 'ni ni-zoom-split-in'
-          data-toggle: modal
-          data-target: '#frameModalTop'
+      options: {  }
   external:
     -
       value: false
   rediscover:
     -
-      value: true
+      value: false
   weight:
     -
-      value: -46
+      value: -47
   expanded:
     -
       value: false
