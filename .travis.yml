@@ -95,7 +95,9 @@ before_install:
 install:
   - git checkout $TRAVIS_COMMIT
   ## Build with the composer.
-  - composer install --no-interaction
+  - composer install --no-interaction -vvv
+  - git clone --branch 5.0.x https://github.com/vardot/vardoc.git docroot/profiles/vardoc
+  - sudo chmod 777 -R /var/www/html/vardoc
 
   ## Install with drush.
   - cd docroot
