@@ -3,10 +3,7 @@
     "private": true,
     "version": "8.6.0",
     "description": "Vartheme bootstrap 4 sub theme implementation",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
+    "main": "gulpfile.js",
     "keywords": [
         "SASS",
         "Bootstrap",
@@ -19,7 +16,8 @@
         "argon-design-system-free": "^1.1.0",
         "bootstrap": "^4.4.0",
         "jquery": "^3.3.1",
-        "popper.js": "^1.14.3"
+        "popper.js": "^1.14.3",
+        "sumoselect": "^3.0.5"
     },
     "devDependencies": {
         "browser-sync": "^2.24.7",

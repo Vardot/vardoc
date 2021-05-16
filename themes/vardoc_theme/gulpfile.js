@@ -29,7 +29,17 @@ const paths = {
     },
     bootstrap_dest: './js/bootstrap',
     popper: './node_modules/popper.js/dist/umd/popper.min.js',
-    popper_dest: './js/popper'
+    popper_dest: './js/popper',
+  },
+  sumoselect: {
+    js: {
+      src: './node_modules/sumoselect/jquery.sumoselect.min.js',
+      dest: './libraries/sumoselect/js'
+    },
+    css: {
+      src: './node_modules/sumoselect/sumoselect.min.css',
+      dest: './libraries/sumoselect/css'
+    }
   }
 }
 
@@ -89,16 +99,36 @@ function move_popper_js_files () {
     .pipe(browserSync.stream())
 }
 
+// Move the sumoselect JavaScript files into our libraries/sumoselect/js folder.
+function move_sumoselect_js_files () {
+  return gulp.src([
+        paths.sumoselect.js.src,
+     ])
+    .pipe(gulp.dest(paths.sumoselect.js.dest))
+    .pipe(browserSync.stream())
+}
+
+// Move the sumoselect CSS files into our libraries/sumoselect/css folder.
+function move_sumoselect_css_files () {
+  return gulp.src([
+        paths.sumoselect.css.src,
+     ])
+    .pipe(gulp.dest(paths.sumoselect.css.dest))
+    .pipe(browserSync.stream())
+}
+
 // Watching scss files
 function watch () {
   gulp.watch([paths.scss.watch], compile)
 }
 
-const build = gulp.series(compile, move_bootstrap_js_files, move_popper_js_files, gulp.parallel(watch))
+const build = gulp.series(compile, move_bootstrap_js_files, move_popper_js_files, move_sumoselect_js_files, move_sumoselect_css_files, gulp.parallel(watch))
 
 exports.compile = compile
 exports.move_bootstrap_js_files = move_bootstrap_js_files
 exports.move_popper_js_files = move_popper_js_files
+exports.move_sumoselect_js_files = move_sumoselect_js_files
+exports.move_sumoselect_css_files = move_sumoselect_css_files
 exports.watch = watch
 
 exports.default = build
