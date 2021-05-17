@@ -39,6 +39,8 @@ function vardoc_book_install() {
   // Install optional configs.
   $optional_install_path = $module_path . '/' . InstallStorage::CONFIG_OPTIONAL_DIRECTORY;
   if (is_dir($optional_install_path)) {
+    $config_installer = \Drupal::service('config.installer');
+    $config_installer->installDefaultConfig('module', $module_name);
 
     // Create field storage configs first in active config.
     $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^field.storage.*\\.(yml)$/i');

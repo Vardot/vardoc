@@ -39,7 +39,6 @@ function vardoc_profile_install() {
   // Install optional configs.
   $optional_install_path = $module_path . '/' . InstallStorage::CONFIG_OPTIONAL_DIRECTORY;
   if (is_dir($optional_install_path)) {
-
     $config_installer = \Drupal::service('config.installer');
     $config_installer->installDefaultConfig('module', $module_name);
 
