@@ -28,4 +28,4 @@ So that I can reset my password for the account
       And I wait 8 seconds
       And I press the "edit-submit" button
       And I wait
-     Then I should see "Login in"
+     Then I should see "Log in"

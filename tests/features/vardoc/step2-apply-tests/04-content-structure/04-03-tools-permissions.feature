@@ -18,7 +18,7 @@ So that the "Tools" will show up in the structured menu under its parent page
     Given I am a logged in user with the "test_editor" user
      When I go to "/node/add"
       And I wait
-     Then I should not see "Tools"
+     Then I should see "Tools"
 
   @javascript @local @development @staging @production
   Scenario: Check if [Content Admin] can add content of "Tools" type.

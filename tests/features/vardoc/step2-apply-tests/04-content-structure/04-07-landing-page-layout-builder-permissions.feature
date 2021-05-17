@@ -39,8 +39,8 @@ So that the "Landing page (Layout Builder)" will show up in the structured menu 
     Given I am a logged in user with the "test_editor" user
      When I go to "/node/add/landing_page_lb"
       And I wait
-     Then I should not see "Access denied"
-      And I should not see "You are not authorized to access this page."
+     Then I should see "Access denied"
+      And I should see "You are not authorized to access this page."
 
   @javascript @local @development @staging @production
   Scenario: Check that Content Admin users can create a Landing page (Layout Builder)

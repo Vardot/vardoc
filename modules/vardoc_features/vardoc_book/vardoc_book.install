@@ -42,8 +42,8 @@ function vardoc_book_install() {
     $config_installer = \Drupal::service('config.installer');
     $config_installer->installDefaultConfig('module', $module_name);
 
-    // Create field storage configs first in active config.
-    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^field.storage.*\\.(yml)$/i');
+    // Import content types.
+    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^node.type.*\\.(yml)$/i');
     if (isset($storage_config_files) && is_array($storage_config_files)) {
       foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
@@ -52,6 +52,46 @@ function vardoc_book_install() {
         $config_factory->setData($storage_config_file_data)->save(TRUE);
       }
     }
+
+    // Import comment types.
+    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^comment.type.*\\.(yml)$/i');
+    if (isset($storage_config_files) && is_array($storage_config_files)) {
+      foreach ($storage_config_files as $storage_config_file) {
+        $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
+        $storage_config_file_data = (array) Yaml::parse($storage_config_file_content);
+        $config_factory = \Drupal::configFactory()->getEditable($storage_config_file->name);
+        $config_factory->setData($storage_config_file_data)->save(TRUE);
+      }
+    }
+
+    // Create comment field storage configs first in active config.
+    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^field.storage.comment.*\\.(yml)$/i');
+    if (isset($storage_config_files) && is_array($storage_config_files)) {
+      foreach ($storage_config_files as $storage_config_file) {
+        $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
+        $storage_config_file_data = (array) Yaml::parse($storage_config_file_content);
+        $config_factory = \Drupal::configFactory()->getEditable($storage_config_file->name);
+        $config_factory->setData($storage_config_file_data)->save(TRUE);
+      }
+    }
+
+    // Create node field storage configs first in active config.
+    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^field.storage.node.*\\.(yml)$/i');
+    if (isset($storage_config_files) && is_array($storage_config_files)) {
+      foreach ($storage_config_files as $storage_config_file) {
+        $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
+        $storage_config_file_data = (array) Yaml::parse($storage_config_file_content);
+        $config_factory = \Drupal::configFactory()->getEditable($storage_config_file->name);
+        $config_factory->setData($storage_config_file_data)->save(TRUE);
+      }
+    }
+
+  // --------------------------------------------------------------------------.
+  // Entity updates to clear up any mismatched entity and/or field definitions
+  // And Fix changes were detected in the entity type and field definitions.
+  \Drupal::classResolver()
+    ->getInstanceFromDefinition(VarbaseEntityDefinitionUpdateManager::class)
+    ->applyUpdates();
 
     // Install any optional config the module provides.
     $storage = new FileStorage($optional_install_path, StorageInterface::DEFAULT_COLLECTION);
@@ -68,8 +108,8 @@ function vardoc_book_install() {
       }
     }
 
-    // Import Fields.
-    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^field.field.*\\.(yml)$/i');
+    // Import entity view mode node.
+    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^core.entity_view_mode.node.*\\.(yml)$/i');
     if (isset($storage_config_files) && is_array($storage_config_files)) {
       foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
@@ -79,8 +119,8 @@ function vardoc_book_install() {
       }
     }
 
-    // Import entity view modes.
-    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^core.entity_view_mode.*\\.(yml)$/i');
+    // Import entity view display comment.
+    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^core.entity_view_display.comment.*\\.(yml)$/i');
     if (isset($storage_config_files) && is_array($storage_config_files)) {
       foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
@@ -90,8 +130,8 @@ function vardoc_book_install() {
       }
     }
 
-    // Import entity entity form display.
-    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^core.entity_form_display.*\\.(yml)$/i');
+    // Import entity form display comment.
+    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^core.entity_form_display.comment.*\\.(yml)$/i');
     if (isset($storage_config_files) && is_array($storage_config_files)) {
       foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
@@ -101,8 +141,8 @@ function vardoc_book_install() {
       }
     }
 
-    // Import entity entity view display.
-    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^core.entity_view_display.*\\.(yml)$/i');
+    // Import entity form display node.
+    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^core.entity_form_display.node.*\\.(yml)$/i');
     if (isset($storage_config_files) && is_array($storage_config_files)) {
       foreach ($storage_config_files as $storage_config_file) {
         $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);

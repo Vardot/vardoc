@@ -28,7 +28,7 @@ So that the "Book page" will show up in the structured menu under its parent pag
     Given I am an anonymous user
      When I go to "/node/add/book"
       And I wait
-     Then I should see "Access denied"
+     Then I should see "Access denied. You must log in to view this page."
       And I should see "You are not authorized to access this page."
 
   @javascript @local @development @staging @production
@@ -44,7 +44,7 @@ So that the "Book page" will show up in the structured menu under its parent pag
     Given I am a logged in user with the "test_editor" user
      When I go to "/node/add/book"
       And I wait
-     Then I should not see "Access denied"
+     Then I should not see "Access denied. You must log in to view this page."
       And I should not see "You are not authorized to access this page."
 
   @javascript @local @development @staging @production
@@ -52,7 +52,7 @@ So that the "Book page" will show up in the structured menu under its parent pag
     Given I am a logged in user with the "test_content_admin" user
      When I go to "/node/add/book"
       And I wait
-     Then I should not see "Access denied"
+     Then I should not see "Access denied. You must log in to view this page."
       And I should not see "You are not authorized to access this page."
 
   @javascript @local @development @staging @production
@@ -60,5 +60,5 @@ So that the "Book page" will show up in the structured menu under its parent pag
     Given I am a logged in user with the "test_site_admin" user
      When I go to "/node/add/book"
       And I wait
-     Then I should not see "Access denied"
+     Then I should not see "Access denied. You must log in to view this page."
       And I should not see "You are not authorized to access this page."

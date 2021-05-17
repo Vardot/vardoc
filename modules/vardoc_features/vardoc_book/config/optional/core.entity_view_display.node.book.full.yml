@@ -49,23 +49,16 @@ third_party_settings:
         - group_content_header
         - node_changed_date
         - book_navigation
-        - 'dynamic_block_field:node-views'
         - body
         - flag_favorite
         - group_wrapper
         - field_external_links
-        - 'dynamic_token_field:node-print'
         - field_documents
         - sharethis
         - field_rating
         - group_comments_wrapper
         - field_comment
     fields:
-      book_navigation:
-        plugin_id: book_navigation
-        weight: 1
-        label: hidden
-        formatter: default
       node_changed_date:
         plugin_id: node_changed_date
         weight: 0
@@ -77,43 +70,11 @@ third_party_settings:
             lb: 'Last updated'
             lb-col: true
             classes: {  }
-      'dynamic_token_field:node-print':
-        plugin_id: 'dynamic_token_field:node-print'
-        weight: 3
-        label: hidden
-        formatter: default
-      'dynamic_block_field:node-views':
-        plugin_id: 'dynamic_block_field:node-views'
+      book_navigation:
+        plugin_id: book_navigation
         weight: 1
         label: hidden
         formatter: default
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow: true
-            ow-el: div
-            ow-cl: statistics-field
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi: false
-            fi-def-at: false
   field_group:
     group_comments_wrapper:
       children:
@@ -134,9 +95,7 @@ third_party_settings:
       region: main
     group_wrapper:
       children:
-        - 'dynamic_block_field:node-views'
         - flag_favorite
-        - 'dynamic_token_field:node-print'
         - sharethis
       parent_name: group_content_header
       weight: 2
