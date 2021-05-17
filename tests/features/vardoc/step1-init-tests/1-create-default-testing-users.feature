@@ -1,4 +1,4 @@
-Feature: Create default testing users.
+Feature: Create default testing users
 
 # test_authenticated: { email: 'authenticated.test@vardot.com', password: 'dD.123123ddd' }
 # test_editor: { email: 'editor.test@vardot.com', password: 'dD.123123ddd' }
@@ -11,12 +11,12 @@ Feature: Create default testing users.
     Given I am a logged in user with the "webmaster" user
 
   @init @tools @local @development @staging
-  Scenario: Create the test_authenticated user.
+  Scenario: Create the test_authenticated user
      When I go to "/admin/people/create"
       And I wait
      Then I should see "Add user"
-     When I fill in "test authenticated" for "First name"
-      And I fill in "test authenticated family" for "Last name"
+     When I fill in "Authenticated" for "First name"
+      And I fill in "Test" for "Last name"
       And I fill in "authenticated.test@vardot.com" for "Email address"
       And I fill in "test_authenticated" for "Username"
       And I fill in "dD.123123ddd" for "Password"
@@ -26,12 +26,12 @@ Feature: Create default testing users.
      Then I should not see "The name test_authenticated is already taken."
 
   @init @tools @local @development @staging
-  Scenario: Create the test_editor user.
+  Scenario: Create the test_editor user
      When I go to "/admin/people/create"
       And I wait
      Then I should see "Add user"
-     When I fill in "test editor" for "First name"
-      And I fill in "test editor family" for "Last name"
+     When I fill in "Editor" for "First name"
+      And I fill in "Test" for "Last name"
       And I fill in "editor.test@vardot.com" for "Email address"
       And I fill in "test_editor" for "Username"
       And I fill in "dD.123123ddd" for "Password"
@@ -42,12 +42,12 @@ Feature: Create default testing users.
      Then I should not see "The name test_editor is already taken."
 
   @init @tools @local @development @staging
-  Scenario: Create the test_content_admin user.
+  Scenario: Create the test_content_admin user
      When I go to "/admin/people/create"
       And I wait
      Then I should see "Add user"
-     When I fill in "test admin" for "First name"
-      And I fill in "test admin family" for "Last name"
+     When I fill in "Content Admin" for "First name"
+      And I fill in "Test" for "Last name"
       And I fill in "content.admin.test@vardot.com" for "Email address"
       And I fill in "test_content_admin" for "Username"
       And I fill in "dD.123123ddd" for "Password"
@@ -58,12 +58,12 @@ Feature: Create default testing users.
      Then I should not see "The name test_content_admin is already taken."
 
   @init @tools @local @development @staging
-  Scenario: Create the test_seo_admin user.
+  Scenario: Create the test_seo_admin user
      When I go to "/admin/people/create"
       And I wait
      Then I should see "Add user"
-     When I fill in "test seo admin" for "First name"
-      And I fill in "test seo admin family" for "Last name"
+     When I fill in "SEO Admin" for "First name"
+      And I fill in "Test" for "Last name"
       And I fill in "seo.admin.test@vardot.com" for "Email address"
       And I fill in "test_seo_admin" for "Username"
       And I fill in "dD.123123ddd" for "Password"
@@ -74,12 +74,12 @@ Feature: Create default testing users.
      Then I should not see "The name test_seo_admin is already taken."
 
   @init @tools @local @development @staging
-  Scenario: Create the test_site_admin user.
+  Scenario: Create the test_site_admin user
      When I go to "/admin/people/create"
       And I wait
      Then I should see "Add user"
-     When I fill in "test site admin" for "First name"
-      And I fill in "test site admin family" for "Last name"
+     When I fill in "Site Admin" for "First name"
+      And I fill in "Test" for "Last name"
       And I fill in "site.admin.test@vardot.com" for "Email address"
       And I fill in "test_site_admin" for "Username"
       And I fill in "dD.123123ddd" for "Password"
@@ -90,12 +90,12 @@ Feature: Create default testing users.
      Then I should not see "The name test_site_admin is already taken."
 
   @init @tools @local @development @staging
-  Scenario: Create the test_super_admin user.
+  Scenario: Create the test_super_admin user
      When I go to "/admin/people/create"
       And I wait
      Then I should see "Add user"
-     When I fill in "test super admin" for "First name"
-      And I fill in "test super admin family" for "Last name"
+     When I fill in "Super Admin" for "First name"
+      And I fill in "Test" for "Last name"
       And I fill in "super.admin.test@vardot.com" for "Email address"
       And I fill in "test_super_admin" for "Username"
       And I fill in "dD.123123ddd" for "Password"
