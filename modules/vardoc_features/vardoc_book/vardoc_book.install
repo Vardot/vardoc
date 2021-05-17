@@ -13,7 +13,7 @@ use Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager;
 /**
  * Implements hook_install().
  */
-function vardoc_profile_install() {
+function vardoc_book_install() {
 
   $module_name = preg_replace('/_install$/', '', __FUNCTION__);
   $module_path = Drupal::service('module_handler')->getModule($module_name)->getPath();
@@ -37,9 +37,6 @@ function vardoc_profile_install() {
   // Install optional configs.
   $optional_install_path = $module_path . '/' . InstallStorage::CONFIG_OPTIONAL_DIRECTORY;
   if (is_dir($optional_install_path)) {
-
-    $config_installer = \Drupal::service('config.installer');
-    $config_installer->installDefaultConfig('module', $module_name);
 
     // Create field storage configs first in active config.
     $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^field.storage.*\\.(yml)$/i');
@@ -111,7 +108,7 @@ function vardoc_profile_install() {
       }
     }
 
-    // Import View.
+    // Import Views.
     $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^views.view.*\\.(yml)$/i');
     if (isset($storage_config_files) && is_array($storage_config_files)) {
       foreach ($storage_config_files as $storage_config_file) {
@@ -136,18 +133,6 @@ function vardoc_profile_install() {
   }
 
   // --------------------------------------------------------------------------.
-  // Load the user 1 to fill in first name, last name, and profile image
-  $user = User::load(1);
-  $user->set('field_first_name', 'Vardoc')
-    ->set('field_last_name', 'Webmaster');
-
-  // Create avatar file entity.
-  $data = file_get_contents(drupal_get_path('module', 'vardoc_profile') . '/images/avatar.png');
-  $file = file_save_data($data, 'public://avatar.png', FILE_EXISTS_REPLACE);
-  // Attach the file into user profile image and then save it.
-  $user->field_profile_image->setValue(['target_id' => $file->id()]);
-  $user->save();
-
   // Entity updates to clear up any mismatched entity and/or field definitions
   // And Fix changes were detected in the entity type and field definitions.
   \Drupal::classResolver()

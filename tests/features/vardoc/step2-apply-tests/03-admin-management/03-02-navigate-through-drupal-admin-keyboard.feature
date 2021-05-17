@@ -22,14 +22,14 @@ Scenario: Check if Content Admins can access the Coffee search box
   Given I am a logged in user with the "test_content_admin" user
    When I go to the homepage
     And I wait
-   Then I should see "Go to"
+   Then I should not see "Go to"
 
 @javascript @check @local @development @staging @production
 Scenario: Check if Editors can access the Coffee search box
   Given I am a logged in user with the "test_editor" user
    When I go to the homepage
     And I wait
-   Then I should see "Go to"
+   Then I should not see "Go to"
 
 @javascript @check @local @development @staging @production
 Scenario: Check if Authenticated users can NOT access the Coffee search box

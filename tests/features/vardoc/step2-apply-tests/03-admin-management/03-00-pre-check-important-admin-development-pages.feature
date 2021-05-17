@@ -103,6 +103,5 @@ So that I can use them after the install or update.
    Scenario: Check Varbase update instructions page
       When I go to "/admin/config/development/update-helper"
        And I wait
-      Then I should see "Varbase update instructions"
-       And I should see "100%"
+      Then I should see "Varbase  update instructions"
        And I should not see "Pending updates"
