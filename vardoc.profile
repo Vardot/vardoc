@@ -135,6 +135,9 @@ function vardoc_assemble_extra_components(array &$install_state) {
 
     // Fix entity updates to clear up any mismatched entity.
     $batch['operations'][] = ['varbase_fix_entity_update', (array) TRUE];
+
+    // Rebuilds all permissions on site content, and may be a lengthy process.
+    $batch['operations'][] = ['vardoc_node_access_rebuild', (array) TRUE];
   }
 
   // Install selected Demo content.
@@ -192,6 +195,9 @@ function vardoc_assemble_extra_components(array &$install_state) {
 
     // Fix entity updates to clear up any mismatched entity.
     $batch['operations'][] = ['varbase_fix_entity_update', (array) TRUE];
+
+    // Rebuilds all permissions on site content, and may be a lengthy process.
+    $batch['operations'][] = ['vardoc_node_access_rebuild', (array) TRUE];
 
   }
 
@@ -299,4 +305,16 @@ function vardoc_after_install_finished(array &$install_state) {
   $output['#attached']['html_head'][] = [$meta_redirect, 'meta_redirect'];
 
   return $output;
+}
+
+/**
+ * Rebuilds all permissions on site content, and may be a lengthy process.
+ *
+ * @param string|array $rebuild_permissions
+ *   To rebuilds permissions or not.
+ */
+function vardoc_node_access_rebuild($rebuild_permissions) {
+  if ($rebuild_permissions) {
+    node_access_rebuild(TRUE);
+  }
 }
