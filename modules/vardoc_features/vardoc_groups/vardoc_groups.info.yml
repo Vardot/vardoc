@@ -5,7 +5,8 @@ core_version_requirement: ^8 || ^9
 version: 5.0.x-dev
 package: Vardoc
 dependencies:
-  - drupal:group
-  - drupal:group_outsider_in
-  - drupal:group_content_menu
-  - drupal:group_members_extra
+  - group:group
+  - group:gnode
+  - group_outsider_in:group_outsider_in
+  - group_content_menu:group_content_menu
+  - group_members_extra:group_members_extra

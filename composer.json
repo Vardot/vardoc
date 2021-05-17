@@ -147,6 +147,10 @@
       "drupal/core": {
         "Issue #1356276: Allow profiles to define a base/parent profile":
         "https://www.drupal.org/files/issues/2020-12-15/3143958-6-subprofile-support-9.1.x.patch"
+      },
+      "drupal/group": {
+        "Issue #3161194: The '' entity type does not exist":
+        "https://www.drupal.org/files/issues/2021-04-08/3161194_the_entity_type_does_not_exist_17_2.patch"
       }
     }
   }

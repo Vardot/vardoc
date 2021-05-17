@@ -31,4 +31,5 @@ config_bit:
         - vardoc_profile
         - vardoc_search
         - vardoc_tools
+        - vardoc_groups
         - vardoc_homepage
