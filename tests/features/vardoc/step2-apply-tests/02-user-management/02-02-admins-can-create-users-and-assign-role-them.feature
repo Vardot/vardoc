@@ -26,9 +26,7 @@ So that they will be able to use the site.
   Scenario: Check if admins can create a new user account as an authenticated user
      When I go to "/admin/people/create"
       And I wait
-     When I fill in "Tester" for "First name"
-      And I fill in "Tester family" for "Last name"
-      And I fill in "tester@vardot.com" for "Email address"
+     When I fill in "tester@vardot.com" for "Email address"
       And I fill in "Tester" for "Username"
       And I fill in "dD.123123ddd" for "Password"
       And I fill in "dD.123123ddd" for "Confirm password"
