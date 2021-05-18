@@ -12,6 +12,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
       And I should see "Can’t find what you’re looking for?"
      When I click "Tasks"
       And I wait for AJAX to finish
+      And I wait 2s
       And I should see "Edit content"
       And I should see "Delete"
       And I should see "Manage display"
