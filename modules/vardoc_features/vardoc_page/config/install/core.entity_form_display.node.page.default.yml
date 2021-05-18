@@ -1,4 +1,3 @@
-uuid: 7cddc9c3-15a8-4252-94d1-24823e73eab0
 langcode: en
 status: true
 dependencies:
@@ -19,8 +18,6 @@ dependencies:
     - scheduler_content_moderation_integration
     - text
     - yoast_seo
-_core:
-  default_config_hash: 95BrLkHz0T70-_0RZq7JgXKD5gfg8is5Cuxk-aJ6qnA
 id: node.page.default
 targetEntityType: node
 bundle: page

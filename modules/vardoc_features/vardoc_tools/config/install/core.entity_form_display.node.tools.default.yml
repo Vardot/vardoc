@@ -1,4 +1,3 @@
-uuid: b625cbf5-f187-4278-b031-bd137dbfc341
 langcode: en
 status: true
 dependencies:
@@ -93,8 +92,6 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: Related
-_core:
-  default_config_hash: P6AoIKJ66i_szw8Mrnfl8BDzlY4Ja2Wg3ph6xWrhkVU
 id: node.tools.default
 targetEntityType: node
 bundle: tools

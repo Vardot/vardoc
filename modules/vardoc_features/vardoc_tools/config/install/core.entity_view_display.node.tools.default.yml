@@ -15,6 +15,11 @@ targetEntityType: node
 bundle: tools
 mode: default
 content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_category:
     weight: 102
     label: above

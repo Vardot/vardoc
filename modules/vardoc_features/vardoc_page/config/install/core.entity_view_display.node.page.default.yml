@@ -46,9 +46,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: main
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   field_meta_tags: true
   field_yoast_seo: true
-  langcode: true
   links: true
   sharethis: true

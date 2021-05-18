@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.native_comment.default
     - core.entity_view_mode.node.teaser
     - field.field.node.book.body
     - field.field.node.book.field_category
@@ -14,8 +13,6 @@ dependencies:
     - field.field.node.book.field_related_content
     - node.type.book
   module:
-    - comment
-    - taxonomy
     - text
     - user
 id: node.book.teaser
@@ -36,22 +33,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_category:
-    type: entity_reference_rss_category
-    weight: 0
-    region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-  field_comment:
-    type: comment_default
-    weight: 0
-    region: content
-    label: above
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
   flag_favorite:
     weight: 10
     settings: {  }
@@ -60,15 +41,16 @@ content:
   links:
     weight: 101
     region: content
-    settings: {  }
-    third_party_settings: {  }
   sharethis:
     weight: 10
+    settings: {  }
+    third_party_settings: {  }
     region: content
 hidden:
+  field_category: true
+  field_comment: true
   field_documents: true
   field_external_links: true
   field_meta_tags: true
   field_rating: true
   field_related_content: true
-  search_api_excerpt: true

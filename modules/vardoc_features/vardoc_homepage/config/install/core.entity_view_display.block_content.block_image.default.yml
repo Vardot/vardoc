@@ -100,4 +100,4 @@ content:
     type: entity_reference_entity_view
     region: main
 hidden:
-  langcode: true
+  search_api_excerpt: true
