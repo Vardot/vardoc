@@ -11,7 +11,7 @@
 {% block main %}
 <div role="main" class="main-container {{ container }}">
   <div class="row">
-    <div id="auth-box" class="login col-10 offset-1 col-sm-4 offset-sm-4">
+    <div id="auth-box" class="login col-10 offset-1 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
       <h1 id="page-user-login-title" class="sr-only">{{ title }}</h1>
       <div id="top-part">
         {# Highlighted #}
@@ -23,11 +23,11 @@
       </div>
       <div id="middle-part">
         {{ page.header|without('vardoc_theme_local_tasks', 'vardoc_theme_breadcrumbs', 'vardoc_theme_local_actions', 'vardoc_theme_page_title') }}
-        {% if (page.content.socialauthlogin) %}
+        {% if (varbase.we_do_have_enabled_social_auth_modules.value) and (page.content.vardoc_theme_socialauthlogin) %}
           <h2 class="block-title"><span> {{ "Login with"|t }} </span></h2>
-          {{ page.content.socialauthlogin }}
+          {{ page.content.vardoc_theme_socialauthlogin }}
           <h2 class="block-title"><span> {{ "or"|t }} </span></h2>
-          {{ page.content|without('socialauthlogin') }}
+          {{ page.content|without('vardoc_theme_socialauthlogin') }}
         {% else %}
           <h2 class="block-title"><span> {{ title }} </span></h2>
           {{ page.content }}
