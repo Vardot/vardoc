@@ -857,26 +857,6 @@ h3 {
   }
 }
 
-.login {
-  .alert-danger {
-    button {
-      right: 5px;
-    }
-  }
-}
-
-.alert-wrapper {
-  margin-top: 30px;
-  .alert-danger {
-    @include media-breakpoint-up(md) {
-      width: 65%;
-    }
-    @include media-breakpoint-up(sm) {
-      width: 60%;
-    }
-  }
-}
-
 table {
   tbody {
     tr {
