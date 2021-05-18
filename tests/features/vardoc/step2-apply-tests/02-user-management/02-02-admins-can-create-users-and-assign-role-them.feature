@@ -46,7 +46,7 @@ So that they will be able to use the site.
       And I press "Cancel account"
       And I wait
      Then I should see "Are you sure you want to cancel the account Tester?"
-     When I select the radio button "Delete the account and its content."
+     When I select the radio button "Delete the account, its content and groups."
       And I press "Cancel account"
       And I wait 10s
      Then I should see "People"

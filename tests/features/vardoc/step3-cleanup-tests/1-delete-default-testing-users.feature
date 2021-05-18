@@ -27,7 +27,7 @@ Feature: Delete default testing users.
      When I press "Cancel account"
       And I wait
      Then I should see "Are you sure you want to cancel the account test_authenticated?"
-     When I select the radio button "Delete the account and its content."
+     When I select the radio button "Delete the account, its content and groups."
       And I press "Cancel account"
       And I wait
      Then I should see "test_authenticated has been deleted."
@@ -49,7 +49,7 @@ Feature: Delete default testing users.
      When I press "Cancel account"
       And I wait
      Then I should see "Are you sure you want to cancel the account test_editor?"
-     When I select the radio button "Delete the account and its content."
+     When I select the radio button "Delete the account, its content and groups."
       And I press "Cancel account"
       And I wait
      Then I should see "test_editor has been deleted."
@@ -70,7 +70,7 @@ Feature: Delete default testing users.
      When I press "Cancel account"
       And I wait
      Then I should see "Are you sure you want to cancel the account test_content_admin?"
-     When I select the radio button "Delete the account and its content."
+     When I select the radio button "Delete the account, its content and groups."
       And I press "Cancel account"
       And I wait
      Then I should see "test_content_admin has been deleted."
@@ -92,7 +92,7 @@ Feature: Delete default testing users.
      When I press "Cancel account"
       And I wait
      Then I should see "Are you sure you want to cancel the account test_seo_admin?"
-     When I select the radio button "Delete the account and its content."
+     When I select the radio button "Delete the account, its content and groups."
       And I press "Cancel account"
       And I wait
      Then I should see "test_seo_admin has been deleted."
@@ -114,7 +114,7 @@ Feature: Delete default testing users.
      When I press "Cancel account"
       And I wait
      Then I should see "Are you sure you want to cancel the account test_site_admin?"
-     When I select the radio button "Delete the account and its content."
+     When I select the radio button "Delete the account, its content and groups."
       And I press "Cancel account"
       And I wait
      Then I should see "test_site_admin has been deleted."
@@ -136,7 +136,7 @@ Feature: Delete default testing users.
      When I press "Cancel account"
       And I wait
      Then I should see "Are you sure you want to cancel the account test_super_admin?"
-     When I select the radio button "Delete the account and its content."
+     When I select the radio button "Delete the account, its content and groups."
       And I press "Cancel account"
       And I wait
      Then I should see "test_super_admin has been deleted."
