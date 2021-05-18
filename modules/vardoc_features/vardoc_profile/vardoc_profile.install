@@ -17,7 +17,7 @@ use Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager;
  */
 function vardoc_profile_install() {
 
-  $module_name = preg_replace('/_install$/', '', __FUNCTION__);
+  $module_name = 'vardoc_profile';
   $module_path = Drupal::service('module_handler')->getModule($module_name)->getPath();
 
   // Processer for install: in [$module_name].info.yml file.
@@ -112,7 +112,7 @@ function vardoc_profile_install() {
       }
     }
 
-    // Import View.
+    // Import Views.
     $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^views.view.*\\.(yml)$/i');
     if (isset($storage_config_files) && is_array($storage_config_files)) {
       foreach ($storage_config_files as $storage_config_file) {
