@@ -11,7 +11,7 @@ Check if users with the ( "authenticated user", "Editor", "Content Admin",
     Given I am a logged in user with the "test_authenticated" user
      When I go to "/node/add"
       And I wait
-     Then I should see "Access denied. You must log in to view this page."
+     Then I should not see "Basic page"
 
   @javascript @local @development @staging @production
   Scenario: Check if [Editor] can add content of "Basic page" type.
