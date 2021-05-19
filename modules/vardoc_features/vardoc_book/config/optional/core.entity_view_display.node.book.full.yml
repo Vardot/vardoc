@@ -46,18 +46,19 @@ third_party_settings:
             attributes: ''
     regions:
       main:
-        - group_content_header
+        - content_moderation_control
         - node_changed_date
+        - group_content_header
         - book_navigation
-        - body
         - flag_favorite
         - group_wrapper
+        - body
         - field_external_links
-        - field_documents
         - sharethis
+        - field_documents
         - field_rating
-        - group_comments_wrapper
         - field_comment
+        - group_comments_wrapper
     fields:
       node_changed_date:
         plugin_id: node_changed_date
@@ -72,7 +73,7 @@ third_party_settings:
             classes: {  }
       book_navigation:
         plugin_id: book_navigation
-        weight: 1
+        weight: 2
         label: hidden
         formatter: default
   field_group:
@@ -80,7 +81,7 @@ third_party_settings:
       children:
         - field_comment
       parent_name: ''
-      weight: 6
+      weight: 7
       format_type: html_element
       format_settings:
         element: div
@@ -116,7 +117,7 @@ third_party_settings:
         - node_changed_date
         - group_wrapper
       parent_name: ''
-      weight: 0
+      weight: 1
       format_type: html_element
       format_settings:
         id: ''
@@ -137,7 +138,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 2
+    weight: 3
+    region: main
+    settings: {  }
+    third_party_settings: {  }
+  content_moderation_control:
+    weight: 0
     region: main
     settings: {  }
     third_party_settings: {  }
@@ -152,7 +158,7 @@ content:
     third_party_settings: {  }
   field_documents:
     type: file_default
-    weight: 4
+    weight: 5
     region: main
     label: above
     settings:
@@ -189,7 +195,7 @@ content:
             fi-def-at: false
   field_external_links:
     type: link
-    weight: 3
+    weight: 4
     region: main
     label: above
     settings:
@@ -230,7 +236,7 @@ content:
             fi-def-at: false
   field_rating:
     type: voting_api_formatter
-    weight: 5
+    weight: 6
     region: main
     label: above
     settings:
@@ -279,7 +285,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  content_moderation_control: true
   field_category: true
   field_meta_tags: true
   field_related_content: true
