@@ -37,7 +37,7 @@
     "drupal/core-composer-scaffold": "^9",
     "drupal/core": "~9.0",
     "vardot/varbase": "~9.0",
-    "drupal/varbase_faqs": "9.0.x-dev",
+    "drupal/varbase_faqs": "~9.0",
     "drupal/fontawesome": "~2.0",
     "drupal/better_normalizers": "~1.0",
     "drupal/votingapi": "~3.0",

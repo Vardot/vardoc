@@ -1,8 +1,8 @@
 name: 'Vardoc Profile'
 description: 'Provides User profile features like favorite content and latest content.'
 type: module
-core_version_requirement: ^8 || ^9
-version: 5.0.x-dev
+core_version_requirement: ^9
+version: 5.0.0-alpha1
 package: Vardoc
 dependencies:
   - varbase_core:varbase_core

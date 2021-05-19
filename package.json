@@ -2,7 +2,7 @@
   "name": "vardot",
   "description": "Vardoc: Knowledge Base System and Documentation Site",
   "private": true,
-  "version": "5.0",
+  "version": "5.0.0",
   "keywords": [
     "Drupal",
     "Varbase",

@@ -1,7 +1,7 @@
 {
     "name": "vardoc_theme",
     "private": true,
-    "version": "8.6.0",
+    "version": "5.0.0",
     "description": "Vartheme bootstrap 4 sub theme implementation",
     "main": "gulpfile.js",
     "keywords": [
