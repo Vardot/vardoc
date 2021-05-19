@@ -37,7 +37,7 @@
     "drupal/core-composer-scaffold": "^8.8.0",
     "webflo/drupal-finder": "~1.0",
     "vardot/varbase": "~8.8.0",
-    "drupal/fontawesome": "~1.0",
+    "drupal/fontawesome": "~2.0",
     "drupal/better_normalizers": "~1.0",
     "drupal/votingapi": "~3.0",
     "drupal/votingapi_widgets": "~1.0",
