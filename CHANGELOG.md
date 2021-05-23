@@ -1,3 +1,28 @@
+# 5.0.0-alpha2
+
+### Highlighted important changes since 5.0.0-alpha1:
+* Issue [#3215342](https://www.drupal.org/i/3215342):
+        Added an Organizational Unit group type to add a group units in the organization
+
+### Added since 5.0.0-alpha1:
+* Issue [#3215329](https://www.drupal.org/i/3215329):
+        Added Group invite, Group Membership Request, Group Notify, Group Taxonomy
+        modules to Vardoc Content Collections
+* Issue [#3215332](https://www.drupal.org/i/3215332):
+        Added Announcement content type to let group members post announcements
+        to visitors or unit members
+
+### Changed since 5.0.0-alpha1:
+* None
+
+### Updates since 5.0.0-alpha1:
+* None
+
+### Fixes since 5.0.0-alpha1:
+* None
+
+------------------------------------------------------------------------------------------------
+
 # 5.0.0-alpha1
 
 ### Highlighted important changes since Vardoc 4.0.1:
