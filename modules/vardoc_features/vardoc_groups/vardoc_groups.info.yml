@@ -6,7 +6,13 @@ version: 5.0.x-dev
 package: Vardoc
 dependencies:
   - group:group
-  - group:gnode
-  - group_outsider_in:group_outsider_in
-  - group_content_menu:group_content_menu
-  - group_members_extra:group_members_extra
+install:
+  - group_outsider_in
+  - group_members_extra
+  - group_content_menu
+  - gnode
+  - group_taxonomy
+  - ginvite
+  - grequest
+  - group_notify
+  - rh_group

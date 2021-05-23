@@ -52,6 +52,10 @@
     "drupal/group_outsider_in": "~1.0",
     "drupal/group_content_menu": "~1.0",
     "drupal/group_members_extra": "~1.0",
+    "drupal/ginvite": "~2.0",
+    "drupal/grequest": "~1.0",
+    "drupal/group_notify": "~1.0",
+    "drupal/group_taxonomy": "~1.0",
     "npm-asset/jquery-bar-rating": "~1.0"
   },
   "require-dev": {
