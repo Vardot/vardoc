@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.ou
+  enforced:
+    config:
+      - user.role.site_admin
+id: ou-bf4b46c3a
+label: 'Site Admin'
+weight: -5
+internal: true
+audience: outsider
+group_type: ou
+permissions_ui: false
+permissions: {  }

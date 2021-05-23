@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.ou
+id: ou-member
+label: Member
+weight: -100
+internal: true
+audience: member
+group_type: ou
+permissions_ui: true
+permissions: {  }

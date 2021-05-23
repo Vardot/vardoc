@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.ou
+  enforced:
+    config:
+      - user.role.editor
+id: ou-0b0baeca9
+label: Editor
+weight: -8
+internal: true
+audience: outsider
+group_type: ou
+permissions_ui: false
+permissions: {  }

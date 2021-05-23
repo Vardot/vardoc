@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - group
+id: group
+label: Group
+type: 'canonical_entities:group'
+pattern: '[group:original:title]'
+selection_criteria:
+  1056d69a-1a3f-4abc-b2ef-d5eec844c265:
+    id: 'entity_bundle:group'
+    bundles:
+      ou: ou
+    negate: false
+    context_mapping:
+      group: group
+    uuid: 1056d69a-1a3f-4abc-b2ef-d5eec844c265
+selection_logic: and
+weight: -5
+relationships: {  }

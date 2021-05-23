@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.ou
+id: group.ou.label
+field_name: label
+entity_type: group
+bundle: ou
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

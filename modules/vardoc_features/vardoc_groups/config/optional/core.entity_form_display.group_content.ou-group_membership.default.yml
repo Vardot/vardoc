@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group_content.ou-group_membership.group_contact
+    - field.field.group_content.ou-group_membership.group_roles
+    - group.content_type.ou-group_membership
+  module:
+    - path
+id: group_content.ou-group_membership.default
+targetEntityType: group_content
+bundle: ou-group_membership
+mode: default
+content:
+  entity_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  group_contact:
+    type: boolean_checkbox
+    weight: 31
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    region: content
+  group_roles:
+    type: options_buttons
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  uid: true

@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.ou
+  enforced:
+    config:
+      - user.role.seo_admin
+id: ou-0ea633e3a
+label: 'SEO Admin'
+weight: -6
+internal: true
+audience: outsider
+group_type: ou
+permissions_ui: false
+permissions: {  }

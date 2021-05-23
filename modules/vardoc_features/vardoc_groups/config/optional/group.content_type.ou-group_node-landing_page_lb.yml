@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.ou
+    - node.type.landing_page_lb
+  module:
+    - gnode
+    - node
+id: ou-group_node-landing_page_lb
+label: 'Organizational Unit: Group node (Landing page (Layout Builder))'
+description: 'Adds <em class="placeholder">Landing page (Layout Builder)</em> content to groups both publicly and privately.'
+group_type: ou
+content_plugin: 'group_node:landing_page_lb'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

@@ -1,4 +1,3 @@
-uuid: c43e9a9b-9884-4f07-be4c-8264beae24a9
 langcode: en
 status: true
 dependencies:
@@ -10,8 +9,6 @@ dependencies:
     - gnode
     - group
     - node
-_core:
-  default_config_hash: za6rNdVPn3HsOOwx2Yka3EmWEkXSdUIlaUpT8qOAxG0
 id: announcements
 label: Announcements
 module: gnode

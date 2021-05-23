@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.ou
+    - node.type.tools
+  module:
+    - gnode
+    - node
+id: ou-group_node-tools
+label: 'Organizational Unit: Group node (Tools)'
+description: 'Adds <em class="placeholder">Tools</em> content to groups both publicly and privately.'
+group_type: ou
+content_plugin: 'group_node:tools'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

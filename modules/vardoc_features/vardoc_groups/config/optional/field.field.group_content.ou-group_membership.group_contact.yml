@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group_content.group_contact
+    - group.content_type.ou-group_membership
+id: group_content.ou-group_membership.group_contact
+field_name: group_contact
+entity_type: group_content
+bundle: ou-group_membership
+label: 'Group contact'
+description: 'Members marked as group contact will be shown in the Contacts block on the Group page.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

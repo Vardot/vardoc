@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.ou.field_description
+    - field.field.group.ou.field_image
+    - group.type.ou
+    - image.style.media_library
+  module:
+    - focal_point
+    - path
+    - text
+id: group.ou.default
+targetEntityType: group
+bundle: ou
+mode: default
+content:
+  field_description:
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_image:
+    weight: 1
+    settings:
+      preview_image_style: media_library
+      preview_link: true
+      offsets: '50,50'
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: image_focal_point
+    region: content
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  uid: true

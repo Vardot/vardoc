@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.ou
+  enforced:
+    config:
+      - user.role.administrator
+id: ou-a416e6833
+label: 'Super Admin'
+weight: -4
+internal: true
+audience: outsider
+group_type: ou
+permissions_ui: false
+permissions: {  }
