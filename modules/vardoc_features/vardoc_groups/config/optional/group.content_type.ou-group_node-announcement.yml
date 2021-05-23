@@ -1,0 +1,19 @@
+uuid: 3badc988-5ed7-4df1-b619-8814e1fc8a50
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.ou
+    - node.type.announcement
+  module:
+    - gnode
+    - node
+id: ou-group_node-announcement
+label: 'Organizational Unit: Group node (Announcement)'
+description: 'Adds <em class="placeholder">Announcement</em> content to groups both publicly and privately.'
+group_type: ou
+content_plugin: 'group_node:announcement'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: true
