@@ -1,0 +1,245 @@
+<?php
+
+/**
+ * @file
+ * Contains varbase_groups.module.
+ *
+ * Issue #3215833: Add Group Book Integration custom code to Vardoc Groups
+ * https://www.drupal.org/project/vardoc/issues/3215833
+ * 
+ * Group Book Integration
+ * https://www.drupal.org/project/groupbook
+ * by Joeri Poesen (jpoesen) - https://drupal.org/u/jpoesen
+ *
+ * Issue #3215444: [Suggestion] Release a 1.0.x-dev version or 1.0.0-alpha1 to ease testing and using
+ * https://www.drupal.org/project/groupbook/issues/3215444
+ * 
+ * Integrates the core Book module with the contrib Group module
+ * by managing the GroupContent records of a book's pages when the pages are
+ * added to a book and when a book is added to or removed from a group.
+ *
+ * (By default, when a top-level book page (commonly referred to as 'a book')
+ * is added to a group, its child pages don't get added to the group
+ * automatically - this module changes that behavior).
+ */
+
+use Drupal\book\BookManager;
+
+/**
+ * Implements hook_ENTITY_insert().
+ *
+ * When a book is added to a group as GroupContent, ensure all of its
+ * child pages are added as GroupContent as well.
+ */
+function vardoc_groups_entity_insert($entity) {
+  $bundle = $entity->bundle();
+
+  // Group Content (Book)
+  if (strpos($bundle, 'group_node-book')) {
+    // Retrieve the Group to which this page is being added. We'll need it
+    // to add the book's subpage to it.
+    $group = $entity->getGroup();
+    $gid = $group->id();
+
+    // Step 1: get a list of all the page ids that belong to this book.
+    $book_id = $entity->get("entity_id")->getValue()[0]['target_id'];
+
+    $book_manager = \Drupal::service('book.manager');
+    $toc = $book_manager->getTableOfContents(
+      $book_id,
+      BookManager::BOOK_MAX_DEPTH
+    );
+    // Remove the page that's currently being added from the list of book pages
+    // we want to add. No sense in trying to add this page twice.
+    unset($toc[$book_id]);
+    $book_page_ids = array_keys($toc);
+
+    // Step 2: Add all pages to the group to which the current page
+    // is being added.
+    foreach ($book_page_ids as $book_page_id) {
+      $group_contents = '';
+      // Before adding this page to the group, check if by any chance it's
+      // already been added to the group.
+      $group_contents = \Drupal::entityTypeManager()
+        ->getStorage('group_content')
+        ->loadByProperties([
+          'entity_id' => $book_page_id,
+          'gid' => $gid,
+        ]);
+
+      if (empty($group_contents)) {
+        // No GroupContent exists for the current book_page and Group.
+        $book_page = \Drupal::entityTypeManager()
+          ->getStorage('node')
+          ->load($book_page_id);
+
+        $group->addContent($book_page, 'group_node:book');
+
+        $msg = t('Book page %bpid added to Group %gid.', [
+          '$bpid' => $book_page_id, 
+          '%gid' => $gid,
+        ]);
+        \Drupal::messenger()->addStatus($msg);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_delete().
+ *
+ * When a book is removed from a group (GroupContent entity removed),
+ * remove all of the child pages from the group as well.
+ */
+function vardoc_groups_entity_delete($entity) {
+  $bundle = $entity->bundle();
+  if (strpos($bundle, 'group_node-book')) {
+    // Retrieve the Group from which the book is being removed.
+    $group = $entity->getGroup();
+    $gid = $group->id();
+
+    // Step 1: get a list of all the page ids that belong to this book.
+    $book_id = $entity->get("entity_id")->getValue()[0]['target_id'];
+
+    $book_manager = \Drupal::service('book.manager');
+    $toc = $book_manager->getTableOfContents(
+      $book_id,
+      BookManager::BOOK_MAX_DEPTH
+    );
+    // Remove the page that's currently being removed - we don't want to
+    // try and remove it again.
+    unset($toc[$book_id]);
+    $book_page_ids = array_keys($toc);
+
+    // Step 2: Remove all pages from the group.
+    foreach ($book_page_ids as $book_page_id) {
+      $group_contents = \Drupal::entityTypeManager()
+        ->getStorage('group_content')
+        ->loadByProperties([
+          'entity_id' => $book_page_id,
+          'gid' => $gid,
+        ]);
+
+      foreach ($group_contents as $item) {
+        $item->delete();
+        $msg = t('Book page %bpid removed from Group %gid.', [
+          '%bpid' => $book_page_id, 
+          '%gid' => $gid,
+        ]);
+        \Drupal::messenger()->addStatus($msg);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_node_insert().
+ *
+ * Add the book_page to each group to which the book_page's parent book
+ * belongs.
+ */
+function vardoc_groups_node_insert($entity) {
+  if ($entity->getType() == 'book') {
+    // @todo: check why this errors out when creating a book.
+    // vardoc_groups_sync_groupcontent_records($entity);
+  }
+}
+
+/**
+ * Implements hook_node_update().
+ *
+ * Ensure that book_pages added to books, or moved from one book to another,
+ * have their corresponding GroupContent nodes kept in sync.
+ * On book_page update remove all GroupContent nodes for the given book_node,
+ * check to which groups the parent book belongs and create new GroupContent
+ * nodes for each book_page<->group.
+ */
+function vardoc_groups_node_update($entity) {
+  if ($entity->getType() == 'book') {
+
+    if ($entity->book['bid'] != $entity->book['original_bid']) {
+
+      // Step 1:
+      // When a book_page moves to another book, ensure that this book_page
+      // no longer belongs to any group.
+      // Load all the GroupContent objects for this book_page and delete them.
+      $group_contents = \Drupal::entityTypeManager()
+        ->getStorage('group_content')
+        ->loadByProperties([
+          'entity_id' => $entity->id(),
+        ]);
+
+      foreach ($group_contents as $item) {
+        $group = $item->getGroup();
+        $gid = $group->id();
+        $item->delete();
+
+        $msg = t('Book page %bpid removed from Group %gid.', [
+          '%bpid' => $entity->id(),
+          '%gid' => $gid,
+        ]);
+        \Drupal::messenger()->addStatus($msg);
+      }
+    }
+
+    // Step2:
+    // Add the book_page to each group to which the book_page's parent book
+    // belongs.
+    // @todo: figure out why the following errors out. 
+    // vardoc_groups_sync_groupcontent_records($entity);
+  }
+}
+
+/**
+ * For given book_page entity, check to which groups its parent book belongs
+ * and add the book_page to each group by creating and saving a
+ * GroupContent entity.
+ */
+function vardoc_groups_sync_groupcontent_records($entity) {
+  // $bid is the book nid of the top-level book to which the book_page belongs.
+  $bid = $entity->book['bid'];
+
+  // Find out to which groups this book belongs.
+  // Load all of the GroupContent objects for the parent book node.
+  // (Each node<->group relation is represented by one GroupContent object,
+  // i.e. if the provided entity belongs to 3 groups, the $group_contents array
+  // contains 3 GroupContent objects)
+  $group_contents = \Drupal::entityTypeManager()
+    ->getStorage('group_content')
+    ->loadByProperties([
+      'entity_id' => $bid,
+    ]);
+
+  $gids = [];
+  foreach ($group_contents as $item) {
+    $group = $item->getGroup();
+    $gid = $group->id();
+    $gids[] = $gid;
+  }
+
+  // At this point we know to which groups the current book_page's parent
+  // book belongs. Now we want to ensure that a book_page<->group relationship
+  // exists as well for each group. If none exists, create one.
+  foreach ($gids as $gid) {
+    $group_contents = \Drupal::entityTypeManager()
+      ->getStorage('group_content')
+      ->loadByProperties([
+        'entity_id' => $entity->id(),
+        'gid' => $gid,
+      ]);
+
+    if (empty($group_contents)) {
+      // No GroupContent exists for the current book_page and Group.
+      $group = \Drupal::entityTypeManager()
+        ->getStorage('group')
+        ->load($gid);
+      $group->addContent($entity, 'group_node:book');
+
+      $msg = t('Book page %bpid added to Group %gid.', [
+        '$bpid' => $entity->id(),
+        '%gid' => $gid,
+      ]);
+      \Drupal::messenger()->addStatus($msg);
+    }
+  }
+}
