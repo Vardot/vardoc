@@ -56,6 +56,7 @@
     "drupal/grequest": "~1.0",
     "drupal/group_notify": "~1.0",
     "drupal/group_taxonomy": "~1.0",
+    "drupal/entitygroupfield": "~1.0",
     "npm-asset/jquery-bar-rating": "~1.0"
   },
   "require-dev": {

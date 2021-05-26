@@ -16,3 +16,4 @@ install:
   - grequest
   - group_notify
   - rh_group
+  - entitygroupfield
