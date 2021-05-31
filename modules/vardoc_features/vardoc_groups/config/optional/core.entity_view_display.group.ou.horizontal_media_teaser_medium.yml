@@ -1,0 +1,165 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.group.horizontal_media_teaser_medium
+    - field.field.group.ou.field_description
+    - field.field.group.ou.field_image
+    - group.type.ou
+    - responsive_image.styles.d04_standard
+  module:
+    - ds
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_library
+    - responsive_image
+    - smart_trim
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  layout_library:
+    enable: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      whitelisted_blocks: {  }
+      blacklisted_blocks: {  }
+      allowed_layouts:
+        - 'bootstrap_layout_builder:blb_col_1'
+        - 'bootstrap_layout_builder:blb_col_2'
+        - 'bootstrap_layout_builder:blb_col_3'
+        - 'bootstrap_layout_builder:blb_col_4'
+        - 'bootstrap_layout_builder:blb_col_6'
+  ds:
+    layout:
+      id: horizontal_media_teaser_medium
+      library: vmi/horizontal_media_teaser_medium
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - field_image
+      right:
+        - label
+        - field_description
+id: group.ou.horizontal_media_teaser_medium
+targetEntityType: group
+bundle: ou
+mode: horizontal_media_teaser_medium
+content:
+  field_description:
+    type: smart_trim
+    weight: 2
+    region: right
+    label: hidden
+    settings:
+      trim_length: 30
+      trim_type: words
+      trim_suffix: ...
+      wrap_class: trimmed
+      more_text: More
+      more_class: more-link
+      summary_handler: full
+      trim_options:
+        text: true
+        trim_zero: false
+      wrap_output: false
+      more_link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_image:
+    type: responsive_image
+    weight: 0
+    region: left
+    label: hidden
+    settings:
+      responsive_image_style: d04_standard
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: a
+            ow-cl: ''
+            ow-at: 'href="[group:url]"'
+            ow-def-at: true
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+  label:
+    label: hidden
+    type: string
+    weight: 1
+    region: right
+    settings:
+      link_to_entity: true
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: true
+            ow: true
+            ow-el: h3
+            ow-cl: ''
+            ow-at: ''
+            fis: true
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi-def-at: false
+hidden:
+  changed: true
+  created: true
+  search_api_excerpt: true
+  uid: true

@@ -1,0 +1,97 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.group.text_teaser_medium
+    - field.field.group.ou.field_description
+    - field.field.group.ou.field_image
+    - group.type.ou
+  module:
+    - ds
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_library
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  layout_library:
+    enable: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      whitelisted_blocks: {  }
+      blacklisted_blocks: {  }
+      allowed_layouts:
+        - 'bootstrap_layout_builder:blb_col_1'
+        - 'bootstrap_layout_builder:blb_col_2'
+        - 'bootstrap_layout_builder:blb_col_3'
+        - 'bootstrap_layout_builder:blb_col_4'
+        - 'bootstrap_layout_builder:blb_col_6'
+  ds:
+    layout:
+      id: text_teaser_medium
+      library: vmi/text_teaser_medium
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          main: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      main:
+        - label
+id: group.ou.text_teaser_medium
+targetEntityType: group
+bundle: ou
+mode: text_teaser_medium
+content:
+  label:
+    label: hidden
+    type: string
+    weight: 0
+    region: main
+    settings:
+      link_to_entity: true
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: h3
+            ow-cl: display-3
+            ow-at: ''
+            fis: true
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi-def-at: false
+hidden:
+  changed: true
+  created: true
+  field_description: true
+  field_image: true
+  search_api_excerpt: true
+  uid: true

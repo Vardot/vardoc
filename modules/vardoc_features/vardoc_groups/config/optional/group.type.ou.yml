@@ -5,6 +5,6 @@ id: ou
 label: 'Organizational Unit'
 description: 'Use <em>Organizational Unit</em> to add a group unit in the organization.'
 creator_membership: true
-creator_wizard: true
+creator_wizard: false
 creator_roles:
   - ou-admin

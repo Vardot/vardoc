@@ -10,4 +10,14 @@ internal: true
 audience: member
 group_type: ou
 permissions_ui: true
-permissions: {  }
+permissions:
+  - 'access group content menu overview'
+  - 'access group_node overview'
+  - 'view group'
+  - 'view group members'
+  - 'view group_node:announcement entity'
+  - 'view group_node:book entity'
+  - 'view group_node:faq entity'
+  - 'view group_node:landing_page_lb entity'
+  - 'view group_node:page entity'
+  - 'view group_node:tools entity'

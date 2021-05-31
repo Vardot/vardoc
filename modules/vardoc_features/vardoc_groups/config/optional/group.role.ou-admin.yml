@@ -56,6 +56,7 @@ permissions:
   - 'edit group'
   - 'leave group'
   - 'manage group_content_menu'
+  - 'manage members with role ou-admin'
   - 'update any group_node:announcement content'
   - 'update any group_node:announcement entity'
   - 'update any group_node:book content'

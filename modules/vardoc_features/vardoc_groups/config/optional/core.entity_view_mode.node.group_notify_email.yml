@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.group_notify_email
+label: 'Group Notify Email'
+targetEntityType: node
+cache: true

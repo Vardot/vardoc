@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+id: group.text_teaser_small
+label: 'Text teaser - small'
+targetEntityType: group
+cache: true
