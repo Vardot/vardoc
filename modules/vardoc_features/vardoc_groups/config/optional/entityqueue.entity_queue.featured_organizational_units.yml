@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+id: featured_organizational_units
+label: 'Featured Organizational Units'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: group
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      ou: ou
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse: true
