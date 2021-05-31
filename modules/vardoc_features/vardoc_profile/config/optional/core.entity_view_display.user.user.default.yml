@@ -1,3 +1,4 @@
+uuid: null
 langcode: en
 status: true
 dependencies:
@@ -7,10 +8,11 @@ dependencies:
     - field.field.user.user.field_last_password_reset
     - field.field.user.user.field_password_expiration
     - field.field.user.user.field_profile_image
-    - image.style.d07_square
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
   module:
     - ds
-    - image
+    - svg_image
     - user
 third_party_settings:
   ds:
@@ -20,6 +22,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         layout:
           wrapper: div
           classes:
@@ -48,6 +51,7 @@ third_party_settings:
     regions:
       left:
         - masquerade
+        - user_picture
         - field_profile_image
         - 'dynamic_token_field:user-full_name_link'
       middle:
@@ -108,6 +112,10 @@ content:
     settings:
       image_style: d07_square
       image_link: ''
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
     third_party_settings:
       ds:
         ft:
@@ -129,13 +137,17 @@ content:
     settings:
       image_style: thumbnail
       image_link: content
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
     third_party_settings: {  }
     label: hidden
-    region: content
+    region: left
 hidden:
   field_first_name: true
   field_last_name: true
   field_last_password_reset: true
   field_password_expiration: true
   member_for: true
-  search_api_excerpt : true
+  search_api_excerpt: true
