@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * View modes inventory - Horizontal media teaser - small template for the announcement content type.
+ */
+#}
+{% if title_suffix.contextual_links is not null %}
+  {{ title_suffix.contextual_links }}
+{% endif %}
+<{{ outer_wrapper }}{{ attributes.addClass('horizontal-media-teaser-view-mode', 'xsmall', 'anchor-all', 'clearfix', 'row', 'border-0', 'shadow-lg', 'shadow-hover', 'mt-5') }}>
+{% if content.field_media['#items'] is not empty %}
+  {% if left is not null %}
+    <{{ left_wrapper }} class="left col-3">
+      {{ content.left }}
+    </{{ left_wrapper }}>
+  {% endif %}
+  {% if right is not null %}
+    <{{ right_wrapper }} class="right col-9 p-4">
+      {{ content.right }}
+    </{{ right_wrapper }}>
+  {% endif %}
+{% else %}
+  {% if right is not null %}
+  <{{ right_wrapper }} class="right col-12 p-4">
+    {{ content.right }}
+  </{{ right_wrapper }}>
+  {% endif %}
+{% endif %}
+</{{ outer_wrapper }}>

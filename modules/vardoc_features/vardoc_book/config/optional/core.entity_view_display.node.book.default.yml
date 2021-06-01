@@ -12,7 +12,6 @@ dependencies:
     - field.field.node.book.field_related_content
     - node.type.book
   module:
-    - file
     - text
     - user
 id: node.book.default
@@ -23,43 +22,33 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 3
+    weight: 100
     region: content
     settings: {  }
     third_party_settings: {  }
   content_moderation_control:
-    weight: 0
-    region: content
+    weight: -20
     settings: {  }
     third_party_settings: {  }
-  field_documents:
-    type: file_table
-    weight: 5
     region: content
-    label: above
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
   flag_favorite:
-    weight: 1
-    region: content
+    weight: 10
     settings: {  }
     third_party_settings: {  }
+    region: content
   links:
-    weight: 4
+    weight: 101
     region: content
-    settings: {  }
-    third_party_settings: {  }
   sharethis:
-    weight: 2
-    region: content
+    weight: 10
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   field_category: true
   field_comment: true
+  field_documents: true
   field_external_links: true
   field_meta_tags: true
   field_rating: true
   field_related_content: true
-  search_api_excerpt: true

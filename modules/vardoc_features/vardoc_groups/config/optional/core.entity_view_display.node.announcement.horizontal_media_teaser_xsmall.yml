@@ -1,3 +1,4 @@
+uuid: null
 langcode: en
 status: true
 dependencies:
@@ -38,7 +39,7 @@ third_party_settings:
         plugin_id: node_post_date
         weight: 2
         label: hidden
-        formatter: ds_post_date_long
+        formatter: ds_post_date_short
       node_title:
         plugin_id: node_title
         weight: 1
@@ -95,9 +96,16 @@ content:
     weight: 0
     label: hidden
     settings:
-      view_mode: s02_standard
+      view_mode: s02_square
       link: false
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     region: left
   field_video:
     type: entity_reference_entity_view
@@ -111,6 +119,7 @@ content:
 hidden:
   body: true
   content_moderation_control: true
+  entitygroupfield: true
   links: true
   search_api_excerpt: true
   sharethis: true

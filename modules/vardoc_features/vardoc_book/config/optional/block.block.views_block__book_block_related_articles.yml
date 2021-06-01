@@ -1,10 +1,10 @@
+uuid: null
 langcode: en
 status: true
 dependencies:
   config:
     - views.view.book
   module:
-    - block_class
     - ctools
     - views
   theme:

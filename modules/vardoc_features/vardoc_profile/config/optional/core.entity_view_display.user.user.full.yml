@@ -1,4 +1,3 @@
-uuid: 8733a14a-ba51-4ad7-aff1-f80561469e08
 langcode: en
 status: true
 dependencies:
@@ -15,7 +14,7 @@ dependencies:
     - views.view.book
     - views.view.organizational_units
   module:
-    - group
+    - ctools
     - layout_builder
     - layout_builder_restrictions
     - layout_library
@@ -27,6 +26,211 @@ third_party_settings:
     allow_custom: false
     enabled: true
     sections:
+      -
+        layout_id: 'bootstrap_layout_builder:blb_col_1'
+        layout_settings:
+          label: ''
+          container_wrapper_classes: ''
+          container_wrapper_attributes: null
+          container_wrapper:
+            bootstrap_styles:
+              background:
+                background_type: color
+              background_color:
+                class: null
+              background_media:
+                image:
+                  media_id: null
+                video:
+                  media_id: null
+                background_options:
+                  background_position: center
+                  background_repeat: no-repeat
+                  background_attachment: not_fixed
+                  background_size: cover
+              background_edgetoedge: 1
+              text_color:
+                class: null
+              text_alignment:
+                class: null
+              padding:
+                class: _none
+              padding_left:
+                class: _none
+              padding_top:
+                class: _none
+              padding_right:
+                class: _none
+              padding_bottom:
+                class: _none
+              margin:
+                class: _none
+              margin_left:
+                class: _none
+              margin_top:
+                class: _none
+              margin_right:
+                class: _none
+              margin_bottom:
+                class: _none
+              border:
+                border_style:
+                  class: null
+                border_width:
+                  class: _none
+                border_color:
+                  class: null
+                rounded_corners:
+                  class: _none
+                border_left_style:
+                  class: null
+                border_left_width:
+                  class: _none
+                border_left_color:
+                  class: null
+                border_top_style:
+                  class: null
+                border_top_width:
+                  class: _none
+                border_top_color:
+                  class: null
+                border_right_style:
+                  class: null
+                border_right_width:
+                  class: _none
+                border_right_color:
+                  class: null
+                border_bottom_style:
+                  class: null
+                border_bottom_width:
+                  class: _none
+                border_bottom_color:
+                  class: null
+                rounded_corner_top_left:
+                  class: _none
+                rounded_corner_top_right:
+                  class: _none
+                rounded_corner_bottom_left:
+                  class: _none
+                rounded_corner_bottom_right:
+                  class: _none
+              scroll_effects:
+                class: null
+          container_wrapper_bg_color_class: ''
+          container_wrapper_bg_media: null
+          container: container-fluid
+          section_classes: ''
+          section_attributes: null
+          regions_classes:
+            blb_region_col_1: ''
+            section_header: ''
+          regions_attributes:
+            blb_region_col_1: {  }
+            section_header: null
+          breakpoints: {  }
+          layout_regions_classes:
+            section_header: null
+          remove_gutters: '1'
+          gutters_between: null
+        components:
+          766789eb-f37e-40ef-a558-ee9c9f2d0b61:
+            uuid: 766789eb-f37e-40ef-a558-ee9c9f2d0b61
+            region: blb_region_col_1
+            configuration:
+              id: 'entity_view:user'
+              label: 'Entity view (User)'
+              provider: ctools
+              label_display: '0'
+              view_mode: default
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+            additional:
+              bootstrap_styles:
+                block_style:
+                  background:
+                    background_type: color
+                  background_color:
+                    class: null
+                  background_media:
+                    image:
+                      media_id: null
+                    video:
+                      media_id: null
+                    background_options:
+                      background_position: center
+                      background_repeat: no-repeat
+                      background_attachment: not_fixed
+                      background_size: cover
+                  background_edgetoedge: false
+                  text_color:
+                    class: null
+                  text_alignment:
+                    class: null
+                  padding:
+                    class: _none
+                  padding_left:
+                    class: _none
+                  padding_top:
+                    class: _none
+                  padding_right:
+                    class: _none
+                  padding_bottom:
+                    class: _none
+                  margin:
+                    class: _none
+                  margin_left:
+                    class: _none
+                  margin_top:
+                    class: _none
+                  margin_right:
+                    class: _none
+                  margin_bottom:
+                    class: _none
+                  border:
+                    border_style:
+                      class: null
+                    border_width:
+                      class: _none
+                    border_color:
+                      class: null
+                    rounded_corners:
+                      class: _none
+                    border_left_style:
+                      class: null
+                    border_left_width:
+                      class: _none
+                    border_left_color:
+                      class: null
+                    border_top_style:
+                      class: null
+                    border_top_width:
+                      class: _none
+                    border_top_color:
+                      class: null
+                    border_right_style:
+                      class: null
+                    border_right_width:
+                      class: _none
+                    border_right_color:
+                      class: null
+                    border_bottom_style:
+                      class: null
+                    border_bottom_width:
+                      class: _none
+                    border_bottom_color:
+                      class: null
+                    rounded_corner_top_left:
+                      class: _none
+                    rounded_corner_top_right:
+                      class: _none
+                    rounded_corner_bottom_left:
+                      class: _none
+                    rounded_corner_bottom_right:
+                      class: _none
+                  scroll_effects:
+                    class: null
+            weight: 0
+        third_party_settings: {  }
       -
         layout_id: 'bootstrap_layout_builder:blb_col_2'
         layout_settings:
@@ -131,19 +335,19 @@ third_party_settings:
             blb_region_col_2: null
             section_header: null
           breakpoints:
-            breakpoint_lg: blb_col_9_3
-            breakpoint_md: blb_col_9_3
+            breakpoint_lg: blb_col_8_4
+            breakpoint_md: blb_col_8_4
             breakpoint_sm: blb_col_12
             breakpoint_xs: blb_col_12
           layout_regions_classes:
             blb_region_col_1:
-              - col-lg-9
-              - col-md-9
+              - col-lg-8
+              - col-md-8
               - col-sm-12
               - col-12
             blb_region_col_2:
-              - col-lg-3
-              - col-md-3
+              - col-lg-4
+              - col-md-4
               - col-sm-12
               - col-12
             section_header:
@@ -154,507 +358,11 @@ third_party_settings:
           remove_gutters: '1'
           gutters_between: 1
         components:
-          5525d409-2a3c-4c97-87b3-e71a31a0a44d:
-            uuid: 5525d409-2a3c-4c97-87b3-e71a31a0a44d
-            region: blb_region_col_2
-            configuration:
-              id: group_operations
-              label: 'Group operations'
-              provider: group
-              label_display: visible
-              context_mapping: {  }
-            additional:
-              bootstrap_styles:
-                block_style:
-                  background:
-                    background_type: color
-                  background_color:
-                    class: null
-                  background_media:
-                    image:
-                      media_id: null
-                    video:
-                      media_id: null
-                    background_options:
-                      background_position: center
-                      background_repeat: no-repeat
-                      background_attachment: not_fixed
-                      background_size: cover
-                  background_edgetoedge: false
-                  text_color:
-                    class: null
-                  text_alignment:
-                    class: null
-                  padding:
-                    class: _none
-                  padding_left:
-                    class: _none
-                  padding_top:
-                    class: _none
-                  padding_right:
-                    class: _none
-                  padding_bottom:
-                    class: _none
-                  margin:
-                    class: _none
-                  margin_left:
-                    class: _none
-                  margin_top:
-                    class: _none
-                  margin_right:
-                    class: _none
-                  margin_bottom:
-                    class: _none
-                  border:
-                    border_style:
-                      class: null
-                    border_width:
-                      class: _none
-                    border_color:
-                      class: null
-                    rounded_corners:
-                      class: _none
-                    border_left_style:
-                      class: null
-                    border_left_width:
-                      class: _none
-                    border_left_color:
-                      class: null
-                    border_top_style:
-                      class: null
-                    border_top_width:
-                      class: _none
-                    border_top_color:
-                      class: null
-                    border_right_style:
-                      class: null
-                    border_right_width:
-                      class: _none
-                    border_right_color:
-                      class: null
-                    border_bottom_style:
-                      class: null
-                    border_bottom_width:
-                      class: _none
-                    border_bottom_color:
-                      class: null
-                    rounded_corner_top_left:
-                      class: _none
-                    rounded_corner_top_right:
-                      class: _none
-                    rounded_corner_bottom_left:
-                      class: _none
-                    rounded_corner_bottom_right:
-                      class: _none
-                  scroll_effects:
-                    class: null
-            weight: 2
-          f61a83dc-b628-48aa-9cf9-b20c21e6fd08:
-            uuid: f61a83dc-b628-48aa-9cf9-b20c21e6fd08
-            region: blb_region_col_2
-            configuration:
-              id: 'field_block:user:user:name'
-              label: Name
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: string
-                settings:
-                  link_to_entity: true
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional:
-              bootstrap_styles:
-                block_style:
-                  background:
-                    background_type: color
-                  background_color:
-                    class: null
-                  background_media:
-                    image:
-                      media_id: null
-                    video:
-                      media_id: null
-                    background_options:
-                      background_position: center
-                      background_repeat: no-repeat
-                      background_attachment: not_fixed
-                      background_size: cover
-                  background_edgetoedge: false
-                  text_color:
-                    class: null
-                  text_alignment:
-                    class: null
-                  padding:
-                    class: _none
-                  padding_left:
-                    class: _none
-                  padding_top:
-                    class: _none
-                  padding_right:
-                    class: _none
-                  padding_bottom:
-                    class: _none
-                  margin:
-                    class: _none
-                  margin_left:
-                    class: _none
-                  margin_top:
-                    class: _none
-                  margin_right:
-                    class: _none
-                  margin_bottom:
-                    class: _none
-                  border:
-                    border_style:
-                      class: null
-                    border_width:
-                      class: _none
-                    border_color:
-                      class: null
-                    rounded_corners:
-                      class: _none
-                    border_left_style:
-                      class: null
-                    border_left_width:
-                      class: _none
-                    border_left_color:
-                      class: null
-                    border_top_style:
-                      class: null
-                    border_top_width:
-                      class: _none
-                    border_top_color:
-                      class: null
-                    border_right_style:
-                      class: null
-                    border_right_width:
-                      class: _none
-                    border_right_color:
-                      class: null
-                    border_bottom_style:
-                      class: null
-                    border_bottom_width:
-                      class: _none
-                    border_bottom_color:
-                      class: null
-                    rounded_corner_top_left:
-                      class: _none
-                    rounded_corner_top_right:
-                      class: _none
-                    rounded_corner_bottom_left:
-                      class: _none
-                    rounded_corner_bottom_right:
-                      class: _none
-                  scroll_effects:
-                    class: null
-            weight: 1
-          e9a06577-3b41-4a6f-8758-9c5483f34230:
-            uuid: e9a06577-3b41-4a6f-8758-9c5483f34230
-            region: blb_region_col_2
-            configuration:
-              id: 'field_block:user:user:field_profile_image'
-              label: 'Profile image'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: responsive_image
-                settings:
-                  responsive_image_style: d07_square
-                  image_link: ''
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional:
-              bootstrap_styles:
-                block_style:
-                  background:
-                    background_type: color
-                  background_color:
-                    class: null
-                  background_media:
-                    image:
-                      media_id: null
-                    video:
-                      media_id: null
-                    background_options:
-                      background_position: center
-                      background_repeat: no-repeat
-                      background_attachment: not_fixed
-                      background_size: cover
-                  background_edgetoedge: false
-                  text_color:
-                    class: null
-                  text_alignment:
-                    class: null
-                  padding:
-                    class: _none
-                  padding_left:
-                    class: _none
-                  padding_top:
-                    class: _none
-                  padding_right:
-                    class: _none
-                  padding_bottom:
-                    class: _none
-                  margin:
-                    class: _none
-                  margin_left:
-                    class: _none
-                  margin_top:
-                    class: _none
-                  margin_right:
-                    class: _none
-                  margin_bottom:
-                    class: _none
-                  border:
-                    border_style:
-                      class: null
-                    border_width:
-                      class: _none
-                    border_color:
-                      class: null
-                    rounded_corners:
-                      class: _none
-                    border_left_style:
-                      class: null
-                    border_left_width:
-                      class: _none
-                    border_left_color:
-                      class: null
-                    border_top_style:
-                      class: null
-                    border_top_width:
-                      class: _none
-                    border_top_color:
-                      class: null
-                    border_right_style:
-                      class: null
-                    border_right_width:
-                      class: _none
-                    border_right_color:
-                      class: null
-                    border_bottom_style:
-                      class: null
-                    border_bottom_width:
-                      class: _none
-                    border_bottom_color:
-                      class: null
-                    rounded_corner_top_left:
-                      class: _none
-                    rounded_corner_top_right:
-                      class: _none
-                    rounded_corner_bottom_left:
-                      class: _none
-                    rounded_corner_bottom_right:
-                      class: _none
-                  scroll_effects:
-                    class: null
-            weight: 0
-          95d6d95f-2d84-493d-bcba-70c334b201b8:
-            uuid: 95d6d95f-2d84-493d-bcba-70c334b201b8
+          58ccc927-e0e8-4a8c-bc05-376d2013cf5f:
+            uuid: 58ccc927-e0e8-4a8c-bc05-376d2013cf5f
             region: blb_region_col_1
             configuration:
-              id: 'views_block:book-books_level_1_user_block'
-              label: Articles
-              provider: views
-              label_display: visible
-              views_label: Articles
-              items_per_page: none
-              context_mapping: {  }
-            additional:
-              bootstrap_styles:
-                block_style:
-                  background:
-                    background_type: color
-                  background_color:
-                    class: null
-                  background_media:
-                    image:
-                      media_id: null
-                    video:
-                      media_id: null
-                    background_options:
-                      background_position: center
-                      background_repeat: no-repeat
-                      background_attachment: not_fixed
-                      background_size: cover
-                  background_edgetoedge: false
-                  text_color:
-                    class: null
-                  text_alignment:
-                    class: null
-                  padding:
-                    class: _none
-                  padding_left:
-                    class: _none
-                  padding_top:
-                    class: _none
-                  padding_right:
-                    class: _none
-                  padding_bottom:
-                    class: _none
-                  margin:
-                    class: _none
-                  margin_left:
-                    class: _none
-                  margin_top:
-                    class: _none
-                  margin_right:
-                    class: _none
-                  margin_bottom:
-                    class: _none
-                  border:
-                    border_style:
-                      class: null
-                    border_width:
-                      class: _none
-                    border_color:
-                      class: null
-                    rounded_corners:
-                      class: _none
-                    border_left_style:
-                      class: null
-                    border_left_width:
-                      class: _none
-                    border_left_color:
-                      class: null
-                    border_top_style:
-                      class: null
-                    border_top_width:
-                      class: _none
-                    border_top_color:
-                      class: null
-                    border_right_style:
-                      class: null
-                    border_right_width:
-                      class: _none
-                    border_right_color:
-                      class: null
-                    border_bottom_style:
-                      class: null
-                    border_bottom_width:
-                      class: _none
-                    border_bottom_color:
-                      class: null
-                    rounded_corner_top_left:
-                      class: _none
-                    rounded_corner_top_right:
-                      class: _none
-                    rounded_corner_bottom_left:
-                      class: _none
-                    rounded_corner_bottom_right:
-                      class: _none
-                  scroll_effects:
-                    class: null
-            weight: 6
-          dd4d0608-4ffe-40af-988e-d42628aeba74:
-            uuid: dd4d0608-4ffe-40af-988e-d42628aeba74
-            region: blb_region_col_1
-            configuration:
-              id: 'views_block:organizational_units-organizational_units_user_block'
-              label: 'Organizational Units'
-              provider: views
-              label_display: visible
-              views_label: 'Organizational Units'
-              items_per_page: none
-              context_mapping: {  }
-            additional:
-              bootstrap_styles:
-                block_style:
-                  background:
-                    background_type: color
-                  background_color:
-                    class: null
-                  background_media:
-                    image:
-                      media_id: null
-                    video:
-                      media_id: null
-                    background_options:
-                      background_position: center
-                      background_repeat: no-repeat
-                      background_attachment: not_fixed
-                      background_size: cover
-                  background_edgetoedge: false
-                  text_color:
-                    class: null
-                  text_alignment:
-                    class: null
-                  padding:
-                    class: _none
-                  padding_left:
-                    class: _none
-                  padding_top:
-                    class: _none
-                  padding_right:
-                    class: _none
-                  padding_bottom:
-                    class: _none
-                  margin:
-                    class: _none
-                  margin_left:
-                    class: _none
-                  margin_top:
-                    class: _none
-                  margin_right:
-                    class: _none
-                  margin_bottom:
-                    class: _none
-                  border:
-                    border_style:
-                      class: null
-                    border_width:
-                      class: _none
-                    border_color:
-                      class: null
-                    rounded_corners:
-                      class: _none
-                    border_left_style:
-                      class: null
-                    border_left_width:
-                      class: _none
-                    border_left_color:
-                      class: null
-                    border_top_style:
-                      class: null
-                    border_top_width:
-                      class: _none
-                    border_top_color:
-                      class: null
-                    border_right_style:
-                      class: null
-                    border_right_width:
-                      class: _none
-                    border_right_color:
-                      class: null
-                    border_bottom_style:
-                      class: null
-                    border_bottom_width:
-                      class: _none
-                    border_bottom_color:
-                      class: null
-                    rounded_corner_top_left:
-                      class: _none
-                    rounded_corner_top_right:
-                      class: _none
-                    rounded_corner_bottom_left:
-                      class: _none
-                    rounded_corner_bottom_right:
-                      class: _none
-                  scroll_effects:
-                    class: null
-            weight: 3
-          a4e4fc5e-fd2c-4e3f-9dac-2f060a01e008:
-            uuid: a4e4fc5e-fd2c-4e3f-9dac-2f060a01e008
-            region: blb_region_col_1
-            configuration:
-              id: 'views_block:announcements-announcements_block'
+              id: 'views_block:announcements-announcement_user_block'
               label: Announcements
               provider: views
               label_display: visible
@@ -706,6 +414,200 @@ third_party_settings:
                     class: null
                   text_alignment:
                     class: null
+                  padding:
+                    class: _none
+                  padding_left:
+                    class: _none
+                  padding_top:
+                    class: _none
+                  padding_right:
+                    class: _none
+                  padding_bottom:
+                    class: _none
+                  margin:
+                    class: _none
+                  margin_left:
+                    class: _none
+                  margin_top:
+                    class: _none
+                  margin_right:
+                    class: _none
+                  margin_bottom:
+                    class: _none
+                  border:
+                    border_style:
+                      class: null
+                    border_width:
+                      class: _none
+                    border_color:
+                      class: null
+                    rounded_corners:
+                      class: _none
+                    border_left_style:
+                      class: null
+                    border_left_width:
+                      class: _none
+                    border_left_color:
+                      class: null
+                    border_top_style:
+                      class: null
+                    border_top_width:
+                      class: _none
+                    border_top_color:
+                      class: null
+                    border_right_style:
+                      class: null
+                    border_right_width:
+                      class: _none
+                    border_right_color:
+                      class: null
+                    border_bottom_style:
+                      class: null
+                    border_bottom_width:
+                      class: _none
+                    border_bottom_color:
+                      class: null
+                    rounded_corner_top_left:
+                      class: _none
+                    rounded_corner_top_right:
+                      class: _none
+                    rounded_corner_bottom_left:
+                      class: _none
+                    rounded_corner_bottom_right:
+                      class: _none
+                  scroll_effects:
+                    class: null
+            weight: 8
+          dd4d0608-4ffe-40af-988e-d42628aeba74:
+            uuid: dd4d0608-4ffe-40af-988e-d42628aeba74
+            region: blb_region_col_2
+            configuration:
+              id: 'views_block:organizational_units-organizational_units_user_block'
+              label: 'Organizational Units'
+              provider: views
+              label_display: visible
+              views_label: 'Organizational Units'
+              items_per_page: none
+              context_mapping: {  }
+            additional:
+              bootstrap_styles:
+                block_style:
+                  background:
+                    background_type: color
+                  background_color:
+                    class: null
+                  background_media:
+                    image:
+                      media_id: null
+                    video:
+                      media_id: null
+                    background_options:
+                      background_position: center
+                      background_repeat: no-repeat
+                      background_attachment: not_fixed
+                      background_size: cover
+                  background_edgetoedge: false
+                  text_color:
+                    class: null
+                  text_alignment:
+                    class: _none
+                  padding:
+                    class: _none
+                  padding_left:
+                    class: _none
+                  padding_top:
+                    class: _none
+                  padding_right:
+                    class: _none
+                  padding_bottom:
+                    class: _none
+                  margin:
+                    class: _none
+                  margin_left:
+                    class: _none
+                  margin_top:
+                    class: mt-3
+                  margin_right:
+                    class: _none
+                  margin_bottom:
+                    class: _none
+                  border:
+                    border_style:
+                      class: null
+                    border_width:
+                      class: _none
+                    border_color:
+                      class: null
+                    rounded_corners:
+                      class: _none
+                    border_left_style:
+                      class: null
+                    border_left_width:
+                      class: _none
+                    border_left_color:
+                      class: null
+                    border_top_style:
+                      class: null
+                    border_top_width:
+                      class: _none
+                    border_top_color:
+                      class: null
+                    border_right_style:
+                      class: null
+                    border_right_width:
+                      class: _none
+                    border_right_color:
+                      class: null
+                    border_bottom_style:
+                      class: null
+                    border_bottom_width:
+                      class: _none
+                    border_bottom_color:
+                      class: null
+                    rounded_corner_top_left:
+                      class: _none
+                    rounded_corner_top_right:
+                      class: _none
+                    rounded_corner_bottom_left:
+                      class: _none
+                    rounded_corner_bottom_right:
+                      class: _none
+                  scroll_effects:
+                    class: null
+            weight: 4
+          3a0bf71c-ce84-4b9f-83ac-4c5402a4ce65:
+            uuid: 3a0bf71c-ce84-4b9f-83ac-4c5402a4ce65
+            region: blb_region_col_1
+            configuration:
+              id: 'views_block:book-block_books_level_1'
+              label: Articles
+              provider: views
+              label_display: visible
+              views_label: Articles
+              items_per_page: none
+              context_mapping: {  }
+            additional:
+              bootstrap_styles:
+                block_style:
+                  background:
+                    background_type: color
+                  background_color:
+                    class: null
+                  background_media:
+                    image:
+                      media_id: null
+                    video:
+                      media_id: null
+                    background_options:
+                      background_position: center
+                      background_repeat: no-repeat
+                      background_attachment: not_fixed
+                      background_size: cover
+                  background_edgetoedge: false
+                  text_color:
+                    class: null
+                  text_alignment:
+                    class: text-start
                   padding:
                     class: _none
                   padding_left:

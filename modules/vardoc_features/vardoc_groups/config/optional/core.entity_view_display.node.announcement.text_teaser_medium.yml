@@ -1,13 +1,14 @@
+uuid: null
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.text_teaser_medium
     - field.field.node.announcement.body
+    - field.field.node.announcement.field_media
     - node.type.announcement
   module:
     - ds
-    - smart_trim
     - user
 third_party_settings:
   ds:
@@ -17,6 +18,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           main: div
         outer_wrapper: article
@@ -28,38 +30,32 @@ third_party_settings:
     regions:
       main:
         - node_title
-        - body
     fields:
       node_title:
         plugin_id: node_title
-        weight: 1
+        weight: 0
         label: hidden
         formatter: default
         settings:
           link: true
           wrapper: h3
-          class: ''
+          class: display-3
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 id: node.announcement.text_teaser_medium
 targetEntityType: node
 bundle: announcement
 mode: text_teaser_medium
-content:
-  body:
-    label: hidden
-    type: smart_trim
-    weight: 2
-    settings:
-      trim_length: 30
-      trim_type: words
-      trim_suffix: ' ...'
-      more_link: false
-      more_text: More
-      summary_handler: full
-      trim_options:
-        text: true
-      more_class: more-link
-    third_party_settings: {  }
-    region: content
+content: {  }
 hidden:
-  langcode: true
+  body: true
+  content_moderation_control: true
+  entitygroupfield: true
+  field_media: true
   links: true
+  search_api_excerpt: true
+  sharethis: true
