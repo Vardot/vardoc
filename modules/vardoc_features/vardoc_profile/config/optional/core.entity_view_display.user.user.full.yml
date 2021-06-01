@@ -1,3 +1,4 @@
+uuid: 8733a14a-ba51-4ad7-aff1-f80561469e08
 langcode: en
 status: true
 dependencies:
@@ -580,10 +581,10 @@ third_party_settings:
             region: blb_region_col_1
             configuration:
               id: 'views_block:book-block_books_level_1'
-              label: Articles
+              label: 'Main Sections'
               provider: views
               label_display: visible
-              views_label: Articles
+              views_label: 'Main Sections'
               items_per_page: none
               context_mapping: {  }
             additional:

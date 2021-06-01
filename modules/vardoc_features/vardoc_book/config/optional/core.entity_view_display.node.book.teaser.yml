@@ -1,4 +1,3 @@
-uuid: a5b6c6b2-b6bd-4bdc-8cae-d37d23b642c6
 langcode: en
 status: true
 dependencies:
@@ -16,8 +15,6 @@ dependencies:
   module:
     - text
     - user
-_core:
-  default_config_hash: krIbNOdqw4vMF3Ty8qAW6AxgxmdBig5XuQRBW8-HYCU
 id: node.book.teaser
 targetEntityType: node
 bundle: book
