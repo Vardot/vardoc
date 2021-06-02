@@ -143,7 +143,7 @@ commands:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/vardoc/docroot/
-            drush site-install vardoc --yes --site-name='Test Vardoc1c' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:@localhost/test_vardoc5c1" vardoc_extra_components.vardoc_demo=true varbase_development_tools.varbase_development=true
+            drush site-install vardoc --yes --site-name='Vardoc Test'   --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_vardoc" vardoc_extra_components.vardoc_demo=true varbase_development_tools.varbase_development=true
             drush config-set system.performance css.preprocess 0 --yes
             drush config-set system.performance js.preprocess 0 --yes
             drush config-set system.logging error_level all --yes
