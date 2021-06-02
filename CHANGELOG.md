@@ -1,3 +1,39 @@
+# 5.0.0-alpha3
+
+### Highlighted important changes since 5.0.0-alpha2:
+* Issue [#3216603](https://www.drupal.org/i/3216603):
+        Switched user page User Account Display mode ( My account ) 
+       to use Varbase Layout Builder ~10
+* Issue [#3216475](https://www.drupal.org/i/3216475):
+        Added Organizational Units view and Organizational Units user block to
+        list all organizational units for the current viewed user
+
+### Added since 5.0.0-alpha2:
+* Issue [#3215833](https://www.drupal.org/i/3215833):
+        Added Group Book Integration custom code to Vardoc Groups
+* Issue [#3216470](https://www.drupal.org/i/3216470):
+        Added views argument plugin Group Membership Uid for a custom extra
+        Contextual filters for views like Group Content: User is member
+* Issue [#3215823](https://www.drupal.org/i/3215823):
+        Added Entity Group Field module
+
+### Changed since 5.0.0-alpha2:
+* Issue [#3216853](https://www.drupal.org/i/3216853):
+        Switched to CircleCI as the default automated testing platform
+* Issue [#3216518](https://www.drupal.org/i/3216518):
+        Removed Generic .main-content styling
+
+### Updates since 5.0.0-alpha2:
+* Updated [Varbase Core](https://www.drupal.org/project/varbase_core)
+    module to [9.0.0](https://www.drupal.org/project/varbase_core/releases/9.0.0) stable release
+
+### Fixes since 5.0.0-alpha2:
+* Issue [#3216566](https://www.drupal.org/i/3216566)
+       by [qusai taha](https://www.drupal.org/u/qusai-taha)
+       : Fixed error when trying to add HTML block
+
+------------------------------------------------------------------------------------------------
+
 # 5.0.0-alpha2
 
 ### Highlighted important changes since 5.0.0-alpha1:
