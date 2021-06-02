@@ -144,7 +144,7 @@ third_party_settings:
               label_display: '0'
               view_mode: default
               context_mapping:
-                entity: '@user.current_user_context:current_user'
+                entity: layout_builder.entity
             additional:
               bootstrap_styles:
                 block_style:
