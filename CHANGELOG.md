@@ -1,3 +1,12 @@
+# 5.0.0-alpha4
+
+### Highlighted important changes since 5.0.0-alpha3:
+* Issue [#3217800](https://www.drupal.org/i/3217800):
+        Updated the patch to Allow profiles to define a base/parent profile
+        to work with Drupal 9.1.10
+
+------------------------------------------------------------------------------------------------
+
 # 5.0.0-alpha3
 
 ### Highlighted important changes since 5.0.0-alpha2:
