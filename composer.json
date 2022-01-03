@@ -161,7 +161,7 @@
     "patches": {
       "drupal/core": {
         "Issue #1356276: Allow profiles to define a base/parent profile":
-        "https://www.drupal.org/files/issues/2021-10-21/1356276-673.patch"
+        "https://www.drupal.org/files/issues/2021-11-18/1356276-675.patch"
       },
       "drupal/group": {
         "Issue #3161194: The '' entity type does not exist":
