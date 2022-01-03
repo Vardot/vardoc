@@ -34,7 +34,7 @@
     "webflo/drupal-finder": "~1.0",
     "drupal/core": "~8.0 || ~9.0",
     "vardot/varbase": "~8.8.0 || ~9.0.0",
-    "drupal/fontawesome": "~1.0",
+    "drupal/fontawesome": "~2.0",
     "drupal/better_normalizers": "~1.0",
     "drupal/votingapi": "~3.0",
     "drupal/votingapi_widgets": "~1.0",
