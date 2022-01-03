@@ -24,15 +24,15 @@ install:
   - block_content
 themes:
   # Contrib themes.
-  - adminimal_theme
   - bootstrap_barrio
   - vartheme_bs4
+  - seven
+  - claro
   - vartheme_claro
-  - vartheme_admin
 
   # Custom themes.
   - vardoc_theme
 distribution:
   name: Vardoc
   install:
-    theme: vartheme_admin
+    theme: vartheme_claro

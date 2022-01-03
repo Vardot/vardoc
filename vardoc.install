@@ -5,9 +5,6 @@
  * Install, update and uninstall functions for the Vardoc installation profile.
  */
 
-use Drupal\user\Entity\User;
-use Drupal\user\RoleInterface;
-use Drupal\shortcut\Entity\Shortcut;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Yaml\Yaml;
 use Drupal\Core\Config\InstallStorage;
@@ -23,6 +20,54 @@ use Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager;
  * @see system_install()
  */
 function vardoc_install() {
-  include_once drupal_get_path('profile', 'varbase') . '/varbase.install';
-  varbase_install();
+  // Install optional configs.
+  $config_installer = \Drupal::service('config.installer');
+  $optional_install_path = drupal_get_path('profile', 'vardoc') . '/' . InstallStorage::CONFIG_OPTIONAL_DIRECTORY;
+  if (is_dir($optional_install_path)) {
+    // Install any optional config the profile provides.
+    $storage = new FileStorage($optional_install_path, StorageInterface::DEFAULT_COLLECTION);
+    $config_installer->installOptionalConfig($storage, '');
+    // Have the .settings.yml configs into the active config.
+    $settings_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^.*(settings.yml)$/i');
+    if (isset($settings_config_files) && is_array($settings_config_files)) {
+      foreach ($settings_config_files as $settings_config_file) {
+        $settings_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $settings_config_file->uri);
+        $settings_config_file_data = (array) Yaml::parse($settings_config_file_content);
+        $config_factory = \Drupal::configFactory()->getEditable($settings_config_file->name);
+        $config_factory->setData($settings_config_file_data)->save(TRUE);
+      }
+    }
+  }
+  // ---------------------------------------------------------------------------
+  // Set front page to "node".
+  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/node')->save(TRUE);
+
+  // Entity updates to clear up any mismatched entity and/or field definitions
+  // And Fix changes were detected in the entity type and field definitions.
+  \Drupal::classResolver()
+    ->getInstanceFromDefinition(VarbaseEntityDefinitionUpdateManager::class)
+    ->applyUpdates();
+
+  // Full flash and clear cash and rebuilding newly created routes.
+  // After install of extra modules by install: in the .info.yml files.
+  // In Vardoc profile and all Vardoc components.
+  // ---------------------------------------------------------------------------
+  // * Necessary inlitilization for the entire system.
+  // * Account for changed config by the end install.
+  // * Flush all persistent caches.
+  // * Flush asset file caches.
+  // * Wipe the Twig PHP Storage cache.
+  // * Rebuild module and theme data.
+  // * Clear all plugin caches.
+  // * Rebuild the menu router based on all rebuilt data.
+  drupal_flush_all_caches();
+
+  // If Vardoc Tour were enabled then redirect to the homepage with activ tour.
+  if (isset($GLOBALS['homepage_with_vardoc_tour'])
+    && $GLOBALS['homepage_with_vardoc_tour'] == TRUE) {
+    $homepage_with_tour = "/?tour";
+    $response = new RedirectResponse($homepage_with_tour);
+    $response->send();
+    exit;
+  }
 }
