@@ -24,10 +24,6 @@
     "assets": {
       "type": "composer",
       "url": "https://asset-packagist.org"
-    },
-    "drupal-ckeditor-plugins": {
-      "type": "composer",
-      "url": "https://panopoly.gitlab.io/drupal-ckeditor-plugins"
     }
   },
   "require": {
@@ -36,7 +32,8 @@
     "cweagans/composer-patches": "~1.0",
     "drupal/core-composer-scaffold": "^8.8.0",
     "webflo/drupal-finder": "~1.0",
-    "vardot/varbase": "~8.8.0",
+    "drupal/core": "~8.0 || ~9.0",
+    "vardot/varbase": "~8.8.0 || ~9.0.0",
     "drupal/fontawesome": "~1.0",
     "drupal/better_normalizers": "~1.0",
     "drupal/votingapi": "~3.0",
@@ -44,18 +41,15 @@
     "drupal/flag": "~4.0",
     "drupal/sharethis": "~2.0",
     "drupal/varbase_faqs": "~6.0",
-    "drupal/menu_link_attributes": "^1.0",
-    "drupal/book_tree_menu": "^1.0",
-    "drupal/svg_image": "^1.13",
-    "drupal/search_api_autocomplete": "^1.2"
+    "drupal/menu_link_attributes": "~1.0",
+    "drupal/book_tree_menu": "~2.0",
+    "drupal/svg_image": "~1.0",
+    "drupal/search_api_autocomplete": "~1.0"
   },
   "require-dev": {
-    "drupal/core-dev": "^8.8.0",
-    "drupal/console": "^1.0",
-    "drush/drush": "^9.0",
-    "behat/behat": "~3.0",
-    "phing/phing": "~2.0",
-    "drupal/drupal-extension": "^3.2",
+    "drupal/core-dev": "~8.0",
+    "drush/drush": "~9.0",
+    "drupal/drupal-extension": "~3.0",
     "emuse/behat-html-formatter": "^0.2.0"
   },
   "config": {
@@ -64,6 +58,15 @@
     "optimize-autoloader": true,
     "preferred-install": {
       "drupal/core": "dist"
+    },
+    "allow-plugins": {
+      "composer/installers": true,
+      "cweagans/composer-patches": true,
+      "drupal/drupal-library-installer-plugin": true,
+      "oomphinc/composer-installers-extender": true,
+      "drupal/core-composer-scaffold": true,
+      "drupal/core-project-message": true,
+      "vardot/varbase-updater": true
     }
   },
   "autoload": {
@@ -129,9 +132,9 @@
         {"name": "slick", "package": "npm-asset/slick-carousel"},
         {"name": "ace", "package": "npm-asset/ace-builds"},
         {"name": "jquery-ui-touch-punch", "package": "bower-asset/jqueryui-touch-punch"},
+        {"name": "masonry", "package": "npm-asset/masonry-layout"},
         {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
-        {"name": "swagger-ui", "package": "swagger-api/swagger-ui"},
-        {"name": "fakeobjects", "package": "drupal-ckeditor-plugin/fakeobjects"},
+        {"name": "swagger-ui", "package": "npm-asset/swagger-ui-dist"},
         {"name": "jquery-bar-rating", "package": "npm-asset/jquery-bar-rating"}
       ]
     },
