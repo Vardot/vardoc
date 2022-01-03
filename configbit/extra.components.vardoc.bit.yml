@@ -6,7 +6,7 @@ config_bit:
   type: list
   for: /profiles/vardoc/vardoc.info.yml
   when:
-    show_extra_components: true
+    show_extra_components: false
     list:
       dependencies: { }
       selected: { }
