@@ -33,6 +33,7 @@
     "drupal/core-composer-scaffold": "^8.8.0",
     "webflo/drupal-finder": "~1.0",
     "drupal/core": "~8.0 || ~9.0",
+    "vardot/entity-definition-update-manager": "~1.0",
     "vardot/varbase": "~8.8.0 || ~9.0.0",
     "drupal/fontawesome": "~2.0",
     "drupal/better_normalizers": "~1.0",

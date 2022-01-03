@@ -8,7 +8,7 @@
 use Symfony\Component\Yaml\Yaml;
 use Drupal\Core\Config\InstallStorage;
 use Drupal\user\Entity\User;
-use Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager;
+use Vardot\Entity\EntityDefinitionUpdateManager;
 
 /**
  * Implements hook_install().
@@ -117,7 +117,7 @@ function vardoc_profile_install() {
   // Entity updates to clear up any mismatched entity and/or field definitions
   // And Fix changes were detected in the entity type and field definitions.
   \Drupal::classResolver()
-    ->getInstanceFromDefinition(VarbaseEntityDefinitionUpdateManager::class)
+    ->getInstanceFromDefinition(EntityDefinitionUpdateManager::class)
     ->applyUpdates();
 
 }

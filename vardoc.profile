@@ -12,7 +12,7 @@ use Drupal\varbase\Config\ConfigBit;
 use Drupal\varbase\Form\ConfigureMultilingualForm;
 use Drupal\varbase\Form\AssemblerForm;
 use Drupal\varbase\Form\DevelopmentToolsAssemblerForm;
-use Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager;
+use Vardot\Entity\EntityDefinitionUpdateManager;
 use Drupal\node\Entity\Node;
 use Drupal\path_alias\Entity\PathAlias;
 use Drupal\vardoc\Form\VardocAssemblerForm;
@@ -224,7 +224,7 @@ function vardoc_after_install_finished(array &$install_state) {
   // Entity updates to clear up any mismatched entity and/or field definitions
   // And Fix changes were detected in the entity type and field definitions.
   \Drupal::classResolver()
-    ->getInstanceFromDefinition(VarbaseEntityDefinitionUpdateManager::class)
+    ->getInstanceFromDefinition(EntityDefinitionUpdateManager::class)
     ->applyUpdates();
 
   // Full flash and clear cash and rebuilding newly created routes.
