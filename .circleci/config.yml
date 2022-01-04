@@ -139,8 +139,6 @@ commands:
             sudo chmod 775 .
             sudo chown www-data:circleci .
             composer create-project vardot/vardoc:4.0.x vardoc --stability dev --no-interaction -vvv
-            cd /var/www/html/test/vardoc
-            composer require drupal/drush_language:~1.0
             cp -r /home/circleci/project /var/www/html/test/vardoc/docroot/profiles/vardoc
             cd /var/www/html/test/vardoc
             sudo rm -rf config configbit css images libraries scripts src tests traslations vardoc.info.yml vardoc.install vardoc.libraries.yml vardoc.profile vardoc.services.yml yarn.lock
@@ -182,8 +180,6 @@ commands:
             mysql -h 127.0.0.1 -uroot -prootpw --execute="CREATE DATABASE test_vardoc CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;" -vvv
             cd /var/www/html/test/vardoc/docroot
             ../bin/drush site-install vardoc --yes --account-name="webmaster" --account-pass="dD.123123ddd" --account-mail="webmaster@vardot.com" --db-url="mysql://root:rootpw@127.0.0.1/test_varbase" --locale="en" install_configure_form.enable_update_status_emails=NULL -vvv
-            ../bin/drush pm:enable varbase_development --yes
-            ../bin/drush pm:enable varbase_styleguide --yes
             ../bin/drush config:set system.performance css.preprocess 0 --yes
             ../bin/drush config:set system.performance js.preprocess 0 --yes
             ../bin/drush config:set system.logging error_level all --yes
@@ -210,16 +206,6 @@ commands:
           command: |
             cd /var/www/html/test/vardoc/docroot/profiles/vardoc/scripts
             bash add-testing-users.sh
-
-      ## Enable the Drush Language Command module and add RTL language
-      - run:
-          name: Enable the Drush Language Command module and add RTL language
-          command: |
-            cd /var/www/html/test/vardoc/docroot
-            ../bin/drush pm:enable drush_language --yes
-            ../bin/drush language-add ar
-            ../bin/drush language-info
-            ../bin/drush cr
 
 jobs:
   vardoc-testing-01-website-base-requirements:

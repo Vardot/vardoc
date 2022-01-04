@@ -4,7 +4,7 @@ I want to add raw URLs and links in the rich text editor
 So that they will be converted to links and visitors can click on them.
 
   @javascript @local @development @staging @production
-  Scenario: Check if inserted raw URL will convert into a link using the "Rich editor" text format when we save a new Basic page.
+  Scenario: Check if inserted raw URL will convert into a link using the "Rich editor" text format when we save a new Basic page
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/page"
       And I wait
@@ -17,7 +17,3 @@ So that they will be converted to links and visitors can click on them.
       And I should see "Test line #1"
       And I should see "Test line #2 http://drupal.org"
       And I should see "Test line #3"
-  # But the ".field.field-name-body .field-item" element should contain "Test line #1 <br /> Test line #2 <a href=\"http://drupal.org\" target=\"_blank\">http://drupal.org</a> <br /> Test line #3</p>"
-     When I click "http://drupal.org" in the "a" element with the "href" attribute set to "http://drupal.org"
-      And I wait
-     Then I should see "Drupal"
