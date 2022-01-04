@@ -63,10 +63,13 @@ default:
           version: "*"
           extra_capabilities:
             chromeOptions:
+              args:
+                - "--disable-gpu"
+                - "--window-size=1920,1080"
               w3c: false
           chrome:
             switches:
-#              - "--headless"
+              - "--headless"
               - "--disable-web-security"
               - "--DNS-prefetch-disable"
               - "--whitelisted-ips"
