@@ -5,7 +5,7 @@ So that I can see path I followed to locate the current page usually near the to
 
   @javascript @local @development @staging @production
   Scenario: Add the Test Basic page root page to the main menu.
-    Given I am a logged in user with the "Site admin" user
+    Given I am a logged in user with the "webmaster" user
      When I go to "/node/add/page"
       And I wait
       And I fill in "Test Basic page root title" for "Title"
@@ -21,7 +21,7 @@ So that I can see path I followed to locate the current page usually near the to
 
   @javascript @local @development @staging @production
   Scenario: Add the Test Basic page sub 1, then check the breadcrumb.
-    Given I am a logged in user with the "Site admin" user
+    Given I am a logged in user with the "webmaster" user
      When I go to "/node/add/page"
       And I wait
       And I fill in "Test Basic page sub 1 title" for "Title"

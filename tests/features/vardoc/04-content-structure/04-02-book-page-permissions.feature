@@ -20,7 +20,7 @@ So that the "Book page" will show up in the structured menu under its parent pag
       And I should see "Comment"
       And I should see "Content rating"
       And I should see "Documents"
-      And I should see "External links"
+      And I should see "Google links"
       And I should see "Meta tags"
 
   @javascript @local @development @staging @production
@@ -36,8 +36,8 @@ So that the "Book page" will show up in the structured menu under its parent pag
     Given I am a logged in user with the "Normal user" user
      When I go to "/node/add/book"
       And I wait
-     Then I should see "Access denied"
-      And I should see "You are not authorized to access this page."
+     Then I should not see "Access denied"
+      And I should not see "You are not authorized to access this page."
 
   @javascript @local @development @staging @production
   Scenario: Check that Editor users can create an Article (Book page).
