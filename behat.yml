@@ -48,8 +48,7 @@ default:
     html:
       output_path: "%paths.base%/tests/reports/"
   extensions:
-    Drupal\MinkExtension:
-      ajax_timeout: 60
+    Behat\MinkExtension:
       files_path: "%paths.base%/tests/assets/"
       goutte: ~
       selenium2:
@@ -64,9 +63,6 @@ default:
           version: "*"
           extra_capabilities:
             chromeOptions:
-              args:
-                - "--disable-gpu"
-                - "--window-size=1920,1080"
               w3c: false
           chrome:
             switches:
