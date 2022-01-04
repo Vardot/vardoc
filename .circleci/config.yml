@@ -179,10 +179,7 @@ commands:
             mysql -h 127.0.0.1 -uroot -prootpw --execute="DROP DATABASE IF EXISTS test_vardoc;" -vvv
             mysql -h 127.0.0.1 -uroot -prootpw --execute="CREATE DATABASE test_vardoc CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;" -vvv
             cd /var/www/html/test/vardoc/docroot
-            ../bin/drush site-install vardoc --yes --account-name="webmaster" --account-pass="dD.123123ddd" --account-mail="webmaster@vardot.com" --db-url="mysql://root:rootpw@127.0.0.1/test_varbase" --locale="en" install_configure_form.enable_update_status_emails=NULL -vvv
-            ../bin/drush config:set system.performance css.preprocess 0 --yes
-            ../bin/drush config:set system.performance js.preprocess 0 --yes
-            ../bin/drush config:set system.logging error_level all --yes
+            ../bin/drush site-install vardoc --yes --account-name="webmaster" --account-pass="dD.123123ddd" --account-mail="webmaster@vardot.com" --db-url="mysql://root:rootpw@127.0.0.1/test_vardoc" --locale="en"
             ../bin/drush cr
 
       ## Configure and run the virtual display.
