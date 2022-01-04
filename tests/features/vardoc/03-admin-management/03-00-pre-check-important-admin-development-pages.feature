@@ -3,17 +3,16 @@ As a site admin user
 I want to be able to make sure that all admin and development tools are working
 So that I can use them after the install or update.
 
-  Background:
-    Given I am a logged in user with the "webmaster" user
-
-  @local @development @staging @production
+  @javascript @local @development @staging @production
   Scenario: Check the content page.
+    Given I am a logged in user with the "webmaster" user
      When I go to "/admin/content"
       And I wait
      Then I should see "Content"
 
-  @local @development @staging @production
+  @javascript @local @development @staging @production
   Scenario: Check the structure page.
+    Given I am a logged in user with the "webmaster" user
      When I go to "/admin/structure"
       And I wait
      Then I should see "Block layout"
@@ -29,31 +28,35 @@ So that I can use them after the install or update.
       And I should see "Views"
       And I should see "Webforms"
 
-  @local @development @staging @production
+  @javascript @local @development @staging @production
   Scenario: Check the structure page.
+    Given I am a logged in user with the "webmaster" user
      When I go to "/admin/structure/page_manager"
       And I wait
      Then I should see "Pages"
       And I should see "Homepage"
       And I should see "Total Control dashboard"
 
-  @local @development @staging @production
+  @javascript @local @development @staging @production
   Scenario: Check the Page Manager main page.
+    Given I am a logged in user with the "webmaster" user
      When I go to "/admin/structure/page_manager"
       And I wait
      Then I should see "Pages"
       And I should see "Homepage"
       And I should see "Total Control dashboard"
 
-  @local @development @staging @production
+  @javascript @local @development @staging @production
   Scenario: Check the views page.
+    Given I am a logged in user with the "webmaster" user
      When I go to "/admin/structure/views"
       And I wait
      Then I should see "Views"
       And I should see "Browser"
 
-  @local @development @staging @production
+  @javascript @local @development @staging @production
   Scenario: Check the Appearance page.
+    Given I am a logged in user with the "webmaster" user
      When I go to "/admin/appearance"
       And I wait
      Then I should see "Appearance"
@@ -62,5 +65,3 @@ So that I can use them after the install or update.
       And I should see "Adminimal"
       And I should see "Bootstrap"
       And I should see "Vartheme Admin"
-
-

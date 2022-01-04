@@ -59,7 +59,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
   }
 
-  /**
+    /**
    * Authenticate a user with password from varbase configuration.
    *
    * Varbase Context #varbase. If you want to see the list of users or add yours you can go and
@@ -90,9 +90,12 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       if ($this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]', 6000)) {
         $page->fillField('name', $username);
         $page->fillField('pass', $password);
+        $this->iScrollToBottom();
+        $this->iWaitForSeconds(2);
         $submit = $page->findButton('op');
         $submit->click();
       }
+
     }
     else {
       throw new \Exception("The '$username' user name is wrong or it was not listed in the list of default testing users.");
@@ -114,13 +117,15 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       $this->logout();
     }
 
-    // Login with the passed username and password.
+    // Login with the.
     $this->getSession()->visit($this->locatePath('/user/login'));
     $page = $this->getSession()->getPage();
 
     if ($this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]', 6000)) {
       $page->fillField('name', $username);
       $page->fillField('pass', $password);
+      $this->iScrollToBottom();
+      $this->iWaitForSeconds(2);
       $submit = $page->findButton('op');
       $submit->click();
     }
@@ -1496,13 +1501,13 @@ JS;
    *
    * Varbase Context #varbase.
    *
-   * Example #1: When I scrolldown
-   * Example #2:  And I scrolldown.
+   * Example #1: When I scroll down
+   * Example #2:  And I scroll down.
    *
-   * @When I scrolldown
+   * @When /^(?:|I )scroll down$/
    */
   public function iScrolldown() {
-    $this->getSession()->executeScript("javascript:window.scrollBy(200,350)");
+    $this->getSession()->executeScript("javascript:window.scrollBy(0,350)");
   }
 
   /**
@@ -1510,12 +1515,71 @@ JS;
    *
    * Varbase Context #varbase.
    *
-   * Example #1: When I scrollup.
+   * Example #1: When I scroll up.
    *
-   * @When I scrollup
+   * @When /^(?:|I )scroll up$/
    */
   public function iScrollup() {
     $this->getSession()->executeScript("javascript:window.scrollBy(0,-350)");
+  }
+
+  /**
+   * Scroll down in the current status of the page and pass a value.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: When I scroll down 800
+   * Example #2:  And I scroll down 2000
+   *
+   * @When /^(?:|I )scroll down (?P<value>\d+)$/
+   */
+  public function iScrolldownWithValue($value) {
+    $this->getSession()->executeScript("javascript:window.scrollBy(0," . $value . ")");
+  }
+
+  /**
+   * Scroll up in the current status of the page and pass a value.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: When I scroll up 1000
+   *
+   * @When /^(?:|I ) scroll up (?P<value>\d+)$/
+   */
+  public function iScrollupWithValue($value) {
+    $this->getSession()->executeScript("javascript:window.scrollBy(0,-" . $value . ")");
+  }
+
+  /**
+   * Scroll to top
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: When I scroll to top
+   * Example #2: When I scroll to the top
+   * Example #3: When I scroll to the top of the page
+   * Example #4: And scroll to top
+   *
+   * @When /^(?:|I )scroll to (?:|the )top(?:| of the page)$/
+   */
+  public function iScrollToTop() {
+    $this->getSession()->executeScript("javascript:window.scrollBy(0,0)");
+  }
+
+  /**
+   * Scroll to bottom
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: When I scroll to bottom
+   * Example #2: And I scroll to the bottom
+   * Example #3: When I scroll to the bottom of the page
+   * Example #4: And scroll to bottom
+   *
+   * @When /^(?:|I )scroll to (?:|the )bottom(?:| of the page)$/
+   */
+  public function iScrollToBottom() {
+    $this->getSession()->executeScript("javascript:window.scrollBy(0,document.body.scrollHeight)");
   }
 
   /**

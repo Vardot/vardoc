@@ -3,17 +3,16 @@ As a user with a ready user account
 I will want to be able to Request new password
 So that I can reset my password for the account
 
-  Background:
-    Given I am not logged in
-
-  @local @development @staging @production
+  @javascript @local @development @staging @production
   Scenario: Check that an anonymous user can reset his/her password.
+    Given I am not logged in
      When I go to "/user/login"
       And I wait
      Then I should see "Forgot your password?"
 
   @javascript @local @development @staging @production
   Scenario: Verify that the system cannot send an email to non-existing users/emails.
+    Given I am not logged in
      When I go to "/user/password"
       And I wait
      Then I should see "Username or email address"
