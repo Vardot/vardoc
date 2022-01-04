@@ -7,11 +7,11 @@ So that I will be able to view/add/edit/ or delete content in the site
   Scenario: Check if a visitor can login with a valid username and password.
     Given I am on "user/login"
       And I wait
-     When I fill in "test_authenticated" for "Username"
+     When I fill in "Normal user" for "Username"
       And I fill in "dD.123123ddd" for "Password"
       And I press "Log in"
       And wait
-     Then I should see "test_authenticated"
+     Then I should see "Normal user"
 
   @local @development @staging @production
   Scenario: Verify a form error after not entering the username or password when we login.

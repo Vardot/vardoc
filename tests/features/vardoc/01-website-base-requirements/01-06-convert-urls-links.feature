@@ -5,7 +5,7 @@ So that they will be converted to links and visitors can click on them.
 
   @javascript @local @development @staging @production
   Scenario: Check if inserted raw URL will convert into a link using the "Rich editor" text format when we save a new Basic page.
-    Given I am a logged in user with the "test_site_admin" user
+    Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/page"
       And I wait
      Then I should see "Create Basic page"

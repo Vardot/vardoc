@@ -19,9 +19,9 @@ Feature: User Management - Have persistent login options and configurations
       And I wait
      Then I should see "Log in"
       And I should see "Remember me"
-     When I fill in "test_authenticated" for "Username"
+     When I fill in "Normal user" for "Username"
       And I fill in "dD.123123ddd" for "Password"
       And I check the box "Remember me"
       And I press the "edit-submit" button
       And I wait
-     Then I should see "test_authenticated"
+     Then I should see "Normal user"

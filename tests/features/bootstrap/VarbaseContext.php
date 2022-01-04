@@ -65,28 +65,38 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * Varbase Context #varbase. If you want to see the list of users or add yours you can go and
    * edit the behat.varbase.yml file under the varbase_users list.
    *
-   * Example: I am a logged in user with the username "test_content_admin"
+   * Example: I am a logged in user with the username "Content admin"
    *
    * @Given /^I am a logged in user with (?:|the )"(?P<username>[^"]*)"(?:| user)$/
    * @Then /^I login with (?:|the )"(?P<username>[^"]*)"(?:| user)$/
    */
   public function iAmloggedInUserWithTheUser($username) {
 
-    try {
-      $password = $this->users[$username];
+    if (isset($this->users[$username])) {
+      try {
+        $password = $this->users[$username];
+      }
+      catch (Exception $e) {
+        throw new \Exception("Password not found for '$username'.");
+      }
+
+      if ($this->loggedIn()) {
+        $this->logout();
+      }
+
+      $this->getSession()->visit($this->locatePath('/user/login'));
+      $page = $this->getSession()->getPage();
+
+      if ($this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]', 6000)) {
+        $page->fillField('name', $username);
+        $page->fillField('pass', $password);
+        $submit = $page->findButton('op');
+        $submit->click();
+      }
     }
-    catch (Exception $e) {
-      throw new \Exception("Password not found for '$username'.");
+    else {
+      throw new \Exception("The '$username' user name is wrong or it was not listed in the list of default testing users.");
     }
-    if ($this->loggedIn()) {
-      $this->logout();
-    }
-    $element = $this->getSession()->getPage();
-    $this->getSession()->visit($this->locatePath('/user'));
-    $element->fillField('edit-name', $username);
-    $element->fillField('edit-pass', $password);
-    $submit = $element->findButton('op');
-    $submit->click();
   }
 
   /**
@@ -104,13 +114,16 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       $this->logout();
     }
 
-    // Login with the.
-    $element = $this->getSession()->getPage();
-    $this->getSession()->visit($this->locatePath('/user'));
-    $element->fillField('edit-name', $username);
-    $element->fillField('edit-pass', $password);
-    $submit = $element->findButton('op');
-    $submit->click();
+    // Login with the passed username and password.
+    $this->getSession()->visit($this->locatePath('/user/login'));
+    $page = $this->getSession()->getPage();
+
+    if ($this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]', 6000)) {
+      $page->fillField('name', $username);
+      $page->fillField('pass', $password);
+      $submit = $page->findButton('op');
+      $submit->click();
+    }
   }
 
   /**
@@ -943,6 +956,49 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   }
 
   /**
+   * Check if we do not have the text in the selected element.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: Then I should not see "your text" in the "ol" element with the "class" attribute set to "breadcrumb"
+   * Example #2:  And I should not see "your text" in the "div" element with the "id" attribute set to "right-panel"
+   *
+   * @Then /^I should not see "(?P<text>[^"]*)" in the "(?P<htmlTagName>[^"]*)" element with the "(?P<attribute>[^"]*)" attribute set to "(?P<value>[^"]*)"$/
+   */
+  public function iShouldNotSeeTextInTheHtmlTagElement($text, $htmlTagName, $attribute, $value) {
+
+    $elements = $this->getSession()->getPage()->findAll('css', $htmlTagName);
+    if (empty($elements)) {
+      throw new \Exception(sprintf('The element "%s" was not found in the page', $htmlTagName));
+    }
+
+    $found = FALSE;
+    foreach ($elements as $element) {
+      $actual = $element->getText();
+      $actual = preg_replace('/\s+/u', ' ', $actual);
+      $regex = '/' . preg_quote($text, '/') . '/ui';
+
+      if (preg_match($regex, $actual)) {
+        $found = TRUE;
+        break;
+      }
+    }
+    if ($found) {
+      throw new \Exception(sprintf('"%s" was found in the "%s" element', $text, $htmlTagName));
+    }
+
+    if (empty($attribute)) {
+      $attr = $element->getAttribute($attribute);
+      if (empty($attr)) {
+        throw new \Exception(sprintf('The "%s" attribute is present on the element "%s"', $attribute, $htmlTagName));
+      }
+      if (strpos($attr, "$value") === FALSE) {
+        throw new \Exception(sprintf('The "%s" attribute does not equal "%s" on the element "%s"', $attribute, $value, $htmlTagName));
+      }
+    }
+  }
+
+  /**
    * Click on the text in the selected element.
    *
    * Varbase Context #varbase.
@@ -1594,6 +1650,88 @@ JS;
    */
   public function iSelectTheParagraphComponent($value) {
     $this->getSession()->getPage()->find('xpath', '//*[contains(@class, "paragraphs-add-dialog") and contains(@class, "ui-dialog-content")]//*[contains(@name, "' . $value . '")]')->click();
+  }
+
+  /**
+   * Matching element exists on the page after a wait.
+   *
+   * @param string $selector_type
+   *   The element selector type (css, xpath).
+   * @param string|array $selector
+   *   The element selector.
+   * @param int $timeout
+   *   (optional) Timeout in milliseconds, defaults to 10000.
+   */
+  public function matchingElementAfterWait($selector_type, $selector, $timeout = 10000) {
+    $start = microtime(TRUE);
+    $end = $start + ($timeout / 1000);
+    $page = $this->getSession()->getPage();
+
+    do {
+      $node = $page->find($selector_type, $selector);
+      if (empty($node)) {
+        return FALSE;
+      }
+      usleep(100000);
+    } while (microtime(TRUE) < $end);
+
+    return TRUE;
+  }
+
+  /**
+   * Accept Alerts Before going to the next step.
+   *
+   * @BeforeStep @AcceptAlertsBeforStep
+   */
+  public function beforeStepAcceptAlert(BeforeStepScope $scope) {
+    try {
+      $this->getSession()->getDriver()->getWebDriverSession()->accept_alert();
+    }
+    catch (Exception $e) {
+      // no-op, alert might not be present.
+    }
+  }
+
+  /**
+   * Accept Alerts After going to the next step.
+   *
+   * @AftereStep @AcceptAlertsAfterStep
+   */
+  public function afterStepAcceptAlert(AfterStepScope $scope) {
+    try {
+      $this->getSession()->getDriver()->getWebDriverSession()->accept_alert();
+    }
+    catch (Exception $e) {
+      // no-op, alert might not be present.
+    }
+  }
+
+  /**
+   * Dismiss Alerts Before going to the next step.
+   *
+   * @BeforeStep @AcceptAlertsBeforStep
+   */
+  public function beforeStepDismissAlert(BeforeStepScope $scope) {
+    try {
+      $this->getSession()->getDriver()->getWebDriverSession()->dismiss_alert();
+    }
+    catch (Exception $e) {
+      // no-op, alert might not be present.
+    }
+  }
+
+  /**
+   * Dismiss Alerts After going to the next step.
+   *
+   * @AftereStep @DismissAlertsAfterStep
+   */
+  public function afterStepDismissAlert(AfterStepScope $scope) {
+    try {
+      $this->getSession()->getDriver()->getWebDriverSession()->dismiss_alert();
+    }
+    catch (Exception $e) {
+      // no-op, alert might not be present.
+    }
   }
 
 }
