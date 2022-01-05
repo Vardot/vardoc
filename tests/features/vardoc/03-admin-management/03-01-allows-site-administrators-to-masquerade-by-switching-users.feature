@@ -19,15 +19,15 @@ Scenario: Check if the webmaster user UID 1 can masquerade as any user.
    Then I should see "Masquerade as Normal user"
 
   # Check if the webmaster user UID 1 can masquerade as an Editor user.
-   When I go to "/admin/people"
-    And I wait
-    And I fill in "Editor" for "Name or email contains"
-    And I press "Filter"
-    And I wait
-   Then I should see "Editor"
-   When I click "Editor"
-    And I wait
-   Then I should see "Masquerade as Editor"
+  #  When I go to "/admin/people"
+  #   And I wait
+  #   And I fill in "Editor" for "Name or email contains"
+  #   And I press "Filter"
+  #   And I wait
+  #  Then I should see "Editor"
+  #  When I click "Editor"
+  #   And I wait
+  #  Then I should see "Masquerade as Editor"
 
   # Check if the webmaster user UID 1 can masquerade as a content admin user.
    When I go to "/admin/people"
@@ -78,15 +78,15 @@ Scenario: Check if a super admin user can masquerade as any user.
    Then I should see "Masquerade as Normal user"
 
   # Check if a super admin user can masquerade as an Editor user.
-   When I go to "/admin/people"
-    And I wait
-    And I fill in "Editor" for "Name or email contains"
-    And I press "Filter"
-    And I wait
-   Then I should see "Editor"
-   When I click "Editor"
-    And I wait
-   Then I should see "Masquerade as Editor"
+  #  When I go to "/admin/people"
+  #   And I wait
+  #   And I fill in "Editor" for "Name or email contains"
+  #   And I press "Filter"
+  #   And I wait
+  #  Then I should see "Editor"
+  #  When I click "Editor"
+  #   And I wait
+  #  Then I should see "Masquerade as Editor"
 
   # Check if a super admin user can masquerade as a content admin user.
    When I go to "/admin/people"
@@ -135,15 +135,15 @@ Scenario: Check if a site admin user can NOT masquerade as any user.
    Then I should not see "Masquerade as Normal user"
 
   # Check if a site admin user can NOT masquerade as an Editor user.
-   When I go to "/admin/people"
-    And I wait
-    And I fill in "Editor" for "Name or email contains"
-    And I press "Filter"
-    And I wait
-   Then I should see "Editor"
-   When I click "Editor"
-    And I wait
-   Then I should not see "Masquerade as Editor"
+  #  When I go to "/admin/people"
+  #   And I wait
+  #   And I fill in "Editor" for "Name or email contains"
+  #   And I press "Filter"
+  #   And I wait
+  #  Then I should see "Editor"
+  #  When I click "Editor"
+  #   And I wait
+  #  Then I should not see "Masquerade as Editor"
 
   # Check if a site admin user can NOT masquerade as a content admin user.
    When I go to "/admin/people"
