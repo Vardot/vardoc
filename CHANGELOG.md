@@ -1,3 +1,81 @@
+# 4.0.2
+
+### Highlighted important changes since Vardoc 4.0.1:
+* Issue [#3211942](http://drupal.org/i/3211942):
+                 Allowed Vardoc to work with Composer ~2.0
+* Issue [#3212481](http://drupal.org/i/3212481):
+                 Switched to Varbase Social Single Sign-On module and removed the 
+                Vardoc Google Authentication module
+* Issue [#3256885](http://drupal.org/i/3256885):
+                 Switched Vardoc default Automated Functional Testing users creation
+                 to use drush user:create and drush user:role:add and use the default
+                 manual testing user names and emails
+
+### Added since Vardoc 4.0.1:
+* Issue [#3256732](http://drupal.org/i/3256732):
+                 Added composer allow-plugins to composer.json for
+                 Vardoc and Vardoc Project template
+
+### Changed since Vardoc 4.0.1:
+* Issue [#3178726](http://drupal.org/i/3178726)
+                 by Joachim Namyslo: Remove patch from display suite
+                 issue 2975313 to no longer prevent updates
+* Issue [#3211952](http://drupal.org/i/3211952):
+                 Removed _core and uuid from all configs
+* Issue [#3212940](http://drupal.org/i/3212940):
+                 Switched to npm-asset/jquery-bar-rating from the custom 
+                repository antennaio/jquery-bar-rating
+
+### Updates since Vardoc 4.0.1:
+* Issue [#3178725](http://drupal.org/i/3178725)
+                 by Joachim Namyslo
+                : Incremented font awesome to ~2.0
+
+### Fixes since Vardoc 4.0.1:
+* Issue [#3212070](http://drupal.org/i/3212070):
+                 Fixed Vardoc Features modules structure of configs and info
+* Issue [#3212067](http://drupal.org/i/3212067):
+                 Fixed renamed the Tools custom Vardoc feature module machine
+                 name to vardoc_tools ( Vardoc Tools )
+* Issue [#3213025](http://drupal.org/i/3213025):
+                 Fixed to Mark all updates by the update helper checklist
+                 as successful on install
+* Issue [#3214212](http://drupal.org/i/3214212):
+                 Fixed JQuery SumoSelect Warning: constant(): Couldn't find constant CSS_PLUGINS in Library Discovery Parser
+
+---------------------------------------------------------------------------------
+
+# 4.0.1
+
+* Issue [#3161518](http://drupal.org/node/3161518)
+        by [Omar Alahmed](https://www.drupal.org/u/omar-alahmed)
+        : Remove drush make files
+
+---------------------------------------------------------------------------------
+
+# 4.0.0
+
+* Issue [#3161044](http://drupal.org/node/3161044):
+         Updated Vardoc to the latest Varbase and Bootstrap 4 versions with
+         extra functionality A new major release contains many features and
+          updates include:
+* Editorial workflow and content moderation gives the authenticated users
+ the ability to add content contribution.
+* A new simple, clean design, Bootstrap 4 with Argon UI kit, theme keeps
+ the focus on your product and knowledge base.
+* Professional backend user experience using Vartheme Calro theme.
+* A new auto complete search with ready modern style.
+* Collapsing book navigation tree displays the book pages in smart and organized way.
+* A new content type called Tools to facilitate reaching your company
+ tools and applications.
+* Managing and displaying the book pages documents and attachments
+ in very structured way.
+* Ready printable book pages without the need to add any styling code.
+* A new related book pages block to ease finding the content with similar topics.
+* Enhance the user profile page structure and style.
+
+---------------------------------------------------------------------------------
+
 # 8.2.6
 
 ### Highlighted important changes since Vardoc 8.2.5:
