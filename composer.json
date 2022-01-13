@@ -24,24 +24,27 @@
     "assets": {
       "type": "composer",
       "url": "https://asset-packagist.org"
+    },
+    "drupal-ckeditor-plugins": {
+      "type": "composer",
+      "url": "https://panopoly.gitlab.io/drupal-ckeditor-plugins"
     }
   },
   "require": {
     "composer/installers": "~1.0 || ~2.0",
     "oomphinc/composer-installers-extender": "~1.0 || ~2.0",
     "cweagans/composer-patches": "~1.0",
-    "drupal/core-composer-scaffold": "^8.8.0",
-    "webflo/drupal-finder": "~1.0",
-    "drupal/core": "~8.0 || ~9.0",
+    "drupal/core-composer-scaffold": "^9",
+    "drupal/core": "~9.0",
     "vardot/entity-definition-update-manager": "~1.0",
-    "vardot/varbase": "~8.8.0 || ~9.0.0",
+    "vardot/varbase": "~9.0.0",
+    "drupal/varbase_faqs": "~9.0",
     "drupal/fontawesome": "~2.0",
     "drupal/better_normalizers": "~1.0",
     "drupal/votingapi": "~3.0",
     "drupal/votingapi_widgets": "~1.0",
     "drupal/flag": "~4.0",
     "drupal/sharethis": "~2.0",
-    "drupal/varbase_faqs": "~6.0",
     "drupal/menu_link_attributes": "~1.0",
     "drupal/book_tree_menu": "~2.0",
     "drupal/svg_image": "~1.0",
@@ -49,15 +52,14 @@
     "npm-asset/jquery-bar-rating": "~1.0"
   },
   "require-dev": {
-    "drupal/core-dev": "~8.0",
-    "drush/drush": "~9.0",
-    "drupal/drupal-extension": "~3.0",
+    "drupal/core-dev": "~9.0",
+    "drush/drush": "~10.0",
+    "drupal/drupal-extension": "~4.0",
     "emuse/behat-html-formatter": "^0.2.0"
   },
   "config": {
     "bin-dir": "bin/",
     "secure-http": false,
-    "optimize-autoloader": true,
     "preferred-install": {
       "drupal/core": "dist"
     },
@@ -97,6 +99,11 @@
       "locations": {
         "web-root": "docroot/"
       }
+    },
+    "branch-alias": {
+      "dev-4.0.x": "4.0.x-dev",
+      "dev-5.0.x": "5.0.x-dev",
+      "dev-9.0.x": "9.0.x-dev"
     },
     "installer-types": [
       "bower-asset",
@@ -142,6 +149,12 @@
     "composer-exit-on-patch-failure": true,
     "patchLevel": {
       "drupal/core": "-p2"
+    },
+    "patches": {
+      "drupal/core": {
+        "Issue #1356276: Allow profiles to define a base/parent profile":
+        "https://www.drupal.org/files/issues/2021-11-18/1356276-675.patch"
+      }
     }
   }
 }
