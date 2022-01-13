@@ -24,10 +24,6 @@
     "assets": {
       "type": "composer",
       "url": "https://asset-packagist.org"
-    },
-    "drupal-ckeditor-plugins": {
-      "type": "composer",
-      "url": "https://panopoly.gitlab.io/drupal-ckeditor-plugins"
     }
   },
   "require": {
@@ -103,7 +99,6 @@
     },
     "branch-alias": {
       "dev-4.0.x": "4.0.x-dev",
-      "dev-5.0.x": "5.0.x-dev",
       "dev-9.0.x": "9.0.x-dev"
     },
     "installer-types": [
@@ -142,7 +137,6 @@
         {"name": "jquery-ui-touch-punch", "package": "bower-asset/jqueryui-touch-punch"},
         {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
         {"name": "swagger-ui", "package": "swagger-api/swagger-ui"},
-        {"name": "fakeobjects", "package": "drupal-ckeditor-plugin/fakeobjects"},
         {"name": "jquery-bar-rating", "package": "npm-asset/jquery-bar-rating"}
       ]
     },
