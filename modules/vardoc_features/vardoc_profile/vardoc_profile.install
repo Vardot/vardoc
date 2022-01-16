@@ -11,6 +11,7 @@ use Drupal\Core\Config\InstallStorage;
 use Drupal\Core\Config\StorageInterface;
 use Drupal\Core\Config\FileStorage;
 use Vardot\Entity\EntityDefinitionUpdateManager;
+use Drupal\Core\File\FileSystemInterface;
 
 /**
  * Implements hook_install().
@@ -154,8 +155,8 @@ function vardoc_profile_install() {
     ->set('field_last_name', 'Webmaster');
 
   // Create avatar file entity.
-  $data = file_get_contents(drupal_get_path('module', 'vardoc_profile') . '/images/avatar.png');
-  $file = file_save_data($data, 'public://avatar.png', FILE_EXISTS_REPLACE);
+  $data = file_get_contents(\Drupal::service('extension.path.resolver')->getPath('module', 'vardoc_profile') . '/images/avatar.png');
+  $file = \Drupal::service('file.repository')->writeData($data, 'public://avatar.png', FileSystemInterface::EXISTS_REPLACE);
   // Attach the file into user profile image and then save it.
   $user->field_profile_image->setValue(['target_id' => $file->id()]);
   $user->save();
