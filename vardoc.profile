@@ -23,7 +23,7 @@ use Drupal\vardoc\Form\VardocAssemblerForm;
  * Allows the profile to alter the site configuration form.
  */
 function vardoc_form_install_configure_form_alter(&$form, FormStateInterface $form_state) {
-  include_once drupal_get_path('profile', 'varbase') . '/varbase.profile';
+  include_once \Drupal::service('extension.path.resolver')->getPath('profile', 'varbase') . '/varbase.profile';
   varbase_form_install_configure_form_alter($form, $form_state);
 }
 
@@ -31,7 +31,7 @@ function vardoc_form_install_configure_form_alter(&$form, FormStateInterface $fo
  * Implements hook_install_tasks().
  */
 function vardoc_install_tasks(&$install_state) {
-  include_once drupal_get_path('profile', 'varbase') . '/varbase.profile';
+  include_once \Drupal::service('extension.path.resolver')->getPath('profile', 'varbase') . '/varbase.profile';
   $varbase_install_tasks = varbase_install_tasks($install_state);
 
   return [
@@ -55,7 +55,7 @@ function vardoc_install_tasks(&$install_state) {
  * Implements hook_install_tasks_alter().
  */
 function vardoc_install_tasks_alter(array &$tasks, array $install_state) {
-  include_once drupal_get_path('profile', 'varbase') . '/varbase.profile';
+  include_once \Drupal::service('extension.path.resolver')->getPath('profile', 'varbase') . '/varbase.profile';
 
   // Skip select language step to install it in English as default language.
   unset($tasks['install_select_language']);
@@ -74,7 +74,7 @@ function vardoc_install_tasks_alter(array &$tasks, array $install_state) {
  *   The batch job definition.
  */
 function vardoc_assemble_extra_components(array &$install_state) {
-  include_once drupal_get_path('profile', 'varbase') . '/varbase.profile';
+  include_once \Drupal::service('extension.path.resolver')->getPath('profile', 'varbase') . '/varbase.profile';
 
   // Default Vardoc components, which must be installed.
   $default_components = ConfigBit::getList('configbit/default.components.vardoc.bit.yml', 'install_default_components', TRUE, 'dependencies', 'profile', 'vardoc');
@@ -118,7 +118,7 @@ function vardoc_assemble_extra_components(array &$install_state) {
             $extraFeatures[$extra_feature_key]['config_form'] == TRUE &&
             isset($extraFeatures[$extra_feature_key]['formbit'])) {
 
-          $formbit_file_name = drupal_get_path('profile', 'vardoc') . '/' . $extraFeatures[$extra_feature_key]['formbit'];
+          $formbit_file_name = \Drupal::service('extension.path.resolver')->getPath('profile', 'vardoc') . '/' . $extraFeatures[$extra_feature_key]['formbit'];
 
           if (file_exists($formbit_file_name)) {
 
@@ -172,7 +172,7 @@ function vardoc_assemble_extra_components(array &$install_state) {
             $demoContent[$demo_content_key]['config_form'] == TRUE &&
             isset($demoContent[$demo_content_key]['formbit'])) {
 
-          $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $demoContent[$demo_content_key]['formbit'];
+          $formbit_file_name = \Drupal::service('extension.path.resolver')->getPath('profile', 'varbase') . '/' . $demoContent[$demo_content_key]['formbit'];
           if (file_exists($formbit_file_name)) {
 
             // Added the selected development configs to the batch process

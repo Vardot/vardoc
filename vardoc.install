@@ -23,7 +23,7 @@ function vardoc_install() {
 
   // Install optional configs.
   $config_installer = \Drupal::service('config.installer');
-  $optional_install_path = drupal_get_path('profile', 'vardoc') . '/' . InstallStorage::CONFIG_OPTIONAL_DIRECTORY;
+  $optional_install_path = \Drupal::service('extension.path.resolver')->getPath('profile', 'vardoc') . '/' . InstallStorage::CONFIG_OPTIONAL_DIRECTORY;
   if (is_dir($optional_install_path)) {
     // Install any optional config the profile provides.
     $storage = new FileStorage($optional_install_path, StorageInterface::DEFAULT_COLLECTION);

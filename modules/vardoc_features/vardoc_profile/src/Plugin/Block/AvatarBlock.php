@@ -62,7 +62,7 @@ class AvatarBlock extends BlockBase implements ContainerFactoryPluginInterface {
   public function build() {
     return [
       '#theme' => 'vardoc_user_avatar_block',
-      '#content' => $this->request->getBaseUrl() . '/' . drupal_get_path('module', 'vardoc_profile') . '/images/avatar-small.png',
+      '#content' => $this->request->getBaseUrl() . '/' . \Drupal::service('extension.path.resolver')->getPath('module', 'vardoc_profile') . '/images/avatar-small.png',
     ];
   }
 
