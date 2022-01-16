@@ -33,31 +33,7 @@ But make sure to have the webmaster user with the `dD.123123ddd` passwrod.
 Exmaple Drush install:
 Change directory in the terminal to the path of the project and `/PROJECT_DIR_NAME/docroot`
 ```
-../bin/drush site-install vardoc --yes --account-name="webmaster" --account-pass="dD.123123ddd" --account-mail="webmaster@vardot.com" --db-url="mysql://root:rootpw@127.0.0.1/test_varbase" --locale="en" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_auth=true install_configure_form.enable_update_status_emails=NULL -vvv
-
-```
-
-### Enable all Vardoc components
-Make sure that all vardoc modules are insalled.
-```
-../bin/drush pm:enable vmi --yes
-../bin/drush pm:enable varbase_heroslider_media --yes
-../bin/drush pm:enable varbase_carousels --yes
-../bin/drush pm:enable varbase_search --yes
-../bin/drush pm:enable varbase_blog --yes
-../bin/drush pm:enable varbase_development --yes
-../bin/drush pm:enable varbase_styleguide --yes
-../bin/drush pm:enable varbase_landing --yes
-../bin/drush pm:enable varbase_api --yes
-../bin/drush pm:enable varbase_content_planner --yes
-../bin/drush pm:enable varbase_media_instagram --yes
-../bin/drush pm:enable varbase_media_twitter --yes
-../bin/drush pm:enable varbase_auth --yes
-../bin/drush pm:enable social_auth_google --yes
-../bin/drush pm:enable social_auth_facebook --yes
-../bin/drush pm:enable social_auth_twitter --yes
-../bin/drush pm:enable social_auth_linkedin --yes
-../bin/drush cr
+../bin/drush site-install vardoc --yes --account-name="webmaster" --account-pass="dD.123123ddd" --account-mail="webmaster@vardot.com" --db-url="mysql://root:rootpw@127.0.0.1/test_varbase" --locale="en" install_configure_form.enable_update_status_emails=NULL -vvv
 ```
 
 ### Enable the Drush Language Command module and add RTL language
