@@ -83,7 +83,7 @@ class VardocAssemblerForm extends VarbaseAssemblerForm {
           ];
 
           if (isset($extra_feature_info['formbit'])) {
-            $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $extra_feature_info['formbit'];
+            $formbit_file_name = \Drupal::service('extension.path.resolver')->getPath('profile', 'varbase') . '/' . $extra_feature_info['formbit'];
             if (file_exists($formbit_file_name)) {
 
               include_once $formbit_file_name;
@@ -151,7 +151,7 @@ class VardocAssemblerForm extends VarbaseAssemblerForm {
           ];
 
           if (isset($demo_content_info['formbit'])) {
-            $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $demo_content_info['formbit'];
+            $formbit_file_name = \Drupal::service('extension.path.resolver')->getPath('profile', 'varbase') . '/' . $demo_content_info['formbit'];
             if (file_exists($formbit_file_name)) {
 
               include_once $formbit_file_name;
@@ -202,7 +202,7 @@ class VardocAssemblerForm extends VarbaseAssemblerForm {
 
         if (isset($extra_feature_info['config_form']) &&
                   $extra_feature_info['config_form'] == TRUE) {
-          $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $extra_feature_info['formbit'];
+          $formbit_file_name = \Drupal::service('extension.path.resolver')->getPath('profile', 'varbase') . '/' . $extra_feature_info['formbit'];
           if (file_exists($formbit_file_name)) {
 
             include_once $formbit_file_name;
@@ -240,7 +240,7 @@ class VardocAssemblerForm extends VarbaseAssemblerForm {
 
         if (isset($demo_content_info['config_form']) &&
                   $demo_content_info['config_form'] == TRUE) {
-          $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $demo_content_info['formbit'];
+          $formbit_file_name = \Drupal::service('extension.path.resolver')->getPath('profile', 'varbase') . '/' . $demo_content_info['formbit'];
           if (file_exists($formbit_file_name)) {
 
             include_once $formbit_file_name;
