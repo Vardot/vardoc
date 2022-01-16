@@ -148,7 +148,7 @@
     "patches": {
       "drupal/core": {
         "Issue #1356276: Allow profiles to define a base/parent profile":
-        "https://www.drupal.org/files/issues/2021-11-18/1356276-675.patch"
+        "https://www.drupal.org/files/issues/2022-01-16/1356276-667-subprofile-support-9.3.x.patch"
       }
     }
   }
