@@ -54,7 +54,7 @@ function vardoc_install_tasks(&$install_state) {
 /**
  * Implements hook_install_tasks_alter().
  */
-function vardoc_install_tasks_alter(&$tasks, $install_state) {
+function vardoc_install_tasks_alter(array &$tasks, array $install_state) {
   include_once \Drupal::service('extension.path.resolver')->getPath('profile', 'varbase') . '/varbase.profile';
 
   // Skip select language step to install it in English as default language.
@@ -74,6 +74,8 @@ function vardoc_install_tasks_alter(&$tasks, $install_state) {
  *   The batch job definition.
  */
 function vardoc_assemble_extra_components(array &$install_state) {
+  include_once \Drupal::service('extension.path.resolver')->getPath('profile', 'varbase') . '/varbase.profile';
+
   // Default Vardoc components, which must be installed.
   $default_components = ConfigBit::getList('configbit/default.components.vardoc.bit.yml', 'install_default_components', TRUE, 'dependencies', 'profile', 'vardoc');
 
@@ -122,14 +124,7 @@ function vardoc_assemble_extra_components(array &$install_state) {
 
             // Added the selected extra feature configs to the batch process
             // with the same function name in the formbit.
-            $batch['operations'][] = [
-              'varbase_save_editable_config_values',
-              [
-                $extra_feature_key,
-                $formbit_file_name,
-                $selected_extra_features_configs,
-              ],
-            ];
+            $batch['operations'][] = ['varbase_save_editable_config_values', (array) [$extra_feature_key, $formbit_file_name, $selected_extra_features_configs]];
           }
         }
       }
@@ -140,6 +135,9 @@ function vardoc_assemble_extra_components(array &$install_state) {
 
     // Fix entity updates to clear up any mismatched entity.
     $batch['operations'][] = ['varbase_fix_entity_update', (array) TRUE];
+
+    // Rebuilds all permissions on site content, and may be a lengthy process.
+    $batch['operations'][] = ['vardoc_node_access_rebuild', (array) TRUE];
   }
 
   // Install selected Demo content.
@@ -198,11 +196,13 @@ function vardoc_assemble_extra_components(array &$install_state) {
     // Fix entity updates to clear up any mismatched entity.
     $batch['operations'][] = ['varbase_fix_entity_update', (array) TRUE];
 
+    // Rebuilds all permissions on site content, and may be a lengthy process.
+    $batch['operations'][] = ['vardoc_node_access_rebuild', (array) TRUE];
+
   }
 
   return $batch;
 }
-
 
 /**
  * Vardoc after install finished.
@@ -241,6 +241,35 @@ function vardoc_after_install_finished(array &$install_state) {
   // * Rebuild the menu router based on all rebuilt data.
   drupal_flush_all_caches();
 
+  // Set front page to "/node".
+  // Issue #3188641: Change the set front page to "/node" process from
+  // using static node id to front page path by the alias.
+  // https://www.drupal.org/project/varbase_core/issues/3188641
+  try {
+    $path_alias_query = \Drupal::entityQuery('path_alias');
+    $path_alias_query->condition('alias', '/node', '=');
+    $alias_ids = $path_alias_query->execute();
+
+    if (count($alias_ids) > 0) {
+      foreach ($alias_ids as $alias_id) {
+
+        if (!(end($alias_ids))) {
+          $path_alias = PathAlias::load($alias_id);
+          $path_alias->delete();
+        }
+        else {
+          $page_front_path = PathAlias::load($alias_id)->getPath();
+
+          \Drupal::configFactory()->getEditable('system.site')
+          ->set('page.front', $page_front_path)
+          ->save();
+        }
+      }
+    }
+  } catch (\Exception $e) {
+    \Drupal::messenger()->addError($e->getMessage());
+  }
+
   global $base_url;
 
   // After install direction.
@@ -276,4 +305,16 @@ function vardoc_after_install_finished(array &$install_state) {
   $output['#attached']['html_head'][] = [$meta_redirect, 'meta_redirect'];
 
   return $output;
+}
+
+/**
+ * Rebuilds all permissions on site content, and may be a lengthy process.
+ *
+ * @param string|array $rebuild_permissions
+ *   To rebuilds permissions or not.
+ */
+function vardoc_node_access_rebuild($rebuild_permissions) {
+  if ($rebuild_permissions) {
+    node_access_rebuild(TRUE);
+  }
 }

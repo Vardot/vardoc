@@ -20,6 +20,7 @@ use Vardot\Entity\EntityDefinitionUpdateManager;
  * @see system_install()
  */
 function vardoc_install() {
+
   // Install optional configs.
   $config_installer = \Drupal::service('config.installer');
   $optional_install_path = \Drupal::service('extension.path.resolver')->getPath('profile', 'vardoc') . '/' . InstallStorage::CONFIG_OPTIONAL_DIRECTORY;
