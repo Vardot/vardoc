@@ -46,6 +46,28 @@ function vardoc_homepage_install() {
       }
     }
 
+    // Import Views.
+    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^views.view.*\\.(yml)$/i');
+    if (isset($storage_config_files) && is_array($storage_config_files)) {
+      foreach ($storage_config_files as $storage_config_file) {
+        $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
+        $storage_config_file_data = (array) Yaml::parse($storage_config_file_content);
+        $config_factory = \Drupal::configFactory()->getEditable($storage_config_file->name);
+        $config_factory->setData($storage_config_file_data)->save(TRUE);
+      }
+    }
+
+    // Import Blocks.
+    $storage_config_files = \Drupal::service('file_system')->scanDirectory($optional_install_path, '/^block.block.*\\.(yml)$/i');
+    if (isset($storage_config_files) && is_array($storage_config_files)) {
+      foreach ($storage_config_files as $storage_config_file) {
+        $storage_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $storage_config_file->uri);
+        $storage_config_file_data = (array) Yaml::parse($storage_config_file_content);
+        $config_factory = \Drupal::configFactory()->getEditable($storage_config_file->name);
+        $config_factory->setData($storage_config_file_data)->save(TRUE);
+      }
+    }
+
     // Install any optional config the module provides.
     $storage = new FileStorage($optional_install_path, StorageInterface::DEFAULT_COLLECTION);
     $config_installer->installOptionalConfig($storage, '');

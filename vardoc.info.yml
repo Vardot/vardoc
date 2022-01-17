@@ -4,11 +4,14 @@ description: 'Vardoc: Knowledge Base System and Documentation Site'
 core_version_requirement: ^9
 version: 4.0.x-dev
 base profile: varbase
+project: vardoc
+distribution:
+  name: Vardoc
+  install:
+    theme: vartheme_claro
 install:
   - system
   - action
-  - tracker
-  - aggregator
   - user
   - node
   - block
@@ -17,21 +20,15 @@ install:
   - image
   - views
   - file
-  - fontawesome
-  - block_class
+  - tracker
+  - aggregator
   - menu_block
   - block_content
+  - block_class
 themes:
-  # Contrib themes.
   - bootstrap_barrio
   - vartheme_bs4
+  - vardoc_theme
   - seven
   - claro
   - vartheme_claro
-
-  # Custom themes.
-  - vardoc_theme
-distribution:
-  name: Vardoc
-  install:
-    theme: vartheme_claro
