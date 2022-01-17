@@ -3,6 +3,9 @@
 use WebDriver\Exception;
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 use Behat\Behat\Context\SnippetAcceptingContext;
+use Behat\Mink\Exception\ElementHtmlException;
+use Behat\Mink\Element\Element;
+use Behat\Gherkin\Node\TableNode;
 
 /**
  * Defines application features from the specific context.
@@ -59,7 +62,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
   }
 
-    /**
+  /**
    * Authenticate a user with password from varbase configuration.
    *
    * Varbase Context #varbase. If you want to see the list of users or add yours you can go and
@@ -666,6 +669,193 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   }
 
   /**
+   * Section Configuration Functions
+   *
+   * =========================================================
+   */
+
+  /**
+   * Select a section container type
+   *
+   * Varbase Context #varbase
+   *
+   * Example #1: When I select the "Edge to Edge" container type
+   * Example #2:  And I select the "Boxed" container type
+   *
+   * @When I select the :arg1 container type
+   */
+  public function iSelectTheContainerType($name) {
+    $element = $this->getSession()->getPage()->find('xpath', "//label[contains(.,'$name') and contains(@for, 'edit-layout-settings-ui-tab-content-layout-container-type')]");
+    $element->click();
+  }
+
+  /**
+   * Select a section container width
+   *
+   * Varbase Context #varbase
+   *
+   * Example #1: When I select the "Tiny" container width
+   * Example #2:  And I select the "Narrow" container width
+   *
+   * @When I select the :arg1 container width
+   */
+  public function iSelectTheContainerWidth($width) {
+    $element = $this->getSession()->getPage()->find('xpath', "//label[contains(.,'$width') and contains(@for, 'edit-layout-settings-ui-tab-content-layout-container-width')]");
+    $element->click();
+  }
+
+  /**
+  * Select a section breakpoint
+  *
+  * Varbase Context #varbase
+  *
+  * Example #1: When I select the "md" "33% 67%" breakpoint
+  * Example #2:  And I select the "xs" "75% 25%" breakpoint
+  *
+  *
+  * @When I select the :arg1 :arg2 breakpoint
+  */
+  public function iSelectTheBreakpoint($size, $point) {
+    $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@class,'$size') and contains(.,'$point')]");
+    $element->click();
+  }
+
+  /**
+   * Select with gutters option for section
+   *
+   * Varbase Context #varbase
+   *
+   * Example #1: When I add gutters
+   * Example #2:  And I add gutters
+   *
+   * @When I add gutters
+   */
+  public function iAddGutters() {
+    $with_gutters = $this->getSession()->getPage()->find('xpath', "//label[contains(., 'With Gutters')]");
+    $with_gutters->click();
+  }
+
+  /**
+   * Remove gutters between columns
+   *
+   * Varbase Context #varbase
+   *
+   * Example #1: When I remove gutters between columns
+   * Example #2:  And I remove gutters between columns
+   *
+   * @When I remove gutters between columns
+   */
+  public function iRemoveGuttersBetweenColumns() {
+    $no_gutters = $this->getSession()->getPage()->find('xpath', "//*[contains(@class, 'vlb_gutters_between')]");
+    $no_gutters->click();
+  }
+
+  /**
+   * Move to the styles tab
+   *
+   * Varbase Context #varbase
+   *
+   * Example #1: When I move to the styles tab
+   * Example #2:  And I move to the styles tab
+   *
+   * @When I move to the styles tab
+   */
+  public function iMoveToTheStylesTab() {
+    $styles_tab = $this->getSession()->getPage()->find('xpath', "//a[contains(@data-target, 'appearance')]");
+    $styles_tab->click();
+  }
+
+  /**
+   * Open a specific setting menu under styles tab in section configuration
+   *
+   * Varbase Context #varbase
+   *
+   * Example #1: When I open the "Background" settings menu
+   * Example #2:  And I open the "Border" settings menu
+   *
+   * @When I open the :arg1 settings menu
+   */
+  public function iOpenTheSettingsMenu($menu) {
+    $menu = $this->getSession()->getPage()->find('xpath', "//span[contains(., '$menu') and contains(@class, 'bs-group-title')]");
+    $menu->click();
+  }
+
+  /**
+   * Select a background color
+   *
+   * Varbase Context #varbase
+   *
+   * Example #1: When I select the "Primary" background color
+   * Example #2:  And I select the "Light" background color
+   *
+   * @When I select the :arg1 background color
+   */
+  public function iSelectTheBackgroundColor($bg_color) {
+    $bg_color = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$bg_color') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-color')]");
+    $bg_color->click();
+  }
+
+  /**
+   * Uncheck the Edge to Edge Background option
+   *
+   * Varbase Contaxt #varbase
+   *
+   * Example #1: When I uncheck the Edge to Edge Background
+   * Example #2:  And I uncheck the Edge to Edge Background
+   *
+   * @When I uncheck the Edge to Edge Background
+   */
+  public function iUncheckTheEdgeToEdgeBackground() {
+    $e2e = $this->getSession()->getPage()->find('xpath', "//input[contains(@class, 'field-background-edge-to-edge')]");
+    $e2e->click();
+  }
+
+  /**
+   * Select a text color
+   *
+   * Varbase Context #varbase
+   *
+   * Example #1: When I select the "Dark" text color
+   * Example #2:  And I select the "White" text color
+   *
+   * @When I select the :arg1 text color
+   */
+  public function iSelectTheTextColor($color) {
+    $text_color = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$color') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-typography-text-color-text')]");
+    $text_color->click();
+  }
+
+  /**
+   * Set alignment of text
+   *
+   * Varbase Context #varbase
+   *
+   * Example #1: When I set the alignment to "End"
+   * Example #2:  And I set the alignment to "Start"
+   *
+   * @When I set the alignment to :arg1
+   */
+  public function iSetTheAlignmentTo($align) {
+    $alignment = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$align') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-typography-text-alignment')]");
+    $alignment->click();
+  }
+
+  /**
+   * Set horizontal alignment for blocks
+   *
+   * Varbase Context #varbase
+   *
+   * Example #1: When I set the horizontal alignment to "Align center"
+   * Example #2:  And I set the horizontal alignment to "Align start"
+   *
+   * @When I set the horizontal alignment to :arg1
+   */
+  public function iSetTheHorizontalAlignmentTo($h_align) {
+    $horizontal_alignment = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$h_align') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-alignment-horizontal-alignment-justify-content')]");
+    $horizontal_alignment->click();
+  }
+
+  /**
    * Images Functions.
    *
    * ==========================================================================.
@@ -1057,7 +1247,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function iShouldSeeValueInTheInputElement($text, $selector) {
 
-    $elements = $this->getSession()->getPage()->findAll('xpath', "//input[@id='{$selector}']");
+    $elements = $this->getSession()->getPage()->findAll('xpath', "//*[@id='{$selector}']");
     if (empty($elements)) {
       throw new \Exception(sprintf('The input element "%s" was not found in the page', $selector));
     }
@@ -1563,7 +1753,7 @@ JS;
    * @When /^(?:|I )scroll to (?:|the )top(?:| of the page)$/
    */
   public function iScrollToTop() {
-    $this->getSession()->executeScript("javascript:window.scrollBy(0,0)");
+    $this->getSession()->executeScript("document.documentElement.scrollTop = 0");
   }
 
   /**
@@ -1714,6 +1904,73 @@ JS;
    */
   public function iSelectTheParagraphComponent($value) {
     $this->getSession()->getPage()->find('xpath', '//*[contains(@class, "paragraphs-add-dialog") and contains(@class, "ui-dialog-content")]//*[contains(@name, "' . $value . '")]')->click();
+  }
+
+  /**
+   * Retrieve a table row containing specified entity with operations.
+   *
+   * @param \Behat\Mink\Element\Element
+   * @param string
+   *   The text to search for in the table row.
+   *
+   * @return \Behat\Mink\Element\NodeElement
+   *
+   * @throws \Exception
+   */
+  public function getEntityRow(Element $element, $search) {
+    $rows = $element->findAll('css', 'tr');
+    if (empty($rows)) {
+      throw new \Exception(sprintf('Entity not found on the page %s', $this->getSession()->getCurrentUrl()));
+    }
+
+    foreach ($rows as $row) {
+      if (strpos($row->getText(), $search) !== false) {
+          return $row;
+      }
+    }
+    throw new \Exception(sprintf('Failed to find an entity containing "%s" on the page %s', $search, $this->getSession()->getCurrentUrl()));
+  }
+
+  /**
+   * Check if an entity has a specific operation link.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example 1: Then I should see the "Edit" operation for the "Homepage" entity
+   * Example 2: Then I should see "Layout" operation for the "Homepage"
+   * Example 3: Then see "Edit" operation for "Homepage"
+   * Example 4: Then should see "Delete" operation for the "Blog" entity
+   * Example 5: Then I should see "Clone" operation for the "Homepage" entity
+   *
+   * @Then /^(?:|I )(?:|should )see (?:|the )"([^"]*)" operation for the "([^"]*)" (?:|entity|content|media|file|term|user)$/
+   */
+  public function iShouldSeetheOperationForTheEntity($operation, $entity) {
+    $row = $this->getEntityRow($this->getSession()->getPage(), $entity);
+    $operation_elment = $row->find('xpath',"//*[contains(@headers, 'view-operations-table-column')]//*[text()='{$operation}']");
+    if (empty($operation_elment)) {
+      throw new \Exception(sprintf('Found an entity containing "%s", but it did not have the operation "%s".', $entity, $operation));
+    }
+  }
+
+  /**
+   * Check if an entity not having a specific operation link.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example 1: Then I should not see the "View API" operation for the "Homepage" entity
+   * Example 2: Then I should not see "View API Docs" operation for the "Homepage"
+   * Example 3: Then not see "Delete" operation for "Homepage"
+   * Example 4: Then should not see "Delete" operation for the "Blog" entity
+   * Example 5: Then I should not see "Clone" operation for the "Homepage" entity
+   *
+   * @Then /^(?:|I )(?:|should )not see (?:|the )"([^"]*)" operation for the "([^"]*)" (?:|entity|content|media|file|term|user)$/
+   */
+  public function iShouldNotSeetheOperationForTheEntity($operation, $entity) {
+    $row = $this->getEntityRow($this->getSession()->getPage(), $entity);
+    $operation_elment = $row->find('xpath',"//*[contains(@headers, 'view-operations-table-column')]//*[text()='{$operation}']");
+    if (!empty($operation_elment)) {
+      throw new \Exception(sprintf('Found an entity containing "%s", but it have the operation "%s".', $entity, $operation));
+    }
   }
 
   /**
