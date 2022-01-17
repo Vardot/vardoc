@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: c2b0ba7b-94c1-4d1e-becb-d16810453f84
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 'Sample sheet.xlsx'
+  uri:
+    -
+      value: 'public://2022-01/Sample sheet_1.xlsx'
+  filemime:
+    -
+      value: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  filesize:
+    -
+      value: 4749
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1642352201

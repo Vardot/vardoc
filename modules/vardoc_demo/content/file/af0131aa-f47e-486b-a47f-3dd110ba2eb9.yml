@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: af0131aa-f47e-486b-a47f-3dd110ba2eb9
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: Sample.pdf
+  uri:
+    -
+      value: 'public://2022-01/Sample.pdf'
+  filemime:
+    -
+      value: application/pdf
+  filesize:
+    -
+      value: 433994
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1642352201
