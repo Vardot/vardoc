@@ -1,0 +1,73 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 798f32ba-9943-4977-b3fd-32fc16fde9ef
+  bundle: book
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Updated the Meta tags field'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Managing Content in Vardoc'
+  created:
+    -
+      value: 1642352201
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /about-vardoc/managing-content-in-vardoc
+      langcode: en
+      pathauto: 0
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  rh_redirect_fallback_action:
+    -
+      value: bundle_default
+  publish_state:
+    -
+      value: published
+  unpublish_state:
+    -
+      value: archived
+  body:
+    -
+      value: "<p>Vardoc utilizes the powerful <a href=\"https://www.drupal.org/docs/8/core/modules/book/overview\">Book feature</a>&nbsp;to create&nbsp;hierarchical content that flows logically.</p>\r\n\r\n<p>A <em>book</em> is a set of pages tied together in a hierarchical sequence, perhaps with chapters, sections, subsections, and so on. You can use books for manuals, site resource guides, or whatever you'd like.</p>\r\n\r\n<p>When a visitor to a Vardoc site is viewing a book page, they will automatically see links at the bottom for navigating from the parent-page to the first child page, and from the previous page to the next page. A link labeled Up leads back to the parent page in the book structure.</p>\r\n\r\n<p>If the books on a Vardoc site&nbsp;are complex, you may find that you need additional navigational aids beyond the table of contents and the previous/next/up links for users to understand where they are in your book.<br />\r\nThat's where the navigational sidebar will have&nbsp;a menu that shows where the user is in your book; the menu is only visible when viewing the book.</p>\r\n"
+      format: full_html
+      summary: ''
+  field_comment:
+    -
+      status: 2
+      cid: 0
+      last_comment_timestamp: 1642424497
+      last_comment_name: ''
+      last_comment_uid: 1
+      comment_count: 0
+  field_rating:
+    -
+      status: 1

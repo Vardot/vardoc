@@ -1,0 +1,73 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: ca162646-c617-42fb-a8d6-a1117efc34a2
+  bundle: book
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Updated the Meta tags field'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Style Elements'
+  created:
+    -
+      value: 1642352201
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /style-elements/style-elements
+      langcode: en
+      pathauto: 0
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  rh_redirect_fallback_action:
+    -
+      value: bundle_default
+  publish_state:
+    -
+      value: published
+  unpublish_state:
+    -
+      value: archived
+  body:
+    -
+      value: "<h1>H1 Heading</h1>\r\n\r\n<p>Pellentesque pellentesque eget tempor tellus. Fusce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. Fusce lacinia tempor malesuada.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h2>H2 Heading</h2>\r\n\r\n<p>Pellentesque pellentesque usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. tellus eget tempor. Fusce lacinia tempor malesuada.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h3>H3 Heading</h3>\r\n\r\n<p>Pellentesque tempor tellus eget pellentesque. usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. Fusce lacinia tempor malesuada.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h4>H4 Heading</h4>\r\n\r\n<p>Pellentesque pellentesque tempor tellus eget fermentum. usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h5>H5 Heading</h5>\r\n\r\n<p>Pellentesque pellentesque tempor llentesque pellentesque tempor tellus eget libero llentesque pellentesque tempor tellus eget libero tellus ementellentesque tempor tellus eget fermentum. usce lacllentesque eget tempor tellus ellenellentesque tempor tellus eget fermentum. usce lacllentesque eget tempor tellus ellenum.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h6>H6 Heading</h6>\r\n\r\n<p>Pellentesque pellentesque tempor tellus eget libero</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<hr />\r\n<p>&nbsp;</p>\r\n\r\n<h2>Blockquote</h2>\r\n\r\n<blockquote>\r\n<p>Pellentesque pellentesque eget tempor tellus. Fusce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. Fusce lacinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. Fusce lacinia tempor malesuada.</p>\r\n</blockquote>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h2>Table</h2>\r\n\r\n<table cellpadding=\"1\" cellspacing=\"1\" class=\"table\" width=\"500\">\r\n\t<thead>\r\n\t\t<tr>\r\n\t\t\t<th scope=\"row\">Column 1</th>\r\n\t\t\t<th scope=\"col\">Column 2</th>\r\n\t\t\t<th scope=\"col\">Column 3</th>\r\n\t\t</tr>\r\n\t</thead>\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<th scope=\"row\"><strong>Pellentesque</strong></th>\r\n\t\t\t<td>Eget</td>\r\n\t\t\t<td><a href=\"#\">Ellentesque</a></td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<th scope=\"row\">Fusce lacllentesque</th>\r\n\t\t\t<td>Pellentesque</td>\r\n\t\t\t<td><a href=\"#\">Fusce</a></td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<th scope=\"row\">Tempor</th>\r\n\t\t\t<td>Lacinia</td>\r\n\t\t\t<td><a href=\"#\">Malesuada</a></td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<hr />\r\n<p>&nbsp;</p>\r\n\r\n<h2>Code</h2>\r\n\r\n<h4>Inline</h4>\r\n\r\n<p>For example,&nbsp;<code>&lt;section&gt;</code>&nbsp;should be wrapped as inline.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h4>Basic Block</h4>\r\n\r\n<pre>\r\n&lt;p&gt;Sample text here...&lt;/p&gt;</pre>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<hr />\r\n<p>&nbsp;</p>\r\n\r\n<div class=\"bs-callout\"><strong>Callout Standard</strong>:&nbsp;Pellentesque pellentesque tempor tellus eget fermentum. usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus.</div>\r\n\r\n<div class=\"bs-callout bs-callout-danger\"><strong>Callout Danger</strong>:&nbsp;Pellentesque pellentesque tempor tellus eget fermentum. usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus.</div>\r\n\r\n<div class=\"bs-callout bs-callout-warning\"><strong>Callout Warning</strong>:&nbsp;Pellentesque pellentesque tempor tellus eget fermentum. usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus.</div>\r\n\r\n<div class=\"bs-callout bs-callout-info\"><strong>Callout Info</strong>:&nbsp;Pellentesque pellentesque tempor tellus eget fermentum. usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus.</div>\r\n\r\n<div class=\"well\"><strong>Well Standard</strong><br />\r\nPellentesque pellentesque tempor tellus eget fermentum. usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus.</div>\r\n\r\n<div class=\"well well-lg\"><strong>Well Large</strong><br />\r\nPellentesque pellentesque tempor tellus eget fermentum. usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus.</div>\r\n\r\n<div class=\"well well-sm\"><strong>Well Small</strong><br />\r\nPellentesque pellentesque tempor tellus eget fermentum. usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus.</div>\r\n\r\n<div class=\"alert alert-success\"><strong>Success Alert</strong><br />\r\nPellentesque pellentesque tempor tellus eget fermentum. usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus.</div>\r\n\r\n<div class=\"alert alert-info\"><strong>Success Info</strong><br />\r\nPellentesque pellentesque tempor tellus eget fermentum. usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus.</div>\r\n\r\n<div class=\"alert alert-warning\"><strong>Success Warning</strong><br />\r\nPellentesque pellentesque tempor tellus eget fermentum. usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus.</div>\r\n\r\n<div class=\"alert alert-danger\"><strong>Success Danger</strong><br />\r\nPellentesque pellentesque tempor tellus eget fermentum. usce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus.</div>\r\n"
+      format: full_html
+      summary: ''
+  field_comment:
+    -
+      status: 2
+      cid: 0
+      last_comment_timestamp: 1642424497
+      last_comment_name: ''
+      last_comment_uid: 1
+      comment_count: 0
+  field_rating:
+    -
+      status: 1

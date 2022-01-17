@@ -10,7 +10,7 @@ default:
       target_id: 1
   revision_log:
     -
-      value: 'Edited as a part of bulk operation. Field changed: moderation_state'
+      value: 'Updated the Publish state and Unpublish state fields'
   status:
     -
       value: true
@@ -22,7 +22,7 @@ default:
       value: 'Where can i find a Technical Documentation ?'
   created:
     -
-      value: 1517393011
+      value: 1642352201
   promote:
     -
       value: true
@@ -39,15 +39,21 @@ default:
     -
       alias: ''
       langcode: en
-      pathauto: 1
+      pathauto: 0
   rh_action:
     -
       value: bundle_default
   rh_redirect_response:
     -
       value: 301
+  publish_state:
+    -
+      value: published
+  unpublish_state:
+    -
+      value: archived
   body:
     -
-      value: "<p dir=\"ltr\"><a href=\"https://www.drupal.org/project/vardoc\" rel=\"noopener noreferrer\" target=\"_blank\">Vardoc</a>&nbsp;is a&nbsp;<a href=\"https://www.drupal.org/8\" rel=\"noopener noreferrer\" target=\"_blank\">Drupal 8</a>&nbsp;distribution that extends&nbsp;<a href=\"https://www.drupal.org/project/varbase\" rel=\"noopener noreferrer\" target=\"_blank\">Varbase</a>;&nbsp;the powerful Drupal distribution for faster development,&nbsp;with editor experience in mind.</p>\r\n\r\n<p>Visit Drupal.org for more information:&nbsp;<a href=\"http://www.drupal.org/\" rel=\"noopener noreferrer\" target=\"_blank\">http://www.drupal.org</a><br />\r\n<br />\r\nRead here about how Drupal 8's installation profile feature works:&nbsp;<a href=\"https://www.drupal.org/docs/8/creating-distributions\" rel=\"noopener noreferrer\" target=\"_blank\">https://www.drupal.org/docs/8/creating-distributions</a></p>\r\n\r\n<p>The essence of&nbsp;<a href=\"https://www.drupal.org/project/varbase\" rel=\"noopener noreferrer\" target=\"_blank\">Varbase</a>&nbsp;lies within the basic concept that initiated it;&nbsp;<a href=\"https://www.wikiwand.com/en/Don't_repeat_yourself\" rel=\"noopener noreferrer\" target=\"_blank\">DRY (Don’t Repeat Yourself)</a>.&nbsp;<a href=\"https://www.drupal.org/project/varbase\" rel=\"noopener noreferrer\" target=\"_blank\">Varbase</a>&nbsp;handles that for you, relieving you from repeating all the modules, features, configurations that are included in every Drupal project.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>The components that make up Vardoc are outlined in the Venn diagram below.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>To learn more about Varbase and Vardoc, and how to extend it,&nbsp;visit&nbsp;<a href=\"https://docs.varbase.vardot.com/\" rel=\"noopener noreferrer\" target=\"_blank\">docs.varbase.vardot.com</a></p>\r\n"
+      value: "<p dir=\"ltr\"><a href=\"https://www.drupal.org/project/vardoc\" rel=\"noopener noreferrer\" target=\"_blank\">Vardoc</a>&nbsp;is a&nbsp;<a href=\"https://www.drupal.org/8\" rel=\"noopener noreferrer\" target=\"_blank\">Drupal 9</a>&nbsp;distribution that extends&nbsp;<a href=\"https://www.drupal.org/project/varbase\" rel=\"noopener noreferrer\" target=\"_blank\">Varbase</a>;&nbsp;the powerful Drupal distribution for faster development,&nbsp;with editor experience in mind.</p>\r\n\r\n<p>Visit Drupal.org for more information:&nbsp;<a href=\"http://www.drupal.org/\" rel=\"noopener noreferrer\" target=\"_blank\">http://www.drupal.org</a><br />\r\n<br />\r\nRead here about how Drupal 9's installation profile feature works:&nbsp;<a href=\"https://www.drupal.org/docs/8/creating-distributions\" rel=\"noopener noreferrer\" target=\"_blank\">https://www.drupal.org/docs/8/creating-distributions</a></p>\r\n\r\n<p>The essence of&nbsp;<a href=\"https://www.drupal.org/project/varbase\" rel=\"noopener noreferrer\" target=\"_blank\">Varbase</a>&nbsp;lies within the basic concept that initiated it;&nbsp;<a href=\"https://www.wikiwand.com/en/Don't_repeat_yourself\" rel=\"noopener noreferrer\" target=\"_blank\">DRY (Don’t Repeat Yourself)</a>.&nbsp;<a href=\"https://www.drupal.org/project/varbase\" rel=\"noopener noreferrer\" target=\"_blank\">Varbase</a>&nbsp;handles that for you, relieving you from repeating all the modules, features, configurations that are included in every Drupal project.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>The components that make up Vardoc are outlined in the Venn diagram below.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>To learn more about Varbase and Vardoc, and how to extend it,&nbsp;visit&nbsp;<a href=\"https://docs.varbase.vardot.com/\" rel=\"noopener noreferrer\" target=\"_blank\">docs.varbase.vardot.com</a></p>\r\n"
       format: full_html
       summary: ''

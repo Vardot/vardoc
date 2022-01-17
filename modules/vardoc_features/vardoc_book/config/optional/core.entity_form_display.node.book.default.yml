@@ -1,3 +1,4 @@
+uuid: null
 langcode: en
 status: true
 dependencies:
@@ -11,6 +12,7 @@ dependencies:
     - field.field.node.book.field_rating
     - field.field.node.book.field_related_content
     - node.type.book
+    - workflows.workflow.varbase_simple_workflow
   module:
     - advanced_text_formatter
     - comment
@@ -22,6 +24,8 @@ dependencies:
     - maxlength
     - metatag
     - path
+    - scheduler
+    - scheduler_content_moderation_integration
     - text
 third_party_settings:
   field_group:
@@ -30,60 +34,60 @@ third_party_settings:
         - field_related_content
         - field_category
         - field_documents
+      label: Related
+      region: content
       parent_name: group_information
       weight: 19
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: Related
     group_information:
       children:
         - group_basic_information
         - group_related
         - group_link
+      label: Information
+      region: content
       parent_name: ''
       weight: 0
       format_type: tabs
-      region: content
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         direction: horizontal
-      label: Information
     group_basic_information:
       children:
         - title
         - body
+      label: 'Basic information'
+      region: content
       parent_name: group_information
       weight: 18
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: open
+        description: ''
         required_fields: true
-      label: 'Basic information'
     group_link:
       children:
         - field_external_links
+      label: Link
+      region: content
       parent_name: group_information
       weight: 20
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: Link
 id: node.book.default
 targetEntityType: node
 bundle: book
@@ -106,54 +110,55 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_category:
-    weight: 14
-    settings: {  }
-    third_party_settings: {  }
     type: options_select
+    weight: 14
     region: content
-  field_comment:
-    weight: 5
     settings: {  }
     third_party_settings: {  }
+  field_comment:
     type: comment_default
+    weight: 5
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_documents:
+    type: file_generic
     weight: 15
+    region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-    type: file_generic
-    region: content
   field_external_links:
+    type: link_default
     weight: 5
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_meta_tags:
+    type: metatag_firehose
     weight: 6
+    region: content
     settings:
       sidebar: true
+      use_details: true
     third_party_settings: {  }
-    type: metatag_firehose
-    region: content
   field_related_content:
+    type: entity_reference_autocomplete
     weight: 13
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   moderation_state:
     type: moderation_state_default
     weight: 11
-    settings: {  }
     region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -161,12 +166,24 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_state:
+    type: scheduler_moderation
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 8
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -174,7 +191,7 @@ content:
     region: content
     settings:
       size: 60
-      placeholder: ''
+      placeholder: 'Enter title here'
     third_party_settings:
       length_indicator:
         indicator: true
@@ -193,9 +210,21 @@ content:
     region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  unpublish_state:
+    type: scheduler_moderation
+    weight: 30
+    region: content
+    settings: {  }
     third_party_settings: {  }
   url_redirects:
     weight: 7

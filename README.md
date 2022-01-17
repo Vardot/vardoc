@@ -22,7 +22,7 @@ Think of it as a wiki site of your product, user manuals, or organizational
 
 [![](https://www.drupal.org/files/project-images/vardoc-mockup.png)](https://www.drupal.org/project/vardoc)
 
-Built on top of Varbase, the open source Drupal 8 distribution, Vardoc provides
+Built on top of Varbase, the open source Drupal 9 distribution, Vardoc provides
  powerful functional features such as editorial features, search function,
  taxonomy, user management, and customizable themes. It also delivers
  top-notch non-functional requirements such as enterprise security,

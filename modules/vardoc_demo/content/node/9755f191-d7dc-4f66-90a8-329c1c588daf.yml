@@ -1,0 +1,87 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 9755f191-d7dc-4f66-90a8-329c1c588daf
+  bundle: tools
+  default_langcode: en
+  depends:
+    8a063ef2-4ef3-4273-8b4a-6a7668ad6b43: taxonomy_term
+    5c174226-1038-4940-b029-33e74abbe752: taxonomy_term
+    abbaa8b9-ab96-43c2-90b6-f55ed9ceee99: taxonomy_term
+    a14dee9b-c907-4f91-b4e8-37bd729c413b: taxonomy_term
+    3b16eb76-8e70-42a2-a3d9-5fa25a7c202d: taxonomy_term
+    c1f264c2-a8c1-4135-9997-0ce716357cef: file
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Updated Tools'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: Gmail
+  created:
+    -
+      value: 1642352201
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /tool/gmail
+      langcode: en
+      pathauto: 1
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  rh_redirect_fallback_action:
+    -
+      value: bundle_default
+  publish_state:
+    -
+      value: published
+  unpublish_state:
+    -
+      value: archived
+  field_category:
+    -
+      entity: 8a063ef2-4ef3-4273-8b4a-6a7668ad6b43
+    -
+      entity: 5c174226-1038-4940-b029-33e74abbe752
+    -
+      entity: abbaa8b9-ab96-43c2-90b6-f55ed9ceee99
+    -
+      entity: a14dee9b-c907-4f91-b4e8-37bd729c413b
+    -
+      entity: 3b16eb76-8e70-42a2-a3d9-5fa25a7c202d
+  field_link:
+    -
+      uri: 'https://mail.google.com/mail/u/0/#inbox'
+      title: ''
+      options: {  }
+  field_tool_icon:
+    -
+      entity: c1f264c2-a8c1-4135-9997-0ce716357cef
+      alt: Gmail
+      title: ''
+      width: 168
+      height: 126

@@ -10,7 +10,7 @@ default:
       target_id: 1
   revision_log:
     -
-      value: 'Edited as a part of bulk operation. Field changed: moderation_state'
+      value: 'Updated the Publish state and Unpublish state fields'
   status:
     -
       value: true
@@ -19,10 +19,10 @@ default:
       target_id: 1
   title:
     -
-      value: 'How To Get Professional Support ?'
+      value: 'How to Manage Content In Vardoc ?'
   created:
     -
-      value: 1517393008
+      value: 1642352201
   promote:
     -
       value: true
@@ -39,13 +39,19 @@ default:
     -
       alias: ''
       langcode: en
-      pathauto: 1
+      pathauto: 0
   rh_action:
     -
       value: bundle_default
   rh_redirect_response:
     -
       value: 301
+  publish_state:
+    -
+      value: published
+  unpublish_state:
+    -
+      value: archived
   body:
     -
       value: "<p dir=\"ltr\">Vardoc provides a great deal of functionality out of the box, which makes it possible for you to prototype your knowledge base, and try out and experiment all the available features.</p>\r\n\r\n<p>However, if you need professional support for implementation, customization, training, or hosted management, please contact Vardot at&nbsp;<a href=\"https://www.vardot.com/contact\" rel=\"noopener noreferrer\" target=\"_blank\">https://www.vardot.com/contact</a></p>\r\n\r\n<p>You may also contact&nbsp;<a href=\"https://www.vardot.com/\" rel=\"noopener noreferrer\" target=\"_blank\">Vardot</a>&nbsp;for professional and enterprise support of Vardoc by sending an email to:&nbsp;<a href=\"mailto:sales@vardot.com?subject=Requesting%20Vardoc%20Professional%20Support\">sales@vardot.com</a></p>\r\n"

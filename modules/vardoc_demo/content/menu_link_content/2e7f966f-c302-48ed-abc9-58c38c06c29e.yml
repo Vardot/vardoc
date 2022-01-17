@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 2e7f966f-c302-48ed-abc9-58c38c06c29e
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log_message:
+    -
+      value: 'Created new Custom menu link'
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Varbase Documentation'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      uri: 'https://docs.varbase.vardot.com/'
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: -49
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

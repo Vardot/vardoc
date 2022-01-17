@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: vote
+  uuid: f751c8a2-6e37-4843-a446-2bbe27f3d87d
+  bundle: vote
+  depends:
+    3d2716bb-f0f5-4930-ba43-a991af39d86e: node
+default:
+  entity_type:
+    -
+      value: node
+  entity_id:
+    -
+      entity: 3d2716bb-f0f5-4930-ba43-a991af39d86e
+  value:
+    -
+      value: !!float 1
+  value_type:
+    -
+      value: percent
+  user_id:
+    -
+      target_id: 1
+  timestamp:
+    -
+      value: 1516195956
+  vote_source:
+    -
+      value: 127.0.0.1
+  field_name:
+    -
+      value: field_rating

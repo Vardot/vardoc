@@ -1,0 +1,73 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 14966d6e-b69e-4faa-bd3a-55362a8db656
+  bundle: book
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Updated the Meta tags field'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Technical Documentation'
+  created:
+    -
+      value: 1642352201
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /about-vardoc/technical-documentation
+      langcode: en
+      pathauto: 0
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  rh_redirect_fallback_action:
+    -
+      value: bundle_default
+  publish_state:
+    -
+      value: published
+  unpublish_state:
+    -
+      value: archived
+  body:
+    -
+      value: "<p dir=\"ltr\"><a href=\"https://www.drupal.org/project/vardoc\">Vardoc</a>&nbsp;is a <a href=\"https://www.drupal.org/8\">Drupal 9</a> distribution that extends <a href=\"https://www.drupal.org/project/varbase\">Varbase</a>;&nbsp;the powerful Drupal distribution for faster development,&nbsp;with editor experience in mind.</p>\r\n\r\n<div class=\"bs-callout bs-callout-warning\">Visit Drupal.org for more information:&nbsp;<a href=\"http://www.drupal.org/\" target=\"_blank\">http://www.drupal.org</a><br />\r\n<br />\r\nRead here about how Drupal 9's installation profile feature works:&nbsp;<a href=\"https://www.drupal.org/docs/8/creating-distributions\" target=\"_blank\">https://www.drupal.org/docs/8/creating-distributions</a></div>\r\n\r\n<p>The essence of <a href=\"https://www.drupal.org/project/varbase\">Varbase</a>&nbsp;lies within the basic concept that initiated it; <a href=\"https://www.wikiwand.com/en/Don't_repeat_yourself\">DRY (Don’t Repeat Yourself)</a>. <a href=\"https://www.drupal.org/project/varbase\">Varbase</a> handles that for you, relieving you from repeating all the modules, features, configurations that are included in every Drupal project.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>The components that make up Vardoc are outlined in the Venn diagram below.</p>\r\n\r\n<drupal-entity alt=\"Vardoc Components Venn Diagram\" data-align=\"center\" data-caption=\"Vardoc Components Venn Diagram\" data-embed-button=\"media\" data-entity-embed-display=\"view_mode:media.original\" data-entity-type=\"media\" data-entity-uuid=\"45b8fcd4-d1a1-4ffe-8b0e-42843d786cb7\"></drupal-entity>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<div class=\"alert alert-success\">To learn more about Varbase and Vardoc, and how to extend it,&nbsp;visit&nbsp;<a href=\"https://docs.varbase.vardot.com/\">docs.varbase.vardot.com</a></div>\r\n"
+      format: full_html
+      summary: ''
+  field_comment:
+    -
+      status: 2
+      cid: 0
+      last_comment_timestamp: 1642424497
+      last_comment_name: ''
+      last_comment_uid: 1
+      comment_count: 0
+  field_rating:
+    -
+      status: 1

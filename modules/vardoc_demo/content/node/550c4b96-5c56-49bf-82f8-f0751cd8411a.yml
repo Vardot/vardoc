@@ -10,7 +10,7 @@ default:
       target_id: 1
   revision_log:
     -
-      value: 'Edited as a part of bulk operation. Field changed: moderation_state'
+      value: 'Updated the Publish state and Unpublish state fields'
   status:
     -
       value: true
@@ -22,7 +22,7 @@ default:
       value: 'How To Get Support ?'
   created:
     -
-      value: 1517392915
+      value: 1642352201
   promote:
     -
       value: true
@@ -39,13 +39,19 @@ default:
     -
       alias: ''
       langcode: en
-      pathauto: 1
+      pathauto: 0
   rh_action:
     -
       value: bundle_default
   rh_redirect_response:
     -
       value: 301
+  publish_state:
+    -
+      value: published
+  unpublish_state:
+    -
+      value: archived
   body:
     -
       value: "<p dir=\"ltr\">Vardoc is Open Source</p>\r\n\r\n<p dir=\"ltr\"><a href=\"https://www.drupal.org/project/vardoc\" rel=\"noopener noreferrer\" target=\"_blank\">Vardoc</a>&nbsp;is developed by a core team of experienced Drupal developments and is funded and supported by&nbsp;<a href=\"https://www.vardot.com/\" rel=\"noopener noreferrer\" target=\"_blank\">Vardot</a>, a leading Drupal agency with offices in USA, Egypt, and Jordan.&nbsp;</p>\r\n\r\n<p><a href=\"https://www.drupal.org/project/vardoc\" rel=\"noopener noreferrer\" target=\"_blank\">Vardoc</a>&nbsp;is available as an open source and FREE software&nbsp;for developers and development teams to install, host and run it yourself.</p>\r\n\r\n<p dir=\"ltr\">Open Source software is free and promotes the collaboration and sharing of ideas. Vardoc&nbsp;is built on Drupal which is Open Source and is completely free. Everyone should&nbsp;<a href=\"https://www.drupal.org/contribute\" rel=\"nofollow noopener noreferrer\" target=\"_blank\">contribute something</a>, sometimes simply reporting and maybe fixing a minor bug can make a difference. The Drupal&nbsp;<a href=\"https://www.drupal.org/community\" rel=\"nofollow noopener noreferrer\" target=\"_blank\">community</a>&nbsp;and the&nbsp;<a href=\"https://www.drupal.org/drupal-services\" rel=\"nofollow noopener noreferrer\" target=\"_blank\">marketplace</a>&nbsp;make money supporting Drupal. If you need a feature or support you should contact the Vardoc&nbsp;<a href=\"https://www.vardot.com/contact\" rel=\"nofollow noopener noreferrer\" target=\"_blank\">maintainer</a>.</p>\r\n"

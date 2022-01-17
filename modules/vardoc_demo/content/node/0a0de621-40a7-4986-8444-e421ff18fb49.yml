@@ -10,7 +10,7 @@ default:
       target_id: 1
   revision_log:
     -
-      value: 'Edited as a part of bulk operation. Field changed: moderation_state'
+      value: 'Updated the Publish state and Unpublish state fields'
   status:
     -
       value: true
@@ -22,7 +22,7 @@ default:
       value: 'What is Vardoc?'
   created:
     -
-      value: 1517392906
+      value: 1642352201
   promote:
     -
       value: true
@@ -39,15 +39,21 @@ default:
     -
       alias: ''
       langcode: en
-      pathauto: 1
+      pathauto: 0
   rh_action:
     -
       value: bundle_default
   rh_redirect_response:
     -
       value: 301
+  publish_state:
+    -
+      value: published
+  unpublish_state:
+    -
+      value: archived
   body:
     -
-      value: "<p><a href=\"https://www.vardot.com/vardoc\" rel=\"noopener noreferrer\" target=\"_blank\">Vardoc</a>&nbsp;is a knowledge base system, a wiki system, and a documentation management system designed to host massive amount of content in a structured and easy-to-find format.<br />\r\n<a href=\"https://www.vardot.com/vardoc\" rel=\"noopener noreferrer\" target=\"_blank\">Vardoc</a>&nbsp;helps you build a connected organization, product, or knowledge area to allow everyone involved to find the answers they seek, and contribute their expertise in the knowledge base.</p>\r\n\r\n<blockquote>\r\n<p>Think of it as a wiki site of your product, user manuals, or organizational processes. With easy&nbsp;structure, collaborative tools,&nbsp;and friendly design.</p>\r\n</blockquote>\r\n\r\n<p>Built on top of&nbsp;<a href=\"https://www.vardot.com/varbase\" rel=\"noopener noreferrer\" target=\"_blank\">Varbase</a>, the open source&nbsp;<a href=\"https://www.drupal.org/8\" rel=\"noopener noreferrer\" target=\"_blank\">Drupal 8</a>&nbsp;distribution,&nbsp;<a href=\"https://www.vardot.com/vardoc\" rel=\"noopener noreferrer\" target=\"_blank\">Vardoc</a>&nbsp;provides powerful functional features such as editorial features, search function, taxonomy, user management, and customizable themes. It also delivers top-notch non-functional requirements such as enterprise security, fast performance, search engine optimization (SEO), accessibility compliance, and many more features.</p>\r\n\r\n<p>Our goal is to bring ease to you when writing and creating a documentation for your product, website, departmental processes, online manuals, or your enterprise as whole.</p>\r\n"
+      value: "<p><a href=\"https://www.vardot.com/vardoc\" rel=\"noopener noreferrer\" target=\"_blank\">Vardoc</a>&nbsp;is a knowledge base system, a wiki system, and a documentation management system designed to host massive amount of content in a structured and easy-to-find format.<br />\r\n<a href=\"https://www.vardot.com/vardoc\" rel=\"noopener noreferrer\" target=\"_blank\">Vardoc</a>&nbsp;helps you build a connected organization, product, or knowledge area to allow everyone involved to find the answers they seek, and contribute their expertise in the knowledge base.</p>\r\n\r\n<blockquote>\r\n<p>Think of it as a wiki site of your product, user manuals, or organizational processes. With easy&nbsp;structure, collaborative tools,&nbsp;and friendly design.</p>\r\n</blockquote>\r\n\r\n<p>Built on top of&nbsp;<a href=\"https://www.vardot.com/varbase\" rel=\"noopener noreferrer\" target=\"_blank\">Varbase</a>, the open source&nbsp;<a href=\"https://www.drupal.org/8\" rel=\"noopener noreferrer\" target=\"_blank\">Drupal 9</a>&nbsp;distribution,&nbsp;<a href=\"https://www.vardot.com/vardoc\" rel=\"noopener noreferrer\" target=\"_blank\">Vardoc</a>&nbsp;provides powerful functional features such as editorial features, search function, taxonomy, user management, and customizable themes. It also delivers top-notch non-functional requirements such as enterprise security, fast performance, search engine optimization (SEO), accessibility compliance, and many more features.</p>\r\n\r\n<p>Our goal is to bring ease to you when writing and creating a documentation for your product, website, departmental processes, online manuals, or your enterprise as whole.</p>\r\n"
       format: full_html
       summary: ''
