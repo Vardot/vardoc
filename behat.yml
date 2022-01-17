@@ -90,7 +90,7 @@ default:
               - "--incognito"
               - "--ignore-certificate-errors"
               - "--disable-infobars"
-      base_url: 'http://varbase.test'
+      base_url: 'http://vardoc.test'
       # browser_name: 'firefox'
       browser_name: 'chrome'
       # browser_name: 'phantomjs'
