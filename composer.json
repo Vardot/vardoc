@@ -36,7 +36,6 @@
     "vardot/entity-definition-update-manager": "~1.0",
     "vardot/varbase": "~9.0.0",
     "drupal/varbase_faqs": "~6.0",
-    "drupal/varbase_layout_builder": "~9.0",
     "drupal/fontawesome": "~2.0",
     "drupal/better_normalizers": "~1.0",
     "drupal/votingapi": "~3.0",
