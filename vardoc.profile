@@ -294,6 +294,7 @@ function vardoc_after_install_finished(array &$install_state) {
       ],
     ],
   ];
+  $output['#attached']['library'][] = 'vardoc/install_page';
 
   $meta_redirect = [
     '#tag' => 'meta',

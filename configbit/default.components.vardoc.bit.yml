@@ -20,7 +20,8 @@ config_bit:
         - varbase_workflow
         - varbase_total_control
         - varbase_tour
-        - varbase_faqs
+        - varbase_layout_builder
+        - vlplb
         - varbase_auth
         # Enable default Vardoc features.
         - vardoc_book
@@ -29,3 +30,4 @@ config_bit:
         - vardoc_search
         - vardoc_tools
         - vardoc_homepage
+        - varbase_faqs
