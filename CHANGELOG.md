@@ -1,3 +1,16 @@
+# 4.0.3
+
+### Highlighted important changes since Vardoc 4.0.1:
+
+* Issue [#3258410](http://drupal.org/i/3258410):
+                 Updated Varbase profile from ~8.8.0 to ~9.0.0 on
+                 the Vardoc 4.0.x branch to work with Drupal ~9
+* Issue [#3258797](http://drupal.org/i/3258797):
+                 Updated the patch to Allow profiles to
+                 define a base/parent profile to
+                 1356276-667-subprofile-support-9.3.x.patch
+                 to work with Drupal 9.3.x
+
 # 4.0.2
 
 ### Highlighted important changes since Vardoc 4.0.1:
