@@ -39,6 +39,8 @@ So that they will be able to use the site.
       And I wait
      Then I should see "tester"
      When I click "Edit" in the "tester" row
+      And I fill in "Tester first name" for "First name"
+      And I fill in "Tester last name" for "Last name"
       And I wait
       And I scroll to bottom
       And I press "Cancel account"
