@@ -1,4 +1,4 @@
-[![Vardot](https://circleci.com/gh/Vardot/vardoc/tree/4.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/vardoc/75/workflows/b00ff38b-0366-4a43-b096-15293c81fabf) Vardoc 4.0.4
+[![Vardot](https://circleci.com/gh/Vardot/vardoc/tree/4.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/vardoc/78/workflows/631d49b3-ecb6-41a5-a5bd-23d64168d17f) Vardoc 4.0.4
 # Vardoc: Knowledge Base System and Documentation Site
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Vardoc%20-%20No%20Padding.png)](https://www.drupal.org/project/vardoc)
