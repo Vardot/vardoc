@@ -1,16 +1,16 @@
 # Vardoc Automated Functional Testing
 
- A set of Gherkin Features and custom Vardoc Context with custom
- step definitions, and assets, which help with the automatic testing for
+ A set of Gherkin Features and custom vardoc Context with custom
+ step definitions, and assets, that helps with automated testing for
  vardoc project websites.
 
- This page can help  you to have the list all steps, which you need to run the
+ This page list all the steps needed, which you need to run the
  Behat Gherkin Features to test a vardoc website in your localhost machine.
 
 To test vardoc 4.0.x in the right way you will need to build vardoc using
 the composer.
 
-## Create a Vardoc project with [Composer](https://getcomposer.org/download/):
+## Create a vardoc project with [Composer](https://getcomposer.org/download/):
 
 ```
 composer create-project vardot/vardoc:4.0.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
@@ -20,40 +20,54 @@ composer create-project vardot/vardoc:4.0.x-dev PROJECT_DIR_NAME --stability dev
 ```
 cd path to your files of the project/PROJECT_DIR_NAME
 composer require --dev drupal/core-dev:~9.0
-composer require --dev drush/drush:~10
-composer require --dev drupal/drupal-extension:~4.0
+composer require --dev drush/drush:~11.0
+composer require --dev drupal/drupal-extension:~4.0 --with-all-dependencies
 composer require --dev emuse/behat-html-formatter:^0.2.0
 
 ```
 
-### Install Vardoc
-Have Vardoc installed from the browser or using the `drush site:install` command.
+### Add additional testing packages
+```
+cd path to yout files of the project/PROJECT_DIR_NAME
+BEHAT-SCREENSHOT to capture images on demand or when a test fails
+
+composer require --dev drevops/behat-screenshot
+
+Edit the behat.yml file, which is located in:
+`path to your files of the project/PROJECT_DIR_NAME/docroot/profiles/vardoc/behat.yml`
+- to have DrevOps\BehatScreenshotExtension\Context\ScreenshotContext under contexts
+- to have DrevOps\BehatScreenshotExtension:
+            dir: '%paths.base%/tests/screenshots'
+            fail: true
+            fail_prefix: 'failed_'
+            purge: false
+  under extensions
+Read more about it here: https://github.com/drevops/behat-screenshot
+
+```
+
+### Install vardoc
+Have vardoc installed from the browser or using the `drush site:install` command.
 But make sure to have the webmaster user with the `dD.123123ddd` passwrod.
 
 Exmaple Drush install:
 Change directory in the terminal to the path of the project and `/PROJECT_DIR_NAME/docroot`
 ```
-../bin/drush site-install vardoc --yes --account-name="webmaster" --account-pass="dD.123123ddd" --account-mail="webmaster@vardot.com" --db-url="mysql://root:rootpw@127.0.0.1/test_varbase" --locale="en" install_configure_form.enable_update_status_emails=NULL -vvv
+../bin/drush site-install  site-install vardoc --yes --account-name="webmaster" --account-pass="dD.123123ddd" --account-mail="webmaster@vardot.com" --db-url="mysql://root:rootpw@127.0.0.1/test_vardoc" --locale="en"
+
 ```
 
-### Enable the Drush Language Command module and add RTL language
-Needed to add the extra languages.
+### Uninstall Antibot module to make the Selenium robot have more control 
+Needed to uninstall as the Antibot module will prevent the Selenium robot from performing effectively  
 ```
-composer require drupal/drush_language:~1.0
-../bin/drush pm:enable drush_language --yes
-../bin/drush language-add ar
-../bin/drush language-info
-../bin/drush cr
-```
-
-### Uninstall Antibot module to let the 
-```
+cd `/PROJECT_DIR_NAME/docroot`
 ../bin/drush pm:uninstall antibot --yes
 ../bin/drush cr
 ```
 
-### Change config for error reporting and CSS/JS aggrigation
+### Change config for error reporting and CSS/JS aggregation
 ```
+cd `/PROJECT_DIR_NAME/docroot`
 ../bin/drush config:set system.performance css.preprocess 0 --yes
 ../bin/drush config:set system.performance js.preprocess 0 --yes
 ../bin/drush config:set system.logging error_level all --yes
@@ -62,7 +76,7 @@ composer require drupal/drush_language:~1.0
 
 ### Add testing users.
 Change directory in the terminal to the path of the project
- and `/PROJECT_DIR_NAME/docroot/docroot/profiles/vardoc/scripts`
+ and `/PROJECT_DIR_NAME/docroot/profiles/vardoc/scripts`
 And run the following base command
 ```
   bash add-testing-users.sh
@@ -75,7 +89,7 @@ To delete testing users use
 
 ## 1. Change the base url
 
-Edit the behat.yml file, which located in:
+Edit the behat.yml file, which is located in:
 `path to your files of the project/PROJECT_DIR_NAME/docroot/profiles/vardoc/behat.yml`
  to the domain or the local virtual domain.
 ```
@@ -119,12 +133,12 @@ sudo mv -f chromedriver /usr/bin/
 rm chromedriver_linux64.zip
 ```
 
-### Get selenium standalone server.
+### Get Selenium Standalone server.
 ```
-wget http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
+wget https://github.com/SeleniumHQ/selenium/releases/download/selenium-3.141.59/selenium-server-standalone-3.141.59.jar
 ```
 
-## Run selenium standalone server.
+## Run Selenium Standalone server.
 
 ```
 $ java -jar selenium-*.jar -port 4445
@@ -133,7 +147,7 @@ $ java -jar selenium-*.jar -port 4445
 --------------------------------------------------------------------------------
 ## 3. Automated testing config.
 
-To run the automated testing with behat you will need to change the [ wd_host and base_url ] settings in the [ behat.vardoc.yml ] file to go with your project configuration and the selenium server.
+To run the automated testing with behat you will need to change the [ wd_host and base_url ] settings in the [ behat.yml ] file to go with your project configuration and the selenium server.
 
 ```
     Drupal\MinkExtension:
@@ -151,32 +165,30 @@ To run the automated testing with behat you will need to change the [ wd_host an
           browserName: chrome
           version: "*"
           extra_capabilities:
+            loggingPrefs:
+              performance: ALL
+              browser: ALL
             chromeOptions:
-              args:
-                - "--disable-gpu"
-                - "--window-size=1920,1080"
               w3c: false
-          chrome:
-            switches:
-              - "--headless"
-              - "no-sandbox"
-              - "--no-sandbox"
-              - "--disable-web-security"
-              - "--DNS-prefetch-disable"
-              - "--whitelisted-ips"
-              - "--start-maximized"
-              - "--disable-translate"
-              - "--ignore-certificate-errors"
-              - "--test-type"
-              - "--disable-dev-shm-usage"
-              - "--disable-extensions"
-              - "incognito"
-              - "enable-precise-memory-info"
-              - "ignore-certificate-errors"
-              - "disable-infobars"
-              - "js-flags=--expose-gc"
-              - "--profile-directory=Default"
-              - "--user-data-dir=~/.config/google-chrome"
+              args:
+                - "--headless"
+                - "--start-maximized"
+                - "--disable-gpu"
+                - "--window-size=1600,1200"
+                - "--no-sandbox"
+                - "--disable-dev-shm-usage"
+                - "--disable-setuid-sandbox"
+                - "--disable-web-security"
+                - "--DNS-prefetch-disable"
+                - "--disable-translate"
+                - "--ignore-certificate-errors"
+                - "--test-type"
+                - "--disable-extensions"
+                - "--incognito"
+                - "--disable-infobars"
+                - "--remote-debugging-port=9222"
+                - "--allowed-ips=*"
+                - "--whitelisted-ips=*"
       base_url: 'http://vardoc.test'
       # browser_name: 'firefox'
       browser_name: 'chrome'
@@ -245,7 +257,7 @@ $ ../../../bin/behat -di
     - use -d 'needle' to find specific definitions.
 ```
 
-All Vardoc custom step definitions are tagged with #varbase tag.
+All Varbase custom step definitions are tagged with #varbase tag.
 
 Example: after a run for  bin/behat -di command.
 
@@ -303,7 +315,7 @@ Which it will run Scenarios which has got the @production tag.
 
     $ ../../../bin/behat tests/features/example.feature --format pretty --out std --format html --out reports/report-$( date '+%Y-%m-%d_%H-%M-%S' )
 
-# 10. If you want to run all Gherkin Features over a new Vardoc site.
+# 10. If you want to run all Gherkin Features over a new vardoc site.
 You will need to create the list of Testing users, and Add Arabic
 languages to the site.
 
@@ -368,11 +380,7 @@ cd docroot/profiles/vardoc;
 
 ```
 
-Run the vardoc full tests. Which equivalent to vardoc-init-tests, vardoc-apply-tests, vardoc-cleanup-tests
-```
-cd docroot/profiles/vardoc;
-../../../bin/behat tests/features/vardoc --format pretty --out std  --format html  --out tests/reports/vardoc-full-tests-report-$( date '+%Y-%m-%d_%H-%M-%S' );
-```
+
 
 We could run behat tests with this set
 Go to [ PROJECT_DIR_NAME/docroot/profiles/vardoc ] in the terminal then you could run the following command:
