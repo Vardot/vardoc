@@ -15,7 +15,7 @@ So that the "Book page" will show up in the structured menu under its parent pag
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/structure/types/manage/book/fields"
       And I wait
-     Then I should see "Body"
+      Then I should see "Body"
       And I should see "Category"
       And I should see "Comment"
       And I should see "Content rating"
@@ -28,32 +28,37 @@ So that the "Book page" will show up in the structured menu under its parent pag
     Given I am an anonymous user
      When I go to "/node/add/book"
       And I wait
-     Then I should see "Access denied. You must log in to view this page."
+     Then I should see "Access denied"
+      And I should see "You are not authorized to access this page."
 
   @javascript @local @development @staging @production
   Scenario: Check that authenticated users can not create an Article (Book page).
-    Given I am a logged in user with the "test_authenticated" user
+    Given I am a logged in user with the "Normal user" user
      When I go to "/node/add/book"
       And I wait
-     Then I should see "Create Article (Book page)"
+     Then I should not see "Access denied"
+      And I should not see "You are not authorized to access this page."
 
   @javascript @local @development @staging @production
   Scenario: Check that Editor users can create an Article (Book page).
-    Given I am a logged in user with the "test_editor" user
+    Given I am a logged in user with the "Editor" user
      When I go to "/node/add/book"
       And I wait
-     Then I should see "Create Article (Book page)"
+     Then I should not see "Access denied"
+      And I should not see "You are not authorized to access this page."
 
   @javascript @local @development @staging @production
   Scenario: Check that Content Admin users can create an Article (Book page).
-    Given I am a logged in user with the "test_content_admin" user
+    Given I am a logged in user with the "Content admin" user
      When I go to "/node/add/book"
       And I wait
-     Then I should see "Create Article (Book page)"
+     Then I should not see "Access denied"
+      And I should not see "You are not authorized to access this page."
 
   @javascript @local @development @staging @production
   Scenario: Check that Site Admin users can create an Article (Book page).
-    Given I am a logged in user with the "test_site_admin" user
+    Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/book"
       And I wait
-     Then I should see "Create Article (Book page)"
+     Then I should not see "Access denied"
+      And I should not see "You are not authorized to access this page."

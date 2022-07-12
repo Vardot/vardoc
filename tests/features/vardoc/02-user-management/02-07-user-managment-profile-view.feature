@@ -20,10 +20,10 @@ So that I will be able to view/add/edit/ or delete content in the site
 
   @javascript @local @development @staging @production
   Scenario: Check that authenticated users have the "Profile page" sections.
-    Given I am a logged in user with the "test_authenticated" user
+    Given I am a logged in user with the "Normal user" user
      When I go to "/user"
       And I wait
-     Then I should see "test_authenticated"
+     Then I should see "Normal user"
       And I should see "Authenticated Test"
       And I should see "New content"
       And I should see "Favorite content"
@@ -31,10 +31,10 @@ So that I will be able to view/add/edit/ or delete content in the site
 
   @javascript @local @development @staging @production
   Scenario: Check that Editor users have the "Profile page" sections.
-    Given I am a logged in user with the "test_editor" user
+    Given I am a logged in user with the "Editor" user
      When I go to "/user"
       And I wait
-     Then I should see "test_editor"
+     Then I should see "Editor"
       And I should see "Editor Test"
       And I should see "New content"
       And I should see "Favorite content"
@@ -42,10 +42,10 @@ So that I will be able to view/add/edit/ or delete content in the site
 
   @javascript @local @development @staging @production
   Scenario: Check that Content Admin users have the "Profile page" sections.
-    Given I am a logged in user with the "test_content_admin" user
+    Given I am a logged in user with the "Content admin" user
      When I go to "/user"
       And I wait
-     Then I should see "test_content_admin" 
+     Then I should see "Content admin" 
       And I should see "Content Admin Test"
       And I should see "New content"
       And I should see "Favorite content"
@@ -53,10 +53,10 @@ So that I will be able to view/add/edit/ or delete content in the site
 
   @javascript @local @development @staging @production
   Scenario: Check that Site Admin users have the "Profile page" sections.
-    Given I am a logged in user with the "test_site_admin" user
+    Given I am a logged in user with the "Site admin" user
      When I go to "/user"
       And I wait
-     Then I should see "test_site_admin"
+     Then I should see "Site admin"
       And I should see "Site Admin Test"
       And I should see "New content"
       And I should see "Favorite content"
@@ -64,10 +64,10 @@ So that I will be able to view/add/edit/ or delete content in the site
 
   @javascript @local @development @staging @production
   Scenario: Check that Super admin users have the "Profile page" sections.
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "Super admin" user
      When I go to "/user"
       And I wait
-     Then I should see "test_super_admin"
+     Then I should see "Super admin"
       And I should see "Super Admin Test"
       And I should see "New content"
       And I should see "Favorite content"

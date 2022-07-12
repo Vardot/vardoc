@@ -27,21 +27,21 @@ So that the "Landing page (Layout Builder)" will show up in the structured menu 
 
   @javascript @local @development @staging @production
   Scenario: Check that an authenticated user can not create a Landing page (Layout Builder)
-    Given I am a logged in user with the "test_authenticated" user
+    Given I am a logged in user with the "Normal user" user
      When I go to "/node/add/landing_page_lb"
       And I wait
      Then I should not see "Create Landing page (Layout Builder)"
 
   @javascript @local @development @staging @production
   Scenario: Check that Editor users can create a Landing page (Layout Builder)
-    Given I am a logged in user with the "test_editor" user
+    Given I am a logged in user with the "Editor" user
      When I go to "/node/add/landing_page_lb"
       And I wait
      Then I should see "Create Landing page (Layout Builder)"
 
   @javascript @local @development @staging @production
   Scenario: Check that Content Admin users can create a Landing page (Layout Builder)
-    Given I am a logged in user with the "test_content_admin" user
+    Given I am a logged in user with the "Content admin" user
      When I go to "/node/add/landing_page_lb"
       And I wait
      Then I should see "Create Landing page (Layout Builder)"
@@ -55,7 +55,7 @@ So that the "Landing page (Layout Builder)" will show up in the structured menu 
 
   @javascript @local @development @staging @production
   Scenario: Check that Site Admin users can create a Landing page (Layout Builder)
-    Given I am a logged in user with the "test_site_admin" user
+    Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/landing_page_lb"
       And I wait
      Then I should see "Create Landing page (Layout Builder)"

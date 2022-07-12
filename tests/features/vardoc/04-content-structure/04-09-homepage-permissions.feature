@@ -35,7 +35,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
 
   @javascript @local @development @staging @production
   Scenario: Check that an authenticated user can not edit the Homepage which built by the Landing page (Layout Builder)
-    Given I am a logged in user with the "test_authenticated" user
+    Given I am a logged in user with the "Normal user" user
      When I go to the homepage
       And I wait
      Then I should see "Need help finding something?"
@@ -49,7 +49,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
 
   @javascript @local @development @staging @production
   Scenario: Check that Editor users can edit the Homepage which built by the Landing page (Layout Builder)
-    Given I am a logged in user with the "test_editor" user
+    Given I am a logged in user with the "Editor" user
      When I go to the homepage
       And I wait
      Then I should see "Need help finding something?"
@@ -64,7 +64,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
 
   @javascript @local @development @staging @production
   Scenario: Check that Content Admin users can edit the Homepage which built by the Landing page (Layout Builder)
-    Given I am a logged in user with the "test_content_admin" user
+    Given I am a logged in user with the "Content admin" user
      When I go to the homepage
       And I wait
      Then I should see "Need help finding something?"
@@ -94,7 +94,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
 
   @javascript @local @development @staging @production
   Scenario: Check that Site Admin users can edit the Homepage which built by the Landing page (Layout Builder)
-    Given I am a logged in user with the "test_site_admin" user
+    Given I am a logged in user with the "Site admin" user
      When I go to the homepage
       And I wait
      Then I should see "Need help finding something?"

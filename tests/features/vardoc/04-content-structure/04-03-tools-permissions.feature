@@ -8,35 +8,35 @@ So that the "Tools" will show up in the structured menu under its parent page
 
   @javascript @local @development @staging @production
   Scenario: Check if [authenticated user] can add content of "Tools" type.
-    Given I am a logged in user with the "test_authenticated" user
+    Given I am a logged in user with the "Normal user" user
      When I go to "/node/add"
       And I wait
      Then I should not see "Tools"
 
   @javascript @local @development @staging @production
   Scenario: Check if [Editor] can add content of "Tools" type.
-    Given I am a logged in user with the "test_editor" user
+    Given I am a logged in user with the "Editor" user
      When I go to "/node/add"
       And I wait
      Then I should see "Tools"
 
   @javascript @local @development @staging @production
   Scenario: Check if [Content Admin] can add content of "Tools" type.
-    Given I am a logged in user with the "test_content_admin" user
+    Given I am a logged in user with the "Content admin" user
      When I go to "/node/add"
       And I wait
      Then I should see "Tools"
 
   @javascript @local @development @staging @production
   Scenario: Check if [Site Admin] can add content of "Tools" type.
-    Given I am a logged in user with the "test_site_admin" user
+    Given I am a logged in user with the "Site admin" user
      When I go to "/node/add"
       And I wait
      Then I should see "Tools"
 
   @javascript @local @development @staging @production
   Scenario: Check if [Super Admin] can add content of "Tools" type.
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "Super admin" user
      When I go to "/node/add"
       And I wait
      Then I should see "Tools"
