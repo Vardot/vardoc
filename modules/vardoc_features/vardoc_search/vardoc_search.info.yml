@@ -2,7 +2,7 @@ name: 'Vardoc search'
 description: 'Provides search default configs for Vardoc.'
 type: module
 core_version_requirement: ^9
-version: 4.0.5
+version: 4.0.x-dev
 package: Vardoc
 dependencies:
   - drupal:node
