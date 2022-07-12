@@ -1,3 +1,23 @@
+# 5.0.0-alpha5
+
+### Highlighted important changes since 5.0.0-alpha4:
+
+* Issue [#3290900](https://www.drupal.org/i/3290900):
+        Update the Allow profiles to define a base/parent profile
+        patch to work with Drupal 9.4.2
+* Issue [#3270492](https://www.drupal.org/i/3270492):
+        Have a default template for merge requests and issues for
+        the Vardoc profile project in Gitlab
+* Issue [#3256885](https://www.drupal.org/i/3256885):
+        Switched Vardoc default Automated Functional Testing users creation
+        to use drush user:create and drush user:role:add and use
+        the default manual testing user names and emails
+* Issue [#3256732](https://www.drupal.org/i/3256732):
+        Added composer allow-plugins to composer.json for Vardoc
+        and Vardoc Project template
+
+------------------------------------------------------------------------------------------------
+
 # 5.0.0-alpha4
 
 ### Highlighted important changes since 5.0.0-alpha3:

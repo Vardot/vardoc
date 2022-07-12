@@ -1,4 +1,4 @@
-[![Vardot](https://circleci.com/gh/Vardot/vardoc/tree/5.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/vardoc/11/workflows/508ef46f-5576-496f-b8ef-3988ba2f9aee) Vardoc 5.0.0-alpha4
+[![Vardot](https://circleci.com/gh/Vardot/vardoc/tree/5.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/vardoc/101/workflows/804c9501-7b30-4c76-a71d-6053f47bc239) Vardoc 5.0.0-alpha5
 # Vardoc: Knowledge Base System and Documentation Site
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Vardoc%20-%20No%20Padding.png)](https://www.drupal.org/project/vardoc)
@@ -51,7 +51,7 @@ Our goal is to bring ease to you when writing and creating a documentation
 
 To install the most recent stable release of Vardoc 5.0.x run this command:
 ```
-composer create-project Vardot/vardoc-project:5.0.0-alpha4 PROJECT_DIR_NAME --no-dev --no-interaction
+composer create-project Vardot/vardoc-project:5.0.0-alpha5 PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
 To install the dev version of Vardoc 5.0.x run this command:
