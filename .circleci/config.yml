@@ -217,7 +217,7 @@ commands:
       - run:
           name: Uninstall Antibot module to let the selenium bot work 
           command: |
-            cd /var/www/html/test/varbase/docroot
+            cd /var/www/html/test/vardoc/docroot
             ../bin/drush pm:uninstall antibot --yes
             ../bin/drush cr
 
