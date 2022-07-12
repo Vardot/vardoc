@@ -6,32 +6,32 @@ So that I can use them after the install or update.
   Background:
     Given I am a logged in user with the "webmaster" user
 
-  @check @local @development @staging @production
+  @javascript @check @local @development @staging @production
   Scenario: Check the content page
      When I go to "/admin/content"
       And I wait
      Then I should see "Content"
 
-  @check @local @development @staging @production
+  @javascript @check @local @development @staging @production
   Scenario: Check the Homepage content with Layout Builder
      When I go to "/admin/content"
       And I wait
      Then I should see "Homepage"
       And I should see "Landing page (Layout Builder)" in the "Homepage" row
 
-   @check @local @development @staging @production
+  @javascript @check @local @development @staging @production
    Scenario: Check Files admin page
       When I go to "/admin/content/files"
        And I wait
       Then I should see "Files"
 
-   @check @local @development @staging @production
-   Scenario: Check Media Grid admin page
+  @javascript @check @local @development @staging @production
+  Scenario: Check Media Grid admin page
       When I go to "/admin/content/media"
        And I wait
       Then I should see "Media"
 
-   @check @local @development @staging @production
+  @javascript @check @local @development @staging @production
    Scenario: Check Media Table admin page
       When I go to "/admin/content/media"
        And I wait
@@ -45,7 +45,7 @@ So that I can use them after the install or update.
        And I should see "Updated"
        And I should see "Operations"
 
-  @check @local @development @staging @production
+  @javascript @check @local @development @staging @production
   Scenario: Check the structure page
      When I go to "/admin/structure"
       And I wait
@@ -62,21 +62,21 @@ So that I can use them after the install or update.
       And I should see "Views"
       And I should see "Webforms"
 
-  @check @local @development @staging @production
+  @javascript @check @local @development @staging @production
   Scenario: Check the structure page
      When I go to "/admin/structure/page_manager"
       And I wait
      Then I should see "Pages"
       And I should see "Total Control dashboard"
 
-  @check @local @development @staging @production
+  @javascript @check @local @development @staging @production
   Scenario: Check the views page
      When I go to "/admin/structure/views"
       And I wait
      Then I should see "Views"
       And I should see "Browser"
 
-  @check @local @development @staging @production
+  @javascript @check @local @development @staging @production
   Scenario: Check the Appearance page
      When I go to "/admin/appearance"
       And I wait
@@ -89,7 +89,7 @@ So that I can use them after the install or update.
       And I should see "Vartheme Claro"
       And I should see "Vardoc theme"
 
-   @check @local @development @staging @production
+  @javascript @check @local @development @staging @production
    Scenario: Check active type of media types
       When I go to "/media/add"
        And I wait
@@ -99,7 +99,7 @@ So that I can use them after the install or update.
        And I should see "Remote video"
        And I should see "Audio"
 
-   @check @local @development @staging @production
+  @javascript @check @local @development @staging @production
    Scenario: Check Varbase update instructions page
       When I go to "/admin/config/development/update-helper"
        And I wait

@@ -6,7 +6,7 @@ So that I can reset my password for the account
   Background:
     Given I am not logged in
 
-  @local @development @staging @production
+  @javascript @local @development @staging @production
   Scenario: Check that an anonymous user can reset his or her password
      When I go to "/user/login"
       And I wait
