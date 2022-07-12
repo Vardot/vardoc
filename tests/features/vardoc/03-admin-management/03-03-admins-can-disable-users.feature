@@ -48,6 +48,24 @@ So that they will be disabled and not be able to use the site.
      Then I should see "The username Normal user has not been activated or is blocked."
 
   @javascript @local @development @staging @production
+  Scenario: Check if the site admin can activate a User account Normal user from accessing the site
+    Given I am a logged in user with the "Site admin" user
+     When I go to "/admin/people"
+      And I wait
+     Then I should see "People"
+     When I fill in "Normal user" for "Name or email contains"
+      And I press "Filter"
+      And I wait
+     Then I should see "Normal user"
+     When I click "Edit" in the "Normal user" row
+      And I wait
+     Then I should see "Normal user"
+     When I select the radio button "Active"
+      And I press the "Save" button
+      And I wait
+     Then I should see "The changes have been saved."
+
+  @javascript @local @development @staging @production
   Scenario: Check flood control default settings
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/people/flood-control"

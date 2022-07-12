@@ -29,6 +29,7 @@ So that they will be able to use the site.
       And I fill in "dD.123123ddd" for "Password"
       And I fill in "dD.123123ddd" for "Confirm password"
       And I scroll to bottom
+      And I should not see "Default policy"
       And I press "Create new account"
 
   @javascript @cleanup @local @development @staging @production
@@ -39,11 +40,9 @@ So that they will be able to use the site.
       And I wait
      Then I should see "tester"
      When I click "Edit" in the "tester" row
-      And I fill in "Tester first name" for "First name"
-      And I fill in "Tester last name" for "Last name"
       And I wait
       And I scroll to bottom
-      And I press "Cancel account"
+      And I click "Cancel account"
       And I wait
      Then I should see "Are you sure you want to cancel the account tester?"
      When I select the radio button "Delete the account and its content. This action cannot be undone."
