@@ -48,10 +48,11 @@
     "npm-asset/jquery-bar-rating": "~1.0"
   },
   "require-dev": {
-    "drupal/core-dev": "@stable",
-    "drush/drush": "@stable",
+    "drupal/core-dev": "~9.0",
+    "drush/drush": "~11.0",
     "drupal/drupal-extension": "~4.0",
-    "emuse/behat-html-formatter": "^0.2.0"
+    "emuse/behat-html-formatter": "^0.2.0",
+    "drevops/behat-screenshot": "~1.0"
   },
   "config": {
     "bin-dir": "bin/",
