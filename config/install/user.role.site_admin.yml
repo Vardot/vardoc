@@ -236,3 +236,5 @@ permissions:
   - 'view terms in topic'
   - 'view the administration theme'
   - 'view tools revisions'
+  - 'change layouts in place editing'
+  - 'configure all landing_page_lb node layout overrides'

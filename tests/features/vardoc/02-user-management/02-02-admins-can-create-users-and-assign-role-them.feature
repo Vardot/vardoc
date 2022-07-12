@@ -45,7 +45,7 @@ So that they will be able to use the site.
       And I click "Cancel account"
       And I wait
      Then I should see "Are you sure you want to cancel the account tester?"
-     When I select the radio button "Delete the account and its content. This action cannot be undone."
+     When I select the radio button "Delete the account and make its content belong to the Anonymous user. This action cannot be undone. Reassign its groups to the super administrator."
       And I scroll to bottom
       And I press "Confirm"
       And I wait 10s
