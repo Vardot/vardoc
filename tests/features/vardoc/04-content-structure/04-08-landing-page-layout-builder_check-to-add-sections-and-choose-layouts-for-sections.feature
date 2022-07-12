@@ -33,13 +33,6 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I should not see "Bootstrap 10 Cols"
       And I should not see "Bootstrap 11 Cols"
       And I should not see "Bootstrap 12 Cols"
-      And I scroll to the top of the page
-      And I wait 1s
-     Then I should see "Save layout"
-     When I press the "Save layout" button
-      And I wait
-     Then I should see "The layout override has been saved."
-      And I should see "Test Landing page (Layout Builder)"
   
   @javascript @local @development
   Scenario: Check that Site admins can add a one coloumn section and add a Rich text block in the section
