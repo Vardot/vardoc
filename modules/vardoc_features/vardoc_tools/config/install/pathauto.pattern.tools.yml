@@ -9,7 +9,7 @@ type: 'canonical_entities:node'
 pattern: 'tool/[node:title]'
 selection_criteria:
   e632aaac-702e-4dc9-a8a5-bfc03af145a7:
-    id: node_type
+    id: 'entity_bundle:node'
     bundles:
       tools: tools
     negate: false
