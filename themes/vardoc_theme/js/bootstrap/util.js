@@ -1,15 +1,16 @@
 /*!
-  * Bootstrap util.js v4.4.1 (https://getbootstrap.com/)
-  * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-  */
+ * Bootstrap util.js v4.4.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery')) :
-  typeof define === 'function' && define.amd ? define(['jquery'], factory) :
-  (global = global || self, global.Util = factory(global.jQuery));
-}(this, (function ($) { 'use strict';
-
-  $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
+  typeof exports === 'object' && typeof module !== 'undefined'
+    ? (module.exports = factory(require('jquery')))
+    : typeof define === 'function' && define.amd
+    ? define(['jquery'], factory)
+    : ((global = global || self), (global.Util = factory(global.jQuery)));
+})(this, function ($) {
+  $ = $ && $.hasOwnProperty('default') ? $.default : $;
 
   /**
    * --------------------------------------------------------------------------
@@ -23,12 +24,15 @@
    * ------------------------------------------------------------------------
    */
 
-  var TRANSITION_END = 'transitionend';
-  var MAX_UID = 1000000;
-  var MILLISECONDS_MULTIPLIER = 1000; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
+  const TRANSITION_END = 'transitionend';
+  const MAX_UID = 1000000;
+  const MILLISECONDS_MULTIPLIER = 1000; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
 
   function toType(obj) {
-    return {}.toString.call(obj).match(/\s([a-z]+)/i)[1].toLowerCase();
+    return {}.toString
+      .call(obj)
+      .match(/\s([a-z]+)/i)[1]
+      .toLowerCase();
   }
 
   function getSpecialTransitionEndEvent() {
@@ -41,14 +45,14 @@
         }
 
         return undefined; // eslint-disable-line no-undefined
-      }
+      },
     };
   }
 
   function transitionEndEmulator(duration) {
-    var _this = this;
+    const _this = this;
 
-    var called = false;
+    let called = false;
     $(this).one(Util.TRANSITION_END, function () {
       called = true;
     });
@@ -70,7 +74,6 @@
    * --------------------------------------------------------------------------
    */
 
-
   var Util = {
     TRANSITION_END: 'bsTransitionEnd',
     getUID: function getUID(prefix) {
@@ -82,10 +85,10 @@
       return prefix;
     },
     getSelectorFromElement: function getSelectorFromElement(element) {
-      var selector = element.getAttribute('data-target');
+      let selector = element.getAttribute('data-target');
 
       if (!selector || selector === '#') {
-        var hrefAttr = element.getAttribute('href');
+        const hrefAttr = element.getAttribute('href');
         selector = hrefAttr && hrefAttr !== '#' ? hrefAttr.trim() : '';
       }
 
@@ -95,25 +98,28 @@
         return null;
       }
     },
-    getTransitionDurationFromElement: function getTransitionDurationFromElement(element) {
+    getTransitionDurationFromElement: function getTransitionDurationFromElement(
+      element,
+    ) {
       if (!element) {
         return 0;
       } // Get transition-duration of the element
 
-
-      var transitionDuration = $(element).css('transition-duration');
-      var transitionDelay = $(element).css('transition-delay');
-      var floatTransitionDuration = parseFloat(transitionDuration);
-      var floatTransitionDelay = parseFloat(transitionDelay); // Return 0 if element or transition duration is not found
+      let transitionDuration = $(element).css('transition-duration');
+      let transitionDelay = $(element).css('transition-delay');
+      const floatTransitionDuration = parseFloat(transitionDuration);
+      const floatTransitionDelay = parseFloat(transitionDelay); // Return 0 if element or transition duration is not found
 
       if (!floatTransitionDuration && !floatTransitionDelay) {
         return 0;
       } // If multiple durations are defined, take the first
 
-
       transitionDuration = transitionDuration.split(',')[0];
       transitionDelay = transitionDelay.split(',')[0];
-      return (parseFloat(transitionDuration) + parseFloat(transitionDelay)) * MILLISECONDS_MULTIPLIER;
+      return (
+        (parseFloat(transitionDuration) + parseFloat(transitionDelay)) *
+        MILLISECONDS_MULTIPLIER
+      );
     },
     reflow: function reflow(element) {
       return element.offsetHeight;
@@ -128,15 +134,24 @@
     isElement: function isElement(obj) {
       return (obj[0] || obj).nodeType;
     },
-    typeCheckConfig: function typeCheckConfig(componentName, config, configTypes) {
-      for (var property in configTypes) {
+    typeCheckConfig: function typeCheckConfig(
+      componentName,
+      config,
+      configTypes,
+    ) {
+      for (const property in configTypes) {
         if (Object.prototype.hasOwnProperty.call(configTypes, property)) {
-          var expectedTypes = configTypes[property];
-          var value = config[property];
-          var valueType = value && Util.isElement(value) ? 'element' : toType(value);
+          const expectedTypes = configTypes[property];
+          const value = config[property];
+          const valueType =
+            value && Util.isElement(value) ? 'element' : toType(value);
 
           if (!new RegExp(expectedTypes).test(valueType)) {
-            throw new Error(componentName.toUpperCase() + ": " + ("Option \"" + property + "\" provided type \"" + valueType + "\" ") + ("but expected type \"" + expectedTypes + "\"."));
+            throw new Error(
+              `${componentName.toUpperCase()}: ` +
+                `Option "${property}" provided type "${valueType}" ` +
+                `but expected type "${expectedTypes}".`,
+            );
           }
         }
       }
@@ -146,16 +161,14 @@
         return null;
       } // Can find the shadow root otherwise it'll return the document
 
-
       if (typeof element.getRootNode === 'function') {
-        var root = element.getRootNode();
+        const root = element.getRootNode();
         return root instanceof ShadowRoot ? root : null;
       }
 
       if (element instanceof ShadowRoot) {
         return element;
       } // when we don't find a shadow root
-
 
       if (!element.parentNode) {
         return null;
@@ -165,25 +178,34 @@
     },
     jQueryDetection: function jQueryDetection() {
       if (typeof $ === 'undefined') {
-        throw new TypeError('Bootstrap\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\'s JavaScript.');
+        throw new TypeError(
+          "Bootstrap's JavaScript requires jQuery. jQuery must be included before Bootstrap's JavaScript.",
+        );
       }
 
-      var version = $.fn.jquery.split(' ')[0].split('.');
-      var minMajor = 1;
-      var ltMajor = 2;
-      var minMinor = 9;
-      var minPatch = 1;
-      var maxMajor = 4;
+      const version = $.fn.jquery.split(' ')[0].split('.');
+      const minMajor = 1;
+      const ltMajor = 2;
+      const minMinor = 9;
+      const minPatch = 1;
+      const maxMajor = 4;
 
-      if (version[0] < ltMajor && version[1] < minMinor || version[0] === minMajor && version[1] === minMinor && version[2] < minPatch || version[0] >= maxMajor) {
-        throw new Error('Bootstrap\'s JavaScript requires at least jQuery v1.9.1 but less than v4.0.0');
+      if (
+        (version[0] < ltMajor && version[1] < minMinor) ||
+        (version[0] === minMajor &&
+          version[1] === minMinor &&
+          version[2] < minPatch) ||
+        version[0] >= maxMajor
+      ) {
+        throw new Error(
+          "Bootstrap's JavaScript requires at least jQuery v1.9.1 but less than v4.0.0",
+        );
       }
-    }
+    },
   };
   Util.jQueryDetection();
   setTransitionEndSupport();
 
   return Util;
-
-})));
-//# sourceMappingURL=util.js.map
+});
+// # sourceMappingURL=util.js.map

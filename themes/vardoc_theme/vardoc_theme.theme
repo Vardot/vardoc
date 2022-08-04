@@ -10,7 +10,6 @@ use Drupal\node\Entity\Node;
 use Drupal\file\Entity\File;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\image\Entity\ImageStyle;
-use Drupal\views_bootstrap\ViewsBootstrap;
 
 /**
  * Implements hook_theme_registry_alter().
@@ -59,7 +58,7 @@ function vardoc_theme_theme_suggestions_page_alter(array &$suggestions, array $v
 }
 
 /**
- *
+ * Implements hook_preprocess_html().
  */
 function vardoc_theme_preprocess_html(&$variables) {
   // Add information about the number of sidebars.
@@ -237,13 +236,15 @@ function vardoc_theme_preprocess_input(&$variables) {
  * Implements template_preprocess_views_view()
  * @param array $vars
  */
-function vardoc_theme_preprocess_views_view(&$vars){
+function vardoc_theme_preprocess_views_view(&$vars) {
   $vars['more']['#options']['attributes']['class'] = ['btn', 'btn-primary'];
 }
 
-// Change comment form buttons text
+/**
+ * Change comment form buttons text.
+ */
 function vardoc_theme_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if($form_id == 'comment_native_comment_form') {
+  if ($form_id == 'comment_native_comment_form') {
     $form['actions']['submit']['#value'] = t('Submit');
   }
 }

@@ -157,7 +157,8 @@
   display: inline-block;
 }
 
-.node--type-sme.node--view-mode-full .field.field--name-field-person .field__items .field__item:after, .node--type-sme.node--view-mode-full .field.field--name-field-category .field__items .field__item:after,
+.node--type-sme.node--view-mode-full .field.field--name-field-person .field__items .field__item:after,
+ .node--type-sme.node--view-mode-full .field.field--name-field-category .field__items .field__item:after,
 .node--type-template.node--view-mode-full .field.field--name-field-person .field__items .field__item:after,
 .node--type-template.node--view-mode-full .field.field--name-field-category .field__items .field__item:after,
 .node--type-project-lessons-learned.node--view-mode-full .field.field--name-field-person .field__items .field__item:after,
@@ -165,7 +166,8 @@
   content: ',';
 }
 
-.node--type-sme.node--view-mode-full .field.field--name-field-person .field__items .field__item:last-child:after, .node--type-sme.node--view-mode-full .field.field--name-field-category .field__items .field__item:last-child:after,
+.node--type-sme.node--view-mode-full .field.field--name-field-person .field__items .field__item:last-child:after,
+ .node--type-sme.node--view-mode-full .field.field--name-field-category .field__items .field__item:last-child:after,
 .node--type-template.node--view-mode-full .field.field--name-field-person .field__items .field__item:last-child:after,
 .node--type-template.node--view-mode-full .field.field--name-field-category .field__items .field__item:last-child:after,
 .node--type-project-lessons-learned.node--view-mode-full .field.field--name-field-person .field__items .field__item:last-child:after,

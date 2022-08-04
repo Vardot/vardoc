@@ -287,7 +287,8 @@ h3 {
   }
 }
 
-.block-book-navigation ul .menu-item .menu .menu-item.open > a, .block-book-navigation ul .menu-item .menu .menu-item:hover > a {
+.block-book-navigation ul .menu-item .menu .menu-item.open > a,
+ .block-book-navigation ul .menu-item .menu .menu-item:hover > a {
   color: #214bff;
 }
 
@@ -346,7 +347,8 @@ h3 {
   }
 }
 
-.block-book-navigation ul .menu-item.open > a, .block-book-navigation ul .menu-item:hover > a {
+.block-book-navigation ul .menu-item.open > a,
+ .block-book-navigation ul .menu-item:hover > a {
   color: #214bff;
 }
 
@@ -388,7 +390,8 @@ h3 {
   }
 }
 
-.webform-submission-form .form-group.field--widget-string-textarea, .webform-submission-form .form-group.field--widget-language-select {
+.webform-submission-form .form-group.field--widget-string-textarea,
+ .webform-submission-form .form-group.field--widget-language-select {
   margin-bottom: 0;
 }
 
@@ -692,7 +695,8 @@ h3 {
   margin-bottom: 50px;
 }
 
-.rating-wrapper .field--name-field-rating .br-theme-css-stars .br-widget a.br-selected::after, .rating-wrapper .field--name-field-rating .br-theme-css-stars .br-widget a.br-active::after {
+.rating-wrapper .field--name-field-rating .br-theme-css-stars .br-widget a.br-selected::after,
+ .rating-wrapper .field--name-field-rating .br-theme-css-stars .br-widget a.br-active::after {
   color: #214bff;
 }
 

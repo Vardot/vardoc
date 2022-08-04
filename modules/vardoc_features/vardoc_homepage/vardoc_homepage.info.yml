@@ -12,4 +12,4 @@ dependencies:
   - better_normalizers:better_normalizers
   - entityqueue:entityqueue
   - vardoc:vardoc_book
-  - search_api_autocomplete
+  - search_api_autocomplete:search_api_autocomplete

@@ -20,7 +20,8 @@ form .form-type-textarea {
   margin-bottom: 0;
 }
 
-input[type=text]::-ms-clear, input[type=text]::-ms-reveal {
+input[type=text]::-ms-clear,
+ input[type=text]::-ms-reveal {
   display: none;
   height: 0;
   width: 0;

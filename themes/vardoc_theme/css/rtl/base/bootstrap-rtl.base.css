@@ -190,7 +190,8 @@ body .pagination-lg .page-item:last-child .page-link {
   border-bottom-left-radius: 0.3rem;
 }
 
-body .input-group > .custom-file:not(:last-child) .custom-file-label, body .input-group > .custom-file:not(:last-child) .custom-file-label::after {
+body .input-group > .custom-file:not(:last-child) .custom-file-label,
+ body .input-group > .custom-file:not(:last-child) .custom-file-label::after {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-top-right-radius: 0.25rem;

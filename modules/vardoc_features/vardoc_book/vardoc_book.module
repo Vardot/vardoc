@@ -13,8 +13,8 @@ function vardoc_book_editor_js_settings_alter(array &$settings) {
   $extra_editor_settings = [
     'colorButton_backStyle' => [
     'element' => 'span',
-      'attributes' => ['style' => 'background-color:#(color);', 'class' => 'text-with-bg']
-    ]
+      'attributes' => ['style' => 'background-color:#(color);', 'class' => 'text-with-bg'],
+    ],
   ];
   if (isset($settings['editor']['formats']['full_html'])) {
     $settings['editor']['formats']['full_html']['editorSettings'] += $extra_editor_settings;
@@ -27,7 +27,7 @@ function vardoc_book_editor_js_settings_alter(array &$settings) {
 function vardoc_book_menu_theme() {
   return [
     'book_tree' => [
-	  'template' => 'book-tree',
+      'template' => 'book-tree',
     ],
   ];
 }

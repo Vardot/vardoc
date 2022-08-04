@@ -142,11 +142,13 @@ div.image-widget-data {
   margin-bottom: 0;
 }
 
-.radio:first-child, .checkbox:first-child {
+.radio:first-child,
+ .checkbox:first-child {
   margin-top: 0;
 }
 
-.radio:last-child, .checkbox:last-child {
+.radio:last-child,
+ .checkbox:last-child {
   margin-bottom: 0;
 }
 

@@ -169,7 +169,9 @@ header.navbar .navbar-nav .nav-item .nav-link:after {
           transform-origin: right top;
 }
 
-header.navbar .navbar-nav .nav-item .nav-link:hover::after, header.navbar .navbar-nav .nav-item .nav-link.is-active::after, header.navbar .navbar-nav .nav-item .nav-link.active::after {
+header.navbar .navbar-nav .nav-item .nav-link:hover::after,
+ header.navbar .navbar-nav .nav-item .nav-link.is-active::after,
+ header.navbar .navbar-nav .nav-item .nav-link.active::after {
   -webkit-transform-origin: left top;
        -o-transform-origin: left top;
           transform-origin: left top;
@@ -257,7 +259,8 @@ header.navbar .navbar-nav .nav-item.dropdown ul.dropdown-menu li {
   padding: 0;
 }
 
-header.navbar .navbar-nav .nav-item.dropdown ul.dropdown-menu li:hover, header.navbar .navbar-nav .nav-item.dropdown ul.dropdown-menu li.active {
+header.navbar .navbar-nav .nav-item.dropdown ul.dropdown-menu li:hover,
+ header.navbar .navbar-nav .nav-item.dropdown ul.dropdown-menu li.active {
   background: transparent;
 }
 
@@ -266,7 +269,9 @@ header.navbar .navbar-nav .nav-item.dropdown ul.dropdown-menu li a {
   display: block;
 }
 
-header.navbar .navbar-nav .nav-item.dropdown ul.dropdown-menu li a:hover, header.navbar .navbar-nav .nav-item.dropdown ul.dropdown-menu li a.is-active, header.navbar .navbar-nav .nav-item.dropdown ul.dropdown-menu li a.active {
+header.navbar .navbar-nav .nav-item.dropdown ul.dropdown-menu li a:hover,
+ header.navbar .navbar-nav .nav-item.dropdown ul.dropdown-menu li a.is-active,
+ header.navbar .navbar-nav .nav-item.dropdown ul.dropdown-menu li a.active {
   color: #292929;
 }
 
@@ -393,7 +398,8 @@ header.navbar.sticky-header {
     border-bottom: solid 1px #bac7ff;
     color: #214bff !important;
   }
-  header.navbar.expanded-header .block-menu.navigation .nav-item .nav-link.is-active, header.navbar.expanded-header .block-menu.navigation .nav-item .nav-link.active {
+  header.navbar.expanded-header .block-menu.navigation .nav-item .nav-link.is-active,
+ header.navbar.expanded-header .block-menu.navigation .nav-item .nav-link.active {
     color: #292929 !important;
   }
   header.navbar.expanded-header .block-menu.navigation .nav-item .nav-link:focus {
@@ -633,7 +639,8 @@ header.navbar.sticky-header {
   display: none;
 }
 
-.nav-link.fab, .nav-link.fas {
+.nav-link.fab,
+ .nav-link.fas {
   font-family: "Font Awesome 5 Brands";
 }
 

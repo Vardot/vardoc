@@ -254,7 +254,9 @@
   text-decoration: none;
 }
 
-.varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-field-link a:hover, .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-field-link a:focus, .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-field-link a:active {
+.varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-field-link a:hover,
+ .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-field-link a:focus,
+ .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-field-link a:active {
   opacity: 0.7;
 }
 
