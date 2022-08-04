@@ -5,11 +5,12 @@
   "description": "Vardoc: Knowledge Base System and Documentation Site",
   "main": "index.js",
   "scripts": {
-    "eslint": "node ./node_modules/eslint/bin/eslint.js --config=.eslintrc.json .",
-    "stylelint": "npx stylelint --config=.stylelintrc.json .",
+    "install-libraries": "npm install && bower install",
     "phpcs": "phpcs --standard=./.phpcs.xml .",
     "phpcbf": "phpcbf --standard=./.phpcs.xml .",
-    "install-libraries": "npm install && bower install"
+    "lint:yaml": "node ./node_modules/eslint/bin/eslint.js --config=.eslintrc.json --ext .yml .",
+    "lint:js": "node ./node_modules/eslint/bin/eslint.js --config=.eslintrc.json --ext .js .",
+    "lint:css": "npx stylelint --config=.stylelintrc.json ."
   },
   "keywords": [
     "Drupal",
@@ -22,21 +23,95 @@
   "license": "GPL-2.0",
   "dependencies": {  },
   "devDependencies": {
-    "eslint": "^6.7.2",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-prettier": "^6.7.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-react": "^7.10.0",
-    "eslint-plugin-react-hooks": "^1.7.0",
-    "prettier": "^1.14.0",
-    "stylelint": "^13.0.0",
-    "stylelint-checkstyle-formatter": "^0.1.1",
-    "stylelint-config-standard": "^19.0.0",
-    "stylelint-no-browser-hacks": "^1.2.1",
-    "stylelint-order": "^4.0.0"
+    "autoprefixer": "~9",
+    "@babel/core": "~7",
+    "@babel/preset-env": "~7",
+    "@babel/register": "^7.7.7",
+    "browser-sync": "~2",
+    "chalk": "~2",
+    "chokidar": "~3",
+    "chromedriver": "~99",
+    "cross-env": "~5",
+    "del": "~3",
+    "dotenv-safe": "~5",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jquery": "^1.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-yml": "^0.14.0",
+    "farbtastic": "https://github.com/mattfarina/farbtastic/archive/1.3u.tar.gz",
+    "glob": "~7",
+    "glob-watcher": "~5",
+    "joyride": "https://github.com/zurb/joyride/archive/refs/heads/v2.1.tar.gz",
+    "merge-stream": "~2",
+    "minimatch": "~5",
+    "minimist": "~1",
+    "mkdirp": "~1",
+    "postcss": "^7.0.18",
+    "postcss-calc": "^7.0.1",
+    "postcss-header": "^2.0.0",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-pxtorem": "^5.1.1",
+    "postcss-url": "^8.0.0",
+    "prettier": "^2.1.2",
+    "raw-loader": "^4.0.2",
+    "shepherd.js": "^9.0.0",
+    "sortablejs": "^1.13.0",
+    "stylelint": "^14.0.1",
+    "stylelint-checkstyle-formatter": "^0.1.2",
+    "stylelint-config-standard": "^23.0.0",
+    "stylelint-order": "^5.0.0",
+    "tabbable": "^5.2.0",
+    "terser": "^5.14.2",
+    "terser-webpack-plugin": "^5.2.0",
+    "underscore": "^1.13.1",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.4.0"
   },
+  "//": "'development is the default environment, and legacy is for transpiling the old jQuery codebase",
+  "babel": {
+    "env": {
+      "development": {
+        "presets": [
+          [
+            "@babel/preset-env",
+            {
+              "modules": "commonjs",
+              "targets": {
+                "node": "current"
+              }
+            }
+          ]
+        ]
+      },
+      "legacy": {
+        "presets": [
+          [
+            "@babel/preset-env",
+            {
+              "modules": false
+            }
+          ]
+        ]
+      }
+    }
+  },
+  "browserslist": [
+    "last 2 Chrome major versions",
+    "last 2 Firefox major versions",
+    "last 2 Safari major versions",
+    "last 2 Edge major versions",
+    "last 2 Opera versions",
+    "last 2 iOS major versions",
+    "last 1 Explorer major version",
+    "last 1 ChromeAndroid version",
+    "last 1 UCAndroid version",
+    "last 1 Samsung version",
+    "Firefox ESR"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:Vardot/vardoc.git"

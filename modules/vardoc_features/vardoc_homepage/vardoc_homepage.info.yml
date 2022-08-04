@@ -14,4 +14,4 @@ dependencies:
   - page_manager:page_manager
   - panels:panels
   - vardoc:vardoc_book
-  - search_api_autocomplete
+  - search_api_autocomplete:search_api_autocomplete

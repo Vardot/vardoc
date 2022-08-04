@@ -60,19 +60,19 @@
 
 .views-exposed-form .form-row .js-form-item .SumoSelect.open > .CaptionCont {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(33, 75, 255, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(33, 75, 255, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(33, 75, 255, 0.25);
 }
 
 .views-exposed-form .form-row .js-form-item .SumoSelect .SelectBox {
+  padding: 9px;
   border: 1px solid #ced4da;
   border-radius: 4px;
-  padding: 9px;
 }
 
 .views-exposed-form .form-row .js-form-item .SumoSelect .SelectBox span.placeholder {
-  font-style: normal;
   color: #8898aa;
   font-weight: normal;
+  font-style: normal;
 }
 
 .views-exposed-form .form-row .js-form-item .SumoSelect .SelectBox i::before {
@@ -98,8 +98,8 @@
 .view-sme ul,
 .view-template ul {
   -webkit-padding-start: 20px;
-     -moz-padding-start: 20px;
-          padding-inline-start: 20px;
+  -moz-padding-start: 20px;
+  padding-inline-start: 20px;
 }
 
 .SumoSelect.open > .optWrapper {
@@ -108,7 +108,7 @@
 
 .table-responsive {
   -webkit-box-shadow: 0 15px 35px 0 rgba(50, 50, 93, 0.1), 0 5px 4px 0 rgba(0, 0, 0, 0.07);
-          box-shadow: 0 15px 35px 0 rgba(50, 50, 93, 0.1), 0 5px 4px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: 0 15px 35px 0 rgba(50, 50, 93, 0.1), 0 5px 4px 0 rgba(0, 0, 0, 0.07);
 }
 
 .table-responsive .table {
@@ -116,21 +116,21 @@
 }
 
 .pagination {
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   margin-top: 50px;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .ajax-progress-fullscreen {
-  background-image: url("../../images/loader.svg");
-  background-color: transparent;
-  -webkit-background-size: 55px 55px;
-  background-size: 55px;
   left: 48%;
   width: 55px;
   height: 55px;
+  background-color: transparent;
+  background-image: url("../../images/loader.svg");
+  -webkit-background-size: 55px 55px;
+  background-size: 55px;
 }
 
 .node--type-sme.node--view-mode-full .field,
@@ -148,7 +148,7 @@
 .node--type-sme.node--view-mode-full .field .field__label:after,
 .node--type-template.node--view-mode-full .field .field__label:after,
 .node--type-project-lessons-learned.node--view-mode-full .field .field__label:after {
-  content: ' :';
+  content: " :";
 }
 
 .node--type-sme.node--view-mode-full .field .field__items,
@@ -157,15 +157,17 @@
   display: inline-block;
 }
 
-.node--type-sme.node--view-mode-full .field.field--name-field-person .field__items .field__item:after, .node--type-sme.node--view-mode-full .field.field--name-field-category .field__items .field__item:after,
+.node--type-sme.node--view-mode-full .field.field--name-field-person .field__items .field__item:after,
+.node--type-sme.node--view-mode-full .field.field--name-field-category .field__items .field__item:after,
 .node--type-template.node--view-mode-full .field.field--name-field-person .field__items .field__item:after,
 .node--type-template.node--view-mode-full .field.field--name-field-category .field__items .field__item:after,
 .node--type-project-lessons-learned.node--view-mode-full .field.field--name-field-person .field__items .field__item:after,
 .node--type-project-lessons-learned.node--view-mode-full .field.field--name-field-category .field__items .field__item:after {
-  content: ',';
+  content: ",";
 }
 
-.node--type-sme.node--view-mode-full .field.field--name-field-person .field__items .field__item:last-child:after, .node--type-sme.node--view-mode-full .field.field--name-field-category .field__items .field__item:last-child:after,
+.node--type-sme.node--view-mode-full .field.field--name-field-person .field__items .field__item:last-child:after,
+.node--type-sme.node--view-mode-full .field.field--name-field-category .field__items .field__item:last-child:after,
 .node--type-template.node--view-mode-full .field.field--name-field-person .field__items .field__item:last-child:after,
 .node--type-template.node--view-mode-full .field.field--name-field-category .field__items .field__item:last-child:after,
 .node--type-project-lessons-learned.node--view-mode-full .field.field--name-field-person .field__items .field__item:last-child:after,

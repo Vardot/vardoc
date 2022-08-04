@@ -4,6 +4,7 @@
   <property name="drush" value="${project.basedir}/bin/drush" />
   <property name="composer" value="/usr/local/bin/composer" />
   <property name="npm" value="/usr/local/bin/npm" />
+  <property name="phpqa" value="${project.basedir}/bin/phpqa"/>
   <property name="rsync" value="/usr/bin/rsync" />
   <property name="db.type" value="mysql" />
   <property name="db.host" value="localhost" />
@@ -32,6 +33,7 @@
 
     <echo message="Found Drush: ${drush}" />
     <echo message="Found Composer: ${composer}" />
+    <echo message="Found phpqa: ${phpqa}" />
     <echo message="Found NPM: ${npm}" />
     <echo message="Found rsync: ${rsync}" />
   </target>
@@ -49,7 +51,7 @@
     <exec command="${npm} run install-libraries" passthru="true" />
 
     <!-- rsync the profile, excluding developer flotsam. -->
-    <filesync destinationDir="${profile}" rsyncPath="${rsync}" sourceDir="." verbose="false" exclude=".idea,bin,build.xml,.git,.gitignore,${docroot},karma.conf.js,*.make,node_modules,.travis.yml,vendor" />
+    <filesync destinationDir="${profile}" rsyncPath="${rsync}" sourceDir="." verbose="false" exclude=".idea,bin,build.xml,.git,.gitignore,${docroot},karma.conf.js,*.make,node_modules,vendor" />
 
     <!-- JS libraries and contrib modules were copied over by the file sync. -->
     <delete dir="libraries" failonerror="true" quiet="true" />
@@ -58,6 +60,14 @@
 
   <target name="pull" depends="env">
     <filesync destinationDir="." rsyncPath="${rsync}" sourceDir="${profile}/" verbose="false" exclude="libraries,modules/contrib,behat.local.yml" />
+  </target>
+
+  <!-- Prepares the behat tests environment. -->
+  <target name="code-quality-check" depends="env">
+    <exec executable="${phpqa}" passthru="true">
+      <arg value="--analyzedDirs=./"/>
+      <arg value="--buildDir=./tests/code-quality"/>
+    </exec>
   </target>
 
   <!-- Prepares the docroot for installation via the UI. -->
@@ -113,7 +123,7 @@
     <delete file="libraries" />
   </target>
 
-  <!-- Builds a Vardoc code base from legacy Drush make files. -->
+  <!-- Builds a Varbase code base from legacy Drush make files. -->
   <target name="build-legacy" depends="env">
     <if>
       <available file="${docroot}" property="docroot.exists" />

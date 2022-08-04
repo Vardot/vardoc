@@ -13,8 +13,8 @@ function vardoc_book_editor_js_settings_alter(array &$settings) {
   $extra_editor_settings = [
     'colorButton_backStyle' => [
     'element' => 'span',
-      'attributes' => ['style' => 'background-color:#(color);', 'class' => 'text-with-bg']
-    ]
+      'attributes' => ['style' => 'background-color:#(color);', 'class' => 'text-with-bg'],
+    ],
   ];
   $settings['editor']['formats']['full_html']['editorSettings'] += $extra_editor_settings;
 }

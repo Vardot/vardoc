@@ -1,14 +1,14 @@
 /* Insert your vardoc_theme footer custom SASS styling. */
 .footer-wrapper {
-  background-color: #f3f3f3;
   margin-top: 100px;
   color: #292929;
+  background-color: #f3f3f3;
 }
 
 @media (max-width: 767.98px) {
   .footer-wrapper {
-    text-align: center;
     margin-top: 50px;
+    text-align: center;
   }
 }
 
@@ -27,8 +27,8 @@
 }
 
 .footer-wrapper .region-footer {
-  margin-left: 0;
   margin-right: 0;
+  margin-left: 0;
 }
 
 .maintenance-page .footer {
@@ -36,21 +36,21 @@
 }
 
 .menu--footer .navbar-nav {
+  float: right;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  float: right;
 }
 
 @media (max-width: 767.98px) {
   .menu--footer .navbar-nav {
     float: none;
-    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
+    -webkit-box-pack: center;
   }
 }
 
@@ -66,13 +66,13 @@
 }
 
 .menu--footer .navbar-nav .nav-item .nav-link {
-  font-size: 16px !important;
   color: #214bff !important;
   border-bottom: 0 !important;
+  font-size: 16px !important;
 }
 
 .menu--footer .navbar-nav .nav-item .nav-link:before {
-  font-size: 0px;
+  font-size: 0;
 }
 
 .menu--footer .navbar-nav .nav-item .nav-link:hover:before {
@@ -81,8 +81,8 @@
 
 .menu--footer .navbar-nav .nav-item:hover {
   -webkit-transform: translateY(-5px);
-       -o-transform: translateY(-5px);
-          transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 #block-copyright {

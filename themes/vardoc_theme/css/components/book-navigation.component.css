@@ -1,11 +1,11 @@
 .book-navigation .menu {
-  padding-bottom: 0;
   padding-top: 1em;
+  padding-bottom: 0;
 }
 
 .book-navigation .book-pager {
-  margin: 0;
   overflow: auto;
+  margin: 0;
   padding: 0.5em 0;
 }
 
@@ -16,9 +16,9 @@
 }
 
 .book-pager__item--previous {
-  text-align: left;
   /* LTR */
   width: 45%;
+  text-align: left;
 }
 
 [dir="rtl"] .book-pager__item--previous {
@@ -27,16 +27,16 @@
 }
 
 .book-pager__item--center {
-  text-align: center;
   width: 8%;
+  text-align: center;
 }
 
 .book-pager__item--next {
   float: right;
   /* LTR */
-  text-align: right;
-  /* LTR */
   width: 45%;
+  /* LTR */
+  text-align: right;
 }
 
 [dir="rtl"] .book-pager__item--next {

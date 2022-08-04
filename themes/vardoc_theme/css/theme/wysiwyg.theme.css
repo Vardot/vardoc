@@ -10,13 +10,13 @@ body .field--name-body ul {
 .node--view-mode-full .field--name-body ul li:before,
 body.cke_editable ul li:before,
 body .field--name-body ul li:before {
-  content: "\2022";
-  color: #214bff;
-  font-weight: bold;
   display: inline-block;
   width: 1em;
   margin-left: -1em;
+  content: "\2022";
+  color: #214bff;
   font-size: 1.125rem;
+  font-weight: bold;
 }
 
 .node--view-mode-full.cke_editable ul li a,
@@ -67,8 +67,8 @@ body .field--name-body a {
 
 .text-with-bg {
   display: block;
-  padding: 30px;
   margin-bottom: 30px;
+  padding: 30px;
 }
 
 .cke_editable {

@@ -1,16 +1,16 @@
 .file {
-  padding-left: 1.5rem;
   /* LTR */
   display: inline-block;
   min-height: 1rem;
+  padding-left: 1.5rem;
   background-repeat: no-repeat;
   background-position: left center;
   /* LTR */
 }
 
 [dir="rtl"] .file {
-  padding-left: inherit;
   padding-right: 1.5rem;
+  padding-left: inherit;
   background-position: right center;
 }
 

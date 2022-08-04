@@ -1,16 +1,16 @@
 body.install-page {
-  background: url('../images/vardoc-installer-bg.jpg') !important;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background: url("../images/vardoc-installer-bg.jpg") !important;
+  background-color: initial !important;
+  background-attachment: fixed !important;
   background-position-x: center !important;
   background-position-y: center !important;
+  background-clip: initial !important;
+  background-origin: initial !important;
   background-size: cover !important;
   background-repeat-x: no-repeat !important;
   background-repeat-y: no-repeat !important;
-  background-attachment: fixed !important;
-  background-origin: initial !important;
-  background-clip: initial !important;
-  background-color: initial !important;
-  -o-object-fit: cover;
-  object-fit: cover;
 }
 
 .other-lang-warn {

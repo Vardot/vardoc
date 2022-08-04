@@ -3,9 +3,9 @@ html.overlay-open .navbar-fixed-top {
 }
 
 html.js fieldset.collapsed {
-  border-left-width: 1px;
-  border-right-width: 1px;
   height: auto;
+  border-right-width: 1px;
+  border-left-width: 1px;
 }
 
 html.js input.form-autocomplete {
@@ -17,12 +17,12 @@ html.js input.form-autocomplete {
 }
 
 html.js .autocomplete-throbber {
-  background-position: 100% 2px;
-  background-repeat: no-repeat;
   display: inline-block;
+  width: 15px;
   height: 15px;
   margin: 2px 0 0 2px;
-  width: 15px;
+  background-repeat: no-repeat;
+  background-position: 100% 2px;
 }
 
 html.js .autocomplete-throbber.throbbing {
@@ -48,8 +48,8 @@ html.js .autocomplete-throbber.throbbing {
 }
 
 .ctools-modal-dialog .modal-body {
-  width: 100% !important;
   overflow: auto;
+  width: 100% !important;
 }
 
 .modal-backdrop {
@@ -57,9 +57,9 @@ html.js .autocomplete-throbber.throbbing {
 }
 
 .element-invisible {
+  width: 1px;
   margin: 0;
   padding: 0;
-  width: 1px;
 }
 
 ul.secondary {
@@ -84,26 +84,26 @@ input,
 textarea,
 select,
 .uneditable-input {
-  max-width: 100%;
   width: auto;
+  max-width: 100%;
 }
 
 fieldset legend.panel-heading {
   float: left;
-  line-height: 1em;
   margin: 0;
+  line-height: 1em;
 }
 
 fieldset .panel-body {
-  clear: both;
   display: inherit;
+  clear: both;
 }
 
 fieldset .panel-heading a.panel-title {
-  color: inherit;
   display: block;
   margin: -10px -15px;
   padding: 10px 15px;
+  color: inherit;
 }
 
 fieldset .panel-heading a.panel-title:hover {
@@ -116,8 +116,8 @@ fieldset .panel-heading a.panel-title:hover {
 }
 
 .form-horizontal .form-group {
-  margin-left: 0;
   margin-right: 0;
+  margin-left: 0;
 }
 
 .form-actions {
@@ -142,11 +142,13 @@ div.image-widget-data {
   margin-bottom: 0;
 }
 
-.radio:first-child, .checkbox:first-child {
+.radio:first-child,
+.checkbox:first-child {
   margin-top: 0;
 }
 
-.radio:last-child, .checkbox:last-child {
+.radio:last-child,
+.checkbox:last-child {
   margin-bottom: 0;
 }
 
@@ -155,8 +157,8 @@ div.image-widget-data {
 }
 
 a.tabledrag-handle .handle {
-  height: auto;
   width: auto;
+  height: auto;
 }
 
 .nav-tabs {
@@ -176,9 +178,9 @@ ul li.leaf {
 
 .submitted {
   margin-bottom: 1em;
-  font-style: italic;
-  font-weight: normal;
   color: #777;
+  font-weight: normal;
+  font-style: italic;
 }
 
 .form-type-password-confirm {
@@ -198,10 +200,10 @@ ul li.leaf {
 }
 
 .form-type-password-confirm .progress {
-  background: transparent;
-  border-radius: 0 0 5px 5px;
   height: 4px;
-  margin: -5px 0px 0;
+  margin: -5px 0 0;
+  border-radius: 0 0 5px 5px;
+  background: transparent;
 }
 
 .form-type-password-confirm .form-type-password {
@@ -241,13 +243,13 @@ ul.pagination li > a.progress-disabled {
 @keyframes adjust-hue {
   0% {
     -webkit-transform: rotate(0deg);
-         -o-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(359deg);
-         -o-transform: rotate(359deg);
-            transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
 
@@ -259,13 +261,13 @@ td.radio {
 }
 
 .views-display-settings .label {
+  color: #666;
   font-size: 100%;
-  color: #666666;
 }
 
 .views-display-settings .footer {
-  padding: 0;
   margin: 4px 0 0 0;
+  padding: 0;
 }
 
 .views-exposed-form .views-exposed-widget .btn {
@@ -283,8 +285,8 @@ table .checkbox input[type="checkbox"] {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 7px;
-  padding-left: 15px;
   padding-right: 15px;
+  padding-left: 15px;
   text-align: right;
 }
 
@@ -320,12 +322,12 @@ td.module,
 }
 
 .book-toc > .dropdown-menu .dropdown-menu {
-  border: 0;
+  position: static;
   display: block;
+  width: 100%;
   margin: 0;
   padding: 0;
-  position: static;
-  width: 100%;
+  border: 0;
 }
 
 .book-toc > .dropdown-menu .dropdown-menu > li {
@@ -346,9 +348,9 @@ fieldset.features-export-component .panel-heading {
 }
 
 fieldset.features-export-component .panel-heading a.panel-title {
-  font-weight: 500;
   margin: -5px -10px;
   padding: 5px 10px;
+  font-weight: 500;
 }
 
 fieldset.features-export-component .panel-body {
@@ -361,10 +363,10 @@ div.features-export-list {
 }
 
 fieldset.features-export-component .component-select .form-type-checkbox {
-  line-height: 1em;
-  margin: 5px 5px 5px 0 !important;
   min-height: 0;
+  margin: 5px 5px 5px 0 !important;
   padding: 3px 3px 3px 25px !important;
+  line-height: 1em;
 }
 
 fieldset.features-export-component .component-select .form-type-checkbox input[type=checkbox] {
@@ -372,10 +374,10 @@ fieldset.features-export-component .component-select .form-type-checkbox input[t
 }
 
 div.features-export-list .form-type-checkbox {
-  line-height: 1em;
-  margin: 5px 5px 5px 0 !important;
   min-height: 0;
+  margin: 5px 5px 5px 0 !important;
   padding: 3px 3px 3px 25px !important;
+  line-height: 1em;
 }
 
 div.features-export-list .form-type-checkbox input[type=checkbox] {
@@ -416,8 +418,8 @@ div.features-export-list .form-type-checkbox input[type=checkbox] {
 }
 
 .field-collection-view {
-  padding: 0;
   margin: 0;
+  padding: 0;
   border-bottom: 0 none;
 }
 
@@ -442,8 +444,8 @@ dt {
 }
 
 dd {
-  margin-left: 10px;
   margin-bottom: 20px;
+  margin-left: 10px;
 }
 
 img {
@@ -451,18 +453,18 @@ img {
 }
 
 .ajax-progress-throbber {
-  background: transparent;
-  min-height: 0;
-  opacity: 1;
-  padding: 0;
   width: auto;
+  min-height: 0;
+  padding: 0;
   vertical-align: baseline;
+  opacity: 1;
+  background: transparent;
 }
 
 .modal-content .panels-add-content-modal {
-  background: white;
   margin-left: 175px;
   padding-left: 0;
+  background: white;
 }
 
 .modal-content .panels-add-content-modal .panels-modal-add-category {
@@ -497,27 +499,27 @@ body.user-logged-in .btn .hidden-anonymous {
 
 body.path-frontpage h1.page-header {
   position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
   width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
   border: 0;
 }
 
 pre {
   display: block;
-  padding: 9.5px;
   margin: 0 0 10px;
-  font-size: 13px;
-  line-height: 1.42857143;
-  word-break: break-all;
+  padding: 9.5px;
   word-wrap: break-word;
-  color: #333333;
-  background-color: #f5f5f5;
+  word-break: break-all;
+  color: #333;
   border: 1px solid #ccc;
   border-radius: 4px;
+  background-color: #f5f5f5;
+  font-size: 13px;
+  line-height: 1.42857143;
 }
 
 #tour.hidden.list-group {
@@ -529,10 +531,10 @@ pre {
 }
 
 .card .card-top-image {
-  max-width: 100%;
   -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
+  flex-shrink: 0;
+  max-width: 100%;
+  -ms-flex-negative: 0;
 }
 
 select::-ms-expand {

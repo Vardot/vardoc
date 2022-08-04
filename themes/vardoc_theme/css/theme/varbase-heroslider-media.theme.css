@@ -5,63 +5,63 @@
 
 .varbase-heroslider-media .slick-slide .slide__caption {
   position: absolute;
-  left: 0;
-  bottom: 20%;
   top: auto;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transform: scale(0.95);
-  -o-transform: scale(0.95);
-     transform: scale(0.95);
+  bottom: 20%;
+  left: 0;
   -webkit-transition: opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0s, -webkit-transform 0s cubic-bezier(0.19, 1, 0.22, 1) 1.25s;
-  transition: opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0s, -webkit-transform 0s cubic-bezier(0.19, 1, 0.22, 1) 1.25s;
   -o-transition: opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0s, -o-transform 0s cubic-bezier(0.19, 1, 0.22, 1) 1.25s;
+  transition: opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0s, -webkit-transform 0s cubic-bezier(0.19, 1, 0.22, 1) 1.25s;
   transition: transform 0s cubic-bezier(0.19, 1, 0.22, 1) 1.25s, opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0s;
   transition: transform 0s cubic-bezier(0.19, 1, 0.22, 1) 1.25s, opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0s, -webkit-transform 0s cubic-bezier(0.19, 1, 0.22, 1) 1.25s, -o-transform 0s cubic-bezier(0.19, 1, 0.22, 1) 1.25s;
   transition: transform 0s cubic-bezier(0.19, 1, 0.22, 1) 1.25s, opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0s, -webkit-transform 0s cubic-bezier(0.19, 1, 0.22, 1) 1.25s;
+  -webkit-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  transform: scale(0.95);
+  opacity: 0;
+  filter: alpha(opacity=0);
 }
 
 .varbase-heroslider-media .slick-slide .img-responsive {
   -webkit-transition: -webkit-transform 3s cubic-bezier(0.19, 1, 0.22, 1) 0s;
-  transition: -webkit-transform 3s cubic-bezier(0.19, 1, 0.22, 1) 0s;
   -o-transition: -o-transform 3s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+  transition: -webkit-transform 3s cubic-bezier(0.19, 1, 0.22, 1) 0s;
   transition: transform 3s cubic-bezier(0.19, 1, 0.22, 1) 0s;
   transition: transform 3s cubic-bezier(0.19, 1, 0.22, 1) 0s, -webkit-transform 3s cubic-bezier(0.19, 1, 0.22, 1) 0s, -o-transform 3s cubic-bezier(0.19, 1, 0.22, 1) 0s;
   transition: transform 3s cubic-bezier(0.19, 1, 0.22, 1) 0s, -webkit-transform 3s cubic-bezier(0.19, 1, 0.22, 1) 0s;
   -webkit-transform: scale(1.15);
   -o-transform: scale(1.15);
-     transform: scale(1.15);
+  transform: scale(1.15);
 }
 
 .varbase-heroslider-media .slick-slide .unpublished {
-  padding: 0;
   height: auto;
+  padding: 0;
 }
 
 .varbase-heroslider-media .slick-active .slide__caption {
-  opacity: 1;
-  filter: alpha(opacity=100);
   -webkit-transition: opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0.5s, -webkit-transform 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
-  transition: opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0.5s, -webkit-transform 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
   -o-transition: opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0.5s, -o-transform 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+  transition: opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0.5s, -webkit-transform 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
   transition: transform 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0.5s, opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
   transition: transform 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0.5s, opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0.5s, -webkit-transform 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0.5s, -o-transform 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
   transition: transform 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0.5s, opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0.5s, -webkit-transform 1.25s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
   -webkit-transform: scale(1);
   -o-transform: scale(1);
-     transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
 
 .varbase-heroslider-media .slick-active .img-responsive {
   -webkit-transition: -webkit-transform 3s cubic-bezier(0.19, 1, 0.22, 1) 0s;
-  transition: -webkit-transform 3s cubic-bezier(0.19, 1, 0.22, 1) 0s;
   -o-transition: -o-transform 3s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+  transition: -webkit-transform 3s cubic-bezier(0.19, 1, 0.22, 1) 0s;
   transition: transform 3s cubic-bezier(0.19, 1, 0.22, 1) 0s;
   transition: transform 3s cubic-bezier(0.19, 1, 0.22, 1) 0s, -webkit-transform 3s cubic-bezier(0.19, 1, 0.22, 1) 0s, -o-transform 3s cubic-bezier(0.19, 1, 0.22, 1) 0s;
   transition: transform 3s cubic-bezier(0.19, 1, 0.22, 1) 0s, -webkit-transform 3s cubic-bezier(0.19, 1, 0.22, 1) 0s;
   -webkit-transform: scale(1);
   -o-transform: scale(1);
-     transform: scale(1);
+  transform: scale(1);
 }
 
 .varbase-heroslider-media .slide__caption .slide__title a {
@@ -75,28 +75,28 @@
 .varbase-heroslider-media .slick__arrow {
   top: 300px;
   -webkit-transform: translateY(-150px);
-       -o-transform: translateY(-150px);
-          transform: translateY(-150px);
+  -o-transform: translateY(-150px);
+  transform: translateY(-150px);
 }
 
 .varbase-heroslider-media .slick__arrow .slick-arrow::before {
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (min-width: 768px) {
   .varbase-heroslider-media .slick__arrow {
     top: 600px;
     -webkit-transform: translateY(-300px);
-         -o-transform: translateY(-300px);
-            transform: translateY(-300px);
+    -o-transform: translateY(-300px);
+    transform: translateY(-300px);
   }
 }
 
 .varbase-heroslider-media .slick-prev {
-  left: 10px;
   right: auto;
+  left: 10px;
 }
 
 .varbase-heroslider-media .slick-next {
@@ -117,20 +117,20 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
   -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
-  -webkit-box-pack: center;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -ms-flex-pack: center;
   -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   min-height: 300px;
   max-height: 300px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-box-pack: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -144,25 +144,25 @@
   position: absolute;
   z-index: 9;
   top: 0;
-  bottom: 0;
   right: 0;
+  bottom: 0;
   left: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content {
@@ -180,7 +180,7 @@
 @media (max-width: 1200px) {
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h2,
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h3 {
-    font-size: calc(1.455rem + 2.46vw) ;
+    font-size: calc(1.455rem + 2.46vw);
   }
 }
 
@@ -194,7 +194,7 @@
 @media screen and (min-width: 576px) and (max-width: 1200px) {
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h2,
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h3 {
-    font-size: calc(1.455rem + 2.46vw) ;
+    font-size: calc(1.455rem + 2.46vw);
   }
 }
 
@@ -208,7 +208,7 @@
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h2,
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h3 {
-    font-size: calc(1.48125rem + 2.775vw) ;
+    font-size: calc(1.48125rem + 2.775vw);
   }
 }
 
@@ -222,7 +222,7 @@
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h2,
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h3 {
-    font-size: calc(1.48125rem + 2.775vw) ;
+    font-size: calc(1.48125rem + 2.775vw);
   }
 }
 
@@ -236,7 +236,7 @@
 @media screen and (min-width: 1200px) and (max-width: 1200px) {
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h2,
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h3 {
-    font-size: calc(1.48125rem + 2.775vw) ;
+    font-size: calc(1.48125rem + 2.775vw);
   }
 }
 
@@ -250,11 +250,13 @@
 }
 
 .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-field-link a {
-  color: #fff;
   text-decoration: none;
+  color: #fff;
 }
 
-.varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-field-link a:hover, .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-field-link a:focus, .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-field-link a:active {
+.varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-field-link a:hover,
+.varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-field-link a:focus,
+.varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-field-link a:active {
   opacity: 0.7;
 }
 
@@ -279,22 +281,22 @@
 
 .varbase-heroslider-media .node--type-varbase-heroslider-media .field--name-field-media-single .varbase-video-player.embed-responsive {
   position: relative;
-  width: 100vw;
-  height: 130vh;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-       -o-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
+  width: 100vw;
+  height: 130vh;
   padding-bottom: 0;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -o-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
 }
 
 .varbase-heroslider-media .node--type-varbase-heroslider-media .field--name-field-media-single .field--type-image {
   position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -333,14 +335,14 @@
 @media (max-aspect-ratio: 16 / 9) {
   .varbase-heroslider-media .node--type-varbase-heroslider-media .field--name-field-media-single .varbase-video-player.embed-responsive {
     position: relative;
+    top: 50%;
+    left: 50%;
     width: 240vw;
     height: 140vh;
-    top: 50%;
-    -webkit-transform: translateY(-50%) translateX(-50%);
-         -o-transform: translateY(-50%) translateX(-50%);
-            transform: translateY(-50%) translateX(-50%);
     padding-bottom: 0 !important;
-    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -o-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
   }
 }
 
@@ -351,12 +353,7 @@
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
-       object-fit: cover;
-  }
-  @media screen and (min-width: 768px) {
-    .varbase-heroslider-media .node--type-varbase-heroslider-media .field--name-field-media-single img {
-      position: unset;
-    }
+    object-fit: cover;
   }
   .varbase-heroslider-media .node--type-varbase-heroslider-media .field--name-field-media-single .media {
     top: 0;
@@ -364,7 +361,7 @@
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .varbase-heroslider-media .node--type-varbase-heroslider-media .field--name-field-media-single .media img {
     top: 0;
@@ -372,12 +369,7 @@
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
-       object-fit: cover;
-  }
-  @media screen and (min-width: 768px) {
-    .varbase-heroslider-media .node--type-varbase-heroslider-media .field--name-field-media-single .media img {
-      position: unset;
-    }
+    object-fit: cover;
   }
   .varbase-heroslider-media .node--type-varbase-heroslider-media .field--name-field-media-single .media video {
     top: 0;
@@ -385,23 +377,35 @@
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .varbase-heroslider-media .node--type-varbase-heroslider-media .field--name-field-media-single .media iframe {
     position: absolute;
     left: 0;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
+  }
+
+  @media screen and (min-width: 768px) {
+    .varbase-heroslider-media .node--type-varbase-heroslider-media .field--name-field-media-single img {
+      position: unset;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .varbase-heroslider-media .node--type-varbase-heroslider-media .field--name-field-media-single .media img {
+      position: unset;
+    }
   }
 }
 
 @media (max-aspect-ratio: 16 / 9) {
   [dir="rtl"] .varbase-heroslider-media .node--type-varbase-heroslider-media .field--name-field-media-single .varbase-video-player.embed-responsive {
-    left: 0;
     right: 0;
+    left: 0;
     -webkit-transform: translateY(-50%) translateX(0);
-         -o-transform: translateY(-50%) translateX(0);
-            transform: translateY(-50%) translateX(0);
+    -o-transform: translateY(-50%) translateX(0);
+    transform: translateY(-50%) translateX(0);
   }
 }
 
@@ -411,6 +415,6 @@
 }
 
 [dir="rtl"] .varbase-heroslider-media .slick-next {
-  left: 10px;
   right: auto;
+  left: 10px;
 }

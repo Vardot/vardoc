@@ -1,7 +1,7 @@
 details {
-  border: 1px solid #636363;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  border: 1px solid #636363;
 }
 
 details > .details-wrapper {
@@ -9,6 +9,6 @@ details > .details-wrapper {
 }
 
 summary {
-  cursor: pointer;
   padding: 0.2em 0.5em;
+  cursor: pointer;
 }

@@ -1,7 +1,7 @@
 /* Insert your vardoc_theme comment custom SASS styling. */
 .comments-wrapper .comment-form__title {
-  font-size: 1rem;
   margin-bottom: 15px;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -29,14 +29,14 @@
 }
 
 .comments-wrapper .comment--type-native-comment .field--name-field-comment {
+  padding-bottom: 20px;
   color: #636363;
   border-bottom: 1px solid #ced4da;
-  padding-bottom: 20px;
 }
 
 .comments-wrapper .comment-native-comment-form .form-group {
-  margin-bottom: 20px;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .comments-wrapper .comment-native-comment-form .form-group label {
@@ -49,18 +49,18 @@
 }
 
 .comments-wrapper .comment-native-comment-form .form-group:before {
-  font-family: "Font Awesome 5 Free";
   position: absolute;
   top: 10px;
   left: 13px;
-  font-size: 1.125rem;
   color: #adb5bd;
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.125rem;
 }
 
 .comments-wrapper .comment-native-comment-form .form-group input {
-  padding-left: 35px;
-  margin-top: 0;
   width: 50%;
+  margin-top: 0;
+  padding-left: 35px;
 }
 
 @media (max-width: 767.98px) {
@@ -74,7 +74,7 @@
 }
 
 .comments-wrapper .comment-native-comment-form .form-group.js-form-type-email:before {
-  content: "\f0e0";
   top: 11px;
   left: 12px;
+  content: "\f0e0";
 }

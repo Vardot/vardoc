@@ -1,6 +1,6 @@
 .bs-callout {
-  padding: 20px;
   margin: 20px 0;
+  padding: 20px;
   border: 1px solid #cad1d7;
   border-left-width: 5px;
   border-radius: 3px;
@@ -8,8 +8,8 @@
 }
 
 .bs-callout:before {
-  content: " ";
   display: table;
+  content: " ";
 }
 
 .bs-callout:after {
@@ -58,21 +58,21 @@
 }
 
 [dir="rtl"] .bs-callout {
-  border-left-width: 1px;
   border-right-width: 5px;
+  border-left-width: 1px;
 }
 
 [dir="rtl"] .bs-callout-danger {
-  border-left-color: #cad1d7;
   border-right-color: #dc3545;
+  border-left-color: #cad1d7;
 }
 
 [dir="rtl"] .bs-callout-warning {
-  border-left-color: #cad1d7;
   border-right-color: #ffc107;
+  border-left-color: #cad1d7;
 }
 
 [dir="rtl"] .bs-callout-info {
-  border-left-color: #cad1d7;
   border-right-color: #17a2b8;
+  border-left-color: #cad1d7;
 }

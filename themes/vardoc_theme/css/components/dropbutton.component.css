@@ -4,19 +4,19 @@
 }
 
 .js .dropbutton-widget {
+  overflow: hidden;
+  margin: 0.125em 0;
+  cursor: pointer;
+  text-align: center;
+  color: #3a3a3a;
   border: 1px solid;
   border-color: #e4e4e4 #d2d2d2 #b4b4b4 #d2d2d2;
+  border-radius: 1em;
   background-color: #fff;
   background-image: -webkit-linear-gradient(top, #f3f3f3, #e8e8e8);
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(#e8e8e8));
   background-image: -o-linear-gradient(top, #f3f3f3, #e8e8e8);
   background-image: linear-gradient(to bottom, #f3f3f3, #e8e8e8);
-  color: #3a3a3a;
-  cursor: pointer;
-  text-align: center;
-  margin: 0.125em 0;
-  border-radius: 1em;
-  overflow: hidden;
 }
 
 .js .dropbutton-widget:hover {
@@ -24,9 +24,9 @@
 }
 
 .js .dropbutton-widget .button {
-  border: none;
   margin: 0;
   padding: 0.32em 1em;
+  border: none;
   background: transparent none;
 }
 
@@ -62,13 +62,13 @@
 
 .js .dropbutton .dropbutton-action:hover,
 .js .dropbutton a:hover {
-  background: #dedede;
   border-bottom: 0 none;
+  background: #dedede;
 }
 
 .js .dropbutton-widget {
+  border: 1px solid #ccc;
   background-color: white;
-  border: 1px solid #cccccc;
 }
 
 .js .dropbutton-widget:hover {
@@ -90,8 +90,8 @@
 }
 
 [dir="rtl"] .dropbutton-multiple .dropbutton {
-  border-left: 1px solid #e8e8e8;
   border-right: 0 none;
+  border-left: 1px solid #e8e8e8;
 }
 
 .dropbutton-multiple .dropbutton .dropbutton-action > * {
@@ -100,14 +100,14 @@
 }
 
 [dir="rtl"] .dropbutton-multiple .dropbutton .dropbutton-action > * {
-  margin-left: 0.25em;
   margin-right: 0;
+  margin-left: 0.25em;
 }
 
 .js td .dropbutton-multiple {
-  padding-right: 10em;
-  margin-right: 2em;
   max-width: 100%;
+  margin-right: 2em;
+  padding-right: 10em;
 }
 
 .js td .dropbutton-wrapper {
@@ -116,8 +116,8 @@
 
 .js .dropbutton-wrapper,
 .js .dropbutton-widget {
-  display: block;
   position: relative;
+  display: block;
 }
 
 .js td .dropbutton-widget {

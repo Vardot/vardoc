@@ -5,15 +5,9 @@
  * Enables modules and site configuration for a Vardoc site installation.
  */
 
-use Symfony\Component\Yaml\Yaml;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\language\Entity\ConfigurableLanguage;
 use Drupal\varbase\Config\ConfigBit;
-use Drupal\varbase\Form\ConfigureMultilingualForm;
-use Drupal\varbase\Form\AssemblerForm;
-use Drupal\varbase\Form\DevelopmentToolsAssemblerForm;
 use Vardot\Entity\EntityDefinitionUpdateManager;
-use Drupal\node\Entity\Node;
 use Drupal\path_alias\Entity\PathAlias;
 use Drupal\vardoc\Form\VardocAssemblerForm;
 
@@ -261,12 +255,13 @@ function vardoc_after_install_finished(array &$install_state) {
           $page_front_path = PathAlias::load($alias_id)->getPath();
 
           \Drupal::configFactory()->getEditable('system.site')
-          ->set('page.front', $page_front_path)
-          ->save();
+            ->set('page.front', $page_front_path)
+            ->save();
         }
       }
     }
-  } catch (\Exception $e) {
+  }
+  catch (\Exception $e) {
     \Drupal::messenger()->addError($e->getMessage());
   }
 

@@ -4,11 +4,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
-.equal-height .row > div[class*='col-'] {
+.equal-height .row > div[class*="col-"] {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,19 +16,19 @@
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
-.equal-height .row > div[class*='col-'] article.node {
+.equal-height .row > div[class*="col-"] article.node {
   height: 100%;
 }
 
-.equal-height .row > div[class*='col-'] article.node div.main-content {
+.equal-height .row > div[class*="col-"] article.node div.main-content {
   height: 100%;
 }
 
-.equal-height .row > div[class*='col-'] article.node div.main-content div.card {
+.equal-height .row > div[class*="col-"] article.node div.main-content div.card {
   height: 100%;
 }
 
@@ -39,10 +39,10 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
-  .equal-height-sm .row > div[class*='col-'] {
+  .equal-height-sm .row > div[class*="col-"] {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -50,16 +50,16 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
-  .equal-height-sm .row > div[class*='col-'] article.node {
+  .equal-height-sm .row > div[class*="col-"] article.node {
     height: 100%;
   }
-  .equal-height-sm .row > div[class*='col-'] article.node div.main-content {
+  .equal-height-sm .row > div[class*="col-"] article.node div.main-content {
     height: 100%;
   }
-  .equal-height-sm .row > div[class*='col-'] article.node div.main-content div.card {
+  .equal-height-sm .row > div[class*="col-"] article.node div.main-content div.card {
     height: 100%;
   }
 }
@@ -71,10 +71,10 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
-  .equal-height-md .row > div[class*='col-'] {
+  .equal-height-md .row > div[class*="col-"] {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -82,16 +82,16 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
-  .equal-height-md .row > div[class*='col-'] article.node {
+  .equal-height-md .row > div[class*="col-"] article.node {
     height: 100%;
   }
-  .equal-height-md .row > div[class*='col-'] article.node div.main-content {
+  .equal-height-md .row > div[class*="col-"] article.node div.main-content {
     height: 100%;
   }
-  .equal-height-md .row > div[class*='col-'] article.node div.main-content div.card {
+  .equal-height-md .row > div[class*="col-"] article.node div.main-content div.card {
     height: 100%;
   }
 }
@@ -103,10 +103,10 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
-  .equal-height-lg .row > div[class*='col-'] {
+  .equal-height-lg .row > div[class*="col-"] {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -114,16 +114,16 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
-  .equal-height-lg .row > div[class*='col-'] article.node {
+  .equal-height-lg .row > div[class*="col-"] article.node {
     height: 100%;
   }
-  .equal-height-lg .row > div[class*='col-'] article.node div.main-content {
+  .equal-height-lg .row > div[class*="col-"] article.node div.main-content {
     height: 100%;
   }
-  .equal-height-lg .row > div[class*='col-'] article.node div.main-content div.card {
+  .equal-height-lg .row > div[class*="col-"] article.node div.main-content div.card {
     height: 100%;
   }
 }
@@ -135,10 +135,10 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
-  .equal-height-xl .row > div[class*='col-'] {
+  .equal-height-xl .row > div[class*="col-"] {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -146,16 +146,16 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
-  .equal-height-xl .row > div[class*='col-'] article.node {
+  .equal-height-xl .row > div[class*="col-"] article.node {
     height: 100%;
   }
-  .equal-height-xl .row > div[class*='col-'] article.node div.main-content {
+  .equal-height-xl .row > div[class*="col-"] article.node div.main-content {
     height: 100%;
   }
-  .equal-height-xl .row > div[class*='col-'] article.node div.main-content div.card {
+  .equal-height-xl .row > div[class*="col-"] article.node div.main-content div.card {
     height: 100%;
   }
 }

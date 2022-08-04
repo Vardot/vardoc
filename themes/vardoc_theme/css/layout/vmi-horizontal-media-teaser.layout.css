@@ -19,6 +19,6 @@
 
 [dir="rtl"] .horizontal-media-teaser-view-mode .right,
 [dir="rtl"] .horizontal-media-teaser-view-mode .left {
-  padding-left: 15px;
   padding-right: 0;
+  padding-left: 15px;
 }

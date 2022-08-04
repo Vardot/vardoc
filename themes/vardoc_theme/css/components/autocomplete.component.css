@@ -1,43 +1,44 @@
 .ui-autocomplete {
-  background: #fff;
-  -webkit-background-clip: padding-box;
-          background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  color: inherit;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
-  list-style: none;
+  z-index: 1000;
   min-width: 160px;
   padding: 5px 0;
+  list-style: none;
   text-align: left;
-  z-index: 1000;
+  color: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  background: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
 }
 
 .ui-autocomplete .ui-menu-item {
+  display: block;
+  clear: both;
+  margin: 0;
+  padding: 3px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #212529;
   border: 0;
   border-radius: 0;
-  clear: both;
-  color: #212529;
-  cursor: pointer;
-  display: block;
+  outline: 0;
   font-weight: normal;
   line-height: 1.5;
-  margin: 0;
-  outline: 0;
-  padding: 3px 20px;
-  text-decoration: none;
-  white-space: nowrap;
 }
 
 .ui-autocomplete .ui-menu-item.ui-state-hover {
-  background: #f3f3f3;
   color: #16181b;
+  background: #f3f3f3;
 }
 
-.ui-autocomplete .ui-menu-item.ui-state-active, .ui-autocomplete .ui-menu-item.ui-state-focus {
-  background: #214bff;
+.ui-autocomplete .ui-menu-item.ui-state-active,
+.ui-autocomplete .ui-menu-item.ui-state-focus {
   color: #fff;
+  background: #214bff;
 }

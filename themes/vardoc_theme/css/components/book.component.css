@@ -3,7 +3,7 @@
 }
 
 .book-navigation .book-pager {
-  border-bottom: 1px solid #636363;
-  border-top: 1px solid #636363;
   margin: 0;
+  border-top: 1px solid #636363;
+  border-bottom: 1px solid #636363;
 }

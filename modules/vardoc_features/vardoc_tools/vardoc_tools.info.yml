@@ -5,20 +5,20 @@ core_version_requirement: ^9
 version: 4.0.x-dev
 package: Vardoc
 dependencies:
-  - ds
-  - entityqueue
-  - field
-  - field_group
-  - file
-  - image
-  - link
-  - menu_ui
-  - node
-  - path
-  - pathauto
-  - rabbit_hole
-  - svg_image
-  - taxonomy
-  - user
-  - views
-  - views_bootstrap
+  - drupal:field
+  - drupal:file
+  - drupal:image
+  - drupal:link
+  - drupal:menu_ui
+  - drupal:node
+  - drupal:path
+  - drupal:taxonomy
+  - drupal:user
+  - drupal:views
+  - ds:ds
+  - entityqueue:entityqueue
+  - field_group:field_group
+  - pathauto:pathauto
+  - rabbit_hole:rabbit_hole
+  - svg_image:svg_image
+  - views_bootstrap:views_bootstrap

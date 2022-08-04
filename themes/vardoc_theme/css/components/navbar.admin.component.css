@@ -14,7 +14,8 @@ body.user-logged-in.toolbar-fixed {
   padding-top: 40px !important;
 }
 
-body.user-logged-in.toolbar-fixed .navbar.fixed-top, body.user-logged-in.toolbar-fixed .navbar.sticky-top {
+body.user-logged-in.toolbar-fixed .navbar.fixed-top,
+body.user-logged-in.toolbar-fixed .navbar.sticky-top {
   top: 40px;
 }
 
@@ -30,7 +31,8 @@ body.user-logged-in.toolbar-tray-open {
   padding-top: 79px !important;
 }
 
-body.user-logged-in.toolbar-tray-open .navbar.fixed-top, body.user-logged-in.toolbar-tray-open .navbar.sticky-top {
+body.user-logged-in.toolbar-tray-open .navbar.fixed-top,
+body.user-logged-in.toolbar-tray-open .navbar.sticky-top {
   top: 79px;
 }
 
@@ -46,7 +48,8 @@ body.user-logged-in.toolbar-tray-open.toolbar-vertical {
   padding-top: 40px !important;
 }
 
-body.user-logged-in.toolbar-tray-open.toolbar-vertical .navbar.fixed-top, body.user-logged-in.toolbar-tray-open.toolbar-vertical .navbar.sticky-top {
+body.user-logged-in.toolbar-tray-open.toolbar-vertical .navbar.fixed-top,
+body.user-logged-in.toolbar-tray-open.toolbar-vertical .navbar.sticky-top {
   top: 40px;
   margin-left: 241px;
 }
@@ -63,7 +66,8 @@ body.user-logged-in.toolbar-tray-open.toolbar-vertical.navbar-is-fixed-bottom .n
   margin-left: 241px;
 }
 
-body.user-logged-in.admin-menu .navbar.fixed-top, body.user-logged-in.admin-menu .navbar.sticky-top {
+body.user-logged-in.admin-menu .navbar.fixed-top,
+body.user-logged-in.admin-menu .navbar.sticky-top {
   top: 29px;
 }
 
@@ -75,16 +79,18 @@ body.user-logged-in div#admin-toolbar {
   z-index: 1600;
 }
 
-body.user-logged-in #toolbar, body.user-logged-in #admin-menu, body.user-logged-in #admin-toolbar {
+body.user-logged-in #toolbar,
+body.user-logged-in #admin-menu,
+body.user-logged-in #admin-toolbar {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 body.user-logged-in #admin-menu {
-  margin: 0;
-  padding: 0;
   position: fixed;
   z-index: 1600;
+  margin: 0;
+  padding: 0;
 }
 
 body.user-logged-in #admin-menu .dropdown li {
@@ -105,7 +111,8 @@ body.user-logged-in.navbar-is-fixed-top#navbar-administration.navbar-horizontal.
   top: 79px;
 }
 
-body.user-logged-in.navbar-is-fixed-top#navbar-administration .navbar.fixed-top, body.user-logged-in.navbar-is-fixed-top#navbar-administration .navbar.sticky-top {
+body.user-logged-in.navbar-is-fixed-top#navbar-administration .navbar.fixed-top,
+body.user-logged-in.navbar-is-fixed-top#navbar-administration .navbar.sticky-top {
   top: 39px;
 }
 
@@ -121,17 +128,19 @@ body.user-logged-in #navbar-administration .navbar-tray {
   z-index: 1031;
 }
 
-body.user-logged-in.navbar-is-fixed-top#navbar-administration.navbar-vertical.navbar-tray-open .navbar.fixed-top, body.user-logged-in.navbar-is-fixed-top#navbar-administration.navbar-vertical.navbar-tray-open .navbar.sticky-top {
+body.user-logged-in.navbar-is-fixed-top#navbar-administration.navbar-vertical.navbar-tray-open .navbar.fixed-top,
+body.user-logged-in.navbar-is-fixed-top#navbar-administration.navbar-vertical.navbar-tray-open .navbar.sticky-top {
   left: 240px;
   left: 24rem;
 }
 
-[dir="rtl"] body.user-logged-in.toolbar-tray-open.toolbar-vertical .navbar.fixed-top, [dir="rtl"] body.user-logged-in.toolbar-tray-open.toolbar-vertical .navbar.sticky-top {
-  margin-left: 0px;
+[dir="rtl"] body.user-logged-in.toolbar-tray-open.toolbar-vertical .navbar.fixed-top,
+[dir="rtl"] body.user-logged-in.toolbar-tray-open.toolbar-vertical .navbar.sticky-top {
   margin-right: 241px;
+  margin-left: 0;
 }
 
 [dir="rtl"] body.user-logged-in.toolbar-tray-open.toolbar-vertical.navbar-is-fixed-bottom .navbar.fixed-bottom {
-  margin-left: 0px;
   margin-right: 241px;
+  margin-left: 0;
 }

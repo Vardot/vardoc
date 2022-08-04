@@ -6,7 +6,6 @@
  */
 
 use Symfony\Component\Yaml\Yaml;
-use Drupal\user\Entity\User;
 use Drupal\Core\Config\InstallStorage;
 use Drupal\Core\Config\StorageInterface;
 use Drupal\Core\Config\FileStorage;
@@ -86,12 +85,12 @@ function vardoc_book_install() {
       }
     }
 
-  // --------------------------------------------------------------------------.
-  // Entity updates to clear up any mismatched entity and/or field definitions
-  // And Fix changes were detected in the entity type and field definitions.
-  \Drupal::classResolver()
-    ->getInstanceFromDefinition(EntityDefinitionUpdateManager::class)
-    ->applyUpdates();
+    // --------------------------------------------------------------------------.
+    // Entity updates to clear up any mismatched entity and/or field definitions
+    // And Fix changes were detected in the entity type and field definitions.
+    \Drupal::classResolver()
+      ->getInstanceFromDefinition(EntityDefinitionUpdateManager::class)
+      ->applyUpdates();
 
     // Install any optional config the module provides.
     $storage = new FileStorage($optional_install_path, StorageInterface::DEFAULT_COLLECTION);

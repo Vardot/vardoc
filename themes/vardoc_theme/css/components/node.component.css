@@ -1,12 +1,12 @@
 .node__content {
-  font-size: 1rem;
   margin-top: 1rem;
+  font-size: 1rem;
 }
 
 .node--view-mode-teaser {
-  border-bottom: 1px solid #636363;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
+  border-bottom: 1px solid #636363;
 }
 
 .node--view-mode-teaser h2 {
@@ -15,10 +15,10 @@
 }
 
 .node--view-mode-teaser.node--sticky {
+  padding: 0 1rem 1rem;
+  border: 1px solid #636363;
   background: #f9f9f9;
   background: rgba(0, 0, 0, 0.024);
-  border: 1px solid #636363;
-  padding: 0 1rem 1rem;
 }
 
 .node--view-mode-teaser .node__content {
@@ -28,8 +28,8 @@
 }
 
 .node__meta {
-  font-size: 0.875rem;
   margin-bottom: -5px;
+  font-size: 0.875rem;
 }
 
 .node__meta .field--name-field-user-picture img {
@@ -41,8 +41,8 @@
 
 [dir="rtl"] .node__meta .field--name-field-user-picture img {
   float: right;
-  margin-left: 1rem;
   margin-right: 0;
+  margin-left: 1rem;
 }
 
 .node__links {
@@ -60,6 +60,6 @@
 }
 
 .node--unpublished .comment-text .comment-arrow {
-  border-left: 1px solid #fff4f4;
   border-right: 1px solid #fff4f4;
+  border-left: 1px solid #fff4f4;
 }

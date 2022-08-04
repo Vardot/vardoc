@@ -4,6 +4,6 @@
 }
 
 [dir="rtl"] .indented {
-  margin-left: 0;
   margin-right: 1.5rem;
+  margin-left: 0;
 }
