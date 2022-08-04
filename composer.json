@@ -121,25 +121,25 @@
       }
     },
     "installer-paths": {
-      "[web-root]/core": ["type:drupal-core"],
-      "[web-root]/profiles/{$name}": ["type:drupal-profile"],
-      "[web-root]/modules/contrib/{$name}": ["type:drupal-module"],
-      "[web-root]/themes/contrib/{$name}": ["type:drupal-theme"],
-      "[web-root]/libraries/slick": ["npm-asset/slick-carousel"],
-      "[web-root]/libraries/ace": ["npm-asset/ace-builds"],
-      "[web-root]/libraries/jquery-ui-touch-punch": ["bower-asset/jqueryui-touch-punch"],
-      "[web-root]/libraries/jquery-bar-rating": ["npm-asset/jquery-bar-rating"],
-      "[web-root]/libraries/{$name}": [
+      "docroot/core": ["type:drupal-core"],
+      "docroot/profiles/{$name}": ["type:drupal-profile"],
+      "docroot/modules/contrib/{$name}": ["type:drupal-module"],
+      "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
+      "docroot/libraries/slick": ["npm-asset/slick-carousel"],
+      "docroot/libraries/ace": ["npm-asset/ace-builds"],
+      "docroot/libraries/jquery-ui-touch-punch": ["bower-asset/jqueryui-touch-punch"],
+      "docroot/libraries/jquery-bar-rating": ["npm-asset/jquery-bar-rating"],
+      "docroot/libraries/{$name}": [
         "type:drupal-library",
         "type:bower-asset",
         "type:npm-asset"
       ],
-      "[web-root]/modules/custom/{$name}": ["type:drupal-custom-module"],
-      "[web-root]/themes/custom/{$name}": ["type:drupal-custom-theme"],
+      "docroot/modules/custom/{$name}": ["type:drupal-custom-module"],
+      "docroot/themes/custom/{$name}": ["type:drupal-custom-theme"],
       "drush/contrib/{$name}": ["type:drupal-drush"]
     },
     "drupal-libraries": {
-      "library-directory": "[web-root]/libraries",
+      "library-directory": "docroot/libraries",
       "libraries": [
         {"name": "objectfitpolyfill", "package": "bower-asset/objectfitpolyfill"},
         {"name": "chartjs", "package": "bower-asset/chartjs"},
