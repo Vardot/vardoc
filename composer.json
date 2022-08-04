@@ -115,6 +115,11 @@
       "bower-asset",
       "npm-asset"
     ],
+    "drupal-scaffold": {
+      "locations": {
+        "web-root": "docroot/"
+      }
+    },
     "installer-paths": {
       "[web-root]/core": ["type:drupal-core"],
       "[web-root]/profiles/{$name}": ["type:drupal-profile"],
