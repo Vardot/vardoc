@@ -1,7 +1,7 @@
 name: Vardoc
 type: profile
 description: 'Vardoc: Knowledge Base System and Documentation Site'
-core_version_requirement: ^9
+core_version_requirement: ^9 || ^10
 version: 5.0.x-dev
 base profile: varbase
 project: vardoc
