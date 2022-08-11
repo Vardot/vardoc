@@ -8,7 +8,7 @@
                  Fixed Drupal coding standards and Practices in `yml`, `PHP`,
                  and `CSS` code
 * Issue [#3301450](http://drupal.org/i/3301450)
-                 by vacho
+                 by [vacho](https://www.drupal.org/u/vacho)
                 : Have `drupal-scaffold` locations `web-root` as `docroot`
                  to fix composer `web-root` folder in projects
 * Issue [#3302440](http://drupal.org/i/3302440):
