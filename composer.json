@@ -93,19 +93,21 @@
     ]
   },
   "extra": {
-    "drupal-scaffold": {
-      "locations": {
-        "web-root": "docroot/"
-      }
-    },
     "branch-alias": {
       "dev-4.0.x": "4.0.x-dev",
       "dev-9.0.x": "9.0.x-dev"
     },
-    "installer-types": [
-      "bower-asset",
-      "npm-asset"
-    ],
+    "drupal-scaffold": {
+      "allowed-packages": [
+        "drupal/core",
+        "vardot/varbase",
+        "vardot/vardoc"
+      ],
+      "gitignore": true,
+      "locations": {
+        "web-root": "./docroot"
+      }
+    },
     "installer-paths": {
       "docroot/core": ["type:drupal-core"],
       "docroot/profiles/{$name}": ["type:drupal-profile"],
@@ -124,6 +126,10 @@
       "docroot/themes/custom/{$name}": ["type:drupal-custom-theme"],
       "drush/contrib/{$name}": ["type:drupal-drush"]
     },
+    "installer-types": [
+      "bower-asset",
+      "npm-asset"
+    ],
     "drupal-libraries": {
       "library-directory": "docroot/libraries",
       "libraries": [
