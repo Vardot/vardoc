@@ -1,3 +1,22 @@
+# 4.0.6
+
+### Highlighted important changes since Vardoc 4.0.5:
+* Issue [#3301892](http://drupal.org/i/3301892):
+                 Changed `node_type` to `entity_bundle:node` for default
+                 pathauto pattern configs for all Vardoc content types
+* Issue [#3301908](http://drupal.org/i/3301908):
+                 Fixed Drupal coding standards and Practices in `yml`, `PHP`,
+                 and `CSS` code
+* Issue [#3301450](http://drupal.org/i/3301450)
+                 by vacho
+                : Have `drupal-scaffold` locations `web-root` as `docroot`
+                 to fix composer `web-root` folder in projects
+* Issue [#3302440](http://drupal.org/i/3302440):
+                 Dropped support for Composer `~1.0` in the Vardoc profile
+                 and only support Composer `~2.0` and later versions
+
+---------------------------------------------------------------------------------
+
 # 4.0.5
 
 ### Highlighted important changes since Vardoc 4.0.4:
