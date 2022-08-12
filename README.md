@@ -1,4 +1,4 @@
-[![Vardot](https://circleci.com/gh/Vardot/vardoc/tree/5.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/vardoc/118/workflows/1a93d485-6b55-418a-8ced-6ba3ca5568c3) Vardoc 5.0.0-alpha6
+[![Vardot](https://circleci.com/gh/Vardot/vardoc/tree/5.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/vardoc/125/workflows/36f42a8a-1bf8-4da6-9a1d-703652fc6242) Vardoc 5.0.0-alpha6
 # Vardoc: Knowledge Base System and Documentation Site
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Vardoc%20-%20No%20Padding.png)](https://www.drupal.org/project/vardoc)
@@ -22,7 +22,7 @@ Think of it as a wiki site of your product, user manuals, or organizational
 
 [![](https://www.drupal.org/files/project-images/vardoc-mockup.png)](https://www.drupal.org/project/vardoc)
 
-Built on top of Varbase, the open source Drupal 8 distribution, Vardoc provides
+Built on top of Varbase, the open source Drupal 9 distribution, Vardoc provides
  powerful functional features such as editorial features, search function,
  taxonomy, user management, and customizable themes. It also delivers
  top-notch non-functional requirements such as enterprise security,
