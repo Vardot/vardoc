@@ -1,7 +1,7 @@
 # 4.0.7
 
 ### Highlighted important changes since Vardoc 4.0.6:
-* Issue [#3303762](http://drupal.org/i/3301892):
+* Issue [#3303762](http://drupal.org/i/3303762):
                 Fixed moving the hook update for `node_type` to `entity_bundle:node`
                 for Pathauto's patterns in the active configs to cover each
                  content type's module in addition to the Vardoc profile
