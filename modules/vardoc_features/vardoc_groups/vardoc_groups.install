@@ -159,7 +159,7 @@ function vardoc_groups_install() {
  *
  * Pattern configs for Vardoc Announcement content type.
  */
-function vardoc_tools_update_50001() {
+function vardoc_groups_update_50001() {
   // Having a hook update with a copy of pathauto_update_8108()
   // https://git.drupalcode.org/project/pathauto/-/blob/8.x-1.10/pathauto.install#L304
   // Based on the following comment:
