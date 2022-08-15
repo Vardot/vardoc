@@ -1,5 +1,5 @@
 name: 'Vardoc Tools'
-description: 'Provides tools configs and Tool contnet under the Tools section.'
+description: 'Provides tools configs and Tool content under the Tools section.'
 type: module
 core_version_requirement: ^9 || ^10
 version: 5.0.x-dev
