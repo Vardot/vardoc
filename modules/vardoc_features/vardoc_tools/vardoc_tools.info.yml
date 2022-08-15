@@ -2,7 +2,7 @@ name: 'Vardoc Tools'
 description: 'Provides tools configs and Tool contnet under the Tools section.'
 type: module
 core_version_requirement: ^9 || ^10
-version: 4.0.x-dev
+version: 4.0.7
 package: Vardoc
 dependencies:
   - drupal:field
