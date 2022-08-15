@@ -78,7 +78,7 @@ function vardoc_install() {
  *
  * Pattern configs for all Vardoc content types.
  */
-function vardoc_page_update_40001() {
+function vardoc_update_40001() {
   // Having a hook update with a copy of pathauto_update_8108()
   // https://git.drupalcode.org/project/pathauto/-/blob/8.x-1.10/pathauto.install#L304
   // Based on the following comment:
