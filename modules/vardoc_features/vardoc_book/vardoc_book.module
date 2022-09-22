@@ -9,15 +9,16 @@
  * Implements hook_editor_js_settings_alter().
  */
 function vardoc_book_editor_js_settings_alter(array &$settings) {
-  // Add BG color WYSIWYG style with enhancements.
-  $extra_editor_settings = [
-    'colorButton_backStyle' => [
-    'element' => 'span',
+
+  if (isset($settings['editor']['formats']['full_html'])
+    && array_key_exists('editorSettings', $settings['editor']['formats']['full_html'])
+    && is_array($settings['editor']['formats']['full_html']['editorSettings'])) {
+
+    // Add BG color WYSIWYG style with enhancements.
+    $settings['editor']['formats']['full_html']['editorSettings']['colorButton_backStyle'] = [
+      'element' => 'span',
       'attributes' => ['style' => 'background-color:#(color);', 'class' => 'text-with-bg'],
-    ],
-  ];
-  if (isset($settings['editor']['formats']['full_html'])) {
-    $settings['editor']['formats']['full_html']['editorSettings'] += $extra_editor_settings;
+    ];
   }
 }
 
