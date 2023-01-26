@@ -1,3 +1,16 @@
+# 5.0.0-beta1
+
+* Issue [#3330522](http://drupal.org/i/3330522):
+        Updated **Drupal** to `9.5.2` stable and **Varbase** to `9.0.11`
+* Issue [#3307864](http://drupal.org/i/3307864)
+        by [tseven](https://www.drupal.org/u/tseven),
+        [narendra.rajwar27](https://www.drupal.org/u/narendrarajwar27)
+        , [Rajab Natshah](https://www.drupal.org/u/rajab-natshah)
+        : Fixed Unsupported operand types: `null` + `array` for **HTML input**
+         styling added to custom input which is not having the `full_html` format
+
+------------------------------------------------------------------------------------------------
+
 # 5.0.0-alpha7
 
 ### Highlighted important changes since 5.0.0-alpha6:
