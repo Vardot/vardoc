@@ -2,7 +2,7 @@ name: 'Vardoc Homepage'
 description: 'Homepage feature for Vardoc.'
 type: module
 core_version_requirement: ^9 || ^10
-version: 4.0.8
+version: 4.0.x-dev
 package: Vardoc
 dependencies:
   - varbase_core:varbase_core
