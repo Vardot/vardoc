@@ -2,7 +2,7 @@ name: 'Vardoc Book'
 description: 'Provides Book management and default configs for Vardoc.'
 type: module
 core_version_requirement: ^9 || ^10
-version: 5.0.0-beat1
+version: 5.0.x-dev
 package: Vardoc
 dependencies:
   - drupal:block
