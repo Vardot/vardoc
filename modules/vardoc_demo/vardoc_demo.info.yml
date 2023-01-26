@@ -2,7 +2,7 @@ name: 'Vardoc Demo Content'
 description: 'Demo content feature for Vardoc.'
 type: module
 core_version_requirement: ^9 || ^10
-version: 4.0.x-dev
+version: 4.0.8
 package: Vardoc
 dependencies:
   - drupal:hal
