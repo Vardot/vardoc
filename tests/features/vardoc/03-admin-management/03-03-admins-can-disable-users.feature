@@ -77,8 +77,8 @@ So that they will be disabled and not be able to use the site.
       And I should see "6 hours" in the "#edit-user-window" element
 
   @javascript @local @development @staging @production
-  Scenario: Check that the Webmaster have access to the flood unblock page
-    Given I am a logged in user with the "webmaster" user
+  Scenario: Check that the Site Admin have access to the flood unblock page
+    Given I am a logged in user with the "Site admin" user
      When I go to "/admin/people/flood-unblock"
       And I wait
      Then I should see "Flood Unblock"
