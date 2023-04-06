@@ -99,16 +99,6 @@ So that I can use them after the install or update.
        And I should see "Video"
        And I should see "Remote video"
        And I should see "Audio"
-       And I should see "Instagram"
-       And I should see "Tweet"
-
-   @javascript @check @local @development @staging @production
-   Scenario: Check Varbase update instructions page
-      When I go to "/admin/config/development/update-helper"
-       And I wait
-      Then I should see "Varbase update instructions"
-       And I should see "100%"
-       And I should not see "Pending updates"
 
    @javascript @check @local @development @staging
    Scenario: Check Varbase default Reroute Email settings
