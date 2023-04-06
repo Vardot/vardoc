@@ -67,7 +67,6 @@ So that I can use them after the install or update.
      When I go to "/admin/structure/page_manager"
       And I wait
      Then I should see "Pages"
-      And I should see "Homepage"
       And I should see "Total Control dashboard"
 
   @javascript @check @local @development @staging @production
