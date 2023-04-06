@@ -195,7 +195,6 @@ commands:
             ../bin/drush config-set system.performance css.preprocess 0 --yes
             ../bin/drush config-set system.performance js.preprocess 0 --yes
             ../bin/drush config-set system.logging error_level all --yes
-            ../bin/drush pm:enable varbase_update_helper --yes
             ../bin/drush cache:rebuild
 
       ## Run Selenium Standalone server.
@@ -234,17 +233,27 @@ jobs:
           command: |
             cd /var/www/html/test/vardoc/docroot/profiles/vardoc
             ../../../bin/behat tests/features/vardoc/01-website-base-requirements/
-  vardoc-testing-02-user-management-03-admin-management:
+  vardoc-testing-02-user-management:
     <<: *defaults
     steps:
       - vardoc-build
-      ## Automated Functional Acceptance Testing group - 02 user management - 03 admin management
+      ## Automated Functional Acceptance Testing group - 02 user management
       - run:
-          name: Automated Functional Acceptance Testing group - 02 user management - 03 admin management
+          name: Automated Functional Acceptance Testing group - 02 user management
           no_output_timeout: 30m
           command: |
             cd /var/www/html/test/vardoc/docroot/profiles/vardoc
             ../../../bin/behat tests/features/vardoc/02-user-management/
+  vardoc-testing-03-admin-management:
+    <<: *defaults
+    steps:
+      - vardoc-build
+      ## Automated Functional Acceptance Testing group - 03 admin management
+      - run:
+          name: Automated Functional Acceptance Testing group - 03 admin management
+          no_output_timeout: 30m
+          command: |
+            cd /var/www/html/test/vardoc/docroot/profiles/vardoc
             ../../../bin/behat tests/features/vardoc/03-admin-management/
   vardoc-testing-04-content-structure:
     <<: *defaults
@@ -276,13 +285,19 @@ workflows:
       - vardoc-testing-01-website-base-requirements:
           filters:
             tags:
-              only: /^4.0.*/
+              only: /^4.*/
             branches:
               only: /^4.0.x/
-      - vardoc-testing-02-user-management-03-admin-management:
+      - vardoc-testing-02-user-management:
           filters:
             tags:
-              only: /^4.0.*/
+              only: /^4.*/
+            branches:
+              only: /^4.0.x/
+      - vardoc-testing-03-admin-management:
+          filters:
+            tags:
+              only: /^4.*/
             branches:
               only: /^4.0.x/
       - vardoc-testing-04-content-structure:
@@ -294,6 +309,6 @@ workflows:
       - vardoc-testing-05-content-management:
           filters:
             tags:
-              only: /^4.0.*/
+              only: /^4.*/
             branches:
               only: /^4.0.x/
