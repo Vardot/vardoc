@@ -1,3 +1,11 @@
+# 4.0.9
+
+### Highlighted important changes since Vardoc 4.0.8:
+* Issue [#3352629](http://drupal.org/i/3352629):
+        Updated **Varbase profile** to `9.0.12` and **Varbase Core** to `^9.0.53`
+* Issue [#3352608](http://drupal.org/i/3352608):
+        Updated the patch to Allow profiles to define a **base/parent profile** to work with **Drupal 9.5.x**
+
 # 4.0.8
 
 ### Highlighted important changes since Vardoc 4.0.7:
