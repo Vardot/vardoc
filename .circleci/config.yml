@@ -5,7 +5,7 @@ defaults: &defaults
       auth:
         username: mydockerhub-user
         password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-    - image: circleci/mysql:8.0.23
+    - image: cimg/mysql:8.0
       auth:
         username: mydockerhub-user
         password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
@@ -195,7 +195,8 @@ commands:
             ../bin/drush config-set system.performance css.preprocess 0 --yes
             ../bin/drush config-set system.performance js.preprocess 0 --yes
             ../bin/drush config-set system.logging error_level all --yes
-            ../bin/drush cr
+            ../bin/drush pm:enable varbase_update_helper --yes
+            ../bin/drush cache:rebuild
 
       ## Run Selenium Standalone server.
       - run:
