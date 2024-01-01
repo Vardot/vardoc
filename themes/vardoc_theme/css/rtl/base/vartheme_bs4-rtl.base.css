@@ -1,5 +1,4 @@
-@import url(//fonts.googleapis.com/earlyaccess/droidarabickufi.css);
-[dir="rtl"] .justify-content-center.nav-pills > li + li {
+@import url(//fonts.googleapis.com/earlyaccess/droidarabickufi.css); [dir="rtl"] .justify-content-center.nav-pills > li + li {
   margin-left: inherit;
 }
 

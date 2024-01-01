@@ -1,11 +1,10 @@
-name: 'Vardoc Demo Content'
-description: 'Demo content feature for Vardoc.'
+name: Vardoc Demo Content
+description: Demo content feature for Vardoc.
 type: module
-core_version_requirement: ^9 || ^10
+core_version_requirement: ~10
 version: 4.0.x-dev
 package: Vardoc
 dependencies:
   - drupal:hal
   - default_content:default_content
-  - better_normalizers:better_normalizers
   - vardoc:vardoc_homepage
