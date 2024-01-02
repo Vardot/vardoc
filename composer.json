@@ -32,13 +32,14 @@
     "cweagans/composer-patches": "~1",
     "drupal/core-composer-scaffold": "~10",
     "webflo/drupal-finder": "~1",
+    "mglaman/composer-drupal-lenient": "~1",
     "vardot/entity-definition-update-manager": "~1",
     "drupal/core": "~10",
     "vardot/varbase": "~9.1.0",
     "drupal/varbase_faqs": "~9.1.0",
     "drupal/fontawesome": "~2",
     "drupal/votingapi": "~3",
-    "drupal/votingapi_widgets": "~1",
+    "drupal/votingapi_widgets": "1.0-alpha6",
     "drupal/flag": "~4",
     "drupal/sharethis": "~3",
     "drupal/menu_link_attributes": "~1",
@@ -152,6 +153,10 @@
       "drupal/core": {
         "Issue #3266057: Allow profiles to define a base/parent profile [continue of #1356276]":
         "https://www.drupal.org/files/issues/2023-11-30/3266057-120.patch"
+      },
+      "drupal/votingapi_widgets": {
+        "Issue #3333559: [9.2] Remove jQuery dependency from the once feature":
+        "https://www.drupal.org/files/issues/2023-10-21/3333559-42.patch"
       }
     }
   }
