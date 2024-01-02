@@ -60,7 +60,7 @@
     "raw-loader": "^4.0.2",
     "shepherd.js": "^9.0.0",
     "sortablejs": "^1.13.0",
-    "stylelint": "^14.0.1",
+    "stylelint": "^15.10.1",
     "stylelint-checkstyle-formatter": "^0.1.2",
     "stylelint-config-standard": "^23.0.0",
     "stylelint-order": "^5.0.0",
