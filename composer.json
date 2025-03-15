@@ -35,7 +35,7 @@
     "vardot/entity-definition-update-manager": "~1",
     "drupal/core": "~10.4.0",
     "vardot/varbase": "9.1.x-dev",
-    "vardot/varbase-patches": "9.2.x-dev",
+    "vardot/varbase-patches": "~9.2.0",
     "drupal/varbase_faqs": "~9.1.0",
     "drupal/fontawesome": "~2",
     "drupal/votingapi": "~3",
@@ -49,11 +49,8 @@
     "npm-asset/jquery-bar-rating": "~1"
   },
   "require-dev": {
-    "drupal/core-dev": "~10",
-    "drush/drush": "~12",
-    "drupal/drupal-extension": "5.0.0alpha1",
-    "webship/behat-html-formatter": "~1",
-    "drevops/behat-screenshot": "~1"
+    "drupal/core-dev": "~10 || ~11",
+    "drush/drush": "~12 || ~13"
   },
   "config": {
     "bin-dir": "bin/",
