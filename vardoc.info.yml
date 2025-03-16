@@ -21,7 +21,6 @@ install:
   - views
   - file
   - tracker
-  - aggregator
   - menu_block
   - block_content
   - block_class
