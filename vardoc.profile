@@ -40,8 +40,6 @@ function vardoc_install_tasks(&$install_state) {
       'display' => TRUE,
       'type' => 'batch',
     ],
-    'varbase_development_tools' => $varbase_install_tasks['varbase_development_tools'],
-    'varbase_assemble_development_tools' => $varbase_install_tasks['varbase_assemble_development_tools'],
   ];
 }
 
@@ -58,6 +56,8 @@ function vardoc_install_tasks_alter(array &$tasks, array $install_state) {
   unset($tasks['varbase_configure_multilingual']);
   unset($tasks['varbase_extra_components']);
   unset($tasks['varbase_assemble_extra_components']);
+  unset($tasks['varbase_development_tools']);
+  unset($tasks['varbase_assemble_development_tools']);
 
   $tasks['install_finished']['function'] = 'vardoc_after_install_finished';
 }
