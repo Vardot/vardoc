@@ -54,6 +54,10 @@ function vardoc_install_tasks_alter(array &$tasks, array $install_state) {
   // Skip select language step to install it in English as default language.
   unset($tasks['install_select_language']);
   unset($tasks['install_download_translation']);
+  unset($tasks['varbase_multilingual_configuration_form']);
+  unset($tasks['varbase_configure_multilingual']);
+  unset($tasks['varbase_extra_components']);
+  unset($tasks['varbase_assemble_extra_components']);
 
   $tasks['install_finished']['function'] = 'vardoc_after_install_finished';
 }
