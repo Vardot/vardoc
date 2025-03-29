@@ -201,7 +201,7 @@ function vardoc_theme_library_info_alter(&$libraries, $extension) {
   // https://www.drupal.org/project/drupal/issues/3108402
   // ---------------------------------------------------------------------
   // Issue #3115895: Provide support for Popper.js ^2.0.0 core/popperjs
-  // library and Drupal 9.
+  // library and Drupal.
   // ---------------------------------------------------------------------
   // This fix will make it work for old and new Drupal sites.
   // It will be removed when we branch for 9.x-1.x core branch.
