@@ -123,7 +123,7 @@
     <delete file="libraries" />
   </target>
 
-  <!-- Builds a Varbase code base from legacy Drush make files. -->
+  <!-- Builds a vardoc code base from legacy Drush make files. -->
   <target name="build-legacy" depends="env">
     <if>
       <available file="${docroot}" property="docroot.exists" />

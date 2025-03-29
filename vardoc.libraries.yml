@@ -4,3 +4,7 @@ install_page:
       css/install-page.css: {}
   js:
     js/installation.js: {}
+toolbar.icon:
+  css:
+    theme:
+      css/admin-toolbar-tools.css: {}

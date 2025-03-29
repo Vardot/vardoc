@@ -1,0 +1,17 @@
+services:
+  vardoc.form_helper:
+    class: '\Drupal\vardoc\Form\FormHelper'
+    arguments:
+      - "@element_info"
+  vardoc.config_bit:
+    class: '\Drupal\vardoc\Config\ConfigBit'
+    arguments:
+      [
+        "@config.factory",
+        "@config.manager",
+        "@module_handler",
+        "@database",
+        "@plugin.cache_clearer"
+      ]
+    tags:
+      - { name: "event_subscriber" }

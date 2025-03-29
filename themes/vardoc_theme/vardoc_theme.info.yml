@@ -1,11 +1,8 @@
+name: Vardoc Theme
+description: Based on Bootstrap 4 framework using SASS, and extending Vartheme (Bootstrap 4 - SASS).
 type: theme
 base theme: vartheme_bs4
-
-name: 'Vardoc Theme'
-description: 'Based on Bootstrap 4 framework using SASS, and extending Vartheme (Bootstrap 4 - SASS).'
-core_version_requirement: ^9 || ^10
-version: 4.0.9
-
+core_version_requirement: ~10
 regions:
   top_navigation: 'Top Navigation'
   navigation: 'Navigation'
@@ -88,66 +85,4 @@ libraries-override:
       theme:
         css/default.css: css/layout/vbp_text_and_image_default.layout.css
 
-ckeditor_stylesheets:
-  # Base
-  - css/base/bootstrap.base.css
-  - css/base/vartheme_bs4.base.css
-  - css/base/vardoc_theme.base.css
-  # Components
-  - css/components/affix.component.css
-  - css/components/ajax.component.css
-  - css/components/alerts.component.css
-  - css/components/autocomplete.component.css
-  - css/components/book.component.css
-  - css/components/book-navigation.component.css
-  - css/components/breadcrumb.component.css
-  - css/components/bs-callouts.component.css
-  - css/components/comments.component.css
-  - css/components/contextual.component.css
-  - css/components/details.component.css
-  - css/components/dropbutton.component.css
-  - css/components/feed-icon.component.css
-  - css/components/field.component.css
-  - css/components/file.component.css
-  - css/components/form.component.css
-  - css/components/header.component.css
-  - css/components/help.component.css
-  - css/components/icons.component.css
-  - css/components/image-button.component.css
-  - css/components/indented.component.css
-  - css/components/item-list.component.css
-  - css/components/list-group.component.css
-  - css/components/navbar.admin.component.css
-  - css/components/navbar.component.css
-  - css/components/node.component.css
-  - css/components/node-preview.component.css
-  - css/components/page.component.css
-  - css/components/progress-bar.component.css
-  - css/components/search-form.component.css
-  - css/components/shortcut.component.css
-  - css/components/sidebar.component.css
-  - css/components/sidebar-collapse.component.css
-  - css/components/site-footer.component.css
-  - css/components/skip-link.component.css
-  - css/components/table.component.css
-  - css/components/tabledrag.component.css
-  - css/components/tableselect.component.css
-  - css/components/tablesort.component.css
-  - css/components/tablesort-indicator.component.css
-  - css/components/tabs.component.css
-  - css/components/textarea.component.css
-  - css/components/ui-dialog.component.css
-  - css/components/ui-widget.component.css
-  - css/components/user.component.css
-  - css/components/varicons.component.css
-  - css/components/vb-tags.component.css
-  - css/components/vertical-tabs.component.css
-  - css/components/views.component.css
-  # Layout
-  - css/layout/edge2edge.layout.css
-  - css/layout/equal-height.layout.css
-  # Theme
-  - css/theme/content.theme.css
-  - css/theme/vbp-colors.theme.css
-  - css/theme/vlb-colors.theme.css
-  - css/theme/wysiwyg.theme.css
+ckeditor_stylesheets: false

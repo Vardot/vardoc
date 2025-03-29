@@ -3,7 +3,6 @@ type: profile
 description: 'Vardoc: Knowledge Base System and Documentation Site'
 core_version_requirement: ~10
 version: 4.0.x-dev
-base profile: varbase
 project: vardoc
 distribution:
   name: Vardoc

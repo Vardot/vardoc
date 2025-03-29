@@ -151,7 +151,7 @@ class ScriptHandler {
     }
 
     if ($fs->exists($drupal_root . '/profiles/vardoc/src/assets/development.services.yml')) {
-      // Alter development.services.yml to have Varbase's Local development
+      // Alter development.services.yml to have vardoc's Local development
       // services.
       copy($drupal_root . '/profiles/vardoc/src/assets/development.services.yml', $drupal_root . '/sites/development.services.yml');
     }
@@ -190,7 +190,7 @@ class ScriptHandler {
       $varbase_info = Yaml::parse(file_get_contents($varbase_info_file_with_root_path));
 
       // Remove the distribution item for the parent varbase profile, as we will
-      // use this sub proifle as the distribution cover on the install step.
+      // use this sub profile as the distribution cover on the install step.
       if (isset($varbase_info['distribution'])) {
         unset($varbase_info['distribution']);
       }
