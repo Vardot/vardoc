@@ -265,12 +265,12 @@ Example: after a run for  bin/behat -di command.
   default | Then /^I should see image with the "([^"]*)" title text$/
           | #varbase : To Find an image with the title text attribute.
           | Example 1: Then I should see image with the "Flag Earth" title text
-          | at `VarbaseContext::iShouldSeeImageWithTheTitleText()`
+          | at `VardocContext::iShouldSeeImageWithTheTitleText()`
 
   default | Then /^I should see image with the "([^"]*)" alt text$/
           | #varbase : To Find an image with the alt text attribute.
           | Example 1: Then I should see image with the "Flag Earth" alt text
-          | at `VarbaseContext::iShouldSeeImageWithTheAltText()`
+          | at `VardocContext::iShouldSeeImageWithTheAltText()`
 ```
 
  Scenarios are tagged with the Behat tags of:

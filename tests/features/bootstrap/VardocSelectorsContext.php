@@ -8,7 +8,7 @@ use Symfony\Component\Yaml\Yaml;
 /**
  * Defines application features from the specific context.
  */
-class VarbaseSelectorsContext extends RawDrupalContext implements SnippetAcceptingContext {
+class VardocSelectorsContext extends RawDrupalContext implements SnippetAcceptingContext {
 
   /**
    * Holed a list of CSS Selectors.
@@ -132,7 +132,7 @@ class VarbaseSelectorsContext extends RawDrupalContext implements SnippetAccepti
    *            suites:
    *              default:
    *                contexts:
-   *                  - VarbaseSelectorsContext:
+   *                  - VardocSelectorsContext:
    *                     parameters:
    *                       selectors:
    *                         css:
@@ -175,7 +175,7 @@ class VarbaseSelectorsContext extends RawDrupalContext implements SnippetAccepti
    *            suites:
    *              default:
    *                contexts:
-   *                  - VarbaseSelectorsContext:
+   *                  - VardocSelectorsContext:
    *                     parameters:
    *                       selectors:
    *                         css:
@@ -249,7 +249,7 @@ class VarbaseSelectorsContext extends RawDrupalContext implements SnippetAccepti
 
       }
       else {
-        throw new \Exception('The file "' . $this->filesPath . $fileName . '" is empty or does not exist under VarbaseSelectorsContext');
+        throw new \Exception('The file "' . $this->filesPath . $fileName . '" is empty or does not exist under VardocSelectorsContext');
       }
     }
     else {

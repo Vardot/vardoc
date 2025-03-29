@@ -8,7 +8,7 @@ use Behat\Mink\Element\Element;
 /**
  * Defines application features from the specific context.
  */
-class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext {
+class VardocContext extends RawDrupalContext implements SnippetAcceptingContext {
 
   /**
    * Hold the user name and password from drupal_users parameters.

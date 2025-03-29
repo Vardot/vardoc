@@ -295,7 +295,7 @@ fontawesome:
 jquery.sumoselect:
   css:
     component:
-      libraries/sumoselect/css/sumoselect.css: { minified: true }
+      libraries/sumoselect/css/sumoselect.min.css: { minified: true }
   js:
     libraries/sumoselect/js/jquery.sumoselect.min.js: { minified: true }
   dependencies:

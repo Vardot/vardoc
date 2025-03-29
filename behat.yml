@@ -6,7 +6,7 @@ default:
       paths:
         - "%paths.base%/tests/features"
       contexts:
-        - VarbaseContext:
+        - VardocContext:
             parameters:
               varbase_users:
                 webmaster: { email: 'webmaster@vardot.com', password: 'dD.123123ddd' }
@@ -16,7 +16,7 @@ default:
                 SEO admin: { email: 'test.seo_admin@vardot.com', password: 'dD.123123ddd' }
                 Site admin: { email: 'test.site_admin@vardot.com', password: 'dD.123123ddd' }
                 Super admin: { email: 'test.super_admin@vardot.com', password: 'dD.123123ddd' }
-        - VarbaseSelectorsContext:
+        - VardocSelectorsContext:
            parameters:
              selectors:
                ## Add all css selectors which you will use in most features.

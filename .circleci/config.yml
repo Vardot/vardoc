@@ -151,8 +151,6 @@ commands:
             sudo chown www-data:circleci .
             git clone --branch '4.0.x' https://github.com/vardot/vardoc-project.git /var/www/html/test/vardoc
             cd /var/www/html/test/vardoc
-            composer require --dev drupal/core-dev:~10 --no-update
-            composer require --dev drush/drush:~13 --no-update
             composer require --dev drupal/drupal-extension:5.0.0alpha1 --no-update
             composer require --dev webship/behat-html-formatter:~1.0 --no-update
             composer require --dev drevops/behat-screenshot:~1.0 --no-update
@@ -197,7 +195,6 @@ commands:
             mysql -h 127.0.0.1 -uroot -prootpw --execute="CREATE DATABASE test_vardoc CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;" -vvv
             cd /var/www/html/test/vardoc/docroot
             ../bin/drush site-install vardoc --yes --account-name="webmaster" --account-pass="dD.123123ddd" --account-mail="webmaster@vardot.com" --db-url="mysql://root:rootpw@127.0.0.1/test_vardoc" --locale="en" vardoc_extra_components.vardoc_demo=true
-            ../bin/drush pm-enable varbase_development --yes
             ../bin/drush config-set system.performance css.preprocess 0 --yes
             ../bin/drush config-set system.performance js.preprocess 0 --yes
             ../bin/drush config-set system.logging error_level all --yes
