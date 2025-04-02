@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.book
+  module:
+    - block_class
+    - ctools
+    - views
+  theme:
+    - vardoc_theme
+id: views_block__book_block_related_articles
+theme: vardoc_theme
+region: sidebar_second
+weight: -6
+provider: null
+plugin: 'views_block:book-block_related_articles'
+settings:
+  id: 'views_block:book-block_related_articles'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: '3'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      book: book
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

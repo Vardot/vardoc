@@ -1,0 +1,11 @@
+id: logout
+label: Logout
+ui_limit: ''
+properties:
+  content:
+    value: '<a href="/user/logout">Logout</a>'
+    format: code_html
+type: token
+type_label: 'Token field'
+entities:
+  user: user

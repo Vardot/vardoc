@@ -1,0 +1,95 @@
+name: Vardoc Book - Default
+description: A recipe to manage default installed modules, configs and permissions.
+type: install
+install:
+  - block
+  - block_content
+  - content_moderation
+  - field
+  - node
+  - path
+  - book
+  - comment
+  - statistics
+  - file
+  - image
+  - link
+  - taxonomy
+  - text
+  - user
+  - views
+  - advanced_text_formatter
+  - block_class
+  - ctools
+  - ds
+  - entityqueue
+  - field_group
+  - flag
+  - focal_point
+  - length_indicator
+  - maxlength
+  - metatag
+  - smart_trim
+  - sharethis
+  - views_bootstrap
+  - votingapi_widgets
+  - page_manager
+  - panels
+config:
+  strict: false
+  actions:
+    user.role.anonymous:
+      grantPermissions:
+        - 'access comments'
+        - 'vote on node:book:field_rating'
+    user.role.authenticated:
+      grantPermissions:
+        - 'access comments'
+        - 'create book content'
+        - 'delete own book content'
+        - 'edit own book content'
+        - 'vote on node:book:field_rating'
+        - 'view book revisions'
+    user.role.editor:
+      grantPermissions:
+        - 'create book content'
+        - 'delete own book content'
+        - 'edit any book content'
+        - 'edit own book content'
+        - 'vote on node:book:field_rating'
+        - 'view book revisions'
+        - 'add content to books'
+    user.role.seo_admin:
+      grantPermissions:
+        - 'create book content'
+        - 'delete own book content'
+        - 'edit any book content'
+        - 'edit own book content'
+        - 'vote on node:book:field_rating'
+        - 'view book revisions'
+        - 'add content to books'
+        - 'administer book outlines'
+    user.role.content_admin:
+      grantPermissions:
+        - 'create book content'
+        - 'delete own book content'
+        - 'edit any book content'
+        - 'edit own book content'
+        - 'vote on node:book:field_rating'
+        - 'view book revisions'
+        - 'add content to books'
+        - 'administer book outlines'
+    user.role.site_admin:
+      grantPermissions:
+        - 'create book content'
+        - 'delete own book content'
+        - 'edit any book content'
+        - 'edit own book content'
+        - 'vote on node:book:field_rating'
+        - 'clear own vote on node:book:field_rating'
+        - 'view book revisions'
+        - 'delete book revisions'
+        - 'revert book revisions'
+        - 'add content to books'
+        - 'administer book outlines'
+        - 'view terms in category'

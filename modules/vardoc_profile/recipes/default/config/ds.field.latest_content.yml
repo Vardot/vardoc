@@ -1,0 +1,11 @@
+id: latest_content
+label: 'Latest content'
+ui_limit: ''
+properties:
+  content:
+    value: "<div class=\"latest-image\">\r\n    <a href=\"user/[user:uid]/latest\">\r\n        <img src=\"/profiles/vardoc/themes/vardoc_theme/images/latest.png\" border=\"0\" />\r\n    </a>\r\n</div>\r\n<div class=\"latest-text\">\r\n    <h3>\r\n        <a href=\"user/[user:uid]/latest\">New content</a>\r\n    </h3>\r\n</div>"
+    format: code_html
+type: token
+type_label: 'Token field'
+entities:
+  user: user

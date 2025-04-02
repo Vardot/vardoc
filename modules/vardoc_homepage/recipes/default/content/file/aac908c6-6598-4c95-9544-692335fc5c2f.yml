@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: aac908c6-6598-4c95-9544-692335fc5c2f
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: connection-vintage-technology.png
+  uri:
+    -
+      value: 'public://2017-07/connection-vintage-technology.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 499601
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1642352201

@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 450ff25d-2986-4594-b962-e47994447126
+  bundle: basic
+  default_langcode: en
+default:
+  revision_log:
+    -
+      value: 'Updated the Body field'
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Can’t find what you’re looking for?'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: "<p class=\"mb-4\">You can always request information from the support department. Click below and fill in the form explaining what you want.</p>\r\n\r\n<p class=\"mt-1\"><a class=\"btn btn-primary btn-lg\" href=\"/contact\"><span class=\"text\">CONTACT SUPPORT</span></a></p>"
+      format: code_html
+      summary: ''

@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update for Vardoc Search module.
+ */
+
+use Drupal\Core\Recipe\Recipe;
+use Drupal\Core\Recipe\RecipeRunner;
+
+/**
+ * Implements hook_install().
+ */
+function vardoc_search_install() {
+
+  $default_recipe = Recipe::createFromDirectory(__DIR__ . '/recipes/default');
+  RecipeRunner::processRecipe($default_recipe);
+
+}

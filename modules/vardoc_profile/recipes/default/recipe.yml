@@ -1,0 +1,20 @@
+name: Vardoc Profile - Default
+description: A recipe to manage default installed modules, configs and permissions.
+type: install
+install:
+  - varbase_core
+  - varbase_media
+  - vardoc_book
+  - datetime
+  - history
+  - flag
+  - svg_image
+config:
+  strict: false
+  actions:
+    user.role.anonymous:
+      grantPermissions:
+        - 'access user profiles'
+    user.role.authenticated:
+      grantPermissions:
+        - 'access user profiles'

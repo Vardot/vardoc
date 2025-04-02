@@ -1,0 +1,26 @@
+name: Vardoc Search - Default
+description: A recipe to manage default installed modules, configs and permissions.
+type: install
+install:
+  - node
+  - block
+  - user
+  - views
+  - block_class
+  - ds
+  - search_api
+  - search_api_db
+  - search_api_autocomplete
+  - vardoc_book
+config:
+  strict: false
+  actions:
+    user.role.anonymous:
+      grantPermissions:
+        - 'search content'
+        - 'use search_api_autocomplete for book_search'
+    user.role.authenticated:
+      grantPermissions:
+        - 'search content'
+        - 'use search_api_autocomplete for book_search'
+

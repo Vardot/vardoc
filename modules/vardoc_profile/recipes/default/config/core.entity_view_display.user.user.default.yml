@@ -1,0 +1,141 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_last_password_reset
+    - field.field.user.user.field_password_expiration
+    - field.field.user.user.field_profile_image
+    - image.style.d07_square
+  module:
+    - ds
+    - image
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: bs_3col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          left:
+            wrapper: div
+            classes:
+              col-sm-4: col-sm-4
+            add_region_classes: 1
+            attributes: ''
+          middle:
+            wrapper: div
+            classes:
+              col-sm-4: col-sm-4
+            add_region_classes: 1
+            attributes: ''
+          right:
+            wrapper: div
+            classes:
+              col-sm-4: col-sm-4
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      left:
+        - masquerade
+        - field_profile_image
+        - 'dynamic_token_field:user-full_name_link'
+      middle:
+        - 'dynamic_token_field:user-latest_content'
+      right:
+        - 'dynamic_token_field:user-favorite_content'
+    fields:
+      'dynamic_token_field:user-favorite_content':
+        plugin_id: 'dynamic_token_field:user-favorite_content'
+        weight: 4
+        label: hidden
+        formatter: default
+      'dynamic_token_field:user-full_name_link':
+        plugin_id: 'dynamic_token_field:user-full_name_link'
+        weight: 2
+        label: hidden
+        formatter: default
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: wrapper-profile-name
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h3
+            fi-cl: field-custom-full-name
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+      'dynamic_token_field:user-latest_content':
+        plugin_id: 'dynamic_token_field:user-latest_content'
+        weight: 3
+        label: hidden
+        formatter: default
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_profile_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: d07_square
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image
+    region: left
+  masquerade:
+    weight: 0
+    region: left
+    settings: {  }
+    third_party_settings: {  }
+  user_picture:
+    type: image
+    weight: 0
+    settings:
+      image_style: thumbnail
+      image_link: content
+    third_party_settings: {  }
+    label: hidden
+    region: content
+hidden:
+  field_first_name: true
+  field_last_name: true
+  field_last_password_reset: true
+  field_password_expiration: true
+  member_for: true
+  search_api_excerpt : true

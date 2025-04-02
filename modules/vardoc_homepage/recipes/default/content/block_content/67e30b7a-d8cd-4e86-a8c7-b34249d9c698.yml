@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 67e30b7a-d8cd-4e86-a8c7-b34249d9c698
+  bundle: basic
+  default_langcode: en
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new Basic block'
+  status:
+    -
+      value: true
+  info:
+    -
+      value: Copyright
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: 'Powered by <a href="https://www.vardot.com/vardoc">Vardoc</a>. Enjoy the free software, or <a href="https://www.vardot.com/contact-us">get a quote</a> for enterprise support.'
+      format: code_html
+      summary: ''

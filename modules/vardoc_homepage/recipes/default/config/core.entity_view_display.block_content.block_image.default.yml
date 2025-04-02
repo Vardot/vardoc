@@ -1,0 +1,103 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_image
+    - field.field.block_content.block_image.body
+    - field.field.block_content.block_image.field_image
+  module:
+    - ds
+    - field_group
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - group_image_wrapper
+        - group_content_wrapper
+        - field_image
+        - block_description
+        - body
+    fields:
+      block_description:
+        plugin_id: block_description
+        weight: 2
+        label: hidden
+        formatter: default
+  field_group:
+    group_image_wrapper:
+      children:
+        - field_image
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'bg-edge2edge image-wrapper'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Image wrapper'
+    group_content_wrapper:
+      children:
+        - block_description
+        - body
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: 'content wrapper'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: content-wrapper
+      label: 'content wrapper'
+id: block_content.block_image.default
+targetEntityType: block_content
+bundle: block_image
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: main
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: se2e
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: main
+hidden:
+  langcode: true

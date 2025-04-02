@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.profile
+  module:
+    - block_class
+    - user
+    - views
+  theme:
+    - vardoc_theme
+third_party_settings:
+  block_class:
+    classes: 'header-avatar avatar-logged-in'
+id: views_block__profile_block_user
+theme: vardoc_theme
+region: header_right
+weight: -10
+provider: null
+plugin: 'views_block:profile-block_user'
+settings:
+  id: 'views_block:profile-block_user'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

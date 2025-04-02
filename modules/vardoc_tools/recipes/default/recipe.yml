@@ -1,0 +1,66 @@
+name: Vardoc Tools - Default
+description: A recipe to manage default installed modules, configs and permissions.
+type: install
+install:
+  - field
+  - file
+  - image
+  - link
+  - menu_ui
+  - node
+  - path
+  - taxonomy
+  - user
+  - views
+  - ds:ds
+  - entityqueue
+  - field_group
+  - pathauto
+  - rabbit_hole
+  - svg_image
+  - views_bootstrap
+config:
+  strict: false
+  actions:
+    user.role.editor:
+      grantPermissions:
+        - 'create tools content'
+        - 'delete own tools content'
+        - 'edit own tools content'
+        - 'translate tools node'
+        - 'view tools revisions'
+    user.role.seo_admin:
+      grantPermissions:
+        - 'create tools content'
+        - 'delete own tools content'
+        - 'edit own tools content'
+        - 'translate tools node'
+        - 'view tools revisions'
+    user.role.content_admin:
+      grantPermissions:
+        - 'create tools content'
+        - 'delete own tools content'
+        - 'edit own tools content'
+        - 'translate tools node'
+        - 'view tools revisions'
+        - 'delete any tools content'
+        - 'clone tools entity'
+        - 'clone tools_variant entity'
+        - 'delete tools revisions'
+        - 'edit any tools content'
+        - 'revert tools revisions'
+        - 'view tools revisions'
+    user.role.site_admin:
+      grantPermissions:
+        - 'create tools content'
+        - 'delete own tools content'
+        - 'edit own tools content'
+        - 'translate tools node'
+        - 'view tools revisions'
+        - 'delete any tools content'
+        - 'clone tools entity'
+        - 'clone tools_variant entity'
+        - 'delete tools revisions'
+        - 'edit any tools content'
+        - 'revert tools revisions'
+        - 'view tools revisions'

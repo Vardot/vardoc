@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.native_comment
+    - field.storage.comment.field_username
+id: comment.native_comment.field_username
+field_name: field_username
+entity_type: comment
+bundle: native_comment
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

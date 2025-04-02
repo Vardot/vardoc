@@ -1,0 +1,88 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.book.body
+    - field.field.node.book.field_category
+    - field.field.node.book.field_comment
+    - field.field.node.book.field_documents
+    - field.field.node.book.field_external_links
+    - field.field.node.book.field_meta_tags
+    - field.field.node.book.field_rating
+    - field.field.node.book.field_related_content
+    - node.type.book
+  module:
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - node_title
+        - search_api_excerpt
+        - node_link
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h4
+          class: field-content
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+      node_link:
+        plugin_id: node_link
+        weight: 2
+        label: hidden
+        formatter: default
+id: node.book.search_result
+targetEntityType: node
+bundle: book
+mode: search_result
+content:
+  search_api_excerpt:
+    weight: 1
+    region: main
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  content_moderation_control: true
+  field_category: true
+  field_comment: true
+  field_documents: true
+  field_external_links: true
+  field_meta_tags: true
+  field_rating: true
+  field_related_content: true
+  flag_favorite: true
+  links: true
+  sharethis: true

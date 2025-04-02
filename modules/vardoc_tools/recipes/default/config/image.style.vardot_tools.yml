@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies: {  }
+name: vardot_tools
+label: 'Vardot tools'
+effects:
+  2f2da8d7-6993-44d5-912d-a9867271efae:
+    uuid: 2f2da8d7-6993-44d5-912d-a9867271efae
+    id: image_scale
+    weight: 1
+    data:
+      width: 75
+      height: null
+      upscale: false
+  f83a54ad-21a9-48e4-8b88-64df5ac02ab2:
+    uuid: f83a54ad-21a9-48e4-8b88-64df5ac02ab2
+    id: image_scale
+    weight: 2
+    data:
+      width: null
+      height: 75
+      upscale: false

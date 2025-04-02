@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.favorite
+  module:
+    - flag
+id: flag_action.favorite_flag
+label: 'Add to your favorite'
+type: node
+plugin: 'flag_action:favorite_flag'
+configuration:
+  flag_id: favorite
+  flag_action: flag

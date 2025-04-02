@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - vardoc_profile
+  theme:
+    - vardoc_theme
+id: avatarblock
+theme: vardoc_theme
+region: header_right
+weight: -8
+provider: null
+plugin: avatar_block
+settings:
+  id: avatar_block
+  label: 'Avatar Block'
+  provider: vardoc_profile
+  label_display: '0'
+visibility: {  }

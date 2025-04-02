@@ -1,0 +1,22 @@
+name: Vardoc Homepage - Default
+description: A recipe to manage default installed modules, configs and permissions.
+type: install
+install:
+  - varbase_core
+  - varbase_media
+  - varbase_webform
+  - entityqueue
+  - page_manager
+  - panels
+  - vardoc_book
+  - search_api_autocomplete
+config:
+  strict: false
+  actions:
+    user.role.anonymous:
+      grantPermissions:
+        - 'use search_api_autocomplete for book_search'
+    user.role.authenticated:
+      grantPermissions:
+        - 'use search_api_autocomplete for book_search'
+
