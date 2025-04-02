@@ -1,25 +1,12 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - system
+    - node
 id: anonymous
 label: 'Anonymous user'
 weight: -10
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
-  - 'access user profiles'
-  - 'edit own vote on node:book:field_rating'
-  - 'post comments'
-  - 'search content'
-  - 'use search_api_autocomplete for book_search'
-  - 'view media'
-  - 'view post access counter'
-  - 'view terms in lesson_learning_topic'
-  - 'view terms in project'
-  - 'view terms in section'
-  - 'view terms in sme_category_'
-  - 'view terms in tools'
-  - 'view terms in topic'
-  - 'view terms in vardot_tools'
-  - 'vote on node:book:field_rating'

@@ -1,40 +1,14 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - system
+    - node
+    - user
 id: authenticated
 label: 'Authenticated user'
 weight: -9
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
-  - 'access editor_media_browser entity browser pages'
-  - 'access image_browser entity browser pages'
-  - 'access media overview'
-  - 'access shortcuts'
-  - 'access sitemap'
   - 'access user profiles'
-  - 'create book content'
-  - 'create media'
-  - 'delete media'
-  - 'delete own book content'
-  - 'dropzone upload files'
-  - 'edit any book content'
-  - 'edit own book content'
-  - 'edit own comments'
-  - 'post comments'
-  - 'search content'
-  - 'update media'
-  - 'use search_api_autocomplete for book_search'
-  - 'use text format basic_html'
-  - 'use text format code_html'
-  - 'use text format full_html'
-  - userprotect.account.edit
-  - userprotect.mail.edit
-  - userprotect.pass.edit
-  - 'view book revisions'
-  - 'view latest version'
-  - 'view media'
-  - 'view own unpublished content'
-  - 'view own unpublished media'
-  - 'view the administration theme'
