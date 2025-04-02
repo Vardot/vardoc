@@ -18,7 +18,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   protected $users = [];
 
   /**
-   * Hold the user name and password from varbase_users parameters.
+   * Hold the user name and password from users parameters.
    *
    * @var array
    */
@@ -42,14 +42,14 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
     // Set the list of parameters.
     $this->parameters = $parameters;
 
-    if (isset($parameters['varbase_users'])) {
-      $this->varbaseUsers = $parameters['varbase_users'];
-      foreach ($parameters['varbase_users'] as $varbaseUsername => $varbaseUser) {
+    if (isset($parameters['users'])) {
+      $this->varbaseUsers = $parameters['users'];
+      foreach ($parameters['users'] as $varbaseUsername => $varbaseUser) {
         $this->users[$varbaseUsername] = $varbaseUser['password'];
       }
     }
     else {
-      throw new \Exception('behat.yml config files should include "varbase_users" property.');
+      throw new \Exception('behat.yml config files should include "users" property.');
     }
   }
 
@@ -64,7 +64,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
    * Authenticate a user with password from varbase configuration.
    *
    * Varbase Context #varbase. If you want to see the list of users or add yours you can go and
-   * edit the behat.varbase.yml file under the varbase_users list.
+   * edit the behat.varbase.yml file under the users list.
    *
    * Example: I am a logged in user with the username "Content admin"
    *
