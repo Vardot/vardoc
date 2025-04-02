@@ -29,6 +29,8 @@ Feature: User Management - Standard User Management - Admins can disable users
       And wait
      Then I should see "Normal user"
      When I select the radio button "Blocked"
+      And I fill in "Normal" for "First name"
+      And I fill in "User" for "Last name"
       And I press the "Save" button
       And wait
      Then I should see "The changes have been saved."

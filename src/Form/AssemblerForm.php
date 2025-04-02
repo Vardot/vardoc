@@ -80,7 +80,7 @@ class AssemblerForm extends FormBase {
    *   Extra components modules.
    */
   public function buildForm(array $form, FormStateInterface $form_state, array &$install_state = NULL) {
-    $form['#title'] = $this->t('Extra components');
+    $form['#title'] = $this->t('Demo content');
     $form['extra_components_introduction'] = [
       '#weight' => -1,
       '#prefix' => '<p>',

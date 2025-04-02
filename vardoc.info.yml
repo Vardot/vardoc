@@ -1,7 +1,7 @@
 name: Vardoc
 type: profile
 description: 'Vardoc: Knowledge Base System and Documentation Site'
-core_version_requirement: ~10
+core_version_requirement: ~10 || ~11
 version: 4.0.x-dev
 project: vardoc
 distribution:
@@ -14,6 +14,7 @@ install:
   - user
   - node
   - block
+  - block_content
   - datetime
   - help
   - image
@@ -21,7 +22,6 @@ install:
   - file
   - tracker
   - menu_block
-  - block_content
   - block_class
 themes:
   - bootstrap_barrio

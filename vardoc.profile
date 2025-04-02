@@ -39,13 +39,13 @@ function vardoc_form_install_configure_form_alter(&$form, FormStateInterface $fo
 function vardoc_install_tasks(&$install_state) {
   return [
     'vardoc_extra_components' => [
-      'display_name' => t('Extra components'),
+      'display_name' => t('Demo Content'),
       'display' => TRUE,
       'type' => 'form',
       'function' => AssemblerForm::class,
     ],
     'vardoc_assemble_extra_components' => [
-      'display_name' => t('Assemble extra components'),
+      'display_name' => t('Install Demo Content'),
       'display' => TRUE,
       'type' => 'batch',
     ],

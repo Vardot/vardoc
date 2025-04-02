@@ -50,9 +50,16 @@ Feature: Content Management - Standard Entity Queue Management - Have the option
      When I go to "/admin/content"
       And wait
      Then I should see "Content"
-     When I check the box "Test content N1"
+     When I fill in "Test content" for "Title"
+      And I press the "Filter" button
+      And wait
+      And I scroll down
+     Then I should see "Test content N1"
+      And I should see "Test content N2"
+      And I should see "Test content N3"
+     When I check the box "Test content N3"
       And I check the box "Test content N2"
-      And I check the box "Test content N3"
+      And I check the box "Test content N1"
       And I select "Delete selected entities / translations" from "action"
      When I press "Apply to selected items"
       And wait 3s
