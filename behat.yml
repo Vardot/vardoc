@@ -35,7 +35,7 @@ default:
       output_path: "%paths.base%/tests/reports/"
   extensions:
     Drupal\MinkExtension:
-      base_url: 'http://r-natshah.dev.in.vardot.com/test/vd4x00b1/docroot'
+      base_url: http://vardoc.test
       browser_name: chrome
       default_session: selenium2
       javascript_session: selenium2
@@ -43,7 +43,7 @@ default:
       files_path: "%paths.base%/tests/assets/"
       selenium2:
         browser: chrome
-        wd_host: robot7.dev.in.vardot.com:4445/wd/hub
+        wd_host: 'http://127.0.0.1:4445/wd/hub'
         capabilities:
           browser: chrome
           browserName: chrome
