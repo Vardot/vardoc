@@ -22,7 +22,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
    *
    * @var array
    */
-  protected $varbaseUsers = [];
+  protected $vardocUsers = [];
 
   /**
    * Hold all passed parameters.
@@ -43,9 +43,9 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
     $this->parameters = $parameters;
 
     if (isset($parameters['users'])) {
-      $this->varbaseUsers = $parameters['users'];
-      foreach ($parameters['users'] as $varbaseUsername => $varbaseUser) {
-        $this->users[$varbaseUsername] = $varbaseUser['password'];
+      $this->vardocUsers = $parameters['users'];
+      foreach ($parameters['users'] as $vardocUsername => $vardocUser) {
+        $this->users[$vardocUsername] = $vardocUser['password'];
       }
     }
     else {
@@ -61,10 +61,10 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   }
 
   /**
-   * Authenticate a user with password from varbase configuration.
+   * Authenticate a user with password from vardoc configuration.
    *
-   * Varbase Context #varbase. If you want to see the list of users or add yours you can go and
-   * edit the behat.varbase.yml file under the users list.
+   * Vardoc Context #vardoc. If you want to see the list of users or add yours you can go and
+   * edit the behat.vardoc.yml file under the users list.
    *
    * Example: I am a logged in user with the username "Content admin"
    *
@@ -106,7 +106,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Authenticate a user with a given username and password on the spot.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example: I am a logged in user with the username "testing" and password "testing user password"
    *
@@ -135,7 +135,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Logout from the current session.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example: When I logout.
    *
@@ -151,7 +151,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Navigate directly to an external web site.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example: When I go to "https://www.google.com" website.
    *
@@ -164,7 +164,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Wait for seconds before going to the next step.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1:  And wait for "1" second
    * Example 2: When I wait for "5" seconds
@@ -184,7 +184,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Wait for minutes before going to the next step.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1:  And I wait for "1" minute
    * Example 2: When I wait for "2" minutes
@@ -204,7 +204,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Wait max of seconds for the page to be ready and loaded.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: And wait
    * Example 2: And I wait
@@ -257,7 +257,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Click the editor media browser command button.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: When I click the editor media browser command button.
    *
@@ -277,7 +277,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Check if the editor media browser is open.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * @Then /^the editor media browser should be open$/
    */
@@ -291,7 +291,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Press a button in the filter form under the editor media browser.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: When I press the "Apply" button under the editor media browser
    * Example 2:  And I press the "Submit" button under the editor media browser.
@@ -318,7 +318,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Click on a link or button under the editor media browser.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: When I click "Submit" button under the media browser
    * Example 2: When I click "Submit" under media browser
@@ -346,7 +346,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Click on a tab under the editor media browser.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: When I click on the "Library" tab under the editor media browser
    * Example 2: When I click on the "My files" tab under the editor media browser.
@@ -373,7 +373,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Select the file under the editor media browser.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: When I click on the "Flag Earth" file under the editor media browser.
    *
@@ -427,7 +427,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
    * Fill in a form field with id|name|title|alt|value.
    *
    * Under the editor media browser.
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example: I fill in "flag earth" for "File name" under the editor media browser.
    *
@@ -450,7 +450,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Check if we can see a text under the editor media browser.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: Then I should see "this text" under editor media browser
    * Example 2: Then I should see "this text" under the editor media browser modal window.
@@ -476,7 +476,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Find an image with the title text attribute.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: Then I should see image with the "Flag Earth" title text.
    *
@@ -500,7 +500,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Check if we can NOT see a text under the editor media browser.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: Then I should not see "this text" under editor media browser
    * Example 2: Then I should not see "this text" under the editor media browser modal window.
@@ -533,7 +533,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
    * Fill in a rich text editor field  WYSIWYG with content.
    *
    * Using the name of the field.
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    *  Example: When I fill in the rich text editor field "Body" with "Test Body text"
    *
@@ -561,7 +561,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Click a command button in the rich text editor.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: When I click on "bold" command button in the rich text editor field "Body"
    * Example 2: When I click on "media" command button in the rich text editor field "Body".
@@ -587,7 +587,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
    *
    * Using the name of the field.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I append after the rich text editor field "Body" with "Test Body text"
    * Example #2: When I append the rich text editor field "Body" with "Test Body text"
@@ -617,7 +617,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
    * Add append text at the end of rich text editor field WYSIWYG with content.
    *
    * Using the name of the field.
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I prepend before the rich text editor field "Body" with "Test Body text"
    * Example #2: When I prepend the rich text editor field "Body" with "Test Body text"
@@ -646,7 +646,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Move the focus to selected rich text editor field.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I move focus to "Title" rich text editor field
    * Example #2:  And I move focus to "Body" rich text editor field.
@@ -667,7 +667,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Select all text in selected field input element.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I select all text in "Body" rich text editor field
    * Example #2:  And I select all text in "Body" rich text editor field
@@ -699,7 +699,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Add a basic section at the end of layout.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: When I add a basic "4 Cols" section at the end of layout
    * Example #2: And I add a basic section at the end of layout
@@ -735,7 +735,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Select a section container type.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: When I select the "Edge to Edge" container type
    * Example #2:  And I select the "Boxed" container type with a "Tiny" width
@@ -757,7 +757,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Select a section container width.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: When I select the "Tiny" container width
    * Example #2:  And I select the "Narrow" container width
@@ -775,7 +775,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Select a section breakpoint.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: When I select the "md" "33% 67%" section breakpoint
    * Example #2:  And I select the "xs" "75% 25%" section breakpoint
@@ -797,7 +797,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Select with gutters option for section.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: When I add section gutters
    * Example #2:  And I add section gutters
@@ -815,7 +815,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Remove gutters between columns.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: When I remove gutters between section columns
    * Example #2:  And I remove gutters between section columns
@@ -833,7 +833,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Move to the section styles tab.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: When I move to the section styles tab
    * Example #2:  And I move to the section styles tab
@@ -851,7 +851,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Open a specific setting menu under styles tab in section configuration.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: When I open the section "Background" settings menu
    * Example #2: And I open the section "Border" settings menu
@@ -877,7 +877,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Select a section background color.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: When I select the "Primary" section background color
    * Example #2:  And I select the "Light" section background color
@@ -896,7 +896,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Uncheck the Edge to Edge Background option.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: When I uncheck the Edge to Edge Background
    * Example #2: And I uncheck the Edge to Edge Background
@@ -915,7 +915,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Select a section text color.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: When I select the "Dark" section text color
    * Example #2:  And I select the "White" section text color
@@ -934,7 +934,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Set alignment of text.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: When I set the alignment to "End"
    * Example #2:  And I set the alignment to "Start"
@@ -953,7 +953,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Set the section blocks alignment.
    *
-   * #Varbase Context #varbase
+   * #Vardoc Context #vardoc
    *
    * Example #1: When I set the blocks vertical alignment to "Align middle"
    * Example #2: When I set the blocks horizontal alignment to "Align start"
@@ -972,7 +972,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Set the padding for a section.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: When I set the section padding to "2"
    * Example #2: And I set the section "top" padding to "1"
@@ -1013,7 +1013,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Set the margin for a section.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: When I set the section margin to "3"
    * Example #2: And I set the section "right" margin to "2"
@@ -1054,7 +1054,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Select a border style for a section.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: And I select the section "solid" border style
    * Example #2: And I select the section dashed border style
@@ -1091,7 +1091,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Set the border width for a section.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: When I set the section border width to "3"
    * Example #2: And I set the section top border width to "2"
@@ -1129,7 +1129,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Set the border color.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: And I select the section "Dark" border color
    * Example #2: When I select the section "Primary" border color
@@ -1165,7 +1165,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Set the border radius.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: When I set the section border radius to 2
    * Example #2: And I set the section border radius to "2"
@@ -1205,7 +1205,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Switch to the background color settings found under background styles settings.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: And I switch to section background color settings
    *
@@ -1223,7 +1223,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Switch to the background image settings found under background styles settings.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: And I switch to section background image settings
    *
@@ -1241,7 +1241,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Switch to the background video settings found under background styles settings.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: And I switch to section background video settings
    *
@@ -1259,7 +1259,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Set an image attachment to be fixed.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example: When I set the attachment to be fixed
    *
@@ -1276,7 +1276,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Set the background image size.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: When I set the image size to "Contain"
    * Example #2: And I set the image size to "Auto"
@@ -1296,7 +1296,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Select an animation for a section.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: When I select the section "Flip Right" animation
    * Example #2:  And I select the section "Zoom Out" animation
@@ -1315,7 +1315,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Add a block to a section.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: And I add a Heading block
    * Example #2: When I add a "HTML code" block
@@ -1340,7 +1340,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Find an image with the title text attribute.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: Then I should see image with the "Flag Earth" title text.
    *
@@ -1358,7 +1358,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Find an image with the alt text attribute.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: Then I should see image with the "Flag Earth" alt text.
    *
@@ -1376,7 +1376,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Double click on an image with the provided title.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: I double click on the image with the "Flag Earth image title" title text.
    *
@@ -1397,7 +1397,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Click on an image with the provided title.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: I click on the image with the "Flag Earth image title" title text.
    *
@@ -1418,7 +1418,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Double click on an image with the provided  alt Text.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: I double click on the image with the "Flag Earth image title" alt text.
    *
@@ -1439,7 +1439,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Click on an image with the provided alt.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: I click on the image with the "Flag Earth image title" alt text.
    *
@@ -1460,7 +1460,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Find an image with the title text attribute under a custom iframe.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: Then I should see image with the "Flag Earth" title text in the rich text editor field "Body"
    *
@@ -1495,7 +1495,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Find an image with the alt text attribute under a custom iframe.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: Then I should see image with the "Flag Earth" alt text in the rich text editor field "Body"
    *
@@ -1526,7 +1526,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Move the mouse over an element.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I move the mouse over "header#navbar #main_menu ul.nav li a"
    * Example #2:  And I move the mouse over "hero_slider"
@@ -1546,7 +1546,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Double click on an element.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1 : When I double click "Earth Flag Image"
    * Example #1 :  And I double click "input#username"
@@ -1566,7 +1566,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Right click on an element.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I right click "#right-click-to-configure a"
    * Example #2:  And I right click "Right click action box"
@@ -1586,7 +1586,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Check if we do have the text in the selected element.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: Then I should see "your text" in the "ol" element with the "class" attribute set to "breadcrumb"
    * Example #2:  And I should see "your text" in the "div" element with the "id" attribute set to "right-panel"
@@ -1629,7 +1629,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Check if we do not have the text in the selected element.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: Then I should not see "your text" in the "ol" element with the "class" attribute set to "breadcrumb"
    * Example #2:  And I should not see "your text" in the "div" element with the "id" attribute set to "right-panel"
@@ -1672,7 +1672,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Click on the text in the selected element.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I click "your text" in the "ol" element with the "class" attribute set to "breadcrumb"
    * Example #2:  And I click "your text" in the "div" element with the "id" attribute set to "right-panel"
@@ -1785,7 +1785,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Accept alert if present.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I accept alert
    * Example #2: And accept alert.
@@ -1804,7 +1804,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Dismiss alert if present.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I dismiss alert
    * Example #2:  And dismiss alert.
@@ -1823,7 +1823,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Print the text of the current alert message.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I print alert text
    * Example #2:  And print alert text.
@@ -1842,7 +1842,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   /**
    * Fill a text in the alert message.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I fill "See this alert" in alert
    * Example #2:  And fill "See this text" in alert.
@@ -1862,7 +1862,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
    * Press a modifier and other key.
    *
    * Modifier options: { ctrl, shift, alt } key options.
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I press "ctrl" and "v"
    * Example #2: When I press "alt" and "f"
@@ -1972,7 +1972,7 @@ JS;
   /**
    * Fill a text in the alert message.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: Given I drag and drop ".element-item" to ".target"
    * Example #2:  When I drag and drop "#panels-ipe-regionid-left .panels-ipe-portlet-wrapper" to "#panels-ipe-regionid-center .panels-ipe-sort-container"
@@ -1999,7 +1999,7 @@ JS;
   /**
    * Select a radio button.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I select the "Male" radio button
    * Example #2:  And I select the "Male" radio button
@@ -2043,7 +2043,7 @@ JS;
    * option. we need to use this when we do have a list of radio buttons
    * but we do have the label with extra HTML tags like images or the actual
    * radio button is hidden.
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: Given I click on the radio label for "right_sidebar_layout" value
    * Example #2:  When I click on the radio label for "layout-settings" value
@@ -2063,7 +2063,7 @@ JS;
   /**
    * Expand a field group by its id attribute.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I expand the field "Field Group ID"
    * Example #2:  And I expand the field "More options"
@@ -2081,7 +2081,7 @@ JS;
   /**
    * Expand a select list by it's class attribute.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I expand the "1" select list "dropbutton-multiple"
    * Example #2:  And I expand the "2" select list "Editor Styling options"
@@ -2099,7 +2099,7 @@ JS;
   /**
    * Scroll down in the current status of the page, about 350 down.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I scroll down
    * Example #2:  And I scroll down.
@@ -2113,7 +2113,7 @@ JS;
   /**
    * Scroll up in the current status of the page, about 350 up.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I scroll up.
    *
@@ -2126,7 +2126,7 @@ JS;
   /**
    * Scroll down in the current status of the page and pass a value.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I scroll down 800
    * Example #2:  And I scroll down 2000
@@ -2140,7 +2140,7 @@ JS;
   /**
    * Scroll up in the current status of the page and pass a value.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I scroll up 1000
    *
@@ -2153,7 +2153,7 @@ JS;
   /**
    * Scroll to top.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I scroll to top
    * Example #2: When I scroll to the top
@@ -2169,7 +2169,7 @@ JS;
   /**
    * Scroll to bottom.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I scroll to bottom
    * Example #2: And I scroll to the bottom
@@ -2185,7 +2185,7 @@ JS;
   /**
    * Scroll to the top of an element.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I scroll to top of "#drupal-off-canvas"
    * Example #2: And I scroll to top of "#media-library-wrapper"
@@ -2201,7 +2201,7 @@ JS;
   /**
    * Scroll to the bottom of an element.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I scroll to bottom of "#drupal-off-canvas"
    * Example #2: And I scroll to bottom of "#media-library-wrapper"
@@ -2217,7 +2217,7 @@ JS;
   /**
    * Check if a checkbox is unchecked.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: And I should see the "Accept" checkbox unchecked
    * Example #1: Then I should see the "Enable" checkbox unchecked
@@ -2234,7 +2234,7 @@ JS;
   /**
    * Check if a checkbox is checked.
    *
-   * Varbase Context #varbase
+   * Vardoc Context #vardoc
    *
    * Example #1: And I should see the "Site Admin" checkbox checked
    * Example #1: Then I should see the "Enable" checkbox checked
@@ -2251,7 +2251,7 @@ JS;
   /**
    * Check if the Image media browser opened.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: Then the image media browser should be open
    * Example #2:  And the image media browser should be open
@@ -2267,7 +2267,7 @@ JS;
   /**
    * Check if the media browser with the selected iframe id is open.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: Then the "editor_media_browser" media browser should be open
    * Example #2:  And the "multiple_image_browser" media browser should be open
@@ -2288,7 +2288,7 @@ JS;
    * Find an element with a selected index having the first attribute.
    *
    * Check if it's have the second one.
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: Then I should see the "1" "wrapper" with "align2right" class
    * Example #2:  And I should see the "2" "wrapper" with "align2right" class
@@ -2306,7 +2306,7 @@ JS;
   /**
    * Resize the current window browser to a selected width and height.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: And I resize the current window to width="1280" and height="600"
    * Example #2: And I resize the current window to width="1280" and height="600"
@@ -2320,7 +2320,7 @@ JS;
   /**
    * Switch to an iframe by its id.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I switch to iframe "entity_browser_iframe_media_browser"
    * Example #2:  And I switch to iframe "remote-video-media"
@@ -2334,7 +2334,7 @@ JS;
   /**
    * Switch to the main frame or the parent iframe.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example #1: When I switch to main frame
    * Example #2: When I switch to parent
@@ -2371,7 +2371,7 @@ JS;
   /**
    * Select a paragraph component.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: When I select the "Drupal block" paragraph component
    * Example 2:  And I select the "Modal" paragraph component
@@ -2411,7 +2411,7 @@ JS;
   /**
    * Check if an entity has a specific operation link.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: Then I should see the "Edit" operation for the "Homepage" entity
    * Example 2: Then I should see "Layout" operation for the "Homepage"
@@ -2432,7 +2432,7 @@ JS;
   /**
    * Check if an entity not having a specific operation link.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: Then I should not see the "View API" operation for the "Homepage" entity
    * Example 2: Then I should not see "View API Docs" operation for the "Homepage"
@@ -2453,7 +2453,7 @@ JS;
   /**
    * Open the moderation sidebar from the administration toolbar.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: When I open the moderation sidebar
    * Example 2:  And I open moderation sidebar
@@ -2481,7 +2481,7 @@ JS;
   /**
    * Check if can see the accessibility checker.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: Then I should see the a11y checker
    * Example 2: Then should see a11y checker
@@ -2500,7 +2500,7 @@ JS;
   /**
    * Check if can NOT see the accessibility checker.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: Then I should not see thea a11y checker
    * Example 2: Then should not see a11y checker
@@ -2519,7 +2519,7 @@ JS;
   /**
    * Close the accessibility checker, to clear space for more actions.
    *
-   * Varbase Context #varbase.
+   * Vardoc Context #vardoc.
    *
    * Example 1: When I close the accessibility checker
    * Example 2:  And I close the a11y checker

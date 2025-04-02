@@ -8,7 +8,7 @@ default:
       contexts:
         - VardocContext:
             parameters:
-              vardoc_users:
+              users:
                 webmaster: { email: 'webmaster@vardot.com', password: 'dD.123123ddd' }
                 Normal user: { email: 'test.authenticated@vardot.com', password: 'dD.123123ddd' }
                 Editor: { email: 'test.editor@vardot.com', password: 'dD.123123ddd' }
