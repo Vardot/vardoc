@@ -7,7 +7,7 @@ dependencies:
     - block_content
   theme:
     - vardoc_theme
-id: colorlogo
+id: vardoc_theme_color_logo
 theme: vardoc_theme
 region: navigation
 weight: 0

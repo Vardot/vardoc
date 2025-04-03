@@ -20,7 +20,6 @@ install:
   - image
   - views
   - file
-  - tracker
   - menu_block
   - block_class
 themes:

@@ -2,34 +2,16 @@ name: Vardoc Tools - Default
 description: A recipe to manage default installed modules, configs and permissions.
 type: install
 install:
-  - field
-  - file
-  - image
-  - link
-  - menu_ui
-  - node
-  - path
-  - taxonomy
-  - user
-  - views
-  - ds:ds
-  - entityqueue
-  - field_group
-  - pathauto
-  - rabbit_hole
+  - varbase_core
   - svg_image
-  - views_bootstrap
 config:
-  strict: false
   actions:
     user.role.anonymous:
       grantPermissions:
         - 'view terms in tools'
-        - 'view terms in vardot_tools'
     user.role.authenticated:
       grantPermissions:
         - 'view terms in tools'
-        - 'view terms in vardot_tools'
     user.role.editor:
       grantPermissions:
         - 'create tools content'
@@ -72,3 +54,4 @@ config:
         - 'edit any tools content'
         - 'revert tools revisions'
         - 'view tools revisions'
+        - 'delete terms in tools'

@@ -3,10 +3,9 @@ status: true
 dependencies:
   module:
     - block_class
-    - vardoc_profile
   theme:
     - vardoc_theme
-id: avatarblock
+id: vardoc_theme_avatar
 theme: vardoc_theme
 region: header_right
 weight: -8

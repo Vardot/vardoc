@@ -11,7 +11,7 @@ dependencies:
 third_party_settings:
   block_class:
     classes: 'header-account-menu dropdown-menu'
-id: useraccountmenu
+id: vardoc_theme_user_account_menu
 theme: vardoc_theme
 region: header_right
 weight: -7

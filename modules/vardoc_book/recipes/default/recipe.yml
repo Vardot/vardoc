@@ -2,41 +2,24 @@ name: Vardoc Book - Default
 description: A recipe to manage default installed modules, configs and permissions.
 type: install
 install:
-  - block
-  - block_content
-  - content_moderation
-  - field
-  - node
-  - path
-  - book
   - comment
+  - book
   - statistics
-  - file
-  - image
-  - link
-  - taxonomy
-  - text
-  - user
-  - views
-  - advanced_text_formatter
-  - block_class
-  - ctools
-  - ds
-  - entityqueue
-  - field_group
   - flag
-  - focal_point
-  - length_indicator
-  - maxlength
-  - metatag
-  - smart_trim
   - sharethis
-  - views_bootstrap
   - votingapi_widgets
   - page_manager
   - panels
 config:
-  strict: false
+  import:
+    book: '*'
+    comment: '*'
+    statistics: '*'
+    flag: '*'
+    sharethis: '*'
+    votingapi_widgets: '*'
+    page_manager: '*'
+    panels: '*'
   actions:
     user.role.anonymous:
       grantPermissions:
@@ -72,12 +55,18 @@ config:
         - 'edit any book content'
         - 'add content to books'
         - 'administer book outlines'
+        - 'skip comment approval'
     user.role.site_admin:
       grantPermissions:
         - 'edit any book content'
         - 'clear own vote on node:book:field_rating'
+        - 'edit voting status on node:book:field_rating'
         - 'delete book revisions'
         - 'revert book revisions'
+        - 'delete any book content'
         - 'add content to books'
         - 'administer book outlines'
+        - 'create terms in category'
         - 'view terms in category'
+        - 'delete terms in category'
+        - 'skip comment approval'

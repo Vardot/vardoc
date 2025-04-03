@@ -17,13 +17,11 @@ config_bit:
         - varbase_email
         - varbase_security
         - varbase_seo
-        - varbase_webform
         - varbase_workflow
-        - varbase_page
-        - varbase_layout_builder
-        - vlplb
         - varbase_total_control
         - varbase_tour
+        - varbase_layout_builder
+        - vlplb
         - varbase_auth
         # Enable default Vardoc features.
         - vardoc_book

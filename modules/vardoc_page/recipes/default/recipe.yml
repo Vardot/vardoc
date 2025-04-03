@@ -5,12 +5,10 @@ install:
   - varbase_core
   - varbase_media
   - varbase_seo
-  - vardoc_book
   - rdf
   - menu_ui
   - page_manager
 config:
-  strict: false
   actions:
     user.role.editor:
       grantPermissions:

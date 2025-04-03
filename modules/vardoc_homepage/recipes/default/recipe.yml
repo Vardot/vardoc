@@ -9,14 +9,10 @@ install:
   - page_manager
   - panels
   - vardoc_book
-  - search_api_autocomplete
+  - vardoc_tools
+  - vardoc_search
 config:
-  strict: false
   actions:
-    user.role.anonymous:
-      grantPermissions:
-        - 'use search_api_autocomplete for book_search'
-    user.role.authenticated:
-      grantPermissions:
-        - 'use search_api_autocomplete for book_search'
-
+    views.view.frontpage:
+      simpleConfigUpdate:
+        status: false
