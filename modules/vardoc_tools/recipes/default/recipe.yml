@@ -22,6 +22,14 @@ install:
 config:
   strict: false
   actions:
+    user.role.anonymous:
+      grantPermissions:
+        - 'view terms in tools'
+        - 'view terms in vardot_tools'
+    user.role.authenticated:
+      grantPermissions:
+        - 'view terms in tools'
+        - 'view terms in vardot_tools'
     user.role.editor:
       grantPermissions:
         - 'create tools content'

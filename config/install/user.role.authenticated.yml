@@ -11,4 +11,3 @@ weight: -9
 is_admin: false
 permissions:
   - 'access content'
-  - 'access user profiles'

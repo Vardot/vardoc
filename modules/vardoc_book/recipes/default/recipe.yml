@@ -40,54 +40,42 @@ config:
   actions:
     user.role.anonymous:
       grantPermissions:
-        - 'access comments'
         - 'vote on node:book:field_rating'
+        - 'edit own vote on node:book:field_rating'
+        - 'access comments'
+        - 'post comments'
+        - 'view post access counter'
+        - 'edit own comments'
     user.role.authenticated:
       grantPermissions:
-        - 'access comments'
         - 'create book content'
         - 'delete own book content'
         - 'edit own book content'
         - 'vote on node:book:field_rating'
+        - 'edit own vote on node:book:field_rating'
         - 'view book revisions'
+        - 'access comments'
+        - 'post comments'
+        - 'view post access counter'
     user.role.editor:
       grantPermissions:
-        - 'create book content'
-        - 'delete own book content'
         - 'edit any book content'
-        - 'edit own book content'
-        - 'vote on node:book:field_rating'
-        - 'view book revisions'
         - 'add content to books'
+        - 'administer book outlines'
     user.role.seo_admin:
       grantPermissions:
-        - 'create book content'
-        - 'delete own book content'
         - 'edit any book content'
-        - 'edit own book content'
-        - 'vote on node:book:field_rating'
-        - 'view book revisions'
         - 'add content to books'
         - 'administer book outlines'
     user.role.content_admin:
       grantPermissions:
-        - 'create book content'
-        - 'delete own book content'
         - 'edit any book content'
-        - 'edit own book content'
-        - 'vote on node:book:field_rating'
-        - 'view book revisions'
         - 'add content to books'
         - 'administer book outlines'
     user.role.site_admin:
       grantPermissions:
-        - 'create book content'
-        - 'delete own book content'
         - 'edit any book content'
-        - 'edit own book content'
-        - 'vote on node:book:field_rating'
         - 'clear own vote on node:book:field_rating'
-        - 'view book revisions'
         - 'delete book revisions'
         - 'revert book revisions'
         - 'add content to books'
