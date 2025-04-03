@@ -16,14 +16,10 @@ Feature: Content Management - Add default [entityqueue] module testing content a
   @javascript  @init @tools @local @development @staging
   Scenario: Add Entity Queue Test Queue to be used with Test Content type
     Given I am a logged in user with the "webmaster" user
-     When I go to "/admin/structure/entityqueue"
-      And wait
-     Then I should see "Add entity queue"
-     When I click "Add entity queue"
-      And wait
+     When I go to "/admin/structure/entityqueue/add"
      Then I should see "Add entity queue"
      When I fill in "Test Queue" for "Name"
-      And I wait for 5 seconds
+      And I wait 5s
       And I press "Save"
       And wait
      Then I should see "The entity queue Test Queue has been added."

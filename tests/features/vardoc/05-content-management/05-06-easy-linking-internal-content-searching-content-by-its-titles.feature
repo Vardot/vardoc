@@ -7,7 +7,7 @@ So that will ease the work of adding internal links in the rich text editor fiel
   Scenario: Check if inserted raw URL will convert into a link when we save when We are using the Visual editor text format
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/page"
-      And wait
+      And wait 2s
      Then I should see "Create Basic page"
      When I select "full_html" from "Text format"
       And I fill in "Linking to internal content #1 title" for "Title"
@@ -17,7 +17,7 @@ So that will ease the work of adding internal links in the rich text editor fiel
       And wait
      Then I should see "Linking to internal content #1 body"
      When I go to "/node/add/page"
-      And wait
+      And wait 2s
      Then I should see "Create Basic page"
      When I select "full_html" from "Text format"
       And I fill in "Linking to internal content #2 title" for "Title"
