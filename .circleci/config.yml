@@ -58,8 +58,6 @@ commands:
             echo -e "upload_max_filesize = 32M" | sudo tee /etc/php/8.3/apache2/php.ini > /dev/null
             echo -e "max_file_uploads = 40" | sudo tee /etc/php/8.3/apache2/php.ini > /dev/null
             sudo service apache2 restart
-  
-      ## Waiting for MySQL to be ready.
       - run:
           name: Waiting for MySQL to be ready
           command: |
@@ -70,8 +68,6 @@ commands:
               sleep 1
             done
             echo Failed waiting for MySQL && exit 1
-
-      ## Install composer ~2
       - run:
           name: Start D-Bus
           command: sudo service dbus start
@@ -134,8 +130,6 @@ commands:
             php -m
             php -i | grep "Loaded Configuration File"
             php --ini
-
-      ## Build vardoc with the composer.
       - run:
           name: Build vardoc with the composer
           command: |
@@ -151,9 +145,8 @@ commands:
             sudo chown www-data:circleci .
             git clone --branch '4.0.x' https://github.com/vardot/vardoc-project.git /var/www/html/test/vardoc
             cd /var/www/html/test/vardoc
-            composer require --dev drupal/drupal-extension:5.0.0alpha1 --no-update
-            composer require --dev webship/behat-html-formatter:~1.0 --no-update
-            composer require --dev drevops/behat-screenshot:~1.0 --no-update
+            composer require drupal/drupal-extension:5.0.0alpha1 --no-update
+            composer require webship/behat-html-formatter:~1.0 --no-update
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
             composer install --no-interaction -vvv
@@ -176,8 +169,6 @@ commands:
             cd /var/www/html/test/vardoc
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
-
-      ## Point vardoc.test at /var/www/html/test/vardoc/docroot
       - run:
           name: Point vardoc.test at /var/www/html/test/vardoc/docroot
           command: |
@@ -186,8 +177,6 @@ commands:
             sudo a2ensite vardoc.test
             echo 127.0.0.1 vardoc.test | sudo tee -a /etc/hosts
             sudo service apache2 restart
-
-      ## Install vardoc with drush.
       - run:
           name: Install vardoc with drush
           command: |
@@ -195,31 +184,28 @@ commands:
             mysql -h 127.0.0.1 -uroot -prootpw --execute="CREATE DATABASE test_vardoc CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;" -vvv
             cd /var/www/html/test/vardoc/docroot
             ../bin/drush site-install vardoc --yes --account-name="webmaster" --account-pass="dD.123123ddd" --account-mail="webmaster@vardot.com" --db-url="mysql://root:rootpw@127.0.0.1/test_vardoc" --locale="en" vardoc_extra_components.vardoc_demo=true
-            ../bin/drush config-set system.performance css.preprocess 0 --yes
-            ../bin/drush config-set system.performance js.preprocess 0 --yes
-            ../bin/drush config-set system.logging error_level all --yes
-            ../bin/drush cache:rebuild
+            ../bin/drush pm:enable varbase_development --yes ;
+            ../bin/drush config:set system.performance css.preprocess 0 --yes ;
+            ../bin/drush config:set system.performance js.preprocess 0 --yes ;
+            ../bin/drush config:set system.logging error_level all --yes ;
       - run:
           name: Add testing users.
           command: |
-            cd /var/www/html/test/vardoc/docroot/profiles/vardoc/scripts
+            cd /var/www/html/test/vardoc/docroot/profiles/contrib/vardoc/scripts
             bash add-testing-users.sh
-
-      ## Uninstall Antibot module to let the selenium bot work  
       - run:
           name: Uninstall Antibot module to let the selenium bot work 
           shell: /bin/bash
           command: |
             cd /var/www/html/test/vardoc/docroot
             ../bin/drush pm:uninstall antibot --yes
-            ../bin/drush cr
+            ../bin/drush cache:rebuild
 
 jobs:
   vardoc-testing-01-website-base-requirements:
     <<: *defaults
     steps:
       - vardoc-build
-       ## Automated Functional Acceptance Testing group - 01 website base requirements
       - run:
           name: Automated Functional Acceptance Testing group - 01 website base requirements
           no_output_timeout: 30m
@@ -230,7 +216,6 @@ jobs:
     <<: *defaults
     steps:
       - vardoc-build
-      ## Automated Functional Acceptance Testing group - 02 user management
       - run:
           name: Automated Functional Acceptance Testing group - 02 user management
           no_output_timeout: 30m
@@ -241,7 +226,6 @@ jobs:
     <<: *defaults
     steps:
       - vardoc-build
-      ## Automated Functional Acceptance Testing group - 03 admin management
       - run:
           name: Automated Functional Acceptance Testing group - 03 admin management
           no_output_timeout: 30m
@@ -252,7 +236,6 @@ jobs:
     <<: *defaults
     steps:
       - vardoc-build
-      ## Automated Functional Acceptance Testing group - 04 content structure
       - run:
           name: Automated Functional Acceptance Testing group - 04 content structure
           no_output_timeout: 30m
@@ -263,7 +246,6 @@ jobs:
     <<: *defaults
     steps:
       - vardoc-build
-      ## Automated Functional Acceptance Testing group - 05 content-management
       - run:
           name: Automated Functional Acceptance Testing group - 05 content-management
           no_output_timeout: 30m
