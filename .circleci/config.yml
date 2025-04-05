@@ -191,7 +191,7 @@ commands:
       - run:
           name: Add testing users.
           command: |
-            cd /var/www/html/test/vardoc/docroot/profiles/contrib/vardoc/scripts
+            cd /var/www/html/test/vardoc/docroot/profiles/vardoc/scripts
             bash add-testing-users.sh
       - run:
           name: Uninstall Antibot module to let the selenium bot work 
