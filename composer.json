@@ -116,90 +116,12 @@
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "phpstan/extension-installer": true,
       "php-http/discovery": true,
-      "tbachert/spi": true,
-      "vardot/varbase-updater": true
+      "tbachert/spi": true
     }
   },
   "autoload": {
     "psr-4": {
       "Vardoc\\composer\\": "src/composer"
     }
-  },
-  "scripts": {
-    "pre-install-cmd": ["Vardoc\\composer\\ScriptHandler::checkComposerVersion"],
-    "pre-update-cmd": ["Vardoc\\composer\\ScriptHandler::checkComposerVersion"],
-    "post-install-cmd": [
-      "Vardoc\\composer\\ScriptHandler::createRequiredFiles",
-      "Vardoc\\composer\\ScriptHandler::removeGitDirectories"
-    ],
-    "post-update-cmd": [
-      "Vardoc\\composer\\ScriptHandler::createRequiredFiles",
-      "Vardoc\\composer\\ScriptHandler::removeGitDirectories"
-    ],
-    "post-drupal-scaffold-cmd": [
-      "Vardoc\\composer\\ScriptHandler::postDrupalScaffoldProcedure"
-    ]
-  },
-  "extra": {
-    "drupal-scaffold": {
-      "allowed-packages": [
-        "drupal/core",
-        "vardot/vardoc"
-      ],
-      "gitignore": true,
-      "locations": {
-        "web-root": "./docroot"
-      }
-    },
-    "installer-paths": {
-      "docroot/core": ["type:drupal-core"],
-      "docroot/profiles/{$name}": ["type:drupal-profile"],
-      "docroot/modules/contrib/{$name}": ["type:drupal-module"],
-      "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
-      "docroot/libraries/slick": ["npm-asset/slick-carousel"],
-      "docroot/libraries/ace": ["npm-asset/ace-builds"],
-      "docroot/libraries/jquery-ui-touch-punch": ["bower-asset/jqueryui-touch-punch"],
-      "docroot/libraries/swagger-ui/dist": ["npm-asset/swagger-ui-dist"],
-      "docroot/libraries/ckeditor5-anchor-drupal": ["npm-asset/northernco--ckeditor5-anchor-drupal"],
-      "docroot/libraries/ckeditor5/plugins/media-embed": ["npm-asset/ckeditor--ckeditor5-media-embed"],
-      "docroot/libraries/jquery-bar-rating": ["npm-asset/jquery-bar-rating"],
-      "docroot/libraries/{$name}": [
-        "type:drupal-library",
-        "type:bower-asset",
-        "type:npm-asset"
-      ],
-      "docroot/modules/custom/{$name}": ["type:drupal-custom-module"],
-      "docroot/themes/custom/{$name}": ["type:drupal-custom-theme"],
-      "drush/contrib/{$name}": ["type:drupal-drush"]
-    },
-    "installer-types": [
-      "bower-asset",
-      "npm-asset"
-    ],
-    "drupal-libraries": {
-      "library-directory": "docroot/libraries",
-      "libraries": [
-        {"name": "objectfitpolyfill", "package": "bower-asset/objectfitpolyfill"},
-        {"name": "chartjs", "package": "bower-asset/chartjs"},
-        {"name": "c3","package": "bower-asset/c3"},
-        {"name": "d3", "package": "bower-asset/d3"},
-        {"name": "dropzone","package": "npm-asset/dropzone"},
-        {"name": "blazy", "package": "npm-asset/blazy"},
-        {"name": "slick", "package": "npm-asset/slick-carousel"},
-        {"name": "ace", "package": "npm-asset/ace-builds"},
-        {"name": "jquery-ui-touch-punch", "package": "bower-asset/jqueryui-touch-punch"},
-        {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
-        {"name": "swagger-ui", "package": "npm-asset/swagger-ui-dist"},
-        {"name": "ckeditor5-anchor-drupal", "package": "npm-asset/northernco--ckeditor5-anchor-drupal"},
-        {"name": "ckeditor5-media-embed", "package": "npm-asset/ckeditor--ckeditor5-media-embed"},
-        {"name": "jquery-bar-rating", "package": "npm-asset/jquery-bar-rating"}
-      ]
-    },
-    "enable-patching": true,
-    "composer-exit-on-patch-failure": true,
-    "patchLevel": {
-      "drupal/core": "-p2"
-    },
-    "patches": {  }
   }
 }

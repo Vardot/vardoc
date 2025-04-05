@@ -49,7 +49,6 @@ default:
           browserName: chrome
           extra_capabilities:
             "goog:chromeOptions":
-              w3c: true
               args:
                 - "--headless"
                 - "--start-maximized"

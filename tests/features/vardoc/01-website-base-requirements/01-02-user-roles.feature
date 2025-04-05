@@ -7,7 +7,7 @@ Feature: Website Base Requirements - User Roles - Simple Roles
   Scenario: Check that all default list of roles are present.
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/people/roles"
-      And I wait
+      And I wait 3s
      Then I should see "Editor"
       And I should see "Content Admin"
       And I should see "SEO Admin"
