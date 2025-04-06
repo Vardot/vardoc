@@ -55,7 +55,7 @@
   },
   "require": {
     "drupal/core": "~10.4.0",
-    "vardot/varbase-patches": "~9.2.0",
+    "vardot/varbase-patches": "~9.1.0 || ~9.2.0",
     "drupal/varbase_core": "~9.1.0",
     "drupal/varbase_api": "~9.1.0",
     "drupal/varbase_media": "~9.1.0",

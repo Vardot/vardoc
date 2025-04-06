@@ -1,3 +1,13 @@
+# 4.0.10
+
+### Highlighted important changes since Vardoc 4.0.9:
+* Issue [#3516142](http://drupal.org/i/3516142):
+        Converted **Vardoc** to a standalone installation profile to move with the direction of **Drupal Recipes**
+* Issue [#3399269](http://drupal.org/i/3399269):
+        Updated **Varbase profile** from **Varbase** `~9.0.0` to `~9.1.0` with **Drupal** `~10.4.0` and support for **PHP 8.3+**
+
+---------------------------------------------------------------------------------
+
 # 4.0.9
 
 ### Highlighted important changes since Vardoc 4.0.8:
@@ -5,6 +15,8 @@
         Updated **Varbase profile** to `9.0.12` and **Varbase Core** to `^9.0.53`
 * Issue [#3352608](http://drupal.org/i/3352608):
         Updated the patch to Allow profiles to define a **base/parent profile** to work with **Drupal 9.5.x**
+
+---------------------------------------------------------------------------------
 
 # 4.0.8
 

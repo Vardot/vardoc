@@ -2,5 +2,5 @@ name: Vardoc search
 description: Provides search default configs for Vardoc.
 type: module
 core_version_requirement: ~10 || ~11
-version: 4.0.x-dev
+version: 4.0.10
 package: Vardoc
