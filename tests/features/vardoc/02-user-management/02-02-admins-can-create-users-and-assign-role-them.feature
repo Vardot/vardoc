@@ -1,202 +1,63 @@
-Feature: User Management - Standard User Management - Admins can create users and assign a role to them
-      As a site admin user
-      I want to be able to create new user accounts and assign roles to them
-      So that they will be able to use the site.
+Feature: Content Structure - Article (Book page)
+      As a logged in user with a permission to manage Article (Book page).
+      I want to be able to add a "Book page" which has got predefined set of fields
+      So that the "Book page" will show up in the structured menu under its parent page
 
   @javascript @local @development @staging @production
-  Scenario: Check if admins can see all parts and filters in the People administration page
+  Scenario: Check if we do have the "Book page" content type.
     Given I am a logged in user with the "webmaster" user
-     When I go to "/admin/people"
-      And wait
-     Then I should see "People"
-      And I should see "Add user"
-      And I should see "Name or email contains"
-      And I should see "Status"
-      And I should see "Role"
-      And I should see "Registered date (from)"
-      And I should see "Registered date (to)"
-      And I should see "Username"
-      And I should see "Operations"
+     When I go to "/admin/structure/types"
+      And I wait
+     Then I should see "Article (Book page)"
 
   @javascript @local @development @staging @production
-  Scenario: Check if admins can create a new user account as an authenticated user
+  Scenario: Check that "Article (Book page)" type have a the book fields.
     Given I am a logged in user with the "webmaster" user
-     When I go to "/admin/people/create"
-      And wait
-     When I fill in "tester@vardot.com" for "Email"
-      And I fill in "tester" for "Username"
-      And I fill in "dD.123123ddd" for "Password"
-      And I fill in "dD.123123ddd" for "Confirm password"
-      And I scroll to bottom
-      And I press "Create new account"
-
-  @javascript @cleanup @local @development @staging @production
-  Scenario: Delete the tester user
-    Given I am a logged in user with the "webmaster" user
-     When I go to "/admin/people"
-      And wait
-      And I fill in "tester" for "Name or email contains"
-      And I press "Filter"
-      And wait
-     Then I should see "tester"
-     When I click "Edit" in the "tester" row
-      And wait
-      And I scroll to bottom
-      And I click "Cancel account"
-      And wait
-      And wait 3s
-     Then I should see "Are you sure you want to cancel the account tester?"
-     When I select the radio button "Delete the account and its content. This action cannot be undone."
-      And I scroll to bottom
-      And I press "Confirm"
-      And I wait 10s
-     Then I should see "People"
+     When I go to "/admin/structure/types/manage/book/fields"
+      And I wait
+     Then I should see "Body"
+      And I should see "Category"
+      And I should see "Comment"
+      And I should see "Content rating"
+      And I should see "Documents"
+      And I should see "Google links"
+      And I should see "Meta tags"
 
   @javascript @local @development @staging @production
-  Scenario: Check the behavior when "Allow custom account name" option is NOT checked in Varbase general settings and NO provided username
-    Given I am a logged in user with the "webmaster" user
-      And I go to "/admin/config/varbase/settings"
+  Scenario: Check that Anonymous users can not create an Article (Book page).
+    Given I am an anonymous user
+     When I go to "/node/add/book"
       And wait
-     When I uncheck the box "Allow custom account name"
-     Then I should see the "Allow custom account name" checkbox unchecked
-     When I press "Save configuration"
-      And wait 2s
-     Then I should see "The configuration options have been saved."
+     Then I should see "Access denied"
+      And I should see "You are not authorized to access this page."
 
-     When I go to "/admin/people/create"
+  @javascript @local @development @staging @production"
+  Scenario: Check that authenticated users can not create an Article (Book page).
+    Given I am a logged in user with the "Normal user" user
+     When I go to "/node/add/book"
       And wait
-     When I fill in "test.not.allwed.no.username@vardot.com" for "Email"
-      And I fill in "" for "Username"
-      And I fill in "dD.123123ddd" for "Password"
-      And I fill in "dD.123123ddd" for "Confirm password"
-      And I scroll to bottom
-      And I press "Create new account"
-     When I go to "/admin/people"
-      And wait
-     Then I should see "test.not.allwed.no.username"
-      And I should not see "email_registration"
-     When I click "Edit" in the "test.not.allwed.no.username" row
-      And wait
-      And I scroll to bottom
-      And I click "Cancel account"
-      And wait
-      And wait 3s
-     Then I should see "Are you sure you want to cancel the account test.not.allwed.no.username"
-     When I select the radio button "Delete the account and its content. This action cannot be undone."
-      And I scroll to bottom
-      And I press "Confirm"
-      And I wait 5s
-     Then I should see "People"
+     Then I should see "Access denied"
 
   @javascript @local @development @staging @production
-  Scenario: Check the behavior when "Allow custom account name" option is NOT checked in Varbase general settings and provided some username
-    Given I am a logged in user with the "webmaster" user
-      And I go to "/admin/config/varbase/settings"
+  Scenario: Check that Editor users can create an Article (Book page).
+    Given I am a logged in user with the "Editor" user
+     When I go to "/node/add/book"
       And wait
-     Then I should see "Varbase general settings"
-      And I should see "Allow custom account name"
-     When I uncheck the box "Allow custom account name"
-     Then I should see the "Allow custom account name" checkbox unchecked
-     When I press "Save configuration"
-      And wait 2s
-     Then I should see "The configuration options have been saved."
-
-     When I go to "/admin/people/create"
-      And wait
-     When I fill in "test.not.allwed.with.username@vardot.com" for "Email"
-      And I fill in "Some username" for "Username"
-      And I fill in "dD.123123ddd" for "Password"
-      And I fill in "dD.123123ddd" for "Confirm password"
-      And I scroll to bottom
-      And I press "Create new account"
-     When I go to "/admin/people"
-      And wait
-     Then I should see "Some username"
-     When I click "Edit" in the "Some username" row
-      And wait
-      And I scroll to bottom
-      And I click "Cancel account"
-      And wait
-      And wait 3s
-     Then I should see "Are you sure you want to cancel the account Some username"
-     When I select the radio button "Delete the account and its content. This action cannot be undone."
-      And I scroll to bottom
-      And I press "Confirm"
-      And I wait 5s
-     Then I should see "People"
+     Then I should not see "Access denied"
+      And I should not see "You are not authorized to access this page."
 
   @javascript @local @development @staging @production
-  Scenario: Check the behavior when "Allow custom account name" option is checked in Varbase general settings and NO provided username
-    Given I am a logged in user with the "webmaster" user
-      And I go to "/admin/config/varbase/settings"
+  Scenario: Check that Content Admin users can create an Article (Book page).
+    Given I am a logged in user with the "Content admin" user
+     When I go to "/node/add/book"
       And wait
-     Then I should see "Varbase general settings"
-      And I should see "Allow custom account name"
-     When I check the box "Allow custom account name"
-     Then I should see the "Allow custom account name" checkbox checked
-     When I press "Save configuration"
-      And wait 2s
-     Then I should see "The configuration options have been saved."
-
-     When I go to "/admin/people/create"
-      And wait
-     When I fill in "test.allwed.no.username@vardot.com" for "Email"
-      And I fill in "" for "Username"
-      And I fill in "dD.123123ddd" for "Password"
-      And I fill in "dD.123123ddd" for "Confirm password"
-      And I scroll to bottom
-      And I press "Create new account"
-     When I go to "/admin/people"
-      And wait
-     Then I should see "email_registration"
-     When I click "Edit" in the "email_registration" row
-      And wait
-      And I scroll to bottom
-      And I click "Cancel account"
-      And wait
-      And wait 3s
-     Then I should see "Are you sure you want to cancel the account email_registration"
-     When I select the radio button "Delete the account and its content. This action cannot be undone."
-      And I scroll to bottom
-      And I press "Confirm"
-      And I wait 5s
-     Then I should see "People"
+     Then I should not see "Access denied"
+      And I should not see "You are not authorized to access this page."
 
   @javascript @local @development @staging @production
-  Scenario: Check the behavior when "Allow custom account name" option is checked in Varbase general settings and provided username
-    Given I am a logged in user with the "webmaster" user
-      And I go to "/admin/config/varbase/settings"
+  Scenario: Check that Site Admin users can create an Article (Book page).
+    Given I am a logged in user with the "Site admin" user
+     When I go to "/node/add/book"
       And wait
-     Then I should see "Varbase general settings"
-      And I should see "Allow custom account name"
-     When I check the box "Allow custom account name"
-     Then I should see the "Allow custom account name" checkbox checked
-     When I press "Save configuration"
-      And wait 2s
-     Then I should see "The configuration options have been saved."
-
-     When I go to "/admin/people/create"
-      And wait
-     When I fill in "test.allwed.with.username@vardot.com" for "Email"
-      And I fill in "Test Account Name" for "Username"
-      And I fill in "dD.123123ddd" for "Password"
-      And I fill in "dD.123123ddd" for "Confirm password"
-      And I scroll to bottom
-      And I press "Create new account"
-     When I go to "/admin/people"
-      And wait
-     Then I should see "Test Account Name"
-      And I should not see "test.allwed.with.username"
-      And I should not see "email_registration"
-     When I click "Edit" in the "Test Account Name" row
-      And wait
-      And I scroll to bottom
-      And I click "Cancel account"
-      And wait
-      And wait 3s
-     Then I should see "Are you sure you want to cancel the account Test Account Name?"
-     When I select the radio button "Delete the account and its content. This action cannot be undone."
-      And I scroll to bottom
-      And I press "Confirm"
-      And I wait 5s
-     Then I should see "People"
+     Then I should not see "Access denied"
+      And I should not see "You are not authorized to access this page."
