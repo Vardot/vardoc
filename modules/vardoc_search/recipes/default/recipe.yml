@@ -10,10 +10,8 @@ config:
   actions:
     user.role.anonymous:
       grantPermissions:
-        - 'search content'
         - 'use search_api_autocomplete for book_search'
     user.role.authenticated:
       grantPermissions:
-        - 'search content'
         - 'use search_api_autocomplete for book_search'
 
