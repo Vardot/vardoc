@@ -31,6 +31,8 @@ config:
         - 'edit own comments'
     user.role.authenticated:
       grantPermissions:
+        - 'create new books'
+        - 'add content to books'
         - 'create book content'
         - 'delete own book content'
         - 'edit own book content'
@@ -43,17 +45,14 @@ config:
     user.role.editor:
       grantPermissions:
         - 'edit any book content'
-        - 'add content to books'
         - 'administer book outlines'
     user.role.seo_admin:
       grantPermissions:
         - 'edit any book content'
-        - 'add content to books'
         - 'administer book outlines'
     user.role.content_admin:
       grantPermissions:
         - 'edit any book content'
-        - 'add content to books'
         - 'administer book outlines'
         - 'skip comment approval'
     user.role.site_admin:
@@ -64,7 +63,6 @@ config:
         - 'delete book revisions'
         - 'revert book revisions'
         - 'delete any book content'
-        - 'add content to books'
         - 'administer book outlines'
         - 'create terms in category'
         - 'view terms in category'
