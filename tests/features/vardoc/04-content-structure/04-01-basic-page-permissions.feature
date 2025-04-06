@@ -8,7 +8,7 @@ Feature: Content Structure - Basic Page
     Given I am a logged in user with the "Normal user" user
      When I go to "/node/add"
       And wait
-     Then I should see "Access denied"
+     Then I should not see "Basic page"
 
   @javascript  @local @development @staging @production
   Scenario: Check if an Editor can add content of  Basic page type

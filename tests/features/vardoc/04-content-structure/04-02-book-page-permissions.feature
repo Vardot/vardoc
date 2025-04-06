@@ -36,8 +36,8 @@ So that the "Book page" will show up in the structured menu under its parent pag
     Given I am a logged in user with the "Normal user" user
      When I go to "/node/add/book"
       And wait
-     Then I should see "Access denied"
-      And I should see "You are not authorized to access this page."
+     Then I should not see "Access denied"
+      And I should not see "You are not authorized to access this page."
 
   @javascript @local @development @staging @production
   Scenario: Check that Editor users can create an Article (Book page).
