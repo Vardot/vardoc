@@ -123,5 +123,18 @@
     "psr-4": {
       "Vardoc\\composer\\": "src/composer"
     }
+  },
+  "scripts": {
+    "pre-install-cmd": ["Vardoc\\composer\\ScriptHandler::checkComposerVersion"],
+    "pre-update-cmd": ["Vardoc\\composer\\ScriptHandler::checkComposerVersion"],
+    "post-install-cmd": [
+      "Vardoc\\composer\\ScriptHandler::createRequiredFiles",
+      "Vardoc\\composer\\ScriptHandler::removeGitDirectories"
+    ],
+    "post-update-cmd": [
+      "Vardoc\\composer\\ScriptHandler::createRequiredFiles",
+      "Vardoc\\composer\\ScriptHandler::removeGitDirectories"
+    ],
+    "post-drupal-scaffold-cmd": ["Vardoc\\composer\\ScriptHandler::postDrupalScaffoldProcedure"]
   }
 }
