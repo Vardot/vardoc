@@ -2,5 +2,5 @@ name: Vardoc Homepage
 description: Homepage feature for Vardoc.
 type: module
 core_version_requirement: ~10 || ~11
-version: 4.0.10
+version: 4.0.x-dev
 package: Vardoc
