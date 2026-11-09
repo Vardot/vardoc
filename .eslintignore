@@ -5,3 +5,9 @@ behat.yml
 drupalci.yml
 **/drupalci.yml
 **/libraries/
+
+# Third-party libraries shipped with the theme.
+themes/vardoc_theme/js/argon/
+themes/vardoc_theme/js/bootstrap/
+themes/vardoc_theme/js/plugins/
+themes/vardoc_theme/js/popper/

@@ -83,7 +83,7 @@ bootstrap-styles-rtl:
 # Bootstrap scripts library.
 bootstrap-scripts:
   js:
-#    js/popper/popper.min.js: {} # use core/popperjs libraray in Drupal ^8.8.0 .
+#    js/popper/popper.min.js: {} # use core/popperjs library in Drupal ^8.8.0 .
     js/bootstrap/bootstrap.min.js: {}
 #
 #   Plugins can be included individually (using Bootstrap’s individual

@@ -35,7 +35,7 @@ function vardoc_profile_link_alter(&$variables) {
 
   if ($url->isRouted()) {
     if ($url->getRouteName() == 'view.profile_content.page_latest' || $url->getRouteName() == 'view.profile_content.page_favorite') {
-      // Update the latest content menu link route parh.
+      // Update the latest content menu link route path.
       $url->setRouteParameters(['user' => \Drupal::currentUser()->id()]);
     }
   }

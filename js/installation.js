@@ -10,7 +10,7 @@
         'change',
         function () {
           const languages = ['ar', 'en'];
-          if (jQuery.inArray($(this).val(), languages) == -1) {
+          if (jQuery.inArray($(this).val(), languages) === -1) {
             $('.other-lang-warn').addClass('visible');
           } else {
             $('.other-lang-warn').removeClass('visible');

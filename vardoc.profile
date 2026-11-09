@@ -5,13 +5,12 @@
  * Enables modules and site configuration for a Vardoc site installation.
  */
 
- use Symfony\Component\Yaml\Yaml;
- use Drupal\Core\Form\FormStateInterface;
- use Drupal\vardoc\Config\ConfigBit;
- use Drupal\vardoc\Form\AssemblerForm;
- use Vardot\Entity\EntityDefinitionUpdateManager;
- use Drupal\path_alias\Entity\PathAlias;
- use Drupal\Component\Utility\Environment;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\vardoc\Config\ConfigBit;
+use Drupal\vardoc\Form\AssemblerForm;
+use Vardot\Entity\EntityDefinitionUpdateManager;
+use Drupal\path_alias\Entity\PathAlias;
+use Drupal\Component\Utility\Environment;
 
 /**
  * Implements hook_form_FORM_ID_alter() for install_configure_form().
@@ -141,7 +140,7 @@ function vardoc_assemble_extra_components(array &$install_state) {
       }
     }
 
-    // Hide Wornings and status messages.
+    // Hide Warnings and status messages.
     $batch['operations'][] = [
       'vardoc_hide_warning_and_status_messages',
       (array) TRUE,
@@ -283,7 +282,6 @@ function vardoc_fix_entity_update($entity_update) {
       ->applyUpdates();
   }
 }
-
 
 /**
  * Batch function to Install needed modules.

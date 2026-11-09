@@ -7,7 +7,6 @@ install:
   - statistics
   - flag
   - sharethis
-  - votingapi_widgets
   - page_manager
   - panels
 config:
@@ -17,14 +16,11 @@ config:
     statistics: '*'
     flag: '*'
     sharethis: '*'
-    votingapi_widgets: '*'
     page_manager: '*'
     panels: '*'
   actions:
     user.role.anonymous:
       grantPermissions:
-        - 'vote on node:book:field_rating'
-        - 'edit own vote on node:book:field_rating'
         - 'access comments'
         - 'post comments'
         - 'view post access counter'
@@ -36,8 +32,6 @@ config:
         - 'create book content'
         - 'delete own book content'
         - 'edit own book content'
-        - 'vote on node:book:field_rating'
-        - 'edit own vote on node:book:field_rating'
         - 'view book revisions'
         - 'access comments'
         - 'post comments'
@@ -58,8 +52,6 @@ config:
     user.role.site_admin:
       grantPermissions:
         - 'edit any book content'
-        - 'clear own vote on node:book:field_rating'
-        - 'edit voting status on node:book:field_rating'
         - 'delete book revisions'
         - 'revert book revisions'
         - 'delete any book content'

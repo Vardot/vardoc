@@ -29,16 +29,16 @@
 }
 #toolbar-administration.toolbar .toolbar-bar .toolbar-tab > .toolbar-item.is-active {
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.03);
-  background-image: none;
   color: #fff;
+  background-color: rgb(255, 255, 255, 0.03);
+  background-image: none;
 }
 #toolbar-administration.toolbar .toolbar-bar .toolbar-tab > .toolbar-item.is-active::before {
   filter: none;
 }
 #toolbar-administration.toolbar .toolbar-bar .toolbar-tab > .toolbar-item:focus {
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: rgb(255, 255, 255, 0.03);
   background-image: none;
 }
 #toolbar-administration.toolbar .toolbar-menu {
@@ -90,7 +90,7 @@
 #toolbar-administration.toolbar .toolbar-tray-vertical {
   border: none;
   box-shadow: none;
-  box-shadow: -2px 2px 12px rgba(0, 0, 0, 0.85);
+  box-shadow: -2px 2px 12px rgb(0, 0, 0, 0.85);
 }
 #toolbar-administration.toolbar .toolbar-tray-vertical .menu-item + .menu-item {
   border: 0 none;
@@ -444,14 +444,10 @@
   right: auto;
   left: 5px;
   transform: scaleX(-1);
-  -ms-filter: "fliph";
-  filter: fliph;
 }
 [dir=rtl] #toolbar-administration .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:hover:after {
   transform: scaleX(-1);
   transform-origin: 40% top;
-  -ms-filter: "fliph";
-  filter: fliph;
 }
 [dir=rtl] #toolbar-administration .toolbar-tray-horizontal ul li.menu-item--expanded .menu-item:hover ul {
   margin: -39px 200px 0 0;

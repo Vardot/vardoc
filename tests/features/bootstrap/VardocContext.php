@@ -331,7 +331,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
     $this->getSession()->switchToIFrame('entity_browser_iframe_editor_media_browser');
 
     // Find the Tab by txt.
-    $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@class, 'button') and text() = '" . $text ."']");
+    $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@class, 'button') and text() = '" . $text . "']");
 
     if (empty($element)) {
       throw new \Exception('The editor media browser dose not have [ ' . $text . ' ] button.');
@@ -384,7 +384,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
     $this->getSession()->switchToIFrame('entity_browser_iframe_editor_media_browser');
 
     // Find the file by text.
-    $element = $this->getSession()->getPage()->find('xpath', "//div[contains(@class, 'media-item') and contains(@title, '" . $text ."')]");
+    $element = $this->getSession()->getPage()->find('xpath', "//div[contains(@class, 'media-item') and contains(@title, '" . $text . "')]");
 
     if (empty($element)) {
       throw new \Exception('The editor media browser dose not have [ ' . $text . ' ] file.');
@@ -415,13 +415,12 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
    */
   public function shouldBeInTheBreadcrumb($text) {
     // Find a text in the breadcrumb.
-    $element = $this->getSession()->getPage()->find('xpath', "//ol[contains(@class, 'breadcrumb')]//*[text()='" . $text ."']");
+    $element = $this->getSession()->getPage()->find('xpath', "//ol[contains(@class, 'breadcrumb')]//*[text()='" . $text . "']");
 
     if (empty($element)) {
       throw new \Exception('The ' . $text . ' not found in the breadcrumb');
     }
   }
-
 
   /**
    * Fill in a form field with id|name|title|alt|value.
@@ -577,7 +576,6 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
     }
     $element->click();
 
-
   }
 
   /**
@@ -642,7 +640,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
     if (empty($fieldId)) {
       throw new \Exception('Could not find an id for the rich text editor field : ' . $selectedField);
     }
-    $this->getSession()->getDriver()->evaluateScript("Drupal.CKEditor5Instances.get(document.getElementById(\"" . $fieldId ."\").dataset[\"ckeditor5Id\"]).editing.view.focus()");
+    $this->getSession()->getDriver()->evaluateScript("Drupal.CKEditor5Instances.get(document.getElementById(\"" . $fieldId . "\").dataset[\"ckeditor5Id\"]).editing.view.focus()");
   }
 
   /**
@@ -668,7 +666,7 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   }
 
   /**
-   * Click on the save button in the the rich text editor field
+   * Click on the save button in the the rich text editor field.
    *
    * Vardoc Context #vardoc.
    *
@@ -868,11 +866,11 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
   public function iOpenTheSectionSettingsMenu($menu) {
     $this->iMoveToTheSectionStylesTab();
     $js = <<<JS
-			var title = "$menu";
-			const xpath = "//span[contains(text(),'" + title + "')]";
-			const js_menu = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
-			js_menu.closest("details").setAttribute("open", "");
-		JS;
+      var title = "$menu";
+      const xpath = "//span[contains(text(),'" + title + "')]";
+      const js_menu = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      js_menu.closest("details").setAttribute("open", "");
+    JS;
     try {
       $this->getSession()->executeScript($js);
     }
@@ -1001,10 +999,10 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
         else {
           $padding_side->click();
           $js = <<<JS
-					var js_side = "$side";
-					var js_value = "$value";
-					jQuery(".bs-field-padding-" + js_side).val(js_value);
-					JS;
+          var js_side = "$side";
+          var js_value = "$value";
+          jQuery(".bs-field-padding-" + js_side).val(js_value);
+          JS;
           $this->getSession()->executeScript($js);
         }
       }
@@ -1042,10 +1040,10 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
         else {
           $margin_side->click();
           $js = <<<JS
-					var js_side = "$side";
-					var js_value = "$value";
-					jQuery(".bs-field-margin-" + js_side).val(js_value);
-					JS;
+          var js_side = "$side";
+          var js_value = "$value";
+          jQuery(".bs-field-margin-" + js_side).val(js_value);
+          JS;
           $this->getSession()->executeScript($js);
         }
       }
@@ -1117,10 +1115,10 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
         else {
           $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-border-border-type-border-$b_side')]")->click();
           $js = <<<JS
-						var js_side = "$b_side";
-						var js_width = "$b_width";
-						jQuery(".bs-field-border-width-" + js_side).val(js_width);
-					JS;
+            var js_side = "$b_side";
+            var js_width = "$b_width";
+            jQuery(".bs-field-border-width-" + js_side).val(js_width);
+          JS;
           $this->getSession()->executeScript($js);
         }
       }
@@ -1192,11 +1190,11 @@ class VardocContext extends RawDrupalContext implements SnippetAcceptingContext 
         }
         else {
           $js = <<<JS
-					var js_corner = "$corner";
-					var js_value = "$value";
-					js_corner = js_corner.replace(' ', '_');
-					jQuery(".bs-field-rounded-corner-" + js_corner).val(js_value);
-					JS;
+          var js_corner = "$corner";
+          var js_value = "$value";
+          js_corner = js_corner.replace(' ', '_');
+          jQuery(".bs-field-rounded-corner-" + js_corner).val(js_value);
+          JS;
           $this->getSession()->executeScript($js);
         }
       }
@@ -1989,7 +1987,11 @@ JS;
    *
    * @When I keypress :char in :field field
    *
-   * @param mixed $char could be either char ('b') or char-code (98)
+   * @param mixed $key
+   *   Either a character ('b') or a character code (98).
+   * @param string $field
+   *   The field selector.
+   *
    * @throws \Exception
    */
   public function iPressKeyboardKeyInField($key, $field) {
@@ -2019,7 +2021,6 @@ JS;
    ];
 
     $key = is_numeric($key) ? $key : ord($key);
-
 
     // Validate the other key.
     if (is_string($key)) {
@@ -2310,7 +2311,7 @@ JS;
    */
   public function iScrollToBottomOf($selector) {
     $this->getSession()->executeScript('document.querySelector("' . $selector . '").scrollTop = document.querySelector("' . $selector . '").scrollHeight');
-    $this->getSession()->wait(2000); 
+    $this->getSession()->wait(2000);
   }
 
   /**
@@ -2327,7 +2328,7 @@ JS;
     $isChecked = (bool) $this->getSession()->getDriver()->isChecked("//label[contains(text(), '" . $label . "')]/preceding-sibling::input");
     if ($isChecked) {
       throw new \Exception("The '" . $label . "' checkbox is checked");
-    } 
+    }
   }
 
   /**
@@ -2344,7 +2345,7 @@ JS;
     $isChecked = (bool) $this->getSession()->getDriver()->isChecked("//label[contains(text(), '" . $label . "')]/preceding-sibling::input");
     if (!$isChecked) {
       throw new \Exception("The '" . $label . "' checkbox is unchecked");
-    } 
+    }
   }
 
   /**

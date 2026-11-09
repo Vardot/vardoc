@@ -68,6 +68,3 @@ default:
       last_comment_name: ''
       last_comment_uid: 1
       comment_count: 0
-  field_rating:
-    -
-      status: 1

@@ -71,7 +71,7 @@ function vardoc_theme_preprocess_html(&$variables) {
  * Implements hook_preprocess_page().
  */
 function vardoc_theme_preprocess_page(&$variables) {
-  // Add the pring logo.
+  // Add the print logo.
   $variables['logo_print'] = \Drupal::request()->getBaseUrl() . '/' . \Drupal::service('extension.path.resolver')->getPath('theme', 'vardoc_theme') . '/logo-print.png';
 
   // Add the site name and slogan.

@@ -1,0 +1,53 @@
+################################################################################
+# GitLab CI: the standard drupal/gitlab_templates pipeline.
+# https://project.pages.drupalcode.org/gitlab_templates/
+#
+# The lint jobs (composer-lint, cspell, eslint, phpcs, phpstan, stylelint) keep
+# the template default, advisory, as this branch has not been linted before.
+# The composer build and phpunit gate the pipeline.
+################################################################################
+include:
+  - project: $_GITLAB_TEMPLATES_REPO
+    ref: $_GITLAB_TEMPLATES_REF
+    file:
+      - "/includes/include.drupalci.main.yml"
+      - "/includes/include.drupalci.variables.yml"
+      - "/includes/include.drupalci.workflows.yml"
+
+variables:
+  # composer.json requires drupal/core ~11.4.0 with the Varbase 9.2 modules. 11.4.0 to
+  # 11.4.7 answer HTTP 500 on every page under Twig 3.30 (fixed in 11.4.8).
+  DRUPAL_CORE: "11.4.11"
+  IGNORE_PROJECT_DRUPAL_CORE_VERSION: "1"
+  # No yarn.lock is committed; Yarn 4 would refuse to create one in CI.
+  YARN_ENABLE_IMMUTABLE_INSTALLS: "false"
+
+composer:
+  variables:
+    # The template's composer job sets DRUPAL_CORE itself, which overrides the
+    # global value above, so the pin has to be on the job.
+    DRUPAL_CORE: "11.4.11"
+
+.composer-base:
+  variables:
+    # Drupal core's own Yarn 4.9.1 would read the project .yarnrc.yml (Yarn >= 4.14 keys) too.
+    YARN_RC_FILENAME: .yarnrc.core.yml
+    YARN_NODE_LINKER: node-modules
+
+stylelint:
+  variables:
+    # The project .stylelintrc.json extends stylelint-config-standard: resolve it from Drupal core.
+    NODE_PATH: $CI_PROJECT_DIR/web/core/node_modules
+    # Drupal core's own Yarn 4.9.1 would read the project .yarnrc.yml (Yarn >= 4.14 keys) too.
+    YARN_RC_FILENAME: .yarnrc.core.yml
+    YARN_NODE_LINKER: node-modules
+
+eslint:
+  variables:
+    # The project .eslintrc.json extends airbnb-base: resolve it from Drupal core's node_modules.
+    NODE_PATH: $CI_PROJECT_DIR/web/core/node_modules
+
+cspell:
+  variables:
+    # Third-party libraries shipped with the theme, and the demo content.
+    _CSPELL_IGNORE_PATHS: "themes/vardoc_theme/js/argon/**,themes/vardoc_theme/js/bootstrap/**,themes/vardoc_theme/js/plugins/**,themes/vardoc_theme/js/popper/**,themes/vardoc_theme/libraries/**,themes/vardoc_theme/css/base/argon.base.css,themes/vardoc_theme/css/base/bootstrap.base.css,themes/vardoc_theme/css/theme/nucleo/**,scripts/libs/**,modules/vardoc_demo/content/**"

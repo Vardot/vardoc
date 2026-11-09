@@ -18,7 +18,7 @@ class VardocSelectorsContext extends RawDrupalContext implements SnippetAcceptin
   protected $cssSelectors = [];
 
   /**
-   * Holed a list of XPaht Selectors.
+   * Holed a list of XPath Selectors.
    *
    * @var array
    */
@@ -93,7 +93,7 @@ class VardocSelectorsContext extends RawDrupalContext implements SnippetAcceptin
 
       }
       else {
-        throw new \Exception('behat.yml should include "selectors" with css, xpath, files_path, and files parametars. under SelectorsContext');
+        throw new \Exception('behat.yml should include "selectors" with css, xpath, files_path, and files parameters. under SelectorsContext');
       }
     }
   }
@@ -152,7 +152,7 @@ class VardocSelectorsContext extends RawDrupalContext implements SnippetAcceptin
       $css = new CssSelector();
       $xpathSelector = $css->translateToXPath($cssSelecter);
 
-      // Registor the name for the XPath selector.
+      // Register the name for the XPath selector.
       $selectorHandler = $this->getSession()->getSelectorsHandler()->getSelector('named');
       $selectorHandler->registerNamedXpath($selectorName, $xpathSelector);
     }
@@ -164,7 +164,7 @@ class VardocSelectorsContext extends RawDrupalContext implements SnippetAcceptin
   /**
    * Selector : To add a new selector name with a XPath selector.
    *
-   * Exmaple 1: When I add "page title" selector for "//h1[contains(@class, 'page-header')" xpath selector
+   * Example 1: When I add "page title" selector for "//h1[contains(@class, 'page-header')" xpath selector
    * Example 2:  And I add "Dashboard" selector for "//*[@id='navbar-link-admin-dashboard']" xpath selector
    * Example 3:  And I add "Vertical orientation" selector for "//*[@id='navbar-item--2-tray']/div/div[2]/div/button" xpath selector.
    *
@@ -190,7 +190,7 @@ class VardocSelectorsContext extends RawDrupalContext implements SnippetAcceptin
       // Add the selector name for the XPath selector to the selectors array.
       $this->xpathSelectors[$selectorName] = $xpathSelector;
 
-      // Registor the name for the XPath selecor.
+      // Register the name for the XPath selector.
       $selectorHandler = $this->getSession()->getSelectorsHandler()->getSelector('named');
       $selectorHandler->registerNamedXpath($selectorName, $xpathSelector);
     }
@@ -229,7 +229,7 @@ class VardocSelectorsContext extends RawDrupalContext implements SnippetAcceptin
             $css = new CssSelector();
             $xpathSelector = $css->translateToXPath($cssSelecter);
 
-            // Registor the name for the CSS selecor.
+            // Register the name for the CSS selector.
             $selectorHandler = $this->getSession()->getSelectorsHandler()->getSelector('named');
             $selectorHandler->registerNamedXpath($selectorName, $xpathSelector);
           }
@@ -241,7 +241,7 @@ class VardocSelectorsContext extends RawDrupalContext implements SnippetAcceptin
             // Add the selector name for the XPath selector to the xpath selectors array.
             $this->xpathSelectors[$selectorName] = $xpathSelector;
 
-            // Registor the name for the XPath selecor.
+            // Register the name for the XPath selector.
             $selectorHandler = $this->getSession()->getSelectorsHandler()->getSelector('named');
             $selectorHandler->registerNamedXpath($selectorName, $xpathSelector);
           }

@@ -1,0 +1,127 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Access to constant IMPORT on an unknown class Drupal\\default_content\\Event\\DefaultContentEvents\.$#'
+			identifier: class.notFound
+			count: 1
+			path: modules/vardoc_demo/src/EventSubscriber/VardocDemoEventSubscriber.php
+
+		-
+			message: '#^Parameter \$event of method Drupal\\vardoc_demo\\EventSubscriber\\VardocDemoEventSubscriber\:\:handleBookContent\(\) has invalid type Drupal\\default_content\\Event\\ImportEvent\.$#'
+			identifier: class.notFound
+			count: 1
+			path: modules/vardoc_demo/src/EventSubscriber/VardocDemoEventSubscriber.php
+
+		-
+			message: '#^\\Drupal calls should be avoided in classes, use dependency injection instead$#'
+			identifier: globalDrupalDependencyInjection.useDependencyInjection
+			count: 1
+			path: modules/vardoc_profile/src/Plugin/Block/AvatarBlock.php
+
+		-
+			message: '#^Method Drupal\\vardoc_profile\\Plugin\\Menu\\NotificationsMenuLink\:\:getTitle\(\) should return string but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: modules/vardoc_profile/src/Plugin/Menu/NotificationsMenuLink.php
+
+		-
+			message: '#^\\Drupal calls should be avoided in classes, use dependency injection instead$#'
+			identifier: globalDrupalDependencyInjection.useDependencyInjection
+			count: 1
+			path: modules/vardoc_profile/src/Plugin/Menu/NotificationsMenuLink.php
+
+		-
+			message: '''
+				#^Fetching deprecated class constant EXISTS_REPLACE of interface Drupal\\Core\\File\\FileSystemInterface\:
+				in drupal\:10\.3\.0 and is removed from drupal\:12\.0\.0\. Use
+				\\Drupal\\Core\\File\\FileExists\:\:Replace instead\.$#
+			'''
+			identifier: classConstant.deprecated
+			count: 1
+			path: modules/vardoc_profile/vardoc_profile.install
+
+		-
+			message: '#^Avoid calling Symfony\\Component\\Yaml\\Yaml\:\:parse\(\) directly\. Use \\Drupal\\Component\\Serialization\\Yaml\:\:decode\(\) instead, which handles exceptions consistently and applies the correct parse flags\.$#'
+			identifier: drupal.symfonyYamlParse
+			count: 4
+			path: src/Config/ConfigBit.php
+
+		-
+			message: '#^\\Drupal calls should be avoided in classes, use dependency injection instead$#'
+			identifier: globalDrupalDependencyInjection.useDependencyInjection
+			count: 1
+			path: src/Config/ConfigBit.php
+
+		-
+			message: '#^\\Drupal calls should be avoided in classes, use dependency injection instead$#'
+			identifier: globalDrupalDependencyInjection.useDependencyInjection
+			count: 4
+			path: src/Form/AssemblerForm.php
+
+		-
+			message: '''
+				#^Call to method __construct\(\) of deprecated class DrupalFinder\\DrupalFinder\:
+				in drupal\-finder\:1\.3\.0 and is removed from drupal\-finder\:2\.0\.0\.
+				  Use \\DrupalFinder\\DrupalFinderComposerRuntime instead\.$#
+			'''
+			identifier: method.deprecatedClass
+			count: 1
+			path: src/composer/ScriptHandler.php
+
+		-
+			message: '''
+				#^Call to method getDrupalRoot\(\) of deprecated class DrupalFinder\\DrupalFinder\:
+				in drupal\-finder\:1\.3\.0 and is removed from drupal\-finder\:2\.0\.0\.
+				  Use \\DrupalFinder\\DrupalFinderComposerRuntime instead\.$#
+			'''
+			identifier: method.deprecatedClass
+			count: 1
+			path: src/composer/ScriptHandler.php
+
+		-
+			message: '''
+				#^Call to method locateRoot\(\) of deprecated class DrupalFinder\\DrupalFinder\:
+				in drupal\-finder\:1\.3\.0 and is removed from drupal\-finder\:2\.0\.0\.
+				  Use \\DrupalFinder\\DrupalFinderComposerRuntime instead\.$#
+			'''
+			identifier: method.deprecatedClass
+			count: 1
+			path: src/composer/ScriptHandler.php
+
+		-
+			message: '''
+				#^Instantiation of deprecated class DrupalFinder\\DrupalFinder\:
+				in drupal\-finder\:1\.3\.0 and is removed from drupal\-finder\:2\.0\.0\.
+				  Use \\DrupalFinder\\DrupalFinderComposerRuntime instead\.$#
+			'''
+			identifier: new.deprecatedClass
+			count: 1
+			path: src/composer/ScriptHandler.php
+
+		-
+			message: '''
+				#^Call to deprecated function theme_get_setting\(\)\:
+				in drupal\:11\.3\.0 and is removed from drupal\:13\.0\.0\. Use
+				  \\Drupal\:\:service\('Drupal\\Core\\Extension\\ThemeSettingsProvider'\)\-\>getSetting\(\)
+				  instead\.$#
+			'''
+			identifier: function.deprecated
+			count: 3
+			path: themes/vardoc_theme/theme-settings.php
+
+		-
+			message: '''
+				#^Call to deprecated function theme_get_setting\(\)\:
+				in drupal\:11\.3\.0 and is removed from drupal\:13\.0\.0\. Use
+				  \\Drupal\:\:service\('Drupal\\Core\\Extension\\ThemeSettingsProvider'\)\-\>getSetting\(\)
+				  instead\.$#
+			'''
+			identifier: function.deprecated
+			count: 2
+			path: themes/vardoc_theme/vardoc_theme.theme
+
+		-
+			message: '#^Avoid calling Symfony\\Component\\Yaml\\Yaml\:\:parse\(\) directly\. Use \\Drupal\\Component\\Serialization\\Yaml\:\:decode\(\) instead, which handles exceptions consistently and applies the correct parse flags\.$#'
+			identifier: drupal.symfonyYamlParse
+			count: 1
+			path: vardoc.install

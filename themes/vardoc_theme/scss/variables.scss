@@ -1,5 +1,5 @@
 //
-// vardoc_theme Variables ovarrides.
+// vardoc_theme Variables overrides.
 // --------------------------------------------------
 
 
@@ -9,7 +9,7 @@
 // All variables which are used in the default bootstrap library.
 // You can change them in vardoc_theme for the bootstrap-variables.sass
 //
-@import "bootstrap-variables"; // Bootstrap custom variables ovarrides in vardoc_theme.
+@import "bootstrap-variables"; // Bootstrap custom variables overrides in vardoc_theme.
 
 
 // #############################################################################
@@ -18,7 +18,7 @@
 // All needed custom variables for Bootstrap Barrio theme.
 // You can change them in vardoc_theme in the bootstrap-variables.sass
 //
-@import "barrio-variables"; // Barrio custom variables ovarrides in vardoc_theme.
+@import "barrio-variables"; // Barrio custom variables overrides in vardoc_theme.
 
 
 // #############################################################################
@@ -27,10 +27,10 @@
 // All needed custom Vartheme bs4 variables
 // You can change them in vardoc_theme in the vartheme_bs4-variables.sass
 //
-@import "vartheme_bs4-variables"; // Vartheme BS4 custom variables ovarrides in vardoc_theme.
+@import "vartheme_bs4-variables"; // Vartheme BS4 custom variables overrides in vardoc_theme.
 // Argon custom variables
 // #############################################################################
-@import "agron-variables"; // Argon custom variables ovarrides in vb.
+@import "agron-variables"; // Argon custom variables overrides in vb.
 
 
 // #############################################################################

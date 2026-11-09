@@ -14,4 +14,3 @@ config:
     user.role.authenticated:
       grantPermissions:
         - 'use search_api_autocomplete for book_search'
-

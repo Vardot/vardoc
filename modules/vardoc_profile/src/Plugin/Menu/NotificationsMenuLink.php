@@ -82,7 +82,7 @@ class NotificationsMenuLink extends MenuLinkDefault {
    * {@inheritdoc}
    */
   public function getCacheMaxAge() {
-    // Execlude the notifications menu item from cache.
+    // Exclude the notifications menu item from cache.
     return 0;
   }
 

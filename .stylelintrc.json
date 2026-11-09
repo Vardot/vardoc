@@ -12,12 +12,10 @@
     "declaration-block-no-redundant-longhand-properties": null,
     "function-linear-gradient-no-nonstandard-direction": null,
     "function-url-quotes": null,
-    "function-whitespace-after": null,
     "hue-degree-notation": "number",
     "no-descending-specificity": null,
     "no-duplicate-selectors": null,
     "no-unknown-animations": true,
-    "max-line-length": null,
     "media-feature-name-no-unknown": [true, {
       "ignoreMediaFeatureNames": [
         "prefers-reduced-motion",
@@ -25,7 +23,6 @@
       ]
     }],
     "media-feature-name-no-vendor-prefix": null,
-    "number-leading-zero": "always",
     "number-max-precision": 5,
     "order/order": [
       "custom-properties",
@@ -463,7 +460,6 @@
     "selector-no-vendor-prefix": null,
     "selector-pseudo-element-colon-notation": null,
     "shorthand-property-no-redundant-values": null,
-    "string-quotes": "double",
     "unit-allowed-list": ["ch", "deg", "em", "ex", "fr", "ms", "rem", "%", "s", "px", "vw", "vh"],
     "value-keyword-case": ["lower", {
       "camelCaseSvgKeywords": true,

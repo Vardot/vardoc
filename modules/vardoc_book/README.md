@@ -1,3 +1,3 @@
 # Vardoc Book
 
-Provides Book managment and default configs for Vardoc.
+Provides Book management and default configs for Vardoc.

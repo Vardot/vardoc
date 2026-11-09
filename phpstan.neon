@@ -1,0 +1,19 @@
+includes:
+  - phpstan-baseline.neon
+parameters:
+    level: 0
+    fileExtensions:
+        - php
+        - module
+        - inc
+        - install
+        - theme
+        - profile
+    # The Behat contexts need Behat and the Drupal Extension, which the CI
+    # build does not install, so PHPStan cannot load their parent classes.
+    excludePaths:
+        - tests/features/bootstrap
+    reportUnmatchedIgnoredErrors: false
+    ignoreErrors:
+        # new static() is a best practice in Drupal, so we cannot fix that.
+        - "#^Unsafe usage of new static#"

@@ -39,7 +39,7 @@
   Drupal.behaviors.stickyHeader = {
     attach(context) {
       let prevScrollpos = window.pageYOffset;
-      const $header_navbar = $('body header.navbar');
+      const $headerNavbar = $('body header.navbar');
 
       $(window).on('load resize scroll', function () {
         const winTop = $(window).scrollTop();
@@ -47,26 +47,26 @@
 
         // Start the sticky header style
         if (winTop >= 150) {
-          $header_navbar.addClass('sticky-header');
-          $header_navbar.removeClass('main-header');
+          $headerNavbar.addClass('sticky-header');
+          $headerNavbar.removeClass('main-header');
           $('body').css('padding-top', '100px');
         } else if (winTop <= 0) {
-          $header_navbar.removeClass('sticky-header');
-          $header_navbar.addClass('main-header');
+          $headerNavbar.removeClass('sticky-header');
+          $headerNavbar.addClass('main-header');
           $('body').css('padding-top', '0px');
         }
 
         // smart sticky header start working
         if (winTop >= 600) {
           if (prevScrollpos > currentScrollPos) {
-            $header_navbar.css({ top: '0px' });
+            $headerNavbar.css({ top: '0px' });
             $('.toolbar-fixed header.navbar').css('top', '79px');
           } else if (prevScrollpos < currentScrollPos) {
-            $header_navbar.css({ top: '-92px' });
+            $headerNavbar.css({ top: '-92px' });
           }
           prevScrollpos = currentScrollPos;
         } else {
-          $header_navbar.removeAttr('style');
+          $headerNavbar.removeAttr('style');
         }
       });
 
@@ -119,7 +119,7 @@
     },
   };
 
-  // Fix overlaping between the cursor and sticky header
+  // Fix overlapping between the cursor and sticky header
   $(window).on('scroll', function () {
     $('.SumoSelect').removeClass('open');
     $(':focus').blur();

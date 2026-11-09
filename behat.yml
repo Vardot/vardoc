@@ -69,7 +69,6 @@ default:
                 - "--no-first-run"
                 - "--remote-debugging-port=9222"
                 - "--allowed-ips=*"
-                - "--whitelisted-ips=*"
                 - "--allow-insecure-localhost"
     Drupal\DrupalExtension:
       blackbox: ~

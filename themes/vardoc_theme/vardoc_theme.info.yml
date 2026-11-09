@@ -2,7 +2,7 @@ name: Vardoc Theme
 description: Based on Bootstrap 4 framework using SASS, and extending Vartheme (Bootstrap 4 - SASS).
 type: theme
 base theme: vartheme_bs4
-core_version_requirement: ~10
+core_version_requirement: ~11.4.0
 regions:
   top_navigation: 'Top Navigation'
   navigation: 'Navigation'
@@ -59,7 +59,7 @@ libraries-override:
   vartheme_bs4/vlb-colors: false
   vartheme_bs4/betterlogin: false
   # Heroslider: Uncomment the following to disable the vartheme_bs4/heroslider
-  #             Libraray if it was enabled in vartheme_bs4 heroslider styling.
+  #             Library if it was enabled in vartheme_bs4 heroslider styling.
   # vartheme_bs4/heroslider: false
 
   vartheme_bs4/breadcrumb: vardoc_theme/breadcrumb
@@ -74,7 +74,7 @@ libraries-override:
   vartheme_bs4/verticaltabs: vardoc_theme/verticaltabs
   vartheme_bs4/alerts: vardoc_theme/alerts
 
-  # Varbase module compnents overrides in vardoc_theme.
+  # Varbase module components overrides in vardoc_theme.
   varbase_bootstrap_paragraphs/vbp-colors: vardoc_theme/vbp-colors
   varbase_layout_builder/vlb-colors: vardoc_theme/vlb-colors
   betterlogin/betterlogin_css: vardoc_theme/betterlogin

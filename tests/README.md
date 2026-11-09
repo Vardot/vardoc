@@ -28,7 +28,7 @@ composer require --dev emuse/behat-html-formatter:^0.2.0
 
 ### Add additional testing packages
 ```
-cd path to yout files of the project/PROJECT_DIR_NAME
+cd path to your files of the project/PROJECT_DIR_NAME
 BEHAT-SCREENSHOT to capture images on demand or when a test fails
 
 composer require --dev drevops/behat-screenshot
@@ -48,9 +48,9 @@ Read more about it here: https://github.com/drevops/behat-screenshot
 
 ### Install vardoc
 Have vardoc installed from the browser or using the `drush site:install` command.
-But make sure to have the webmaster user with the `dD.123123ddd` passwrod.
+But make sure to have the webmaster user with the `dD.123123ddd` password.
 
-Exmaple Drush install:
+Example Drush install:
 Change directory in the terminal to the path of the project and `/PROJECT_DIR_NAME/docroot`
 ```
 ../bin/drush site-install  site-install vardoc --yes --account-name="webmaster" --account-pass="dD.123123ddd" --account-mail="webmaster@vardot.com" --db-url="mysql://root:rootpw@127.0.0.1/test_vardoc" --locale="en"
@@ -188,7 +188,6 @@ To run the automated testing with behat you will need to change the [ wd_host an
                 - "--disable-infobars"
                 - "--remote-debugging-port=9222"
                 - "--allowed-ips=*"
-                - "--whitelisted-ips=*"
       base_url: 'http://vardoc.test'
       # browser_name: 'firefox'
       browser_name: 'chrome'
@@ -290,7 +289,7 @@ $ ../../../bin/behat --tags '@development' tests/features/vardoc/
 Which it will run Scenarios which has got the @development tag.
 
 ```
-$ ../../../bin/behat --tags '@staging' ftests/eatures/vardoc/
+$ ../../../bin/behat --tags '@staging' tests/features/vardoc/
 ```
 
 Which it will run Scenarios which has got the @staging tag.
