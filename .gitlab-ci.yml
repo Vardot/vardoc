@@ -1,0 +1,33 @@
+################################################################################
+# GitLab CI for Vardoc 5.0.x, the Drupal 9 line.
+#
+# Drupal 9 reached end of life in November 2023. drupal.org CI no longer has a
+# PHP image Drupal 9 supports (8.3 is the oldest left), and resolving this
+# branch's Varbase 9.0 Composer tree on it runs past the runner's 30-minute job
+# limit, so the drupal/gitlab_templates build cannot run here. This pipeline
+# checks what the branch itself carries: composer.json, and the Node.js tooling
+# on Node.js 24 with no lockfile committed (this branch keeps Yarn Classic).
+################################################################################
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS
+      when: never
+    - if: $CI_COMMIT_BRANCH
+
+stages:
+  - validate
+
+composer-validate:
+  stage: validate
+  image: composer:2
+  script:
+    - composer validate --no-check-publish --no-check-lock
+
+node-tooling:
+  stage: validate
+  image: node:24
+  script:
+    - corepack enable
+    - yarn --version
+    - yarn install
