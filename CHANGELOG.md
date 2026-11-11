@@ -1,3 +1,13 @@
+# 4.1.0
+
+### Highlighted important changes since Vardoc 4.0.10:
+* Issue [#3635749](http://drupal.org/i/3635749):
+        Moved **Vardoc** to **Drupal** `~11.4.0` with the **Varbase** `~9.2.0` line, and updated **Node.js** to `>= 24.0`
+* Issue [#3614577](http://drupal.org/i/3614577):
+        Added the default **.gitlab** and **.github** issue and merge request templates
+
+---------------------------------------------------------------------------------
+
 # 4.0.10
 
 ### Highlighted important changes since Vardoc 4.0.9:
