@@ -15,6 +15,8 @@ include:
       - "/includes/include.drupalci.workflows.yml"
 
 variables:
+  # PHP 8.5 for the drupalci job images (the template default is PHP 8.3).
+  _TARGET_PHP: "8.5"
   # composer.json requires drupal/core ~11.4.0 with the Varbase 9.2 modules. 11.4.0 to
   # 11.4.7 answer HTTP 500 on every page under Twig 3.30 (fixed in 11.4.8).
   DRUPAL_CORE: "11.4.11"
